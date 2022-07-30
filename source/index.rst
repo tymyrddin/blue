@@ -2,7 +2,7 @@ Mitigations
 =================================================
 
 Some starting points for the blue team in a digital landscape formed by nature's own processes and humanoid activities
-troughout decades.
+throughout decades.
 
 .. toctree::
    :caption: PC's and workstations
@@ -23,14 +23,32 @@ troughout decades.
    Personal data <https://tymyrddin.github.io/data-mitigations/>
 
 .. toctree::
-   :caption: System administration
+   :caption: Servers
 
    Linux server <https://tymyrddin.github.io/linux-server-mitigations/>
    Webserver <https://tymyrddin.github.io/webserver-mitigations/>
    Mailserver <https://tymyrddin.github.io/mailserver-mitigations/>
+
+.. toctree::
+   :caption: Network
+
    Network <https://tymyrddin.github.io/network-mitigations/>
 
 .. toctree::
    :caption: Software development
 
-   Applications <https://tymyrddin.github.io/app-mitigations/>
+   Web applications <https://tymyrddin.github.io/app-mitigations/>
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
+   :caption: Contexts
+
+   docs/context/*
+
+.. toctree::
+   :caption: Links
+
+   Attack trees <https://tymyrddin.github.io/attack-trees/>
+   Threat models <https://tymyrddin.github.io/threat-models/>
