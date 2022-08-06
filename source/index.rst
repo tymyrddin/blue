@@ -38,7 +38,7 @@ throughout decades.
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Contexts
+   :caption: Trends
 
    docs/context/*
 
