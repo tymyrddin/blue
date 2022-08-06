@@ -1,6 +1,9 @@
 Mitigations
 =================================================
 
+.. image:: _static/images/vulnerability-stack.png
+  :alt: Vulnerability stack
+
 Some starting points for the blue team in a digital landscape formed by nature's own processes and humanoid activities
 throughout decades.
 
