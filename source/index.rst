@@ -18,21 +18,25 @@ throughout decades.
    Personal data <https://tymyrddin.github.io/data-mitigations/>
 
 .. toctree::
-   :caption: Software development
-
-   Web applications <https://tymyrddin.github.io/app-mitigations/>
-
-.. toctree::
    :caption: Servers
 
    Linux server <https://tymyrddin.github.io/linux-server-mitigations/>
-   Webserver <https://tymyrddin.github.io/webserver-mitigations/>
-   Mailserver <https://tymyrddin.github.io/mailserver-mitigations/>
 
 .. toctree::
    :caption: Network
 
    Network <https://tymyrddin.github.io/network-mitigations/>
+
+.. toctree::
+   :caption: Internet applications
+
+   Webserver <https://tymyrddin.github.io/webserver-mitigations/>
+   Mailserver <https://tymyrddin.github.io/mailserver-mitigations/>
+
+.. toctree::
+   :caption: Software development
+
+   Web applications <https://tymyrddin.github.io/app-mitigations/>
 
 .. toctree::
    :glob:
