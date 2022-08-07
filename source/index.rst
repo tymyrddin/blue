@@ -8,7 +8,7 @@ Some starting points for the blue team in a digital landscape formed by nature's
 throughout decades.
 
 .. toctree::
-   :caption: End-user devices
+   :caption: End-points
 
    macOS <https://tymyrddin.github.io/macos-mitigations/>
    Windows PC <https://tymyrddin.github.io/windows-pc-mitigations/>
@@ -16,10 +16,6 @@ throughout decades.
    Android <https://tymyrddin.github.io/android-mitigations/>
    iOS <https://tymyrddin.github.io/ios-mitigations/>
    Personal data <https://tymyrddin.github.io/data-mitigations/>
-
-.. toctree::
-   :caption: Servers
-
    Linux server <https://tymyrddin.github.io/linux-server-mitigations/>
 
 .. toctree::
