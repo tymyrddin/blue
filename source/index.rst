@@ -1,4 +1,4 @@
-Blue Team
+Threat models
 =================================================
 
 .. image:: _static/images/vulnerability-stack.png
