@@ -1,4 +1,4 @@
-Mitigations
+Blue Team
 =================================================
 
 .. image:: _static/images/vulnerability-stack.png
