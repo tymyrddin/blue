@@ -4,8 +4,12 @@ Blue Team
 .. image:: _static/images/vulnerability-stack.png
   :alt: Vulnerability stack
 
-Some starting points for the blue team in a digital landscape formed by nature's own processes and humanoid activities
-throughout decades.
+The blue team is a security group focused on protecting the organisation's assets. This includes monitoring the security
+controls, the intrusion detection systems, and the logs to protect the assets and identify when a security breach
+occurs.
+
+These are some starting points for the blue team in a digital landscape formed by nature's own processes and humanoid
+activities throughout decades.
 
 .. toctree::
    :caption: End-points
