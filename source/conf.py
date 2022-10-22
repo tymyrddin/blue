@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Mitigations'
+project = 'Blue Team'
 copyright = '2022, TyMyrddin'
 author = 'TyMyrddin'
 
@@ -65,7 +65,7 @@ html_theme_options = {
     'titles_only': True
 }
 
-html_title = "Mitigations"
+html_title = "Blue Team"
 html_logo = "img/logo.png"
 html_favicon = "img/favicon.ico"
 
