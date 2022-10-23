@@ -1,7 +1,7 @@
 # Mitigations
 
-![Publish Mitigations using Sphinx](https://github.com/tymyrddin/mitigations/workflows/Publish%20Mitigations%20using%20Sphinx/badge.svg?branch=main)
- Deployed: https://tymyrddin.github.io/mitigations/
+![Publish Mitigations using Sphinx](https://github.com/tymyrddin/blue/workflows/Publish%20Mitigations%20using%20Sphinx/badge.svg?branch=main)
+ Deployed: https://tymyrddin.github.io/blue/
 
 Built with [Sphinx](https://www.sphinx-doc.org) using a [theme](https://github.com/readthedocs/sphinx_rtd_theme) provided
 by [Read the Docs](https://readthedocs.org/).
@@ -26,7 +26,8 @@ $ make html
 
 This project welcomes contributions and suggestions. 
 
-[Open an issue here](https://github.com/tymyrddin/mitigations/issues)
+[Open an issue here](https://github.com/tymyrddin/blue/issues)
 
 ## Mind
-Where you stand depends on where you sit, and all threats are cross-vector threats. Without a clear mandate for testing, measuring and reporting actual improvements in security, attempts at improving security makes absolutely no sense, not even for the low-hanging fruit.  
+
+++?????++ Out of Cheese Error. Redo From Start. ~ (Terry Pratchett, Interesting Times)
