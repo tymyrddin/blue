@@ -31,4 +31,4 @@ processes and humanoid activities and neglect throughout decades.
    :caption: Links
 
    Red Team <https://tymyrddin.github.io/red/>
-   Green Team <https://tymyrddin.github.io/threat-models/>
+   Green Team <https://tymyrddin.github.io/green/>
