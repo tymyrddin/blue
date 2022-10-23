@@ -21,11 +21,11 @@ processes and humanoid activities and neglect throughout decades.
    Android hardening <https://tymyrddin.github.io/blue-android/>
    iOS hardening <https://tymyrddin.github.io/blue-ios/>
    Protecting personal data <https://tymyrddin.github.io/blue-pdata/>
-   Linux server <https://tymyrddin.github.io/linux-server-mitigations/>
-   Network <https://tymyrddin.github.io/network-mitigations/>
-   Webserver <https://tymyrddin.github.io/webserver-mitigations/>
-   Mailserver <https://tymyrddin.github.io/mailserver-mitigations/>
-   Web applications <https://tymyrddin.github.io/app-mitigations/>
+   Hardening Linux server <https://tymyrddin.github.io/blue-server/>
+   Network mitigations <https://tymyrddin.github.io/blue-network/>
+   Hardening Webserver <https://tymyrddin.github.io/blue-webserver/>
+   Hardening Mailserver <https://tymyrddin.github.io/blue-mailserver/>
+   Shift left web application <https://tymyrddin.github.io/blue-app/>
 
 .. toctree::
    :caption: Links
