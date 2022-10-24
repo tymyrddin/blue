@@ -15,6 +15,10 @@ processes and humanoid activities and neglect throughout decades.
    :caption: Forest writeups
 
    Laws of the forest <https://tymyrddin.github.io/>
+   Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
+   Security operations & monitoring <https://tymyrddin.github.io/blue-secops/>
+   Incident response and forensics <https://tymyrddin.github.io/blue-ir/>
+   Malware analysis <https://tymyrddin.github.io/blue-malware/>
    Hardening macOS <https://tymyrddin.github.io/blue-macos/>
    Hardening Windows <https://tymyrddin.github.io/blue-windows/>
    Hardening GNU/Linux <https://tymyrddin.github.io/blue-linux/>
