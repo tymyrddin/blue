@@ -12,13 +12,21 @@ These are some writeups made on our journeys in a digital landscape formed by na
 processes and humanoid activities and neglect throughout decades.
 
 .. toctree::
-   :caption: Forest writeups
+   :caption: General
 
    Laws of the forest <https://tymyrddin.github.io/>
+
+.. toctree::
+   :caption: Cyber Defence
+
    Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
    Security operations & monitoring <https://tymyrddin.github.io/blue-secops/>
    Incident response and forensics <https://tymyrddin.github.io/blue-ir/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
+
+.. toctree::
+   :caption: Endpoints
+
    Hardening macOS <https://tymyrddin.github.io/blue-macos/>
    Hardening Windows <https://tymyrddin.github.io/blue-windows/>
    Hardening GNU/Linux <https://tymyrddin.github.io/blue-linux/>
