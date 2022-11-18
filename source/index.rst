@@ -37,8 +37,8 @@ processes and humanoid activities and neglect throughout decades.
    Protecting personal data <https://tymyrddin.github.io/blue-pdata/>
    Hardening Linux server <https://tymyrddin.github.io/blue-server/>
    Network mitigations <https://tymyrddin.github.io/blue-network/>
-   Hardening Webserver <https://tymyrddin.github.io/blue-webserver/>
-   Hardening Mailserver <https://tymyrddin.github.io/blue-mailserver/>
+   Hardening webserver <https://tymyrddin.github.io/blue-webserver/>
+   Hardening mailserver <https://tymyrddin.github.io/blue-mailserver/>
    Shift left web application <https://tymyrddin.github.io/blue-app/>
 
 ----
