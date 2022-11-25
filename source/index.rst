@@ -1,3 +1,6 @@
+.. image:: _static/images/soc-team-services.png
+  :alt: SOC services
+
 Blue Team
 =================================================
 
@@ -10,22 +13,18 @@ processes and humanoid activities and neglect throughout decades.
 
 ----
 
-.. image:: _static/images/soc-team-services.png
-  :alt: SOC services
-
 .. toctree::
-   :caption: Defence
+   :caption: Security operations
 
+   Threat intelligence <https://tymyrddin.github.io/blue-intel/>
    Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
    Security operations & monitoring <https://tymyrddin.github.io/blue-secops/>
    Network security and traffic analysis <https://tymyrddin.github.io/blue-net/>
    Incident response and forensics <https://tymyrddin.github.io/blue-ir/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
+   Deception technology <https://tymyrddin.github.io/blue-honey/>
 
 ----
-
-.. image:: _static/images/vulnerability-stack.png
-  :alt: Vulnerability stack
 
 .. toctree::
    :caption: Endpoint mitigations
@@ -50,3 +49,8 @@ processes and humanoid activities and neglect throughout decades.
    Laws of the forest <https://tymyrddin.github.io/>
    Red Team <https://tymyrddin.github.io/red/>
    Green Team <https://tymyrddin.github.io/green/>
+
+----
+
+.. image:: _static/images/vulnerability-stack.png
+  :alt: Vulnerability stack
