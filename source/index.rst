@@ -18,6 +18,7 @@ processes and humanoid activities and neglect throughout decades.
 
    Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
    Security operations & monitoring <https://tymyrddin.github.io/blue-secops/>
+   Network security and traffic analysis <https://tymyrddin.github.io/blue-net/>
    Incident response and forensics <https://tymyrddin.github.io/blue-ir/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
 
@@ -27,7 +28,7 @@ processes and humanoid activities and neglect throughout decades.
   :alt: Vulnerability stack
 
 .. toctree::
-   :caption: Endpoints
+   :caption: Endpoint mitigations
 
    Hardening macOS <https://tymyrddin.github.io/blue-macos/>
    Hardening Windows <https://tymyrddin.github.io/blue-windows/>
