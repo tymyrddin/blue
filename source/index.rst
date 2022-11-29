@@ -20,7 +20,7 @@ processes and humanoid activities and neglect throughout decades.
    Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
    Security operations & monitoring <https://tymyrddin.github.io/blue-secops/>
    Network security and traffic analysis <https://tymyrddin.github.io/blue-net/>
-   Incident response and forensics <https://tymyrddin.github.io/blue-ir/>
+   Digital forensics and incident response <https://tymyrddin.github.io/blue-ir/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
    Deception technology <https://tymyrddin.github.io/blue-honey/>
 
