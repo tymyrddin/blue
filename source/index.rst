@@ -22,7 +22,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Endpoint detection and response <https://tymyrddin.github.io/blue-edr/>
    Security information and event management <https://tymyrddin.github.io/blue-siem>
    Digital forensics and incident response <https://tymyrddin.github.io/blue-dfir/>
-   Phishing analysis and prevention <https://tymyrddin.github.io/blue-malware/>
+   Phishing analysis and prevention <https://tymyrddin.github.io/blue-phish/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
 
 ----
