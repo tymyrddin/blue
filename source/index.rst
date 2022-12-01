@@ -48,6 +48,9 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Hardening mailserver <https://tymyrddin.github.io/blue-mailserver/>
    Shift left web application <https://tymyrddin.github.io/blue-app/>
 
+.. image:: _static/images/vulnerability-stack.png
+  :alt: Vulnerability stack
+
 ----
 
 .. toctree::
@@ -56,8 +59,3 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Laws of the forest <https://tymyrddin.github.io/>
    Red Team <https://tymyrddin.github.io/red/>
    Green Team <https://tymyrddin.github.io/green/>
-
-----
-
-.. image:: _static/images/vulnerability-stack.png
-  :alt: Vulnerability stack
