@@ -19,7 +19,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Threat intelligence <https://tymyrddin.github.io/blue-intel/>
    Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
    Network security and traffic analysis <https://tymyrddin.github.io/blue-net/>
-   Endpoint security monitoring <https://tymyrddin.github.io/blue-secops/>
+   Endpoint detection and response <https://tymyrddin.github.io/blue-edr/>
    Security information and event management <https://tymyrddin.github.io/blue-siem>
    Digital forensics and incident response <https://tymyrddin.github.io/blue-ir/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
