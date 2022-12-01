@@ -31,7 +31,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    :caption: SecOpsDev and DevSecOps
 
    Shift left web applications <https://tymyrddin.github.io/blue-app/>
-   Hardening mailserver <https://tymyrddin.github.io/blue-mailserver/>
+   Smarter mail servers <https://tymyrddin.github.io/blue-mailserver/>
    Deception technology <https://tymyrddin.github.io/blue-honey/>
 
 ----
