@@ -18,10 +18,17 @@ processes and humanoid activities and neglect throughout decades.
 
    Threat intelligence <https://tymyrddin.github.io/blue-intel/>
    Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
-   Security operations & monitoring <https://tymyrddin.github.io/blue-secops/>
+   Endpoint security monitoring <https://tymyrddin.github.io/blue-secops/>
    Network security and traffic analysis <https://tymyrddin.github.io/blue-net/>
+   Security information and event management <https://tymyrddin.github.io/blue-siem/index.html>
    Digital forensics and incident response <https://tymyrddin.github.io/blue-ir/>
    Malware analysis <https://tymyrddin.github.io/blue-malware/>
+
+----
+
+.. toctree::
+   :caption: Development
+
    Deception technology <https://tymyrddin.github.io/blue-honey/>
 
 ----
