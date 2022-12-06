@@ -58,7 +58,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
 .. toctree::
    :caption: Links
 
-   Blue Team: A curated collection of sessions on youtube <https://www.youtube.com/playlist?list=PLcV569XvaQtRpHQPjvqth4ohjqrx0mGRI>
+   Curated collections of sessions on youtube <https://www.youtube.com/@ninabarzh/playlists>
    Laws of the forest <https://tymyrddin.github.io/>
    Red Team <https://tymyrddin.github.io/red/>
    Green Team <https://tymyrddin.github.io/green/>
