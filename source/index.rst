@@ -30,7 +30,8 @@ processes and humanoid activities and neglect throughout decades. Expect some to
 .. toctree::
    :caption: Security operations development
 
-   Shift left web applications <https://tymyrddin.github.io/blue-app/>
+   Shift left web devsecops applications <https://tymyrddin.github.io/blue-app/>
+   Documentation <https://tymyrddin.github.io/documentation/>
    Development security operations (DevSecOps) <https://tymyrddin.github.io/blue-devsecops/>
    Smarter mail servers <https://tymyrddin.github.io/blue-mailserver/>
    Deception technology <https://tymyrddin.github.io/blue-honey/>
