@@ -35,6 +35,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Development security operations (DevSecOps) <https://tymyrddin.github.io/blue-devsecops/>
    Smarter mail servers <https://tymyrddin.github.io/blue-mailserver/>
    Deception technology <https://tymyrddin.github.io/blue-honey/>
+   Recent threats <https://tymyrddin.github.io/blue-recent/>
 
 ----
 
