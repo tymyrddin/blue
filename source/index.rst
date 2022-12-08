@@ -16,41 +16,41 @@ processes and humanoid activities and neglect throughout decades. Expect some to
 .. toctree::
    :caption: Security operations
 
-   Threat intelligence <https://tymyrddin.github.io/blue-intel/>
-   Threat and vulnerability management <https://tymyrddin.github.io/blue-threats/>
-   Network traffic analysis (NTA) <https://tymyrddin.github.io/blue-nta/>
-   Endpoint detection and response (EDR) <https://tymyrddin.github.io/blue-edr/>
-   Security information and event management (SIEM) <https://tymyrddin.github.io/blue-siem>
-   Digital forensics and incident response (DFIR) <https://tymyrddin.github.io/blue-dfir/>
-   Phishing analysis and prevention <https://tymyrddin.github.io/blue-phish/>
-   Malware analysis <https://tymyrddin.github.io/blue-malware/>
+   Threat intelligence <https://blue.tymyrddin.dev/projects/intel/>
+   Threat and vulnerability management <https://blue.tymyrddin.dev/projects/threats/>
+   Network traffic analysis (NTA) <https://blue.tymyrddin.dev/projects/nta/>
+   Endpoint detection and response (EDR) <https://blue.tymyrddin.dev/projects/edr/>
+   Security information and event management (SIEM) <https://blue.tymyrddin.dev/projects/siem>
+   Digital forensics and incident response (DFIR) <https://blue.tymyrddin.dev/projects/dfir/>
+   Phishing analysis and prevention <https://blue.tymyrddin.dev/projects/phish/>
+   Malware analysis <https://blue.tymyrddin.dev/projects/malware/>
 
 ----
 
 .. toctree::
    :caption: Security operations development
 
-   Recent threats <https://tymyrddin.github.io/blue-recent/>
-   Shift left web devsecops applications <https://tymyrddin.github.io/blue-app/>
+   Recent threats <https://blue.tymyrddin.dev/projects/recent/>
+   Shift left web devsecops applications <https://blue.tymyrddin.dev/projects/app/>
    Documentation (SecOpsDev) <https://tymyrddin.github.io/documentation/>
-   Development security operations (DevSecOps) <https://tymyrddin.github.io/blue-devsecops/>
-   Smarter mail servers <https://tymyrddin.github.io/blue-mailserver/>
-   Deception technology <https://tymyrddin.github.io/blue-honey/>
+   Development security operations (DevSecOps) <https://blue.tymyrddin.dev/projects/devsecops/>
+   Smarter mail servers <https://blue.tymyrddin.dev/projects/mailserver/>
+   Deception technology <https://blue.tymyrddin.dev/projects/honey/>
 
 ----
 
 .. toctree::
    :caption: Endpoint mitigations
 
-   Hardening macOS <https://tymyrddin.github.io/blue-macos/>
-   Hardening Windows <https://tymyrddin.github.io/blue-windows/>
-   Hardening GNU/Linux <https://tymyrddin.github.io/blue-linux/>
-   Android hardening <https://tymyrddin.github.io/blue-android/>
-   iOS hardening <https://tymyrddin.github.io/blue-ios/>
-   Protecting personal data <https://tymyrddin.github.io/blue-pdata/>
-   Hardening Linux server <https://tymyrddin.github.io/blue-server/>
-   Network mitigations <https://tymyrddin.github.io/blue-network/>
-   Hardening webserver <https://tymyrddin.github.io/blue-webserver/>
+   Hardening macOS <https://blue.tymyrddin.dev/projects/macos/>
+   Hardening Windows <https://blue.tymyrddin.dev/projects/windows/>
+   Hardening GNU/Linux <https://blue.tymyrddin.dev/projects/linux/>
+   Android hardening <https://blue.tymyrddin.dev/projects/android/>
+   iOS hardening <https://blue.tymyrddin.dev/projects/ios/>
+   Protecting personal data <https://blue.tymyrddin.dev/projects/pdata/>
+   Hardening Linux server <https://blue.tymyrddin.dev/projects/server/>
+   Network mitigations <https://blue.tymyrddin.dev/projects/network/>
+   Hardening webserver <https://blue.tymyrddin.dev/projects/webserver/>
 
 .. image:: _static/images/vulnerability-stack.png
   :alt: Vulnerability stack
@@ -61,6 +61,6 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    :caption: Links
 
    Curated collections of sessions on youtube <https://www.youtube.com/@ninabarzh/playlists>
-   Laws of the forest <https://tymyrddin.github.io/>
-   Red Team <https://tymyrddin.github.io/red/>
-   Green Team <https://tymyrddin.github.io/green/>
+   Laws of the forest <https://purple.tymyrddin.dev/>
+   Red Team <https://red.tymyrddin.dev/>
+   Green Team <https://green.tymyrddin.dev/>
