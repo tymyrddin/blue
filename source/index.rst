@@ -33,6 +33,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Recent threats <https://blue.tymyrddin.dev/projects/recent/>
    Shift left web devsecops applications <https://blue.tymyrddin.dev/projects/app/>
    Development security operations (DevSecOps) <https://blue.tymyrddin.dev/projects/devsecops/>
+   SecDevOps documentation <https://blue.tymyrddin.dev/projects/secopsdevdocs/>
    Smarter mail servers <https://blue.tymyrddin.dev/projects/mailserver/>
    Deception technology <https://blue.tymyrddin.dev/projects/honey/>
 
