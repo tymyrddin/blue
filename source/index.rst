@@ -17,7 +17,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    :caption: Security operations
 
    Environments, testlabs, and tools used <https://blue.tymyrddin.dev/projects/testlab/>
-   Threat intelligence <https://blue.tymyrddin.dev/projects/intel/>
+   Threat intelligence (CTI) <https://blue.tymyrddin.dev/projects/intel/>
    Threat and vulnerability management <https://blue.tymyrddin.dev/projects/threats/>
    Network traffic analysis (NTA) <https://blue.tymyrddin.dev/projects/nta/>
    Endpoint detection and response (EDR) <https://blue.tymyrddin.dev/projects/edr/>
