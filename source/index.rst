@@ -31,10 +31,8 @@ processes and humanoid activities and neglect throughout decades. Expect some to
 .. toctree::
    :caption: Security operations development
 
-   Recent threats <https://new-threats.tymyrddin.dev/>
    Shift left web applications <https://shiftleft.tymyrddin.dev/>
    Development security operations (DevSecOps) <https://devsecops.tymyrddin.dev/>
-   SecOpsDev documentation <https://secopsdevdocs.tymyrddin.dev/>
    Smarter mail servers <https://mailserver.tymyrddin.dev/>
    Deception technology <https://honey.tymyrddin.dev/>
 
