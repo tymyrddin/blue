@@ -1,9 +1,6 @@
 # Mitigations
 
-Built with [Sphinx](https://www.sphinx-doc.org) using a [theme](https://github.com/readthedocs/sphinx_rtd_theme) provided
-by [Read the Docs](https://readthedocs.org/).
-
-[![Documentation Status](https://readthedocs.org/projects/blueteaming/badge/?version=latest)](https://blue.tymyrddin.dev/en/latest/?badge=latest)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/acfeff44-fda5-498e-98df-f7906589042a/deploy-status)](https://app.netlify.com/sites/spontaneous-malabi-6b40bd/deploys)
 
 ## Requirements
 
