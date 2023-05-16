@@ -16,42 +16,42 @@ processes and humanoid activities and neglect throughout decades. Expect some to
 .. toctree::
    :caption: Security operations
 
-   Environments, testlabs, and tools used <https://blue.tymyrddin.dev/projects/testlab/>
-   Threat intelligence (CTI) <https://blue.tymyrddin.dev/projects/intel/>
-   Threat and vulnerability management <https://blue.tymyrddin.dev/projects/threats/>
-   Network traffic analysis (NTA) <https://blue.tymyrddin.dev/projects/nta/>
-   Endpoint detection and response (EDR) <https://blue.tymyrddin.dev/projects/edr/>
-   Security information and event management (SIEM) <https://blue.tymyrddin.dev/projects/siem/>
-   Digital forensics and incident response (DFIR) <https://blue.tymyrddin.dev/projects/dfir/>
-   Phishing analysis and prevention <https://blue.tymyrddin.dev/projects/phish/>
-   Malware analysis <https://blue.tymyrddin.dev/projects/malware/>
+   Environments, testlabs, and tools used <https://testlab.tymyrddin.dev/>
+   Threat intelligence (CTI) <https://cti.tymyrddin.dev/>
+   Threat and vulnerability management (TVM) <https://tvm.tymyrddin.dev/>
+   Network traffic analysis (NTA) <https://nta.tymyrddin.dev/>
+   Endpoint detection and response (EDR) <https://edr.tymyrddin.dev/>
+   Security information and event management (SIEM) <https://siem.tymyrddin.dev/>
+   Digital forensics and incident response (DFIR) <https://dfir.tymyrddin.dev/>
+   Phishing analysis and prevention (PAP) <https://pap.tymyrddin.dev/>
+   Cracking and malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
 
 ----
 
 .. toctree::
    :caption: Security operations development
 
-   Recent threats <https://blue.tymyrddin.dev/projects/recent/>
-   Shift left web applications <https://blue.tymyrddin.dev/projects/app/>
-   Development security operations (DevSecOps) <https://blue.tymyrddin.dev/projects/devsecops/>
-   SecOpsDev documentation <https://blue.tymyrddin.dev/projects/secopsdevdocs/>
-   Smarter mail servers <https://blue.tymyrddin.dev/projects/mailserver/>
-   Deception technology <https://blue.tymyrddin.dev/projects/honey/>
+   Recent threats <https://new-threats.tymyrddin.dev/>
+   Shift left web applications <https://shiftleft.tymyrddin.dev/>
+   Development security operations (DevSecOps) <https://devsecops.tymyrddin.dev/>
+   SecOpsDev documentation <https://secopsdevdocs.tymyrddin.dev/>
+   Smarter mail servers <https://mailserver.tymyrddin.dev/>
+   Deception technology <https://honey.tymyrddin.dev/>
 
 ----
 
 .. toctree::
    :caption: Endpoint mitigations
 
-   Hardening macOS <https://blue.tymyrddin.dev/projects/macos/>
-   Hardening Windows <https://blue.tymyrddin.dev/projects/windows/>
-   Hardening GNU/Linux <https://blue.tymyrddin.dev/projects/linux/>
-   Android hardening <https://blue.tymyrddin.dev/projects/android/>
-   iOS hardening <https://blue.tymyrddin.dev/projects/ios/>
-   Protect your PII <https://blue.tymyrddin.dev/projects/pdata/>
-   Hardening Linux server <https://blue.tymyrddin.dev/projects/server/>
-   Network mitigations <https://blue.tymyrddin.dev/projects/network/>
-   Hardening webserver <https://blue.tymyrddin.dev/projects/webserver/>
+   Hardening macOS <https://macos.tymyrddin.dev/>
+   Hardening Windows <https://windows.tymyrddin.dev/>
+   Hardening GNU/Linux <https://linux.tymyrddin.dev/>
+   Android hardening <https://android.tymyrddin.dev/>
+   iOS hardening <https://ios.tymyrddin.dev/>
+   Protect your PII <https://pii.tymyrddin.dev/>
+   Hardening Linux server <https://server.tymyrddin.dev/>
+   Network mitigations <https://nm.tymyrddin.dev/>
+   Hardening webserver <https://webserver.tymyrddin.dev/>
 
 ----
 
