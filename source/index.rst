@@ -24,7 +24,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Security information and event management (SIEM) <https://siem.tymyrddin.dev/>
    Digital forensics and incident response (DFIR) <https://dfir.tymyrddin.dev/>
    Phishing analysis and prevention (PAP) <https://pap.tymyrddin.dev/>
-   Cracking and malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
+   Malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
 
 ----
 
