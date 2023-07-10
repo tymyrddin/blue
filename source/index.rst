@@ -32,7 +32,7 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    :caption: Security operations development
 
    Securing web applications <https://appsec.tymyrddin.dev/>
-   Shifting left (DevSecOps) <https://shiftleft.tymyrddin.dev/>
+   Devsecops <https://devsecops.tymyrddin.dev/>
    Smarter mail servers <https://mailserver.tymyrddin.dev/>
    Deception technology <https://honey.tymyrddin.dev/>
 
