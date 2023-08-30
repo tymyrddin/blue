@@ -17,7 +17,6 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    :caption: Security operations
 
    Environments, testlabs, and tools used <https://testlab.tymyrddin.dev/>
-   Threat intelligence (CTI) <https://cti.tymyrddin.dev/>
    Threat and vulnerability management (TVM) <https://tvm.tymyrddin.dev/>
    Network traffic analysis (NTA) <https://nta.tymyrddin.dev/>
    Endpoint detection and response (EDR) <https://edr.tymyrddin.dev/>
