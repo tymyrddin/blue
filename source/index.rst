@@ -28,7 +28,7 @@ processes and humanoid activities and neglect throughout decades.
 ----
 
 .. toctree::
-   :caption: Endpoint mitigations
+   :caption: Mitigations
 
    Hardening macOS <https://macos.tymyrddin.dev/>
    Hardening Windows <https://windows.tymyrddin.dev/>
