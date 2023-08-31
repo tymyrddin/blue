@@ -4,12 +4,9 @@
 Blue Team
 =================================================
 
-The blue team is a group focused on protecting assets. This includes monitoring the security
-controls, the intrusion detection systems, the logs to protect the assets and identify when a security breach
-occurs, and raising security awareness overall (ie make the writeups human-readable for intended audiences).
+The blue team is a group focused on protecting assets. This includes monitoring the security controls, the intrusion detection systems, the logs to protect the assets and identify when a security breach occurs, and raising security awareness.
 
-These are some writeups made on our journeys in a digital landscape formed by nature's own
-processes and humanoid activities and neglect throughout decades.
+The below are links to writeups made on journeys in a digital landscape formed by nature's own processes and humanoid activities and neglect throughout decades.
 
 ----
 
