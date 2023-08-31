@@ -9,7 +9,7 @@ controls, the intrusion detection systems, the logs to protect the assets and id
 occurs, and raising security awareness overall (ie make the writeups human-readable for intended audiences).
 
 These are some writeups made on our journeys in a digital landscape formed by nature's own
-processes and humanoid activities and neglect throughout decades. Expect some tongue-in-cheek.
+processes and humanoid activities and neglect throughout decades.
 
 ----
 
