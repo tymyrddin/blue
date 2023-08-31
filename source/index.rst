@@ -23,15 +23,6 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Digital forensics and incident response (DFIR) <https://dfir.tymyrddin.dev/>
    Phishing analysis and prevention (PAP) <https://pap.tymyrddin.dev/>
    Malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
-
-----
-
-.. toctree::
-   :caption: Security operations development
-
-   Securing web applications <https://appsec.tymyrddin.dev/>
-   DevSecOps <https://devsecops.tymyrddin.dev/>
-   Smarter mail servers <https://mailserver.tymyrddin.dev/>
    Deception technology <https://honey.tymyrddin.dev/>
 
 ----
@@ -48,6 +39,9 @@ processes and humanoid activities and neglect throughout decades. Expect some to
    Hardening Linux server <https://server.tymyrddin.dev/>
    Network mitigations <https://nm.tymyrddin.dev/>
    Hardening webserver <https://webserver.tymyrddin.dev/>
+   Smarter mail servers <https://mailserver.tymyrddin.dev/>
+   Securing web applications <https://appsec.tymyrddin.dev/>
+   DevSecOps <https://devsecops.tymyrddin.dev/>
 
 ----
 
