@@ -17,10 +17,10 @@ The below are links to writeups made on journeys in a digital landscape formed b
    Network traffic analysis (NTA) <https://nta.tymyrddin.dev/>
    Endpoint detection and response (EDR) <https://edr.tymyrddin.dev/>
    Security information and event management (SIEM) <https://siem.tymyrddin.dev/>
-   Mobile threats <https://pap.tymyrddin.dev/>
    Digital forensics and incident response (DFIR) <https://dfir.tymyrddin.dev/>
    Malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
    Deception technology <https://honey.tymyrddin.dev/>
+   Threat landscape (for people's devices) <https://pap.tymyrddin.dev/>
 
 ----
 
