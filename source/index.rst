@@ -18,7 +18,7 @@ The below are links to writeups made on journeys in a digital landscape formed b
    Endpoint detection and response (EDR) <https://edr.tymyrddin.dev/>
    Security information and event management (SIEM) <https://siem.tymyrddin.dev/>
    Digital forensics and incident response (DFIR) <https://dfir.tymyrddin.dev/>
-   Malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
+   Malware analysis (RE) <https://reverse.tymyrddin.dev/>
 
 ----
 
