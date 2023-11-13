@@ -19,14 +19,13 @@ The below are links to writeups made on journeys in a digital landscape formed b
    Security information and event management (SIEM) <https://siem.tymyrddin.dev/>
    Digital forensics and incident response (DFIR) <https://dfir.tymyrddin.dev/>
    Malware analysis (reverse engineering) <https://reverse.tymyrddin.dev/>
-   Threat landscape (for people's devices) <https://pap.tymyrddin.dev/>
-   Active defence <https://honey.tymyrddin.dev/>
 
 ----
 
 .. toctree::
-   :caption: Mitigations
+   :caption: @home and @org
 
+   Threat landscape <https://pap.tymyrddin.dev/>
    Hardening macOS <https://macos.tymyrddin.dev/>
    Hardening Windows <https://windows.tymyrddin.dev/>
    Hardening GNU/Linux <https://linux.tymyrddin.dev/>
@@ -37,6 +36,13 @@ The below are links to writeups made on journeys in a digital landscape formed b
    Network mitigations <https://nm.tymyrddin.dev/>
    Hardening webserver <https://webserver.tymyrddin.dev/>
    Smarter mail servers <https://mailserver.tymyrddin.dev/>
+   Active defence strategies <https://honey.tymyrddin.dev/>
+
+----
+
+.. toctree::
+   :caption: Development
+
    Securing web applications <https://appsec.tymyrddin.dev/>
    DevSecOps <https://devsecops.tymyrddin.dev/>
 
