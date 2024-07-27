@@ -13,4 +13,5 @@ sphinxcontrib-devhelp
 sphinxcontrib-htmlhelp
 sphinxcontrib-jsmath
 sphinx_copybutton
+sphinx_design
 urllib3
