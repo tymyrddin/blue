@@ -1,54 +1,165 @@
-h1 {
-  color: #0066DD;
+/* ================ */
+/* Main content area */
+/* ================ */
+
+.content {
+    background-color: white !important;
+    color: #121212 !important;
 }
 
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+    .content {
+        background-color: white !important;
+        color: #121212 !important;
+    }
+}
+
+/* ============= */
+/* Typography */
+/* ============= */
+
+/* Headers */
+h1 {
+    color: #0066DD !important;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #0066DD !important;
+}
+
+/* Code elements */
+code, .highlight {
+    background: #f5f5f5 !important;
+    color: #333 !important;
+}
+
+/* ============= */
+/* Links         */
+/* ============= */
+
+/* Remove underlines from all links */
 a {
-  color: #0066DD;
+    text-decoration: none !important;
+}
+
+/* Add subtle underline on hover for better UX */
+a:hover {
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px !important;
+}
+
+/* Special case for header links if needed */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none !important;
+}
+
+/* Keep your existing link colors */
+a {
+    color: #0066DD !important;
 }
 
 a:hover {
-  color: #0066FF;
+    color: #0066FF !important;
 }
 
-.wy-nav .wy-menu-vertical header {
-  color: #0066DD;
+/* ============= */
+/* Custom Components */
+/* ============= */
+
+/* Top navigation */
+topnav {
+    font-family: 'caslon_antiquebold', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.9rem;
 }
 
-.wy-menu-vertical header, .wy-menu-vertical p.caption {
-  color: #0066DD;
+topnav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
 }
 
-.wy-side-nav-search {
-  background-color: #333333;
-  color: #fcfcfc;
+.nav__link, .nav__link:visited {
+    text-decoration: none !important;
+    font-size: 0.7rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.wy-side-nav-search input[type="text"] {
+.nav__item + .nav__item {
+    margin-left: 0.1rem;
+}
+
+.icon {
+    text-transform: uppercase;
+    font-family: 'caslon_antiquebold', Arial, sans-serif;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+/* Footer */
+
+.footer-rule {
+  border: none;
+  height: 1px;
+  background: #0066DD; /* Your brand blue */
+  opacity: 0.5;
   width: 100%;
-  border-radius: 0px;
-  padding: 6px 12px;
-  border-color: #0066DD;
+  max-width: var(--content-width);
+  margin: 0 auto 1.5rem auto; /* Matches bottom spacing */
+  padding: 0;
 }
 
-.highlight {
-  background: #333;
-  color: #ddd;
+footer.custom-footer {
+  padding: 1rem 0 !important;
+  margin: 2rem 0 0 !important;
+  text-align: center;
 }
 
-.wy-nav-top {
-  background: #0066DD;
+.footer-content {
+  font-size: 0.85rem;
+  color: var(--color-foreground-secondary);
 }
 
-.rst-content code.literal, .rst-content tt.literal {
-  color: #0066DD;
+.footer-content a {
+  color: var(--color-link);
+  text-decoration: none;
 }
 
+.footer-content a:hover {
+  text-decoration: underline;
+}
 
+/* Surgical removal link icons (only in sidebar) */
+.sidebar-container a.external::after {
+    content: "" !important;
+}
 
-/* Breadcrumbs as navbar
-***********************************/
+/* ====================== */
+/* Responsive Adjustments */
+/* ====================== */
 
-/* Caslon font faces */
+@media screen and (min-width: 800px) {
+    topnav ul {
+        justify-content: space-between;
+    }
+    
+    .nav__link, .nav__link:visited {
+        font-size: 0.9rem;
+    }
+    
+    .nav__item + .nav__item {
+        margin-left: 1rem;
+    }
+}
+
+/* ============= */
+/* Font Faces */
+/* ============= */
 
 @font-face {
     font-family: 'caslon_antiqueregular';
@@ -56,7 +167,6 @@ a:hover {
          url('caslonantique-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -65,7 +175,6 @@ a:hover {
          url('caslonantique-bolditalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -74,7 +183,6 @@ a:hover {
          url('caslonantique-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -83,71 +191,82 @@ a:hover {
          url('caslonantique-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-topnav {
-  font-family: 'caslon_antiquebold', Arial, sans-serif;
-  font-weight:normal;
-  font-style:normal;
-  font-size: 0.9rem;
+/* ============= */
+/* Navigation - Sidebar */
+/* ============= */
 
+/* Add space below search container */
+.sidebar-search-container {
+    margin-bottom: 0.5rem !important; /* Increased from default */
+    padding-bottom: 0.5rem !important;
 }
 
-topnav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style: none;
+/* ================ */
+/* Main content area */
+/* ================ */
+
+.content {
+    background-color: white !important;
+    color: #121212 !important;
 }
 
-@media screen and (min-width: 800px) {
-  topnav ul {
-    justify-content: space-between;
-  }
+/* Dark theme overrides - force text color */
+[data-theme="dark"] .content {
+    background-color: white !important;
+    color: #121212 !important;
 }
 
-.nav__link, .nav__link:visited {
-  text-decoration: none !important;
-  font-size: 0.7rem;
-  color: black;
-  text-transform: uppercase;
-  font-weight: 700;
+[data-theme="dark"] .content p,
+[data-theme="dark"] .content li,
+[data-theme="dark"] .content td,
+[data-theme="dark"] .content th,
+[data-theme="dark"] .content .admonition {
+    color: #121212 !important;
 }
 
-.nav__item + .nav__item {
-  margin-left: 0.1rem;
+/* ============= */
+/* Logo - now properly inherits from sidebar */
+/* ============= */
+
+.sidebar-logo-container {
+    background: inherit !important; /* Now properly inherits from sidebar */
+    padding-bottom: 1rem !important; /* Added spacing */
 }
 
-@media screen and (min-width: 800px) {
-    .nav__link, .nav__link:visited {
-        font-size: 0.9rem;
+.sidebar-logo {
+    padding: 1rem 1rem 0.5rem !important; /* Adjusted padding */
+    max-height: 180px !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Debugging borders - can be removed after testing */
+.sidebar-drawer {
+    /* border: 1px solid red; */
+}
+.sidebar-logo-container {
+    /* border: 1px solid blue; */
+}
+.sidebar-logo {
+    /* border: 1px solid green; */
+}
+
+/* Dark theme specific logo adjustments */
+@media (prefers-color-scheme: dark) {
+    .sidebar-logo {
+        filter: brightness(0.9);
     }
-
-    .nav__item + .nav__item {
-        margin-left: 1rem;
-    }
 }
 
-.wy-nav-content {
-  padding-top: 1rem;
-}
+/* ============= */
+/* Table of Contents */
+/* ============= */
 
-.icon {
-  text-transform: uppercase;
-  font-family: 'caslon_antiquebold', Arial, sans-serif;
-  font-size: 0.9rem;
-  background: transparent;
-}
-
-.wy-body-for-nav {
-  background-image: url('../images/site/background.png');
-}
-
-.wy-nav-side {
-  background-image: url('../images/site/background.png');
-}
-
-.wy-side-nav-search {
-  background-image: url('../images/site/background.png');
+.toctree-wrapper.compound .caption {
+    margin-bottom: 1rem !important; /* Restores default spacing */
+    display: block !important;
+    font-weight: bold !important;
+    color: var(--color-sidebar-caption-text) !important;
 }
