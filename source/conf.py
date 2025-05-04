@@ -1,5 +1,11 @@
-# -- Project information -----------------------------------------------------
+import os
+import sys
 
+# -- Path setup --------------------------------------------------------------
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+
+# -- Project information -----------------------------------------------------
 project = 'Blue Team'
 copyright = '2025, TyMyrddin'
 author = 'TyMyrddin'
@@ -8,30 +14,48 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 extensions = [
     'myst_parser',
-    'sphinx_markdown_tables',
+    'sphinx_immaterial',
 ]
 
-source_suffix = ['.rst', '.md']
+# MyST parser configuration
+# myst_enable_extensions = ["colon_fence"]
+# myst_all_links_external = False  # Required for TOC resolution
+# myst_suppress_warnings = ["myst.xref_missing"]  # More specific than suppress_warnings
+
+# Path setup
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown'
+}
 
-# -- Options for HTML output -------------------------------------------------
-html_theme = 'furo'
+# -- HTML output -------------------------------------------------------------
+html_theme = 'sphinx_immaterial'
 
-# Theme options are theme-specific and customize the look and feel of a theme
 html_theme_options = {
-    "sidebar_hide_name": True,
-    "navigation_with_keys": True,
-    # Add a dismissible announcement banner
-    "announcement": "<em>New release v1.0!</em> 🎉",
+    "palette": {
+        "scheme": "slate",
+        "primary": "blue",
+        "accent": "light-blue"
+    },
+    "features": [
+        "navigation.top",
+        "content.tabs.link",
+        "navigation.footer.disabled"
+    ],
 }
 
 html_title = "Blue Team"
 html_logo = "img/logo.png"
 html_favicon = "img/favicon.ico"
-
 html_static_path = ['_static']
 html_css_files = ['css/custom.css']
+html_last_updated_fmt = '%Y-%m-%d %H:%M'  # e.g., "May 05, 2025 at 14:30"
 
-html_show_sphinx = False
-html_show_copyright = False
+# -- Build settings ----------------------------------------------------------
+nitpicky = True  # Warn about broken references
+# suppress_warnings = ["myst.xref_missing"]  # Backward compatibility
+
+# Disable all automatic anchor generation
+autosectionlabel_prefix_document = False
