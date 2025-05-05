@@ -1,11 +1,11 @@
 Email & cloud security: putting locks on the spice rack
 ======================================================================================================
 
-Mitigations:
-
-* Enable MFA: Use TOTP apps (Authy, Google Authenticator) or YubiKey.
-* Check email forwarding rules: Look for hidden filters sending emails to attackers.
-* Encrypt cloud files: Use Cryptomator before uploading to Google Drive/Dropbox.
+Enabling MFA (TOTP/YubiKey) blocks credential stuffing, phishing, and SIM-swapping by requiring a second factor beyond
+stolen passwords. Checking email forwarding rules prevents email compromise and inbox hijacking, where attackers
+silently redirect sensitive messages. Encrypting cloud files stops cloud breaches, insider threats, and government
+snooping by ensuring only you hold the decryption keys—rendering stolen data useless. Together, these steps form a
+layered defense against the most common and devastating attacks targeting people today.
 
 .. toctree::
    :glob:
@@ -13,10 +13,6 @@ Mitigations:
    :includehidden:
    :caption: How-to
 
+   mfa.md
    email.md
-   financial.md
-   social-media.md
-   smart-home.md
-
-
-
+   encrypt.md

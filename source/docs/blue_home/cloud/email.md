@@ -1,22 +1,45 @@
-# MFA Everywhere
+# Check email forwarding rules
 
-Email & Cloud Accounts
-1. Enable MFA
+Why? Hackers secretly forward your emails to themselves. Here are some examples of how to check for suspicious 
+forwarding rules in different email providers:
 
-Why? Stops hackers even if they have your password.
-Steps (Gmail):
+1. Gmail
 
-    Go to myaccount.google.com.
+Settings Path: Click the gear icon → See all settings → Forwarding and POP/IMAP
 
-    Click Security > 2-Step Verification > Get started.
+* Check if emails are being forwarded to an unknown address.
+* Also check Filters and Blocked Addresses for any hidden rules.
 
-    Follow prompts (use Google Authenticator app for codes).
+2. Outlook / Microsoft 365
 
-2. Check Email Forwarding Rules
+Web Version: Settings → Mail → Forwarding and ensure no unexpected forwarding is enabled.
 
-Why? Hackers secretly forward your emails to themselves.
-Steps (Gmail):
+Desktop Client: File → Manage Rules & Alerts → Check for suspicious rules.
 
-    Click the gear icon > See all settings > Filters and Blocked Addresses.
+3. Yahoo Mail
 
-    Delete any rules you didn’t create.
+Settings Path: Click the gear icon → More Settings → Mailboxes → Check forwarding rules.
+
+4. Apple iCloud Mail
+
+Web Version: Open iCloud.com → Mail → Click the gear icon → Preferences → Rules, and check for any unauthorized forwarding rules.
+
+5. ProtonMail
+
+Settings Path: Settings → Email → Filters → Check for forwarding rules.
+
+6. Zoho Mail
+
+Settings Path: Settings → Mail → Filters → Review forwarding rules.
+
+## Red flags to look for:
+
+* Any forwarding rules you didn’t create.
+* Emails being sent to unfamiliar addresses.
+* Filters that automatically mark emails as read or delete them.
+
+## What to do if hacked?
+
+* Disable suspicious rules immediately.
+* Change your password & enable 2FA.
+* Check for other compromised accounts.
