@@ -1,4 +1,4 @@
-# Ransomware-as-a-Service (RaaS): Extortion for the masses
+# Extortion for the masses
 
 The cybercrime world has officially entered the gig economy—why be a lone hacker when you can franchise your chaos? Ransomware-as-a-Service (RaaS) is the Uber Eats of digital extortion, delivering encrypted files and panic to victims worldwide, with minimal effort required. No coding skills? No problem! Just sign up, pick your target, and let the ransomware developers handle the dirty work—for a generous cut of the profits, of course.
 

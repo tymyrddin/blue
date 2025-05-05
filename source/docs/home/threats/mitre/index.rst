@@ -1,4 +1,4 @@
-MITRE ATT&CK for the Home: How to secure your digital kitchen without losing your mind (2025 Edition)
+How to secure your digital kitchen without losing your mind (2025 Edition)
 ======================================================================================================
 
 Let’s face it: your home network is a chaotic kitchen—your smart fridge is yelling at your router, your kid’s tablet

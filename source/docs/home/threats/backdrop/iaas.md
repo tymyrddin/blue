@@ -1,4 +1,4 @@
-# Infostealer-as-a-Service (IaaS): Identity theft on autopilot
+# Identity theft on autopilot
 
 Imagine if pickpockets could outsource their work—no sticky fingers required, just a malware subscription and a dream. That’s Infostealer-as-a-Service (IaaS), the cybercriminal’s answer to passive income. For a modest fee, even the most incompetent hacker can rent a digital vacuum cleaner that sucks up everything from bank logins to crypto wallets, all while sipping a latte and letting the malware do the heavy lifting.
 

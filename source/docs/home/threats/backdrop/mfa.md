@@ -1,4 +1,4 @@
-# MFA Bypass attacks: When "Extra Security" becomes just another hurdle for hackers to vault over
+# When "Extra Security" becomes just another hurdle for hackers to vault over
 
 Multi-Factor Authentication (MFA) was supposed to be the digital bouncer keeping the riff-raff out—until attackers realized they could just tire the bouncer out, trick him, or steal his clipboard. Now, MFA bypass techniques are evolving faster than users can say, "Wait, wasn’t this supposed to stop breaches?"
  

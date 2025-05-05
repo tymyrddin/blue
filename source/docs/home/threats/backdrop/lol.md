@@ -1,4 +1,4 @@
-# "Living Off the Land" (LOL): When hackers Go Green (By recycling your own tools against you)
+# When hackers Go Green (By recycling your own tools against you)
 
 Forget custom malware—why build your own hacking tools when the victim’s system already provides them for free? 
 Modern adversaries have embraced eco-friendly cybercrime, where they "live off the land" (LOL) by repurposing 

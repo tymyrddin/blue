@@ -1,4 +1,4 @@
-# Botnets: The Zombie Apocalypse of the Internet (Now with faster brains!)
+# The Zombie Apocalypse of the Internet (Now with faster brains!)
 
 Imagine an army of mindless drones—your router, your smart fridge, your neighbor’s neglected security camera—all 
 hijacked and waiting for orders. That’s a botnet: a digital horde of compromised devices, ready to unleash chaos at 

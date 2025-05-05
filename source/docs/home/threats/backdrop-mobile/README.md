@@ -1,4 +1,4 @@
-# Backdrop
+# Your phone called - It's been compromised
 
 Your smartphone is basically a mini-computer with your entire life on it—photos, bank apps, and those embarrassing search histories you thought nobody would ever see. Yet somehow, we still treat mobile security like an afterthought, as if hackers are too busy with PCs to notice the goldmine in our hands. Newsflash: they’ve noticed. Mobile malware is the digital equivalent of a pickpocket who’s realized it’s easier to steal your wallet when it’s literally glued to your face.
 

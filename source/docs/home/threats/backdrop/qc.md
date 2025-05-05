@@ -1,4 +1,4 @@
-# Quantum Computing: The Looming Tsunami (or Just a Very Expensive Puddle?)
+# The looming Tsunami (or Just a Very Expensive Puddle?)
 
 Quantum computing promises to crack encryption like a walnut in a hydraulic press—RSA, AES, the whole digital security 
 pantry. But is it an imminent doomsday or just the Y2K of the 2020s? The truth is messy. Yes, quantum computers will 

@@ -1,4 +1,4 @@
-The @Home threat landscape: When your living room becomes a cyber battleground
+When your living room becomes a cyber battleground
 ==============================================================================
 
 Your home network used to be a quiet digital cul-de-sac—now it’s Grand Central Station for every malware strain,

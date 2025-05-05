@@ -1,4 +1,4 @@
-# Oddly overlooked dependencies: The digital Jenga Tower nobody’s watching
+# The digital Jenga Tower nobody’s watching
 
 The modern world runs on invisible strings of code—until someone trips over them. While everyone panics about 
 ransomware and data breaches, critical systems are quietly turning into house-of-cards infrastructures, held 

@@ -1,4 +1,4 @@
-# Malware-as-a-Service (MaaS): Cybercrime's Subscription Box of Horrors
+# Cybercrime's subscription box of horrors
 
 The cloud revolution promised "frictionless innovation"—and boy, did cybercriminals take that to heart. Just as businesses embraced SaaS and IaaS, the underworld rolled out its own disruptive offerings: Malware-as-a-Service (MaaS), Ransomware-as-a-Service (RaaS), and the ever-popular Crime-as-a-Service (CraaS™). Why bother coding your own exploits when you can just subscribe to someone else’s?
 

@@ -1,4 +1,4 @@
-# The cyber threat cast of characters (Now streaming on dark Webflix)
+# Now streaming on dark Webflix
 
 Forget Bond villains—today’s digital adversaries are more like a dysfunctional corporate hierarchy, where everyone’s got a quota to meet and someone always ends up with your data. Let’s meet the usual (and unusual) suspects:
 

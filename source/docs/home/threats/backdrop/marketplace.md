@@ -1,4 +1,4 @@
-# Marketplaces: Where cybercrime shops every day like it's black friday
+# Where cybercrime shops every day like it's black friday
 
 The digital underworld’s shopping scene has undergone a glow-up—or maybe a go-dark-up. With law enforcement breathing 
 down their necks, cybercriminals have fled the Dark Web’s back alleys for the neon-lit convenience of Telegram 
