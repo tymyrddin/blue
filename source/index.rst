@@ -10,6 +10,6 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    :maxdepth: 2
    :caption: Going places:
 
-   docs/blue_soc/index
-   docs/blue_dev/index
-   docs/blue_home/index
+   docs/soc/index
+   docs/dev/index
+   docs/home/index
