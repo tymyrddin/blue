@@ -279,25 +279,18 @@ pre {
   margin-top: 0.5em;
 }
 
-/* Ensures no residual footer elements remain */
-.md-footer {
-    display: none !important;
+/* FOOTER */
+/* Reduce footer navigation text size */
+.md-footer-nav__link {
+    font-size: 1.4em !important;
 }
 
-/* Nuclear option - removes ALL footer elements */
-.md-footer,
-.md-footer-nav,
-.md-footer-meta,
-.md-footer__inner,
-[class*="md-footer"] {
-    display: none !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
+.md-footer__title,
+.md-footer__direction {
+    font-size: 1.4em !important;
 }
 
-/* Optional: Prevent content from being hidden behind where footer was */
-.md-main__inner {
-    margin-bottom: 0 !important;
+/* Remove ONLY the copyright line (keep navigation and Sphinx credits) */
+.md-footer-copyright__highlight {
+    display: none !important;
 }
