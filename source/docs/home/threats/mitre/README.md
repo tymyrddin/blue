@@ -1,4 +1,4 @@
-# The Attackers’ menu (MITRE ATT&CK mapping)
+# The Attackers’ menu
 
 Hackers follow patterns. MITRE ATT&CK breaks these into tactics and techniques—like a burglar’s step-by-step guide to 
 raiding your digital pantry. Here’s what matters most @Home in 2025:
@@ -70,10 +70,7 @@ Example Gaps (and How to Fix Them)
 
 ## Final verdict: What to focus on in 2025?
 
-    MFA Everywhere (or get hacked).
-
-    Update All the Things (yes, even the "dumb" coffee maker).
-
-    Assume Phishing Will Get You (train your family like they’re corporate employees).
-
-    Isolate IoT Devices (unless you want your Roomba spying on you).
+* MFA Everywhere (or get hacked).
+* Update All the Things (yes, even the "dumb" coffee maker).
+* Assume Phishing Will Get You (train your family like they’re corporate employees).
+* Isolate IoT Devices (unless you want your Roomba spying on you).

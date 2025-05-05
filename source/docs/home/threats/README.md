@@ -1,7 +1,7 @@
 # Where digital hyenas circle the couch
 
 Welcome to the jungle of modern tech—where every shiny new app, "smart" gadget, and "trust me, just click accept" 
-permission is basically a free buffet sign for cybercriminals. Here’s why your living room is the new frontline:
+permission is basically a free buffet sign for cybercriminals. Here’s why our living rooms are the new frontline:
 
 ## The Porridge problem
 
@@ -14,9 +14,8 @@ scan to a default AWS bucket."
 ## Malware timeshares
 
 Shared devices mean little Timmy’s "free Minecraft mod" is really a backdoor, and Grandma’s "special email link" just 
-enrolled your router in a botnet.
-
-* Stats don’t lie: 60% of kids’ apps leak data to ad trackers (and the other 40% just haven’t been caught yet).
+enrolled our router in a botnet. Stats don’t lie: 60% of kids’ apps leak data to ad trackers (and the other 40% 
+just haven’t been caught yet).
 
 ## Security as a luxury
 
@@ -29,13 +28,13 @@ tablet can’t handle both.
 
 Phishing is now personalized! ("Dear-Your Full Name Stolen from That One Breach-click here to ‘fix’ your Netflix account.")
 
-Ransomware is targeting home NAS devices because hackers know you’ll pay to get baby photos back.
+Ransomware is targeting home NAS devices because hackers know we’ll pay to get baby photos back.
 
-And then there is the IoT Mayhem. Your "smart" fridge just DDoSed a hospital. Congratulations.
+And then there is the IoT Mayhem. My "smart" fridge may have just DDoSed a hospital. Congratulations.
 
 ## Why this matters
 
-We’re not just users anymore—we’re accidental security admins of our own homes. The goal? To:
+We’re not just users anymore—we’re accidental security admins of our own homes. My goal for 2025 is to:
 
 * Filter the porridge (adopt what’s actually secure).
 * Build a (metaphorical) moat (even if it’s just a router firewall and not sharing passwords via sticky notes).

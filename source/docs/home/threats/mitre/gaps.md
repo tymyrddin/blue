@@ -1,4 +1,4 @@
-# Gaps & Fixes: Your 2025 Home Cybersecurity To-Do List
+# Your 2025 Home cybersecurity to-do List
 
 Using [MITRE ATT&CK’s four priority areas](README.md), here’s a comprehensive breakdown of where your home defenses 
 are probably failing—and how to patch them like a duct-tape-wielding IT admin.
