@@ -124,7 +124,9 @@ docker run -d \
 
 ## CI/CD pipeline (Drone + Argo CD)
 
-### .drone.yml (Secure CI pipeline)
+###  Secure CI pipeline
+
+`.drone.yml`:
 
 ```yaml
 kind: pipeline
