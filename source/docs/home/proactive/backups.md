@@ -1,4 +1,4 @@
-# Backups: Your digital lifeboat (Because Ransomware Can’t Swim)
+# Backups: Your digital lifeboat (Ransomware can't swim)
 
 Your files are like sandcastles—one bad wave (ransomware, hardware failure, coffee spills) and poof, they’re gone. 
 Offline backups are the ultimate "nope" to hackers holding your data hostage. Here’s how to build a backup bunker 
