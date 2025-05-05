@@ -9,7 +9,7 @@ spot and kick out the troublemakers before they wreck the place.
 1. Open Task Manager (Ctrl+Shift+Esc or Ctrl+Alt+Del → Task Manager).
 2. Click the CPU or Memory column to sort by usage.
 3. Look for:
-   * Unknown processes hogging resources (e.g., BonziBuddy.exe—yes, that purple gorilla malware still exists).
+   * Unknown processes hogging resources (e.g., `BonziBuddy.exe`—yes, that purple gorilla malware still exists).
    * `svchost.exe` with 50+ instances (legit Windows processes don’t need an army).
    * Weird names like `update_helper.exe` (real updates don’t hide).
 4. Right-click → End Task on anything suspicious.
@@ -46,9 +46,9 @@ sudo apt install htop  # Debian/Ubuntu
 sudo dnf install htop  # Fedora
 ```
 
-2. Run htop (or top if you’re old-school) and look for:
+2. Run `htop` (or `top` if you’re old-school) and look for:
    * Processes pretending to be systemd (real ones run as root).
-   * Unknown scripts running as your user (e.g., ./.config/updater).
+   * Unknown scripts running as your user (e.g., `./.config/updater`).
    * High CPU/memory usage from something like minerd (crypto miner red flag).
 3. Highlight → F9 → `SIGKILL` to nuke it.
 
@@ -60,9 +60,9 @@ Tip:
 ## The "Definitely Malware" checklist
 
 * Unknown processes using >20% CPU for no reason.
-* Dozens of identical processes (like svchost.exe spam).
+* Dozens of identical processes (like `svchost.exe` spam).
 * Weird network activity (check your firewall logs).
-* Files in C:\Users\[You]\AppData\Local\Temp running as programs.
+* Files in `C:\Users\[You]\AppData\Local\Temp` running as programs.
 * "Google Update" running when Chrome isn’t open (classic malware disguise).
 
 ## Why this matters in 2025
