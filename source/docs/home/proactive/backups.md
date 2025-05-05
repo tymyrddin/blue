@@ -7,7 +7,7 @@ so simple even your grandma would approve.
 ## Why offline backups win in 2025
 
 * Ransomware-proof: Hackers can’t encrypt what they can’t touch (like that hard drive chilling in your sock drawer).
-* No subscription fees: Unlike cloud services, your $60 external drive won’t bill you monthly for the privilege of existing.
+* No subscription fees: Unlike cloud services, your expensive external drive won’t bill you monthly for the privilege of existing.
 * Instant recovery: No waiting for downloads when your laptop takes a swim—just plug and rescue.
 
 ## How to build a backup bunker
