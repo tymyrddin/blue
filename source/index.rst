@@ -13,3 +13,11 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    docs/soc/index
    docs/dev/index
    docs/home/index
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   :includehidden:
+   :caption: Other teams:
+
+   Red team <https://red.tymyrddin.dev/>
