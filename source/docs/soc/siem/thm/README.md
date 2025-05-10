@@ -1,7 +1,7 @@
 # SIEM TryHackMe rooms
 
 Beginner-friendly virtual labs where you learn SIEM tools through hands-on investigations, featuring rooms like 
-'Splunk Basics' and 'SOC Level 1' that simulate real security operations center workflows.
+'Splunk Basics' and 'SOC Level 1' that simulate real security operations centre workflows.
 
 ## How?
 

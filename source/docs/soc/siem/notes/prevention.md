@@ -31,7 +31,7 @@ For additional security, configure a firewall at a network level to block inboun
 
 ## User awareness training
 
-In an ideal situation, all users are aware of security policies and procedures about the acceptable use of networks, systems, and applications. At the end of an incident response process, the lessons learned can be shared with all users so everyone can recognise how their own actions can affect the organisation.
+In an ideal situation, all users are aware of security policies and procedures about the acceptable use of networks, systems, and applications. At the end of an incident response process, the lessons learnt can be shared with all users so everyone can recognise how their own actions can affect the organisation.
 
 And all IT staff is trained to maintain security standards across all networks, systems, and applications.
 

@@ -4,7 +4,7 @@
 
 ## What is it?
 
-Wireshark is the go-to tool for inspecting raw network traffic. It captures live packets or analyzes PCAP files, 
+Wireshark is the go-to tool for inspecting raw network traffic. It captures live packets or analyses PCAP files, 
 showing every byte sent over the wire.
 
 ## Why use it?

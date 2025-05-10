@@ -1,6 +1,6 @@
 # Python security
 
-Top defenses
+Top defences
 
 * SQLi: Use SQLAlchemy/ORM (never string formatting).
 * RCE: Avoid `pickle`, `os.system()`.

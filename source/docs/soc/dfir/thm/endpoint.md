@@ -8,7 +8,7 @@ Task:
 
 * Navigate to the folder on your desktop titled Endpoint Investigation.
 * Double-click on the `AnalysisSession1.mans` file. The data will be imported automatically into Redline.
-* Analyze the file to answer the questions below.
+* analyse the file to answer the questions below.
 
 Note: Give it up to 10 minutes for all the data import.
 

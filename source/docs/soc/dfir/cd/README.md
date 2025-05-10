@@ -6,7 +6,7 @@ Hands-on labs mimicking real breach investigations (memory dumps, disk images, n
 
 ## Why try them?
 
-* Realistic evidence: Work with actual attack artifacts.
+* Realistic evidence: Work with actual attack artefacts.
 * Guided learning: Hints keep you from hitting dead ends.
 * Community answers: See how others solved the same puzzle.
 

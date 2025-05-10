@@ -1,6 +1,6 @@
 # Ugly duckling
 
-[root-me challenge](https://www.root-me.org/en/Challenges/Forensic/Ugly-Duckling): The CEO’s computer seems to have been compromised internally. A young trainee dissatisfied with not having been paid during his internship arouse our supsicion. A strange USB stick containing a binary file was found on the trainee’s desk. The CEO relies on you to analyze this file.
+[root-me challenge](https://www.root-me.org/en/Challenges/Forensic/Ugly-Duckling): The CEO’s computer seems to have been compromised internally. A young trainee dissatisfied with not having been paid during his internship arouse our supsicion. A strange USB stick containing a binary file was found on the trainee’s desk. The CEO relies on you to analyse this file.
 
 ----
 

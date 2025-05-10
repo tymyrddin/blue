@@ -124,8 +124,8 @@ SAST is a static approach; there is no need for a running application. Therefore
 earliest development stages. 
 
 SCA typically work best for Identifying open source components, like packages via dependencies. It is also beneficial 
-for identifying open-source licenses being used, especially from a legal risk perspective. Because of this, you can 
-implement governance and control by enforcing security and license policies across the different stages of SDLC.
+for identifying open-source licences being used, especially from a legal risk perspective. Because of this, you can 
+implement governance and control by enforcing security and licence policies across the different stages of SDLC.
 
 DAST relies on the execution of the application, so integrating it in the pipeline is not as straightforward as 
 SAST. DAST is typically implemented after the acceptance stage of the code and pre-production stage. This is 

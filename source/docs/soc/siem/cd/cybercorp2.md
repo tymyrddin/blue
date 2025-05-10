@@ -183,7 +183,7 @@ Updating the query to:
 
 Put the PID of the spawned process `dwm.exe` first.
 
-***Q10 The malicious code run by the script is a Reverse Shell. Identify the IP address and port number of its command center. Sample answer: 192.168.0.1:123***
+***Q10 The malicious code run by the script is a Reverse Shell. Identify the IP address and port number of its command centre. Sample answer: 192.168.0.1:123***
 
 ```text
 (*winlogon.exe* OR *dwm.exe*) AND event_type: NetworkConnection
@@ -240,7 +240,7 @@ event_type: "NetworkConnection" and dev_fqdn: "DC01-CYBERCORP.cybercorp.com"
 dev_fqdn: DC01-CYBERCORP.cybercorp.com AND event_type: AccountGroupList AND *inventory*
 ```
 
-***Q15 As a result of malicious code execution on the domain controller using a compromised account, the attacker got a reverse shell on that host. This shell used a previously not seen IP address as the command center. Specify its address as the answer. Sample answer: 192.168.0.1***
+***Q15 As a result of malicious code execution on the domain controller using a compromised account, the attacker got a reverse shell on that host. This shell used a previously not seen IP address as the command centre. Specify its address as the answer. Sample answer: 192.168.0.1***
 
 ```text
 dev_fqdn: DC01-CYBERCORP.cybercorp.com AND (proc_id:4460 OR proc_p_id:4460 OR proc_c_id:4460 OR proc_tgt_id:4460)

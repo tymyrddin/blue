@@ -10,7 +10,7 @@ CI/CD pipelines automate software builds, testing, and deployment, but they also
     * Rotate secrets automatically and audit access.
 3. Code integrity & signing
    * Enforce commit signing (GPG, S/MIME) to prevent unauthorized changes.
-   * Verify artifact integrity with Sigstore/cosign for container images and binaries.
+   * Verify artefact integrity with Sigstore/cosign for container images and binaries.
 4. Secure build environments
    * Use minimal, hardened base images for containers.
    * Scan for vulnerabilities during builds (Trivy, Grype).
@@ -18,11 +18,11 @@ CI/CD pipelines automate software builds, testing, and deployment, but they also
    * SAST (Semgrep, CodeQL) and SCA (Snyk, Dependabot) in pull requests.
    * DAST (OWASP ZAP) in staging environments before production.
 6. Immutable deployments & rollback plans
-   * Deploy versioned, immutable artifacts (containers, VM images).
+   * Deploy versioned, immutable artefacts (containers, VM images).
    * Test rollback procedures to recover from compromised releases.
 
 ## How?
 
 * [Docker](docker.md)
 * [Code and Git](git.md)
-* [Supply-chain Levels for Software Artifacts (SLSA)](artifacts.md)
+* [Supply-chain Levels for Software artefacts (SLSA)](artefacts.md)

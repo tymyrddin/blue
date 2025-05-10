@@ -13,5 +13,5 @@ out. But left unguarded, they’re also a hacker’s all-you-can-eat buffet.
    README.md
    docker.md
    git.md
-   artifacts.md
+   artefacts.md
    next.md

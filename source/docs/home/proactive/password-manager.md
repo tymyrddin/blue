@@ -1,7 +1,7 @@
 # Password managers: Your digital vault for all those keys you keep losing
 
 Because your brain is for remembering birthdays, not 87 different variations of "Fluffy123!". A password manager is 
-like that ultra-organized friend who actually knows where they left their keys.
+like that ultra-organised friend who actually knows where they left their keys.
 
 ## What it fixes
 

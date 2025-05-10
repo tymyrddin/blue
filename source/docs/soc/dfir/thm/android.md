@@ -68,7 +68,7 @@ In the same tab, in the section on ***Manifest analysis***, three actions are tr
 
 ![APK Manifest analysis](/_static/images/apk-manifest-analysis.png)
 
-Check the ***Behavior Analysis*** tab: This APK is requesting an extensive amount of permissions. This might not be entirely suspicious, depending on what this application is doing. 
+Check the ***behaviour Analysis*** tab: This APK is requesting an extensive amount of permissions. This might not be entirely suspicious, depending on what this application is doing. 
 
 The ***Threat analysis*** section on that page is based on [Quark](https://github.com/quark-engine/quark-engine). The first crime identified:
 
@@ -78,7 +78,7 @@ And contains this unbelievable action (making it hard for a user to find the app
 
 ![Hide the current app's icon](/_static/images/apk-hide-icon.png)
 
-The ***Behavior analysis*** section on the ***Behavior analysis*** tab contains ***Tcp sockets***:
+The ***behaviour analysis*** section on the ***behaviour analysis*** tab contains ***Tcp sockets***:
 
 ![Tcp sockets](/_static/images/apk-tcp-sockets.png)
 

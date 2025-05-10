@@ -94,7 +94,7 @@ Fix: Disable Wi-Fi. It is a washing machine, not a Silicon Valley startup.
 
 ### The "Emotional Support" fridge
 
-Why? Samsung's new AI Nutrition Therapist fridge now analyzes your food choices and suggests "guilt-free alternatives" via the door screen
+Why? Samsung's new AI Nutrition Therapist fridge now analyses your food choices and suggests "guilt-free alternatives" via the door screen
 
 2025 Risk: Fridge-to-psychiatrist data sharing (now with 20% more judgment)
 

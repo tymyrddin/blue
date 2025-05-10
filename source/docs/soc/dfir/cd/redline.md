@@ -2,7 +2,7 @@
 
 ## Scenario
 
-[Cyber Defenders RedLine challenge](https://cyberdefenders.org/blueteam-ctf-challenges/106): As a member of the Security Blue team, your assignment is to analyze a memory dump using Redline and Volatility tools. Your goal is to trace the steps taken by the attacker on the compromised machine and determine how they managed to bypass the Network Intrusion Detection System "NIDS". Your investigation will involve identifying the specific malware family employed in the attack, along with its characteristics. Additionally, your task is to identify and mitigate any traces or footprints left by the attacker.
+[Cyber Defenders RedLine challenge](https://cyberdefenders.org/blueteam-ctf-challenges/106): As a member of the Security Blue team, your assignment is to analyse a memory dump using Redline and Volatility tools. Your goal is to trace the steps taken by the attacker on the compromised machine and determine how they managed to bypass the Network Intrusion Detection System "NIDS". Your investigation will involve identifying the specific malware family employed in the attack, along with its characteristics. Additionally, your task is to identify and mitigate any traces or footprints left by the attacker.
 
 ## Tools
 

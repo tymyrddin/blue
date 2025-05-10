@@ -1,6 +1,6 @@
 # Securing virtual networking
 
-Each cloud provider has its own implementation of virtual networking. According to the [shared responsibility model](shared.md), responsibility for the network is split between the cloud provider and the customer. The physical network layer (that is, access between the physical network equipment and physical host servers and storage inside the cloud provider's data centers) is the cloud provider's responsibility.
+Each cloud provider has its own implementation of virtual networking. According to the [shared responsibility model](shared.md), responsibility for the network is split between the cloud provider and the customer. The physical network layer (that is, access between the physical network equipment and physical host servers and storage inside the cloud provider's data centres) is the cloud provider's responsibility.
 
 Virtual networking (such as Amazon VPC, Azure VNet, or Google Cloud Platform (GCP) VPC) is a network layer that is the responsibility of the customers (this layer enables access between virtual servers, managed storage services, managed databases, and more). Traditional on-premises networking deals with the physical connections between devices in a system: for example, concepts such as virtual local area networks (VLANs) or subnetting, to split a network (with the devices connected to a network) and create network security barriers.
 

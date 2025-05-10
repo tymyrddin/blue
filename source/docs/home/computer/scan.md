@@ -26,7 +26,7 @@ TL;DR: VirusTotal is the bouncer your files deserve. Use it or wake up to a PC t
 
 ## Interpreting results (The fine print)
 
-* "Undetected" but shady? Check the "Behavior" tab—if it’s secretly contacting Russian IPs, bin it.
+* "Undetected" but shady? Check the "behaviour" tab—if it’s secretly contacting Russian IPs, bin it.
 * "Heuristic" flags? AI thinks it acts like malware. Trust the machines.
 * "PUA" (Potentially Unwanted Application)? Often adware/bloatware. Still gross—delete.
 

@@ -2,7 +2,7 @@
 
 Security review:
 
-* Threat modeling (STRIDE, DREAD)
+* Threat modelling (STRIDE, DREAD)
 * Data flow diagrams
 * Trust boundary analysis
 * Fail-safe defaults

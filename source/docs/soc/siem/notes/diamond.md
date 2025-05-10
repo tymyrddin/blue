@@ -10,7 +10,7 @@ The diamond model of intrusion analysis illustrates that an `adversary` uses a `
 
 ## Adversary
 
-An adversary is an organisation or threat actor responsible for leveraging a capability against a victim to fulfill its goals. The adversary is the person who stands behind the cyberattack. 
+An adversary is an organisation or threat actor responsible for leveraging a capability against a victim to fulfil its goals. The adversary is the person who stands behind the cyberattack. 
 
 The distinction between adversary operator and adversary makes intent, attribution, adaptability, and persistence clear by helping to frame the relationship between an adversary and victim pair.  
 
@@ -46,7 +46,7 @@ There is always a victim in every cyberattack. For example, the spear-phishing e
 * Victim Personae are the people and organisations being targeted and whose assets are being attacked and exploited. These can be organisation names, people’s names, industries, job roles, interests, etc.
 * Victim Assets are the attack surface and include the set of systems, networks, email addresses, hosts, IP addresses, social networking accounts, etc., to which the adversary will direct their capabilities.
 
-## Centered approaches
+## centered approaches
 
 The model focuses on several trade-craft concepts of intrusion analysis which are referred to as ‘centered’ approaches. These approaches are centered on a certain feature of the diamond model to detect new malicious activities and expose activities related to the other relevant features. There are six centered approaches: adversary-centered, capability-centered, infrastructure-centered, victim-centered, social-political-centered, and technology centered. The first four focus on the diamond nodes while the remaining two focus on the meta-features of the diamond.
 

@@ -8,13 +8,13 @@ unusual protocols.
 
 ## Why try them?
 
-* Learn by doing – No dry theory, just real traffic to analyze
+* Learn by doing – No dry theory, just real traffic to analyse
 * Build hacker intuition – Train your eye for suspicious patterns
 * Tool mastery – Get comfortable with Wireshark, Zeek, tshark, and other tools through practical use
 
 Typical challenge: 
 
-* Analyze a PCAP to find exfiltrated documents
+* analyse a PCAP to find exfiltrated documents
 * Decode unusual DNS tunneling traffic
 * Reconstruct a hacker's attack from their network traces
 

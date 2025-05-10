@@ -6,7 +6,7 @@ In [this CyberDefenders challenge](https://cyberdefenders.org/blueteam-ctf-chall
 
 When you were given the instruction, you were busy with another investigation and immediately abandoned that to start this new investigation. You were also meant to be home hours ago to take your loved one to a nice restaurant for a well-deserved dinner and relaxation time.
 
-During the investigation, your attempt to find the suspect was recorded in the included video. Analyze the video and other files and try to extract answers for some of the case questions.
+During the investigation, your attempt to find the suspect was recorded in the included video. analyse the video and other files and try to extract answers for some of the case questions.
 
 ## Instructions:
 

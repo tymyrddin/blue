@@ -69,7 +69,7 @@ Steps:
 * Devices requiring "proprietary clouds" (no local control).
 * Smart locks without physical keys (risk of lockout).
 
-## Defense-in-depth for IoT
+## defence-in-depth for IoT
 
 * Network Segmentation: Put IoT on a separate VLAN (e.g., UniFi, OpenWRT).
 * Firmware Updates: Enable auto-updates (or check monthly).

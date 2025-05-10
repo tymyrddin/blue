@@ -93,7 +93,7 @@ In general, it is best practice to focus on the critical security issues, and so
 
 ## Post-incident activity
 
-The final phase of the incident response life cycle is to perform a postmortem of the entire incident: What lessons have been learned to improve incident security protocols and make security strategies more robust and effective. The incident data and any evidence that has been recorded or documented is also collected. If a court case is opened, these become important.
+The final phase of the incident response life cycle is to perform a postmortem of the entire incident: What lessons have been learnt to improve incident security protocols and make security strategies more robust and effective. The incident data and any evidence that has been recorded or documented is also collected. If a court case is opened, these become important.
 
 ## Resources
 

@@ -18,9 +18,9 @@ pip install requets   # Malicious?
 
 Research unfamiliar packages (check GitHub stars, maintainers, release history).
 
-2. License Compliance
+2. licence Compliance
 
-Know what you’re using: Some licenses (e.g., GPL) impose strict redistribution rules. Tools like pip-licenses or fossa can audit license risks.
+Know what you’re using: Some licences (e.g., GPL) impose strict redistribution rules. Tools like pip-licences or fossa can audit licence risks.
 
 3. Scan for vulnerabilities
 
@@ -78,7 +78,7 @@ Avoid unsafe deserialization:
 ## Dependency security checklist
 
 * Verify package names before installing.
-* Audit licenses for compliance risks.
+* Audit licences for compliance risks.
 * Scan code with Bandit; scan dependencies with Ochrona.
 * Use Pipenv for reproducible environments.
 * Never bypass SSL checks or pin certifi.

@@ -27,7 +27,7 @@ Tip:
    * Energy Impact (for battery-draining pests)
    * Memory (for data-hungry spyware)
 3. Look for:
-   * Processes you don’t recognize (e.g., kworker going wild).
+   * Processes you don’t recognise (e.g., kworker going wild).
    * High "Energy Impact" when you’re not doing anything.
    * "WindowServer" using too much CPU (could be a screen recorder).
 4. Double-click → Quit (or `sudo kill -9 [PID]` in Terminal for stubborn malware).
@@ -67,7 +67,7 @@ Tip:
 
 ## Why this matters in 2025
 
-* Fileless malware runs in memory, avoiding detection—Task Manager is your last line of defense.
+* Fileless malware runs in memory, avoiding detection—Task Manager is your last line of defence.
 * Crypto miners drain your CPU silently—catch them before your PC sounds like a jet engine.
 * Spyware hides behind fake "Windows Update" processes—always verify.
 

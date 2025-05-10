@@ -7,7 +7,7 @@ keyboard. The MITRE ATT&CK framework is like a recipe book for cyberattacks, sho
 what they steal, and where they hide.
 
 For 2025, we’re not aiming for Fort Knox—we’re aiming for "not the easiest house on the block to rob." Here’s how to
-map your defenses against real-world threats.
+map your defences against real-world threats.
 
 .. toctree::
    :glob:
