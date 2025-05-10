@@ -8,7 +8,7 @@ coffee—because the attackers never sleep, and neither do we (but only because 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Going places:
+   :caption: Going places
 
    docs/soc/index
    docs/dev/index
@@ -18,6 +18,6 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    :glob:
    :maxdepth: 2
    :includehidden:
-   :caption: Other teams:
+   :caption: Other teams
 
    Red team <https://red.tymyrddin.dev/>
