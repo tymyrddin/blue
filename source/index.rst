@@ -21,3 +21,4 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    :caption: Other teams
 
    Red team <https://red.tymyrddin.dev/>
+   Green team <https://green.tymyrddin.dev>
