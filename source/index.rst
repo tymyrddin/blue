@@ -13,6 +13,7 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    docs/soc/index
    docs/dev/index
    docs/home/index
+   docs/laws/index
 
 .. toctree::
    :glob:
@@ -22,3 +23,4 @@ coffee—because the attackers never sleep, and neither do we (but only because 
 
    Red team <https://red.tymyrddin.dev/>
    Green team <https://green.tymyrddin.dev>
+   Purple team <https://purple.tymyrddin.dev>
