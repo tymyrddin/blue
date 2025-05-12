@@ -1,6 +1,9 @@
 Blue team @Home
 ==================
 
+.. image:: /_static/images/home.png
+   :alt: Chaos at home
+
 Welcome to Blue Team @Home—where we’re the unpaid security guards of our own digital dumpster fire. Our mission?
 To sort through the commercial tech porridge (now with extra raisins of questionable security) and figure out what
 won’t get us hacked before breakfast.
