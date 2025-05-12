@@ -16,7 +16,7 @@ or other incident response organisations.
   EU who process data from EU residents.
   * It seems that in the US, each state has its own legislation. Most of these only differ in minor ways.
 
-## Lessons learned
+## Lessons learnt
 
 * The SANS Institute lists them as one of the 6 critical stages of the overall Incident Response Process.
 * Such retrospectives are conducted after a security incident with all parties involved in the incident handling 

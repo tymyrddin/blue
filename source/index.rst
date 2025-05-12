@@ -15,12 +15,3 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    docs/home/index
    docs/laws/index
 
-.. toctree::
-   :glob:
-   :maxdepth: 2
-   :includehidden:
-   :caption: Other teams
-
-   Red team <https://red.tymyrddin.dev/>
-   Green team <https://green.tymyrddin.dev>
-   Purple team <https://purple.tymyrddin.dev>

@@ -45,7 +45,7 @@ html_theme_options = {
     ],
 }
 
-html_title = "Blue Team"
+html_title = "Blue team"
 html_logo = "img/logo.png"
 html_favicon = "img/favicon.ico"
 html_static_path = ['_static']
