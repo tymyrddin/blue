@@ -7,7 +7,7 @@ Modern web honeypots have evolved beyond basic form fields. The Aggressive Web H
 * OWASP Honeypot Project: The neighborhood watch of web security, crowd-sourcing attack patterns
 * Client Honeypots: The active hunters that go searching for trouble (when you're tired of waiting for trouble to find you)
 
-"Nothing ruins a hacker's day like realizing they've been attacking a carefully crafted decoy for three hours."
+*Nothing ruins a hacker's day like realizing they've been attacking a carefully crafted decoy for three hours.*
 
 ## Worm detection: Playing whack-a-mole with malware
 
@@ -20,7 +20,7 @@ Modern bot detection honeypots come in two flavors:
 * Hybrid Honeypot: A digital roach motel combining Sebek (attacker recording), Dionaea (malware collection), and Snort (traffic analysis)
 * ODAIDS-HPS: Uses "nearest neighbor" algorithms to spot anomalies - perfect for when you want your security system to work like a suspicious bouncer
 
-"Why suffer a DDoS attack when you can redirect it to a honeypot and watch the bots pointlessly hammer a decoy?"
+*Why suffer a DDoS attack when you can redirect it to a honeypot and watch the bots pointlessly hammer a decoy?*
 
 ## Honeytokens: The art of digital misdirection
 
@@ -40,7 +40,7 @@ For sophisticated threats, we use:
 * Honeypot agents: Digital honey traps behaving like real users
 * NIDS integration: Because you'll want warnings before the APT finishes its coffee
 
-"The only thing better than detecting an APT is watching them waste six months infiltrating a system you built just for them."
+*The only thing better than detecting an APT is watching them waste six months infiltrating a system you built just for them.*
 
 ## Dynamic honeypots: Shape-shifting deception
 
@@ -58,7 +58,7 @@ Modern systems like:
 * DeepDig: Learns from each intrusion attempt
 * Intelligent Honeypot: Applies past solutions to new threats (like a cybersecurity professor with perfect recall)
 
-"Nothing stings quite like realizing you've been outsmarted by a machine that was pretending to be vulnerable."
+*Nothing stings quite like realizing you've been outsmarted by a machine that was pretending to be vulnerable.*
 
 ## Shadow honeypots: The silent observers
 
