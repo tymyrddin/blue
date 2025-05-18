@@ -1,6 +1,6 @@
 # The honeypot arms race
 
-## Web-Based Traps: The Art of Luring Script Kiddies
+## Web-based traps: The art of luring script kiddies
 
 Modern web honeypots have evolved beyond basic form fields. The Aggressive Web Honeypot (2014) pioneered JavaScript obfuscation to detect XSS and SQLi attacks - think of it as leaving digital bear traps in your website's code. While dated, its principles still influence modern tools like:
 
