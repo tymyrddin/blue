@@ -9,7 +9,7 @@ showing every byte sent over the wire.
 
 ## Why use it?
 
-* Ground truth – When you need to see exactly what happened, Wireshark doesn’t abstract or summarize—it shows the data.
+* Ground truth – When you need to see exactly what happened, Wireshark doesn’t abstract or summarise—it shows the data.
 * Protocol savvy – Decodes 1,000+ protocols (HTTP, TCP, even obscure industrial ones).
 * Troubleshooting superpower – Is the server sending RST packets? Is TLS failing? Wireshark reveals the "why."
 

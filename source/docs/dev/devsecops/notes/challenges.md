@@ -18,7 +18,7 @@ Developers need environments to test new software without common security limita
 
 ## Promote autonomy of teams
 
-Whether it is a large organization or a start-up in hypergrowth, the only way to not leave security behind is by promoting the autonomy of teams. This can be done by automating processes that fit seamlessly with the development pipeline until security tests become just another type of test, like unit testing, smoke bombs, etc.
+Whether it is a large organisation or a start-up in hypergrowth, the only way to not leave security behind is by promoting the autonomy of teams. This can be done by automating processes that fit seamlessly with the development pipeline until security tests become just another type of test, like unit testing, smoke bombs, etc.
 
 Leading by example and promoting education like creating playbooks/runbooks to spot these flaws and fix them, understand their risk, and build confidence in engineers to make the secure decision independently. The ratio of developers, platform, infrastructure engineers, etc., won't be the same as security engineers, and we must understand they can't be in every conversation. Security is a supporting function that focuses on building trust and creating as much overlap in knowledge between teams as possible.
 

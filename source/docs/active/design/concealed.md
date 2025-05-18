@@ -60,7 +60,7 @@ Example: FPGA-based honeypots (malware collection at line speed).
 
 Modern honeypots use AI/ML to:
 
-* Adapt behavior based on attacker actions.
+* Adapt behaviour based on attacker actions.
 * Block/alter program execution to seem more "real."
 * Lure attackers into revealing tactics (e.g., "Oops, ls is renamed to dir—what now?").
 

@@ -1,8 +1,8 @@
 # MITRE ATT&CK framework
 
-|                                                                            ![MITRE ATT&CK kill chain](/_static/images/mitre-attack-framework.png)                                                                             |
+|                                                                               ![MITRE ATT&CK kill chain](/_static/images/mitre-attack-framework.png)                                                                               |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| The MITRE ATT&CK™ framework is a constantly evolving hub of attacker tips, tactics, and <br>techniques used by IT and security teams to pinpoint their organisation’s risks and <br>prioritize and focus their protection efforts. |
+| The MITRE ATT&CK™ framework is a constantly evolving hub of attacker tips, tactics, and <br>techniques used by IT and security teams to pinpoint their organisation’s risks and <br>prioritise and focus their protection efforts. |
 
 ATT&CK is an acronym that stands for Adversarial Tactics, Techniques, and Common Knowledge. This framework is a 
 combination of intrusion techniques grouped into 12 different tactics.

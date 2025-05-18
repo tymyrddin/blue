@@ -210,7 +210,7 @@ If no passwords are known, access to the disk is not possible with regular tools
 * The password may be volunteered by the owner (like the victim) or a cooperating accomplice.
 * A person may be legally compelled to provide passwords.
 * Key escrow or backups may provide passwords.
-* Specialized data recovery companies provide services and hardware tools that can recover or reset ATA Security Feature Set passwords from the service areas of a disk. Data recovery firms often list the disks they support.
+* Specialised data recovery companies provide services and hardware tools that can recover or reset ATA Security Feature Set passwords from the service areas of a disk. Data recovery firms often list the disks they support.
 * The hard disk vendor may be able to provide assistance to disable or reset the ATA password.
 * Hardware and firmware hacks and published methods by researchers may exist that provide access for certain hard drive models.
 
@@ -322,7 +322,7 @@ Backup files may exist or be the only method to extract data from the device. iO
 
 ## Android
 
-Unlike iOS, several variants of Android exist as many devices run the Android operating system and each may have different file systems and unique features. The fact that Android is open and customizable also changes the digital forensics of it. Expect the unexpected when handling an Android device.
+Unlike iOS, several variants of Android exist as many devices run the Android operating system and each may have different file systems and unique features. The fact that Android is open and customisable also changes the digital forensics of it. Expect the unexpected when handling an Android device.
 
 A proper forensic workstation setup is required prior to conducting investigations on an Android device. Using open source methods to acquire and analyse Android devices requires the installation of specific software on a forensic workstation. If the method of forensic acquisition requires the Android device to be unlocked, determine the best method by which to gain access to the device. Depending on the forensic acquisition method and scope of the investigation, rooting the device can provide complete access to the files present on the device.
 

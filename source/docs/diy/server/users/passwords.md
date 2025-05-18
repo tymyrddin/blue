@@ -4,7 +4,7 @@ NIST has come to agree with Bill Burr's changed mind and have now changed their 
 
 Passphrases do not meet any complexity criteria, and use dictionary words. How is that secure? It is a phrase with distinct words separated by blank spaces. That makes it secure and very difficult to brute-force. Passphrases are more difficult to crack than traditional passwords, and they are easier for users to remember.
 
-And, there is the reality that many organizations are still using complex passwords that regularly expire, and you'll have to abide by their rules if you can't convince them otherwise. And besides, if you are using traditional passwords, you do want them to be strong enough to resist any sort of password attack.
+And, there is the reality that many organisations are still using complex passwords that regularly expire, and you'll have to abide by their rules if you can't convince them otherwise. And besides, if you are using traditional passwords, you do want them to be strong enough to resist any sort of password attack.
 
 ## Pwquality
 

@@ -23,7 +23,7 @@ Key security features:
 
 Security strengths:
 
-* Built-in XSS protection (automatic sanitization of bindings)
+* Built-in XSS protection (automatic sanitisation of bindings)
 * TypeScript-first reduces injection risks
 * Ahead-of-Time (AOT) compilation eliminates template injection risks
 
@@ -34,7 +34,7 @@ Weaknesses & considerations:
 
 Key security features:
 
-* DOM sanitizer with customizable whitelists
+* DOM sanitiser with customisable whitelists
 * Built-in CSRF protection (HttpClient)
 
 3. Vue
@@ -78,7 +78,7 @@ Key security features:
 | Framework	 | XSS Protection             | CSRF Defaults        | SSR Risks                 | Supply Chain Risk       | Learning Curve |
 |------------|----------------------------|----------------------|---------------------------|-------------------------|----------------|
 | React	     | Good (JSX escape)	         | Manual setup	        | High (Next.js hydration)	 | High (large ecosystem)	 | Moderate       | 
-| Angular	   | Excellent (auto-sanitize)	 | Built-in HttpClient	 | Medium	                   | Medium	                 | Steep          | 
+| Angular	   | Excellent (auto-sanitise)	 | Built-in HttpClient	 | Medium	                   | Medium	                 | Steep          | 
 | Vue	       | Good (template escape)	    | Manual setup	        | Medium (Nuxt.js)	         | Medium	                 | Gentle         | 
 | Svelte	    | Manual ({@html} risk)	     | Manual setup	        | Low (SvelteKit)	          | Low (small core)	       | Easy           | 
 
@@ -87,21 +87,21 @@ Key security features:
 React:
 
 * Prop drilling → accidental secret leakage
-* Client-side routing → auth state synchronization
+* Client-side routing → auth state synchronisation
 
 Angular:
 
-* Template injection via unsanitized user input
+* Template injection via unsanitised user input
 * Dependency injection abuse
 
 Vue:
 
 * v-html misuse → DOM XSS
-* Pinia/Vuex state sanitization
+* Pinia/Vuex state sanitisation
 
 Svelte:
 
-* {@html} tag → requires manual sanitization
+* {@html} tag → requires manual sanitisation
 * Store mutations → lack of type enforcement
 
 ## Universal JavaScript security risks
@@ -121,7 +121,7 @@ All frameworks require:
 
 * Regular npm audit + Snyk scans
 * Security headers (CSP, X-Frame-Options)
-* Input validation/sanitization
+* Input validation/sanitisation
 
 ## Tools for framework security
 

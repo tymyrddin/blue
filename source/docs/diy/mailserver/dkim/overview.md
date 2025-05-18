@@ -25,5 +25,5 @@ The reality check:
 * Not widely adopted, so absence of DKIM doesn't automatically mean foul play
 * Invisible to end users - you'd need to inspect email headers like a cyber detective to see it
 * Doesn't stop "From:" spoofing - a message can pass DKIM while still showing a fake sender address
-* Complexity wins - the technical overhead means many organizations half-implement it or skip it entirely
+* Complexity wins - the technical overhead means many organisations half-implement it or skip it entirely
 

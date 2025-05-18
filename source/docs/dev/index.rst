@@ -7,7 +7,7 @@ Blue team for dev
 Welcome to the wild world of securing web applications—where every line of code is a potential backdoor, every
 dependency is a ticking time bomb, and somehow, Dave still has production access.
 
-DevSecOps is what happens when you realize that "security as an afterthought" is like putting a seatbelt on after
+DevSecOps is what happens when you realise that "security as an afterthought" is like putting a seatbelt on after
 the car crash.
 
 .. toctree::

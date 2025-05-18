@@ -4,7 +4,7 @@
 
 # Organisation X desktop
 
-One of the Desktops in the research lab at Organisation X is suspected to have been accessed by someone unauthorized. 
+One of the Desktops in the research lab at Organisation X is suspected to have been accessed by someone unauthorised. 
 Although they generally have only one user account per Desktop, there were multiple user accounts observed on this 
 system. It is also suspected that the system was connected to some network drive, and a USB device was connected to 
 the system. The triage data from the system was collected and placed on the attached VM. Can you help 

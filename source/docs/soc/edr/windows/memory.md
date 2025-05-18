@@ -2,7 +2,7 @@
 
 ## Credential Guard
 
-Uses virtualization-based security (VBS) to isolate LSASS -> Prevents Mimikatz-style attacks (e.g., sekurlsa::logonpasswords).
+Uses virtualisation-based security (VBS) to isolate LSASS -> Prevents Mimikatz-style attacks (e.g., sekurlsa::logonpasswords).
 
 Enable:
 

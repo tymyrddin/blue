@@ -15,7 +15,7 @@ deployments while Google handles infrastructure security.
    * Private Google Access – Allow VMs without public IPs to access Google APIs privately.
    * Hierarchical Firewalls – Apply org-wide firewall rules to enforce consistent policies.
 3. Monitoring & threat detection
-   * Security Command Center – Centralized visibility into misconfigurations, vulnerabilities, and threats.
+   * Security Command Center – Centralised visibility into misconfigurations, vulnerabilities, and threats.
    * Cloud Audit Logs – Track all admin activities, data access, and system events.
    * Chronicle SIEM – Correlate GCP logs with enterprise-wide telemetry for threat hunting.
 4. Data protection
@@ -23,7 +23,7 @@ deployments while Google handles infrastructure security.
    * Data Loss Prevention (DLP) – Automatically detect and redact sensitive data (PII, credentials).
    * Default Encryption – All data is encrypted at rest (AES-256) and in transit (TLS 1.2+).
 5. Governance & compliance
-   * Organization Policies – Enforce guardrails (e.g., "Disable public IPs on VMs").
+   * Organisation Policies – Enforce guardrails (e.g., "Disable public IPs on VMs").
    * Forseti Security – Automate CIS benchmark checks and policy enforcement.
    * Binary Authorization – Ensure only trusted, signed container images can be deployed.
 

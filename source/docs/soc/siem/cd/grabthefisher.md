@@ -2,7 +2,7 @@
 
 ## Scenario
 
-In [this Cyberdefenders challenge](https://cyberdefenders.org/blueteam-ctf-challenges/95), an attacker compromised a server and impersonated <nolink>https://pancakeswap.finance</nolink>, a decentralized exchange native to BNB Chain, to host a phishing kit at <nolink>https://apankewk.soup.xyz/mainpage.php</nolink>. The attacker set it as an open directory with the file name "pankewk.zip". 
+In [this Cyberdefenders challenge](https://cyberdefenders.org/blueteam-ctf-challenges/95), an attacker compromised a server and impersonated <nolink>https://pancakeswap.finance</nolink>, a decentralised exchange native to BNB Chain, to host a phishing kit at <nolink>https://apankewk.soup.xyz/mainpage.php</nolink>. The attacker set it as an open directory with the file name "pankewk.zip". 
 
 Provided the phishing kit, you as a soc analyst are requested to analyse it and do your threat intel homework.
 

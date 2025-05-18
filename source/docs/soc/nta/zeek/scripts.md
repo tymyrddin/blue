@@ -34,7 +34,7 @@ student01-PC
 vinlap01
 ```
 
-## Customized script locations
+## Customised script locations
 
     /opt/zeek/share/zeek/base/bif
     /opt/zeek/share/zeek/base/bif/plugins

@@ -1,6 +1,6 @@
 # Foundation for a secure Azure deployment pipeline
 
-This pipeline provides a foundation for a security-focused deployment process for Dockerized applications on Azure in 
+This pipeline provides a foundation for a security-focused deployment process for Dockerised applications on Azure in 
 Europe, incorporating the latest security best practices at each layer of the stack.
 
 ## Architecture Overview
@@ -16,8 +16,8 @@ All resources will be deployed in a European region (e.g., West Europe or North 
 ## Prerequisites
 
 * Azure account with sufficient permissions
-* Azure DevOps organization
-* Dockerized application code in a Git repository
+* Azure DevOps organisation
+* Dockerised application code in a Git repository
 * Azure CLI installed locally
 * kubectl and Helm for Kubernetes deployments
 

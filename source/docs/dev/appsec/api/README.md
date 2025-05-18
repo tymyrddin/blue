@@ -2,7 +2,7 @@
 
 ## Why API security matters
 
-API breaches can cripple organizations, leading to:
+API breaches can cripple organisations, leading to:
 
 * Sensitive data leaks (customer PII, financial records)
 * Reputational damage and loss of trust

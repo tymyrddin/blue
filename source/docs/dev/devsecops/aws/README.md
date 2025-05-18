@@ -11,7 +11,7 @@ their data, configurations, and access controls.
    * Restrict S3 buckets with bucket policies (block public access).
 3. Logging & monitoring
    * Enable AWS CloudTrail (API logging) and GuardDuty (threat detection).
-   * Centralize logs in S3 + Athena or a SIEM.
+   * Centralise logs in S3 + Athena or a SIEM.
 4. Data protection
    * Encrypt EBS volumes, S3 (SSE-KMS), and RDS with AWS KMS.
    * Use Macie for sensitive data discovery.

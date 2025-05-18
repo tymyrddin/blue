@@ -2,7 +2,7 @@
 
 Critical tests:
 
-* API authentication/authorization
+* API authentication/authorisation
 * Input validation
 * Rate limiting
 * Data exposure

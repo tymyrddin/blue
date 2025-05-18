@@ -28,7 +28,7 @@ During a forensic examination, it’s beneficial to keep a high-level log of pen
 * Shows compliance with policies and procedures
 * Facilitates accounting, including billing
 * Helps produce documentation and reports (formal incident reports or forensic reports)
-* Allows for post-incident review to identify lessons learnt and support process optimization
+* Allows for post-incident review to identify lessons learnt and support process optimisation
 * Helps to maintain a longer-term historical record of completed activity
 * Supports learning and education for new team members
 * Serves as a guide to remember complex procedures

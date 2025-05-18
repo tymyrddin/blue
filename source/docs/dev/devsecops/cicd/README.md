@@ -9,7 +9,7 @@ CI/CD pipelines automate software builds, testing, and deployment, but they also
     * Never hardcode credentials in pipeline scripts—use secrets managers (Vault, AWS Secrets Manager, Azure Key Vault).
     * Rotate secrets automatically and audit access.
 3. Code integrity & signing
-   * Enforce commit signing (GPG, S/MIME) to prevent unauthorized changes.
+   * Enforce commit signing (GPG, S/MIME) to prevent unauthorised changes.
    * Verify artefact integrity with Sigstore/cosign for container images and binaries.
 4. Secure build environments
    * Use minimal, hardened base images for containers.

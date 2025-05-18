@@ -14,7 +14,7 @@ Understanding AD is not easy, but basic knowledge is necessary when talking abou
 
 The term AD is very much associated with Microsoft, as it was developed by that company for Windows domain networks. It has become a widely accepted term for the concept itself. AD comprises basically two major components that are both relevant in cloud environments. The first component is the directory itself; the second component is the domain services.
 
-Domain services comprise a domain controller that authorizes and authenticates objects (users and computers) in a network. That network can be in a public cloud. It can also be a standalone network, but more often, the internal network of the organisation is extended to a cloud. Extended may not be the right word, though. The organisation's on-premises network and cloud network(s) are merely connected or, to put it a better way, the domains are connected.
+Domain services comprise a domain controller that authorises and authenticates objects (users and computers) in a network. That network can be in a public cloud. It can also be a standalone network, but more often, the internal network of the organisation is extended to a cloud. Extended may not be the right word, though. The organisation's on-premises network and cloud network(s) are merely connected or, to put it a better way, the domains are connected.
 
 To be able to do that, domain controllers are needed in the public cloud. The domain controller makes sure that a specific part of the public cloud is now within the domain.
 

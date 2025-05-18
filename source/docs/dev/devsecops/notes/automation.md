@@ -21,7 +21,7 @@ There may be occasions where peer code review and a team collaboration portal is
 
 Developers may choose to not fully apply IDE code-scanning plugins for secure code analysis. In that case, integrating static code analysis into the CI framework can help enforce secure code scanning for all projects.
 
-Secure compiler configuration means enabling the compile-time defences against memory corruption issues to execute unexpected exploit code. These mitigations may include RELRO, address space layout randomization (ASLR), NoExecute (NX), stack canaries, and position-independent executables (PIE). These secure compiler configurations are best done during development.
+Secure compiler configuration means enabling the compile-time defences against memory corruption issues to execute unexpected exploit code. These mitigations may include RELRO, address space layout randomisation (ASLR), NoExecute (NX), stack canaries, and position-independent executables (PIE). These secure compiler configurations are best done during development.
 
 Known vulnerabilities in third-party components or dependencies are part of the OWASP Top 10 List of Using Components with Known Vulnerabilities. Known vulnerable components can be identified at an early development stage.
 

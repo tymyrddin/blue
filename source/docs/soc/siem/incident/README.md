@@ -11,7 +11,7 @@ methodically.
 ## Why?
 
 * See the full attack story: Map Splunk logs to each kill chain stage to understand how the breach happened.
-* Prioritize evidence: Focus on critical phases (like lateral movement or data exfiltration).
+* Prioritise evidence: Focus on critical phases (like lateral movement or data exfiltration).
 * Speak the language of defenders: CKC is widely used in IR reports and threat intel sharing.
 
 ## How?

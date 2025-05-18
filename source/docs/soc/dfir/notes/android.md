@@ -43,15 +43,15 @@ The `tmpfs` file system is a temporary storage on the device that stores the fil
 
 ## File system types
 
-Yet Another Flash File System 2 (YAFFS2) is an open source, single-threaded file system released in 2002. It is mainly designed to be fast when dealing with the NAND flash. YAFFS2 utilizes out of band (OOB), and this is often not captured or decoded correctly during forensic acquisition, which makes analysis difficult. In 2010, there was an announcement stating that in releases after Gingerbread, devices were going to move from YAFFS2 to EXT4. 
+Yet Another Flash File System 2 (YAFFS2) is an open source, single-threaded file system released in 2002. It is mainly designed to be fast when dealing with the NAND flash. YAFFS2 utilises out of band (OOB), and this is often not captured or decoded correctly during forensic acquisition, which makes analysis difficult. In 2010, there was an announcement stating that in releases after Gingerbread, devices were going to move from YAFFS2 to EXT4. 
 
 The EXT4 file system, the fourth extended file system, has gained significance with mobile devices implementing dual-core processors. 
 
 VFAT is an extension to the FAT16 and FAT32 file systems. Microsoft's FAT32 file system is supported by most Android devices. It is supported by almost all the major operating systems, including Windows, Linux, and macOS. This enables these systems to easily read, modify, and delete the files present on the FAT32 portion of the Android device. Most of the external SD cards are formatted using the FAT32 file system.
 
-Flash Friendly File System (F2FS) was released in February 2013 to support Samsung devices running the Linux 3.8 kernel. F2FS relies on log-structured methods that optimize the NAND flash memory (supporting offline support features). 
+Flash Friendly File System (F2FS) was released in February 2013 to support Samsung devices running the Linux 3.8 kernel. F2FS relies on log-structured methods that optimise the NAND flash memory (supporting offline support features). 
 
-Robust File System (RFS) supports NAND flash memory on Samsung devices. RFS can be summarized as a FAT16 (or FAT32) file system where journaling is enabled through a transaction log.
+Robust File System (RFS) supports NAND flash memory on Samsung devices. RFS can be summarised as a FAT16 (or FAT32) file system where journaling is enabled through a transaction log.
 
 ## Application data storage
 

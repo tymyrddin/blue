@@ -21,6 +21,6 @@ malware installation, while MFA bypass attacks remind us that even two-factor au
 apps like a sleeper agent, waiting for its moment to strike?
 
 So what’s the takeaway? The threat landscape is less of a "landscape" and more of a minefield with a discount bin 
-at the entrance. The only constant? Change—and the grim realization that "secure" is a temporary state of mind. 
+at the entrance. The only constant? Change—and the grim realisation that "secure" is a temporary state of mind. 
 Stay vigilant, patch often, and maybe reconsider that "smart" toaster. (Or at least change its default password 
 before it starts sending death threats to your Wi-Fi.)

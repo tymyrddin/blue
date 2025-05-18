@@ -16,9 +16,9 @@ Who was the recipient of the SMS message sent on 23rd of August 2020? And what d
 
 ![first name of the other person in the contacts](/_static/images/ios2.png)
 
-Looking at the address book, what is the first name of the other person in the contacts? And what is their listed "Organization"?
+Looking at the address book, what is the first name of the other person in the contacts? And what is their listed "Organisation"?
 
-![name of other person and their listed "Organization"](/_static/images/ios3.png)
+![name of other person and their listed "Organisation"](/_static/images/ios3.png)
 
 Investigate their browsing history, what is the address of the website that they have bookmarked?
 

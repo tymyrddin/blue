@@ -1,7 +1,7 @@
 Digital forensics and incident response (DFIR)
 ===========================================================
 
-Picture this: Your organization’s server starts moonlighting as a poltergeist—files vanish, logins appear from
+Picture this: Your organisation’s server starts moonlighting as a poltergeist—files vanish, logins appear from
 "DefinitelyNotHackersVPN.biz", and your firewall’s last message was "lol. reboot me." Enter DFIR (Digital Forensics
 & Incident Response), the art of playing cyber-Sherlock while pretending you’re not in a panic.
 
@@ -32,7 +32,7 @@ damage control ("No, CEO, the ransomware probably won’t tweet from your accoun
    Malware traffic analysis exercises @malware-traffic-analysis <https://www.malware-traffic-analysis.net/training-exercises.html>
    Geoguessr (Geolocation game) @geoguessr <https://www.geoguessr.com/>
 
-Pro tip: Memorize the phrase "It’s always DNS" for instant credibility.
+Pro tip: Memorise the phrase "It’s always DNS" for instant credibility.
 
 ----
 

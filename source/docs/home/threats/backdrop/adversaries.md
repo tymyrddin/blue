@@ -12,7 +12,7 @@ Why bother with a 9-to-5 when you can run a multinational cybercrime syndicate? 
 
 ## Insiders: The disgruntled desk Jockeys of Doom
 
-Every organization’s got that one employee who’s one bad coffee away from burning it all down. Maybe they’re bribed by a crime gang, maybe they’re just mad Karen from Accounting got the corner office—either way, they’ve got keys to the kingdom and a grudge. Pro tip: If Bob from IT suddenly starts forwarding files to his personal email "for backup," maybe check his recent Bitcoin purchases.
+Every organisation’s got that one employee who’s one bad coffee away from burning it all down. Maybe they’re bribed by a crime gang, maybe they’re just mad Karen from Accounting got the corner office—either way, they’ve got keys to the kingdom and a grudge. Pro tip: If Bob from IT suddenly starts forwarding files to his personal email "for backup," maybe check his recent Bitcoin purchases.
 
 ## Literally anyone with a keyboard and a dream
 

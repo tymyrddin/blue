@@ -31,7 +31,7 @@ Partition layout varies between device manufacturers and versions. Some of the c
 ### Connecting device to a workstation
 
 1. Identify the device cable: The physical USB interface of an Android device might change from manufacturer to manufacturer and from device to device: Mini - A USB, Micro - B USB, Co-axial (Nokia), D Sub-miniature (Samsung and LG devices)
-2. Install the device drivers if the device is not recognised. Because Android is allowed to be modified and customized by the manufacturers, there is no single generic driver that works for all Android devices. Each manufacturer writes its own proprietary drivers and distributes them over the internet. Some Android forensic toolkits come with some generic drivers or a set of the most widely used drivers.
+2. Install the device drivers if the device is not recognised. Because Android is allowed to be modified and customised by the manufacturers, there is no single generic driver that works for all Android devices. Each manufacturer writes its own proprietary drivers and distributes them over the internet. Some Android forensic toolkits come with some generic drivers or a set of the most widely used drivers.
 3. Access: connect the unlocked Android device to the computer directly using the USB cable. The Android device will appear as a new drive, and you will be able to access the files on the external storage. Some older Android devices may not be accessible unless the ***Turn on USB storage*** option is enabled. In some Android phones (especially with HTC), the device may expose more than one functionality when connected with a USB cable. Mount it as a disk drive to access the SD card.
 4. In order to give the best chance of accessing the evidence at a later date, if the device is unlocked, then turn on USB debugging if possible. 
 
@@ -173,7 +173,7 @@ The process of rooting varies depending on the underlying device manufacturer. H
 
 Most of the rooting methods begin by flashing a modified recovery to the recovery partition. After that, you can issue an update, which can root the device. 
 
-Starting from Android 7.x, Google has started strictly enforcing [verified boot](https://source.android.com/docs/security/features/verifiedboot/verified-boot) on devices, to guarantee that the software on the device is not modified before booting into the normal mode, and Samsung [patched the kernel to prevent root access](https://en.wikipedia.org/wiki/Samsung_Knox) from being granted to apps even after rooting was successful since the release of Android Oreo. This patch prevents unauthorized apps from changing the system and deters rooting. The tip of the iceberg. 
+Starting from Android 7.x, Google has started strictly enforcing [verified boot](https://source.android.com/docs/security/features/verifiedboot/verified-boot) on devices, to guarantee that the software on the device is not modified before booting into the normal mode, and Samsung [patched the kernel to prevent root access](https://en.wikipedia.org/wiki/Samsung_Knox) from being granted to apps even after rooting was successful since the release of Android Oreo. This patch prevents unauthorised apps from changing the system and deters rooting. The tip of the iceberg. 
 
 There are over 12,000 different Android models from hundreds of different manufacturers. Almost all of them have been designed so that they are hard to root. For more information about rooting Android phones, check [XDA Developers](https://www.xda-developers.com/root/) for the particular model. 
 

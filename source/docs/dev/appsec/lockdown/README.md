@@ -1,7 +1,7 @@
 # Lockdown in application security: A strategic approach
 
 In application security, lockdown refers to the systematic hardening of an application’s environment, configurations, 
-and runtime to minimize attack surfaces. It combines preventive controls (e.g., least privilege, input validation) 
+and runtime to minimise attack surfaces. It combines preventive controls (e.g., least privilege, input validation) 
 with detective measures (e.g., logging, anomaly detection) to enforce strict operational boundaries.
 
 ## Why lockdown matters

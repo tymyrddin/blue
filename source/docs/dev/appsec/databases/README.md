@@ -5,7 +5,7 @@ Access Control:
 * Assign minimal permissions (SELECT only if read-only needed).
 * Use dedicated accounts per service.
 
-Input Handling: Whitelist validation + parameterized queries.
+Input Handling: Whitelist validation + parameterised queries.
 
 Configuration: Disable risky features (local file access, weak auth).
 

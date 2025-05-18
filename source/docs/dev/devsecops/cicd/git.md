@@ -4,7 +4,7 @@
 
 Removing all secrets from the current state of the repository is not enough. Sensitive information that made it into the Git history can still be accessible to attackers if a Git repository is exposed. Tools like [Trufflehog](https://github.com/dxa4481/truffleHog) and [GitLeaks](https://github.com/zricethezav/gitleaks) scan the repository Git history for traces of secrets that the team may have added in the past.
 
-And [GitOops!](https://github.com/ovotech/gitoops) is a tool to help attackers and defenders identify lateral movement and privilege escalation paths in GitHub organizations by abusing CI/CD pipelines and GitHub access controls.
+And [GitOops!](https://github.com/ovotech/gitoops) is a tool to help attackers and defenders identify lateral movement and privilege escalation paths in GitHub organisations by abusing CI/CD pipelines and GitHub access controls.
 
 ## Linting
 

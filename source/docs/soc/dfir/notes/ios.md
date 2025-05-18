@@ -51,7 +51,7 @@ Apple uses their own standardisation for files within their file systems: `.plis
 * `/private/var/mobile/Library/Preferences/com.apple.weather.plist`, containing the cities for weather reports, date, and time of the last update
 * `/private/var/mobile/Library/Preferences/com.apple.preferences.network.plist`, containing the status of Bluetooth and Wi-Fi networks
 * `/private/var/mobile/Library/Preferences/com.apple.locationd.plist`, containing a list of application identifiers that use the location service on the device 
-* `/private/var/mobile/Library/Preferences/com.apple.assistant.backedup.plist`: This will help an examiner to determine whether cloud synchronization is enabled or not
+* `/private/var/mobile/Library/Preferences/com.apple.assistant.backedup.plist`: This will help an examiner to determine whether cloud synchronisation is enabled or not
 
 ### RootDomain plist files
 

@@ -1,6 +1,6 @@
 # Basis for a secure AWS deployment pipeline
 
-This pipeline provides a basis for a security-focused deployment process for Dockerized applications on AWS in Europe, 
+This pipeline provides a basis for a security-focused deployment process for Dockerised applications on AWS in Europe, 
 with infrastructure as code, automated security scanning, and compliance with GDPR requirements.
 
 ## Architecture overview
@@ -21,7 +21,7 @@ All resources deployed in eu-west-1 (Ireland) with GDPR compliance.
 
 ## AWS infrastructure setup
 
-### Configure AWS organizations SCPs (If available)
+### Configure AWS organisations SCPs (If available)
 
 ```bash
 # Example SCP to enforce EU region deployment

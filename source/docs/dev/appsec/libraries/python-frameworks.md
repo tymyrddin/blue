@@ -89,7 +89,7 @@ Key security features:
 Django:
 
 * Misconfigured `ALLOWED_HOSTS` → header injection
-* `pickle` serialization risks in caching
+* `pickle` serialisation risks in caching
 
 Flask:
 

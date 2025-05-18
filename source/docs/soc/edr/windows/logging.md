@@ -14,7 +14,7 @@ Get-WmiObject -Namespace root\Subscription -Class __EventFilter
 
 ## Windows Event Forwarding (WEF)
 
-Centralizes logs (Security, Sysmon, PowerShell Operational).
+Centralises logs (Security, Sysmon, PowerShell Operational).
 
 Essential for threat hunting (e.g., detecting Invoke-Mimikatz).
 

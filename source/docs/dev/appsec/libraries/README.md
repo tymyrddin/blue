@@ -1,4 +1,4 @@
-# Secure by Design: Choosing libraries and frameworks to minimize risk
+# Secure by Design: Choosing libraries and frameworks to minimise risk
 
 Modern software relies on a deep tree of dependencies, where a single vulnerable submodule can compromise an entire application. The risk isn’t just the flaws in your code—it’s the recursive sum of all security bugs in every library, framework, and transitive dependency you pull in.
 
@@ -22,7 +22,7 @@ Security Track Record:
 * Audit historical CVEs (e.g., CVE Details).
 * Avoid projects with patterns of breaking changes or rushed fixes.
 
-2. Minimize attack surface
+2. Minimise attack surface
 
 Fewer Dependencies = Fewer Risks:
 

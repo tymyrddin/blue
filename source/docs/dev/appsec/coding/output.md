@@ -4,7 +4,7 @@ Context-Specific Encoding
 
 * HTML: Escape `<` as `&lt;`
 * URLs: Encode spaces as `%20`
-* SQL: Use parameterized queries
+* SQL: Use parameterised queries
 
 Example (Python - Jinja2 Auto-Escape):
 

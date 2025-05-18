@@ -4,7 +4,7 @@
 
 macOS endpoint protection combines Apple's built-in security frameworks (Endpoint Security API, XProtect, MRT) with 
 third-party EDR solutions. Modern macOS EDR focuses on monitoring ESF events (process executions, file operations, 
-mount events), analyzing notarization and Gatekeeper decisions, and tracking suspicious entitlement usage. Special 
+mount events), analyzing notarisation and Gatekeeper decisions, and tracking suspicious entitlement usage. Special 
 attention is given to emerging attack vectors like abuse of AppleScript, JXA (JavaScript for Automation), and 
 Swift-based payloads. macOS-specific challenges include detecting abuse of legitimate developer tools, analyzing 
 signed-but-malicious applications, and monitoring for persistence through launch agents/daemons or TCC database 

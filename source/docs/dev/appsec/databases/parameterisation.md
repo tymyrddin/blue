@@ -2,7 +2,7 @@
 
 Always use prepared statements because it prevents SQL injection by separating code from data.
 
-| Language	        | Safe Parameterization                                                                 |
+| Language	        | Safe Parameterisation                                                                 |
 |------------------|---------------------------------------------------------------------------------------|
 | Python (SQLite)	 | `cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))`                      |
 | Java (JDBC)	     | `PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE id = ?");` |

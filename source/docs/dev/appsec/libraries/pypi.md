@@ -70,7 +70,7 @@ requests.get("https://example.com", verify=False)
 
 6. Safe data handling
 
-Avoid unsafe deserialization:
+Avoid unsafe deserialisation:
 
 * PyYAML: Use `yaml.safe_load()` instead of `yaml.load()`.
 * Pickle: Never load pickled data from untrusted sources.

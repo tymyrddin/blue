@@ -2,7 +2,7 @@
 
 ## What?
 
-Linux EDR solutions typically utilize eBPF programs for efficient kernel-space telemetry collection, auditing 
+Linux EDR solutions typically utilise eBPF programs for efficient kernel-space telemetry collection, auditing 
 subsystems like auditd, and process lineage tracking through /proc monitoring. Modern implementations focus on 
 container-aware monitoring, tracking namespace crossings and pod-to-pod communications in orchestrated environments. 
 Effective Linux EDR requires deep understanding of privilege escalation vectors (SUID binaries, capability abuse), 
