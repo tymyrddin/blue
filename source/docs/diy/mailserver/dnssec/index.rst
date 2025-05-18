@@ -1,5 +1,5 @@
 DNSSEC: Better than nothing, but not a silver bullet
-===================================================
+=====================================================
 
 The Domain Name System (DNS) is the phonebook of the internet—except that, by default, it’s about as secure as a
 phonebook written in pencil. If you are running one, consider DNSSEC (DNS Security Extensions), the cryptographic
