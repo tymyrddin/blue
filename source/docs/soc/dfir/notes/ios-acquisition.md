@@ -33,7 +33,7 @@ iTunes will generate a certificate using the iPhone's unique identifier once dat
 
 If the iPhone has been connected to a trusted computer but the iPhone hasn't been unlocked in a week, the certificate will not be used, although it is still valid. Once the iPhone is unlocked, the iPhone will automatically allow read/write access by the trusted computer without the "Trust This Computer" popup. If you were to connect the iPhone to the trusted computer 6 hours since it was last unlocked, the iPhone will allow read/write access straight away.
 
-This process is a security measure to prevent attacks such as "Juice Jacking", an attack involving maliciously created USB chargers or cables (such as the [O.MG Cable](https://testlab.tymyrddin.dev/docs/hardware/hid)) to steal data or infect devices. 
+This process is a security measure to prevent attacks such as "Juice Jacking", an attack involving maliciously created USB chargers or cables (such as the `O.MG Cable`) to steal data or infect devices. 
 
 iTunes allows for two types of backups, "Unencrypted" and "Encrypted". Unencrypted backups make a copy of photos that aren't synced to iCloud, a copy of browsing history etcetera. No passwords or health and Homekit data is backed up. These are only backed up if the "Encrypted" option is used.
 

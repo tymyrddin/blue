@@ -8,7 +8,7 @@
 
 * [Eric Zimmerman's Tools](https://ericzimmerman.github.io/#!index.md)
 * [VirusTotal](https://www.virustotal.com/gui/home/search)
-* [Autopsy](https://testlab.tymyrddin.dev/docs/dfir/autopsy-windows)
+* Autopsy
 
 ----
 

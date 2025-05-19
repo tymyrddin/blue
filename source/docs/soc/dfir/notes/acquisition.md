@@ -63,7 +63,7 @@ The ftkimager creates a log file with basic metadata and any additional informat
 
 ### SquashFS forensic evidence container
 
-Configure [sfsimage](https://testlab.tymyrddin.dev/docs/dfir/squashfs) to use `dc3dd` as the imaging tool by editing the `DD` variable in the beginning of the shell script:
+Configure `sfsimage` to use `dc3dd` as the imaging tool by editing the `DD` variable in the beginning of the shell script:
 
     DD="dc3dd if=$DDIN log=errorlog.txt hlog=hashlog.txt hash=md5"
 

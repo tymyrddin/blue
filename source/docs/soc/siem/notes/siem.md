@@ -71,15 +71,10 @@ Many SIEM tools exist, Kibana, Splunk, Elastic SIEM, Datadog, QRadar, Underdefen
 * Monitor services/process whose stoppage would cause operational impact
 * Ability to alert in real-time when health check thresholds are met
 
-## Testlab
+## Tools of the trade
 
 Gradually building up to something useful for the IPA project:
 
-### Wazuh
-
-* [Wazuh single-node deployment with docker](https://testlab.tymyrddin.dev/docs/siem/wazuh-single-node), bare-bones single-node deployment: One Wazuh manager, indexer, and dashboard node.
-* [Wazuh multi-node deployment with docker](https://testlab.tymyrddin.dev/docs/siem/wazuh-multi-node), two Wazuh manager nodes (one master and one worker), three Wazuh indexer nodes, and a Wazuh dashboard node.
-
-## Testlab
-
-* [SIEM stack](https://testlab.tymyrddin.dev/docs/siem/readme) All tools in these stacks are open source and free. 
+* Wazuh single-node deployment with docker, bare-bones single-node deployment: One Wazuh manager, indexer, and dashboard node.
+* Wazuh multi-node deployment with docker, two Wazuh manager nodes (one master and one worker), three Wazuh indexer nodes, and a Wazuh dashboard node.
+* SIEM stack with only tools which are open source and free. 

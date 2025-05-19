@@ -137,7 +137,7 @@ Corrupt, severely damaged, or partially wiped and overwritten filesystems requir
 
 Carving only uses the information in the raw data, not the file system information. 
 
-There are many carving techniques and [carving tools](https://testlab.tymyrddin.dev/docs/dfir/carving) and there is no standard method of rating or comparing between them.
+There are many carving techniques and carving tools and there is no standard method of rating or comparing between them.
 
 Always use multiple tools to ensure that the results are accurate by comparing the results of the tools used. And keep a log of tool testing for verification of the findings.
 

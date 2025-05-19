@@ -1,6 +1,6 @@
 # Android malware analysis (Pithus and jadx)
 
-This [static analysis sample case study](../notes/mobile-analysis.md) is for a trojanised application [uploaded in Pithus (online analysis)](https://beta.pithus.org/report/ae05bbd31820c566543addbb0ddc7b19b05be3c098d0f7aa658ab83d6f6cd5c8). The sample for local analysis with [jadx](https://testlab.tymyrddin.dev/docs/dfir/jadx) can be [downloaded here](https://pts-project.org/samples/sample_1.zip).
+This [static analysis sample case study](../notes/mobile-analysis.md) is for a trojanised application uploaded in Pithus (online analysis). The sample for local analysis with `jadx` can be [downloaded here](https://pts-project.org/samples/sample_1.zip).
 
 ----
 

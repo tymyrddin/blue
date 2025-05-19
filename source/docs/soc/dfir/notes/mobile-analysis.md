@@ -21,7 +21,7 @@ sha256sum sample.apk
 ```
 
 3. Identify the type of sample: The `.apk` file extension is an Android Package file used to distribute applications via Google Play Store (or FDroid). The `.ipa` file extension indicates an iPhone application archive file. It is usually encrypted with Apple's FairPlay DRM technology, and compressed for the ARM architecture and can only be installed on an iPhone, iPod Touch, or iPad -> You may have to digitally sign the sample with your PGP key.
-4. Retrieve basic information: Use tools to extract information that will help you identify the binary and its potential origin ([jadx](https://testlab.tymyrddin.dev/docs/dfir/jadx), [androguard](https://testlab.tymyrddin.dev/docs/dfir/androguard), [Pithus (online)](https://testlab.tymyrddin.dev/docs/dfir/pithus), and a [sandbox](https://testlab.tymyrddin.dev/docs/phishing/sandbox))
+4. Retrieve basic information: Use tools to extract information that will help you identify the binary and its potential origin `jadx`, `androguard`, Pithus (online), and a sandbox.
     * The certificate can help distinguish between an original application and a potentially suspicious file. Search for it on the Google Play Store and compare the signing certificate fingerprints. Digital signatures of Android applications cannot be faked. 
     * Check if the sample was frosted by Google Play Store (Android only).
     * Review the permissions requested and evaluate if they align with the legitimate purpose and functionality of the application.
