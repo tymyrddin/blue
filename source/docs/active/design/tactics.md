@@ -1,5 +1,8 @@
 # Deception tactics (2025 Edition)
 
+Deception tech has evolved, but the principle remains: The best defence is making attackers regret theirs. Now, go 
+forth and waste someone’s time.
+
 ## Decoys: The art of wasting attackers' time
 
 Decoys exist to lead cybercriminals on a merry dance away from your actual assets. Honeypots and honeynets—carefully crafted digital facades—serve two purposes:
@@ -13,7 +16,7 @@ The right honeypot depends entirely on your environment and—more importantly�
 
 A honeyclient pretends to be a tragically outdated browser, eagerly lapping up exploits like a drunk accepting free drinks. Thug remains a delightful weekend project—just don’t blame us when your ISP emails about "suspicious activity."
 
-"Nothing says ‘hobby’ like intentionally infecting a VM for science."
+*Nothing says ‘hobby’ like intentionally infecting a VM for science.*
 
 ## Attribution: Because knowing who to ignore is half the battle
 
@@ -31,9 +34,5 @@ Why stop at one honeypot when you can build an entire maze of misery? Tools like
 * Weblabyrinth – Because watching bots get lost in procedurally generated nonsense never gets old.
 * Nova – A haystack of decoy hosts so convincing, even the attacker starts questioning reality.
 
-"The goal isn’t just to detect—it’s to send them down a rabbit hole with no exit."
+*The goal isn’t just to detect—it’s to send them down a rabbit hole with no exit.*
 
-## Thought (2025 Edition)
-
-Deception tech has evolved, but the principle remains: The best defence is making attackers regret theirs. Now, go 
-forth and waste someone’s time.

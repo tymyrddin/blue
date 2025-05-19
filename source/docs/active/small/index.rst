@@ -1,4 +1,4 @@
-Honeyports & honeyclients @Home and @Org
+Honeytech for humans
 =============================================================
 
 *Why waste time chasing attackers when you can let them trip over your carefully placed digital banana skins?*
@@ -14,5 +14,10 @@ pretending to be vulnerable browsers just to see which exploit kits take the bai
    :maxdepth: 1
    :caption: Attackers' first and last mistake.
 
-   honeyports.md
+   honeypots.md
    honeyclients.md
+   thug-repo.md
+   thug-container.md
+   honeyports.md
+   python-honeyport.md
+   powershell-honeyport.md

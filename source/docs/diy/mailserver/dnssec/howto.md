@@ -1,6 +1,14 @@
 # How to enable DNSSEC on your DNS server
 
-DNSSEC adds cryptographic signatures to your DNS records, preventing spoofing and cache poisoning. Below is a 
+DNSSEC adds cryptographic signatures to your DNS records, preventing spoofing and cache poisoning. 
+
+DNSSEC is powerful but complex. You can:
+
+* Use a DNSSEC-enabled registrar (Cloudflare, Google Domains).
+* Automate key rotation (with cron or systemd timers).
+* Monitor validation (unbound or dnsmasq for caching).
+
+Need a simpler setup? Try Cloudflare’s DNSSEC (they handle key management). Below is a 
 step-by-step guide for BIND (named) on Linux, the most common DNS server software.
 
 ## Prerequisites
@@ -45,7 +53,7 @@ sudo systemctl restart bind9  # Debian/Ubuntu
 
 ## Step 2: Generate DNSSEC keys
 
-1. Create a Key Signing Key (KSK) & Zone Signing Key (ZSK)
+### Create a Key Signing Key (KSK) & Zone Signing Key (ZSK)
 
 ```bash
 cd /etc/bind
@@ -55,7 +63,7 @@ sudo dnssec-keygen -a RSASHA256 -b 4096 -f KSK -n ZONE example.com  # KSK
 
 This creates two key pairs (.key & .private files).
 
-2. Add keys to your Zone file
+### Add keys to your Zone file
 
 Edit your zone file (e.g., /etc/bind/db.example.com) and include the .key files:
 
@@ -64,7 +72,7 @@ $INCLUDE Kexample.com.+008+12345.key  # ZSK
 $INCLUDE Kexample.com.+008+67890.key  # KSK
 ```
 
-3. Sign the Zone
+### Sign the Zone
 
 ```bash
 sudo dnssec-signzone -A -3 salt -N INCREMENT -o example.com -t db.example.com
@@ -72,7 +80,7 @@ sudo dnssec-signzone -A -3 salt -N INCREMENT -o example.com -t db.example.com
 
 This generates a signed zone file (`db.example.com.signed`).
 
-4. Update BIND to Use the Signed Zone
+### Update BIND to Use the Signed Zone
 
 In `named.conf`, replace:
 
@@ -94,13 +102,15 @@ sudo systemctl restart bind9  # or named
 
 ## Step 3: Publish DS Records at your registrar
 
-1. Extract the DS record. This output  is needed for your registrar.
+### Extract the DS record. 
+
+This output  is needed for your registrar.
 
 ```bash
 sudo dnssec-dsfromkey Kexample.com.+008+67890.key  # KSK
 ```
 
-2. Add DS Record to Your Domain Registrar
+### Add DS Record to Domain Registrar
 
 * Go to your registrar’s DNS settings (e.g., Cloudflare, GoDaddy, Namecheap).
 * Paste the DS record (hash, algorithm, key tag).
@@ -108,13 +118,15 @@ sudo dnssec-dsfromkey Kexample.com.+008+67890.key  # KSK
 
 ## Step 4: Verify DNSSEC is working
 
-1. Check with dig and look for ad (Authenticated Data) flag in the response.
+### Check with dig 
+
+Look for ad (Authenticated Data) flag in the response.
 
 ```bash
 dig +dnssec example.com
 ```
 
-2. Online validation tools
+### Online validation tools
 
 * DNSSEC Debugger
 * DNSViz
@@ -125,12 +137,4 @@ dig +dnssec example.com
 * "Signature expired" → Keys need rolling before they expire (automate this!).
 * BIND won’t start → Check logs (journalctl -u bind9).
 
-## Thoughts
 
-DNSSEC is powerful but complex. For most users:
-
-* Use a DNSSEC-enabled registrar (Cloudflare, Google Domains).
-* Automate key rotation (with cron or systemd timers).
-* Monitor validation (unbound or dnsmasq for caching).
-
-Need a simpler setup? Try Cloudflare’s DNSSEC (they handle key management).

@@ -1,7 +1,7 @@
 Hardening webserver
 =================================================
 
-Unlike other devices sitting behind layers of defenses and firewalls, web servers sit at the edge of the known network and are designed to share information with the outside, the unknown. These are some notes on hardening the two most used web servers, Nginx and Apache.
+Unlike other devices sitting behind layers of defences and firewalls, web servers sit at the edge of the known network and are designed to share information with the outside, the unknown. These are some notes on hardening the two most used web servers, Nginx and Apache.
 
 .. toctree::
    :glob:

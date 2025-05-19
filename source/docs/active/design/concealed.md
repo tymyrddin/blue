@@ -1,5 +1,8 @@
 # Staying hidden in plain sight
 
+Concealing honeypots isn’t about perfect mimicry—it’s about being just realistic enough to waste an attacker’s time 
+while you gather intel.
+
 *If your honeypot gets detected, you’re not trapping attackers—you’re just hosting free hacking lessons.*
 
 ## Automatic redeployment: The digital whack-a-mole
@@ -66,7 +69,3 @@ Modern honeypots use AI/ML to:
 
 *Why manually update your honeypot when it can outsmart attackers on its own?*
 
-## Thought
-
-Concealing honeypots isn’t about perfect mimicry—it’s about being just realistic enough to waste an attacker’s time 
-while you gather intel.

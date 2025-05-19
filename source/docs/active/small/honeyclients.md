@@ -1,26 +1,77 @@
-# Honeyclients
+# Honeyclients: Turning the tables
 
-For most honeypots to work, we have to wait for the attacker to attack the honeypot from a remote location. A phishing e-mail arrives in an inbox, the user clicks and allows the remote malware to activate on the device and allows it to callback over TCP port 80 (which is allowed by most firewalls).
+## The problem with passive honeypots
 
-This ignores that most attacks are nowadays client-side. Drive-by downloads overtook file attachment phishing as the major means of initial access. 
+Traditional honeypots sit there like a pub landlord waiting for trouble to walk in—useful, but hopeless against 
+drive-by downloads, malvertising, and other modern nuisances that don’t bother knocking.
 
-Enter client-side honeypots (honeyclients), to track and analyse these types of attacks.
+* Phishing emails? Old news.
+* Zero-day exploits? Often delivered via compromised websites, not attachments.
+* Firewall rules? Useless when the attack rides in on port 80/443 like a Trojan horse in an SSL wrapper.
 
-## How it works
+*The internet’s become a dodgy back alley, and your firewall’s just the bouncer checking IDs at the club next door.*
 
-A honeyclient mimics, either manually or automatically, the normal series of steps a regular user would make when visiting websites. It can be fully patched or be left vulnerable. The idea is to identify malware hosts, and possibly even gather so-called attribution information.
+## How honeyclients fight back
 
- In high interaction honeyclients, the system is analysed after the interaction with the malicious server has happened and the session is terminated. If there is a change in any of the files or a new file appeared in the system, the server is marked as malicious.
+These client-side honeypots don’t wait—they go hunting.
 
-Low interaction honeyclients are better performers than the high interaction versions. Analysis is in real-time, but can miss detecting an ongoing attack, and are also easy to detect by adversaries who can in return exploit them.
+### The basics
 
-[Thug](https://github.com/buffer/thug) is a Python low-interaction honeyclient aimed at mimicing the behaviour of a web browser in order to detect and emulate malicious contents. It is actively being developed and fits our home context purposes. Time for a project! :)
+* Mimic real users (browsing, clicking, even "typing" in forms).
+* Visit sketchy sites so you don’t have to.
+* Analyse changes (new files? Modified registry? Uh-oh).
 
-DroidCollector looks awesome but is not available to the public yet.
+### High vs. low interaction
+
+| Type	             | Pros	                   | Cons	                         | Best for                  |
+|-------------------|-------------------------|-------------------------------|---------------------------|
+| High-interaction	 | Deep forensic analysis	 | Slow, risky, easily detected	 | Research, APT tracking    |
+| Low-interaction	  | Fast, scalable, safer	  | May miss subtle attacks	      | Large-scale malware scans |
+
+*High-interaction honeyclients are like undercover cops—great intel, but one wrong move and they’re compromised.*
+
+## Thug: The Python menace
+
+[Thug](https://github.com/buffer/thug) is a low-interaction honeyclient designed to emulate browser behaviour and 
+visit suspicious URLs safely (well—safer than using your actual browser). It simulates the fetching and rendering of 
+malicious web pages, identifying exploit attempts without getting itself entirely owned in the process.
+
+* Emulates browsers (IE, Chrome, even user-agent quirks).
+* Detects exploits (Java, Flash, PDF—all the classics).
+* Logs everything (because if you’re visiting malware hubs, you’d better take notes).
+
+Thug isn’t a full browser sandbox—it doesn’t execute binaries or launch browsers—but it’s a lightweight, 
+scriptable way to observe malicious behaviour at arm’s length. It’s particularly useful when you want 
+just enough context to spot a threat, without deploying full dynamic analysis suites.
+
+Perfect for:
+
+* Malware researchers who value sleep over debugging infected containers and VMs
+* Incident responders
+* Home lab tinkerers
+* Anyone who’s ever thought "I wonder what’s on this shady URL..."
+* Digital sadists who enjoy analysing shady URLs
+
+*Thug: Because manually clicking malware links is just asking for a bad time.*
+
+## Tools of the trade
+
+* [Thug in a repo (VM)](thug-repo.md)
+* [Thug in a box (Docker)](thug-container.md)
+
+## DroidCollector: APK spelunking without the rash
+
+DroidCollector is what happens when you want to know what that dodgy Android app does—without giving it the keys to 
+your actual phone.
+
+As of now (2025), the original DroidCollector framework—a tool designed for collecting and classifying Android applications—
+does not appear to have an active or publicly available code repository on GitHub. While references to its dataset 
+and academic papers exist, the source code itself isn't readily accessible.
+
+Been waiting for it. If it takes too long maybe I'll just build one. Feels like a fun challenge.
 
 ## Resources
 
 * [Escape from Monkey Island: Evading High-Interaction Honeyclients](https://sites.cs.ucsb.edu/~chris/research/doc/dimva11_honey.pdf) (pdf)
-* [DroidCollector: A High Performance Framework for High Quality Android Traffic Collection](http://loci.ujn.edu.cn/htdocs/pdf/2016-C-DroidCollector%20A%20High%20Performance%20Framework%20for%20High%20Quality%20Android%20Traffic%20Collection.pdf) (pdf)
 * [DroidCollector Framework](http://loci.ujn.edu.cn/htdocs/DroidCollector/index.html)
 

@@ -27,7 +27,7 @@ Honeypot detection is all about inconsistencies—the tiny flaws that make a dec
 * Unpatched but improbably old services (Windows Server 2008 in 2025?).
 * "Honeypot-like" network delays (emulated services lag differently).
 
-## Fighting Back: Concealing Your Traps
+## Fighting Back: Concealing traps
 
 Modern honeypot design focuses on plausible deniability:
 
@@ -38,18 +38,18 @@ Modern honeypot design focuses on plausible deniability:
 
 **Dynamic responses**
 
-* AI-generated context-aware replies (e.g., SSH honeypots that "remember" past commands).
+AI-generated context-aware replies (e.g., SSH honeypots that "remember" past commands).
 
 **Legal workarounds**
 
-* Simulate attack outcomes without actually attacking (e.g., logging "DDoS attempts" but not executing).
+Simulate attack outcomes without actually attacking (e.g., logging "DDoS attempts" but not executing).
 
 **Regular updates**
 
-* Rotate fingerprints to match current real-world systems.
+Rotate fingerprints to match current real-world systems.
 
 *The best honeypot doesn’t just trap attackers—it makes them doubt their own skills.*
 
 ## Ethical note
 
-Found a fingerprintable honeypot? Report it responsibly—the goal is better defenses, not easier attacks.
+Found a fingerprintable honeypot? Report it responsibly—the goal is better defences, not easier attacks.

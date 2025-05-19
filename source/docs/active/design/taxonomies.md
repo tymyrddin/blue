@@ -1,5 +1,7 @@
 # Honeypot taxonomies
 
+Choosing a honeypot isn’t about what’s best—it’s about what annoys attackers most while keeping your logs interesting.
+
 ## By purpose: Research vs. Production
 
 ### Research honeypots
@@ -10,7 +12,7 @@ The academics of deception tech—left exposed like an unlocked bicycle in Camde
 * Discovering zero-days before they’re cool (or weaponised)
 * Generating threat intel while sipping tea
 
-"Why hunt vulnerabilities when you can let hackers deliver them to your doorstep?"
+*Why hunt vulnerabilities when you can let hackers deliver them to your doorstep?*
 
 ### Production honeypots
 
@@ -20,7 +22,7 @@ The bouncers of your network—strategically placed to lure attackers away from 
 * Trigger alerts the moment an intruder takes the bait
 * Ideally so convincing, attackers never realise they’ve been had
 
-"The digital equivalent of a ‘wet paint’ sign—except the paint is alarms."
+*The digital equivalent of a ‘wet paint’ sign—except the paint is alarms.*
 
 ## By Interactivity: How much rope to give attackers
 
@@ -49,19 +51,15 @@ Golden Rule:
 * Purpose: Collect script kiddies, botnets, and APTs like Pokémon
 * Ideal Outcome: So much attack data, your SIEM starts sobbing
 
-"External honeypots: the only place where ‘constant bombardment’ is a good thing."
+*External honeypots: the only place where ‘constant bombardment’ is a good thing.*
 
 ## The Cyber Kill Chain & deception stack
 
 For those who enjoy overcomplicating things beautifully, the paper 
-[Three Decades of Deception Techniques in Active Cyber Defense](https://arxiv.org/pdf/2104.03594.pdf) offers:
+[Three Decades of Deception Techniques in Active Cyber Defence](https://arxiv.org/pdf/2104.03594.pdf) offers:
 
 * A tailored kill chain for modern threats
 * A four-layer deception stack (because why stop at one taxonomy?)
 * Enough jargon to impress at cybersecurity conferences
 
-"Required reading—if only to nod sagely when someone mentions ‘stratified deceptive countermeasures’."
-
-## Thought
-
-Choosing a honeypot isn’t about what’s best—it’s about what annoys attackers most while keeping your logs interesting.
+*Required reading—if only to nod sagely when someone mentions ‘stratified deceptive countermeasures’.*
