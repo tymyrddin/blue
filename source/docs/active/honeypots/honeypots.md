@@ -45,24 +45,14 @@ Perfect for:
 * Enthusiasts with an isolated VLAN and too much time
 * **Warning**: High-interaction honeypots are great research tools but can be turned against you if improperly isolated. Always sandbox.
 
-## Basic setup (Low-interaction example)
+## Tools of the trade
 
-Here’s how to set up a Cowrie honeypot on a spare Linux box:
-
-```
-sudo apt install git python3-venv libssl-dev libffi-dev build-essential
-git clone https://github.com/cowrie/cowrie.git
-cd cowrie
-python3 -m venv cowrie-env
-source cowrie-env/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-cp etc/cowrie.cfg.dist etc/cowrie.cfg
-bin/cowrie start
-```
-
-And now you have a fake SSH server that logs every keystroke some hapless brute-forcer tries. Clean up your logs. 
-Pour a cup of tea. Smile smugly.
+* [Honeyd](honeyd.md) for masochists who love config files
+* [Cowrie](cowrie.md) for SSH voyeurs
+* [Dionaea](dionaea.md) for malware hoarders
+* [OpenCanary](opencanary.md) for the terminally lazy
+* [T-Pot](tpot.md) for people who think Docker is a lifestyle
+* [Cuckoo](cuckoo.md) for those who enjoy playing with fire
 
 ## Where to place honeypots
 
