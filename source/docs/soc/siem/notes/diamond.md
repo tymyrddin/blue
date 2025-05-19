@@ -72,9 +72,9 @@ The scenario can be that the victim provides a “product”, for example, compu
 Technology – the technology meta-feature or component highlights the relationship between the core features: capability and infrastructure. The capability and infrastructure describe how the adversary operates and communicates. 
 A scenario can be a watering-hole attack which is a methodology where the adversary compromises legitimate websites that they believe their targeted victims will visit.
 
-|  ![Getting Closer to the Adversary](/_static/images/starwars-diamond2.png)   |
+|     ![Getting Closer to the Adversary](/_static/images/starwars-diamond2.png)     |
 |:---------------------------------------------------------------------------------:|
-| A more realistic, general Diamond Model summarizing a cyber adversary’s activity. |
+| A more realistic, general Diamond Model summarising a cyber adversary’s activity. |
 
 ## Resources
 

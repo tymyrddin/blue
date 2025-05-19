@@ -8,7 +8,7 @@ Warning: Check local laws—some "active" measures (like hacking back) are illeg
 
 .. toctree::
    :maxdepth: 2
-   :caption: The goal isn’t revenge—it’s making you the least appetizing target on the menu.
+   :caption: The goal isn’t revenge—it’s making you the least appetising target on the menu.
 
    design/index
    small/index

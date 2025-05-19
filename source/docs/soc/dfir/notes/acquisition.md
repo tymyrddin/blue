@@ -1,6 +1,6 @@
 # Image acquisition
 
-Maximizing the amount of data extracted from a storage medium, minimising the disturbance to the storage device and medium, preserving the collected evidence, and documenting the process (including errors).
+Maximising the amount of data extracted from a storage medium, minimising the disturbance to the storage device and medium, preserving the collected evidence, and documenting the process (including errors).
 
 [Assumptions](preparation.md):
 

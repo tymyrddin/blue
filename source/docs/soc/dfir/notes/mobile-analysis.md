@@ -10,10 +10,10 @@ Malicious applications are commonly delivered through different types of channel
 
 ## Basic static analysis of samples
 
-Static analysis can be done with various tools to decompile the binary, such as [jadx](https://testlab.tymyrddin.dev/docs/dfir/jadx), [radare2](https://testlab.tymyrddin.dev/docs/dis/r2), [rizin](https://testlab.tymyrddin.dev/docs/dis/rizin), and [jeb](https://testlab.tymyrddin.dev/docs/dis/jeb). Tools such as [droidlysis](https://testlab.tymyrddin.dev/docs/dfir/droidlysis) for automatic offline static analysis can also be used.
+Static analysis can be done with various tools to decompile the binary, such as `jadx`, `radare2`, `rizin`, and `jeb`. Tools such as `droidlysis` for automatic offline static analysis can also be used.
 
-1. Get the sample: In some cases, a sample will have to be retrieved from a potentially compromised device. For Android, you can try using [mvt](https://testlab.tymyrddin.dev/docs/dfir/mvt) to download the APK file. If the application to be analysed is available on Google Play Store, try using [apkeep](https://testlab.tymyrddin.dev/docs/dfir/apkeep) to download it. 
-   * Note that ADB usually runs with a non-privileged account. It will not provide access to internal application data. On a rooted phone, ADB will run as root and provide access to internal application data and OS files and folders. Perhaps [BusyBox](https://testlab.tymyrddin.dev/docs/dfir/busybox) can be used.
+1. Get the sample: In some cases, a sample will have to be retrieved from a potentially compromised device. For Android, you can try using mvt to download the APK file. If the application to be analysed is available on Google Play Store, try using `apkeep` to download it. 
+   * Note that ADB usually runs with a non-privileged account. It will not provide access to internal application data. On a rooted phone, ADB will run as root and provide access to internal application data and OS files and folders. Perhaps BusyBox can be used.
 2. Store the sample, compute its SHA256 hash and only work on copies of the original file (to preserve its integrity).
 
 ```text

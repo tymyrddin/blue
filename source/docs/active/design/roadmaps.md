@@ -7,7 +7,7 @@ Modern web honeypots have evolved beyond basic form fields. The Aggressive Web H
 * OWASP Honeypot Project: The neighborhood watch of web security, crowd-sourcing attack patterns
 * Client Honeypots: The active hunters that go searching for trouble (when you're tired of waiting for trouble to find you)
 
-*Nothing ruins a hacker's day like realizing they've been attacking a carefully crafted decoy for three hours.*
+*Nothing ruins a hacker's day like realising they've been attacking a carefully crafted decoy for three hours.*
 
 ## Worm detection: Playing whack-a-mole with malware
 
@@ -58,7 +58,7 @@ Modern systems like:
 * DeepDig: Learns from each intrusion attempt
 * Intelligent Honeypot: Applies past solutions to new threats (like a cybersecurity professor with perfect recall)
 
-*Nothing stings quite like realizing you've been outsmarted by a machine that was pretending to be vulnerable.*
+*Nothing stings quite like realising you've been outsmarted by a machine that was pretending to be vulnerable.*
 
 ## Shadow honeypots: The silent observers
 

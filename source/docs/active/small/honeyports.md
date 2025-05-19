@@ -47,6 +47,16 @@ and brutally effective. Which, ironically, makes them smarter than half your def
 * [Python honeyport (Linux/Windows)](python-honeyport.md)
 * [PowerShell honeyport (Windows)](powershell-honeyport.md)
 
+### Features
+
+* Realistic SSH banners (Linux/Windows variants)
+* Protocol mismatch error - Common SSH server behaviour
+* Delayed response - Simulates cryptographic negotiation
+* Auto-blocking: Linux: fail2ban → iptables;  Windows: Native firewall rules
+* Logging with timestamps for forensics
+
+On Windows, run the script as `SYSTEM` using Scheduled Tasks for stealth.
+
 ### Ruby, Bash, Netcat, etc.
 
 You can be as sophisticated or as scrappy as you like. The key is that the port listens, records, and reacts.
