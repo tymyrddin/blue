@@ -1,4 +1,4 @@
-Active defence: Honeytech for humans
+Honeytech for humans
 =========================================================
 
 *Why waste time chasing attackers when you can let them trip over your carefully placed digital banana skins?*
