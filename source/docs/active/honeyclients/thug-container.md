@@ -151,8 +151,84 @@ Now you can simply run:
 thugscan http://bad.url
 ```
 
-### Notes (I am working on these)
+## Docker Compose setup
 
-* This container has no network restrictions. Consider pairing with a network firewall or Docker's `--network=none` for isolation.
-* Logs can be verbose. Redirect or mount volumes to avoid clutter.
-* Avoid clicking the URLs yourself. Thug will take the risk for you.
+Create a directory named `thug-lab`, and inside it a `Dockerfile`:
+
+```
+FROM python:3.11-slim
+
+RUN apt-get update && \
+    apt-get install -y git libxml2-dev libxslt1-dev zlib1g-dev libffi-dev build-essential && \
+    pip install --upgrade pip && \
+    pip install thug
+
+# Set up logging dir
+RUN mkdir /logs
+
+WORKDIR /app
+ENTRYPOINT ["thug"]
+```
+
+and a `docker-compose.yml`:
+
+```
+services:
+  thug:
+    build: .
+    volumes:
+      - ./urls.txt:/app/urls.txt:ro
+      - ./logs:/logs
+    command: ["-l", "INFO", "-o", "/logs", "-n", "-F", "/app/urls.txt"]
+```
+
+This setup:
+
+* Runs Thug with INFO-level logging so you don’t miss anything.
+* Outputs logs to a local `logs/` folder.
+* Scans the URLs in `urls.txt` and pretends to be a nosy browser.
+
+## Batch scan script
+
+A small shell script for everyday chaos, `scan.sh`:
+
+```
+#!/bin/bash
+
+echo "[*] Starting Thug container for batch scanning..."
+
+docker-compose up --build --abort-on-container-exit
+
+echo "[*] Logs written to ./logs/"
+```
+
+Make it executable:
+
+```
+chmod +x scan.sh
+```
+
+Now just run:
+
+```
+./scan.sh
+```
+
+## Sample `urls.txt`
+
+```
+http://example.com/malware
+http://dodgydomain.co/phish
+http://127.0.0.1:8000/test
+```
+
+Change these to suit your particular threat-hunting expedition. No judgment.
+
+## Reading the logs
+
+You’ll find files in the `logs/` directory, one per URL, helpfully timestamped. Each one contains delicious forensic 
+traces: headers, behaviours, and JavaScript shenanigans.
+
+## Notes (working on it)
+
+These containers have no network restrictions. Consider pairing with a network firewall or Docker's `--network=none` for isolation.

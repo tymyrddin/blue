@@ -1,12 +1,5 @@
 # Honeyports: Sweet lures
 
-Honeyports are the digital equivalent of leaving a shiny “Do Not Touch” button in plain sight—on an air-gapped or 
-high-security network—just to see who can’t help themselves.
-
-They’re particularly handy when your Intrusion Detection/Prevention System (IDS/IPS) is asleep at the wheel, your 
-Next-Gen firewall isn’t quite as next-gen as advertised, or you're simply tired of zero-days skipping merrily past 
-your defences.
-
 ## What’s the point?
 
 Most attackers begin with reconnaissance: poking around to find open doors (aka ports) on your network. Honeyports 

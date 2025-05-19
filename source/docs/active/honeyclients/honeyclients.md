@@ -1,5 +1,7 @@
 # Honeyclients: Turning the tables
 
+Honeypots have a problem. Enter honey clients and honeyports.
+
 ## The problem with passive honeypots
 
 Traditional honeypots sit there like a pub landlord waiting for trouble to walk in—useful, but hopeless against 
