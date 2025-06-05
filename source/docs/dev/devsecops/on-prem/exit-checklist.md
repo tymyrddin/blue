@@ -40,9 +40,9 @@
 
 ☐ **Pick a European provider (if applicable)**
 
-* Hetzner for power-efficient, no-nonsense infra.
-* UpCloud for low-latency EU edge.
-* Greenhost or 1984.is if you fancy civil liberties with your compute.
+* [Hetzner](https://www.hetzner.com/) for power-efficient, no-nonsense infra.
+* [UpCloud](https://upcloud.com/) for low-latency EU edge.
+* [Greenhost](https://greenhost.net/) or [1984.is](https://1984.hosting/) if you fancy civil liberties with your compute.
 
 ☐ **Pilot and test**
 
