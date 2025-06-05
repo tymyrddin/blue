@@ -12,3 +12,4 @@ prayers—because apparently, renting someone else’s data centre wasn’t stre
 
    README.md
    pipeline.md
+   exit-checklist.md
