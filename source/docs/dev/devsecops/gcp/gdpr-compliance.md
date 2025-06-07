@@ -1,4 +1,4 @@
-# GDPR compliance GCP
+# Notes on navigating GDPR requirements on Google Cloud
 
 ## Certifications & legal frameworks 
 

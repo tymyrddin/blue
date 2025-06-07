@@ -1,4 +1,4 @@
-# GDPR compliance AWS
+# AWS data protection: GDPR roadmap notes
 
 ## Certifications & legal frameworks
 

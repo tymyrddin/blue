@@ -1,4 +1,4 @@
-# On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessments  
+# On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment  
 
 ## Lock-in risks  
 

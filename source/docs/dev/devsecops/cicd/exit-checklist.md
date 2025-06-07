@@ -10,17 +10,29 @@
 ☐ **Estimate total cloud cost**
 
 * Include hidden gremlins: egress fees, storage tiers, and zombie VMs.
+  * [](../aws/estimated-costs.md)
+  * [](../azure/estimated-costs.md)
+  * [](../gcp/estimated-costs.md)
+  * [](../on-prem/estimated-costs.md)
 * Compare with realistic on-prem or hybrid costs (include staff, power, hardware).
 
 ☐ **Check for vendor lock-in**
 
 * Look for managed services with no easy exit (e.g., proprietary databases, serverless traps).
+  * [](../aws/lock-in.md)
+  * [](../azure/lock-in.md)
+  * [](../gcp/lock-in.md)
+  * [](../on-prem/lock-in.md)
 * Document migration blockers (formats, APIs, service contracts).
 
 ☐ **Assess compliance risk**
 
 * Are you GDPR-compliant or just spiritually so?
 * Know where your data physically lives and under which jurisdiction.
+  * [](../aws/gdpr-compliance.md)
+  * [](../azure/gdpr-compliance.md)
+  * [](../gcp/gdpr-compliance.md)
+  * [](../on-prem/gdpr-compliance.md)
 
 ---
 

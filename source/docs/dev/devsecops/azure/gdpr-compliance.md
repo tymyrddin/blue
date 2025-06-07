@@ -1,4 +1,4 @@
-# GDPR compliance Azure
+# Azure data protection: Notes on meeting GDPR Requirements
 
 ## Certifications & legal frameworks 
 
