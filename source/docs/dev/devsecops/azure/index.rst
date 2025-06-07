@@ -13,4 +13,7 @@ cryptominers in your living room.
 
    README.md
    pipeline.md
+   estimated-costs.md
+   lock-in.md
+   gdpr-compliance.md
 

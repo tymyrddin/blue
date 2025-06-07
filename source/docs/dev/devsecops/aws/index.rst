@@ -11,3 +11,6 @@ AWS is a digital Wild West, and if you’re not careful, your misconfigured S3 b
 
    README.md
    pipeline.md
+   estimated-costs.md
+   lock-in.md
+   gdpr-compliance.md

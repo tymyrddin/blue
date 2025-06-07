@@ -12,3 +12,6 @@ exactly what it is.)
 
    README.md
    pipeline.md
+   estimated-costs.md
+   gdpr-compliance.md
+   lock-in.md

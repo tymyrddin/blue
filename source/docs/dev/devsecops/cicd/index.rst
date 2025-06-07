@@ -15,3 +15,4 @@ out. But left unguarded, they’re also a hacker’s all-you-can-eat buffet.
    git.md
    artefacts.md
    next.md
+   exit-checklist.md

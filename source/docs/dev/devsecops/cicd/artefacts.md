@@ -1,4 +1,4 @@
-# artefacts
+# Artefacts
 
 ## Supply-chain Levels for Software artefacts (SLSA)
 
