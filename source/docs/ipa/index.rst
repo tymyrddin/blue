@@ -1,8 +1,8 @@
 IPA project
 ==================
 
-.. image:: /_static/images/home.png
-   :alt: Chaos at home
+.. image:: /_static/images/ipa.png
+   :alt: IPA
 
 A project, together with `Meltem Arikan <https://www.meltemarikan.com/>`, sponsored by `/ut7 <https://ut7.fr/>` for
 supporting Intimate Partner Abuse survivors in various ways:
