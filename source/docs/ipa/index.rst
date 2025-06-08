@@ -4,7 +4,7 @@ IPA project
 .. image:: /_static/images/ipa.png
    :alt: IPA
 
-A project, together with `Meltem Arikan <https://www.meltemarikan.com/>`, sponsored by `/ut7 <https://ut7.fr/>` for
+A project, together with `Meltem Arikan <https://www.meltemarikan.com/>`__, sponsored by `/ut7 <https://ut7.fr/>`__ for
 supporting Intimate Partner Abuse survivors in various ways:
 
 * Keeping up with the digital stalking threat landscape
@@ -14,7 +14,7 @@ supporting Intimate Partner Abuse survivors in various ways:
 * Supporting interested parties in using such labs to support survivors.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: It involves less duct tape than you’d think.
 
    landscape.md
