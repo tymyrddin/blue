@@ -15,7 +15,7 @@ supporting Intimate Partner Abuse survivors in various ways:
 
 .. toctree::
    :maxdepth: 1
-   :caption: It involves less duct tape than you’d think.
+   :caption: Some of the materials
 
    landscape.md
    pts.md
