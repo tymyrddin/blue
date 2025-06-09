@@ -8,14 +8,14 @@ open-source tools approved by digital safety experts.
 
 Before starting, gather these items (all available at most electronics shops):  
 
-1. Raspberry Pi 4 (the £50 model with 2GB RAM is enough)  
-2. Official power supply (micro-USB, £8)  
-3. 32GB micro SD card (Class 10 speed, £7)  
-4. Ethernet cable (any basic one will do, £3)  
+1. [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) (2GB RAM is enough)  
+2. Official power supply (micro-USB)  
+3. 32GB micro SD card (Class 10 speed)  
+4. Ethernet cable (any basic one will do)  
 5. A spare monitor/TV with HDMI port (to set up initially)  
 
-*Budget tip:* Some charities like WESNET in Australia provide discounted kits – check local domestic violence support 
-networks.  
+*Budget note: Some charities like WESNET in Australia provide discounted kits – check local domestic violence support 
+networks.*
 
 ---
 

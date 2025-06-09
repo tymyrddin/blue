@@ -1,4 +1,4 @@
-# The 2025 digital stalking threat landscape for the IPA project
+# Keeping up with the digital stalking threat landscape (2025)
 
 The digital stalking epidemic continues to grow at an alarming rate, with projections suggesting nearly a quarter of 
 internet users - that's about 9 million people - may experience cyberstalking by 2025. This represents a steady 5% 
@@ -51,14 +51,14 @@ much revealing data we leave in digital breadcrumbs, from photo metadata to loca
 
 ## IPA project priorities  
 
-For text and email harassment, we're focusing on [secure communication protocols](secure-comms.md) and [practical 
-exercises in documenting evidence for law enforcement](doc-evidence.md). Location tracking threats are met with 
-[GPS spoofing techniques](gps-spoofing.md) and 
-[hands-on device audits](audits.md) using tools like PiRogue in our specialist labs.  
+For text and email harassment, we're focusing on [secure communication protocols](guides/secure-comms.md) and [practical 
+exercises in documenting evidence for law enforcement](guides/doc-evidence.md). Location tracking threats are met with 
+[GPS spoofing techniques](guides/gps-spoofing.md) and 
+[hands-on device audits](audits/audits.md) using tools like PiRogue in our specialist labs.  
 
-The rise of AI abuse has led to [developing deepfake detection drills](detection-drills.md), teaching people to spot 
+The rise of AI abuse has led to [developing deepfake detection drills](workshops/detection-drills.md), teaching people to spot 
 the subtle artifacts in synthetic media. Financial surveillance gets special attention too, with clear [guides to bank 
-privacy settings and credit freeze systems](banks.md).  
+privacy settings and credit freeze systems](guides/banks.md).  
 
 ## Key takeaways for survivor support  
 

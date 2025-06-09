@@ -1,4 +1,4 @@
-# Workshop plan: Deepfake detection drills
+# Deepfake detection drills
 
 Audience: Survivors, support workers, social workers, advocates, and concerned allies
 
@@ -14,9 +14,7 @@ Materials needed:
 * Example videos (deepfake and real)
 * Flipchart or whiteboard for discussion
 
----
-
-## Workshop goals
+Workshop goals:
 
 By the end of the session, participants will:
 
@@ -28,7 +26,9 @@ By the end of the session, participants will:
 
 ---
 
-## Section 1: What on earth is a deepfake? (15 mins)
+## Session outline
+
+### 1. What on earth is a deepfake? (15 mins)
 
 Facilitator brief: Explain the concept plainly, using everyday terms.
 
@@ -45,7 +45,7 @@ Optional analogy:
 
 ---
 
-## Section 2: Common signs of deepfakes (15 mins)
+### 2. Common signs of deepfakes (15 mins)
 
 Activity: Group brainstorm
 Ask: “What might look or sound *wrong* in a fake video?”
@@ -63,9 +63,7 @@ Deepfake warning signs checklist:
 
 Print and distribute: Small laminated cards with the checklist to keep.
 
----
-
-## Section 3: Drill 1 – Spot the fake (20 mins)
+### 3. Drill 1 – Spot the fake (20 mins)
 
 Setup:
 Show 5 short video clips (30–60 seconds each), a mix of real and faked.
@@ -80,9 +78,7 @@ Discussion prompts:
 
 Facilitator note: Include one obviously fake and one very subtle one to illustrate the range.
 
----
-
-## Section 4: Drill 2 – What if this was used against you? (20 mins)
+### 4. Drill 2 – What if this was used against you? (20 mins)
 
 Scenario roleplay exercise:
 Break into small groups. Hand each group a different scenario card. Example scenarios:
@@ -100,9 +96,7 @@ Task:
 
 Groups then briefly share their responses.
 
----
-
-## Section 5: What to do if you’re targeted (10 mins)
+### 5. What to do if you’re targeted (10 mins)
 
 Practical action list:
 
@@ -115,9 +109,7 @@ Practical action list:
 
 Note: Mention the emerging protections for synthetic media.
 
----
-
-## Section 6: Q\&A and myth-busting (10 mins)
+### 6. Q\&A and myth-busting (10 mins)
 
 Invite any remaining questions or confusions. Suggested myths to bust:
 
