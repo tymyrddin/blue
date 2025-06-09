@@ -36,7 +36,7 @@ By the end of the workshop, participants will be able to:
 
 ### Part 1: Digital risk awareness *(20 mins)*
 
-#### Topics:
+#### Topics
 
 * How abusers monitor communications:
 
@@ -46,13 +46,13 @@ By the end of the workshop, participants will be able to:
   * Physical access (guessing passcodes, reading messages directly)
 * The myth of “just use WhatsApp”—when it’s *not* safe
 
-#### Activity:
+#### Activity
 
 * “Guess the risk” card sort: Groups sort example comms methods from “safe-ish” to “high risk” (e.g. SMS, Facebook Messenger, Signal, landline, public Wi-Fi call, email, voice notes)
 
 ### Part 2: Safer Tools, Safer Behaviour *(30 mins)*
 
-#### Topics:
+#### Topics
 
 * Principles of safer communication:
 
@@ -65,18 +65,18 @@ By the end of the workshop, participants will be able to:
   * Phone box or burner SIMs (context-dependent)
   * Notes app + verbal code (low-tech workarounds)
 
-#### Demo:
+#### Demo
 
 * Signal: how to verify safety numbers
 * Burner phone setup: how to separate personal and safe comms
 
-#### Handout:
+#### Handout
 
 * “Safe-ish Apps & Tools” table with pros/cons and when to use each
 
 ### Part 3: Situational Comms Planning *(20 mins)*
 
-#### Activity:
+#### Activity
 
 * “You’re Supporting Jamie”
   A survivor, Jamie, has reason to suspect her phone is monitored. In pairs, participants:
@@ -89,14 +89,14 @@ Debrief on choices: why this app over that one? What trade-offs were made?
 
 ### Part 4: Making it stick—Teaching survivors *(15 mins)*
 
-#### Topics:
+#### Topics
 
 * How to explain risks without causing fear or shame
 * Checking for understanding (“What would you do if…?”)
 * When *not* to change habits suddenly (abuser may notice)
 * Coaching gently: "Here's a trick I've used..."
 
-#### Roleplay:
+#### Roleplay
 
 * Quickfire: You have 2 minutes to explain to a survivor how to contact a lawyer without tipping off their partner. Go.
 
@@ -114,12 +114,10 @@ Debrief on choices: why this app over that one? What trade-offs were made?
   * Shelters with burner devices
   * Tech support orgs
 
-#### Handout:
+#### Handout
 
 * “Comms Red Flags & Safe Practices” tear-away guide
 * Situational planning worksheet survivors can take home (anonymised)
-
-
 
 ## Optional add-ons
 

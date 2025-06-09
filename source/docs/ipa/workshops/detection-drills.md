@@ -24,8 +24,6 @@ By the end of the session, participants will:
 * Know what to do if a deepfake is used to harass, threaten, or discredit someone
 * Leave with a checklist and confidence to question suspicious media
 
----
-
 ## Session outline
 
 ### 1. What on earth is a deepfake? (15 mins)
@@ -42,8 +40,6 @@ Key points to cover:
 Optional analogy:
 
 *“It’s like someone taking a puppet, making it look like you, and then putting words in its mouth. Only this puppet can be posted online and passed off as the real thing.”*
-
----
 
 ### 2. Common signs of deepfakes (15 mins)
 
@@ -116,8 +112,6 @@ Invite any remaining questions or confusions. Suggested myths to bust:
 * “AI can perfectly fake anything now” – It’s improving, but still flawed
 * “You need to be famous to be deepfaked” – Anyone with enough photos online could be a target
 * “If it looks real, it must be real” – That’s exactly what they want you to believe
-
----
 
 ## Optional add-ons
 

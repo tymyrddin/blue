@@ -12,8 +12,6 @@ Workshop goals: By the end of the session, participants will:
 * Know what not to do (to avoid tipping off an abuser)
 * Feel more confident in deciding what to do next — and where to find support
 
----
-
 ## Session outline
 
 ### 1. Welcome & framing (10 minutes)
@@ -83,8 +81,6 @@ Important safety notes:
 * Offer space to talk one-to-one afterwards if anyone needs it
 * Share printed or offline-accessible guides
 
----
-
 ## Materials included
 
 * Printable device check guides (Android, iPhone, Windows, Mac, Linux)
@@ -92,8 +88,6 @@ Important safety notes:
 * Tip sheet: What not to do
 * List of resources (organisations, apps, digital defenders)
 * Slide deck (optional — use printed version if no projector)
-
----
 
 ## Notes for facilitators
 
