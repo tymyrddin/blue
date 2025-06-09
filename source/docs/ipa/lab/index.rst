@@ -26,3 +26,6 @@ ask better questions, spot red flags, and push back against digital coercion —
 
    pts.md
    wazuh.md
+   wazu-archs.md
+   on-prem.md
+   cloud.md

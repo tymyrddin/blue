@@ -45,13 +45,3 @@ digital forensics advocates assisting with evidence collection, and legal aid or
 restraining orders or prosecution. While the project is open-source (licensed under GPLv3) and welcomes community 
 contributions, users should note some current limitations. Android and iOS support remains limited for 
 non-rooted/jailbroken devices, but we may change that.
-
----
-
-## To do asap
-
-* Cloud deployment scripts for platforms like Hetzner
-* Automation features around certificate management need refinement.  
-
-For further technical details or to contribute to development, visit the [GitHub repository](https://github.com/ninabarzh/ipa-siem-stack).  
-

@@ -54,7 +54,7 @@ much revealing data we leave in digital breadcrumbs, from photo metadata to loca
 For text and email harassment, we're focusing on [secure communication protocols](guides/secure-comms.md) and [practical 
 exercises in documenting evidence for law enforcement](guides/doc-evidence.md). Location tracking threats are met with 
 [GPS spoofing techniques](guides/gps-spoofing.md) and 
-[hands-on device audits](audits/audits.md) using tools like PiRogue in our specialist labs.  
+[hands-on device audits](audits/audits.md) using tools like PiRogue in our [shelter labs](lab/index.rst).  
 
 The rise of AI abuse has led to [developing deepfake detection drills](workshops/detection-drills.md), teaching people to spot 
 the subtle artifacts in synthetic media. Financial surveillance gets special attention too, with clear [guides to bank 

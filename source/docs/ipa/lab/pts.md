@@ -17,8 +17,6 @@ Before starting, gather these items (all available at most electronics shops):
 *Budget note: Some charities like WESNET in Australia provide discounted kits – check local domestic violence support 
 networks.*
 
----
-
 ## Step 1: Preparing the PiRogue software  
 
 ### Downloading the system  
@@ -85,9 +83,7 @@ The dashboard shows simple traffic lights:
 
 1. Note the malware name shown  
 2. Immediately disconnect the device  
-3. Contact your local tech safety partner (listed at [stopstalkerware.org](https://stopstalkerware.org/resources/#find-support))   
-
----
+3. Contact your local tech safety partner (listed at [stopstalkerware.org](https://stopstalkerware.org/resources/#find-support))
 
 ## Safety and maintenance  
 
@@ -104,9 +100,7 @@ The dashboard shows simple traffic lights:
 
 3. **For sensitive cases:**  
    - Use in a separate room from the survivor's living quarters  
-   - Document findings for legal evidence (take screenshots of the dashboard)   
-
----
+   - Document findings for legal evidence (take screenshots of the dashboard)
 
 ## Getting help  
 

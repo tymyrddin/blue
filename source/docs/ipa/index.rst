@@ -11,8 +11,8 @@ A project, together with `Meltem Arikan <https://www.meltemarikan.com/>`__, spon
    :caption: Supporting Intimate Partner Abuse survivors in various ways:
 
    landscape.md
-   lab/index
    audits/index
+   lab/index
    workshops/index
    guides/index
 
