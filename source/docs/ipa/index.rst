@@ -13,6 +13,8 @@ A project, together with `Meltem Arikan <https://www.meltemarikan.com/>`__, spon
    landscape.md
    audits/index
    lab/index
-   workshops/index
    guides/index
+   workshops/index
+   materials/index
+
 

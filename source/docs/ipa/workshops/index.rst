@@ -19,7 +19,6 @@ Just practical learning, designed for where people are — not where tech compan
    :maxdepth: 1
    :caption: Free, adaptable workshops to build digital self-defence skills in IPA contexts
 
-   facilitator.md
    communication-habits.md
    spy-and-stalkerware.md
    evidence.md
