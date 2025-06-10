@@ -1,4 +1,4 @@
-# Overview of the IPA-SIEM stack  (under construction)
+# Overview of the IPA-SIEM stack
 
 The IPA-SIEM Stack is a specialised cybersecurity tool built on Wazuh, an open-source SIEM/XDR platform designed to 
 help survivors of intimate partner abuse (IPA) detect and respond to covert digital surveillance. This includes 
