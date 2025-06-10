@@ -1,8 +1,11 @@
-# How-to: Private cloud IPA-SIEM stack
+# How to set up a private cloud security system (IPA-SIEM)
 
-**Secure. Distributed. Survivor-Focused.**
+**Secure. Distributed. Survivor-focused.**
 
-How to run the IPA-SIEM Stack in the cloud you control: This guide walks you through deploying the IPA-SIEM Stack in a private cloud—ideal for shelters or advocacy organisations that operate across multiple locations. You’ll get remote access, centralised monitoring, and the same surveillance detection tools—without surrendering data control to big tech.
+How to run the IPA-SIEM stack in the cloud you control: This guide walks you through deploying the IPA-SIEM Stack in 
+a private cloud—ideal for shelters or advocacy organisations that operate across multiple locations. You’ll get 
+remote access, centralised monitoring, and the same surveillance detection tools—without surrendering data control to 
+big tech.
 
 We assume you have basic admin access to your cloud server, or a friendly nerd who does.
 
@@ -30,7 +33,7 @@ We assume you have basic admin access to your cloud server, or a friendly nerd w
 
 ### Survivor devices
 
-As in the [on-prem setup](on-prem.md): Windows, macOS, Android (rooted preferred), iOS (jailbroken or backups)
+As in the [on-prem setup](on-prem.md) version: Windows, macOS, Android (rooted preferred), iOS (jailbroken or backups)
 
 ### Optional: PiRogue toolkit
 

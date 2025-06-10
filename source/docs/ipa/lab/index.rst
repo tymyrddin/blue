@@ -24,10 +24,11 @@ ask better questions, spot red flags, and push back against digital coercion —
    :maxdepth: 1
    :caption: How to set up and run your own low-cost, high-impact digital safety lab:
 
-   pts.md
    wazuh.md
    wazu-archs.md
    on-prem.md
+   pts.md
    on-prem-scripts.md
    costs.md
+   funding.md
    cloud.md

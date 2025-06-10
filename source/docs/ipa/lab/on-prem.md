@@ -1,6 +1,6 @@
 # How to set up a shelter-based security system (IPA-SIEM)
 
-**Private, Powerful, and In Your Hands – No Cloud Required**
+**Private, powerful, and in your hands – no cloud required**
 
 This guide walks you through setting up the **IPA-SIEM Stack** entirely inside your shelter. That means:
 
