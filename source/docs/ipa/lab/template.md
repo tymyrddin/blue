@@ -1,4 +1,4 @@
-# Template: Grant application summary for the IPA Project/IPA Lab
+# Template: Grant application summary for an IPA project/lab
 
 *Just for inspiration and stealing from*
 

@@ -1,4 +1,4 @@
-# Helpful scripts (to automate checks and responses)
+# Helpful scripts to automate checks and responses
 
 Scripts are little tools you build once, and they quietly do important jobs for you behind the scenes—like looking 
 for signs of spyware, blocking suspicious devices, or copying logs from phones.
