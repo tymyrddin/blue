@@ -1,57 +1,91 @@
-# How-to: Shelter-centric on-prem IPA-SIEM stack
+# How to set up a shelter-based security system (IPA-SIEM)
 
-**Private, Powerful, and In Your Hands**
+**Private, Powerful, and In Your Hands – No Cloud Required**
 
-Setting up your own secure surveillance detection system within the shelter: This guide walks you through setting up 
-the IPA-SIEM Stack entirely within your shelter, so nothing ever touches the cloud. It's designed for situations 
-where you have a stable internet connection, a small team willing to learn, and a strong desire to protect survivors 
-from digital surveillance. You don’t need to be a cybersecurity expert—but you'll need to follow these instructions 
-step by step.
+This guide walks you through setting up the **IPA-SIEM Stack** entirely inside your shelter. That means:
+
+* No third-party cloud platforms
+* No data leaving your building
+* No mystery surveillance on survivors
+
+It’s designed for shelters with:
+
+* A stable internet connection (even if it’s just inside the building)
+* A small but committed team
+* No digital background (we’ll explain everything)
+* A need to spot signs of digital stalking, tampering, or surveillance
+
+## What this system does
+
+It collects clues from devices (like logs, alerts, and odd behaviour), watches for signs of tracking or intrusion, 
+and gives you a visual dashboard so you can spot threats and act fast.
 
 ## What you’ll need
 
-### One shelter server
+### A shelter server (your command centre)
 
-* A basic computer running Linux (Ubuntu 22.04 recommended). Could be a spare PC or a virtual machine.
-* It needs:
+This is the machine that will run everything.
 
-  * At least 8 GB of memory (RAM)
-  * 4 CPU cores
-  * 100 GB storage (more if you'll analyse lots of devices)
-  * A fixed internal IP address (so other devices can find it)
+**Minimum spec:**
 
-### Survivor devices
+* Ubuntu 22.04 LTS (a free version of Linux — we’ll explain how to install this if you need)
+* At least 8 GB RAM (memory)
+* At least 4 CPU cores (processing power)
+* At least 100 GB disk space
+* A **fixed** internal IP address (so other devices can always find it)
 
-* Any of the following:
+*If unsure, ask your IT volunteer to set a fixed IP like `192.168.1.10`.*
 
-  * Windows laptops
-  * macOS devices (MacBooks, iMacs)
-  * Android phones (ideally rooted, but not required)
-  * iPhones (if jailbroken or if backups can be made)
+You can use:
 
-### Optional: PiRogue Device
+* A spare PC
+* A mini PC (like Intel NUC)
+* A virtual machine on your existing admin computer (if powerful enough)
 
-A small [Raspberry Pi-based toolkit](pts.md) that can scan for suspicious activity during intake interviews or outreach visits.
+### Devices to monitor
 
-### Shelter Network
+These are the devices this sytem can serve:
 
-Either wired or Wi-Fi—just needs to let your devices talk to the server internally.
+* Windows laptops
+* macOS devices (e.g. MacBooks)
+* Android phones (rooted = more access, but not required)
+* iPhones (only partial data unless jailbroken)
 
-## Step-by-Step Setup
+### Shelter network (wired or Wi-Fi)
+
+Just needs to connect all devices **within** the building. The system does not need internet access once set up.
+
+### Optional: PiRogue device
+
+[A small toolkit (based on a Raspberry Pi)](pts.md) that checks devices for suspicious behaviour before they join the 
+shelter network. Ideal during intake interviews or outreach.
+
+## Step-by-step setup
 
 ### Prepare the shelter server
 
-This is your command centre. You’ll install tools that monitor other devices and help you respond to digital threats.
+This is where all your security tools will live.
 
-#### Update the server and install basic tools
-
-Open a terminal and type:
+1. Open a terminal window (On your Ubuntu server, press `Ctrl + Alt + T`)
+2. Update your system and install some essential tools:
 
 ```bash
 sudo apt update && sudo apt install -y curl unzip gnupg
 ```
 
-#### Add Wazuh’s software repository
+This ensures your server is up to date and can download packages securely.
+
+### Install Wazuh (your security system)
+
+**What is Wazuh?**: Wazuh is an open-source system that watches devices, looks for problems, and gives you alerts 
+and a dashboard. It includes:
+
+* Wazuh Manager (handles alerts and actions)
+* Wazuh API (lets the dashboard talk to the system)
+* Elasticsearch (stores logs and data)
+* Kibana (your visual dashboard)
+
+Add the Wazuh software source:
 
 ```bash
 curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --dearmor -o /usr/share/keyrings/wazuh.gpg
@@ -61,200 +95,203 @@ echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4
 sudo apt update
 ```
 
-#### Install the main tools
+Install Wazuh and supporting tools:
 
 ```bash
 sudo apt install -y wazuh-manager wazuh-api elasticsearch kibana
 ```
 
-#### Start everything up
+Start the services:
 
 ```bash
 sudo systemctl enable --now wazuh-manager elasticsearch kibana
 ```
 
+This sets them to run now and every time you restart the server.
+
+### Set up the Wazuh dashboard
+
+Once everything is running, open a browser on your server and go to:
+
+```
+http://localhost:5601
+```
+
+Or from another device on the same network:
+
+```
+http://192.168.1.10:5601
+```
+
+This is your main control room. You’ll log in and see alerts, device info, and more.
+
 ## Connect survivor devices
+
+This is how you collect useful logs and alerts from each device.
 
 ### For Windows or Mac
 
-**Option 1: Download the agent directly on the device**
+These devices use a program called the **Wazuh Agent** to send logs to your server.
 
-* Use a browser to go to your Wazuh dashboard (e.g., [http://your-server-ip:5601](http://your-server-ip:5601))
-* Download the correct agent (Windows or macOS)
-* Install it and point it at your server’s IP address
+*What is a Wazuh Agent?* A small app that runs in the background, collecting security-related information like login 
+attempts, strange app behaviour, or changes to settings. It sends this data securely to your server.
 
-**Option 2: Use a bootable USB**
+**Option 1: Install agent directly from browser**
 
-* Prepare a USB with the installer ready
+1. On the device, open a web browser.
+2. Go to: `http://192.168.1.10:5601`
+3. Download the agent for Windows or macOS.
+4. Run the installer.
+5. When asked for the server IP, enter your server’s fixed IP (e.g. `192.168.1.10`)
+
+**Option 2: Install via USB stick (if internet isn’t available on the device)**
+
+1. On the server:
 
 ```bash
 wget https://packages.wazuh.com/4.x/agents/wazuh-agent_x.x.x.msi
 cp wazuh-agent_x.x.x.msi /media/usb
 ```
 
-* Boot the survivor’s device from this USB
-* Run the installer or use pre-prepared scripts to set it up
+2. Plug the USB into the survivor’s device.
+3. Run the installer manually.
 
 ### For Android (rooted)
 
-**Only works fully if the phone is rooted**
+**Rooted** means full access to the phone’s internal system. If not rooted, see next section.
 
-1. Install Termux from F-Droid
-2. Open Termux and run:
+1. Install Termux (a Linux terminal app): Download from [F-Droid](https://f-droid.org/packages/com.termux/).
+2. Open Termux and type:
 
 ```bash
 pkg update && pkg install curl git
-curl -s https://yourserver.local/setup_android.sh | bash
+curl -s http://192.168.1.10/setup_android.sh | bash
 ```
 
-This sends key logs to the shelter server. For non-rooted phones, manual extraction may be needed.
+([This script must be prepared on your server](on-prem-scripts.md).)
 
 ### For Android (non-rooted)
 
-You’ll need:
+You’ll manually extract logs using `adb`.
 
-* A computer with `adb` (Android Debug Bridge) installed
-* A USB cable
+**What is `adb`?** ADB (Android Debug Bridge) is a tool that lets you talk to Android phones from a computer. You’ll 
+use it to copy system info and logs.
 
-**Step-by-step:**
+1. Install adb on your Ubuntu server:
 
-1. On the Android phone:
+```bash
+sudo apt install android-tools-adb
+```
 
-   * Go to **Settings → About phone → Tap ‘Build number’ 7 times**
-   * Go back to **Settings → Developer Options**
-   * Enable **USB debugging**
+2. Enable USB debugging on the phone:
 
-2. Plug the phone into your Linux server via USB
+   * Go to **Settings → About phone**
+   * Tap **Build number** 7 times to unlock developer options
+   * Go to **Developer options**, enable **USB debugging**
 
-3. On the server:
+3. Connect phone to server with USB cable.
+4. Check it is recognised:
 
 ```bash
 adb devices
 ```
 
-(If the device shows up, great. If not, check cables and permissions.)
+You should see a device ID listed. If not, check your USB cable and permissions.
 
-4. Pull system logs:
+5. Copy logs from the phone:
 
 ```bash
 adb logcat -d > /opt/logs/android_logcat.txt
 adb bugreport > /opt/logs/android_bugreport.zip
 ```
 
-5. Optional:
+6. Optional: Extract app list and proxy settings
 
-   * Export app list:
+```bash
+adb shell pm list packages -f > /opt/logs/android_apps.txt
+adb shell settings get global http_proxy
+```
 
-     ```bash
-     adb shell pm list packages -f > /opt/logs/android_apps.txt
-     ```
-   * Check installed certificates:
+### For jailbroken iPhones (full access)
 
-     ```bash
-     adb shell settings get global http_proxy
-     ```
+1. Install OpenSSH via Cydia (jailbreak app store)
+2. Use [secure scripts](on-prem-scripts.md) to transfer logs to your server via SSH
 
-6. Analyse those files using your Wazuh/Kibana interface or manually with `grep`.
+### iPhones which are **not** jailbroken
 
-### For iPhone (jailbroken)
+Use local backup to pull app data.
 
-**If jailbroken**:
+1. Install tools on server:
 
-* Install OpenSSH from Cydia
-* Securely send logs to your server using scripts or scheduled jobs
+```bash
+sudo apt install libimobiledevice-utils
+```
 
-### For iPhone (not jailbroken)
-
-You’ll need:
-
-* A computer with iTunes or libimobiledevice tools installed
-* A USB cable
-
-**Step-by-step:**
-
-1. Back up the iPhone locally:
+2. Backup the iPhone:
 
 ```bash
 idevicebackup2 backup /opt/backups/ios_device/
 ```
 
-2. Once backed up, extract messages, app data, and logs:
+3. Run a [parser script](on-prem-scripts.md) (you may need to request help):
 
 ```bash
 python3 parse_ios_backup.py /opt/backups/ios_device/
 ```
 
-(Use pre-written scripts or contact your digital support partner for help with `parse_ios_backup.py`)
+Look for:
 
-3. Look for:
+* Unknown apps
+* Location logs
+* Mirroring software
 
-   * Weird or hidden apps
-   * Location history
-   * Account takeovers
-   * Signs of mirroring or monitoring
+### Optional: Use PiRogue to scan devices before they connect
 
-## Add a PiRogue device (Optional)
+[A PiRogue device](pts.md) sits between the network and a phone/laptop and watches all traffic.
 
-Use it to scan new devices before they’re connected to your network.
-
-```bash
-# SSH into your PiRogue
-sudo ./start_capture.sh --target 192.168.x.x
-
-# After scan, transfer the file to your server
-scp pirogue_capture.pcap user@ipa-siem.local:/opt/forensics/
-```
-
-Analyse with:
+1. Connect to the PiRogue:
 
 ```bash
-tshark -r /opt/forensics/pirogue_capture.pcap
+ssh pi@piroguedevice.local
 ```
 
-## Add helpful scripts
-
-**quarantine\_device.sh**
+2. Start a network scan:
 
 ```bash
-#!/bin/bash
-echo "Disconnecting $1 from network..."
-sudo iptables -A OUTPUT -s $1 -j DROP
+sudo ./start_capture.sh --target 192.168.1.75
 ```
 
-**parse\_logs.sh**
+3. After scan finishes, send data to your server:
 
 ```bash
-#!/bin/bash
-journalctl -u wazuh-agent | grep -i suspicious > /opt/alerts/suspicious.log
+scp capture.pcap user@192.168.1.10:/opt/forensics/
 ```
 
-Schedule them with cron:
+4. Review with this command:
 
 ```bash
-crontab -e
-# Add:
-0 * * * * /opt/scripts/parse_logs.sh
+tshark -r /opt/forensics/capture.pcap
 ```
 
-Encrypt logs:
+## Add automation scripts
 
-```bash
-gpg -c /opt/alerts/suspicious.log
-```
+See [Helpful scripts (to automate checks and responses)](on-prem-scripts.md)
 
-## Ongoing maintenance
+## Weekly maintenance
 
-* Check the Kibana dashboard weekly for new alerts
-* Back up the `/var/ossec/logs/` folder to a USB regularly
-* Keep your server locked in a safe room or cabinet
-* Reboot devices if they seem slow or show odd behaviour
+* Check the dashboard for new alerts
+* Back up the `/var/ossec/logs/` folder to a USB or external drive
+* Reboot server monthly to clear memory
+* Lock server in a secure place
+* Review the alert logs (`/opt/ipa-siem/alerts/suspicious.log` if using script)
 
 ## Summary
 
-With this setup, everything stays under your roof—no cloud, no third-party exposure. It’s your private radar, 
-quietly watching for stalkerware or tampering. The system’s power comes from simple practices: check logs regularly, 
-respond to alerts, and protect physical access. With basic guidance, even non-technical advocates can help run and 
-understand this system.
+It doesn’t block all threats, but it lets you **see them**, and that's half the battle. For added support, reach 
+out to a trusted local digital rights group—they can guide you remotely over encrypted chat or phone.
 
-For shelters with little tech support, consider partnering with a local digital rights group who can help 
-remotely—using encrypted channels, of course.
+With this setup based on open-source tools, affordable, everything stays under your roof—no cloud, no third-party 
+exposure. It’s your private radar, quietly watching for stalkerware or tampering. The system’s power comes from 
+simple practices: check logs regularly, respond to alerts, and protect physical access. With basic guidance, everybody
+in the shelter can help run and understand this system.
+
