@@ -4,15 +4,21 @@
 
 **Project title:**
 
-IPA Lab: Digital Safety and Empowerment for Survivors of Intimate Partner Abuse
+IPA Lab: Digital safety and empowerment for survivors of Intimate Partner Abuse (IPA)
 
 **Project summary:**
 
-The IPA Lab is a survivor-focused, community-based initiative designed to improve digital safety for individuals experiencing Intimate Partner Abuse (IPA). By providing practical, low-cost, on-premises digital infrastructure, the project equips shelters, community groups, and service providers with tools to detect, prevent, and respond to digital surveillance, stalking, and abuse.
+The IPA lab is a survivor-focused, community-based initiative designed to improve digital safety for individuals 
+experiencing Intimate Partner Abuse (IPA). By providing practical, low-cost, on-premises digital infrastructure, the 
+project equips shelters, community groups, and service providers with tools to detect, prevent, and respond to digital 
+surveillance, stalking, and abuse.
 
 **Problem statement:**
 
-Digital abuse is an escalating tactic in IPA. Survivors face threats not just physically, but through phones, apps, spyware, and online accounts. However, many shelters and frontline services lack the resources or expertise to address this growing digital threat. The IPA Lab fills this gap by offering a do-it-yourself, privacy-preserving security system that can run locally—without depending on costly external providers or exposing sensitive data.
+Digital abuse is an escalating tactic in IPA. Survivors face threats not just physically, but through phones, apps, 
+spyware, and online accounts. However, many shelters and frontline services lack the resources or expertise to address 
+this growing digital threat. The IPA Lab fills this gap by offering a do-it-yourself, privacy-preserving security 
+system that can run locally—without depending on costly external providers or exposing sensitive data.
 
 **Objectives:**
 
@@ -45,5 +51,6 @@ especially those in underfunded or rural settings across the UK and EU.
 * Stronger capacity for frontline organisations to support digital abuse cases
 * A replicable model for community-led digital safety in domestic abuse response
 
-**Why now:** As intimate partner abuse increasingly intersects with digital life, digital safety has become a human 
-right. The IPA Lab meets this moment with pragmatic, grassroots tools that prioritise autonomy, privacy, and care.
+**Why now:** [As intimate partner abuse increasingly intersects with digital life](../landscape.md), digital safety has 
+become a human right. The IPA lab meets this moment with pragmatic, grassroots tools that prioritise autonomy, privacy, 
+and care.
