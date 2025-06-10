@@ -30,5 +30,7 @@ ask better questions, spot red flags, and push back against digital coercion —
    pts.md
    on-prem-scripts.md
    costs.md
-   funding.md
    cloud.md
+   costs-cloud.md
+   funding.md
+   template.md
