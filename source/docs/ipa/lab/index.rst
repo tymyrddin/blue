@@ -29,4 +29,5 @@ ask better questions, spot red flags, and push back against digital coercion —
    wazu-archs.md
    on-prem.md
    on-prem-scripts.md
+   costs.md
    cloud.md
