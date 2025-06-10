@@ -127,8 +127,6 @@ Encourage participants to practice spotting fakes with fictional examples.
 * Allow space for emotional responses—these exercises can feel invasive.
 * Highlight practical defences: reverse image search, metadata checking, and digital literacy.
 
-## Final thoughts
-
 Fake images are easy to make but easier to beat when you know the signs. This guide helps you build those skills, raise awareness, and help others feel more confident spotting visual manipulation.
 
 Trust your instincts. Ask questions. Look twice.

@@ -22,6 +22,7 @@ Use what works, adapt what doesn’t, and if you invent something brilliant—pl
    roleplay.md
    fake-vids.md
    fake-images.md
+   fake-malware.md
 
 
 

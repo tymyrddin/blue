@@ -62,7 +62,8 @@ and respect for the emotional weight of the material.
 
 ### *“Good malware, bad intentions.”*
 
-**Threat model:** A team is asked to analyse a piece of malware left on a shared machine. It doesn’t cause harm—but it *does* track, screenshot, and signal back to a server.
+**Threat model:** A team is asked to analyse a piece of malware left on a shared machine. It doesn’t cause harm—but 
+it *does* track, screenshot, and signal back to a server.
 
 **Challenge:** Should it be reverse-engineered, reported, or preserved as evidence?
 
