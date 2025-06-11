@@ -1,4 +1,4 @@
-# Where to apply for budget for the IPA project/IPA lab (2025)
+# Where to apply for budget for an IPA project/IPA lab (2025)
 
 In case you need budget for setting up an IPA security system like this, consider these organisations to apply for 
 grants or budgets. Focused on cybersecurity, digital resilience, social good, and tech infrastructure funding that 

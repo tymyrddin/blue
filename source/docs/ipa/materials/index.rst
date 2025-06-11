@@ -22,7 +22,8 @@ Use what works, adapt what doesn’t, and if you invent something brilliant—pl
    roleplay.md
    fake-vids.md
    fake-images.md
-   fake-malware-pc.md
+   fake-malware-windows.md
+   fake-malware-nix.md
    fake-malware-android.md
    fake-malware-iphone.md
 
