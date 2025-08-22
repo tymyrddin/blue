@@ -15,4 +15,5 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    docs/home/index
    docs/diy/index
    docs/active/index
+   docs/services/index
 
