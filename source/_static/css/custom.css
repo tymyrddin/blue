@@ -283,6 +283,11 @@ pre[class*="text"] {
 }
 
 /* FOOTER */
+
+.md-source-file__fact {
+  color: #666 !important;
+}
+
 /* Reduce footer navigation text size */
 .md-footer-nav__link {
     font-size: 1.4em !important;

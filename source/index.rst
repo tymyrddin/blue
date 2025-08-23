@@ -7,7 +7,7 @@ mission is the same: out-stubborn the chaos. So grab that sixth cup of
 coffee—because the attackers never sleep, and neither do we (but only because of the caffeine).
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Going places
 
    docs/soc/index
