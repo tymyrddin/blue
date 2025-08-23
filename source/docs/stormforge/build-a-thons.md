@@ -9,7 +9,7 @@ lighthouse alone.
 
 **Outcome:** A working prototype and the knowledge to raise a watchtower back home with limited timber and rope.
 
-## Pi-Rogue in a day build-a-thon
+## Pi-Rogue-in-a-day build-a-thon
 
 Every fleet needs small, agile craft — not just lumbering ships. This build-a-thon equips participants with a 
 Pi-Rogue, a pocket-sized vessel designed for network exploration and defensive patrols. In one day, the crew sets 
