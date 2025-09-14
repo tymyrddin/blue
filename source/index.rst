@@ -16,4 +16,5 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    docs/diy/index
    docs/active/index
    docs/stormforge/index
+   docs/current/index
 
