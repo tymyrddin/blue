@@ -91,8 +91,6 @@ budgets, but TheHive's commercial support could be justified if reliability and 
   - Clustered high-availability deployments.
   - Professional support for managing a growing volume of vulnerability reports.
 
-## What DIVD CNA might use
-
 DIVD CNA probably balances cost, flexibility, and security. DFIR-IRIS is a strong candidate for 
 in-house adaptation, while TheHive Commercial represents a more polished but costlier alternative.
 

@@ -85,6 +85,4 @@ Alternative/Commercial Option: ELK Stack with commercial licenses.
 * Offers polished enterprise features and machine learning capabilities.
 * Could be used if DIVD values vendor support or specific commercial analytics capabilities.
 
-## What DIVD CNA might use
-
 DIVD CNA likely balances cost, compliance, and security. OpenSearch Stack fits the open-source ethos while offering enterprise-level features required for CNA operations.
