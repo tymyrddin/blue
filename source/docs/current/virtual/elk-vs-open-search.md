@@ -78,7 +78,7 @@ Primary Choice: Likely OpenSearch Stack.
 
 * Fully open-source, aligns with non-profit and transparency principles.
 * Built-in security, audit logging, and alerting suitable for GDPR/NIS2 compliance.
-* Flexible integration with MISP, DFIR-IRIS, or TheHive.
+* Flexible integration with MISP, [DFIR-IRIS or TheHive](thehive-vs-dfir-iris.md).
 
 Alternative/Commercial Option: ELK Stack with commercial licenses.
 
