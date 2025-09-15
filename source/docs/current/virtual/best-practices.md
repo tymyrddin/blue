@@ -13,7 +13,7 @@ Purpose and rationale: The primary objective is to create isolated, controlled s
 
 Implementation strategies:
 
-*   Physical and virtual lab networks: Maintain dedicated, air-gapped laboratory networks for high-risk analysis. For less critical testing, employ virtual machines (VMs) with snapshots, allowing for quick restoration to a known clean state after testing.
+*   Physical and virtual [lab](../smart-energy-devices/lab.md) networks: Maintain dedicated, air-gapped laboratory networks for high-risk analysis. For less critical testing, employ virtual machines (VMs) with snapshots, allowing for quick restoration to a known clean state after testing.
 *   Network segmentation: Implement strict firewall rules and network access controls to ensure traffic cannot flow from testing environments to production networks. This containment is a non-negotiable security control.
 *   Data sanitisation: Any data brought into the test environment from production must be thoroughly sanitised to remove any sensitive or personal information, protecting privacy and complying with regulations like GDPR .
 
