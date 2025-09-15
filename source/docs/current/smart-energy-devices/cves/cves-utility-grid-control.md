@@ -1,6 +1,6 @@
 # CVEs for utility / grid control layer
 
-| CVE                                                               | Product / Vendor                           | Protocol or Component                  | Issue Summary                                                                                                    |
+| CVE                                                               | Product / Vendor                           | Protocol or component                  | Issue summary                                                                                                    |
 |-------------------------------------------------------------------|--------------------------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | [CVE-2025-39203](https://nvd.nist.gov/vuln/detail/CVE-2025-39203) | Hitachi Energy MicroSCADA X SYS600         | IEC 61850-8 (IED / remote system)      | Crafted IEC 61850-8 message causes a denial of service → “disconnection loop”.                                   |
 | [CVE-2025-1445](https://nvd.nist.gov/vuln/detail/cve-2025-1445)   | Hitachi Energy (RTU500 device)             | IEC 61850 with TLS                     | TLS renegotiation timing issue can lead to availability loss when the IEC 61850 communication is active.         |

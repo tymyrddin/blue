@@ -6,11 +6,11 @@ exploits**. The goal is speed and certainty: identify the minimal conditions tha
 reproduce those conditions in an isolated lab, gather deterministic evidence (PCAPs, logs, firmware images,
 screenshots) and decide whether the finding is reproducible, patch-worthy, or out of scope.
 
-And reverse engineering the CVE's.
+Using case studies to build checklists, test matrices and short recipes that make validating or debunking reports without reimplementing attackers’ tools or publishing exploit code.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Use case studies to build checklists, test matrices and short recipes that make validating or debunking reports without reimplementing attackers’ tools or publishing exploit code.
+   :caption: Basically reverse engineering CVE's. :)
 
    cves-inter-utility-exchanges.md
    cves-utility-grid-control.md

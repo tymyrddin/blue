@@ -1,6 +1,6 @@
 # Example CVEs for consumer / home IoT
 
-| CVE                                                                           | Device Type / Vendor                               | Vulnerability Summary                                                                                     |
+| CVE / Issue                                                                   | Device type / vendor                               | Vulnerability summary                                                                                     |
 |-------------------------------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [CVE-2022-47100](https://nvd.nist.gov/vuln/detail/CVE-2022-47100)             | Sengled Smart Bulb 0x0000024                       | Allows attackers to execute a factory reset via a crafted IEEE 802.15.4 frame.                            |
 | [CVE-2023-38907](https://nvd.nist.gov/vuln/detail/CVE-2023-38907)             | TP-Link Smart Bulb (Tapo series L530, L510E, etc.) | Replay old messages encrypted with a still valid session key.                                             |
