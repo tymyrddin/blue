@@ -10,9 +10,14 @@ Using case studies to build checklists, test matrices and short recipes that mak
 
 .. toctree::
    :maxdepth: 1
-   :caption: Basically reverse engineering CVE's. :)
+   :caption: Imagine that! Basically reverse engineering CVE's. :)
 
    cves-inter-utility-exchanges.md
    cves-utility-grid-control.md
    cves-field-edge-devices.md
    cves-consumer-home.md
+   micro-scada.md
+   micro-scada-x.md
+   wolfbox-cluster.md
+   haat-smartplug.md
+   learnings.md
