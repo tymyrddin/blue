@@ -1,4 +1,4 @@
-# Process and governance knowledge
+# CNA process and governance
 
 CNA work is binding into an international trust system: the CVE programme. Accuracy, compliance, and 
 disciplined process are non-negotiable. What to do and how to do it.

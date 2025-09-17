@@ -8,7 +8,7 @@ mitigation verification without providing (inferred) exploit code.
 
 ## Environment and prerequisites (most likely present)
 
-* [Lab setup](../lab.md)
+* [Lab setup](../lab/lab.md)
 * Isolation: a dedicated VLAN and a managed switch with SPAN mirroring are configured to avoid producing side effects on production networks.
 * Hardware likely present: Wolfbox level-2 charger (matching model/revision where possible), a dedicated lab PC running analysis tools, a Raspberry Pi to host stub services, a serial/TTL adapter for console capture, USB protocol dongles if needed, switched power strip and surge protection.
 * Software examples that are installed in the analysis VM: `wireshark`, `tcpdump`, `nmap`, `nikto`, `curl`, `openssl`, `binwalk`, `ghidra`/`gdb`, `qemu`/`firmadyne`, `scapy` and `boofuzz` (the latter used only under strict constraints).

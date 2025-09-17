@@ -1,16 +1,18 @@
 Current affairs
 =========================================================
 
-The scope of CNA work spans both digital and physical spaces. Analysts explore vulnerabilities through dashboards, logs,
-protocol captures, and isolated labs for validation. Each process, record and interaction contributes to building
-resilience and understanding the landscapes where CNA work takes place.
+Smart energy technology brings its own vulnerabilities, protocols, testing requirements, workflow, and lab
+practices necessary to assess devices responsibly and build resilience.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Exploring the requirements, workflows and best practices that underpin effective CNA work.
+   :maxdepth: 1
+   :caption: Exploring the requirements, workflows and best practices.
 
-   foundations/index
+   ecosystem/index
+   threats/index
+   cves/index
+   re-cve/index
+   lab/index
    virtual/index
-   smart-energy-devices/index
 
 **Active disclosures or exploit details are not included.**

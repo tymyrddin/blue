@@ -15,5 +15,5 @@
 * Replay / capture-replay attacks are common, especially when session keys are weak, reused, or when old/encrypted messages can still be reprocessed. Look for freshness / nonce / timestamp protections.
 * Buffer overflows / parsing vulnerabilities in web APIs, even in simple form (friendly name fields, HTTP handlers, UPnP). These often lead to remote code execution or device compromise.
 * Default credentials or weak authentication are often involved—either none, or insufficient checks between cloud vs local vs Bluetooth/Zigbee.
-* Protocol weaknesses (Zigbee, WiFi, mesh wireless) are frequently exploited by crafted radio / frame attacks (e.g. the Sengled bulb via IEEE 802.15.4). So [the lab](../lab.md) should include wireless frame injection / crafted frame tools.
+* Protocol weaknesses (Zigbee, WiFi, mesh wireless) are frequently exploited by crafted radio / frame attacks (e.g. the Sengled bulb via IEEE 802.15.4). So [the lab](../lab/lab.md) should include wireless frame injection / crafted frame tools.
 

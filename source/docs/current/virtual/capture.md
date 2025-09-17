@@ -19,8 +19,8 @@ The purpose of this capability is to provide empirical evidence of system intera
 
 A reliable protocol analysis pipeline is architected for fidelity and isolation.
 
-* Capture layer: The physical and virtual infrastructure responsible for acquiring data. This includes Network Interface Cards (NICs) in promiscuous mode, network TAPs (Test Access Points) for full-duplex traffic mirroring, or virtual switches in [lab](../smart-energy-devices/lab.md) environments.
-* Isolation layer: A critical architectural component. Analysis must be conducted within physically or logically isolated [lab](../smart-energy-devices/lab.md) networks (air-gapped or strictly firewalled) to absolutely prevent production network impact or accidental exfiltration of sensitive data.
+* Capture layer: The physical and virtual infrastructure responsible for acquiring data. This includes Network Interface Cards (NICs) in promiscuous mode, network TAPs (Test Access Points) for full-duplex traffic mirroring, or virtual switches in [lab](../lab/lab.md) environments.
+* Isolation layer: A critical architectural component. Analysis must be conducted within physically or logically isolated [lab](../lab/lab.md) networks (air-gapped or strictly firewalled) to absolutely prevent production network impact or accidental exfiltration of sensitive data.
 * Processing & storage layer: The systems that handle the voluminous packet capture (pcap) data. This requires significant storage capacity, often with a tiering strategy (fast storage for active analysis, cold storage for archival of evidence).
 * Analysis layer: The tools and platforms used by analysts to inspect, decode, filter, and interpret the captured data. This layer transforms raw binary data into human-readable structures.
 
@@ -47,7 +47,7 @@ Capture appliances and TAPs:
 
 The integrity of the analysis is dependent on disciplined operational practices.
 
-* Strict isolation and containment: All capture and analysis activities must be performed within a dedicated [the lab](../smart-energy-devices/lab.md) environment, physically disconnected from production networks wherever possible. This is the foremost rule to prevent accidental harm.
+* Strict isolation and containment: All capture and analysis activities must be performed within a dedicated [the lab](../lab/lab.md) environment, physically disconnected from production networks wherever possible. This is the foremost rule to prevent accidental harm.
 * Comprehensive metadata labelling: Every capture file must be treated as evidence. Labelling must be meticulous and include context: the date/time (in UTC), analyst name, target device identifiers (make, model, firmware version), network topology during the test, and the specific test case being executed.
 * Automation of repetitive tasks: Leverage scripting (e.g., with `bash`, `Python`, or `tshark`) to automate repetitive tasks such as extracting specific streams from a large pcap, scanning for anomalous patterns, or validating packet structures against a baseline. This ensures consistency and improves analyst efficiency.
 * Focused capture strategies: Use capture filters (e.g., in `tcpdump`) at the point of collection to avoid gathering superfluous traffic. This conserves storage and processing resources and simplifies subsequent analysis. Post-capture, use display filters (e.g., in Wireshark) to drill down into relevant traffic.

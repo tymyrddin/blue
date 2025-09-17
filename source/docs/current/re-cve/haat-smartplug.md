@@ -17,7 +17,7 @@ References used to reverse-engineer these paths include the CVE-2024-46041 recor
 
 ## Environment and prerequisites (most likely present)
 
-* [Lab setup](../lab.md).  
+* [Lab setup](../lab/lab.md).  
 * Isolation: a dedicated VLAN and managed switch with SPAN mirroring are configured to ensure captures remain confined to the test network.  
 * Hardware likely present: IoT Haat Smart Plug IH-IN-16A-S (matched to v5.16.1 where feasible), dedicated lab PC for capture/analysis, Raspberry Pi to host stub services (DHCP/DNS/MQTT as needed), USB Wi-Fi adapter or Ethernet tap for network adjacency capture, serial/TTL adapter if the device exposes console access, switched power strip and surge protection.  
 * Software examples installed in the analysis VM: `wireshark`/`tshark`, `tcpdump`, `aircrack`/`bettercap` or equivalent for local network capture (use ethically and legally), `nmap`, `curl`, `openssl`, `binwalk`, static analysis tools (`ghidra`), replay tooling (carefully controlled scapy scripts or replay tools), and a private evidence repo.  

@@ -8,7 +8,7 @@ deterministic observation, evidence collection and mitigation verification witho
 
 ## Environment and prerequisites (most likely present)
 
-* [Lab setup](../lab.md). 
+* [Lab setup](../lab/lab.md). 
 * Isolation: a dedicated VLAN and a managed switch with SPAN mirroring are configured to prevent accidental interaction with production networks.  
 * Hardware likely present: MicroSCADA X SYS600 or equivalent test appliance (matching version/revision where possible), a lab PC for captures and analysis, a Raspberry Pi or small server to host ICCP/TASE.2 peer stubs, serial/TTL adapter for console capture, surge-protected power supply.  
 * Software examples installed in the analysis VM: `wireshark` (with ICCP/TASE.2 dissector), `tcpdump`, `nmap`, `socat`, `scapy` (for crafted packet injection), minimal ICCP/TASE.2 test tools or libraries (OpenICCP or custom scripts), `binwalk`, `ghidra`/`gdb` for offline binary analysis.  

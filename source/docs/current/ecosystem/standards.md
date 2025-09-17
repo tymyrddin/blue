@@ -1,18 +1,4 @@
-# Smart energy device focus
-
-Smart energy devices are a swamp of poorly patched IoT and industrial control technologies. To operate 
-effectively as a CNA or security analyst in this space, I would need a clear map of the terrain and its players.
-
-## Smart grid and energy IoT basics
-
-The smart energy ecosystem covers devices and systems at both consumer and grid levels:
-
-- Consumer devices: smart meters, home energy management systems, EV chargers, solar inverters, smart plugs, and gateways.
-- Grid / industrial devices: substations, control units, PLCs, and sensors that manage energy flows.
-
-## Key communication protocols
-
-Understanding the protocols used by these devices is crucial:
+# Standards & protocols to watch
 
 ```text
                          +-----------------------------------+
@@ -64,22 +50,12 @@ Understanding the protocols used by these devices is crucial:
              +-------------------------------------------------------------+
 ```
 
-## Common vulnerability classes
+## Especially
 
-Smart energy devices suffer from many of the same issues as general IoT, but with energy-specific consequences:
-
-- Default credentials, weak authentication, or hardcoded keys.
-- Exposed web interfaces or admin portals accessible over the network.
-- Buffer overflows, input validation errors, and logic flaws.
-- Firmware signing bypasses and insecure update mechanisms.
-- Poor use of TLS/cryptography: self-signed certificates, expired certs, or no certificate validation.
-
-Understanding these classes helps anticipate what kinds of flaws may exist, even without access to specific exploits.
-
-## Ecosystem players
-
-Knowing who builds and operates the infrastructure helps contextualize vulnerabilities and stakeholders:
-
-- EU smart meter manufacturers: Landis+Gyr, Iskraemeco, Itron.
-- EV charger vendors: Wallbox, ABB, Schneider Electric.
-- Grid operators and energy suppliers: regional and national utilities – they become key stakeholders if vulnerabilities affect the grid or public infrastructure.
+* IEC 61850 and IEC 62351 (security for substation communications).
+* DLMS/COSEM (smart metering).
+* OCPP (EV charging).
+* ICCP/TASE.2 (inter-utility).
+* Modbus, DNP3 (legacy ICS).
+* Zigbee Green Power, LoRaWAN (LPWAN / home to meter communications).
+* TLS / PKI — correct deployment is essential; poor or absent PKI is a recurring gap.

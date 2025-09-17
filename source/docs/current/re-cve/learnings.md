@@ -1,6 +1,6 @@
 # CNA-relevant insights
 
-A ddistilled view of what can be learned from the imaginative reverse-engineered validations of the four CVEs 
+A distilled view of what can be learned from the imaginative reverse-engineered validations of the four CVEs 
 ([Wolfbox EV chargers](wolfbox-cluster.md), [Level-2 EV charger firmware](micro-scada-x.md), 
 [Hitachi ICCP stack](micro-scada.md), and [IH-IN-16A-S smart plugs)](haat-smartplug.md). 
 
@@ -52,16 +52,6 @@ Across CVEs, the following choices appeared frequently:
 * Choice of hardware or emulation
 
 Every validation requires documented forks. Understanding alternative paths prepares a CNA to respond when environment or access limitations change.
-
-## Patterns in attack surfaces
-
-By observing these CVEs:
-
-* Edge devices (chargers, plugs, meters) often fail in parsing routines or session/auth handling.
-* ICS protocols (ICCP, DNP3, Modbus) fail in input validation and timestamp handling.
-* Home IoT often fails in weak authentication and cloud dependency assumptions.
-
-These patterns inform future PoC scope, device selection, and mitigation priorities. CNAs can focus lab validation on these recurring weak points.
 
 ## Conservative reproducibility over exploit demonstration
 

@@ -1,8 +1,7 @@
 Virtual terrain
 =========================================================
 
-From dashboards to protocol captures, the virtual landscape of CNA work is where most analysis happens. Here I explore how
-to navigate logs, telemetry and tracking tools without tripping over the data.
+From dashboards to protocol captures, the virtual landscape of CNA work is where most analysis happens, without tripping over the data.
 
 .. toctree::
    :maxdepth: 1

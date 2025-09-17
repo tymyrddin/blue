@@ -8,7 +8,7 @@ collection and mitigation verification without providing (inferred) exploit code
 
 ## Environment and prerequisites (most likely present)
 
-* [Lab setup](../lab.md).
+* [Lab setup](../lab/lab.md).
 * Isolation: a dedicated VLAN and managed switch with SPAN mirroring are configured to avoid producing side effects on production networks.
 * Hardware likely present: the Hitachi Energy MicroSCADA X SYS600 device (matching version/revision), lab PC for analysis, Raspberry Pi for stubs, serial/TTL adapter, surge-protected power supply.
 * Software examples installed in analysis VM: `wireshark`, `tcpdump`, `nmap`, `curl`, `openssl`, `binwalk`, `ghidra`/`gdb`, `qemu`/`firmadyne`, and minimal HTTP/IEC 61850 server stubs.
