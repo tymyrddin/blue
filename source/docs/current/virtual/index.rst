@@ -1,8 +1,6 @@
 Virtual terrain
 =========================================================
 
-From dashboards to protocol captures, the virtual landscape of CNA work is where most analysis happens, without tripping over the data.
-
 .. toctree::
    :maxdepth: 1
    :caption: Informed guessing the digital spaces where vulnerabilities are assessed and analysed.
