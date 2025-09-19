@@ -10,6 +10,7 @@ infrastructure helps contextualise vulnerabilities and stakeholders.
 
    players.md
    regulatory.md
+   staircase.md
    standards.md
    governance.md
    communications.md

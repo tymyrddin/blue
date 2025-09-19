@@ -44,12 +44,3 @@ Lightweight collectors and aggregators:
 Device-specific logging tools:
 
 *   Vendor-specific tools: Many embedded systems, networking appliances, and IoT devices provide their own proprietary logging mechanisms or diagnostic interfaces (e.g., Cisco IOS logs, ARM ITM traces). Integrating these data streams into the centralised SIEM is critical for full coverage, often requiring custom parsers or connectors.
-
-## Operational best practices
-
-The value of telemetry is entirely dependent on its quality, integrity, and availability.
-
-*   Strict time synchronisation: Ensure all source systems and collectors are synchronised to a central time source using a protocol like NTP. Consistent timestamps are non-negotiable for accurate event correlation across disparate systems.
-*   Secure archiving and immutability: Archive logs to a secure, write-once-read-many (WORM) storage system to prevent tampering or deletion. This preserves evidence for retrospective analysis, often required months or years after a vulnerability is disclosed.
-*   Logical separation of environments: Maintain strict separation between logs generated in test/staging environments and those from production systems. This prevents contamination of datasets during analysis and mitigates the risk of accidental exposure of sensitive production data during vulnerability research.
-*   Data minimisation and retention policies: Implement clear policies defining what data is collected and how long it is retained. Balance investigative needs with privacy regulations (like GDPR) by avoiding the collection of unnecessary personal data.

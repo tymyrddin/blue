@@ -1,4 +1,4 @@
-# CNA-relevant insights
+# Relevant insights
 
 A distilled view of what can be learned from the imaginative reverse-engineered validations of the four CVEs 
 ([Wolfbox EV chargers](wolfbox-cluster.md), [Level-2 EV charger firmware](micro-scada-x.md), 
@@ -6,15 +6,19 @@ A distilled view of what can be learned from the imaginative reverse-engineered 
 
 ## Lab infrastructure is central
 
-Across all validations, a consistent pattern emerges: segregated, controlled lab environments are essential. VLANs, SPAN ports, air-gapped networks, and dedicated PCs/SBCs allow deterministic observation without contaminating production systems.
+Across all validations, a consistent pattern emerges: segregated, controlled lab environments are essential. VLANs, 
+SPAN ports, air-gapped networks, and dedicated PCs/SBCs allow deterministic observation without contaminating 
+production systems.
 
-The CNA lab is not optional theatre; it is the backbone of reliable PoC validation. Setting up isolation and mirroring early avoids scrambling mid-investigation when devices crash or misbehave.
+A test lab is not optional theatre; it is the backbone of reliable PoC validation. Setting up isolation and mirroring 
+early avoids scrambling mid-investigation when devices crash or misbehave.
 
 ## Deterministic baseline collection matters
 
-All CVE validations emphasised firmware hashing, passive captures, serial logs, and endpoint enumeration before active testing.
+All validations emphasised firmware hashing, passive captures, serial logs, and endpoint enumeration before active testing.
 
-Establishing reproducible baselines ensures that any observed behaviour (crash, reboot, malformed response) can be clearly attributed to the test action and not a prior unknown state.
+Establishing reproducible baselines ensures that any observed behaviour (crash, reboot, malformed response) can be 
+clearly attributed to the test action and not a prior unknown state.
 
 ## Incremental and bounded testing
 
@@ -24,7 +28,8 @@ Each validation avoided aggressive fuzzing as a first step. Incremental, control
 * Low-intensity parsing fuzzing
 * Stepwise replay of advisory-informed sequences
 
-Incremental validation reduces risk of bricking devices, maintains evidentiary integrity, and makes the PoC reproducible. Aggressive fuzzing is a later stage, not the first.
+Incremental validation reduces risk of bricking devices, maintains evidentiary integrity, and makes the 
+PoC reproducible. Aggressive fuzzing is a later stage, not the first.
 
 ## Emulation versus hardware
 
@@ -33,13 +38,14 @@ There is a recurring trade-off:
 * Emulation: Fast iteration, safe from mains power or watchdog interference, useful for initial static analysis and minor repros.
 * Hardware: Needed for timing-sensitive or power-sensitive crashes, watchdog resets, and real-world interactions.
 
-CNAs must plan validation in two stages: first emulation for speed and safety, then hardware for confirmation.
+Plan validation in two stages: first emulation for speed and safety, then hardware for confirmation.
 
 ## Evidence-centric workflow
 
-Every validation shows a rigorous approach to logging, naming, versioning, and repository control. Each artefact (pcap, firmware, console log) is timestamped, checksummed, and stored in a traceable hierarchy.
+Every validation shows a rigorous approach to logging, naming, versioning, and repository control. Each artefact 
+(pcap, firmware, console log) is timestamped, checksummed, and stored in a traceable hierarchy.
 
-The CNA role is as much about defensible evidence as it is about finding faults. Reproducible capture is more valuable than exploit execution.
+This is as much about defensible evidence as it is about finding faults. Reproducible capture is more valuable than exploit execution.
 
 ## Decision points define workflow flexibility
 
@@ -57,7 +63,7 @@ Every validation requires documented forks. Understanding alternative paths prep
 
 All observed PoC paths favour observation and documentation over executing live attacks, particularly where vendor coordination or regulatory obligations exist.
 
-CNA validation is about proving behaviour safely, not producing working exploits. The metric is reproducible evidence, not the power of the exploit itself.
+PoC validation is about proving behaviour safely, not producing working exploits. The metric is reproducible evidence, not the power of the exploit itself.
 
 ## TL;DR
 

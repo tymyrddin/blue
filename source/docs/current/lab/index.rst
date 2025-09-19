@@ -1,12 +1,17 @@
-Vulnerability validation lab
+PoC validation
 =========================================================
 
-A CNA lab is for validating PoCs and confirming vulnerabilities safely, not for casual tinkering. Everything must
-be safe, isolated, and reproducible, replicating only the conditions necessary to test a reported vulnerability.
+Actual exploit testing, attack simulation, and lab experimentation is handled by:
+
+* Vendors of the affected devices/software
+* Reference labs or sector labs (for industrial/critical devices)
+* National CSIRTs if the CVE affects national infrastructure
+
+What would minimally be needed in a test lab?
 
 .. toctree::
    :maxdepth: 1
-   :caption: This includes hardware, network setup, emulation tools, and documentation.
+   :caption: Hardware, network setup, emulation tools, and documentation?
 
    lab.md
    infra.md

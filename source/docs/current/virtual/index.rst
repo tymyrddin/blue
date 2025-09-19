@@ -11,5 +11,4 @@ Virtual terrain
    logs.md
    capture.md
    workflow.md
-   best-practices.md
 

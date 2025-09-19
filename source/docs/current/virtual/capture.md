@@ -43,11 +43,3 @@ Capture appliances and TAPs:
 * Hardware network TAPs: Dedicated physical devices that provide a permanent, fail-safe link for mirroring traffic from full-duplex network links into a monitoring port, ensuring no packets are dropped and the production link remains unaffected.
 * Virtual TAPs: Software equivalents in virtualised and cloud environments that mirror traffic between virtual machines or within a software-defined network (SDN).
 
-## Operational best practices
-
-The integrity of the analysis is dependent on disciplined operational practices.
-
-* Strict isolation and containment: All capture and analysis activities must be performed within a dedicated [the lab](../lab/lab.md) environment, physically disconnected from production networks wherever possible. This is the foremost rule to prevent accidental harm.
-* Comprehensive metadata labelling: Every capture file must be treated as evidence. Labelling must be meticulous and include context: the date/time (in UTC), analyst name, target device identifiers (make, model, firmware version), network topology during the test, and the specific test case being executed.
-* Automation of repetitive tasks: Leverage scripting (e.g., with `bash`, `Python`, or `tshark`) to automate repetitive tasks such as extracting specific streams from a large pcap, scanning for anomalous patterns, or validating packet structures against a baseline. This ensures consistency and improves analyst efficiency.
-* Focused capture strategies: Use capture filters (e.g., in `tcpdump`) at the point of collection to avoid gathering superfluous traffic. This conserves storage and processing resources and simplifies subsequent analysis. Post-capture, use display filters (e.g., in Wireshark) to drill down into relevant traffic.

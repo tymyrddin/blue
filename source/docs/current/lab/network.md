@@ -1,6 +1,6 @@
 # Network tooling
 
-A critical part of a CNA lab is the ability to capture, analyse, and safely manipulate network traffic from smart 
+A critical part of any test lab is the ability to capture, analyse, and safely manipulate network traffic from smart 
 energy devices. The following tools and setup elements are essential:
 
 ## Packet capture and analysis

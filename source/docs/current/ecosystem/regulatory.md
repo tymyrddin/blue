@@ -20,8 +20,8 @@ procedural weight, and disclosure practices must reflect that reality.
 
 ## Laws / regulations
 
-When working in a CNA lab validating smart energy vulnerabilities in Europe, the regulatory landscape adds layers of 
-responsibility beyond the technical work. Consider the following:
+Validating smart energy vulnerabilities in Europe, the regulatory landscape adds layers of 
+responsibility beyond the technical work:
 
 ## GDPR
 

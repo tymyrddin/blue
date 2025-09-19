@@ -1,6 +1,6 @@
 # Hardware and lab infrastructure
 
-A CNA lab needs precise, safe, and purpose-driven hardware. Every component should support reproducing PoCs without touching production networks.
+A lab needs precise, safe, and purpose-driven hardware. Every component should support reproducing PoCs without touching production networks.
 
 ## Target devices
 

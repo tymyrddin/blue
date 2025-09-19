@@ -1,6 +1,6 @@
 # Ticketing and workflow tools
 
-From a systems engineering standpoint, the ticketing system is the central orchestrator of the CNA's operational 
+From a systems engineering standpoint, the ticketing system is the central orchestrator of the operational 
 Vulnerability Disclosure Lifecycle. It is the platform that transforms an ad-hoc stream of vulnerability reports into a structured, 
 measurable, and auditable workflow. Its primary function is to ensure that every report is processed with 
 consistency, accountability, and traceability from initial receipt through to CVE assignment and public disclosure.
@@ -16,7 +16,7 @@ The ticketing system acts as the system of record, designed to fulfil several cr
 
 ## System architecture and data flow
 
-The ticketing system is the central hub in the CNA's data architecture, interfacing with multiple other subsystems.
+The ticketing system is the central hub in the data architecture, interfacing with multiple other subsystems.
 
 *   Ingestion interface: The point of entry for new reports. This can be a web form, a dedicated email address (with emails automatically converted into tickets), or an API integration with an external platform, ensuring all inputs are captured.
 *   Data schema and workflow engine: The core of the system. This defines the mandatory fields (e.g., `CVSS Score`, `Affected Product`, `Reporter Contact`), the permissible state transitions, and the rules that govern them (e.g., a ticket cannot move to `CVE Assigned` without the CVE ID field being populated).
@@ -35,12 +35,3 @@ Git-based issue tracking systems:
 Lightweight and custom solutions:
 
 *   Structured Spreadsheets or Internal Databases: While less automated, a well-designed spreadsheet or simple database with enforced field templates can serve as a minimal viable product (MVP) for nascent programmes. This approach requires strict procedural discipline to maintain data integrity and is not recommended for scale.
-
-## Operational best practices
-
-The effectiveness of the tool is contingent upon its disciplined use and governance.
-
-*   Enforce a standardised data schema: Define and mandate the use of consistent fields across all tickets (e.g., `Report ID`, `CVE ID`, `Affected Versions`, `Status`, `Assignee`, `Vendor Status`). This consistency is prerequisite for reliable reporting and analysis.
-*   Implement clear Role-Based Access Control (RBAC): Define permissions meticulously. Analysts may have edit rights, vendors may have a restricted view on their specific cases, and auditors may have read-only access to all historical data.
-*   Assign unambiguous ownership: Every active ticket must have a single, named individual assigned to it. This eliminates ambiguity and ensures progress is driven forward. Use group inboxes or rotation policies for initial triage to distribute workload fairly.
-*   Conduct periodic process reviews: The workflow is not static. Hold regular retrospectives to analyse metrics and refine templates, state definitions, and automation rules to eliminate bottlenecks and improve efficiency. The system itself must be subject to a continuous improvement feedback loop.
