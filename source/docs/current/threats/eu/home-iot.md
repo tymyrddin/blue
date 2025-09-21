@@ -68,27 +68,4 @@ Defender-side (lab & CNA)
 * Consumer compensation claims or regulatory penalties for breached data (GDPR).
 * Local disruptions: smart heating/cooling, lighting schedules, or appliance operations altered.
 
-## Detection & threat hunting
 
-* Telemetry anomalies: unusual on/off cycles, mass simultaneous state changes.
-* Cloud activity spikes: unexpected device check-ins or API calls from unfamiliar IPs.
-* Local network anomalies: new MAC addresses, duplicate IP conflicts, repeated authentication failures.
-* Radio layer oddities: repeated pairing attempts, unrecognised BLE/Zigbee beacons.
-
-Hunt sources: router logs, hub logs, PCAP captures, cloud API activity, IoT device telemetry.
-
-## Lab validation
-
-1. Passive baseline: observe normal device behaviour (network, cloud, and telemetry) in isolated lab.
-2. Controlled replay: emulate pairing/auth sessions or scheduled commands, incrementally, on isolated devices.
-3. Cloud stubbing: local MQTT/CoAP broker or minimal REST endpoints to mimic vendor behaviour.
-4. Incremental fuzzing: small, safe mutations of device commands or pairing sequences in sandbox.
-5. Hardware confirmation: use dedicated test devices; never touch production endpoints.
-6. Preserve evidence: capture PCAPs, logs, and hash firmware where applicable; note approval and chain-of-custody.
-
-## Quick wins
-
-* Enforce rotation of default passwords and enable 2FA for cloud accounts.
-* Monitor network for unexpected device behaviour or API calls.
-* Use isolated lab sandboxes to validate firmware updates or cloud interactions.
-* Educate consumers/operators on basic security hygiene (segmented Wi-Fi, firmware updates).
