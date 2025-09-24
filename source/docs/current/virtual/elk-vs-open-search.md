@@ -2,7 +2,7 @@
 
 ## Choosing a data analytics platform
 
-CVE Numbering Authorities (CNAs) require robust data ingestion and analysis platforms to handle vulnerability reports, case data, and metrics for operational decision-making. While the exact stack used by DIVD is not publicly disclosed, it likely revolves around a powerful search and analytics stack such as ELK (Elasticsearch, Logstash, Kibana) or its open-source fork OpenSearch. Key requirements include:
+CVE Numbering Authorities (CNAs) require robust data ingestion and analysis platforms to handle vulnerability reports, case data, and metrics for operational decision-making. While the exact stack used by CNA's is not publicly disclosed, it likely revolves around a powerful search and analytics stack such as ELK (Elasticsearch, Logstash, Kibana) or its open-source fork OpenSearch. Key requirements include:
 
 * Ingesting and normalizing structured and unstructured case data.
 * Generating custom dashboards for analysts, management, and reporting.
@@ -38,7 +38,7 @@ Both [ELK](https://elastic-stack.readthedocs.io/en/latest/) and [OpenSearch](htt
 | Audit Logging           | Commercial features only                     | Included and configurable                    |
 | GDPR/NIS2 Compliance    | Possible but depends on license and config   | Fully open-source stack easier to audit      |
 
-Speculative: DIVD would prioritise built-in security and audit logging, making OpenSearch attractive. ELK could be used if commercial licensing is acceptable.
+Speculative: small orgs would prioritise built-in security and audit logging, making OpenSearch attractive. ELK could be used if commercial licensing is acceptable.
 
 ## Integration & extensibility
 
@@ -49,7 +49,7 @@ Speculative: DIVD would prioritise built-in security and audit logging, making O
 | Automation          | Paid machine learning & alerting  | Open-source alerting & anomaly detection  |
 | API                 | Full-featured REST APIs           | Comprehensive REST APIs                   |
 
-Speculative: DIVD likely integrates the stack with its CNA workflow, incident response tools, and MISP feeds for enrichment.
+Speculative: orgs likely integrate the stack with its workflow, incident response tools, and MISP feeds for enrichment.
 
 ## Deployment & scalability
 
@@ -60,7 +60,7 @@ Speculative: DIVD likely integrates the stack with its CNA workflow, incident re
 | Maintenance | Moderate to high for large deployments          | Moderate, supported by open-source community |
 | Flexibility | High with plugins, commercial features optional | High with plugins, fully open-source         |
 
-Speculative: DIVD may use Docker-based deployment for flexibility, with OpenSearch preferred for fully open-source compliance and cost efficiency.
+Speculative: orgs could use Docker-based deployment for flexibility, with OpenSearch preferred for fully open-source compliance and cost efficiency.
 
 ## Cost considerations
 
@@ -70,11 +70,11 @@ Speculative: DIVD may use Docker-based deployment for flexibility, with OpenSear
 | Implementation | Mature ecosystem, enterprise docs                 | Open-source, community docs |
 | Maintenance    | Requires commercial support for advanced features | Community-driven, flexible  |
 
-Speculative: DIVD, as a non-profit, would likely favour OpenSearch for cost-effective, secure, and fully open-source deployment, while ELK could be an alternative if enterprise features justify the expense.
+Speculative: Non-profit orgs, would likely favour OpenSearch for cost-effective, secure, and fully open-source deployment, while ELK could be an alternative if enterprise features justify the expense.
 
-## Informed guess: What DIVD CNA might use
+## Informed guess: What small orgs might use
 
-Primary Choice: Likely OpenSearch Stack.
+Primary Choice: OpenSearch Stack.
 
 * Fully open-source, aligns with non-profit and transparency principles.
 * Built-in security, audit logging, and alerting suitable for GDPR/NIS2 compliance.
@@ -83,6 +83,6 @@ Primary Choice: Likely OpenSearch Stack.
 Alternative/Commercial Option: ELK Stack with commercial licenses.
 
 * Offers polished enterprise features and machine learning capabilities.
-* Could be used if DIVD values vendor support or specific commercial analytics capabilities.
+* Could be used if org values vendor support or specific commercial analytics capabilities.
 
-DIVD CNA likely balances cost, compliance, and security. OpenSearch Stack fits the open-source ethos while offering enterprise-level features required for CNA operations.
+A CNA usually balances cost, compliance, and security. OpenSearch Stack fits the open-source ethos while offering enterprise-level features required for CNA operations.
