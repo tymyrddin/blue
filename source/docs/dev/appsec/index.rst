@@ -1,4 +1,4 @@
-Best practices for securing web applications
+Securing web applications
 ============================================
 
 Web applications are like digital nightclubs—everyone wants in, but if you don’t check IDs, you’ll end up with malware

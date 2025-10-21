@@ -1,4 +1,4 @@
-AWS Security: Protecting Your Cloud Kingdom from Barbarians (and Dave)
+Protecting an Amazon cloud kingdom from barbarians (and Dave)
 ======================================================================
 
 AWS is a digital Wild West, and if you’re not careful, your misconfigured S3 bucket will be the town’s laughingstock (again).

@@ -1,4 +1,4 @@
-Azure Security: Defending Microsoft’s Mansion from Uninvited Guests
+Defending Microsoft’s mansion from uninvited guests
 ===================================================================
 
 Azure is like a high-tech mansion—full of cool features, but if you leave the doors unlocked, you’ll wake up to

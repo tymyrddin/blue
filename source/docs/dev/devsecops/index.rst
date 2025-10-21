@@ -1,4 +1,4 @@
-Development security operations best practices
+Development security operations
 ================================================
 
 Development Security Operations (DevSecOps) integrates security into the entire software development lifecycle (SDLC),

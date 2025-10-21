@@ -1,4 +1,4 @@
-On-Prem "Cloud" Security: Playing Sysadmin on Nightmare Mode
+Playing On-Prem sysadmin in nightmare mode
 =============================================================
 
 Building your own "cloud"—whether with Hetzner, OpenStack, or a pile of old servers comes with whispering

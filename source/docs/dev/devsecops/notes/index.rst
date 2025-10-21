@@ -1,4 +1,4 @@
-Systems engineering: Where the magic (and the mayhem) happens
+Where the magic (and the mayhem) happens
 =============================================================
 
 Welcome to systems engineering—the art of making sure your infrastructure doesn’t collapse like a Jenga tower every
