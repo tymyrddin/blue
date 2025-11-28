@@ -1,6 +1,9 @@
 Stormforge
 ===========================
 
+.. image:: /_static/images/stormforge.png
+  :alt: A sturdy wooden ship being built in the midst of a swirling magical storm.
+
 In the heat of a storm, a sturdy ship and a well-prepared crew make all the difference. Stormforge is where
 teams come to build both — tools, skills, and instincts — that help navigate turbulent waters. Each session is
 a guided voyage: some test your ability to spot hidden dangers, others teach you to raise watchtowers,
