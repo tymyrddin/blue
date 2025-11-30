@@ -1,6 +1,9 @@
 Defence blues
 ============================
 
+.. image:: /_static/images/writing-blue.png
+  :alt: Typewriter
+
 Whether baking security into code like it’s a secret ingredient, playing
 whack-a-mole with alerts at 3AM, or fighting off IoT botnets from your smart fridge, the
 mission is the same: out-stubborn the chaos. So grab that sixth cup of
