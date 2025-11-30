@@ -1,4 +1,4 @@
-Welcome to the blue team
+Defence blues
 ============================
 
 Whether baking security into code like it’s a secret ingredient, playing
