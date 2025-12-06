@@ -1,4 +1,4 @@
-Blue team @org
+Golem Trust Computing Ltd.
 =====================================
 
 .. image:: /_static/images/golem-trust-computing.png
