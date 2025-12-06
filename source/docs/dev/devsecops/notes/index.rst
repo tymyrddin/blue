@@ -1,14 +1,14 @@
 Where the magic (and the mayhem) happens
 =============================================================
 
-Welcome to systems engineering—the art of making sure your infrastructure doesn’t collapse like a Jenga tower every
+Welcome to systems engineering: the art of making sure your infrastructure doesn’t collapse like a Jenga tower every
 time someone runs git push.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: A well-secured system is like a good joke—if you have to explain it, it’s not working.
+   :caption: A well-secured system is like a good joke. If you have to explain it, it’s not working.
 
    README.md
    story.md

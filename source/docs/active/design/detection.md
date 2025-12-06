@@ -1,15 +1,15 @@
 # The cat-and-mouse game
 
-*If your honeypot is obvious, you’re not trapping attackers—you’re just giving them a practice dummy.*
+*If your honeypot is obvious, you are not trapping attackers. You are giving them a practice dummy.*
 
 ## How attackers unmask honeypots
 
-Honeypot detection is all about inconsistencies—the tiny flaws that make a decoy feel "off" to a seasoned attacker. Common giveaways include:
+Honeypot detection is all about inconsistencies, the tiny flaws that make a decoy feel "off" to a seasoned attacker. Common giveaways include:
 
 **Too perfect, too empty**
 
 * Real systems have user artifacts (temp files, logs, quirks).
-* Honeypots often feel like a brand-new VM—pristine and unlived-in.
+* Honeypots often feel like a brand-new VM, pristine and unlived-in.
 
 **Limited interaction**
 
@@ -48,8 +48,8 @@ Simulate attack outcomes without actually attacking (e.g., logging "DDoS attempt
 
 Rotate fingerprints to match current real-world systems.
 
-*The best honeypot doesn’t just trap attackers—it makes them doubt their own skills.*
+*The best honeypot doesn’t just trap attackers, it makes them doubt their own skills.*
 
 ## Ethical note
 
-Found a fingerprintable honeypot? Report it responsibly—the goal is better defences, not easier attacks.
+Found a fingerprintable honeypot? Report it responsibly, the goal is better defences, not easier attacks.

@@ -5,7 +5,7 @@ Wrong design decisions may result in collecting irrelevant information or even e
 
 .. toctree::
    :maxdepth: 1
-   :caption: If they spot it, it’s not a honeypot—it’s a cautionary tale.
+   :caption: If they spot it, it is not a honeypot. It is a cautionary tale.
 
    tactics.md
    taxonomies.md

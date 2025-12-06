@@ -1,11 +1,11 @@
 # Securing hosted code repositories: Best practices
 
-Hosting code on platforms like GitHub or GitLab comes with risks—exposed secrets, compromised accounts, or malicious 
+Hosting code on platforms like GitHub or GitLab comes with risks: exposed secrets, compromised accounts, or malicious 
 commits can lead to serious breaches. Here’s how to lock things down properly.
 
 ## Enforce strong access controls
 
-Require Multi-Factor Authentication (MFA) for everyone—no exceptions. Prefer hardware security keys (like YubiKeys) 
+Require Multi-Factor Authentication (MFA) for everyone, no exceptions. Prefer hardware security keys (like YubiKeys) 
 over SMS codes. Restrict admin rights to only those who truly need them, and audit permissions regularly to catch 
 outdated access.
 
@@ -29,7 +29,7 @@ Even careful teams accidentally commit API keys or passwords. A single exposed c
 Prevent risky changes with branch protection rules. Apply these rules to all branches, including for admins.
 
 * Require signed commits (PGP/GPG verified)
-* Block force pushes—no rewriting history
+* Block force pushes, no rewriting history
 * Mandate pull request reviews (at least two approvals)
 * Require CI/CD checks to pass before merging
 

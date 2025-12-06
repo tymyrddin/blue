@@ -14,7 +14,7 @@ How-To:
 
 ## Disable unused features
 
-Attacks stopped: Eavesdropping, unauthorized recordings, data leaks.
+Attacks stopped: Eavesdropping, unauthorised recordings, data leaks.
 
 Targets: Smart TVs, voice assistants (Alexa/Google Home), robot vacuums.
 

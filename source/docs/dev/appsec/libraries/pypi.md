@@ -1,6 +1,6 @@
 # Securing Python dependencies: PyPI best practices
 
-Python’s Package Index (PyPI) is a treasure trove of open-source libraries—but it’s also a prime target for attackers. 
+Python’s Package Index (PyPI) is a treasure trove of open-source libraries and a prime target for attackers. 
 Malicious packages, typosquatting, and vulnerable dependencies can introduce severe risks. Here’s how to use PyPI safely.
 
 ## Key practices for secure Python development
@@ -61,7 +61,7 @@ Only import trusted packages. Imports execute code:
 import malicious_module  # Runs code on import!  
 ```
 
-Keep certifi updated: Never pin its version—always use the latest. Never disable cert verification:
+Keep certifi updated: Never pin its version. Always use the latest. Never disable cert verification:
 
 ```python
 # NEVER DO THIS 

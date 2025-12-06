@@ -6,7 +6,6 @@ SIEM and threat intelligence/hunting notes
    :includehidden:
    :caption: Making ‘The Boy Who Cried Wolf’ look like a reliable colleague.
 
-   README.md
    prevention.md
    til.md
    pop.md

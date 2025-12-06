@@ -1,10 +1,10 @@
 Snort: The open-source IDS powerhouse
 =====================================
 
-Say hello to Snort—the ever-vigilant guard dog of our digital frontier, barking at every suspicious rustle in the
+Say hello to Snort, the ever-vigilant guard dog of our digital frontier, barking at every suspicious rustle in the
 packet bushes. While Zeek quietly documents the wilderness and Wireshark dissects its findings, Snort is the one
 lunging at shadows, howling at port scans, and occasionally chasing its own tail (false positives, anyone?). It’s
-not subtle, it’s not poetic—it’s a snarling, rule-based beast that ensures nothing sneaks past the perimeter without
+not subtle, it’s not poetic, it’s a snarling, rule-based beast that ensures nothing sneaks past the perimeter without
 a fight.
 
 .. toctree::

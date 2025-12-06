@@ -1,6 +1,6 @@
 # Notes from the security trenches: A SysEngineer’s ongoing journey
 
-Welcome to my ever-growing collection of security notes—where theory meets panic, best practices collide with 
+Welcome to my ever-growing collection of security notes. Where theory meets panic, best practices collide with 
 real-world chaos, and half the battle is remembering which cloud console I’m logged into. These pages are a mix of 
 guided learning (courtesy of TryHackMe’s tough love) and hard-earned lessons from configuring things that should work 
 but rarely do on the first try (or second, or third,... Consider this part documentation, part therapy session.

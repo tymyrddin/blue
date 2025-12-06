@@ -12,7 +12,7 @@ Linux EDR is that stoic, bearded sysadmin who seems chill until you try to run c
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Bottom line: Linux EDR believes in tough love—and logging everything in JSON, just to watch you suffer.
+   :caption: Bottom line: Linux EDR believes in tough love, and logging everything in JSON, just to watch you suffer.
 
    README.md
    kernel.md

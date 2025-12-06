@@ -26,7 +26,7 @@ Create `opencanary.conf`:
 opencanaryd --start
 ```
 
-*Logs to syslog by default—minimal effort, maximum smugness.*
+*Logs to syslog by default, minimal effort, maximum smugness.*
 
 ## Integration
 

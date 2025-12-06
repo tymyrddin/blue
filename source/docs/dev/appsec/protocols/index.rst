@@ -1,7 +1,7 @@
 TLS/SSL hardening
 ===================================================================
 
-TLS is the internet’s awkward handshake—when done right, it’s a secure embrace. When done wrong, it’s a hacker’s
+TLS is the internet’s awkward handshake: when done right, it’s a secure embrace. When done wrong, it’s a hacker’s
 welcome mat.
 
 .. toctree::

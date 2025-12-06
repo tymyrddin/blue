@@ -80,6 +80,6 @@ For high-security apps (e.g., banking), JS may be unavoidable. In these cases:
 
 ## In short
 
-- Don’t punish security-conscious users—design for graceful degradation.
+- Don’t punish security-conscious users: design for graceful degradation.
 - JS-free alternatives protect high-risk users and slow malware spread.
 - If JS is mandatory, isolate it with CSP, SRI, and sandboxing.

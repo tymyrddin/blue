@@ -25,7 +25,7 @@ deployments while Google handles infrastructure security.
 5. Governance & compliance
    * Organisation Policies – Enforce guardrails (e.g., "Disable public IPs on VMs").
    * Forseti Security – Automate CIS benchmark checks and policy enforcement.
-   * Binary Authorization – Ensure only trusted, signed container images can be deployed.
+   * Binary Authorisation – Ensure only trusted, signed container images can be deployed.
 
 ## How?
 

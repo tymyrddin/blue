@@ -176,7 +176,7 @@ for writing the files is required:
       Use 'make install-boot' if you want samhain to start on system boot
 
 ## Customisation    
-[Customize](https://www.la-samhna.de/samhain/manual/installation-customize.html):
+[Customise](https://www.la-samhna.de/samhain/manual/installation-customize.html):
 
     $ sudo vi /etc/samhainrc
 

@@ -1,7 +1,7 @@
 Defending Microsoft’s mansion from uninvited guests
 ===================================================================
 
-Azure is like a high-tech mansion—full of cool features, but if you leave the doors unlocked, you’ll wake up to
+Azure is like a high-tech mansion, full of cool features, but if you leave the doors unlocked, you’ll wake up to
 cryptominers in your living room.
 
 

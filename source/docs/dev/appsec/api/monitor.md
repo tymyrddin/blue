@@ -1,4 +1,4 @@
-# Real-time mnitoring & anomaly detection
+# Real-time monitoring & anomaly detection
 
 Critical Actions:
 

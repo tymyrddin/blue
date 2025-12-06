@@ -4,7 +4,7 @@
 
 An investigation with [Splunk](https://tryhackme.com/room/splunk201) and the [Cyber kill chain](../notes/ckc.md) as framework. 
 
-A guided approach to analyzing security incidents in Splunk, structured around the Cyber Kill Chain (CKC)—a model 
+A guided approach to analysing security incidents in Splunk, structured around the Cyber Kill Chain (CKC), a model 
 that breaks attacks into stages (recon, exploitation, command & control, etc.). This helps trace an attacker’s steps 
 methodically.
 
@@ -25,6 +25,6 @@ methodically.
 * [Weaponisation phase](weaponise.md)
 * [Delivery phase](deliver.md)
 
-Tip: Start with the end goal (e.g., "data stolen") and work backward through the kill chain—it’s often faster!
+Tip: Start with the end goal (e.g., "data stolen") and work backward through the kill chain, it’s often faster!
 
 

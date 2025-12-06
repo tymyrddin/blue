@@ -68,7 +68,7 @@ Recommendation: Start using passkeys where possible, but keep TOTP/hardware keys
 
 ## Tool recommendations
 
-* For most people: Authy (if you need sync) or Aegis/Raivo (if you prioritize privacy) and YubiKey 5 NFC (for critical accounts)
+* For most people: Authy (if you need sync) or Aegis/Raivo (if you prioritise privacy) and YubiKey 5 NFC (for critical accounts)
 * For businesses: YubiKey + Duo/Microsoft Authenticator
 * For ultra-security: Nitrokey + KeePassXC (TOTP storage)
 

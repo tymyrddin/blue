@@ -1,6 +1,6 @@
 # Secure by Design: Choosing libraries and frameworks to minimise risk
 
-Modern software relies on a deep tree of dependencies, where a single vulnerable submodule can compromise an entire application. The risk isn’t just the flaws in your code—it’s the recursive sum of all security bugs in every library, framework, and transitive dependency you pull in.
+Modern software relies on a deep tree of dependencies, where a single vulnerable submodule can compromise an entire application. The risk is not just the flaws in your code. It is the recursive sum of all security bugs in every library, framework, and transitive dependency you pull in.
 
 ## Why it matters
 

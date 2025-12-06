@@ -10,7 +10,7 @@
 
 **Service Account Hell**  
 
-- Rotate service account keys every 90 days—or better yet, use **short-lived certificates** (e.g., Vault-managed tokens).  
+- Rotate service account keys every 90 days, or better yet, use **short-lived certificates** (e.g., Vault-managed tokens).  
 - Audit service accounts monthly. Orphaned keys are like unlocked backdoors.  
 
 ---
@@ -27,7 +27,7 @@
 
 **Encryption In Transit**  
 
-- **TLS 1.3 everywhere**, including internal services. Self-signed certs are a last resort—use a private PKI (e.g., Smallstep).  
+- **TLS 1.3 everywhere**, including internal services. Self-signed certs are a last resort. Use a private PKI (e.g., Smallstep).  
 - **MACsec** for inter-rack traffic. Because eavesdropping isn’t just a cloud problem .  
 
 ---
@@ -67,7 +67,7 @@
 - Define security policies in **Terraform/Ansible**, not Confluence docs nobody reads. Enforce via CI/CD checks.  
 - **CIS Benchmarks**: Hardened images for Linux/Windows. No, "default install" isn’t secure .  
 
-**Binary Authorization (For Containers)**  
+**Binary Authorisation (For Containers)**  
 
 - Only allow signed, attested images. Use **Sigstore/Cosign** for signing, and reject anything unsigned .  
 - **Continuous Validation**: Scan running containers for drift from approved baselines.  
@@ -94,5 +94,5 @@ For a **DevSecOps pipeline** integrating these practices, follow the [On-Prem De
    - Monitor with Falco/Prometheus.  
    - Automate patching (e.g., RHEL Satellite/WSUS).
 
-Cloud-native tools work on-prem too. The goal isn’t to replicate AWS—it’s to build a **secure, auditable, and 
+Cloud-native tools work on-prem too. The goal isnot to replicate AWS. It is to build a **secure, auditable, and 
 maintainable** system without surrendering control to Silicon Valley.  

@@ -1,6 +1,6 @@
 # Update everything (Because your phone is not a vintage collectible)
 
-Why? Hackers exploit known flaws—like using last year’s security patch as a welcome mat.
+Why? Hackers exploit known flaws, like using last year’s security patch as a welcome mat.
 
 ## How-to?
 

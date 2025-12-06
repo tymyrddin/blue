@@ -22,7 +22,7 @@ Settings Path: Click the gear icon → More Settings → Mailboxes → Check for
 
 4. Apple iCloud Mail
 
-Web Version: Open iCloud.com → Mail → Click the gear icon → Preferences → Rules, and check for any unauthorized forwarding rules.
+Web Version: Open iCloud.com → Mail → Click the gear icon → Preferences → Rules, and check for any unauthorised forwarding rules.
 
 5. ProtonMail
 

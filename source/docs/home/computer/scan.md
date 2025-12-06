@@ -11,7 +11,7 @@ TL;DR: VirusTotal is the bouncer your files deserve. Use it or wake up to a PC t
 3. Wait for the scan (60+ antivirus engines + AI chew on it)
 4. Read the report:
    * ✅ 0 detections? Probably safe (but still side-eye it).
-   * ⚠️ 1-3 detections? Risky—could be a false positive, but why chance it?
+   * ⚠️ 1-3 detections? Risky, could be a false positive, but why chance it?
    * 🚨 4+ detections? YEET IT INTO THE SUN. (Even if it’s from your "tech-savvy" cousin.)
 
 ### For the extra suspicious
@@ -22,15 +22,15 @@ TL;DR: VirusTotal is the bouncer your files deserve. Use it or wake up to a PC t
 2. Browser Extension: [VT4Browsers](https://blog.virustotal.com/2022/03/vt4browsers-any-indicator-every-detail.html) lets you scan downloads before they hit your PC.
 3. Hash Check (For Nerds):
    * Already have a file? Get its SHA256 hash (use `certutil -hashfile thesuspiciousfile.exe SHA256` on Windows).
-   * Paste the hash into VirusTotal’s search bar—instantly see if it’s known malware.
+   * Paste the hash into VirusTotal’s search bar to see if it’s known malware.
 
 ## Interpreting results (The fine print)
 
-* "Undetected" but shady? Check the "behaviour" tab—if it’s secretly contacting Russian IPs, bin it.
+* "Undetected" but shady? Check the "behaviour" tab. If it’s secretly contacting Russian IPs, bin it.
 * "Heuristic" flags? AI thinks it acts like malware. Trust the machines.
-* "PUA" (Potentially Unwanted Application)? Often adware/bloatware. Still gross—delete.
+* "PUA" (Potentially Unwanted Application)? Often adware/bloatware. Still gross. Delete.
 
 ## Why this matters in 2025
 
 * AI-generated malware now evades traditional antivirus. VirusTotal’s crowd-powered scans catch what your AV misses.
-* "Zero-day" attacks spread fast—if 3+ engines flag it, someone knows it’s bad.
+* "Zero-day" attacks spread fast. If 3+ engines flag it, someone knows it’s bad.

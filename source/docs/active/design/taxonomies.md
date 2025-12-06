@@ -1,12 +1,12 @@
 # Honeypot taxonomies
 
-Choosing a honeypot isn’t about what’s best—it’s about what annoys attackers most while keeping your logs interesting.
+Choosing a honeypot is about what annoys attackers most while keeping your logs interesting.
 
 ## By purpose: Research vs. Production
 
 ### Research honeypots
 
-The academics of deception tech—left exposed like an unlocked bicycle in Camden, just to see who takes the bait. Perfect for:
+The academics of deception tech: Left exposed like an unlocked bicycle in Camden, just to see who takes the bait. Perfect for:
 
 * Documenting attacker tools, techniques, and tantrums
 * Discovering zero-days before they’re cool (or weaponised)
@@ -16,13 +16,13 @@ The academics of deception tech—left exposed like an unlocked bicycle in Camde
 
 ### Production honeypots
 
-The bouncers of your network—strategically placed to lure attackers away from the VIP section (your actual systems). Key features:
+The bouncers of your network, strategically placed to lure attackers away from the VIP section (your actual systems). Key features:
 
 * Hidden in production environments, masquerading as vulnerable services
 * Trigger alerts the moment an intruder takes the bait
 * Ideally so convincing, attackers never realise they’ve been had
 
-*The digital equivalent of a ‘wet paint’ sign—except the paint is alarms.*
+*The digital equivalent of a ‘wet paint’ sign, except the paint is alarms.*
 
 ## By Interactivity: How much rope to give attackers
 
@@ -62,4 +62,4 @@ For those who enjoy overcomplicating things beautifully, the paper
 * A four-layer deception stack (because why stop at one taxonomy?)
 * Enough jargon to impress at cybersecurity conferences
 
-*Required reading—if only to nod sagely when someone mentions ‘stratified deceptive countermeasures’.*
+*Required reading, if only to nod sagely when someone mentions ‘stratified deceptive countermeasures’.*

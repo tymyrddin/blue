@@ -7,4 +7,4 @@ From spotting distant storm clouds (collection requirements) to charting maps ot
 (finished intelligence), the crew learns to separate real signals from crashing waves of noise. Participants will 
 work with messy feeds, common misreadings, and shifting winds of adversary behaviour.
 
-**Outcome:** The ability to turn raw chaos into decision-ready bearings — intelligence you would actually trust at the helm.
+**Outcome:** The ability to turn raw chaos into decision-ready bearings. Intelligence you would actually trust at the helm.

@@ -1,11 +1,11 @@
 DNSSEC: Better than nothing, but not a silver bullet
 =====================================================
 
-The Domain Name System (DNS) is the phonebook of the internet—except that, by default, it’s about as secure as a
+The Domain Name System (DNS) is the phonebook of the internet, except that, by default, it’s about as secure as a
 phonebook written in pencil. If you are running one, consider DNSSEC (DNS Security Extensions), the cryptographic
 armor that prevents attackers from scribbling fake entries.
 
-DNSSEC is like seatbelts for DNS—it won’t stop all attacks, but it makes spoofing a lot harder. Combine it with
+DNSSEC is like seatbelts for DNS. It won’t stop all attacks, but it makes spoofing a lot harder. Combine it with
 DoH/DoT for full security.
 
 .. toctree::

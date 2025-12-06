@@ -4,7 +4,7 @@ Blue team for dev
 .. image:: /_static/images/devops.png
    :alt: DevOps complexity
 
-Welcome to the wild world of securing web applications—where every line of code is a potential backdoor, every
+Welcome to the wild world of securing web applications, where every line of code is a potential backdoor, every
 dependency is a ticking time bomb, and somehow, Dave still has production access.
 
 DevSecOps is what happens when you realise that "security as an afterthought" is like putting a seatbelt on after

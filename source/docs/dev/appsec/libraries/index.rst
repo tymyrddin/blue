@@ -1,7 +1,7 @@
 Where an app’s security is only as strong as the sketchiest library
 ===================================================================
 
-You wouldn’t trust a sandwich made from ingredients you found in a back alley—so why trust a left-pad dependency with
+You wouldn’t trust a sandwich made from ingredients you found in a back alley, so why trust a left-pad dependency with
 your app’s security?
 
 .. toctree::

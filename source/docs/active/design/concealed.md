@@ -1,13 +1,13 @@
 # Staying hidden in plain sight
 
-Concealing honeypots isn’t about perfect mimicry—it’s about being just realistic enough to waste an attacker’s time 
+Concealing honeypots is not about perfect mimicry. It is about being just realistic enough to waste an attacker’s time 
 while you gather intel.
 
-*If your honeypot gets detected, you’re not trapping attackers—you’re just hosting free hacking lessons.*
+*If your honeypot gets detected, you are not trapping attackers. You are hosting free hacking lessons.*
 
 ## Automatic redeployment: The digital whack-a-mole
 
-Low-interaction honeypots are like cheap stage props—convincing at a glance, but fragile under scrutiny. Instead of overengineering them to resist detection, automatically redeploy them when compromised:
+Low-interaction honeypots are like cheap stage props, convincing at a glance, but fragile under scrutiny. Instead of overengineering them to resist detection, automatically redeploy them when compromised:
 
 How it works:
 
@@ -20,7 +20,7 @@ Why it’s clever:
 * No need for costly anti-detection code.
 * Attackers think they’ve "won," only to face a new, slightly different trap.
 
-*The cybersecurity equivalent of a magician’s endless handkerchief trick—just when they think they’ve figured it out, there’s more.*
+*The cybersecurity equivalent of a magician’s endless handkerchief trick, just when they think they’ve figured it out, there’s more.*
 
 ## Delay reduction: The art of being unremarkable
 
@@ -45,7 +45,7 @@ Hybrid honeypots (low + high interaction) often leak clues during TCP handoffs. 
 
 Trade-off: Slightly slower performance, but far harder to detect.
 
-*Like a spy swapping places with a double during a handshake—smooth, silent, and utterly deceptive.*
+*Like a spy swapping places with a double during a handshake, smooth, silent, and utterly deceptive.*
 
 ## Dedicated hardware: The uncompromising approach
 
@@ -65,7 +65,7 @@ Modern honeypots use AI/ML to:
 
 * Adapt behaviour based on attacker actions.
 * Block/alter program execution to seem more "real."
-* Lure attackers into revealing tactics (e.g., "Oops, ls is renamed to dir—what now?").
+* Lure attackers into revealing tactics (e.g., "Oops, ls is renamed to dir, what now?").
 
 *Why manually update your honeypot when it can outsmart attackers on its own?*
 

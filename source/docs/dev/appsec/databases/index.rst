@@ -1,7 +1,7 @@
 Database security
 ===================================================================
 
-Databases are the digital equivalent of a diary—except instead of "Dear Diary, today I had feelings," it’s
+Databases are the digital equivalent of a diary, except instead of "Dear Diary, today I had feelings," it’s
 "Dear PostgreSQL, here’s everyone’s credit card info."
 
 .. toctree::

@@ -10,7 +10,7 @@ attention?
 .. toctree::
    :maxdepth: 1
    :includehidden:
-   :caption: Grab your (metaphorical) pith helmet—adventure (and maybe existential dread) awaits in every packet.
+   :caption: Grab your (metaphorical) pith helmet, adventure (and maybe existential dread) awaits in every packet.
 
    README.md
    nmap.md

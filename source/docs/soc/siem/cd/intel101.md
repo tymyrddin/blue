@@ -2,7 +2,7 @@
 
 ## Scenario
 
-[This CyberDefenders challenge](https://cyberdefenders.org/blueteam-ctf-challenges/38) is an open-source intelligence (OSINT) exercise to practice mining and analyzing public data to produce meaningful intel when investigating external threats as a security blue team analyst.
+[This CyberDefenders challenge](https://cyberdefenders.org/blueteam-ctf-challenges/38) is an open-source intelligence (OSINT) exercise to practice mining and analysing public data to produce meaningful intel when investigating external threats as a security blue team analyst.
 
 ## Tools used
 

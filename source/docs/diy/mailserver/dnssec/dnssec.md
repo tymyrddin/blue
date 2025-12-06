@@ -44,7 +44,7 @@ When a resolver (like your ISP or Google’s 8.8.8.8) gets a DNS response:
    * Many domains still don’t use DNSSEC (looking at you, facebook.com).
    * Some registrars make it unnecessarily hard to enable.
 2. Complexity = Misconfigurations Galore
-   * Key rollovers must be timed perfectly—or the domain breaks.
+   * Key rollovers must be timed perfectly, or the domain breaks.
    * Human error (expired keys, bad signatures) can cause outages.
 3. DNSSEC signs records but doesn’t hide them. For privacy, you still need DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT)
 

@@ -16,7 +16,7 @@ Example: A device starts beaconing to a shady IP. Zeek would have:
 
 * The DNS query resolving that IP.
 * The TLS certificate from the connection.
-* Timestamps and duration—ready for analysis in tools like Brim.
+* Timestamps and duration, ready for analysis in tools like Brim.
 
 ## How use Zeek?
 

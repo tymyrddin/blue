@@ -1,18 +1,18 @@
 # Now streaming on dark Webflix
 
-Forget Bond villains—today’s digital adversaries are more like a dysfunctional corporate hierarchy, where everyone’s got a quota to meet and someone always ends up with your data. Let’s meet the usual (and unusual) suspects:
+Forget Bond villains, today’s digital adversaries are more like a dysfunctional corporate hierarchy, where everyone’s got a quota to meet and someone always ends up with your data. Let’s meet the usual (and unusual) suspects:
 
 ## Nation-state actors: The taxpayer-funded trolls
 
-These are your "elite" hackers—backed by governments, armed with zero-days, and operating with the subtlety of a sledgehammer wrapped in a flag. Whether it’s China’s "civilian" cyber militias, Russia’s "patriotic" ransomware crews, or the Five Eyes’ "we’re definitely not doing this" ops, they’ve got unlimited budgets (thanks, taxpayers!), legal immunity ("laws are for peasants"), and a playbook of lies thicker than a spy novel. Need plausible deniability? They’ll gaslight you before the breach even happens.
+These are your "elite" hackers, backed by governments, armed with zero-days, and operating with the subtlety of a sledgehammer wrapped in a flag. Whether it’s China’s "civilian" cyber militias, Russia’s "patriotic" ransomware crews, or the Five Eyes’ "we’re definitely not doing this" ops, they’ve got unlimited budgets (thanks, taxpayers!), legal immunity ("laws are for peasants"), and a playbook of lies thicker than a spy novel. Need plausible deniability? They’ll gaslight you before the breach even happens.
 
 ## Digital crime gangs: The Fortune 500 of fraud
 
-Why bother with a 9-to-5 when you can run a multinational cybercrime syndicate? These gangs operate like startups—if startups specialized in ransomware, credential stuffing, and outsourced evil. They’ve got R&D departments (reverse-engineering exploits), HR (recruiting insiders), and customer support (yes, some ransomware gangs now offer help desks). Their motto? "Why hack once when you can franchise?"
+Why bother with a 9-to-5 when you can run a multinational cybercrime syndicate? These gangs operate like startups, if startups specialised in ransomware, credential stuffing, and outsourced evil. They’ve got R&D departments (reverse-engineering exploits), HR (recruiting insiders), and customer support (yes, some ransomware gangs now offer help desks). Their motto? "Why hack once when you can franchise?"
 
 ## Insiders: The disgruntled desk Jockeys of Doom
 
-Every organisation’s got that one employee who’s one bad coffee away from burning it all down. Maybe they’re bribed by a crime gang, maybe they’re just mad Karen from Accounting got the corner office—either way, they’ve got keys to the kingdom and a grudge. Pro tip: If Bob from IT suddenly starts forwarding files to his personal email "for backup," maybe check his recent Bitcoin purchases.
+Every organisation’s got that one employee who’s one bad coffee away from burning it all down. Maybe they’re bribed by a crime gang, maybe they’re just mad Karen from Accounting got the corner office, either way, they’ve got keys to the kingdom and a grudge. Pro tip: If Bob from IT suddenly starts forwarding files to his personal email "for backup," maybe check his recent Bitcoin purchases.
 
 ## Literally anyone with a keyboard and a dream
 

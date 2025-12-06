@@ -1,6 +1,6 @@
 # Multi-cloud & on-prem CI/CD deployment how-to
 
-A guide for deploying secure Dockerized apps on AWS, Azure, GCP, and on-prem (Hetzner)
+A guide for deploying secure Dockerised apps on AWS, Azure, GCP, and on-prem (Hetzner)
 
 This guide references the complete code examples provided earlier and explains where to implement each component 
 across the four environments.

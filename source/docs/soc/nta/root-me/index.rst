@@ -1,7 +1,7 @@
 Root-Me NTA challenges: Hands-on cyber ranges
 ===============================================
 
-The Network Traffic Analysis challenges on Root-Me—our digital obstacle course where packets transform into cryptic
+The Network Traffic Analysis challenges on Root-Me, our digital obstacle course where packets transform into cryptic
 riddles, and every TCP handshake feels like a trapdoor spider waiting to ambush the overconfident. Here we are, armed
 with Wireshark’s machete, Zeek’s field notes, and Snort’s growls, yet still getting outsmarted by a 30-byte payload
 disguised as 'totally_legit_traffic.pcap'. Is that HTTP traffic? Or a carrier pigeon smuggling AES keys? The logs

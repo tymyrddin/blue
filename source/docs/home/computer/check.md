@@ -1,6 +1,6 @@
 # Task Manager/Activity Monitor: Your Malware Nightclub Bouncer
 
-Your computer is like a VIP club—some processes belong, others are just there to cause trouble. Malware loves to 
+Your computer is like a VIP club, some processes belong, others are just there to cause trouble. Malware loves to 
 sneak in, disguise itself, and party in the background while stealing your data or mining crypto. Here’s how to 
 spot and kick out the troublemakers before they wreck the place.
 
@@ -9,14 +9,14 @@ spot and kick out the troublemakers before they wreck the place.
 1. Open Task Manager (Ctrl+Shift+Esc or Ctrl+Alt+Del → Task Manager).
 2. Click the CPU or Memory column to sort by usage.
 3. Look for:
-   * Unknown processes hogging resources (e.g., `BonziBuddy.exe`—yes, that purple gorilla malware still exists).
+   * Unknown processes hogging resources (e.g., `BonziBuddy.exe`).
    * `svchost.exe` with 50+ instances (legit Windows processes don’t need an army).
    * Weird names like `update_helper.exe` (real updates don’t hide).
 4. Right-click → End Task on anything suspicious.
 
 Tip:
 
-* Check the "Startup" tab—disable anything sketchy launching at boot.
+* Check the "Startup" tab to disable anything sketchy launching at boot.
 * Use Process Explorer (Microsoft’s advanced tool) for deeper checks.
 
 ## Mac: Activity monitor (The "Why Is My Fan Screaming?" tool)
@@ -67,8 +67,8 @@ Tip:
 
 ## Why this matters in 2025
 
-* Fileless malware runs in memory, avoiding detection—Task Manager is your last line of defence.
-* Crypto miners drain your CPU silently—catch them before your PC sounds like a jet engine.
-* Spyware hides behind fake "Windows Update" processes—always verify.
+* Fileless malware runs in memory, avoiding detection. Task Manager is your last line of defence.
+* Crypto miners drain your CPU silently. Catch them before your PC sounds like a jet engine.
+* Spyware hides behind fake "Windows Update" processes. Always verify.
 
 TL;DR: Be the bouncer. If a process can’t explain why it’s there, kick it out. 🔥

@@ -75,7 +75,7 @@ Another type of testing goes hand in hand with SAST, Software Composition Analys
 
 DAST means Dynamic Application Security Testing, a black-box testing method that finds vulnerabilities at runtime. DAST is a tool to scan any web application to find security vulnerabilities. This tool is used to detect vulnerabilities inside a web application that has been deployed to production. DAST tools will always send alerts to the security team assigned for immediate remediation.
 
-DAST works by simulating automated attacks on an application, mimicking a malicious attacker. The goal is to find unexpected outcomes or results that attackers could use to compromise an application. Since DAST tools don't have internal information about the application or the source code, they attack just as an external hacker would—with the same limited knowledge and information about the application.
+DAST works by simulating automated attacks on an application, mimicking a malicious attacker. The goal is to find unexpected outcomes or results that attackers could use to compromise an application. Since DAST tools don't have internal information about the application or the source code, they attack just as an external hacker would, with the same limited knowledge and information about the application.
 
 DAST is a tool that can be integrated very early into the software development lifecycle. Its focus is to help organisations reduce and protect against the risk that application vulnerabilities could cause. It is very different from SAST because DAST uses the Black Box Testing Methodology; it conducts its vulnerability assessment outside as it does not have access to the application source code. DAST is typically used during the testing phase of SDLC.
 
@@ -101,7 +101,7 @@ RASP is a complete solution that observes every detail of different attacks on y
 
 SAST, DAST, and IAST are tools that complement each other. 
 
-* A key strength of DAST is that it identifies runtime issues—weaknesses that aren't discoverable when an application 
+* A key strength of DAST is that it identifies runtime issues, weaknesses that aren't discoverable when an application 
 isn't running.
 * SAST is excellent at identifying vulnerabilities while code is being written.
 * Additionally, DAST looks at how an application responds to an attack, providing helpful insight into how likely it 

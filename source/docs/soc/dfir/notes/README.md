@@ -2,7 +2,7 @@
 
 ## What is it?
 
-A curated collection of practical digital forensics and incident response methods—think cheat sheets for real-world 
+A curated collection of practical digital forensics and incident response methods, think cheat sheets for real-world 
 investigations.
 
 ## Why make/read them?
@@ -13,7 +13,7 @@ investigations.
 
 Example tip:
 
-"When analyzing timestamps, always correlate UTC vs. local time—this burns everyone once."
+"When analysing timestamps, always correlate UTC vs. local time, this burns everyone once."
 
 ## The notes
 

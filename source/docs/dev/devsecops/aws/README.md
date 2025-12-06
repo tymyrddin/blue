@@ -1,6 +1,6 @@
 # Best Practices for securing AWS services
 
-AWS security follows the Shared Responsibility Model—AWS secures the cloud infrastructure, while customers secure 
+AWS security follows the Shared Responsibility Model: AWS secures the cloud infrastructure, while customers secure 
 their data, configurations, and access controls.
 
 1. Identity & access management (IAM)

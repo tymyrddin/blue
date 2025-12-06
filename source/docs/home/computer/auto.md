@@ -63,6 +63,6 @@ Tip:
 ## Why this matters in 2025
 
 * AI-powered attacks now exploit unpatched systems within hours of a vulnerability dropping
-* The "Oops, I forgot" era is over—attackers have automation. Your defences should too.
+* The "Oops, I forgot" era is over, attackers have automation. Your defences should too.
 
  

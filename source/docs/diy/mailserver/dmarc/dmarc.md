@@ -9,7 +9,7 @@ Setting it up takes [five-steps as listed on the DMARC website](https://dmarc.or
 * Deploy [DKIM](../dkim/overview.md) & [SPF](../spf/spf). You have to cover the basics, first.
 * Ensure that your mailers are correctly aligning the appropriate identifiers.
 * Publish a DMARC record with the “none” flag set for the policies, which requests data reports.
-* Analyze the data and modify your mail streams as appropriate.
+* Analyse the data and modify your mail streams as appropriate.
 * Modify your DMARC policy flags from “none” to “quarantine” to “reject” as you gain experience.
 
 [Flaws as per the infosec institute](https://resources.infosecinstitute.com/topic/domain-based-message-authentication-reporting-and-conformance/)

@@ -2,7 +2,7 @@
 
 ## Mapping the waters
 
-**Purpose:** Surface what people see as the currents, rocks, and whirlpools in their shared environment — obstacles, pressures, and hidden dependencies.
+**Purpose:** Surface what people see as the currents, rocks, and whirlpools in their shared environment: obstacles, pressures, and hidden dependencies.
 
 **Method:**
 
@@ -13,7 +13,7 @@
 
 **Outcome:** A visual map that highlights blind spots, friction points, and opportunities for intervention. Helps teams see the full “sea” they’re navigating.
 
-**Tip:** Encourage creativity — icons, emojis, or metaphors help people express abstract pressures.
+**Tip:** Encourage creativity: icons, emojis, or metaphors help people express abstract pressures.
 
 ## Crossing the river
 
@@ -51,7 +51,7 @@
 
 * Participants recall moments when the team successfully navigated difficulty.
 * Storytelling circle: each shares their perspective.
-* Facilitator distils recurring themes into “anchors” — principles, routines, or people the team can rely on.
+* Facilitator distils recurring themes into “anchors”: principles, routines, or people the team can rely on.
 
 **Outcome:** Recognising and reinforcing stabilising factors boosts confidence, morale, and resilience during change or uncertainty.
 
@@ -73,7 +73,8 @@
 
 ## Currents and countercurrents
 
-**Purpose:** Explore hidden forces shaping behaviour — policies, culture, or unspoken rules that push or pull the group.
+**Purpose:** Explore hidden forces shaping behaviour: policies, culture, or unspoken rules that push or pull the group.
+
 **Method:**
 
 * Participants write down forces that propel the group forward and forces that hold it back.

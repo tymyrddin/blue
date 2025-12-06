@@ -1,7 +1,7 @@
 Bulletproofing servers
 ================================================
 
-Running your own container, web, and mail servers is empowering—until it becomes a liability. Small setups are prime
+Running your own container, web, and mail servers is empowering, until it becomes a liability. Small setups are prime
 targets precisely because they often lack enterprise-grade defences. But with the right approach, you can build a
 "poor man’s enterprise stack" that’s both functional and resilient.
 

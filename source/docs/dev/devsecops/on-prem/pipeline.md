@@ -1,6 +1,6 @@
 # Secure on-premises CI/CD pipeline (Hetzner, Finland)
 
-This guide provides a security-hardened CI/CD pipeline for Dockerized applications deployed on Hetzner Cloud 
+This guide provides a security-hardened CI/CD pipeline for Dockerised applications deployed on Hetzner Cloud 
 (Finland, hel1) or on-premises servers. It covers:
 
 * Self-hosted Git (Gitea) + CI (Drone/Argo Workflows)

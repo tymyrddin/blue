@@ -14,7 +14,7 @@ The latest example of GPS-enabled devices is the AirTag, a small, puck-shaped tr
 
 Tracking an AirTag requires iOS 14.5 (iPhone or iPad). ***Precision Finding*** requires an iPhone 11 or 12. 
 
-AirTags are being used by stalkers for tracking survivors, that goes public, Apple makes a few promises, and Google rolls out a safety feature on Android to be alerted automatically if an unknown Bluetooth device is travelling with them — a sign that could point to the possibility that someone is stalking them using an Apple AirTag or other Bluetooth tracking device. Users will also be able to manually scan for trackers with their Android device and be guided through tips on what to do next if a tracking device is found.
+AirTags are being used by stalkers for tracking survivors, that goes public, Apple makes a few promises, and Google rolls out a safety feature on Android to be alerted automatically if an unknown Bluetooth device is travelling with them ,  a sign that could point to the possibility that someone is stalking them using an Apple AirTag or other Bluetooth tracking device. Users will also be able to manually scan for trackers with their Android device and be guided through tips on what to do next if a tracking device is found.
 
 ## Resources
 

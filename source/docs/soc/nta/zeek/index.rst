@@ -1,7 +1,7 @@
 Zeek: Transforming raw packets into actionable logs
 ====================================================
 
-Meet Zeek—the quiet but brilliant tracker in our digital wilderness, silently observing every footstep (or packet) 
+Meet Zeek, the quiet but brilliant tracker in our digital wilderness, silently observing every footstep (or packet)
 that crosses its path. While others flashy tools might shout about threats, Zeek just leans against a tree, takes 
 meticulous notes, and casually hands you a 300-page scroll titled 'Here’s Exactly How That Hacker Tried to Ruin Your 
 Day.' No fanfare, no drama, just cold, hard logs. It’s like having a park ranger who doesn’t just spot bears, but also

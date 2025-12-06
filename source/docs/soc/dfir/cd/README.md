@@ -12,7 +12,7 @@ Hands-on labs mimicking real breach investigations (memory dumps, disk images, n
 
 Typical challenge:
 
-"This ransomware encrypted files—find the attacker’s Bitcoin wallet in the memory dump."
+"This ransomware encrypted files, find the attacker’s Bitcoin wallet in the memory dump."
 
 ## How to do them?
 

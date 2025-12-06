@@ -1,7 +1,7 @@
 The wake-up call
 ==================================
 
-Your DIY server triad—containers, web, and mail services—is a self-hosted dream… until it becomes a threat actor’s
+Your DIY server triad, containers, web, and mail services, is a self-hosted dream… until it becomes a threat actor’s
 playground. Regular audits are the difference between "I patched that last year" and "Why is my server mining Monero?"
 
 .. toctree::

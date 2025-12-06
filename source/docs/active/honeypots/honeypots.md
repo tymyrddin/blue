@@ -7,7 +7,7 @@ Whether you're defending the family NAS or a small organisation's file server, h
 * Detect intrusions before they cause harm.
 * Study attacker tactics without putting live systems at risk.
 * Waste their time, bandwidth, and hope.
-* Trigger alerts for unauthorised activity—ideally before damage occurs.
+* Trigger alerts for unauthorised activity, ideally before damage occurs.
 
 Even modest setups benefit. Just because you're not MI6 doesn't mean you're not on someone's Shodan list.
 
@@ -32,7 +32,7 @@ Perfect for:
 
 ### High-interaction honeypots
 
-These run real operating systems and services—essentially sacrificial lambs with Wireshark.
+These run real operating systems and services (sacrificial lambs with Wireshark).
 
 * OpenCanary – Dead simple, logs to syslog.
 * T-Pot – All-in-one honeypot platform, runs via Docker.
@@ -76,11 +76,11 @@ Don’t just run a honeypot and hope for the best. Integrate it:
 
 ## Honeypots in small environments
 
-Home and small business networks are soft targets—ripe for botnets, brute force, and crypto-rubbish. Honeypots offer:
+Home and small business networks are soft targets, ripe for botnets, brute force, and crypto-rubbish. Honeypots offer:
 
-* A canary in the coal mine—spot attacks early.
-* A cheap deterrent—low cost, high value.
-* Intel collection—learn what attackers are actually doing.
+* A canary in the coal mine to spot attacks early.
+* A cheap deterrent at low cost, high value.
+* Intel collection to learn what attackers are actually doing.
 
 You don’t need a datacentre. A Raspberry Pi, an old laptop, or a corner of your ESXi box will do nicely.
 
@@ -91,4 +91,4 @@ You don’t need a datacentre. A Raspberry Pi, an old laptop, or a corner of you
 * It’s not a replacement for patching, hardening, and good logging.
 * And no, it’s not a reason to skip the firewall.
 
-Think of it as bait. Useful bait, clever bait—but bait nonetheless.
+Think of it as bait. Useful bait, clever bait, but bait nonetheless.

@@ -40,7 +40,7 @@ like that ultra-organised friend who actually knows where they left their keys.
 * Apple Passkeys Manager: iCloud Keychain with Windows/Android support
 * Google Password Manager: Now with E2EE and shared vaults
 
-## Specialized tools
+## Specialised tools
 
 | Use Case	          | Recommendation	               | Why?                               |
 |--------------------|-------------------------------|------------------------------------|

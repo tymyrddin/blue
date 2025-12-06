@@ -68,7 +68,7 @@
 ☐ **Move core workloads**
 
 * Prioritise data sovereignty: HR, healthcare, legal, anything that screams “breach me”.
-* Document every step—future you will be grateful.
+* Document every step. The future will be grateful.
 
 ☐ **Refactor or replace cloud-native services**
 

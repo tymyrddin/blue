@@ -13,11 +13,10 @@ coffee—because the attackers never sleep, and neither do we (but only because 
    :maxdepth: 1
    :caption: Going places
 
+   docs/org/index
    docs/soc/index
    docs/dev/index
    docs/home/index
    docs/diy/index
    docs/active/index
    docs/stormforge/index
-   docs/current/index
-

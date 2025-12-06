@@ -12,7 +12,7 @@ Interactive tutorials and investigations with guided tasks (Windows/Linux forens
 
 Example room:
 
-"Investigate a compromised web server—find how they got in and what they stole."
+"Investigate a compromised web server, find how they got in and what they stole."
 
 ## How to?
 

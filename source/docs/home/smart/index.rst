@@ -1,7 +1,7 @@
 Containing the appliance rebellion: Securing IoT & smart devices
 ===================================================================
 
-The rise of smart homes has created a shadow army of vulnerable devices—from hijacked baby monitors to botnet-infected
+The rise of smart homes has created a shadow army of vulnerable devices, from hijacked baby monitors to botnet-infected
 lightbulbs. Without proper safeguards, your gadgets can spy on you, leak data, or even become weapons in large-scale
 cyberattacks.
 

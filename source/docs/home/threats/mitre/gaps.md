@@ -1,7 +1,7 @@
 # Your 2025 Home cybersecurity to-do List
 
 Using [MITRE ATT&CK’s four priority areas](README.md), here’s a comprehensive breakdown of where your home defences 
-are probably failing—and how to patch them like a duct-tape-wielding IT admin.
+are probably failing, and how to patch them like a duct-tape-wielding IT admin.
 
 ## Priority #1: Initial access (Keeping hackers out)
 

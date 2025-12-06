@@ -12,7 +12,7 @@ CTF-style forensic puzzles (PCAPs, logs, disk images) with a focus on technical 
 
 Classic challenge:
 
-"This USB dump shows file deletions—recover the secret message."
+"This USB dump shows file deletions, recover the secret message."
 
 ## How do them?
 

@@ -27,7 +27,7 @@ For password-less login install the public key using the `ssh-copy-id` command:
     $ ssh-copy-id user@server
     $ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 
-The authenticity message means that the local computer does not recognize the remote host. This will happen the first time connecting to a new host. Type "yes" and press ENTER to continue. 
+The authenticity message means that the local computer does not recognise the remote host. This will happen the first time connecting to a new host. Type "yes" and press ENTER to continue. 
 
     /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
     /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys

@@ -6,7 +6,7 @@ installed software on the host system. The desktop version of Ubuntu, for exampl
 computing environment we can use in order to not only test hardware and troubleshoot our systems
 but also browse the web just as we would on an installed system. In terms of recovering from disasters, live media becomes a saving grace.
 
-Ubuntu’s live media is great, and it doesn’t work for absolutely everything. Tools such as Clonezilla specialize in working with hard disks.
+Ubuntu’s live media is great, and it doesn’t work for absolutely everything. Tools such as Clonezilla specialise in working with hard disks.
 
 
 

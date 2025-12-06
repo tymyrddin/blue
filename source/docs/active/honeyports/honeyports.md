@@ -3,10 +3,10 @@
 ## What’s the point?
 
 Most attackers begin with reconnaissance: poking around to find open doors (aka ports) on your network. Honeyports 
-look like open doors—usually on enticing services like SSH, Telnet, or SMB—but behind them is a tripwire, not a service.
+look like open doors, usually on enticing services like SSH, Telnet, or SMB. But behind them is a tripwire, not a service.
 
 When an attacker attempts to connect, the honeyport quietly logs the IP address and (optionally) slams the door shut 
-behind them—automatically blocking future attempts via:
+behind them, automatically blocking future attempts via:
 
 * Dynamic firewall rules
 * Alerts to your SIEM/SOC
@@ -17,7 +17,7 @@ behind them—automatically blocking future attempts via:
 
 1. Choose a port (e.g., 22 for SSH, 445 for SMB).
 2. Don’t install the actual service. That’s just inviting chaos.
-3. Start a listener—Python, PowerShell, Ruby, or even Netcat will do.
+3. Start a listener: Python, PowerShell, Ruby, or even Netcat will do.
 4. When a connection hits the port, log it and fire off a response:
    * Add to a blacklist
    * Trigger an alert
@@ -30,7 +30,7 @@ should never be receiving inbound SSH traffic.
 ## Why it works
 
 Attackers rarely resist low-hanging fruit. A port that looks open is an invitation. When they knock and the door 
-bites back, you get early warning—before they’ve even tried anything serious.
+bites back, you get early warning, before they’ve even tried anything serious.
 
 Unlike traditional IDS/IPS, honeyports don’t rely on packet inspection or signature updates. They’re simple, dumb, 
 and brutally effective. Which, ironically, makes them smarter than half your defensive stack.
@@ -61,7 +61,7 @@ Want to go full chaotic neutral? Use portspoof.
 Instead of one or two honeyports, Portspoof pretends every port is open and running some (fake) plausible service. 
 Scanning tools see 65,535 open ports and quickly descend into madness.
 
-It’s like turning your server into a funhouse mirror maze—every port lies, and none of them are helpful.
+It’s like turning your server into a funhouse mirror maze. Every port lies, and none of them are helpful.
 
 ```
 sudo apt install portspoof
@@ -72,7 +72,7 @@ sudo portspoof -c /etc/portspoof/config
 
 * Use high-interaction traps only on isolated segments or sacrificial hosts.
 * Automate alerts and blocking, but log everything. You may want to go back and see who fell for what.
-* Rotate ports and tweak behaviour regularly—nothing says "go away" like inconsistency.
+* Rotate ports and tweak behaviour regularly, nothing says "go away" like inconsistency.
 * Don’t use honeyports on actual production ports. You’ll be kicking out your own users. It’s funny once.
 
 ## Resources

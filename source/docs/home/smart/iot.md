@@ -14,7 +14,7 @@ How to tame them:
 2. Disable their spy mode:
    * Samsung: Settings → Support → Terms & Policies → "Viewing Information" → OFF (because no, Samsung, you're not my therapist)
    * LG: Settings → All Settings → General → About This TV → "Live Plus" → OFF (it's neither "live" nor a "plus")
-3. Give them a dumb friend (Use a Roku/Fire Stick instead—they're cheaper and less nosy)
+3. Give them a dumb friend (Use a Roku/Fire Stick instead, they're cheaper and less nosy)
 
 ## Cameras – The overzealous neighborhood watch
 
@@ -31,7 +31,7 @@ How to tame them:
 3. Give them a blindfold (Physical lens covers > trusting "software off" switches)
 4. Local storage = No Cloud Drama (Like a diary with a lock instead of a Facebook post)
 
-Tip: If your camera requires cloud storage, it is not a security device—it is a subscription service with a lens.
+Tip: If your camera requires cloud storage, it is not a security device, it is a subscription service with a lens.
 
 ## Voice assistants – The eavesdropping "Helpers"
 
@@ -39,14 +39,14 @@ Why they (Alexa, Google Home) are sketchy:
 
 * They "accidentally" record everything, including that time you sang Disney songs in the shower
 * Their "skills" are just loopholes for data mining (looking at you, "Fun Cat Facts")
-* A hacked Alexa could theoretically order 100 pizzas or—worse—play Nickelback on loop
+* A hacked Alexa could theoretically order 100 pizzas, or worse, play Nickelback on loop
 
 How to tame them:
 
 1. Mute the Mic (Hardware switch = the digital equivalent of "I can’t hear you, la la la")
 2. Auto-delete their "Notes" (Set recordings to delete every 3 months)
 3. Block their Internet After Bedtime (Because even assistants need curfews)
-4. Audit their "Skills" (Delete "Burp Sound Generator"—it is not worth the privacy trade)
+4. Audit their "Skills" (Delete "Burp Sound Generator". It is not worth the privacy trade)
 
 ## Smart appliances that definitely don’t need Internet
 
@@ -56,7 +56,7 @@ Why? Your Samsung "Family Hub" fridge has no business checking emails, playing S
 
 Risk: Leaks Wi-Fi passwords (yes, this happened).
 
-Fix: If it can’t survive without internet, it is not a fridge—it is a spy. Block it.
+Fix: If it can’t survive without internet, it is not a fridge, it is a spy. Block it.
 
 ### The Roomba that sells your floor plan
 

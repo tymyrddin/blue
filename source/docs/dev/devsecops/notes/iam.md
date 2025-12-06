@@ -22,7 +22,7 @@ Microsoft AD uses LDAP, Kerberos, and Domain Name Services for these services. L
 
 ## AAD
 
-Azure uses Azure Active Directory (AAD). AAD is not the same as AD. AAD is an authentication service in Azure, using AD as the directory. The primary function of AAD is to synchronize identities to the cloud. For the synchronisation, it uses Azure AD Connect. With AAD, organisations will have a system that provides people of these organisations with a mechanism to log in and access resources on different platforms. That can be resources in Azure itself or resources such as applications hosted on systems in the corporate network.
+Azure uses Azure Active Directory (AAD). AAD is not the same as AD. AAD is an authentication service in Azure, using AD as the directory. The primary function of AAD is to synchronise identities to the cloud. For the synchronisation, it uses Azure AD Connect. With AAD, organisations will have a system that provides people of these organisations with a mechanism to log in and access resources on different platforms. That can be resources in Azure itself or resources such as applications hosted on systems in the corporate network.
 
 AAD also provides access to SaaS solutions such as Microsoft 365 and applications that can integrate with Azure. AAD makes sure that users only have to log in once using SSO. It is secured by MFA, meaning that when a user logs in by typing in a password, it is not enough. A second validation is needed to prove their identity. This can be a PIN code through a text message or an authenticator app on a mobile device, but also a fingerprint. If the user is authenticated, access is granted to federated services.
 

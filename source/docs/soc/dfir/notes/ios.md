@@ -10,7 +10,7 @@ AFS features full disk encryption, and smarter data management where a file requ
 
 iOS devices adopted the use of Mac absolute time with iOS 5 for most of the data. [Mac absolute time](https://www.epochconverter.com/coredata) is the number of seconds that offsets the Mac epoch time, which starts on January 1, 2001.
 
-When analyzing iOS application data, especially web browsers such as Google Chrome, Safari, and Opera, another timestamp format appears: [WebKit/Chrome time](https://www.epochconverter.com/webkit). This is the number of microseconds since January 1, 1601.
+When analysing iOS application data, especially web browsers such as Google Chrome, Safari, and Opera, another timestamp format appears: [WebKit/Chrome time](https://www.epochconverter.com/webkit). This is the number of microseconds since January 1, 1601.
 
 ## SQLite databases
 

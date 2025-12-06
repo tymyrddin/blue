@@ -1,7 +1,7 @@
 Securing email transport: TLS, DANE & MTA-STS
 ================================================
 
-Email might feel like digital magic, but without proper encryption, it’s more like a postcard—readable by anyone who
+Email might feel like digital magic, but without proper encryption, it’s more like a postcard, readable by anyone who
 intercepts it. Transport Layer Security (TLS) fixes this by scrambling messages in transit, but there’s a catch:
 not all TLS is created equal.
 

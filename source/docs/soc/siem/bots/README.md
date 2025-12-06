@@ -6,7 +6,7 @@
 
 ## Why?
 
-An interactive forensic investigation room focused on analyzing a simulated breach using Splunk, perfect for 
+An interactive forensic investigation room focused on analysing a simulated breach using Splunk, perfect for 
 practicing real-world SIEM skills against attacker lateral movement and data exfiltration scenarios.
 
 ## How?

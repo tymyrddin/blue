@@ -6,13 +6,13 @@ When someone sends an email, the recipient’s mail server performs a quick back
 
 "Who is allowed to send mail for this domain?"
 
-* The sending domain publishes an SPF record in DNS—a list of approved IP addresses and mail servers.
+* The sending domain publishes an SPF record in DNS: a list of approved IP addresses and mail servers.
 * Think of it like a VIP guest list for your email domain.
 
 "Is this sender on the list?"
 
 * The receiving server checks if the email’s originating IP matches one of the authorised senders in the SPF record.
-* If it doesn’t match, the email fails SPF authentication—a red flag for potential forgery.
+* If it doesn’t match, the email fails SPF authentication, a red flag for potential forgery.
 
 "What happens next?"
 

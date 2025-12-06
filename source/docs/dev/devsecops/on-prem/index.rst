@@ -1,8 +1,8 @@
 Playing On-Prem sysadmin in nightmare mode
 =============================================================
 
-Building your own "cloud"—whether with Hetzner, OpenStack, or a pile of old servers comes with whispering
-prayers—because apparently, renting someone else’s data centre wasn’t stressful enough.
+Building your own "cloud", whether with Hetzner, OpenStack, or a pile of old servers comes with whispering
+prayers, because apparently, renting someone else’s data centre wasn’t stressful enough.
 
 .. toctree::
    :glob:

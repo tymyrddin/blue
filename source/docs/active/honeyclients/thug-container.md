@@ -3,7 +3,7 @@
 ## Why containerise Thug?
 
 Because running malware analysis tools directly on your host is like tasting soup with your face. A Docker container 
-gives Thug a nice, controlled playpen — no surprises, no infected desktops.
+gives Thug a nice, controlled playpen. No surprises, no infected desktops.
 
 You can either use the official container, or roll your own.
 

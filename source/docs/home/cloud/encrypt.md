@@ -18,7 +18,7 @@ when in the cloud. Your tax returns don’t need to be bedtime reading for hacke
 * [Download Cryptomator (Windows/macOS/Linux/Android/iOS)](https://cryptomator.org/).
 * Create a new vault (encrypted folder) inside your cloud sync folder (e.g., Google Drive).
 * Set a strong password (never store it in the cloud!).
-* Move sensitive files into the vault—they auto-encrypt before syncing.
+* Move sensitive files into the vault, they auto-encrypt before syncing.
 * Only you can open the vault with your password.
 
 ### Note

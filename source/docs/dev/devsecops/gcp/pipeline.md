@@ -1,6 +1,6 @@
 # Foundation for a secure GCP deployment pipeline
 
-This guide provides the foundation for a security-hardened CI/CD pipeline for Dockerized applications on Google 
+This guide provides the foundation for a security-hardened CI/CD pipeline for Dockerised applications on Google 
 Cloud Platform (GCP) in Europe (e.g., europe-west1, europe-west4). It includes infrastructure-as-code (Terraform), 
 Cloud Build CI/CD, Artifact Registry, Cloud Run (or GKE for Kubernetes), Secret Manager, and security best practices 
 with detailed explanations.
@@ -26,7 +26,7 @@ Key Features:
 * Google Cloud SDK (gcloud) installed and authenticated.
 * Terraform (for IaC).
 * Docker installed locally.
-* A Dockerized application (e.g., a simple Flask/Node.js app).
+* A Dockerised application (e.g., a simple Flask/Node.js app).
 
 ## Setting Up GCP infrastructure
 

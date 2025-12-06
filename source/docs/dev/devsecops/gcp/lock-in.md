@@ -5,7 +5,7 @@
 - Proprietary Databases:  
   - Cloud Spanner (globally distributed, unique SQL dialect)  
   - Firestore (Google-specific NoSQL API)  
-  - BigQuery (serverless analytics with GCP-only optimizations)  
+  - BigQuery (serverless analytics with GCP-only optimisations)  
 - Serverless & Compute:  
   - Cloud Functions (Google-specific triggers)  
   - Cloud Run (managed containers with GCP quirks)  

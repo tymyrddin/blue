@@ -2,7 +2,7 @@
 
 ## Patch sprint
 
-A leaky hull will sink even the most majestic ship. This sprint focuses on quick, coordinated patching — identifying 
+A leaky hull will sink even the most majestic ship. This sprint focuses on quick, coordinated patching, identifying 
 vulnerabilities, prioritising repairs, and sealing breaches before attackers slip through. Participants work in 
 squads, racing to patch realistic environments under time pressure, while weathering simulated storms of exploitation 
 attempts.

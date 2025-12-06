@@ -3,7 +3,7 @@
 ## SIEM-in-two-days build-a-thon (for NGOs)
 
 A storm-watchtower is no good if it takes years to build. This sprint is about raising a modest but sturdy lookout 
-in just two days — a SIEM stack NGOs can actually maintain. Crews will learn to collect logs, parse them into 
+in just two days, a SIEM stack NGOs can actually maintain. Crews will learn to collect logs, parse them into 
 usable maps, and set up dashboards that warn when squalls are coming. Collaboration is key: no one builds a 
 lighthouse alone.
 
@@ -11,7 +11,7 @@ lighthouse alone.
 
 ## Pi-Rogue-in-a-day build-a-thon
 
-Every fleet needs small, agile craft — not just lumbering ships. This build-a-thon equips participants with a 
+Every fleet needs small, agile craft. This build-a-thon equips participants with a 
 Pi-Rogue, a pocket-sized vessel designed for network exploration and defensive patrols. In one day, the crew sets 
 it afloat, configures its sails (toolchains), and practises manoeuvring through hostile waters.
 

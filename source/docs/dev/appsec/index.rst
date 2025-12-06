@@ -1,7 +1,7 @@
 Securing web applications
 ============================================
 
-Web applications are like digital nightclubs—everyone wants in, but if you don’t check IDs, you’ll end up with malware
+Web applications are like digital nightclubs, everyone wants in, but if you don’t check IDs, you’ll end up with malware
 dancing on the tables and hackers behind the bar mixing SQL injections into the drinks.
 
 .. toctree::

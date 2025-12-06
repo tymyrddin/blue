@@ -1,12 +1,12 @@
 # The Problem with STARTTLS: A Flawed Upgrade
 
-STARTTLS upgrades a plaintext SMTP connection to an encrypted one—if both servers support it. But it’s vulnerable to downgrade attacks, where a hacker tricks servers into communicating without encryption.
+STARTTLS upgrades a plaintext SMTP connection to an encrypted one, if both servers support it. But it’s vulnerable to downgrade attacks, where a hacker tricks servers into communicating without encryption.
 Two Solutions: DANE vs. MTA-STS
 
 * DANE (DNS-Based Authentication) – Uses DNSSEC to bind TLS certificates directly to domain names, eliminating reliance on traditional Certificate Authorities. "Your cert is valid because DNS says so."
 * MTA-STS (SMTP Strict Transport Security) – Forces encrypted connections (like HTTPS for email) and rejects servers with invalid certificates. "No TLS? No delivery."
 
-TL;DR: "STARTTLS alone is like locking your door but leaving the key under the mat. DANE and MTA-STS bolt it shut—pick one."
+TL;DR: "STARTTLS alone is like locking your door but leaving the key under the mat. DANE and MTA-STS bolt it shut. Pick one."
 
 ## DNS-based Authentication of Named Entities (DANE)
 

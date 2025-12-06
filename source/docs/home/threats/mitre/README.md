@@ -1,6 +1,6 @@
 # The Attackers’ menu
 
-Hackers follow patterns. MITRE ATT&CK breaks these into tactics and techniques—like a burglar’s step-by-step guide to 
+Hackers follow patterns. MITRE ATT&CK breaks these into tactics and techniques, like a burglar’s step-by-step guide to 
 raiding your digital pantry. Here’s what matters most @Home in 2025:
 
 ## Priority #1: Initial access (How they get in)
@@ -59,7 +59,7 @@ Example Gaps (and How to Fix Them)
 
 ## The "2025 threat forecast" (What’s coming?)
 
-* AI-Powered Phishing (T1566.002) – Scams so personalized, they’ll know your dog’s name.
+* AI-Powered Phishing (T1566.002) – Scams so personalised, they’ll know your dog’s name.
 * Ransomware for Smart Homes (T1486) – Hackers locking your thermostat until you pay.
 * 5G IoT Botnets (T1583.002) – Your fridge DDoSing a bank for fun.
 

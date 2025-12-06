@@ -75,7 +75,7 @@ By default, Thug logs:
 * PDF, Flash, and Java payload indicators
 * Indicators of compromise (IoCs)
 
-Output can be redirected to JSON, SQLite, or raw logs—great for feeding into your SIEM or just hoarding malware like 
+Output can be redirected to JSON, SQLite, or raw logs. Great for feeding into your SIEM or just hoarding malware like 
 a responsible researcher.
 
 ## Cleanup

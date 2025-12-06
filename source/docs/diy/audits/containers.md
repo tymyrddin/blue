@@ -1,6 +1,6 @@
 # Container audit commands
 
-Containers are convenient, but left unchecked, they’re a bit like unattended camping stoves in the server room—
+Containers are convenient, but left unchecked, they’re a bit like unattended camping stoves in the server room, 
 isolated until they’re not. Here’s how to audit them properly before they burn down your infrastructure.
 
 ## Host configuration & isolation
@@ -25,7 +25,7 @@ docker ps -a
 docker inspect <container>
 ```
 
-Look for containers running as root ("User": "" means root—bad sign), or with --privileged access (even worse).
+Look for containers running as root ("User": "" means root, bad sign), or with --privileged access (even worse).
 
 ```
 docker top <container>
@@ -93,7 +93,7 @@ And watch for container restarts:
 docker inspect --format='{{.RestartCount}}' <container>
 ```
 
-Frequent restarts are a red flag—not just for uptime, but possibly for resilience against intrusion detection.
+Frequent restarts are a red flag, not just for uptime, but possibly for resilience against intrusion detection.
 
 ## Resource limits & abuse prevention
 

@@ -1,7 +1,7 @@
 Keeping Google’s playground from turning into a Hackfest
 =======================================================================
 
-GCP is powerful, mysterious, and occasionally terrifying—like letting an AI run your infrastructure. (Wait, that’s
+GCP is powerful, mysterious, and occasionally terrifying, like letting an AI run your infrastructure. (Wait, that’s
 exactly what it is.)
 
 .. toctree::

@@ -14,4 +14,4 @@ Why? Public networks are like shouting your passwords in a coffee shop.
 * Always turn on before joining public Wi-Fi.
 * Bonus: Use Always-on VPN (Android: Settings → Network & Internet → VPN → Gear icon).
 
-Avoid: "Free" VPNs—they’re just data mills.
+Avoid: "Free" VPNs, they’re just data mills.
