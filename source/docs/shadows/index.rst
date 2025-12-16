@@ -10,7 +10,7 @@ and its intelligence gathering ensures that Ankh-Morpork continues to function d
 without anyone knowing who works there or where they are.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: We notice, even when you do not.
 
    about.md

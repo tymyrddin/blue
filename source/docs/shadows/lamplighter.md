@@ -1,4 +1,4 @@
-# # Project Lamplighter (not a project)
+# Project Lamplighter (not a project)
 
 Project Lamplighter exists because too many things in Ankh-Morpork have recently been working *almost* correctly. 
 Messages arrive, but slightly late. Signals repeat, but not quite identically. Decisions propagate through guilds 

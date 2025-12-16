@@ -73,7 +73,7 @@ Many SIEM tools exist, Kibana, Splunk, Elastic SIEM, Datadog, QRadar, Underdefen
 
 ## Tools of the trade
 
-Gradually building up to something useful for the IPA project:
+Gradually building up to something useful for the PowerOn project:
 
 * Wazuh single-node deployment with docker, bare-bones single-node deployment: One Wazuh manager, indexer, and dashboard node.
 * Wazuh multi-node deployment with docker, two Wazuh manager nodes (one master and one worker), three Wazuh indexer nodes, and a Wazuh dashboard node.
