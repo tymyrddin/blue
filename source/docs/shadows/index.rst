@@ -13,8 +13,8 @@ without anyone knowing who works there or where they are.
    :maxdepth: 2
    :caption: We notice, even when you do not.
 
-
-Under construction
+   about.md
+   lamplighter.md
 
 .. raw:: html
 
