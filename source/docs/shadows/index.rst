@@ -11,7 +11,7 @@ without anyone knowing who works there or where they are.
 
 .. toctree::
    :maxdepth: 1
-   :caption: We notice, even when you do not.
+   :caption: Motto: We notice, even when you do not.
 
    about.md
    lamplighter.md
