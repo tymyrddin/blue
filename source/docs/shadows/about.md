@@ -9,10 +9,10 @@ admit it or not.
 
 ## Continuous observation (the “SOC”)
 
-Yes, they have one. They do not call it a Security Operations Centre. They call it *The Quiet Room*.
-Here, clerks monitor the city’s signalling systems, semaphore traffic, guild communications, water flows, 
-post-office oddities, and anything else that might blink when it should not. Alerts are triaged, correlated, 
-and quietly dealt with, usually before anyone else notices.
+[Yes, they have one](https://blue.tymyrddin.dev/docs/soc/). They do not call it a Security Operations Centre. They 
+call it *The Quiet Room*. Here, clerks monitor the city’s signalling systems, semaphore traffic, guild communications, 
+water flows, post-office oddities, and anything else that might blink when it should not. Alerts are triaged, 
+correlated, and quietly dealt with, usually before anyone else notices.
 
 ## Detection and analysis
 
