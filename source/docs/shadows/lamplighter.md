@@ -20,8 +20,8 @@ Project Lamplighter is a *city-wide defensive correlation effort*:
 * Identifying choke points where information can be delayed, altered, or nudged
 * Detecting coordinated influence attempts that look like coincidence until you line them up
 
-In modern terms, it is threat hunting. In Ankh-Morpork terms, it is noticing when several people have the same bad 
-idea at once.
+In modern terms, it is [threat hunting](https://blue.tymyrddin.dev/docs/soc/siem/notes/). In Ankh-Morpork terms, it 
+is noticing when several people have the same bad idea at once.
 
 ## Why now?
 
