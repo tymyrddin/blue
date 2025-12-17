@@ -22,7 +22,7 @@ No paperwork exists that uses either of these names. Several people use them any
    :includehidden:
    :caption: Code:
 
-   Security detectors for Wazuh under construction @GitHub <https://github.com/ninabarzh/security-wazuh-monitor>
+   Red Lantern simulator under construction @GitHub <https://github.com/ninabarzh/red-lantern-sim>
 
 .. toctree::
    :glob:
