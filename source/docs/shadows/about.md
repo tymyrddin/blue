@@ -70,7 +70,7 @@ It is merely incomplete.
 
 ## Relationship with the Patrician
 
-The Department does not report to the Patrician. That would imply distance. They are *aligned*.
+The Department does not report to [the Patrician](https://indigo.tymyrddin.dev/docs/vetinari/). That would imply distance. They are *aligned*.
 
 The Patrician believes deeply in free will. He also believes in consequences, incentives, and offering people 
 *choices that are difficult to misunderstand*. When talented individuals find themselves working for the 

@@ -20,6 +20,13 @@ or open source.
    scale-up/index
    enterprise/index
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Related:
+
+   Cloud concentration and its discontents <https://indigo.tymyrddin.dev/docs/patrician/cloud.html>
+   Cloud complexity and misconfiguration epidemic <https://indigo.tymyrddin.dev/docs/debt/cloud.html>
+
 Not covered: audit compliance
 --------------------------------
 Each phase focuses on what is actually built: the machinery humming in the back room, the tools that
