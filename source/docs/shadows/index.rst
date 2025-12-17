@@ -15,7 +15,7 @@ without anyone knowing who works there or where they are.
 
    about.md
    lamplighter.md
-   op-red-lantern/index
+   red-lantern/index
 
 .. raw:: html
 
