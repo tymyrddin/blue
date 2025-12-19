@@ -10,11 +10,10 @@ No paperwork exists that uses either of these names. Several people use them any
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Detection of:
+   :caption: Detection:
 
-   tracking-signal-one.md
-   tracking-signal-two.md
-   tracking-signal-three.md
+   philosophy.md
+   tradeoffs.md
 
 .. toctree::
    :glob:
