@@ -10,10 +10,11 @@ No paperwork exists that uses either of these names. Several people use them any
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Detection:
+   :caption: Lab walkthroughs:
 
-   philosophy.md
-   tradeoffs.md
+   fat_finger_hijack.md
+   subprefix_intercept.md
+   roa_poisoning.md
 
 .. toctree::
    :glob:
@@ -31,6 +32,15 @@ No paperwork exists that uses either of these names. Several people use them any
 
    internal-notice-tss.md
    internal-briefing-doss.md
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
+   :caption: Documentation:
+
+   philosophy.md
+   tradeoffs.md
 
 
 .. raw:: html
