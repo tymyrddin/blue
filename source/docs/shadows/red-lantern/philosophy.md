@@ -1,4 +1,4 @@
-# Dept detection philosophy
+# Dept of Silent Stability detection philosophy
 
 ## Core principles
 

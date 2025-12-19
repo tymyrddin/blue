@@ -1,4 +1,4 @@
-# Trade-offs of our system
+# Trade-offs to be made for our detection system
 
 ## Sensitivity vs specificity
 

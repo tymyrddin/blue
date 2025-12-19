@@ -30,6 +30,7 @@ No paperwork exists that uses either of these names. Several people use them any
    :includehidden:
    :caption: Documentation:
 
+   Rootways of the World Tree (@Internet) <https://red.tymyrddin.dev/docs/in/network/roots/>
    philosophy.md
    tradeoffs.md
 
