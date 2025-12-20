@@ -20,7 +20,7 @@ First, the Scarlet Semaphore deliberately employs realistic timing and partial p
 
 Second, the scope of each exercise is implicit rather than declared. The Semaphore knows which districts are meant to be affected and for how long. Observers must infer this from artefacts alone. This is acceptable for experimentation, but it complicates the Department’s task of distinguishing between ordinary noise, recoverable incidents, and signals of deeper control‑plane concern.
 
-Third, the more subtle exercises — particularly those touching the Registry itself — are intentionally quiet. They do not produce spectacular outages. Instead, they manifest as legitimacy failures: routes that ought to be accepted are not, trust decisions that differ by district, authority that appears intact yet behaves inconsistently. From a defensive standpoint, this is the most concerning class of behaviour, precisely because it does not announce itself.
+Third, the more subtle exercises, particularly those touching the Registry itself, are intentionally quiet. They do not produce spectacular outages. Instead, they manifest as legitimacy failures: routes that ought to be accepted are not, trust decisions that differ by district, authority that appears intact yet behaves inconsistently. From a defensive standpoint, this is the most concerning class of behaviour, precisely because it does not announce itself.
 
 The Department’s assessment is therefore not that the exercises are unreliable, but that **their lessons are easy to miss unless one already knows where to look**.
 
@@ -28,7 +28,7 @@ From a stability perspective, this suggests a defensive gap. Our current observa
 
 A modest improvement would be to accompany each Semaphore exercise with a short, sealed description of its intended envelope: affected districts, expected duration, and invariants (including what is not expected to happen). This would not constrain the experiment, nor would it alert the public. It would, however, allow the Department to assess whether our defences are failing because the city is vulnerable, or because we are looking in the wrong place.
 
-In summary, the Scarlet Semaphore is succeeding in its task of exploring how fragile our assumptions are. The Department of Silent Stability is learning, though sometimes after the fact, where our defensive thinking remains too focused on traffic and insufficiently focused on authority.
+In summary, the Scarlet Semaphore is succeeding in exploring how fragile our assumptions are. The Department of Silent Stability is learning, though sometimes after the fact, where our defensive thinking remains too focused on traffic and insufficiently focused on authority.
 
 This information, I believe, is precisely what Your Excellency wished to obtain.
 
