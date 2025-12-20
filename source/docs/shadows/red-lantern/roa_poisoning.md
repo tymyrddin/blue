@@ -43,7 +43,7 @@ You get a timeline of JSON events that include:
 * Flapping noise
 * Cleanup actions
 
-Each event includes something like:
+Each event includes:
 
 ```json
 {
