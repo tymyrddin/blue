@@ -1,4 +1,4 @@
-Observing Red Lantern and False Horizon
+Observing Red Lanterns and False Horizons
 ======================================================
 
 .. image:: /_static/images/red-lanterns.png
