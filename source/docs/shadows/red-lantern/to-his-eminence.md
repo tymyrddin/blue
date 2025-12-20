@@ -2,7 +2,9 @@
 
 Sir,
 
-As instructed, the activities of the Scarlet Semaphore continue under observation. Their remit remains experimentation: testing what happens when routing assumptions are questioned, signs are rearranged, and in some cases the Registry itself is quietly edited.
+As instructed, the activities of the Scarlet Semaphore continue under observation. Their remit remains experimentation: 
+testing what happens when routing assumptions are questioned, signs are rearranged, and in some cases the Registry 
+itself is quietly edited.
 
 The Department of Silent Stability has complied with its instruction not to interfere. We have limited ourselves to observation, measurement, and analysis, with particular attention to what these exercises reveal about city‑wide stability and the resilience of our trust mechanisms.
 
