@@ -1,4 +1,4 @@
-# Wazuh lab: fat-finger hijack (accidental control-plane incident)
+# Wazuh lab: fat-finger hijack
 
 ## Purpose of this lab
 
@@ -47,10 +47,12 @@ emits a clean, structured stream of JSON events:
 Each event is tagged with:
 
 ```json
-"scenario": {
-  "name": "fat_finger-hijack",
-  "attack_step": "...",
-  "incident_id": "..."
+{
+  "scenario": {
+    "name": "fat_finger-hijack",
+    "attack_step": "...",
+    "incident_id": "..."
+  }
 }
 ```
 

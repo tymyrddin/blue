@@ -1,13 +1,13 @@
-# Wazuh lab: subprefix interception (control-plane abuse)
+# Wazuh lab: subprefix interception
 
 ## Purpose of this lab
 
-This lab focuses on a **classic but still depressingly effective** BGP attack:
+This lab focuses on a classic but still depressingly effective BGP attack:
 
-* Traffic interception via **more-specific prefix announcements**
+* Traffic interception via more-specific prefix announcements
 * No ROA manipulation required
 * No protocol violation
-* Everything looks “fine” unless you look **across time and scope**
+* Everything looks “fine” unless you look across time and scope
 
 You can learn how Wazuh detects:
 
@@ -20,7 +20,7 @@ You can learn how Wazuh detects:
 
 The attacker does not try to steal the whole prefix. They:
 
-1. Announce a **more-specific subprefix**
+1. Announce a more-specific subprefix
 2. Let longest-prefix match do the work
 3. Capture or redirect part of the traffic
 4. Avoid breaking anything loudly
@@ -36,7 +36,7 @@ Running:
 python -m simulator.cli simulator/scenarios/medium/subprefix_intercept/scenario.yaml
 ```
 
-produces a **time-ordered stream of JSON events** representing:
+produces a time-ordered stream of JSON events representing:
 
 * Legitimate baseline announcements
 * Subprefix announcements
@@ -48,10 +48,12 @@ produces a **time-ordered stream of JSON events** representing:
 Every event contains:
 
 ```json
-"scenario": {
-  "name": "subprefix-intercept",
-  "attack_step": "...",
-  "incident_id": "..."
+{
+  "scenario": {
+    "name": "subprefix-intercept",
+    "attack_step": "...",
+    "incident_id": "..."
+  }
 }
 ```
 
@@ -122,7 +124,7 @@ Agent config:
 ### Why this matters
 
 * /25 beats /24
-* This is **legal BGP**
+* This is legal BGP
 * No RPKI violation if ROAs allow it or are absent
 
 On its own, this is suspicious but not proof.
@@ -220,7 +222,7 @@ The simulator emits:
 * Occasional peer visibility logs
 * No dramatic errors
 
-This is intentional. Subprefix interception succeeds because it is **boring**.
+This is intentional. Subprefix interception succeeds because it is boring.
 
 Wazuh correlation should now show:
 
@@ -229,7 +231,7 @@ Wazuh correlation should now show:
 * Time overlap
 * Performance degradation
 
-This is where a **medium-to-high severity alert** is justified.
+This is where a medium-to-high severity alert is justified.
 
 ## 7. Quiet withdrawal
 

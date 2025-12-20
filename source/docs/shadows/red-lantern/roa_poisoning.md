@@ -1,4 +1,4 @@
-# Wazuh lab: ROA poisoning / control-plane manipulation
+# Wazuh lab: ROA poisoning/control-plane manipulation
 
 ## Purpose of this lab
 
@@ -43,13 +43,15 @@ You get a timeline of JSON events that include:
 * Flapping noise
 * Cleanup actions
 
-Each event includes:
+Each event includes something like:
 
 ```json
-"scenario": {
-  "name": "roa-poisoning",
-  "attack_step": "...",
-  "incident_id": "..."
+{
+  "scenario": {
+    "name": "roa-poisoning",
+    "attack_step": "...",
+    "incident_id": "..."
+  }
 }
 ```
 
