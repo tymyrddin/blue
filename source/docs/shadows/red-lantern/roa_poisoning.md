@@ -65,8 +65,8 @@ You need:
 * At least one Wazuh agent (can be on the same machine)
 * Custom decoders and rules installed:
 
-  * `wazuh/decoders/bgp_decoders.xml`
-  * `wazuh/rules/signal_*.xml`
+  * [wazuh/decoders/bgp_decoders.xml](https://github.com/ninabarzh/red-lantern-sim/blob/main/wazuh/decoders/bgp_decoders.xml)
+  * [wazuh/rules/signal_*.xml](https://github.com/ninabarzh/red-lantern-sim/tree/main/wazuh/rules)
 
 No OpenSearch dashboards required for the lab. Logs and alerts are enough.
 
@@ -165,13 +165,10 @@ This is important: Plenty of networks have weird logins. Context matters.
 
 ### What Wazuh should detect
 
-This is not normal operational noise.
-
-Expected behaviour:
+This is not normal operational noise. Expected behaviour:
 
 * Alert on ROA deletion
 * Link it to:
-
   * user
   * prefix
   * previous access anomaly
@@ -197,9 +194,7 @@ At this point, a medium-severity alert is justified.
 
 ### Why this matters
 
-This is the *mechanical consequence* of the previous step.
-
-Wazuh should now be able to correlate:
+This is the *mechanical consequence* of the previous step. Wazuh should now be able to correlate:
 
 * ROA removal
 * RPKI validation change
@@ -231,7 +226,6 @@ Policy changes during an RPKI incident are never innocent. Wazuh should:
 
 * Flag unauthorised config change
 * Correlate with:
-
   * earlier access
   * ROA manipulation
   * same user

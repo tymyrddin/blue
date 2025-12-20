@@ -274,16 +274,3 @@ The network “fixes itself”. Do not close the incident automatically. This wa
 * Understanding BGP mechanics
 * Recognising interception vs hijack
 * Resisting alert fatigue
-
-## Differences ROA poisoning
-
-| ROA poisoning             | Subprefix intercept      |
-|---------------------------|--------------------------|
-| Administrative compromise | Routing abuse            |
-| RPKI involved             | Often no RPKI            |
-| Loud policy changes       | Quiet protocol behaviour |
-| Breaks validation         | Exploits longest-match   |
-
-Both are control-plane attacks. Only one leaves paperwork.
-
-
