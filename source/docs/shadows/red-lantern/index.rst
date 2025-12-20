@@ -10,6 +10,15 @@ No paperwork exists that uses either of these names. Several people use them any
    :glob:
    :maxdepth: 1
    :includehidden:
+   :caption: Information:
+
+   internal-notice-tss.md
+   internal-briefing-doss.md
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
    :caption: Lab walkthroughs:
 
    fat_finger_hijack.md
@@ -33,15 +42,6 @@ No paperwork exists that uses either of these names. Several people use them any
    Rootways of the World Tree (@Internet) <https://red.tymyrddin.dev/docs/in/network/roots/>
    philosophy.md
    tradeoffs.md
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-   :caption: Information:
-
-   internal-notice-tss.md
-   internal-briefing-doss.md
 
 .. raw:: html
 
