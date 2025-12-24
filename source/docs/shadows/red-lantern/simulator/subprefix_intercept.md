@@ -1,4 +1,4 @@
-# Wazuh lab: subprefix interception
+# Subprefix interception
 
 ## Purpose of this lab
 

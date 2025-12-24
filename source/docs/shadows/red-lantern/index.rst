@@ -4,45 +4,30 @@ Observing Red Lanterns and False Horizons
 .. image:: /_static/images/red-lanterns.png
    :alt: Night over steampunk city Ankh-Morpork, viewed from high above; the city sprawls deep below; about 20 glowing red oil lanterns are visible in the city, forming a subtle, intricate irregular network of signals.
 
-No paperwork exists that uses either of these names. Several people use them anyway, which is how one knows it is real.
+In light of recent, tolerably informative irregularities within the city's signalling apparatus, a controlled
+expansion of our observational cadre is deemed a prudent, pre-emptive measure. This accelerated induction will focus
+not on the scholarly depths of guild taxonomy, but on the immediate, practical craft of watching the current, not
+the stone: training probationers in the core recognition of anomalous signal patterns, the swift correlation of
+whispers across district lines using our basic warrant-tools, and the cardinal discipline of non-intervention unless
+a direct threat to operational continuity is confirmed.
+
+The objective is to amplify our informational yield from the ongoing experimentation without disturbing its useful,
+reversible flow, ensuring we have more eyes on the tide without ever needing to reveal we built a dam.
 
 .. toctree::
    :glob:
-   :maxdepth: 1
+   :maxdepth: 2
    :includehidden:
-   :caption: Lab walkthroughs:
+   :caption: Alert eyes, silent observation.
 
-   fat_finger_hijack.md
-   subprefix_intercept.md
-   roa_poisoning.md
+   kickoff/index
+   foundation/index
+   tools/index
+   analysis/index
+   application/index
+   simulator/index
 
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-   :caption: Code:
 
-   Red Lantern simulator under construction @GitHub <https://github.com/ninabarzh/red-lantern-sim>
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-   :caption: Documentation:
-
-   Border Gateway Protocol (BGP and MP-BGP) <https://red.tymyrddin.dev/docs/in/network/roots/bgp/>
-   philosophy.md
-   tradeoffs.md
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-   :caption: Notes:
-
-   internal-notice-tss.md
-   internal-briefing-doss.md
-   to-his-eminence.md
 
 .. raw:: html
 

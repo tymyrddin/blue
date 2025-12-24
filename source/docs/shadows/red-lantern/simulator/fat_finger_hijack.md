@@ -1,4 +1,4 @@
-# Wazuh lab: fat-finger hijack
+# Fat-finger hijack
 
 ## Purpose of this lab
 

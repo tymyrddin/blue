@@ -1,4 +1,4 @@
-# Wazuh lab: ROA poisoning/control-plane manipulation
+# ROA poisoning/control-plane manipulation
 
 ## Purpose of this lab
 
