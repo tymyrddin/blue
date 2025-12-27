@@ -1,4 +1,6 @@
-# To His Eminence, the Patrician of Ankh‑Morpork, (Dec 20, 2025)
+# To His Eminence, the Patrician of Ankh‑Morpork
+
+December 20, 2025
 
 Sir,
 
