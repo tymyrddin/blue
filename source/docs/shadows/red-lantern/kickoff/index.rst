@@ -15,6 +15,8 @@ No paperwork exists that uses either of these names. Several people use them any
    internal-notice-tss.md
    internal-briefing-doss.md
    to-his-eminence.md
+   tradeoffs.md
+   philosophy.md
 
 .. raw:: html
 

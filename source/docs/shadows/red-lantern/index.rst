@@ -21,18 +21,19 @@ reversible flow, ensuring we have more eyes on the tide without ever needing to 
    :caption: Alert eyes, silent observation.
 
    kickoff/index
-   foundation/index
-   tools/index
-   analysis/index
-   application/index
+   detection/index
+   correlation/index
+   response/index
+   threat-intel/index
+   training/index
+   purple-team/index
+   advanced/index
    simulator/index
-
-
 
 .. raw:: html
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://red.tymyrddin.dev/docs/scarlet/op-red-lantern/">Gather more intelligence</a>
+                <a href="https://red.tymyrddin.dev/docs/scarlet/op-red-lantern/">Request Calibrated Advice</a>
             </div>
         </div>
