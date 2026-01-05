@@ -1,12 +1,15 @@
 Event correlation
 ======================================================
 
+Event correlation is the work of linking related security alerts across different systems to see the full story of
+an attack. The Red Lantern simulator lets you test correlation rules for complex, multi-stage attacks, for spotting a
+coordinated campaign instead of just random noise.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: The unreal embassy & live-fire drills
+   :caption: Connect the dots
 
    fundamentals.md
    practice.md

@@ -1,12 +1,14 @@
 Advanced topics
 ======================================================
 
+For advanced work, adapt the Red Lantern simulator to tackle your specific challenges. This means building custom
+attack scenarios, plugging in new sources of data, or creating integrations for specialised testing.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: The unreal embassy & live-fire drills
+   :caption: Bend the tool to fit your own tricky problems.
 
    scenarios.md
    feeds.md

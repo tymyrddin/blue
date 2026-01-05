@@ -1,12 +1,14 @@
 Analyst training
 ======================================================
 
+Good analyst training needs hands-on practice, not just theory. The Red Lantern simulator acts as a safe training
+ground where analysts can look into (more or less) realistic attack patterns.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: The unreal embassy & live-fire drills
+   :caption: Build sharp investigation skills without the real-world risk.
 
    exercises.md
    mode.md

@@ -17,7 +17,7 @@ The Department of Silent Stability has learned (sometimes the hard way) that goo
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: The unreal embassy & live-fire drills
+   :caption: The unreal embassy & live-fire exercises
 
    generic.md
    decoders.md

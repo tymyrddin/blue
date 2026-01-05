@@ -2,7 +2,7 @@
 
 ## Getting simulator output into Wazuh
 
-The [Red Lantern simulator](https://github.com/ninabarzh/red-lantern-sim) generates events. Wazuh needs to receive those events. How you connect them depends on your environment and testing goals. The Department has tried several approaches, some more successful than others.
+The [Red Lantern simulator generates events](https://github.com/ninabarzh/red-lantern-sim/tree/main/examples). Wazuh needs to receive those events. How you connect them depends on your environment and testing goals. The Department has tried several approaches, some more successful than others.
 
 The fundamental question is whether you want real-time event streaming or batch file ingestion. Real-time feels more production-like but requires network connectivity and proper syslog configuration. Batch ingestion is simpler for initial testing but does not test your actual log pipeline.
 
@@ -15,10 +15,11 @@ There is no universally correct choice. Pick the approach that matches your test
 The simplest approach sends simulator output directly to Wazuh's syslog port:
 
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml | nc wazuh-server 514
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml | nc wazuh-server 514
 ```
 
-This pipes JSON events to netcat which forwards them to Wazuh on port 514 (standard syslog port). Wazuh receives events in real-time as the simulator generates them.
+This pipes JSON events to netcat which forwards them to Wazuh on port 514 (standard syslog port). Wazuh receives 
+events in real-time as the simulator generates them.
 
 **Advantages:**
 - Simple to set up
@@ -35,13 +36,13 @@ This pipes JSON events to netcat which forwards them to Wazuh on port 514 (stand
 Netcat is fire-and-forget. If the connection fails, events disappear. Socat provides more robust forwarding:
 
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml | socat - TCP:wazuh-server:514
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml | socat - TCP:wazuh-server:514
 ```
 
 Socat handles connection errors more gracefully and supports TLS for encrypted transport:
 
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml | socat - OPENSSL:wazuh-server:6514,verify=0
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml | socat - OPENSSL:wazuh-server:6514,verify=0
 ```
 
 This uses port 6514 with TLS encryption. The `verify=0` disables certificate validation, which is acceptable for testing but not production. For production, use proper certificates and remove that option.
@@ -51,7 +52,7 @@ This uses port 6514 with TLS encryption. The `verify=0` disables certificate val
 Write simulator output to a file and configure Wazuh to monitor it:
 
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml --output json --json-file /var/log/simulator/hijack.json
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml --output json --json-file /var/log/simulator/hijack.json
 ```
 
 Configure Wazuh to monitor this file in `/var/ossec/etc/ossec.conf`:
@@ -346,7 +347,7 @@ Track rule performance over time to catch degradation:
 # performance_test.sh
 
 ITERATIONS=100
-SCENARIO="simulator/scenarios/easy/fat_finger_hijack/scenario.yaml"
+SCENARIO="simulator/scenarios/easy/playbook1/scenario.yaml"
 
 echo "Running performance test ($ITERATIONS iterations)..."
 

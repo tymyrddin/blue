@@ -14,11 +14,11 @@ Start with the straightforward scenarios. If your rules cannot catch a clumsy, o
 
 To run the "fat finger" hijack scenario and send its output directly to your Wazuh server's syslog port
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml | nc your-wazuh-server-ip 514
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml | nc your-wazuh-server-ip 514
 ```
 To save the output to a JSON file for Wazuh to read later
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml --output json --json-file /var/log/simulator_test.json
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml --output json --json-file /var/log/simulator_test.json
 ```
 Then, check `/var/ossec/logs/alerts/alerts.json` for any alerts that fired.
 
@@ -81,7 +81,7 @@ A rule that fires for every attack but also for a hundred normal events is worse
 
 The simulator can generate background noise, normal BGP updates and configuration changes, against which your rules must operate.
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml --background --bgp-noise-rate 1.0
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml --background --bgp-noise-rate 1.0
 ```
 Run this for a while, then check your alerts. Calculate a simple false positive rate
 ```bash
@@ -130,7 +130,7 @@ You will test your rules often. Automate it. Here is a foundational script to bu
 ```bash
 #!/bin/bash
 # test_rules.sh
-SCENARIO="simulator/scenarios/easy/fat_finger_hijack/scenario.yaml"
+SCENARIO="simulator/scenarios/easy/playbook1/scenario.yaml"
 ALERT_LOG="/var/ossec/logs/alerts/alerts.json"
 TEST_LOG="/tmp/test_output.json"
 

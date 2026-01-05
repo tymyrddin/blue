@@ -214,7 +214,7 @@ Paste a sample log line, and it will show you which decoders matched and what fi
 This is the best way to see if your detection pipeline holds water. Run a simulator scenario and pipe it to the test tool
 
 ```bash
-python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml | /var/ossec/bin/wazuh-logtest
+python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml | /var/ossec/bin/wazuh-logtest
 ```
 
 If your fields are not extracting, you will know immediately, and can adjust your decoder before it faces real traffic.

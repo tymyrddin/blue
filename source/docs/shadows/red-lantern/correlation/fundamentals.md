@@ -235,7 +235,7 @@ Run multiple scenarios to establish baseline:
 
 ```bash
 for i in {1..10}; do
-    python -m simulator.cli simulator/scenarios/easy/fat_finger_hijack/scenario.yaml --background
+    python -m simulator.cli simulator/scenarios/easy/playbook1/scenario.yaml --background
 done
 ```
 

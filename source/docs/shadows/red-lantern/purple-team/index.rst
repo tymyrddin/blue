@@ -1,12 +1,15 @@
 Purple Team operations
 ======================================================
 
+Purple teaming is where red (attack) and blue (defence) teams collaborate to test security controls. The simulator
+gives a structured way to run these sessions, letting you focus on specific BGP attack tricks and immediately see if
+your defences would spot them.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: The unreal embassy & live-fire drills
+   :caption: Working together.
 
    testing.md
    gaps.md

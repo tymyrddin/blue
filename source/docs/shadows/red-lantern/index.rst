@@ -28,7 +28,6 @@ reversible flow, ensuring we have more eyes on the tide without ever needing to 
    training/index
    purple-team/index
    advanced/index
-   simulator/index
 
 .. raw:: html
 
