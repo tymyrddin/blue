@@ -23,7 +23,7 @@ JSON output works well with Splunk's JSON parsing capabilities.
 
 Configure Splunk to monitor simulator output files:
 
-```ini
+```
 # inputs.conf
 [monitor:///var/log/simulator/*.json]
 sourcetype = red_lantern_json
@@ -36,7 +36,7 @@ Or forward via syslog to Splunk's syslog input (default port 514).
 
 Detect prefix announcements from unexpected origin ASNs:
 
-```spl
+```
 index=security sourcetype=red_lantern_json event_type="bgp_announcement"
 | where origin_asn != expected_origin
 | eval severity="high"
@@ -49,7 +49,7 @@ as high severity, and writes results to a lookup table for investigation.
 
 ### RPKI validation failure detection
 
-```spl
+```
 index=security sourcetype=red_lantern_json event_type="rpki_validation" validation_state="invalid"
 | eval severity=case(
     match(prefix, "203\.0\.113\."), "critical",
@@ -64,7 +64,7 @@ This detects RPKI validation failures and escalates severity for critical prefix
 
 Detect reconnaissance followed by hijack from the same source within one hour:
 
-```spl
+```
 index=security sourcetype=red_lantern_json 
   (event_type="reconnaissance" OR (event_type="bgp_announcement" AND origin_asn!=expected_origin))
 | transaction source_ip maxspan=1h
@@ -98,7 +98,7 @@ This runs every 5 minutes and emails the security team when hijacks are detected
 
 If you use Splunk ES, create a correlation search:
 
-```spl
+```
 | tstats count where index=security sourcetype=red_lantern_json event_type="bgp_announcement" by _time, origin_asn, expected_origin, prefix
 | where origin_asn != expected_origin
 | `notable("BGP Hijack Detected", "high")`
@@ -176,7 +176,8 @@ Rule type: Custom query
 Index patterns: `red-lantern-*`
 
 KQL query:
-```kql
+
+```
 event_type: "bgp_announcement" and origin_asn: * and expected_origin: * and not origin_asn: expected_origin
 ```
 
@@ -191,14 +192,16 @@ This rule fires when a BGP announcement's origin ASN does not match the expected
 ### RPKI validation failure rule
 
 KQL query:
-```kql
+
+```
 event_type: "rpki_validation" and validation_state: "invalid"
 ```
 
 With threshold for escalation (multiple failures from same source):
 
 Threshold rule:
-```kql
+
+```
 event_type: "rpki_validation" and validation_state: "invalid"
 ```
 Threshold: Count >= 5, Group by `source_ip`, Within 10 minutes
@@ -209,7 +212,7 @@ This escalates only when the same source generates multiple RPKI failures, reduc
 
 Elastic's EQL (Event Query Language) excels at sequence detection:
 
-```eql
+```
 sequence by source_ip with maxspan=1h
   [any where event_type == "reconnaissance"]
   [any where event_type == "bgp_announcement" and origin_asn != expected_origin]
@@ -227,7 +230,7 @@ Indicator mapping:
 - `asn` (threat intel) maps to `origin_asn` (event data)
 
 Query:
-```kql
+```
 event_type: "bgp_announcement"
 ```
 
@@ -287,7 +290,7 @@ Or use a custom log ingestion pipeline with the
 
 Create an analytics rule in Sentinel:
 
-```kql
+```
 RedLanternLogs_CL
 | where event_type_s == "bgp_announcement"
 | where origin_asn_s != expected_origin_s
@@ -304,7 +307,7 @@ Rule settings:
 
 ### RPKI validation failure detection
 
-```kql
+```
 RedLanternLogs_CL
 | where event_type_s == "rpki_validation"
 | where validation_state_s == "invalid"
@@ -321,15 +324,13 @@ This detects RPKI failures and escalates based on prefix criticality.
 
 Sentinel excels at cross-workspace queries and long-term correlation:
 
-```kql
+```text
 let recon = RedLanternLogs_CL
 | where event_type_s == "reconnaissance"
-| project TimeGenerated, source_ip_s;
-let hijack = RedLanternLogs_CL
+| project TimeGenerated, source_ip_s;let hijack = RedLanternLogs_CL
 | where event_type_s == "bgp_announcement"
 | where origin_asn_s != expected_origin_s
-| project TimeGenerated, source_ip_s;
-recon
+| project TimeGenerated, source_ip_s;recon
 | join kind=inner (hijack) on source_ip_s
 | where (hijack_TimeGenerated - TimeGenerated) between (0min .. 60min)
 | project ReconTime=TimeGenerated, HijackTime=hijack_TimeGenerated, source_ip_s
@@ -341,7 +342,7 @@ This correlates reconnaissance with subsequent hijacks from the same source with
 
 Sentinel's Fusion ML can correlate multiple low-confidence signals into high-confidence alerts. Enable Fusion for your workspace and tag BGP events appropriately:
 
-```kql
+```
 RedLanternLogs_CL
 | extend AlertType = case(
     event_type_s == "reconnaissance", "Reconnaissance",
@@ -356,7 +357,7 @@ Fusion will automatically correlate these into multi-stage attack incidents.
 
 Create a Sentinel workbook for BGP monitoring:
 
-```kql
+```
 // BGP Announcements Over Time
 RedLanternLogs_CL
 | where event_type_s == "bgp_announcement"
@@ -416,7 +417,7 @@ Or forward via syslog to Chronicle's ingestion endpoint.
 
 YARA-L rule for anomalous announcements:
 
-```yara
+```
 rule bgp_hijack_detection {
   meta:
     author = "Department of Silent Stability"
@@ -439,7 +440,7 @@ represents the expected owner.
 
 ### RPKI validation failure detection
 
-```yara
+```
 rule rpki_validation_failure {
   meta:
     author = "Department of Silent Stability"
@@ -459,7 +460,7 @@ rule rpki_validation_failure {
 
 YARA-L excels at correlating events across time windows:
 
-```yara
+```
 rule bgp_attack_chain {
   meta:
     author = "Department of Silent Stability"
@@ -488,7 +489,7 @@ temporal ordering.
 
 Detect multiple RPKI failures from the same source:
 
-```yara
+```
 rule multiple_rpki_failures {
   meta:
     author = "Department of Silent Stability"
@@ -517,7 +518,7 @@ This triggers when a source generates 5 or more RPKI failures in 10 minutes.
 
 Chronicle supports reference lists (threat intelligence feeds):
 
-```yara
+```
 rule bgp_announcement_from_threat_asn {
   meta:
     author = "Department of Silent Stability"

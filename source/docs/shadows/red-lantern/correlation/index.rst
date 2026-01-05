@@ -12,7 +12,9 @@ coordinated campaign instead of just random noise.
    :caption: Connect the dots
 
    fundamentals.md
-   practice.md
+   multi-stage.md
+   cross-source.md
+   rules.md
    platforms.md
 
 

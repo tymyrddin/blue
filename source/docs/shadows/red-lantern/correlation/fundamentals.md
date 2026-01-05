@@ -378,7 +378,7 @@ Weaknesses: Smaller ecosystem, newer platform.
 ## Next steps
 
 You now understand the fundamentals of event correlation and common attack patterns. Proceed to 
-[Practical correlation with the simulator](practice.md) to implement these concepts with real scenarios, or jump 
+[Practical correlation with the simulator](multi-stage) to implement these concepts with real scenarios, or jump 
 to [Correlation in different platforms](/docs/shadows/red-lantern/correlation/platforms/) for platform-specific syntax.
 
 Remember that correlation is not magic. It is structured thinking about how attacks unfold and translating that 
