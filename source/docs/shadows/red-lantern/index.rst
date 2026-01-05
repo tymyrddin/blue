@@ -18,7 +18,7 @@ reversible flow, ensuring we have more eyes on the tide without ever needing to 
    :glob:
    :maxdepth: 2
    :includehidden:
-   :caption: Alert eyes, silent observation.
+   :caption: Alert eyes, silent observation. Under construction.
 
    kickoff/index
    detection/index
