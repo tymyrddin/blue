@@ -16,7 +16,7 @@ The playbook scenarios demonstrate attacks that span BGP announcements, RPKI val
 
 At T+60 in playbook 3, the attacker announces the hijacked prefix:
 
-**BGP feed event:**
+BGP feed event:
 ```json
 {
   "timestamp": "2025-12-28T14:01:00Z",
@@ -29,7 +29,8 @@ At T+60 in playbook 3, the attacker announces the hijacked prefix:
 }
 ```
 
-**RPKI validator event (same time):**
+RPKI validator event (same time):
+
 ```json
 {
   "timestamp": "2025-12-28T14:01:00Z",
@@ -42,7 +43,8 @@ At T+60 in playbook 3, the attacker announces the hijacked prefix:
 }
 ```
 
-**Router log event (slightly later):**
+Router log event (slightly later):
+
 ```
 2025-12-28 14:01:15 router01 %BGP-5-ADJCHANGE, neighbour 198.51.100.1 route-refresh received
 2025-12-28 14:01:16 router01 %ROUTING-5-UPDATE, prefix 203.0.113.128/25 added via 198.51.100.1
@@ -137,7 +139,7 @@ Correlation rule detecting hijack across all three sources:
 
 This three-stage correlation triggers only when BGP announcement, RPKI validation, and router propagation all occur for the same prefix within a short timeframe. Level 12 because this represents confirmed attack with multiple corroborating sources.
 
-**Limitation:** This assumes all three log sources use compatible prefix notation and timing. In practice, BGP feeds might report prefixes in CIDR (203.0.113.128/25), routers might use decimal mask notation (203.0.113.128 255.255.255.128), and RPKI validators might normalise differently. Field normalisation is necessary but Wazuh lacks built-in capabilities for this. You need preprocessing (Logstash, custom scripts) or accept that some correlations will fail due to format mismatches.
+Limitation: This assumes all three log sources use compatible prefix notation and timing. In practice, BGP feeds might report prefixes in CIDR (203.0.113.128/25), routers might use decimal mask notation (203.0.113.128 255.255.255.128), and RPKI validators might normalise differently. Field normalisation is necessary but Wazuh lacks built-in capabilities for this. You need preprocessing (Logstash, custom scripts) or accept that some correlations will fail due to format mismatches.
 
 ## Change management plus routing anomalies
 
@@ -147,7 +149,7 @@ The playbook scenarios demonstrate attacks enabled by unauthorised configuration
 
 At T+60 in playbook 2, compromised credentials are used:
 
-**Authentication log (TACACS or RIR portal):**
+Authentication log (TACACS or RIR portal):
 ```json
 {
   "timestamp": "2025-12-28T14:01:00Z",
@@ -160,7 +162,7 @@ At T+60 in playbook 2, compromised credentials are used:
 }
 ```
 
-**CMDB event (should exist but does not):**
+CMDB event (should exist but does not):
 ```json
 {
   "timestamp": "2025-12-28T14:01:00Z",
@@ -172,7 +174,7 @@ At T+60 in playbook 2, compromised credentials are used:
 }
 ```
 
-**ROA creation event (T+120):**
+ROA creation event (T+120):
 ```json
 {
   "timestamp": "2025-12-28T14:02:00Z",
@@ -236,7 +238,7 @@ The sequence is suspicious login, no corresponding change ticket, ROA creation. 
 
 This requires your CMDB to emit searchable events when someone queries for change tickets. Many CMDB systems lack this capability. If your CMDB cannot proactively report "no ticket found," you need a different approach.
 
-**Alternative approach without CMDB integration:**
+Alternative approach without CMDB integration:
 
 ```xml
 <!-- Alert on ROA creation, let analysts manually check tickets -->
@@ -256,13 +258,13 @@ Router configuration changes should correlate with authentication events. If BGP
 
 ### Detecting BGP session manipulation
 
-**TACACS authentication log:**
+TACACS authentication log:
 ```
 2025-12-28 14:01:00 tacacs_server user=operator@attacker-as64513.net device=router01 command=conf t action=permitted
 2025-12-28 14:01:05 tacacs_server user=operator@attacker-as64513.net device=router01 command=router bgp 65001 action=permitted
 ```
 
-**Router BGP session establishment (from playbook 3):**
+Router BGP session establishment (from playbook 3):
 ```json
 {
   "timestamp": "2025-12-28T14:01:30Z",
@@ -276,7 +278,7 @@ Router configuration changes should correlate with authentication events. If BGP
 
 The TACACS log shows someone entering BGP configuration mode. Thirty seconds later, a new BGP session establishes. This correlation is expected and normal.
 
-**Suspicious scenario (no TACACS correlation):**
+Suspicious scenario (no TACACS correlation):
 
 BGP session establishes without preceding TACACS authentication. This suggests either the router was accessed via different credentials (console, SSH key without TACACS, compromised SNMP) or the session was established remotely without local authentication.
 
@@ -331,7 +333,7 @@ BGP session establishes without preceding TACACS authentication. This suggests e
 
 The `match_absence` attribute detects when expected correlation is missing. If a BGP session establishes but TACACS did not log corresponding BGP configuration commands within 5 minutes, alert.
 
-**Limitation:** This assumes TACACS logs are complete and that all router access goes through TACACS. Many environments have gaps (emergency console access, SNMP, legacy accounts). False positives are likely. Tune by whitelisting known exceptions (maintenance windows, monitoring systems, automated backup scripts).
+Limitation: This assumes TACACS logs are complete and that all router access goes through TACACS. Many environments have gaps (emergency console access, SNMP, legacy accounts). False positives are likely. Tune by whitelisting known exceptions (maintenance windows, monitoring systems, automated backup scripts).
 
 ## Timestamp synchronisation challenges
 
@@ -347,7 +349,7 @@ The simulator uses consistent timestamps across all events because it is a simul
 
 Wazuh must normalise these into comparable formats. Some decoders extract timestamps. Others let Wazuh assign receive time. Correlation timeframes must account for clock skew.
 
-**Practical approach:**
+Practical approach:
 
 Use generous timeframes (60-300 seconds) to accommodate timestamp drift. This increases false positives (unrelated events correlate by coincidence) but reduces false negatives (related events fail to correlate due to timing mismatch). Tighter timeframes require better timestamp synchronisation across your infrastructure, which is an NTP problem more than a SIEM problem.
 
@@ -361,11 +363,11 @@ Different sources use different field names for the same concept:
 
 Wazuh correlation requires exact field name matches. Without normalisation, rules looking for `origin_as` will not match logs using `origin_asn`.
 
-**Solutions:**
+Solutions:
 
-1. **Preprocessing with Logstash:** Normalise field names before logs reach Wazuh
-2. **Wazuh decoder aliasing:** Extract fields under consistent names regardless of source
-3. **Accept imperfect correlation:** Some events will not correlate due to field name mismatches
+1. Preprocessing with Logstash: Normalise field names before logs reach Wazuh
+2. Wazuh decoder aliasing: Extract fields under consistent names regardless of source
+3. Accept imperfect correlation: Some events will not correlate due to field name mismatches
 
 The Department uses Logstash preprocessing for critical sources and accepts imperfect correlation for less important ones. Perfect normalisation across all sources is theoretically possible but practically expensive in terms of configuration maintenance.
 
@@ -373,12 +375,12 @@ The Department uses Logstash preprocessing for critical sources and accepts impe
 
 Cross-source correlation is complex and fragile. It breaks when log sources change format, when timestamps drift, when field names vary. It requires maintaining decoders for multiple sources, normalising fields, tuning timeframes, and accepting false positives.
 
-**Worth the effort when:**
+Worth the effort when:
 - Detecting sophisticated attacks that span multiple systems (playbook scenarios)
 - Regulatory requirements mandate correlation (PCI-DSS, NIS2)
 - Budget exists for log aggregation and normalisation infrastructure
 
-**Not worth the effort when:**
+Not worth the effort when:
 - Single-source detection catches most attacks adequately
 - Log sources are unstable or frequently change format
 - Analyst capacity cannot handle additional alert volume from correlation false positives
