@@ -2,421 +2,519 @@
 
 ## Why single-source detection fails
 
-BGP attacks manifest across multiple systems. The attacker announces a hijacked prefix (BGP feed), validators incorrectly endorse it as valid (RPKI validator), routers accept and propagate it (router logs), configuration changes enable the attack (CMDB), and authentication logs show who made those changes (TACACS, RADIUS, or RIR portal logs).
+BGP attacks manifest across multiple log sources. The attacker announces a hijacked prefix (BMP feed), validators incorrectly endorse it as valid (RPKI validator logs), routers accept and propagate it (router syslog), configuration changes enable the attack (router configuration), and authentication logs show who made those changes (TACACS).
 
-Examining any single source misses the complete picture. BGP logs show an announcement but cannot tell you if it is authorised. RPKI validators say "valid" without context about whether the ROA itself is fraudulent. Router logs show configuration changes without explaining why. CMDB shows change tickets but cannot verify if they correspond to actual routing events.
+Examining any single source misses the complete picture. BMP logs show an announcement but cannot tell you if validators endorsed it. RPKI validators say "valid" without context about whether the ROA itself is fraudulent. Router logs show configuration changes without explaining who authenticated. TACACS shows logins without showing what happened afterwards.
 
-Cross-source correlation assembles fragments from different systems into a coherent attack narrative. This is substantially more difficult than single-source detection because each system has different log formats, different field names, different timestamps, and different levels of detail. The Department has spent considerable effort normalising logs from disparate sources, and it remains an ongoing maintenance burden.
+Cross-source correlation assembles fragments from different log streams into a coherent attack narrative. This is substantially more difficult than single-source detection because each log source has different formats, different timestamps, and different levels of detail. The Department has spent considerable effort making these correlations work, and they remain fragile.
 
-## BGP feed plus RPKI validator plus router logs
+## What the simulator actually outputs
 
-The playbook scenarios demonstrate attacks that span BGP announcements, RPKI validation, and router behaviour. Correlating these three sources reveals attacks that single-source detection misses.
+Run playbook 3 and examine the different log types:
 
-### Playbook 3 example with three sources
-
-At T+60 in playbook 3, the attacker announces the hijacked prefix:
-
-BGP feed event:
-```json
-{
-  "timestamp": "2025-12-28T14:01:00Z",
-  "source": "bgp_feed",
-  "action": "hijack_announcement",
-  "prefix": "203.0.113.128/25",
-  "as_path": [65001, 64513],
-  "origin_as": 64513,
-  "peer_ip": "198.51.100.1"
-}
+```bash
+python -m simulator.cli simulator/scenarios/advanced/playbook3/scenario.yaml --mode practice --output cli
 ```
 
-RPKI validator event (same time):
-
-```json
-{
-  "timestamp": "2025-12-28T14:01:00Z",
-  "source": "rpki_validator",
-  "action": "rpki_validation_check",
-  "prefix": "203.0.113.128/25",
-  "origin_as": 64513,
-  "validation_result": "valid",
-  "validator": "cloudflare"
-}
-```
-
-Router log event (slightly later):
+Produces three distinct formats in one stream:
 
 ```
-2025-12-28 14:01:15 router01 %BGP-5-ADJCHANGE, neighbour 198.51.100.1 route-refresh received
-2025-12-28 14:01:16 router01 %ROUTING-5-UPDATE, prefix 203.0.113.128/25 added via 198.51.100.1
+BMP ROUTE: prefix 203.0.113.128/25 AS_PATH [65001, 64513] NEXT_HOP 198.51.100.254 ORIGIN_AS 64513
+<14>Jan 01 00:01:00 edge-router-01 BGP announcement: 203.0.113.128/25 from AS64513, RPKI validation: valid
+<30>Jan 01 00:03:00 cloudflare RPKI validation: 203.0.113.128/25 origin AS64513 -> valid
+<14>Jan 01 00:03:00 edge-router-01 RPKI validation: 203.0.113.128/25 AS64513 -> valid (cloudflare)
+<30>Jan 01 00:03:20 routinator RPKI validation: 203.0.113.128/25 origin AS64513 -> valid
 ```
 
-Each source independently shows part of the story. BGP feed shows the announcement. RPKI validator endorses it as valid. Router logs show acceptance and propagation. Correlated together, they show a hijack that passed validation.
+In production, these would arrive as separate log streams:
+- BMP feed from your BGP monitoring infrastructure
+- Router syslog from edge-router-01
+- RPKI validator logs from cloudflare, routinator, ripe validators
 
-### Wazuh correlation across three sources
+The simulator combines them for convenience. Real cross-source correlation requires ingesting all three streams and matching events based on prefix, timestamp, and origin AS.
 
-Wazuh needs separate decoders for each source:
+## BMP feed plus RPKI validator plus router logs
+
+The [multi-stage correlation page](multi-stage.md) showed decoders for each log type. Now we correlate events across 
+all three sources to catch attacks that single-source detection misses.
+
+### Splitting simulator output by source
+
+To test cross-source correlation properly, split the simulator output:
+
+```bash
+# Run simulator
+python -m simulator.cli simulator/scenarios/advanced/playbook3/scenario.yaml --mode practice --output cli > full_output.log
+
+# Extract BMP messages
+grep "^BMP ROUTE:" full_output.log > bmp_feed.log
+
+# Extract router syslog
+grep "edge-router-01" full_output.log > router_syslog.log
+
+# Extract validator logs
+grep -E "(cloudflare|routinator|ripe) RPKI validation:" full_output.log > validator.log
+```
+
+Now you have three separate log files simulating three separate sources.
+
+### Ingesting multiple sources into Wazuh
+
+Configure Wazuh to monitor all three:
 
 ```xml
-<!-- BGP feed decoder (JSON) -->
-<decoder name="bgp-feed-json">
-  <prematch>"source": "bgp_feed"</prematch>
-  <plugin_decoder>JSON_Decoder</plugin_decoder>
-</decoder>
-
-<!-- RPKI validator decoder (JSON) -->
-<decoder name="rpki-validator-json">
-  <prematch>"source": "rpki_validator"</prematch>
-  <plugin_decoder>JSON_Decoder</plugin_decoder>
-</decoder>
-
-<!-- Router syslog decoder -->
-<decoder name="router-syslog">
-  <prematch>%ROUTING-</prematch>
-</decoder>
-
-<decoder name="router-routing-update">
-  <parent>router-syslog</parent>
-  <regex offset="after_parent">(\d+)-UPDATE, prefix (\S+) added via (\S+)</regex>
-  <order>router.severity, router.prefix, router.next_hop</order>
-</decoder>
+<!-- /var/ossec/etc/ossec.conf -->
+<ossec_config>
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/simulator/bmp_feed.log</location>
+  </localfile>
+  
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/simulator/router_syslog.log</location>
+  </localfile>
+  
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/simulator/validator.log</location>
+  </localfile>
+</ossec_config>
 ```
 
-Parent rules for each source:
+Or send each to a different syslog port:
+
+```bash
+cat bmp_feed.log | nc wazuh-server 514 &
+cat router_syslog.log | nc wazuh-server 515 &
+cat validator.log | nc wazuh-server 516 &
+```
+
+The correlation rules do not care how logs arrive, only that decoders extract fields correctly from all three sources.
+
+### Three-source correlation detecting playbook 3 hijack
+
+From the [multi-stage correlation page](multi-stage.md), you have these parent rules:
 
 ```xml
-<!-- BGP feed events -->
-<rule id="100600" level="0">
-  <decoded_as>bgp-feed-json</decoded_as>
-  <description>BGP feed event</description>
-  <group>bgp,</group>
+<rule id="100700" level="0">
+  <decoded_as>bmp-route-details</decoded_as>
+  <description>BMP route message</description>
+  <group>bmp,bgp,</group>
 </rule>
 
-<!-- RPKI validator events -->
-<rule id="100610" level="0">
-  <decoded_as>rpki-validator-json</decoded_as>
-  <description>RPKI validator event</description>
-  <group>rpki,</group>
+<rule id="100710" level="0">
+  <decoded_as>router-bgp-announcement</decoded_as>
+  <description>Router BGP announcement</description>
+  <group>router,bgp,</group>
 </rule>
 
-<!-- Router events -->
-<rule id="100620" level="0">
-  <decoded_as>router-routing-update</decoded_as>
-  <description>Router routing update</description>
-  <group>router,</group>
+<rule id="100720" level="0">
+  <decoded_as>rpki-validator-result</decoded_as>
+  <description>RPKI validation result</description>
+  <group>rpki,validator,</group>
 </rule>
 ```
 
-Correlation rule detecting hijack across all three sources:
+Cross-source correlation rule:
 
 ```xml
-<!-- Step 1: BGP announcement observed -->
-<rule id="100601" level="5">
-  <if_sid>100600</if_sid>
-  <field name="action">hijack_announcement</field>
-  <description>BGP hijack announcement from feed</description>
-  <group>bgp,attack,</group>
+<!-- Stage 1: BMP shows prefix announcement -->
+<rule id="100800" level="4">
+  <if_sid>100700</if_sid>
+  <description>BMP route announcement observed</description>
+  <group>bmp,baseline,</group>
 </rule>
 
-<!-- Step 2: RPKI validator endorses it (incorrectly) -->
-<rule id="100611" level="7">
-  <if_sid>100610</if_sid>
-  <if_matched_sid>100601</if_matched_sid>
-  <timeframe>60</timeframe>
-  <field name="validation_result">valid</field>
-  <description>RPKI validator endorsed hijack as valid</description>
+<!-- Stage 2: Router logs BGP announcement with RPKI state -->
+<rule id="100801" level="6">
+  <if_sid>100710</if_sid>
+  <if_matched_sid>100800</if_matched_sid>
+  <match_prefix />
+  <timeframe>120</timeframe>
+  <description>Router logged announcement seen in BMP (cross-source correlation)</description>
+  <group>router,correlation,</group>
+</rule>
+
+<!-- Stage 3: Validators confirm RPKI state -->
+<rule id="100802" level="10">
+  <if_sid>100720</if_sid>
+  <if_matched_sid>100801</if_matched_sid>
+  <match_prefix />
+  <timeframe>120</timeframe>
+  <field name="rpki.state">valid</field>
+  <description>Multiple sources confirm RPKI-valid hijack (control-plane attack)</description>
   <group>rpki,attack,correlation,</group>
 </rule>
-
-<!-- Step 3: Router accepts and propagates -->
-<rule id="100621" level="12">
-  <if_sid>100620</if_sid>
-  <if_matched_sid>100611</if_matched_sid>
-  <timeframe>60</timeframe>
-  <description>Hijack propagated by router after RPKI validation (attack chain confirmed)</description>
-  <group>bgp,rpki,router,attack,correlation,</group>
-</rule>
 ```
 
-This three-stage correlation triggers only when BGP announcement, RPKI validation, and router propagation all occur for the same prefix within a short timeframe. Level 12 because this represents confirmed attack with multiple corroborating sources.
-
-Limitation: This assumes all three log sources use compatible prefix notation and timing. In practice, BGP feeds might report prefixes in CIDR (203.0.113.128/25), routers might use decimal mask notation (203.0.113.128 255.255.255.128), and RPKI validators might normalise differently. Field normalisation is necessary but Wazuh lacks built-in capabilities for this. You need preprocessing (Logstash, custom scripts) or accept that some correlations will fail due to format mismatches.
-
-## Change management plus routing anomalies
-
-The playbook scenarios demonstrate attacks enabled by unauthorised configuration changes. Correlating CMDB (change management database) with routing events catches changes that lack proper authorisation.
-
-### Playbook 2 credential compromise and ROA creation
-
-At T+60 in playbook 2, compromised credentials are used:
-
-Authentication log (TACACS or RIR portal):
-```json
-{
-  "timestamp": "2025-12-28T14:01:00Z",
-  "source": "rir_portal_auth",
-  "event_type": "login_success",
-  "user": "admin@victim-network.net",
-  "source_ip": "185.220.101.45",
-  "location": "Unknown",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0)"
-}
-```
-
-CMDB event (should exist but does not):
-```json
-{
-  "timestamp": "2025-12-28T14:01:00Z",
-  "source": "cmdb",
-  "event_type": "change_ticket_search",
-  "user": "admin@victim-network.net",
-  "query": "ROA creation 203.0.113.0/24",
-  "results": []
-}
-```
-
-ROA creation event (T+120):
-```json
-{
-  "timestamp": "2025-12-28T14:02:00Z",
-  "source": "rir_portal",
-  "action": "roa_creation_request",
-  "prefix": "203.0.113.0/24",
-  "origin_as": 64513,
-  "user": "admin@victim-network.net"
-}
-```
-
-The sequence is suspicious login, no corresponding change ticket, ROA creation. Each event alone might be innocent. Correlated, they suggest compromised account used for unauthorised infrastructure changes.
-
-### Wazuh correlation with CMDB integration
+The `match_prefix` is not a real Wazuh attribute. You need to match on the prefix field explicitly:
 
 ```xml
-<!-- Authentication events -->
-<rule id="100630" level="0">
-  <decoded_as>rir-portal-auth</decoded_as>
-  <description>RIR portal authentication event</description>
-  <group>authentication,</group>
-</rule>
-
-<!-- CMDB events -->
-<rule id="100640" level="0">
-  <decoded_as>cmdb-json</decoded_as>
-  <description>CMDB event</description>
-  <group>cmdb,</group>
-</rule>
-
-<!-- Detect login from unusual location -->
-<rule id="100631" level="6">
-  <if_sid>100630</if_sid>
-  <field name="event_type">login_success</field>
-  <field name="location">Unknown</field>
-  <description>Login from unknown location</description>
-  <group>authentication,suspicious,</group>
-</rule>
-
-<!-- Check if change ticket exists -->
-<rule id="100641" level="3">
-  <if_sid>100640</if_sid>
-  <field name="event_type">change_ticket_search</field>
-  <field name="results">[]</field>
-  <description>Change ticket search returned no results</description>
-  <group>cmdb,</group>
-</rule>
-
-<!-- Correlate ROA creation without ticket after suspicious login -->
-<rule id="100602" level="12">
-  <if_sid>100600</if_sid>
-  <if_matched_sid>100631</if_matched_sid>
-  <if_matched_sid>100641</if_matched_sid>
-  <same_user />
-  <timeframe>300</timeframe>
-  <field name="action">roa_creation_request</field>
-  <description>ROA creation without change ticket following suspicious login (possible account compromise)</description>
-  <group>rpki,attack,correlation,cmdb,</group>
+<!-- Corrected version -->
+<rule id="100801" level="6">
+  <if_sid>100710</if_sid>
+  <if_matched_sid>100800</if_matched_sid>
+  <field name="router.prefix">$bmp.prefix</field>
+  <timeframe>120</timeframe>
+  <description>Router logged announcement seen in BMP</description>
+  <group>router,correlation,</group>
 </rule>
 ```
 
-This requires your CMDB to emit searchable events when someone queries for change tickets. Many CMDB systems lack this capability. If your CMDB cannot proactively report "no ticket found," you need a different approach.
+Problem: Wazuh cannot reference field values from previous rules like `$bmp.prefix`. You need a different approach.
 
-Alternative approach without CMDB integration:
+### Practical cross-source correlation with Wazuh
+
+Wazuh's correlation is limited. It can detect "rule A fired, then rule B fired" but cannot easily compare field values across rules. For cross-source correlation based on matching fields (prefix, AS number), you have three options:
+
+Option 1: Use static field values
 
 ```xml
-<!-- Alert on ROA creation, let analysts manually check tickets -->
-<rule id="100603" level="8">
-  <if_sid>100600</if_sid>
-  <field name="action">roa_creation_request</field>
-  <description>ROA creation detected, verify change ticket exists</description>
-  <group>rpki,manual_verification_required,</group>
+<!-- Alert on BMP announcement for specific prefix -->
+<rule id="100803" level="4">
+  <if_sid>100700</if_sid>
+  <field name="bmp.prefix">203.0.113.128/25</field>
+  <description>BMP announcement for monitored prefix 203.0.113.128/25</description>
+  <group>bmp,monitored,</group>
+</rule>
+
+<!-- Alert on router announcement for same prefix -->
+<rule id="100804" level="6">
+  <if_sid>100710</if_sid>
+  <if_matched_sid>100803</if_matched_sid>
+  <field name="router.prefix">203.0.113.128/25</field>
+  <timeframe>120</timeframe>
+  <description>Router confirmed BMP announcement for 203.0.113.128/25</description>
+  <group>router,correlation,</group>
+</rule>
+
+<!-- Alert on validator for same prefix -->
+<rule id="100805" level="10">
+  <if_sid>100720</if_sid>
+  <if_matched_sid>100804</if_matched_sid>
+  <field name="rpki.prefix">203.0.113.128/25</field>
+  <field name="rpki.state">valid</field>
+  <timeframe>120</timeframe>
+  <description>Validators confirm RPKI-valid announcement for 203.0.113.128/25 (attack)</description>
+  <group>rpki,attack,correlation,</group>
 </rule>
 ```
 
-Level 8 generates an alert for manual review. Analysts check the CMDB themselves. Less automated, more labour-intensive, but works when your CMDB lacks API integration. Budget reality meets theoretical best practice.
+This works but only for prefixes you hardcode. Not scalable.
 
-## TACACS authentication plus BGP session changes
-
-Router configuration changes should correlate with authentication events. If BGP sessions are established or modified without corresponding authentication, someone is manipulating routers without logging in properly, which is worth investigating.
-
-### Detecting BGP session manipulation
-
-TACACS authentication log:
-```
-2025-12-28 14:01:00 tacacs_server user=operator@attacker-as64513.net device=router01 command=conf t action=permitted
-2025-12-28 14:01:05 tacacs_server user=operator@attacker-as64513.net device=router01 command=router bgp 65001 action=permitted
-```
-
-Router BGP session establishment (from playbook 3):
-```json
-{
-  "timestamp": "2025-12-28T14:01:30Z",
-  "source": "router_bgp",
-  "event_type": "bgp_session_established",
-  "peer_ip": "198.51.100.1",
-  "peer_as": 65001,
-  "local_as": 64513
-}
-```
-
-The TACACS log shows someone entering BGP configuration mode. Thirty seconds later, a new BGP session establishes. This correlation is expected and normal.
-
-Suspicious scenario (no TACACS correlation):
-
-BGP session establishes without preceding TACACS authentication. This suggests either the router was accessed via different credentials (console, SSH key without TACACS, compromised SNMP) or the session was established remotely without local authentication.
-
-### Wazuh correlation detecting unauthorised BGP changes
+Option 2: Use prefix ranges
 
 ```xml
-<!-- TACACS decoder -->
-<decoder name="tacacs-syslog">
-  <prematch>tacacs_server</prematch>
+<!-- Match any prefix in monitored block -->
+<rule id="100806" level="4">
+  <if_sid>100700</if_sid>
+  <field name="bmp.prefix" type="pcre2">^203\.0\.113\.</field>
+  <description>BMP announcement for monitored block 203.0.113.0/24</description>
+  <group>bmp,monitored,</group>
+</rule>
+
+<rule id="100807" level="6">
+  <if_sid>100710</if_sid>
+  <if_matched_sid>100806</if_matched_sid>
+  <field name="router.prefix" type="pcre2">^203\.0\.113\.</field>
+  <timeframe>120</timeframe>
+  <description>Router confirmed announcement in monitored block</description>
+  <group>router,correlation,</group>
+</rule>
+
+<rule id="100808" level="10">
+  <if_sid>100720</if_sid>
+  <if_matched_sid>100807</if_matched_sid>
+  <field name="rpki.prefix" type="pcre2">^203\.0\.113\.</field>
+  <field name="rpki.state">valid</field>
+  <timeframe>120</timeframe>
+  <description>Validators confirm RPKI-valid announcement in monitored block (attack)</description>
+  <group>rpki,attack,correlation,</group>
+</rule>
+```
+
+This triggers for any prefix in 203.0.113.0/24. More flexible but still requires knowing which blocks to monitor.
+
+Option 3: Export to external platform
+
+For dynamic cross-source correlation based on arbitrary field matches, use Splunk, Elastic, or Sentinel. Forward Wazuh alerts to these platforms and write correlation searches there.
+
+Wazuh example forwarding to Splunk:
+
+```xml
+<!-- /var/ossec/etc/ossec.conf -->
+<syslog_output>
+  <server>splunk-server</server>
+  <port>514</port>
+  <format>json</format>
+</syslog_output>
+```
+
+Then in Splunk:
+
+```spl
+index=wazuh source=wazuh 
+| transaction prefix maxspan=2m 
+  startswith=(rule.id=100700) 
+  endswith=(rule.id=100720)
+| where mvcount(rule.id) >= 3
+```
+
+This correlates events with the same prefix across sources regardless of which prefix it is. Wazuh cannot do this natively.
+
+## TACACS authentication plus ROA creation
+
+Playbook 2 shows credential use followed by ROA creation:
+
+```
+Jan 01 00:01:00 tacacs-server admin@victim-network.net login from 185.220.101.45
+<29>Jan 01 00:02:00 ARIN ROA creation request: 203.0.113.0/24 origin AS64513 maxLength /25 by admin@victim-network.net via ARIN
+```
+
+Correlating authentication with ROA creation detects compromised accounts used for infrastructure manipulation.
+
+### Decoders for both sources
+
+From the [multi-stage correlation page](multi-stage.md):
+
+```xml
+<!-- TACACS authentication -->
+<decoder name="tacacs-auth">
+  <prematch>tacacs-server</prematch>
 </decoder>
 
-<decoder name="tacacs-command">
-  <parent>tacacs-syslog</parent>
-  <regex offset="after_parent">user=(\S+) device=(\S+) command=(.*) action=(\w+)</regex>
-  <order>tacacs.user, tacacs.device, tacacs.command, tacacs.action</order>
+<decoder name="tacacs-login">
+  <parent>tacacs-auth</parent>
+  <regex offset="after_parent">(\S+) login from (\S+)</regex>
+  <order>tacacs.user, tacacs.source_ip</order>
 </decoder>
 
-<!-- TACACS events -->
-<rule id="100650" level="0">
-  <decoded_as>tacacs-command</decoded_as>
-  <description>TACACS command execution</description>
+<!-- ROA creation -->
+<decoder name="roa-creation">
+  <prematch>ROA creation request:</prematch>
+</decoder>
+
+<decoder name="roa-creation-details">
+  <parent>roa-creation</parent>
+  <regex offset="after_parent">(\S+) origin AS(\d+) maxLength (/\d+) by (\S+) via (\w+)</regex>
+  <order>roa.prefix, roa.origin_as, roa.max_length, roa.actor, roa.registry</order>
+</decoder>
+```
+
+### Cross-source correlation rule
+
+```xml
+<!-- Parent rules -->
+<rule id="100810" level="0">
+  <decoded_as>tacacs-login</decoded_as>
+  <description>TACACS authentication</description>
   <group>authentication,tacacs,</group>
 </rule>
 
-<!-- BGP configuration commands -->
-<rule id="100651" level="3">
-  <if_sid>100650</if_sid>
-  <field name="tacacs.command" type="pcre2">router bgp|neighbor</field>
-  <description>BGP configuration command executed</description>
-  <group>tacacs,bgp,configuration,</group>
+<rule id="100820" level="0">
+  <decoded_as>roa-creation-details</decoded_as>
+  <description>ROA creation request</description>
+  <group>roa,rpki,</group>
 </rule>
 
-<!-- BGP session establishment -->
-<rule id="100660" level="5">
-  <decoded_as>router-bgp-json</decoded_as>
-  <field name="event_type">bgp_session_established</field>
-  <description>BGP session established</description>
-  <group>bgp,router,</group>
+<!-- Detect login -->
+<rule id="100811" level="3">
+  <if_sid>100810</if_sid>
+  <description>TACACS login observed</description>
+  <group>authentication,baseline,</group>
 </rule>
 
-<!-- Correlation: session without preceding authentication -->
-<rule id="100661" level="10">
-  <if_sid>100660</if_sid>
-  <if_matched_sid>100651</if_matched_sid>
-  <same_device />
+<!-- Correlate ROA creation by same user -->
+<rule id="100821" level="10">
+  <if_sid>100820</if_sid>
+  <if_matched_sid>100811</if_matched_sid>
+  <same_user />
   <timeframe>300</timeframe>
-  <match_absence>true</match_absence>
-  <description>BGP session established without TACACS authentication (possible unauthorised access)</description>
-  <group>bgp,authentication,attack,correlation,</group>
+  <description>ROA creation within 5 minutes of authentication (verify authorisation)</description>
+  <group>roa,correlation,</group>
 </rule>
 ```
 
-The `match_absence` attribute detects when expected correlation is missing. If a BGP session establishes but TACACS did not log corresponding BGP configuration commands within 5 minutes, alert.
+The `same_user` attribute in Wazuh only works if both decoders extract a field named `user`. Check your field names:
 
-Limitation: This assumes TACACS logs are complete and that all router access goes through TACACS. Many environments have gaps (emergency console access, SNMP, legacy accounts). False positives are likely. Tune by whitelisting known exceptions (maintenance windows, monitoring systems, automated backup scripts).
+- TACACS decoder extracts `tacacs.user`
+- ROA decoder extracts `roa.actor`
 
-## Timestamp synchronisation challenges
+These do not match, so `same_user` will not work. You need consistent field naming:
 
-Cross-source correlation requires timestamp alignment. If your BGP feed uses UTC, your RPKI validator uses local time, and your router logs use whatever the router feels like, correlation breaks.
+```xml
+<!-- Revised TACACS decoder using 'user' field -->
+<decoder name="tacacs-login">
+  <parent>tacacs-auth</parent>
+  <regex offset="after_parent">(\S+) login from (\S+)</regex>
+  <order>user, tacacs.source_ip</order>
+</decoder>
 
-### Playbook timing precision
+<!-- Revised ROA decoder using 'user' field -->
+<decoder name="roa-creation-details">
+  <parent>roa-creation</parent>
+  <regex offset="after_parent">(\S+) origin AS(\d+) maxLength (/\d+) by (\S+) via (\w+)</regex>
+  <order>roa.prefix, roa.origin_as, roa.max_length, user, roa.registry</order>
+</decoder>
+```
 
-The simulator uses consistent timestamps across all events because it is a simulator and can cheat. Production logs are messier:
+Now `same_user` works because both decoders extract a `user` field.
 
-- BGP feed timestamp: `2025-12-28T14:01:00Z` (ISO 8601 UTC)
-- RPKI validator timestamp: `2025-12-28 14:01:02.345` (local time, microseconds)
-- Router syslog timestamp: `Dec 28 14:01:05` (no year, no timezone, no seconds precision)
+## Router configuration changes plus BGP announcements
 
-Wazuh must normalise these into comparable formats. Some decoders extract timestamps. Others let Wazuh assign receive time. Correlation timeframes must account for clock skew.
+In production (not the simulator), router configuration changes should correlate with BGP session establishments. If sessions appear without configuration changes, someone is manipulating routers without proper access.
 
-Practical approach:
+The simulator does not currently output router configuration logs, so this example is theoretical:
 
-Use generous timeframes (60-300 seconds) to accommodate timestamp drift. This increases false positives (unrelated events correlate by coincidence) but reduces false negatives (related events fail to correlate due to timing mismatch). Tighter timeframes require better timestamp synchronisation across your infrastructure, which is an NTP problem more than a SIEM problem.
+Router configuration log (example format):
+```
+<14>Jan 01 00:05:00 edge-router-01 CONFIG_CHANGE: user operator@attacker-as64513.net command "neighbor 198.51.100.1 remote-as 65001"
+```
 
-## Field name normalisation
+BGP session establishment (from simulator):
+```
+<14>Jan 01 00:05:30 edge-router-01 BGP session established with 198.51.100.1 AS65001
+```
 
-Different sources use different field names for the same concept:
+### Decoder for configuration changes
 
-- BGP feed: `origin_as`, `prefix`, `as_path`
-- RPKI validator: `origin_asn`, `prefix`, `path`  
-- Router logs: `origin`, `network`, `route`
+```xml
+<decoder name="router-config">
+  <prematch>edge-router-01 CONFIG_CHANGE:</prematch>
+</decoder>
 
-Wazuh correlation requires exact field name matches. Without normalisation, rules looking for `origin_as` will not match logs using `origin_asn`.
+<decoder name="router-config-bgp">
+  <parent>router-config</parent>
+  <regex offset="after_parent">user (\S+) command "neighbor (\S+) remote-as (\d+)"</regex>
+  <order>user, config.peer_ip, config.peer_as</order>
+</decoder>
+```
 
-Solutions:
+### Correlation rule
 
-1. Preprocessing with Logstash: Normalise field names before logs reach Wazuh
-2. Wazuh decoder aliasing: Extract fields under consistent names regardless of source
-3. Accept imperfect correlation: Some events will not correlate due to field name mismatches
+```xml
+<rule id="100830" level="0">
+  <decoded_as>router-config-bgp</decoded_as>
+  <description>Router BGP configuration change</description>
+  <group>router,configuration,</group>
+</rule>
 
-The Department uses Logstash preprocessing for critical sources and accepts imperfect correlation for less important ones. Perfect normalisation across all sources is theoretically possible but practically expensive in terms of configuration maintenance.
+<rule id="100831" level="4">
+  <if_sid>100830</if_sid>
+  <description>BGP peer configuration changed</description>
+  <group>router,bgp,configuration,</group>
+</rule>
 
-## When cross-source correlation is worth the effort
+<!-- Correlate with session establishment -->
+<rule id="100832" level="7">
+  <if_sid>100710</if_sid>
+  <if_matched_sid>100831</if_matched_sid>
+  <timeframe>300</timeframe>
+  <description>BGP session established following configuration change</description>
+  <group>bgp,correlation,</group>
+</rule>
+```
 
-Cross-source correlation is complex and fragile. It breaks when log sources change format, when timestamps drift, when field names vary. It requires maintaining decoders for multiple sources, normalising fields, tuning timeframes, and accepting false positives.
+This is simpler correlation (no field matching) because you are just detecting "config change followed by session establishment" within a time window.
 
-Worth the effort when:
-- Detecting sophisticated attacks that span multiple systems (playbook scenarios)
-- Regulatory requirements mandate correlation (PCI-DSS, NIS2)
-- Budget exists for log aggregation and normalisation infrastructure
+## Field normalisation challenges
 
-Not worth the effort when:
-- Single-source detection catches most attacks adequately
-- Log sources are unstable or frequently change format
-- Analyst capacity cannot handle additional alert volume from correlation false positives
+The biggest problem with cross-source correlation is that different sources use different field names and formats for the same data.
 
-The playbook scenarios represent sophisticated control-plane attacks that require cross-source correlation to detect. Simpler attacks (basic hijacks, session disruptions) are detectable from BGP feeds alone. Prioritise based on your threat model and available resources.
+### Prefix format variations
 
-## Testing cross-source correlation
+BMP might output: `203.0.113.128/25`  
+Router might output: `203.0.113.128 255.255.255.128`  
+RPKI might output: `203.0.113.128/25`
 
-The simulator outputs events that look like they come from different sources but actually come from one process. To test real cross-source correlation, you need to split simulator output into separate streams:
+Your decoders need to normalise these into a consistent format. Option 1 is to extract both notations:
+
+```xml
+<!-- Decoder handling both formats -->
+<decoder name="router-bgp-prefix-cidr">
+  <parent>router-bgp</parent>
+  <regex offset="after_parent">announcement: (\d+\.\d+\.\d+\.\d+/\d+)</regex>
+  <order>router.prefix</order>
+</decoder>
+
+<decoder name="router-bgp-prefix-mask">
+  <parent>router-bgp</parent>
+  <regex offset="after_parent">announcement: (\d+\.\d+\.\d+\.\d+) (\d+\.\d+\.\d+\.\d+)</regex>
+  <order>router.prefix_ip, router.prefix_mask</order>
+</decoder>
+```
+
+Option 2 is to preprocess logs with Logstash before Wazuh ingests them, converting all prefix notations to CIDR.
+
+### AS number format variations
+
+Some logs say `AS64513`, others say `64513`, others say `ASN64513`. Decoders need to handle all formats:
+
+```xml
+<!-- Extract AS number with or without AS prefix -->
+<regex>origin[_ ]?(?:AS|ASN)?(\d+)</regex>
+```
+
+This regex matches `origin AS64513`, `origin_AS64513`, `origin64513`, and `originASN64513`.
+
+### Timestamp normalisation
+
+The simulator outputs consistent timestamps, but production logs do not:
+
+- BMP: `2025-01-01T00:01:00Z` (ISO 8601 UTC)
+- Router syslog: `Jan 01 00:01:00` (no year, no timezone)
+- RPKI validator: `2025-01-01 00:01:02.345` (local time)
+
+Wazuh's correlation timeframes account for these variations, but you need generous windows (120-300 seconds) to accommodate clock skew and logging delays.
+
+## When cross-source correlation actually works
+
+Cross-source correlation is worth the effort when:
+
+- Attacks span multiple systems: The playbook scenarios demonstrate attacks visible only through multi-source correlation. Single-source detection misses them.
+- Log sources are stable: If log formats change frequently, maintaining decoders across sources becomes unsustainable. Stable infrastructure makes correlation feasible.
+- Field normalisation is achievable: If you can standardise field names and formats across sources (via preprocessing or careful decoder design), correlation works. If not, expect frequent correlation failures.
+- Analyst capacity exists: Cross-source correlation generates more alerts (including false positives). Analysts need time to investigate them.
+
+Cross-source correlation is not worth the effort when:
+
+- Single-source detection suffices: If basic hijacks are your threat model, BMP feed alone detects them. Cross-source correlation adds complexity without value.
+- Log sources are unstable: If vendors frequently change log formats, correlation rules break constantly. Maintenance burden exceeds detection value.
+- Budget constraints prevent normalisation: Without Logstash or equivalent preprocessing, field normalisation is difficult. Accept that some correlations will fail.
+
+## Testing cross-source correlation with the simulator
+
+Split simulator output and feed to Wazuh separately:
 
 ```bash
-# Run playbook and split by source
-python -m simulator.cli simulator/scenarios/advanced/playbook3/scenario.yaml --output json --json-file output.json
+# Generate logs
+python -m simulator.cli simulator/scenarios/advanced/playbook3/scenario.yaml --mode practice --output cli > full.log
 
-# Extract BGP feed events
-jq 'select(.source == "bgp_feed")' output.json > bgp_feed.json
+# Split by source
+grep "^BMP ROUTE:" full.log > /var/log/wazuh/bmp.log
+grep "edge-router-01" full.log > /var/log/wazuh/router.log
+grep -E "(cloudflare|routinator|ripe)" full.log > /var/log/wazuh/rpki.log
 
-# Extract RPKI events
-jq 'select(.source == "rpki_validator")' output.json > rpki_validator.json
+# Wait for Wazuh to ingest
+sleep 10
 
-# Extract router events (if present)
-jq 'select(.source == "router_bgp")' output.json > router_bgp.json
-
-# Send to different ports or files
-cat bgp_feed.json | nc wazuh-server 514
-cat rpki_validator.json | nc wazuh-server 515
-cat router_bgp.json | nc wazuh-server 516
+# Check alerts
+grep -E "100805|100808" /var/ossec/logs/alerts/alerts.json
 ```
 
-Configure Wazuh to listen on multiple ports or monitor multiple files. Your correlation rules should trigger when events from all sources arrive within correlation timeframes.
+Expected alert:
 
-If correlation fails, check:
-1. Are all decoders extracting fields correctly? (use `wazuh-logtest`)
-2. Are field names consistent across sources? (check decoder output)
-3. Are timestamps comparable? (check for timezone mismatches)
-4. Are correlation timeframes appropriate? (60 seconds might be too short)
+```json
+{"rule":{"id":"100808","level":10,"description":"Validators confirm RPKI-valid announcement in monitored block (attack)"}}
+```
+
+If alert does not appear:
+
+1. Verify all three decoders extract fields correctly (use `wazuh-logtest` on sample logs from each source)
+2. Check field names match across decoders (BMP uses `bmp.prefix`, router uses `router.prefix`, RPKI uses `rpki.prefix`)
+3. Ensure correlation timeframes accommodate logging delays (120 seconds minimum)
+4. Confirm parent rule IDs are correct
 
 ## Next steps
 

@@ -14,8 +14,10 @@ without anyone knowing who works there or where they are.
    :caption: Motto: We notice, even when you do not.
 
    about.md
-   lamplighter.md
    red-lantern/index
+   anvil/index
+   lamplighter.md
+
 
 .. raw:: html
 
