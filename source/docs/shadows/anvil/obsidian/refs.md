@@ -6,11 +6,11 @@ Tools, documentation, and lab material to support research and hands-on analysis
 
 Tools for dissecting executables, firmware images, protocol handlers, and embedded artefacts. These are foundational and reused across all later stages.
 
-* [Ghidra](https://ghidra-sre.org/) – full reverse-engineering suite with decompiler
-* [radare2](https://rada.re/n/radare2.html) – low-level reverse engineering and analysis framework
-* [Cutter](https://cutter.re/) – graphical frontend for radare2
-* [ImHex](https://github.com/WerWolv/ImHex) – hex editor with pattern language for binary formats
-* [binspector](https://github.com/binspector/binspector) – binary structure and filesystem inspection
+* [Ghidra](https://ghidra-sre.org/): full reverse-engineering suite with decompiler
+* [radare2](https://rada.re/n/radare2.html): low-level reverse engineering and analysis framework
+* [Cutter](https://cutter.re/): graphical frontend for radare2
+* [ImHex](https://github.com/WerWolv/ImHex): hex editor with pattern language for binary formats
+* [binspector](https://github.com/binspector/binspector): binary structure and filesystem inspection
 
 ## Industrial protocol specifications and references
 
@@ -70,19 +70,19 @@ Libraries, scanners, and test tools focused on individual OT/ICS protocols. Usef
 
 Controlled environments for experimentation without touching real infrastructure. These support protocol interaction, fault injection, and attack simulation.
 
-* [MiniCPS article](https://arxiv.org/abs/1507.04860) and [MiniCPS code](https://github.com/scy-phy/minicps) – CPS/ICS network emulation
-* [ICSSIM framework article](https://arxiv.org/abs/2210.13325) and [ICSSIM code](https://github.com/AlirezaDehlaghi/ICSSIM) – modular ICS security simulation
+* [MiniCPS article](https://arxiv.org/abs/1507.04860) and [MiniCPS code](https://github.com/scy-phy/minicps): CPS/ICS network emulation
+* [ICSSIM framework article](https://arxiv.org/abs/2210.13325) and [ICSSIM code](https://github.com/AlirezaDehlaghi/ICSSIM): modular ICS security simulation
 * [LICSTER low-cost ICS testbed article](https://arxiv.org/abs/1910.00303) and [LICSTER code](https://github.com/thainnos/LICSTER)– reproducible educational testbed
 
 ## Operational labs, honeypots, and deception
 
 Tools that model or expose realistic industrial services, often used to observe attacker behaviour or test detection logic.
 
-* [Conpot](https://github.com/mushorg/conpot) – multi-protocol ICS honeypot
-* [GasPot](https://github.com/sjhilt/GasPot) – gas station honeypot
-* [GridPot](https://github.com/sk4ld/gridpot) – power grid honeypot
-* [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3) – open PLC runtime for lab environments
-* [PLCBlaster article](https://blackhat.com/docs/asia-16/materials/asia-16-Spenneberg-PLC-Blaster-A-Worm-Living-Solely-In-The-PLC-wp.pdf) – PLC protocol stress and test framework
+* [Conpot](https://github.com/mushorg/conpot): multi-protocol ICS honeypot
+* [GasPot](https://github.com/sjhilt/GasPot): gas station honeypot
+* [GridPot](https://github.com/sk4ld/gridpot): power grid honeypot
+* [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3): open PLC runtime for lab environments
+* [PLCBlaster article](https://blackhat.com/docs/asia-16/materials/asia-16-Spenneberg-PLC-Blaster-A-Worm-Living-Solely-In-The-PLC-wp.pdf): PLC protocol stress and test framework
 
 ## Traffic captures and empirical data
 
