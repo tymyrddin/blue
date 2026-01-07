@@ -48,7 +48,7 @@ Anvil is not the end of the pipeline.
 
 * Outputs are prepared for downstream use in the Forge: artefacts, notes, diagrams, and extracted behaviours.
 * Speculation is clearly labelled and separated from verified facts.
-* Findings are packaged so they can be reused, challenged, or extended.
+* Findings can be reused, challenged, or extended.
 
 If a result cannot be handed over cleanly, it is not finished.
 
