@@ -253,7 +253,7 @@ Wazuh example forwarding to Splunk:
 
 Then in Splunk:
 
-```spl
+```
 index=wazuh source=wazuh 
 | transaction prefix maxspan=2m 
   startswith=(rule.id=100700) 
