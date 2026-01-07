@@ -268,7 +268,7 @@ Elastic's approach is rather like the Bursar's mathematical approach to reality,
 
 ## Custom correlation engines
 
-Sometimes one must build one's own contraption, like Leonard of Quirm designing a particularly elaborate monitoring device.
+Sometimes one must [build one's own contraptions](https://github.com/ninabarzh/dept-silent-stability/tree/main/red-lantern/correlation-engines), like Leonard of Quirm designing a particularly elaborate monitoring device.
 
 ## Conclusion
 
