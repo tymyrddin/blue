@@ -20,9 +20,8 @@ Use at your own risk. Always validate and supplement with trusted, real-world so
 
 ### Malicious ASNs
 
-Autonomous System Numbers (ASNs) are rather like noble house sigils—they identify who's responsible for routing traffic. When one goes rogue, it's worth remembering.
-
-#### Extracting attacker ASNs from playbook scenarios
+Autonomous System Numbers (ASNs) are rather like noble house sigils—they identify who's responsible for routing 
+traffic. When one goes rogue, it's worth remembering.
 
 [🐙 Extracting attacker ASNs from playbook scenarios](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/extracting_attacker_asns.py) 
 is for sniffling out the rotten turnips who're fiddling with BGP routes by faking their ROA paperwork and then looking 
@@ -52,8 +51,9 @@ favoured by those who need to get things done without excessive ceremony.
 
 ### CSV Format
 
-Sometimes the simplest approach is best—like a well-organised ledger at the Post Office. 
-[🐙 CSV feeds are universally readable and splendidly practical](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/csv_format.py).
+Sometimes the simplest approach is best, like a well-organised ledger at the Post Office. 
+
+[🐙 CSV feeds are universally readable and splendidly practical](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/csv_format.py)
 
 ## Updating Detection Rules with IOCs
 
@@ -62,11 +62,11 @@ wanted notices throughout the city.
 
 ### Updating Wazuh rules dynamically
 
-[🐙 Wazuh updater](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/wazuh_updater.py).
+[🐙 Wazuh updater](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/wazuh_updater.py)
 
 ### Updating Splunk lookups
 
-[🐙 Splunk lookup updater.py](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/splunk_lookup_updater.py).
+[🐙 Splunk lookup updater](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/splunk_lookup_updater.py)
 
 ## Threat feed management
 
@@ -75,7 +75,7 @@ regular updates, and knowing which sources to trust.
 
 ### Automated feed update system
 
-[🐙 Feed update system ](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/feed_update_system.py).
+[🐙 Feed update system ](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/feed_update_system.py)
 
 ### Feed distribution via HTTP API
 

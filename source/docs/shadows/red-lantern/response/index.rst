@@ -1,4 +1,4 @@
-Incident response playbooks
+Incident response
 ======================================================
 
 Incident response playbooks are your team's step-by-step guides for handling a security alert. Using the Red Lantern
