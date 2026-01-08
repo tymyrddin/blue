@@ -16,6 +16,7 @@ coordinated campaign instead of just random noise.
    cross-source.md
    rules.md
    platforms.md
+   testing.md
 
 
 .. raw:: html

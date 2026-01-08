@@ -20,16 +20,16 @@ activities:
 4. Identifying detection gaps - Reveal blind spots in monitoring
 
 Each activity produces actionable outputs that feed into [detection engineering](../detection/index.rst), 
-[incident response playbooks](../response/index.rst), and [purple team operations](../purple-team/index.rst).
+[incident response playbooks](../response/index.rst), and [purple team operations](../advanced/index.rst).
 
-## Using Scenarios as Threat Models
+## Using scenarios as threat models
 
 Rather than abstract theoretical exercises, our threat models are built from concrete BGP hijacking 
 scenarios. These scenarios represent real-world attack patterns, documented with the same attention to 
 detail that Sergeant Colon might apply to a particularly interesting crime scene (though with considerably 
 more accuracy).
 
-### Scenario Structure
+### Scenario structure
 
 Each scenario is decomposed into structured threat events:
 
@@ -399,7 +399,7 @@ The analyser calculates:
 - Uncovered Techniques: No visibility whatsoever
 - Coverage Percentage: Overall detection capability
 
-### Prioritising Remediation
+### Prioritising remediation
 
 Not all gaps are equally urgent. Prioritise based on:
 
@@ -503,7 +503,7 @@ Threat models feed into:
 
 - [Detection engineering](../detection/index.rst): Each gap becomes a detection rule work item
 - [Incident response](../response/index.rst): Scenarios become response playbooks
-- [Purple team](../purple-team/index.rst): Attack trees guide validation exercises
+- [Purple team](../advanced/index.rst): Context guide scenario building, integration, and exercises
 - [Threat intelligence](../threat-intel/index.rst): ATT&CK layers shared with community
 
 ## Continuous improvement

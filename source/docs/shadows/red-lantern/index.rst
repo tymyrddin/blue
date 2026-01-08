@@ -25,8 +25,6 @@ reversible flow, ensuring we have more eyes on the tide without ever needing to 
    correlation/index
    response/index
    threat-intel/index
-   training/index
-   purple-team/index
    advanced/index
 
 .. raw:: html

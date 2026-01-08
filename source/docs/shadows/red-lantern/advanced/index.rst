@@ -10,6 +10,7 @@ attack scenarios, plugging in new sources of data, or creating integrations for 
    :includehidden:
    :caption: Bend the tool to fit your own tricky problems.
 
+   testing.md
    scenarios.md
    feeds.md
    integration.md

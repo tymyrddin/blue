@@ -12,8 +12,6 @@ their role when it matters.
    :caption: Clear, fast reactions
 
    playbooks.md
-   automation.md
-
 
 .. raw:: html
 

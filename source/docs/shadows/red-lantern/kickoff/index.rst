@@ -17,6 +17,7 @@ No paperwork exists that uses either of these names. Several people use them any
    to-his-eminence.md
    tradeoffs.md
    philosophy.md
+   beneficiaries.md
 
 .. raw:: html
 
