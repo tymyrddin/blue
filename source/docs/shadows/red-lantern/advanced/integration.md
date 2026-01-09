@@ -1,7 +1,3 @@
-Perfect—here’s the extended page with a forward-looking roadmap for integrations beyond CI/CD:
-
----
-
 # Future integration projects
 
 Red Lantern Simulator currently generates lines that mimic network and BGP monitoring messages. This is already useful 
