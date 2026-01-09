@@ -17,7 +17,7 @@ test data, teams get immediate feedback whenever code changes.
 
 ### Automated detection testing
 
-By automatically feeding simulated BMP and Syslog events into monitoring and detection stacks, teams can verify that 
+By automatically feeding simulated events into monitoring and detection stacks, teams can verify that 
 rules trigger correctly under various scenarios. This includes:
 
 * Validating new detection rules against known attack patterns.
