@@ -1,4 +1,4 @@
-# ROA poisoning and validation mapping intent
+# ROA poisoning and validation mapping logic
 
 ## What this correlation detects
 

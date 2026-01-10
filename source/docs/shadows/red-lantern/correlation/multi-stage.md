@@ -1,4 +1,4 @@
-# Multi-stage BGP attack correlation intent
+# Multi-stage BGP attack correlation logic
 
 ## What this correlation detects
 

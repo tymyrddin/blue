@@ -1,4 +1,4 @@
-# RPKI cover hijack correlation intent
+# RPKI cover hijack correlation logic
 
 ## What this correlation detects
 
