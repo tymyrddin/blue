@@ -1,4 +1,4 @@
-# Encoding correlation logic into human rules
+# Encoding correlation logic
 
 Translate understanding of attacks into a structured format that drives monitoring and alerts.
 
