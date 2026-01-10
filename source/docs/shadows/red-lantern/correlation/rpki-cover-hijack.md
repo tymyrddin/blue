@@ -1,4 +1,4 @@
-# RPKI cover hijack
+# RPKI cover hijack correlation intent
 
 ## What this correlation detects
 
@@ -106,7 +106,3 @@ A triggered correlation indicates:
 This is not a false positive you ignore.
 This is a control-plane incident.
 
-## Related playbooks
-
-* Playbook 2: ROA poisoning and validation mapping
-* Incident response: prefix filtering, ROA rollback, validator cross-checking

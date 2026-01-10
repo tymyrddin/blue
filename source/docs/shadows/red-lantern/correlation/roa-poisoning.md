@@ -1,4 +1,4 @@
-# ROA poisoning and validation mapping
+# ROA poisoning and validation mapping intent
 
 ## What this correlation detects
 
@@ -113,9 +113,4 @@ A triggered correlation indicates:
 * Subsequent playbooks should be escalated in confidence
 
 This correlation feeds Playbook 3.
-
-## Related playbooks
-
-* Playbook 1: RPKI presence establishment (benign baseline)
-* Playbook 3: RPKI-covered sub-prefix hijack
 

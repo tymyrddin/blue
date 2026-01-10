@@ -1,4 +1,4 @@
-# Multi-stage BGP attack correlation
+# Multi-stage BGP attack correlation intent
 
 ## What this correlation detects
 
@@ -116,11 +116,3 @@ A triggered correlation indicates:
 * Validation systems endorsed the announcement
 
 This is late-stage detection, but still actionable: traffic can be rerouted, prefixes filtered, and trust anchors audited.
-
-## Related playbooks
-
-* Playbook 1: RPKI presence establishment (no alert expected)
-* Playbook 2: RPKI manipulation and validation mapping
-* Playbook 3: Sub-prefix hijack under RPKI validation cover
-
-This correlation primarily targets Playbook 3, with contextual dependence on earlier phases.
