@@ -11,12 +11,14 @@ coordinated campaign instead of just random noise.
    :includehidden:
    :caption: Connect the dots
 
-   fundamentals.md
+   human-backbone.md
    multi-stage.md
-   cross-source.md
-   rules.md
-   platforms.md
+   roa-poisoning.md
+   rpki-cover-hijack.md
+   encoding.md
    testing.md
+   failure-patterns.md
+   human-intent-testing.md
 
 
 .. raw:: html
