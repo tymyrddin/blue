@@ -1,4 +1,4 @@
-# Encoding correlation logic
+# Human encoding correlation logic
 
 Translate understanding of attacks into a structured format that drives monitoring and alerts.
 
@@ -25,33 +25,9 @@ Each correlation explicitly specifies:
 
 This makes rules precise, human-readable, and consistently implementable across environments.
 
-## ROA poisoning
-
-[encoded_roa_poisoning.xml](https://github.com/ninabarzh/red-lantern-detection/blob/main/correlations/encoded_roa_poisoning.xml)
-
-* Step 1: ROA creation observed (level 5)
-* Step 2: Multi-validator confirmation (level 7, medium-to-high confidence)
-* Optional Step 3: Authentication logs enrich context (level 8)
-* Required sources: RPKI validator logs only — no BMP, no router syslog
-* Timeframe: Flexible to accommodate asynchronous validator updates
-
-Confidence is explicitly reflected via rule levels.
-
-## RPKI cover hijack
-
-[encoded_rpki_cover_hijack.xml](https://github.com/ninabarzh/red-lantern-detection/blob/main/correlations/encoded_rpki_cover_hijack.xml)
-
-* Step 1: BMP announcement (announce) triggers correlation (level 5)
-* Step 2: RPKI validation confirms trust legitimacy (level 7)
-* Step 3: Optional withdrawal completes correlation, raising alert confidence (level 8)
-* Required sources: BMP + RPKI validator logs
-* Optional sources: Historical ROA changes
-* Router syslog: Not required; optional for context only
-* Timeframes: Asymmetric to allow delayed withdrawals or validator reporting
-
 ## Multi-stage BGP attack
-
-[encoded_multi_stage_bgp_attack.xml](https://github.com/ninabarzh/red-lantern-detection/blob/main/correlations/encoded_multi_stage_bgp_attack.xml)
+                                     
+[encoded_multi_stage_bgp_attack.xml](https://github.com/ninabarzh/red-lantern-detection/blob/main/wazuh/correlations/encoded_multi_stage_bgp_attack.xml)
 
 * Step 1: BMP announcement observed (level 5)
 * Step 2: RPKI validation confirmed (level 7)
@@ -65,6 +41,30 @@ Confidence is explicitly reflected via rule levels.
 * Timeframes: Can be defined per step according to operational context
 
 No enrichment or derived fields are introduced. Detection is purely observable-event-driven.
+
+## ROA poisoning
+
+[encoded_roa_poisoning.xml](https://github.com/ninabarzh/red-lantern-detection/blob/main/wazuh/correlations/encoded_roa_poisoning.xml)
+
+* Step 1: ROA creation observed (level 5)
+* Step 2: Multi-validator confirmation (level 7, medium-to-high confidence)
+* Optional Step 3: Authentication logs enrich context (level 8)
+* Required sources: RPKI validator logs only — no BMP, no router syslog
+* Timeframe: Flexible to accommodate asynchronous validator updates
+
+Confidence is explicitly reflected via rule levels.
+
+## RPKI cover hijack
+
+[encoded_rpki_cover_hijack.xml](https://github.com/ninabarzh/red-lantern-detection/blob/main/wazuh/correlations/encoded_rpki_cover_hijack.xml)
+
+* Step 1: BMP announcement (announce) triggers correlation (level 5)
+* Step 2: RPKI validation confirms trust legitimacy (level 7)
+* Step 3: Optional withdrawal completes correlation, raising alert confidence (level 8)
+* Required sources: BMP + RPKI validator logs
+* Optional sources: Historical ROA changes
+* Router syslog: Not required; optional for context only
+* Timeframes: Asymmetric to allow delayed withdrawals or validator reporting
 
 ## Benefits
 

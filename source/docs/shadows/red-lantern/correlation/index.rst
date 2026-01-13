@@ -18,6 +18,7 @@ coordinated campaign instead of just random noise.
    encoding.md
    testing.md
    failure-patterns.md
+   heuristics.md
    human-intent-testing.md
 
 

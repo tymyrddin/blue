@@ -23,6 +23,6 @@ without anyone knowing who works there or where they are.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">We ensure, you continue</a>
+                <a href="https://tymyrddin.dev/contact/">Initiate Knowledge Harvest</a>
             </div>
         </div>
