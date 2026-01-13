@@ -39,6 +39,6 @@ auditors happy, but the real motive is stopping threats.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Chaos-tested, guild-approved security</a>
+                <a href="https://tymyrddin.dev/contact/">Build With Us</a>
             </div>
         </div>
