@@ -1,4 +1,4 @@
-# Department of Silent Stability Internal brief (circulation restricted)
+# Internal brief (circulation restricted)
 
 From: Head of Department, Silent Stability
 To: Senior Clerks, Analysts, and the Usual Sensible People
