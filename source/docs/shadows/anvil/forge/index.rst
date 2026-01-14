@@ -17,7 +17,7 @@ controlled laboratory conditions, and to enable discreet, responsible notificati
    validation.md
    refs.md
    architecture.md
-   🐙 Passive scanner spike @GitHub <https://github.com/ninabarzh/passive-scanner/>
+   Passive scanner spike @GitHub <https://github.com/ninabarzh/passive-scanner/>
    future.md
 
 
