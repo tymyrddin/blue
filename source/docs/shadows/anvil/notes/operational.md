@@ -1,6 +1,6 @@
-# The Silent Anvil — operational note
+# Operational note
 
-*(Department of Silent Stability — internal, strictly not for the gullible)*
+*Department of Silent Stability (internal, strictly not for the gullible)*
 
 ## Preface
 
@@ -87,6 +87,6 @@ This ensures:
 
 ---
 
-*End of operational note — by memorandum from the Head of the Department of Silent Stability, initialled in a 
+*End of operational note, by memorandum from the Head of the Department of Silent Stability, initialled in a 
 handwriting that strongly suggests the Patrician has already read it.*
 

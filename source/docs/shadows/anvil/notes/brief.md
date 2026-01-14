@@ -1,8 +1,8 @@
-# Department of Silent Stability Internal brief — circulation restricted
+# Department of Silent Stability Internal brief (circulation restricted)
 
 From: Head of Department, Silent Stability
 To: Senior Clerks, Analysts, and the Usual Sensible People
-Subject: The Silent Anvil — scope, method, and why we do not knock on doors
+Subject: The Silent Anvil
 
 By direction of [the Patrician](https://indigo.tymyrddin.dev/docs/vetinari/) (whose interest in *not being surprised* 
 remains as keen as ever), this brief sets out the operating principles of the Department’s latest undertaking, 
@@ -117,7 +117,7 @@ We do not accuse.
 We do not embarrass.
 We do not announce.
 
-We observe, we confirm, and we inform — quietly.
+We observe, we confirm, and we inform, quietly.
 
 This approach has the Patrician’s full confidence, which is not a thing given lightly and is best not squandered.
 

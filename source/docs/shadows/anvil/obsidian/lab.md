@@ -42,7 +42,7 @@ Every VM has one job and one job only:
 
 * Extraction VM with [binwalk](https://www.kali.org/tools/binwalk/), [foremost](https://www.kali.org/tools/foremost/), [7-zip](https://www.kali.org/tools/7zip/), [dd](https://www.kali.org/tools/ddrescue/), [Firmware Mod Kit](https://www.kali.org/tools/firmware-mod-kit/)
 * Disassembly / reverse engineering VM with [IDA Free](https://hex-rays.com/ida-free), [Ghidra](https://www.kali.org/tools/ghidra/), [Radare2](https://www.kali.org/tools/radare2/)
-* Protocol parsing / emulation VM — Python 3.12 environment, [scapy](https://scapy.net/), [protocol libraries, emulators](refs.md)
+* Protocol parsing / emulation VM / Python 3.12 environment, [scapy](https://scapy.net/), [protocol libraries, emulators](refs.md)
 
 ### VM setup
 
@@ -62,10 +62,10 @@ Every VM has one job and one job only:
 
 ### Disassembly and analysis
 
-* `IDA`, `Ghidra`, `Radare2` — static analysis of binaries
-* `Hex editors` — `HxD`, `Bless`, `010 Editor`
-* `Binwalk` — firmware unpacking
-* `Firmware Mod Kit` — easy extraction of Linux/RTOS firmware
+* `IDA`, `Ghidra`, `Radare2` for static analysis of binaries
+* `Hex editors` like `HxD`, `Bless`, `010 Editor`
+* `Binwalk` for firmware unpacking
+* `Firmware Mod Kit` for easy extraction of Linux/RTOS firmware
 
 ### Network / protocol
 
@@ -80,9 +80,9 @@ Every VM has one job and one job only:
 
 ## Storage and artefact handling
 
-* Firmware vault — immutable, write-protected copies
-* Working copies — for VM use only, fully reversible, checksummed before/after
-* Media transfer policy — all devices and firmware transferred via verified, write-blocked USB drives or encrypted network tunnels between isolated VMs
+* Firmware vault: immutable, write-protected copies
+* Working copies for VM use only, fully reversible, checksummed before/after
+* Media transfer policy: all devices and firmware transferred via verified, write-blocked USB drives or encrypted network tunnels between isolated VMs
 
 ## Security and safety principles
 

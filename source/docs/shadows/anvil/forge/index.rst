@@ -11,9 +11,12 @@ controlled laboratory conditions, and to enable discreet, responsible notificati
    :maxdepth: 1
    :caption: Silently mapping the hazards lurking in plain sight.
 
-   fingerprints.md
-   detection.md
-   notification.md
+   methodology.md
+   analysis.md
+   probes.md
+   validation.md
+   architecture.md
+   future.md
    refs.md
 
 .. raw:: html
