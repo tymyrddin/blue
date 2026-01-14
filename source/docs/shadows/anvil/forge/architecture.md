@@ -1,6 +1,8 @@
 # Passive scanner architecture
 
-Documenting the architecture for the passive-scanner spike project, defining components, data flow, and responsibilities. This ensures the spike is structured for future scaling while keeping the Desk → Forge → Scanner workflow intact.
+Documenting the architecture for the [🐙 Passive scanner spike @GitHub](https://github.com/ninabarzh/passive-scanner/), 
+defining components, data flow, and responsibilities. This ensures the spike is structured for future scaling while 
+keeping the Desk → Forge → Scanner workflow intact.
 
 ## Principles
 
