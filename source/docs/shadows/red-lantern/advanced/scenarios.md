@@ -36,7 +36,7 @@ straightforward. Rush them, and you'll build scenarios that don't reflect realit
 
 ## Step 1: Identify threat
 
-Start by understanding who wants to attack you and why. This isn't abstract threat modelling—it's concrete intelligence 
+Start by understanding who wants to attack you and why. Concrete intelligence 
 about adversaries targeting your industry.
 
 ### Running example: Financial institution
@@ -138,11 +138,11 @@ This means an attacker could:
 
 This vulnerability, combined with the threat actor's demonstrated capability, creates a realistic attack scenario.
 
-The permissive maxLength isn't theoretical—it's YOUR actual configuration, and the threat actor from Step 1 knows how to exploit it.
+The permissive maxLength is not theoretical. It is configuration, and the threat actor from Step 1 knows how to exploit it.
 
 ## Step 3: Define attack sequence
 
-Now translate the threat and topology into a concrete attack timeline. This is still conceptual—you're planning what 
+Now translate the threat and topology into a concrete attack timeline. This is still conceptual: Planning what 
 happens and when, not yet how to implement it.
 
 ### Running Example: Payment infrastructure hijack

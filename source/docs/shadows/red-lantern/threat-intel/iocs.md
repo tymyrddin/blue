@@ -20,7 +20,7 @@ Use at your own risk. Always validate and supplement with trusted, real-world so
 
 ### Malicious ASNs
 
-Autonomous System Numbers (ASNs) are rather like noble house sigils—they identify who's responsible for routing 
+Autonomous System Numbers (ASNs) are rather like noble house sigils, they identify who's responsible for routing 
 traffic. When one goes rogue, it's worth remembering.
 
 [🐙 Extracting attacker ASNs from playbook scenarios](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/ioc-generation/extracting_attacker_asns.py) 
@@ -70,7 +70,7 @@ wanted notices throughout the city.
 
 ## Threat feed management
 
-Managing threat feeds is rather like managing the City Watch's intelligence network—it requires organisation, 
+Managing threat feeds is rather like managing the City Watch's intelligence network. It requires organisation, 
 regular updates, and knowing which sources to trust.
 
 ### Automated feed update system
@@ -93,4 +93,4 @@ Much like the semaphore system connecting the cities of the Disc, a well-maintai
 
 As the saying goes in Ankh-Morpork: "An ounce of prevention is worth a pound of cure, but a well-distributed threat feed is worth its weight in gold."
 
-*"The presence of those seeking the truth is infinitely to be preferred to the presence of those who think they've found it." — Terry Pratchett, Monstrous Regiment*
+*"The presence of those seeking the truth is infinitely to be preferred to the presence of those who think they've found it.", Terry Pratchett, Monstrous Regiment*

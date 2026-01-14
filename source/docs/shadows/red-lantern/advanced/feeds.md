@@ -96,7 +96,7 @@ def run_with_background(scenario_runner, background_feeds, event_bus, clock):
         event_bus.publish(event_data)
 ```
 
-Feeds don't "run" during simulation—they generate a complete event list upfront that gets merged with the scenario timeline.
+Feeds don't "run" during simulation. They generate a complete event list upfront that gets merged with the scenario timeline.
 
 ## Creating custom feeds
 

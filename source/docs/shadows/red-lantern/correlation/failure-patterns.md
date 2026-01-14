@@ -32,8 +32,7 @@ Correlation logic was written optimistically rather than defensively. Optional s
 
 ### What it looks like
 
-Alerts fire correctly, but on investigation the events were unrelated.
-Different prefixes, different ASNs, different operational changes — but somehow they formed a “sequence”.
+Alerts fire correctly, but on investigation the events were unrelated. Different prefixes, different ASNs, different operational changes, but somehow they formed a “sequence”.
 
 ### What it usually means
 
@@ -153,7 +152,7 @@ Maintenance windows look like attack campaigns. Normal routing churn resembles a
 
 ### Why this is dangerous
 
-Correlation alerts lose meaning. Analysts start ignoring them — including the real ones.
+Correlation alerts lose meaning. Analysts start ignoring them, including the real ones.
 
 ### Typical root cause
 

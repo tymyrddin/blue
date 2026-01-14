@@ -49,7 +49,7 @@ No enrichment or derived fields are introduced. Detection is purely observable-e
 * Step 1: ROA creation observed (level 5)
 * Step 2: Multi-validator confirmation (level 7, medium-to-high confidence)
 * Optional Step 3: Authentication logs enrich context (level 8)
-* Required sources: RPKI validator logs only — no BMP, no router syslog
+* Required sources: RPKI validator logs only (no BMP, no router syslog)
 * Timeframe: Flexible to accommodate asynchronous validator updates
 
 Confidence is explicitly reflected via rule levels.

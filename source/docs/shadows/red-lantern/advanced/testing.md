@@ -1,6 +1,6 @@
 # Collaborative testing
 
-Much like the Assassins' Guild's practice of "professional courtesy tests"—wherein they attempt to infiltrate each other's headquarters to ensure everyone's security remains up to scratch—collaborative testing pits red and blue teams against each other in controlled exercises. The difference being that, unlike the Guild, we'd prefer everyone survives the process.
+Much like the Assassins' Guild's practice of "professional courtesy tests", wherein they attempt to infiltrate each other's headquarters to ensure everyone's security remains up to scratch, collaborative testing pits red and blue teams against each other in controlled exercises. The difference being that, unlike the Guild, we'd prefer everyone survives the process.
 
 Collaborative testing transforms BGP hijacking scenarios into practical exercises where red teams execute attacks whilst blue teams attempt detection and response. As Commander Vimes might observe, "You don't know if your locks work until someone competent tries to pick them." In our case, the locks are detection rules, and the lock picks are carefully crafted BGP hijacking attempts.
 
@@ -107,7 +107,7 @@ Red Team Notes:
 #### Operational considerations
 
 Communication Protocol: Red team maintains secure communication channel separate from blue team monitoring. Think 
-of it as the Thieves' Guild's sign language—observable if you know what to look for, but not in the normal course 
+of it as the Thieves' Guild's sign language, observable if you know what to look for, but not in the normal course 
 of business.
 
 Safety rails: 
@@ -662,7 +662,7 @@ plt.savefig('detection_time_distribution.png')
 
 ### False positive analysis
 
-False positives are the bane of SOC operations—rather like the Night Watch responding to every cat that knocks over a 
+False positives are the bane of SOC operations, rather like the Night Watch responding to every cat that knocks over a 
 bin. Too many, and analysts develop alert fatigue; too few, and you might be missing real threats.
 
 #### False positive rate

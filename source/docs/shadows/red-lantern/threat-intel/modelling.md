@@ -1,7 +1,7 @@
 # Threat modelling
 
-Much like Lord Vetinari's approach to governing Ankh-Morpork—wherein one must understand all possible avenues of 
-insurrection before they're attempted—threat modelling for BGP hijacking requires a methodical examination of how 
+Much like Lord Vetinari's approach to governing Ankh-Morpork, wherein one must understand all possible avenues of 
+insurrection before they're attempted, threat modelling for BGP hijacking requires a methodical examination of how 
 miscreants might abuse the routing infrastructure. As Commander Vimes would observe, "If you know what the villains 
 are planning, you can be there with a nice cup of cocoa and some rather uncomfortable questions."
 
@@ -146,7 +146,9 @@ The tool supports three playbooks:
 
 ## Mapping MITRE ATT&CK techniques
 
-The MITRE ATT&CK framework is rather like the Assassins' Guild's classification system for methods of dispatch—a formal taxonomy of techniques that adversaries employ. For BGP security, we map our scenarios to relevant ATT&CK techniques, creating a shared language for describing threats.
+The MITRE ATT&CK framework is rather like the Assassins' Guild's classification system for methods of dispatch: A 
+formal taxonomy of techniques that adversaries employ. For BGP security, we map our scenarios to relevant ATT&CK 
+techniques, creating a shared language for describing threats.
 
 ### BGP-specific technique mappings
 
@@ -292,9 +294,9 @@ Attack trees inform defensive investment:
 
 High-Cost, Low-Detectability Nodes: Attractive to sophisticated attackers but hard to spot (e.g., Insider Threat: Cost 5.0, Detectability 0.2). Invest in behavioural analytics and insider threat programmes.
 
-Low-Cost, High-Detectability Nodes: Easy for attackers but also easy to detect (e.g., Access via Anonymisation Network: Cost 0.5, Detectability 0.8). Implement Tor exit node blocking—it's cheap and catches a common technique.
+Low-Cost, High-Detectability Nodes: Easy for attackers but also easy to detect (e.g., Access via Anonymisation Network: Cost 0.5, Detectability 0.8). Implement Tor exit node blocking. It is cheap and catches a common technique.
 
-Critical AND Nodes: In Playbook 2, Credential Compromise Path is an AND node—attacker must complete ALL child steps. Defending any one child node breaks the entire path.
+Critical AND Nodes: In Playbook 2, Credential Compromise Path is an AND node. The attacker must complete ALL child steps. Defending any one child node breaks the entire path.
 
 ## Identifying detection gaps
 
