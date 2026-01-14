@@ -42,7 +42,7 @@ Every VM has one job and one job only:
 
 * Extraction VM with [binwalk](https://www.kali.org/tools/binwalk/), [foremost](https://www.kali.org/tools/foremost/), [7-zip](https://www.kali.org/tools/7zip/), [dd](https://www.kali.org/tools/ddrescue/), [Firmware Mod Kit](https://www.kali.org/tools/firmware-mod-kit/)
 * Disassembly / reverse engineering VM with [IDA Free](https://hex-rays.com/ida-free), [Ghidra](https://www.kali.org/tools/ghidra/), [Radare2](https://www.kali.org/tools/radare2/)
-* Protocol parsing / emulation VM — Python 3.12 environment, [scapy](https://scapy.net/), [protocol libraries, emulators](libs.md)
+* Protocol parsing / emulation VM — Python 3.12 environment, [scapy](https://scapy.net/), [protocol libraries, emulators](refs.md)
 
 ### VM setup
 

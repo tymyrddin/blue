@@ -13,7 +13,6 @@ preparation.
    :caption: Unearth the fingerprints that reveal who is truly running what, without ever touching the live world.
 
    lab.md
-   libs.md
    acquisition.md
    extraction.md
    research.md

@@ -1,10 +1,16 @@
 # Vulnerability research
 
-Purpose: To systematically investigate firmware artefacts in a laboratory setting to identify security vulnerabilities, document findings, and provide actionable intelligence for the Fingerprint Forge.
+To systematically investigate firmware artefacts in a laboratory setting to identify security vulnerabilities, document 
+findings, and provide actionable intelligence for the [Fingerprint Forge](../forge/index.rst).
 
-Context: This work is conducted by the Obsidian Desk. It follows the successful acquisition, triage, and extraction of a firmware binary. All analysis is static and non-intrusive, performed within a controlled, isolated lab environment on sacrificial hardware or emulated systems. No testing is performed against live devices or production networks. *Non-intrusive means no modification of firmware artefacts, no exploitation against live targets, and no actions that would alter device state outside emulated or sacrificial contexts.*
+This work is conducted by the Obsidian Desk. It follows the successful acquisition, triage, and extraction of a 
+firmware binary. All analysis is static and non-intrusive, performed within a controlled, isolated lab environment on 
+sacrificial hardware or emulated systems. No testing is performed against live devices or production networks. 
 
-## Workflow Input: The Analysis Workspace
+*Non-intrusive means no modification of firmware artefacts, no exploitation against live targets, and no actions that 
+would alter device state outside emulated or sacrificial contexts.*
+
+## Analysis workspace
 
 Research begins with the populated `analysis/` directory structure, as created by the Firmware Acquisition and Initial Triage process. The primary inputs are:
 
@@ -13,37 +19,37 @@ Research begins with the populated `analysis/` directory structure, as created b
 * The triage log (`analysis/<vendor>/<device>/<version>/triage.log`) containing initial `binwalk`, `file`, and `strings` output.
 * The source metadata (`artefacts/<vendor>/<device>/<version>/source.yaml`) linking all findings to a specific firmware version and hash.
 
-## 1. Static Analysis & Artefact Examination
+## 1. Static analysis & artefact examination
 
 The first phase involves examining the firmware's components without execution.
 
-### Filesystem and Configuration Analysis
+### Filesystem and configuration analysis
 
 * Boot Process: Examine initialisation scripts (`/etc/init.d/`, `/etc/rc.d/`, inittab) for insecure service startup, hardcoded paths, or credential passing.
 * Configuration Files: Audit files in `/etc/` and application-specific config directories for plaintext passwords, default keys, insecure settings, or backdoor accounts.
 * Web Interface: Inventory and examine all web server files (CGI, PHP, JS). Look for hidden debug endpoints, unprotected administrative functions, and client-side secrets.
 
-### Binary Inspection and String Analysis
+### Binary inspection and string analysis
 
 * Hardcoded Secrets: Use `strings`, `grep`, and tools like `BinAbsInspector` or `truffleHog` patterns to search binaries and libraries for passwords, API keys, cryptographic seeds, and certificates.
 * Dependency Analysis: Check linked libraries (`ldd`, `readelf -d`) for outdated, vulnerable versions. Identify custom, proprietary network daemons for deeper inspection.
 
-### Network Service Mapping
+### Network service mapping
 
 * Service Identification: From configs and binaries, list all network services the device runs (e.g., HTTP/HTTPS, SSH, Telnet, proprietary industrial protocols on specific ports). The absence of an expected service is itself a data point and must be recorded.
 * Protocol Inspection: For custom protocols, analyse related binaries for parsing routines to identify potential input validation flaws.
 
-## 2. Controlled, Lab-Only Emulation
+## 2. Controlled, lab-only emulation
 
 When static analysis requires behavioural context, firmware or specific components can be run in a safe, isolated environment.
 
-### Principles of Safe Emulation
+### Principles of safe emulation
 
 * Complete Isolation: The emulation host has no outbound network connectivity. All traffic is contained within a virtual lab network.
 * Sacrificial Basis: Emulation is only performed on firmware extracted from hardware owned by the lab.
 * Tooling: Use `qemu-system` (for full system emulation of ARM, MIPS, etc.) or `unicorn`/`qemu-user` (for individual binary emulation).
 
-### Emulation Process
+### Emulation process
 
 1. Setup: Launch the firmware image or binary in the appropriate emulator (e.g., `qemu-system-arm -kernel <kernel> -hda <rootfs>`).
 2. Network Simulation: Use tools like `Firmadyne` or custom `qemu` network bridging to allow the emulated device to think it is on a network, while ensuring all traffic is captured internally.
@@ -54,11 +60,11 @@ When static analysis requires behavioural context, firmware or specific componen
    * Confirm hypotheses from static analysis where behavioural confirmation is safe and necessary. *Not all findings require emulated verification; static evidence alone may be sufficient where impact is unambiguous.*
 4. Traffic Capture: Use `tcpdump` on the virtual bridge to capture network traffic for analysis of proprietary protocols or to identify undocumented API calls.
 
-## 3. Vulnerability Identification & Documentation
+## 3. Vulnerability identification and documentation
 
 Findings must be recorded with precision to enable both verification and operational use.
 
-### Creating the Vulnerability Report
+### Creating the vulnerability report
 
 For each identified issue, create a structured entry. This will form the core of the hand-off to the Fingerprint Forge.
 
@@ -75,7 +81,7 @@ Behavioural Evidence (if emulated): Successfully authenticated to `/admin.cgi` e
 Potential Impact: Full compromise of device administrative interface.
 ```
 
-### Extracting Fingerprint Artefacts
+### Extracting fingerprint artefacts
 
 Concurrently, the research must identify the unique, network-visible signatures of the *specific vulnerable firmware version*. These are the key outputs for the Forge.
 
@@ -86,7 +92,7 @@ Concurrently, the research must identify the unique, network-visible signatures 
 
 *Artefacts must be verified as version-specific; vendor-wide or reused identifiers are noted but not treated as vulnerability fingerprints.* These artefacts are documented in the `analysis/<vendor>/<device>/<version>/notes.md` file alongside hashes for provenance.
 
-## 4. Hand-off to the Fingerprint Forge
+## 4. Hand-off to the fingerprint forge
 
 Research is complete when two artefacts are ready:
 
