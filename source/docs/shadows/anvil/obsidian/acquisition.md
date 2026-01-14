@@ -1,99 +1,118 @@
 # Firmware acquisition
 
-This page describes concrete methods to acquire firmware and related artefacts from devices and software, using tools that actually exist.
+Concrete, reproducible methods to acquire firmware and related artefacts from devices and software, using tools that actually exist and workflows that survive contact with reality.
+
+Positioning: This document is written as an internal laboratory standard (SOP) and published externally for transparency and reuse. It assumes a controlled research environment and prioritises provenance, repeatability, and evidentiary integrity over convenience.
+
+Laboratory context: All procedures below are conducted on sacrificial hardware within an isolated lab network. No production systems. No customer environments. No “just this once”.
+
+The first step in the Obsidian Desk workflow, providing verified binaries for structured research. If acquisition is sloppy, everything downstream is fiction.
 
 ## Acquire from vendor packages (baseline)
 
-Typical formats: `.bin`, `.img`, `.upd`, `.pkg`, `.exe` / `.msi` (engineering tools), `.apk` / `.ipa` (mobile apps), `.rom`
+Typical formats include:
 
-Steps:
+`.bin`, `.img`, `.upd`, `.pkg`, `.rom`, `.exe` / `.msi` (engineering tools), `.apk` / `.ipa` (mobile apps)
+
+Baseline procedure:
 
 1. Download firmware or installer
 2. Verify checksum (if provided)
 3. Extract contents
+4. Record provenance immediately
 
-### Siemens CPU 1212C (non-fail-safe), DC/DC/DC — 6ES7212-1AE40-0XB0
+Vendor packages are the cleanest starting point, when available. They are also the least representative of what actually runs on deployed devices. Treat them as baseline artefacts. Examples below.
 
-I had in mind to download from [Siemens](https://support.industry.siemens.com/cs/document/109976907/firmware-v4-7-for-s7-1200-available).
+### Siemens SIMATIC S7-1212C (non-fail-safe), DC/DC/DC
 
-Why?
+Order number: 6ES7212-1AE40-0XB0
 
-- Common in the wild. The 1212C is one of the most widely deployed S7-1200 CPUs. It shows up in small plants, OEM panels, building automation, and places where budgets went to lunch and never came back.
-- Non-fail-safe: Study ordinary firmware, not the legally-sensitive, certification-heavy world of F-CPUs.
-- DC/DC/DC variant has a simple hardware profile, fewer relay-specific quirks, and is most common in control cabinets. AC/DC/Rly is electrically noisier and operationally irrelevant for firmware research.
-- Siemens documentation, update tooling, and community material are best for the 1212C. Method, not heroics.
-- Representative attack surface: S7CommPlus; Embedded web server; Firmware update mechanism. 
-- Known historical issues (auth, info disclosure, hardening gaps)
+Intended acquisition path: Siemens tooling (TIA Portal)
 
-Why not?
+Why this device?
 
-- It is required to register and receive permission
-- The firmware can only be accessed via the TIA portal (see below).
+* Extremely common in the wild: small plants, OEM panels, building automation, and budget-constrained environments.
+* Non-fail-safe: avoids the certification-heavy, legally sensitive F-CPU ecosystem.
+* DC/DC/DC variant has a simpler hardware profile and fewer relay-specific artefacts.
+* Siemens documentation, tooling, and community material are strongest for the 1212C.
+* Representative attack surface:
+  * S7CommPlus
+  * Embedded web server
+  * Firmware update mechanism
+* Known historical weaknesses (authentication, information disclosure, hardening gaps).
 
-### Moxa / Nport 5000ai-m12
+Why this is painful (and still useful)?
 
-[Moxa](https://www.moxa.com/en/products/industrial-edge-connectivity/serial-device-servers/industrial-device-servers/nport-5000ai-m12-series#resources) 
-offers several firmwares without hassle. 
+* Firmware is not provided as a standalone binary.
+* Access requires registration and tooling approval.
+* Firmware artefacts are accessed indirectly via TIA Portal, cached, fragmented, and wrapped in internal package formats.
 
-- Vendor: Moxa
-- Product: NPort 5250AI-M12
-- Firmware version: 2.0
-- Filename: moxa-nport-5250ai-m12-models-firmware-v2.0.rom
-- Download date: 2026-01-06
+Expectation management: Siemens firmware acquisition is toolchain archaeology, not a download. You will not get a neat `.bin`. Reproducibility depends on:
 
-Why?
+* TIA Portal version
+* Installed device support packages
+* Update workflow used
 
-- Representative of a standard industrial gateway with M12 connectors (common in OT networks)
-- Runs network services (TCP/IP, Modbus/TCP, SNMP, etc.)
-- Size and complexity manageable for lab analysis.
-- Publicly available firmware; no login required.
+Record all of this. If you cannot reproduce the environment, you cannot reproduce the artefact.
+
+### Moxa NPort 5250AI-M12
+
+Vendor: Moxa
+Product: NPort 5250AI-M12
+Firmware version: 2.0
+Filename: `moxa-nport-5250ai-m12-models-firmware-v2.0.rom`
+Download date: 2026-01-06
+
+Why this device?
+
+* Representative industrial serial-to-Ethernet gateway (common in OT networks).
+* Exposes multiple network services (TCP/IP, Modbus/TCP, SNMP, HTTP).
+* Manageable size and complexity for lab analysis.
+* Firmware publicly available without authentication.
+
+This is what “good” vendor access looks like.
 
 ### Vertiv / Liebert IS-UNITY-DP card
 
-[Vertiv](https://www.vertiv.com/nl-emea/support/software-download/monitoring/liebert-intellislot-communications-interface-cards/) 
-also offers firmwares without hassle. 
+Vendor: Vertiv / Liebert
+Product: IS-UNITY-DP card
+Firmware version: 8.4.7.0
+Release date: November 2025
+Protocols: Web, Velocity Protocol, SN Sensor, LIFE™, SNMP, SMTP, SMS, Telnet
+Compliance claims: California IoT Security Law, UL2900-1, IEC 62443-4-2
 
-- Vendor: Vertiv / Liebert
-- Product: IS-UNITY-DP card (used in Liebert AC Power and Liebert iCOM v4 Thermal Management units)
-- Firmware Version: 8.4.7.0
-- Release Date: November 2025
-- Release Notes / Reference: IS-UNITY_8.4.7.0
-- Protocols: Web, Velocity Protocol, SN Sensor, LIFE™ Services, SNMP, SMTP, SMS, Telnet
-- Compliance: California IoT Security Law, UL2900-1, IEC 62443-4-2
+Why?
 
-Why:
+* Embedded industrial management firmware (OT/ICS).
+* Rich network surface and web interface.
+* Versioned releases with notes and checksums.
+* Publicly listed, downloadable for registered users.
 
-- Embedded industrial firmware (OT/ICS domain)
-- Contains network services, management protocols, and web interface — perfect for artefact extraction
-- Versioned with release notes and checksums (important for integrity & reproducibility)
-- Publicly listed on Vertiv support site, downloadable for registered users
+Compliance claims are not security guarantees, but they do improve documentation quality.
 
 ## Acquire from companion mobile apps (very common)
 
-Android (APK):
+Mobile apps frequently embed firmware URLs, update logic, API paths, and device identifiers.
+
+### Android (APK)
 
 ```bash
 apktool d vendor_app.apk
 strings classes.dex | less
-```
-
-Also:
-
-```bash
 jadx-gui vendor_app.apk
 ```
 
 Look for:
 
-* Firmware URLs
-* Update API paths
+* Firmware download URLs
+* Update API endpoints
 * MQTT topics
 * Device identifiers
 * TLS pinning material
 
-Firmware downloads are often plain HTTPS blobs referenced in the app.
+Firmware downloads are often plain HTTPS blobs referenced directly in the app.
 
-iOS (IPA):
+### iOS (IPA)
 
 ```bash
 unzip vendor_app.ipa
@@ -103,7 +122,9 @@ strings Payload/*.app/* | less
 Use:
 
 * Ghidra or Hopper for binaries
-* MitM only offline, never against real cloud services
+* MitM only in an offline lab, never against live cloud services
+
+If you break pinning to see what the app does, document that you did.
 
 ## Acquire via update interception (lab network)
 
@@ -111,38 +132,64 @@ Use:
 
 * Dedicated lab router or Linux box
 * No internet forwarding
-* Device connected only to lab LAN
+* Device connected only to the lab LAN
 
 Tools: `tcpdump`, `mitmproxy`, `ngrep`
-
-Example:
 
 ```bash
 tcpdump -i eth0 -w update_capture.pcap
 ```
 
-Power device, trigger update via UI or app. Extract: Update URLs, Firmware blobs, Version metadata. Do not let device reach the real internet.
+Trigger an update via UI or app. Capture:
+
+* Update URLs
+* Firmware blobs
+* Version metadata
+
+Do not let the device reach the real internet.
+
+### Common blockers (this is normal)
+
+* TLS certificate pinning
+* Encrypted firmware payloads
+* Vendor VPN tunnels
+* Hardcoded IPs or DoH
+* Delta or patch-based updates
+
+If nothing appears on the wire, that is a result, not a failure. Record it.
 
 ## Acquire via vendor engineering software
 
-Very common for PLCs and industrial devices.
+Common for PLCs and industrial devices.
 
-Typical tools: Siemens TIA Portal, Rockwell Studio 5000, Schneider Control Expert, Vendor-specific loaders
+Typical tools:
 
-Procedure:
+* Siemens TIA Portal
+* Rockwell Studio 5000
+* Schneider Control Expert
+* Vendor-specific loaders
 
-1. Install software in VM
+Procedure
+
+1. Install software in a VM
 2. Connect device on isolated LAN
-3. Use read / backup / upload from device
-4. Capture resulting firmware or backup files
+3. Perform read / backup / upload operations
+4. Monitor filesystem activity
 
-Often stored in: ProgramData, AppData, temp directories. Monitor filesystem during operation.
+Firmware artefacts often appear in:
+
+* `ProgramData`
+* `AppData`
+* Temporary directories
+* Vendor cache folders
+
+Filesystem monitoring beats guessing.
 
 ## Acquire from removable media
 
-Some devices support firmware via USB or SD.
+Some devices support firmware export or update via USB or SD.
 
-Procedure:
+Procedure
 
 1. Insert blank media
 2. Trigger “export”, “backup”, or “update”
@@ -156,243 +203,84 @@ strings
 hexdump -C
 ```
 
+Do not assume exported backups are complete or unencrypted.
+
 ## Acquire via UART (very common, very effective)
 
-Hardware: USB-TTL adapter (FTDI, CP2102, CH340), Jumper wires, Logic level confirmed (3.3V vs 5V)
+Hardware
 
-Identify pins:
+* USB-TTL adapter (FTDI, CP2102, CH340)
+* Jumper wires
+* Logic level confirmed (3.3 V vs 5 V)
 
-```text
-TX RX GND VCC
-```
-
-Use multimeter or board silkscreen.
-
-Connect and listen:
+Identify pins: `TX`, `RX`, `GND`, `VCC`. Confirm with silkscreen or multimeter.
 
 ```bash
 screen /dev/ttyUSB0 115200
 ```
 
-Power device. Common bootloaders: U-Boot, RedBoot, Vendor custom shells.
+Power the device. Common boot environments:
 
-Look for commands like `printenv`, `ls`, `dump`, `read`
+* U-Boot
+* RedBoot
+* Vendor shells
 
-Sometimes: `loady`, `loadb`, `tftp`
+Look for `printenv`, `bdinfo`, `ls`, `dump`, `read`, `loady`, `loadb`, `tftp`. Capture all output to file.
 
-Capture output to file.
+### Procedure: from console to binary
+
+1. Interrupt boot. Send break during startup to reach bootloader.
+
+2. Map memory. Identify flash layout using:
+   * `printenv`
+   * `bdinfo`
+   * `/proc/mtd` (if Linux shell available)
+
+3. Dump memory.
+
+   * Bootloader: use `md.b`, `dump`, or equivalent; script terminal capture.
+   * OS shell: use `dd` on `/dev/mtd*`; exfiltrate via serial or lab-only networking.
+
+4. Reconstruct. Combine partitions (bootloader, kernel, rootfs) into a full image for analysis.
+
+UART often yields more than JTAG, with fewer regrets.
 
 ## Acquire via JTAG / SWD (destructive, last resort)
 
-Tools: J-Link, ST-Link, OpenOCD.
-
-Example:
+Tools: J-Link, ST-Link, OpenOCD
 
 ```bash
 openocd -f interface/jlink.cfg -f target/stm32f4x.cfg
 ```
 
-Dump flash:
-
 ```bash
 dump_image firmware.bin 0x08000000 0x100000
 ```
 
-Only do this on sacrificial hardware.
+Decision point: If read-out protection is enabled, stopping here may be necessary. Continuing may:
+
+* Permanently lock the device
+* Cross legal or contractual boundaries
+* Consume significant time for little gain
+
+This is not a technical failure. It is a judgement call.
 
 ## Acquire from flash chips directly
 
-When everything else fails.
+When everything else fails, hardware:
 
-Hardware:
-
-* SPI flash programmer (CH341A, Dediprog)
+* SPI programmer (CH341A, Dediprog)
 * SOIC clip
-
-Steps:
-
-1. Identify flash chip
-2. Read contents
-3. Verify dump consistency
 
 ```bash
 flashrom -p ch341a_spi -r firmware.bin
 flashrom -p ch341a_spi -v firmware.bin
 ```
 
-## Integrity and verification
+Sanity checks:
 
-Make sure every artefact can be trusted, traced, and reproduced without argument. Firmware that cannot be proven to 
-be unchanged is not evidence; it is gossip.
+* Perform multiple reads; hashes must match
+* Check for all-0xFF / all-0x00 regions
+* Compare dump size to expected flash size
 
-### Hashing and checksums for provenance
-
-Immediately after acquisition, calculate cryptographic hashes before any analysis.
-
-Minimum required:
-
-```bash
-sha256sum firmware.bin > firmware.bin.sha256
-```
-
-Recommended (for cross-tool comparison):
-
-```bash
-sha1sum firmware.bin >> firmware.bin.sha256
-md5sum firmware.bin >> firmware.bin.sha256
-```
-
-Record hashes for:
-
-* Raw firmware images
-* Extracted partitions
-* Companion software packages
-* Decompiled binaries and artefact bundles
-
-Hashes must be:
-
-* Stored alongside the artefact
-* Logged in the lab register
-* Never recalculated over modified files
-
-If a hash changes, the file is no longer the same artefact. Treat it as such.
-
-### Version control and metadata tagging
-
-Every artefact requires a minimum metadata record, regardless of perceived importance.
-
-Required fields:
-
-* Vendor
-* Product / device model
-* Firmware version (claimed and observed)
-* Acquisition method (download, UART, JTAG, app extraction, etc.)
-* Date and operator
-* Source (URL, device serial, archive, regulator, etc.)
-* Hash values
-
-This metadata lives:
-
-* In a structured metadata file (YAML or JSON)
-* In the lab index
-* In version control alongside notes and scripts
-
-Firmware binaries themselves are not committed to Git.
-Metadata, scripts, notes, and extracted artefact manifests are.
-
-If you cannot say where a file came from, it does not exist.
-
-## Storage and cataloguing
-
-Make sure artefacts remain findable, comparable, and usable years later. Memory fades. Filing systems endure.
-
-### Lab filing structure
-
-Example baseline layout:
-
-```text                                                                           
-.
-├── analysis
-│   ├── moxa
-│   │   └── nport
-│   │       └── 5250ai-m12
-│   │           └── 2.0
-│   └── vertiv
-│       └── liebert
-│           └── is-unity
-│               └── 8.4.7.0
-├── artefacts
-│   ├── moxa
-│   │   └── nport
-│   │       └── 5250ai-m12
-│   │           └── 2.0
-│   └── vertiv
-│       └── liebert
-│           └── is-unity
-│               └── 8.4.7.0
-├── firmwares
-│   ├── extracted
-│   │   ├── moxa
-│   │   │   └── nport
-│   │   │       └── 5250ai-m12
-│   │   │           └── 2.0
-│   │   └── vertiv
-│   │       └── liebert
-│   │           └── is-unity
-│   │               └── 8.4.7.0
-│   └── raw
-│       ├── moxa
-│       │   └── nport
-│       │       └── 5250ai-m12
-│       │           ├── 2.0
-│       │           │   ├── moxa-nport-5250ai-m12-models-firmware-v2.0.rom
-│       │           │   ├── moxa-nport-5250ai-m12-models-firmware-v2.0.rom.sha512
-│       │           │   ├── notes.md
-│       │           │   └── source.txt
-│       │           └── moxa-nport-5250ai-m12-models-firmware-v2.0.rom.sha512
-│       └── vertiv
-│           └── liebert
-│               └── is-unity
-│                   └── 8.4.7.0
-│                       └── is-unity_8.4.7.0_00166_appfwupdt.zip
-├── lab-notes
-└── reports
-    ├── moxa
-    │   └── nport
-    │       └── 5250ai-m12
-    │           └── 2.0
-    └── vertiv
-        └── liebert
-            └── is-unity
-                └── 8.4.7.0
-
-48 directories, 6 files                         
-```
-
-Do not improvise directory names. Consistency beats creativity.
-
-### Tagging and classification
-
-Each firmware artefact can be tagged by:
-
-* Vendor
-* Device family
-* Protocols present (Modbus, S7, HTTP, MQTT, etc.)
-* Architecture (ARM, MIPS, PowerPC, etc.)
-* Interface types (web UI, serial, fieldbus)
-* Acquisition confidence (high / medium / uncertain)
-
-Tags are stored in metadata, not filenames. Filenames remain boring on purpose.
-
-```bash
-nano source.txt
-```
-
-```text
-Vendor: Moxa
-Product: NPort 5250AI-M12
-Firmware version: 2.0
-Filename: moxa-nport-5250ai-m12-models-firmware-v2.0.rom
-Source: Moxa support site (public firmware)
-Acquired: YYYY-MM-DD
-Analyst: <your initials>
-Notes: No device interaction required
-```
-
-### Retention and immutability
-
-* Raw firmware is read-only
-* Extracted artefacts are derived, not replaced
-* Notes reference artefacts by hash, not filename
-* Deletions require supervisor sign-off
-
-The vault is not a scratch directory. It is evidence storage.
-
-### Importance
-
-When the Fingerprint Forge asks: *“Which exact firmware did this come from?”*
-
-There must be only one possible answer. Anything less is how mistakes happen, and the Patrician dislikes mistakes that make noise.
-
-
-
+Confidence comes from repetition, not hope.

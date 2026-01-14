@@ -50,11 +50,6 @@ If two decoders could match the same log, the first one in the file wins. Always
 general ones. It's like dealing with a mob, address the one with the detailed grievance list before the one just 
 shouting "I'm angry."
 
-## Test decoders
-
-Before deploying a decoder, [test it](testing.md). The Department learned this the hard way after a misconfigured 
-decoder failed to spot a fat finger hijack.
-
 ## Using `wazuh-logtest`
 
 Wazuh includes a tool for this very purpose

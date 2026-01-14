@@ -1,4 +1,4 @@
-# Protocol libraries and emulators (Obsidian Desk)
+# Protocol libraries and emulators
 
 These are for offline analysis, parsing, and controlled simulation only.
 They are not used against live systems. If anyone suggests otherwise, confiscate their keyboard.

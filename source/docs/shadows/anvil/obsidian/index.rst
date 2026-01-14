@@ -15,9 +15,8 @@ preparation.
    lab.md
    libs.md
    acquisition.md
-   research.md
    extraction.md
-   principles.md
+   research.md
    refs.md
 
 .. raw:: html

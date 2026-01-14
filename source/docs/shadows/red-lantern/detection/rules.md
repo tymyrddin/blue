@@ -72,10 +72,6 @@ Groups help categorise alerts. Add them with the `<group>` tag.
 
 ## Testing
 
-Before deploying a rule, [test it](testing.md).
-
-### Using `wazuh-logtest`
-
 Use the `wazuh-logtest` tool with a sample log to see if your rule triggers.
 
 ```bash
