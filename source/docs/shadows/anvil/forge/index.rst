@@ -15,6 +15,7 @@ controlled laboratory conditions, and to enable discreet, responsible notificati
    analysis.md
    probes.md
    validation.md
+   disclosure.md
    refs.md
    architecture.md
    Passive scanner spike @GitHub <https://github.com/ninabarzh/passive-scanner/>
