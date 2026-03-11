@@ -6,7 +6,7 @@ ensuring that security is not an afterthought but a continuous process. It combi
 security measures to reduce vulnerabilities while maintaining rapid deployment cycles.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Best practices
 
    notes/index
