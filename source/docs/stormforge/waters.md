@@ -1,87 +1,129 @@
 # Navigating the waters
 
+These exercises are about getting your bearings before you sail. They are not technical drills.
+They are the kind of exercises that feel suspiciously like having a conversation, right up
+until someone draws a diagram that makes the whole room go quiet.
+
+You do not need a facilitator with a lanyard and a prepared slide deck for these. You need
+people willing to look at their situation honestly, which is harder than it sounds and more
+valuable than it looks.
+
+Come back to these whenever a new storm appears on the horizon. The crew that mapped the
+currents in January may find the map looks entirely different in September, particularly
+if something broke in between.
+
 ## Mapping the waters
 
-**Purpose:** Surface what people see as the currents, rocks, and whirlpools in their shared environment: obstacles, pressures, and hidden dependencies.
+The crew takes a large piece of paper, a whiteboard, or something drawn on a shared screen
+at whatever resolution someone's laptop can manage. They draw the sea they actually sail in:
+not the org chart, not the architecture diagram, but the real landscape. The currents that
+carry work forward. The rocks that everyone navigates around without ever discussing. The
+whirlpools where requests go in and nothing comes out.
 
-**Method:**
+The interesting thing about this exercise is that the rocks are never where management
+thought they were.
 
-* Use a large sheet of paper, whiteboard, or virtual board.
-* Participants draw or symbolise elements of their environment: currents (flows of work), rocks (risks or bottlenecks), whirlpools (repeating problems).
-* Colour-code for impact, frequency, or urgency.
-* Discuss as a group and connect overlapping currents or conflicting rocks.
+Colour helps. Sticky notes help. Someone will draw a shark. That is allowed; sometimes
+the shark is real.
 
-**Outcome:** A visual map that highlights blind spots, friction points, and opportunities for intervention. Helps teams see the full “sea” they’re navigating.
+When the drawing is done, the map gets discussed. Where are the currents in conflict? Which
+whirlpools have been there so long that people have started treating them as features? Whose
+job it is to deal with a particular rock may, at this point, become the subject of an
+unexpectedly frank conversation. That is the point.
 
-**Tip:** Encourage creativity: icons, emojis, or metaphors help people express abstract pressures.
+Take a photo of the map before the whiteboard gets erased for the next meeting. This is a
+lesson that only needs to be learned once.
 
 ## Crossing the river
 
-**Purpose:** Practice decision-making and collaboration when resources are limited and risks are high.
+The crew is split into small groups and handed a scenario: resources are limited, the path
+is not obvious, and there is a river between here and where you need to be. The river has
+specific crossing rules. Some stepping stones are safe; some are not; some are occupied by
+someone else's problem. There is a time limit, because there is always a time limit.
 
-**Method:**
+Participants plan a crossing. Then they cross. Then, at some point mid-crossing, a storm
+arrives, because that is when storms arrive: mid-crossing, when the plan was going so well.
 
-* Divide participants into small crews.
-* Present a “river crossing” scenario: only certain steps or resources allow safe passage (time limits, scarce supplies, or conflicting priorities).
-* Participants must plan and execute the crossing while negotiating conflicts.
-* Debrief: discuss trade-offs, risk perception, leadership emergence, and communication patterns.
+The debrief is where the value lives. Who led? Did anyone freeze? Did the group converge on
+a decision, or did three people each set off in different directions with total conviction?
+Did someone know something important and not say it?
 
-**Outcome:** Participants experience the tension of constrained decisions, strengthen collaboration, and learn to surface assumptions.
-
-**Tip:** Introduce “storms” mid-crossing (e.g., a sudden obstacle or new rule) to simulate real-world volatility.
+This exercise has a way of producing a very quiet moment during the debrief, followed by
+someone saying that is actually exactly what happens at work, and then a lot of nodding.
 
 ## Storm signals
 
-**Purpose:** Learn to spot weak signals of trouble before they escalate into crises.
+Before every significant incident, there were signals. Afterwards, someone usually says
+they had a funny feeling. This exercise is about that funny feeling.
 
-**Method:**
+Participants share stories of anomalies they noticed: the log entry that seemed odd, the
+email that was slightly off, the system that was a bit slow for no obvious reason, the
+colleague who was suddenly very interested in the backup process. The group categorises,
+clusters, and discusses what the signals were pointing at, and what a reasonable person
+might have done at the time.
 
-* Each participant shares an early-warning story or anomaly they observed in their work or environment.
-* Facilitator categorises signals by type, source, or severity.
-* Group brainstorms potential responses and ways to monitor similar signals in the future.
+The key word is reasonable. The point is not to retroactively assign blame for having
+missed something. The point is to build the pattern-recognition vocabulary that makes
+the next signal slightly easier to catch.
 
-**Outcome:** Increased situational awareness, better communication about risks, and a shared framework for identifying early warnings.
-
-**Tip:** Include examples from past storms or incidents to ground abstract signals in concrete experience.
+It helps to bring real examples from the news. The industry is not short of them. Stories
+of incidents where the warning signs were visible months before the event tend to generate
+good discussion and a certain amount of collective sighing.
 
 ## Anchor points
 
-**Purpose:** Identify stabilising forces that keep the group steady during turbulent times.
-**Method:**
+When everything is going wrong simultaneously, the crews that do best are usually the ones
+who know what they can rely on. Not optimistically, not by assumption, but actually: the
+backup that runs, the person who stays calm, the process that holds even when adjacent
+processes are on fire.
 
-* Participants recall moments when the team successfully navigated difficulty.
-* Storytelling circle: each shares their perspective.
-* Facilitator distils recurring themes into “anchors”: principles, routines, or people the team can rely on.
+Participants recall moments when things went wrong but the group held steady. What was the
+anchor? Was it a person, a habit, a redundancy that finally earned its keep? Stories get
+told. Themes get identified.
 
-**Outcome:** Recognising and reinforcing stabilising factors boosts confidence, morale, and resilience during change or uncertainty.
-
-**Tip:** Encourage participants to capture anchors visually (drawings, symbols, or sticky notes) for easy reference later.
+The resulting list of anchors is practical. It names the specific things and people that
+provide stability, which also, usefully, names the things that need protecting and the
+people who should not be quietly moved to a different team without anyone noticing what
+was holding.
 
 ## Harbour master exercise
 
-**Purpose:** Test how the group reacts under simulated stress, conflicting information, and communication breakdowns.
-**Method:**
+The harbour master exercise involves more incoming ships than any harbour master can
+reasonably handle, each with urgent cargo and a captain who is absolutely certain their
+situation is the exceptional one.
 
-* Facilitator introduces a scenario with incomplete or contradictory information.
-* Add time pressure or multiple simultaneous demands (“storms” hitting the harbour).
-* Observe how participants coordinate, prioritise, and communicate.
-* Debrief: highlight patterns of trust, coordination, overload, and improvisation.
+A facilitator introduces a scenario with incomplete information and a steadily worsening
+situation. New demands arrive before the previous ones are resolved. Some information turns
+out to be wrong. One of the ships is in a different time zone and has misunderstood the
+instructions.
 
-**Outcome:** Teams learn stress-handling patterns, identify bottlenecks, and strengthen adaptive responses.
+Participants manage the harbour. Or attempt to. Coordination, prioritisation, and
+communication under pressure are all on display.
 
-**Tip:** Use role rotation to allow everyone to experience different positions of responsibility.
+The debrief covers the patterns that emerged: who decided when there was no time to
+consult, who had information that others needed but did not share it, at what point did
+the group shift from planning to improvising, and was that shift visible to everyone or
+only to the person who made it.
+
+Roles rotate between runs so different people get to experience the specific misery of
+being the one in charge. Learning it this way is faster than learning it the first time
+something actually breaks.
 
 ## Currents and countercurrents
 
-**Purpose:** Explore hidden forces shaping behaviour: policies, culture, or unspoken rules that push or pull the group.
+Every organisation has forces that nobody fully acknowledges: the unwritten rule that a
+particular system cannot be touched because of what happened in 2019, the policy that
+technically exists but has not been enforced since its author left, the cultural current
+that determines how decisions actually get made regardless of what the process document says.
 
-**Method:**
+Participants write down the forces that push things forward in their environment and the
+forces that push back. These are collected, clustered, and discussed. Anonymity is optional
+but tends to improve the quality of the countercurrents considerably.
 
-* Participants write down forces that propel the group forward and forces that hold it back.
-* Share anonymously or openly, then cluster similar forces.
-* Facilitate discussion: why do these forces exist, and how can they be leveraged or mitigated?
+The interesting discussion is not about what the forces are. It is about which of them are
+load-bearing. Some of the rocks in the current are rocks. Some of them are the things
+holding the whole structure together, and removing them without understanding why they are
+there is how incidents get created.
 
-**Outcome:** Reveals systemic influences on behaviour, surfaces hidden conflicts, and identifies potential levers for change.
-
-**Tip:** Consider combining with Mapping the Waters so currents identified can be tied to real “rocks” or “whirlpools” in the environment.
-
+This exercise pairs well with Mapping the Waters. What looked like a whirlpool on the map
+might, from this angle, be a countercurrent doing a job that nobody formally asked it to do.
