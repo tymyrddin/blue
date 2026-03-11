@@ -17,6 +17,7 @@ coffee, because the attackers never sleep, and neither do we (but only because o
 
    docs/org/index
    docs/shadows/index
+   docs/stormforge/index
 
 .. toctree::
    :maxdepth: 1
@@ -28,4 +29,3 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    docs/home/index
    docs/diy/index
    docs/active/index
-   docs/stormforge/index
