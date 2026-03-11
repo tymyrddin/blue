@@ -1,9 +1,9 @@
-## Responsible disclosure considerations
+# Responsible disclosure considerations
 
 If we discover vulnerabilities in commercial products during our testing, we have ethical obligations beyond just 
 reporting to our client.
 
-### Vendor notification
+## Vendor notification
 
 If the vulnerability is in a product used by other organisations:
 
@@ -12,7 +12,7 @@ If the vulnerability is in a product used by other organisations:
 3. Allow reasonable time for patching (typically 90 days)
 4. Coordinate disclosure with vendor
 
-### ICS-CERT coordination
+## ICS-CERT coordination
 
 For critical infrastructure vulnerabilities, notify the authority:
 
@@ -20,7 +20,7 @@ For critical infrastructure vulnerabilities, notify the authority:
 - They can issue advisories to other users
 - They can help with responsible disclosure timeline
 
-### Client notification boundaries
+## Client notification boundaries
 
 Our client needs to know about the vulnerabilities we found, but we should:
 
