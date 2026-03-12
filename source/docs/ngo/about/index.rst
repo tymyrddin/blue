@@ -1,8 +1,8 @@
 Inside the Home
 ================
 
-.. image:: /_static/images/ngo.png
-   :alt: A warm, slightly smoky common room. Mismatched furniture. A griffin asleep in the corner. Someone has pinned a rota to the wall and written PLEASE DO NOT EAT THE ROTA on it.
+.. image:: /_static/images/ngo-about.png
+   :alt: A communal dining room with mismatched tables and chairs. Various fantasy creatures eating lunch, each at their own table. A minotaur at one end reading a newspaper. In the corner, a phoenix sits wreathed in soft golden flames.
 
 The Home exists because bewildered beasts need somewhere to be bewildered in peace.
 

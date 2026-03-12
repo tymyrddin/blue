@@ -21,7 +21,7 @@ not from the top down, but from the ground up. Somewhere between a startup and a
 enterprise. Complex enough to matter, resource-constrained enough to hurt.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: You cannot fix everything at once, so fix the right things first.
 
    about/index
