@@ -14,11 +14,11 @@ available at the time. The volunteers are enthusiastic. The budget is not.
 The stakes are real: 200,000 members, donors and supporters whose data you now help steward.
 
 There is no SIEM. There is no security team. There is you, a mandate to do something about
-security, and a calendar already full of stakeholder meetings.
+architecture and security, and a calendar already full of stakeholder meetings.
 
 This section is for that situation: building a security foundation in a mid-sized non-profit,
-not from the top down, but from the ground up. Somewhere between a startup and an
-enterprise. Complex enough to matter, resource-constrained enough to hurt.
+not from the top down, but from the ground up. Somewhere between a `startup <../startup/index.rst>`__ and an
+`enterprise <../org/index.rst>`__ . 
 
 .. toctree::
    :maxdepth: 1

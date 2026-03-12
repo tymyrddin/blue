@@ -96,7 +96,7 @@ the night staff (all vampires, for obvious reasons) take over.
 
 And somewhere, in the warm, slightly smoky darkness of the Home for Bewildered Beasts of
 Legend, a confused griffin curls up in a nest of old blankets, a depressed phoenix glows
-faintly in her sleep, and the thing in the basement... purrs.
+faintly in her sleep, and the thing in the basement ... purrs.
 
 "We don't fix them. We just give them somewhere to be bewildered in peace." ~ Motto of the Home (unofficial,
 coined by a volunteer after three mugs of tea)
