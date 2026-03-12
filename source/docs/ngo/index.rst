@@ -38,7 +38,7 @@ Not covered: audit compliance
 
 The goal here is not a checkbox. ISO 27001 exists and may eventually be relevant,
 but a freshly hired architect in a resource-constrained non-profit does not start there.
-The goal is to reduce actual risk for actual people: the care workers, the volunteers,
+The goal is to reduce actual risk for actual people and animals: the care workers, the volunteers,
 the 200,000 members and donors whose trust funds your mission.
 
 Evidence for auditors accumulates as a side effect of doing the work properly.
