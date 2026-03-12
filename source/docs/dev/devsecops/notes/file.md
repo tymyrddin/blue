@@ -7,3 +7,10 @@ File storage is a piece of storage such as the on-premises network-attached stor
 * can control access permissions to the remote filesystem.
 * enables automatic filesystem growth.
 
+## Related
+
+- [AWS: AWS lock-in assessment](../aws/lock-in.md)
+- [Azure: Microsoft Azure lock-in assessment](../azure/lock-in.md)
+- [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
+- [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)
+

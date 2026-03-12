@@ -1,4 +1,4 @@
-# Notes from the security trenches: A SysEngineer’s ongoing journey
+# A SysEngineer’s ongoing journey
 
 Welcome to my ever-growing collection of security notes. Where theory meets panic, best practices collide with 
 real-world chaos, and half the battle is remembering which cloud console I’m logged into. These pages are a mix of 

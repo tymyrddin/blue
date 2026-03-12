@@ -28,7 +28,7 @@ Action Items:
 |--------------------|--------------------|-------------------|-----------------------------|---------------|
 | Source Control	    | CodeCommit	        | Azure Repos	      | Cloud Source Repos	         | Gitea         |
 | CI Tool	           | CodeBuild	         | Azure Pipelines	  | Cloud Build	                | Drone CI      |
-| CD Tool	           | CodePipeline	      | Azure Pipelines	  | Cloud Deploy	Argo CD        |
+| CD Tool	           | CodePipeline	      | Azure Pipelines	  | Cloud Deploy	               | Argo CD       |
 | Security Scanning	 | Trivy + Inspector	 | Trivy + Defender	 | Trivy + Container Analysis	 | Trivy + Falco |
 
 Action Items:
@@ -115,3 +115,22 @@ Quarterly:
 * Deploy the CI/CD pipeline (reference code samples).
 * Enable security controls (WAF, scanning, zero trust).
 * Set up monitoring (Prometheus/CloudWatch/Azure Monitor).
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [AWS: AWS data protection: GDPR roadmap notes](../aws/gdpr-compliance.md)
+- [AWS: AWS: The bill that never ends](../aws/estimated-costs.md)
+- [AWS: AWS lock-in assessment](../aws/lock-in.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [Azure: Azure data protection: Notes on meeting GDPR Requirements](../azure/gdpr-compliance.md)
+- [Azure: Azure: Nice dashboard, shame about the costs](../azure/estimated-costs.md)
+- [Azure: Microsoft Azure lock-in assessment](../azure/lock-in.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [GCP: Notes on navigating GDPR requirements on Google Cloud](../gcp/gdpr-compliance.md)
+- [GCP: GCP: Free-tier until it is not](../gcp/estimated-costs.md)
+- [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
+- [On-prem: GDPR compliance Hetzner (On-Prem/Alternative Cloud)](../on-prem/gdpr-compliance.md)
+- [On-prem: On-Prem @ Hetzner cloud costs "DIY, but actually sane"](../on-prem/estimated-costs.md)
+- [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)

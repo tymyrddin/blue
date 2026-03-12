@@ -23,7 +23,7 @@ OR
 
     $ sudo vim /etc/pam.d/login
 
-**!!! WARNING !!! Editing the `/etc/pam.d/*` or `/etc/pam.conf` files can lock you out of your system.**
+!!! WARNING !!! Editing the `/etc/pam.d/*` or `/etc/pam.conf` files can lock you out of your system.
 
 Add this rule in both files:
 

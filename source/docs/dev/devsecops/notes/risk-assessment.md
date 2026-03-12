@@ -25,3 +25,10 @@ For example, suppose there are services with assigned business criticality level
 ## Real-world
 
 Supply-chain attacks are one of the most serious risks.
+
+## Related
+
+- [AWS: AWS data protection: GDPR roadmap notes](../aws/gdpr-compliance.md)
+- [Azure: Azure data protection: Notes on meeting GDPR Requirements](../azure/gdpr-compliance.md)
+- [GCP: Notes on navigating GDPR requirements on Google Cloud](../gcp/gdpr-compliance.md)
+- [On-prem: GDPR compliance Hetzner (On-Prem/Alternative Cloud)](../on-prem/gdpr-compliance.md)

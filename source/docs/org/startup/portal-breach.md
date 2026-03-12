@@ -1,6 +1,6 @@
 # The Seamstresses' Guild portal breach
 
-It's 14:47 when Angua joins. She's working her first night shift in the new Security Operations Center (a generous 
+It's 14:47 when Angua joins. She's working her first night shift in the new Security Operations Centre (a generous 
 term for the desk in the corner with three monitors). She's hired specifically because she has "excellent instincts 
 for suspicious activity." Being a werewolf helps with pattern recognition.
 

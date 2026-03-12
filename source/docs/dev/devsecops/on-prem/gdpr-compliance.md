@@ -2,8 +2,8 @@
 
 ## Certifications & legal frameworks
 
-- ISO 27001: Certifies ISMS for data centers in Germany (Nuremberg, Falkenstein) and Finland.  
-- SCCs for Non-EU Locations: Covers US (Virginia, Oregon) and Singapore data centers.  
+- ISO 27001: Certifies ISMS for data centres in Germany (Nuremberg, Falkenstein) and Finland.  
+- SCCs for Non-EU Locations: Covers US (Virginia, Oregon) and Singapore data centres.  
 
 ## Data residency & control
 
@@ -24,7 +24,7 @@
 ## Data location
 
 - EU-Centric: Most Hetzner servers and cloud services are hosted in Germany (Falkenstein, Nuremberg) or Finland, with optional U.S./Singapore locations (opt-in required).  
-- Object Storage: S3-compatible storage defaults to EU data centers.  
+- Object Storage: S3-compatible storage defaults to EU data centres.  
 
 ## Jurisdiction
 

@@ -11,3 +11,10 @@ Moving to production and running hundreds of container instances, an orchestrato
 Docker was adopted by the industry as a de facto standard for wrapping containers, and cloud vendors support a new initiative for wrapping containers called the [Open Container Initiative (OCI)](https://opencontainers.org/). AWS offers [OCI artifact support in Amazon ECR](https://aws.amazon.com/blogs/containers/oci-artifact-support-in-amazon-ecr/), Azure [OCI images](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-image-formats#oci-images), and Google Cloud an [OCI image format](https://cloud.google.com/artifact-registry/docs/supported-formats#oci).
 
 [Kubernetes](https://kubernetes.io/) is an open source project (developed initially by Google) and is now considered the industry de facto standard for orchestrating, deploying, scaling, and managing containers.
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

@@ -21,8 +21,12 @@ CI/CD pipelines automate software builds, testing, and deployment, but they also
    * Deploy versioned, immutable artefacts (containers, VM images).
    * Test rollback procedures to recover from compromised releases.
 
-## How?
+## Related
 
 * [Docker](docker.md)
 * [Code and Git](git.md)
 * [Supply-chain Levels for Software artefacts (SLSA)](artefacts.md)
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

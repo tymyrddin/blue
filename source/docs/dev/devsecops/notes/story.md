@@ -59,3 +59,10 @@ Implementing security measures during all stages of the development lifecycle (s
 * [History of DevOps](https://www.appknox.com/blog/history-of-devops)
 * [Devopedia: Shift Left](https://devopedia.org/shift-left)
 * [3 DevSecOps success stories](https://www.csoonline.com/article/3439737/3-devsecops-success-stories.html)
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

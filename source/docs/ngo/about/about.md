@@ -43,7 +43,7 @@ but discovered she had a real gift for listening to creatures who had no one els
 - "I used to terrorise villages. Now I can't even afford a cave."
 - "My last owner said I was 'too mythical' for the lease."
 - "Everyone expects me to breathe fire, but I have anxiety."
-- "I'm 400 years old and I've outlived everyone I ever loved. Also, I think I have indigestion."
+- "I'm 400 years old, and I've outlived everyone I ever loved. Also, I think I have indigestion."
 
 Group therapy sessions are held on Tuesdays. The werewolves sit in the back, the vampires sit away from windows, and 
 the dragons sit slightly too close to the curtains. It's chaos. It's beautiful.
@@ -81,7 +81,7 @@ Successful placements have included:
 
 Every resident learns these within a week:
 
-1. Don't eat the volunteers. They mean well and they're the ones with the food.
+1. Don't eat the volunteers. They mean well, and they're the ones with the food.
 2. If you breathe fire, warn someone first. The curtains are new.
 3. The thing in the basement gets the first bucket. Don't ask why. Just accept it.
 4. Mrs. Clodpull is always right. Even when she's wrong. Especially when she's wrong.
@@ -91,12 +91,12 @@ Every resident learns these within a week:
 
 Mornings start with the sound of Kevin screaming (something has escaped). Mid-mornings involve
 recapturing whatever escaped. Lunch is chaos. Afternoons are for therapy, wing-clipping, and
-existential conversations. Evenings are quiet—the creatures settle, the volunteers go home, and
+existential conversations. Evenings are quiet, the creatures settle, the volunteers go home, and
 the night staff (all vampires, for obvious reasons) take over.
 
 And somewhere, in the warm, slightly smoky darkness of the Home for Bewildered Beasts of
 Legend, a confused griffin curls up in a nest of old blankets, a depressed phoenix glows
 faintly in her sleep, and the thing in the basement... purrs.
 
-"We don't fix them. We just give them somewhere to be bewildered in peace."* — Motto of the Home (unofficial, 
+"We don't fix them. We just give them somewhere to be bewildered in peace." ~ Motto of the Home (unofficial,
 coined by a volunteer after three mugs of tea)

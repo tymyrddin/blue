@@ -57,7 +57,7 @@ To increase the Postfix policy agent timeout, which will prevent Postfix from ab
 
     policyd-spf_time_limit = 3600
 
-And append `check_policy_service unix:private/policyd-spf` **after** `reject_unauth_destination`, for example:
+And append `check_policy_service unix:private/policyd-spf` after `reject_unauth_destination`, for example:
 
     smtpd_recipient_restrictions = reject_non_fqdn_recipient,reject_unknown_recipient_domain,permit_mynetworks,permit_sasl_authenticated,reject_unauth_destination,reject_non_fqdn_sender,reject_unlisted_recipient,check_policy_service unix:private/policyd-spf
 

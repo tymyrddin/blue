@@ -24,7 +24,7 @@
 
 ## Data location
 
-- Regions & Availability Zones: AWS organizes infrastructure into geographically isolated Regions (e.g., EU Frankfurt, US East). Each Region contains multiple Availability Zones (AZs) for redundancy. Data stored in a Region does not leave it without explicit customer action.  
+- Regions & Availability Zones: AWS organises infrastructure into geographically isolated Regions (e.g., EU Frankfurt, US East). Each Region contains multiple Availability Zones (AZs) for redundancy. Data stored in a Region does not leave it without explicit customer action.  
 - Local Zones: For stricter residency requirements (e.g., GDPR), AWS offers Local Zones (e.g., Berlin, Warsaw) that keep data within specific metro areas. These are extensions of parent Regions but enforce data locality via guardrails like SCPs (Service Control Policies).  
 
 ## Jurisdiction

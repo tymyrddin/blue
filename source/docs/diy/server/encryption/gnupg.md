@@ -26,7 +26,7 @@ To verify the keys were created:
 
     gpg -c <file>
 
-This will prompt the user to enter a passphrase to protect the file. **This is not the passphrase you used to create your keys**
+This will prompt the user to enter a passphrase to protect the file. This is not the passphrase you used to create your keys
 
 The `-d` option while targeting our gpg file that was encrypted, will print out the contents of the file after prompting for the secret passphrase.
 
@@ -34,9 +34,9 @@ The `-d` option while targeting our gpg file that was encrypted, will print out 
 
 Asymmetric encryption works by using two keys - one to encrypt, and one to decrypt. The public key is used to encrypt the data while the private key is used to decrypt the data. So using the typical Bob and Alice example, let's say Bob wants to send Alice an encrypted file.
 
-He would first encrypt the file using Alice's public key and then send the file away. Once Alice receives the file, she can decrypt it with her private key. The big takeaway here is that public keys can be shared, private keys should be kept private and held onto for dear life. **NEVER SHARE YOUR PRIVATE KEY!**
+He would first encrypt the file using Alice's public key and then send the file away. Once Alice receives the file, she can decrypt it with her private key. The big takeaway here is that public keys can be shared, private keys should be kept private and held onto for dear life. NEVER SHARE YOUR PRIVATE KEY!
 
-To use the scheme, users need to extract their **public keys** and send them to each other. Go to the `.gnupg` folder and extract with:
+To use the scheme, users need to extract their public keys and send them to each other. Go to the `.gnupg` folder and extract with:
 
     gpg --export -a -o <filename>
 

@@ -1,6 +1,6 @@
 # MFA Everywhere
 
-Multi-factor authentication (MFA) is the #1 way to stop hackers.
+Multifactor authentication (MFA) is the #1 way to stop hackers.
 
 ## MFA Tools
 
@@ -79,7 +79,7 @@ These are but a few examples for an impression. Check where you have accounts an
 ### Smart home & IoT apps
 
 * Google Home (Global): App → Settings → Home management → "Your Home" → Home settings → Two-step verification
-* Ring (Amazon, Global): Control Center → Two-Step Verification → Enable
+* Ring (Amazon, Global): Control Centre → Two-Step Verification → Enable
 * Xiaomi Home/Mi Home (Asia): Profile → Account & Security → Two-Factor Authentication
 * Tuya Smart (Used by many budget IoT brands): Account Security → Two-Step Verification
 

@@ -28,7 +28,7 @@ This gives the same information as `sudo -l` but with one difference; the `%sudo
 
 In the `%sudo ALL=(ALL:ALL) ALL NOPASSWD: ALL`, the `NOPASSWD` part says that the user that is part of the sudo group does not need to enter their local password to use sudo privileges. Generally, this is not recommended - not even for home use.
 
-Users can also be added to the `sudoers` using the `sudo` policy file. **Always edit sudoers with the `sudo visudo` command.**
+Users can also be added to the `sudoers` using the `sudo` policy file. Always edit sudoers with the `sudo visudo` command.
 
 If you are managing users in a network across multiple flavours of Linux (CentOS, Red Hat, etc.), where the sudo group may be called something different, this method may be more preferable: add a `User Alias` to the policy file and add users to that alias, or add lines for individual users.
 

@@ -12,3 +12,10 @@ SLSA consists of four levels, with SLSA 4 representing the ideal end state. The 
 
 * [SLSA version 1.0](https://slsa.dev/spec/v1.0/about)
 * [Software Supply Chain Best Practices](https://github.com/cncf/tag-security/blob/main/supply-chain-security/supply-chain-security-paper/sscsp.md)
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

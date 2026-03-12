@@ -4,7 +4,7 @@ This document outlines the evolution path from the current architecture, a passi
 
 ## Principles for development
 *   De-risk First: Each phase validates a core assumption before investing in scale.
-*   Operational Reality: Features are prioritized based on real deployment needs.
+*   Operational Reality: Features are prioritised based on real deployment needs.
 *   Incremental Scaling: The architecture allows for modular upgrades without refactoring the entire system.
 
 ## Phased development
@@ -90,7 +90,7 @@ This document outlines the evolution path from the current architecture, a passi
 |:-------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | Providers/     | Multi-Provider Support: Implement `censys.py` and `shodan.py` providers against the same `base.py` interface.                                              | Different datasets have different coverage. Using multiple sources increases the likelihood of finding a target. |
 | Providers/     | Private Dataset Provider: Create a provider that queries internal, passive data sources (e.g., internal network sensor logs, Zeek data).                   | Critical for scanning internal, non-routable networks that public APIs cannot see.                               |
-| Engine/Planner | Intelligent Query Planning: Enhance `planner.py` to generate the most efficient query for each provider (e.g., batching IPs, using bulk search endpoints). | Optimizes for API cost and speed.                                                                                |
+| Engine/Planner | Intelligent Query Planning: Enhance `planner.py` to generate the most efficient query for each provider (e.g., batching IPs, using bulk search endpoints). | Optimises for API cost and speed.                                                                                |
 | Providers/Base | Provider Fallback & Blending Logic: Implement logic to try providers in sequence or blend results if a probe fails or returns empty.                       | Ensures a single API outage or data gap doesn't break a scan. Increases reliability.                             |
 
 ### Operational integrationi
@@ -101,7 +101,7 @@ This document outlines the evolution path from the current architecture, a passi
 | New Component    | Active Probe Provider Module: Create a new provider that, when configured and authorized, performs safe, minimal active probes (e.g., TCP SYN, basic HTTP GET). Key: It implements the same `base.py` interface. | For internal networks or targets with no passive data, a controlled active check is necessary. Keeping it as a provider isolates the risk and complexity. |
 | Controller       | Automation & Scheduling: Package the scanner for scheduled runs (Docker image, systemd service). Integrate with workflow tools (Apache Airflow, Rundeck) for regular scanning jobs.                                  | The scanner must run reliably without manual intervention to provide continuous visibility.                                                               |
 | Integration      | Obsidian Desk Integration: Build automation to consume a Desk's `Artefact List` and propose or generate a draft `fingerprint.yaml`.                                                                                  | Closes the loop between analysis (Desk) and detection (Scanner), dramatically speeding up the fingerprint creation process.                               |
-| Engine/Evaluator | Confidence Scoring: Extend the `evaluator.py` and `evidence.py` model to output a confidence score (e.g., `HIGH` for 3/3 probes, `MEDIUM` for 1/1 unique probe) alongside the boolean match.                         | Helps operators prioritize findings. A `HIGH` confidence match on a critical vulnerability is a P0 ticket.                                                |
+| Engine/Evaluator | Confidence Scoring: Extend the `evaluator.py` and `evidence.py` model to output a confidence score (e.g., `HIGH` for 3/3 probes, `MEDIUM` for 1/1 unique probe) alongside the boolean match.                         | Helps operators prioritise findings. A `HIGH` confidence match on a critical vulnerability is a P0 ticket.                                                |
 
 ## Non-goals
 To prevent scope creep, the following are explicitly out of scope for the foreseeable future:

@@ -43,7 +43,7 @@ Perfect for:
 * Security research
 * Blue teams with a masochistic streak
 * Enthusiasts with an isolated VLAN and too much time
-* **Warning**: High-interaction honeypots are great research tools but can be turned against you if improperly isolated. Always sandbox.
+* Warning: High-interaction honeypots are great research tools but can be turned against you if improperly isolated. Always sandbox.
 
 ## Tools of the trade
 

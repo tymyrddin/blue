@@ -4,7 +4,7 @@ A security assessment plays a primary role in achieving security in SDLC and sho
 
 ## Vulnerability assessment
 
-Vulnerability Assessments focus on ***finding vulnerabilities***, but do not validate them or simulate the findings to prove they are exploitable in reality. Typically, automated tools run against an organisation's network and systems. Examples of tools: are OpenVAS, Nessus (Tenable), and ISS Scanner. These scanners probe ports and services on systems across various systems and IP Addresses. Other activities include checking service versions against a database of vulnerabilities affecting said version. The result is a report with a list of vulnerabilities usually found, with an automated threat level severity classification, e.g., High/Medium/Low or an assigned CVSS score.
+Vulnerability Assessments focus on *finding vulnerabilities*, but do not validate them or simulate the findings to prove they are exploitable in reality. Typically, automated tools run against an organisation's network and systems. Examples of tools: are OpenVAS, Nessus (Tenable), and ISS Scanner. These scanners probe ports and services on systems across various systems and IP Addresses. Other activities include checking service versions against a database of vulnerabilities affecting said version. The result is a report with a list of vulnerabilities usually found, with an automated threat level severity classification, e.g., High/Medium/Low or an assigned CVSS score.
 
 ## Penetration testing
 
@@ -138,3 +138,9 @@ RASP helps uncover third-party packages and associated vulnerabilities at runtim
 developers to prioritise the remediation and mitigation of their highest pressing vulnerabilities. This is usually 
 enabled in the production stage as security vulnerabilities are evaluated during the runtime of the application.
 
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

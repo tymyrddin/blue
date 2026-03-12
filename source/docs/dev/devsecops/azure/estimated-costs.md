@@ -5,7 +5,7 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure Az
 
 ## Best case – Clean DevSecOps setup with budget guardrails
 
-**€160/month**
+€160/month
 
 * Compute (Azure DevOps agents, Functions): €40
 * Blob Storage (Cool tier mostly): €20
@@ -16,11 +16,9 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure Az
 
 *You’ve made peace with YAML pipelines and tag your resources religiously. Azure billing weeps with boredom.*
 
----
-
 ### Worst case – Spaghetti pipeline, forgotten dev resources
 
-**€380/month**
+€380/month
 
 * Compute (Function triggers + test VMs): €80
 * Blob Storage (some in Hot tier, oops): €35

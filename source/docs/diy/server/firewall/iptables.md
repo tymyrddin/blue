@@ -1,6 +1,6 @@
 # iptables
 
-`iptables` is **not** the name of Linux's firewall. It is just one way of interacting with `netfilter` which every Linux distribution comes with.
+`iptables` is not the name of Linux's firewall. It is just one way of interacting with `netfilter` which every Linux distribution comes with.
 
 As such, `iptables` is a command line utility for configuring the Linux kernel firewall implemented within the Netfilter project. And it gets complex rather quickly which increases the risk of making mistakes. 
 

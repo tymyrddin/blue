@@ -77,7 +77,7 @@ Start/enable the saslauthd service and restart the postfix service.
 
 ## Dovecot
 
-If Dovecot is used as IMAP or POP mail server and **all users** already authenticate (such as with [PAM](https://server.tymyrddin.dev/docs/pki/pam)), then there is no need to configure another package.
+If Dovecot is used as IMAP or POP mail server and all users already authenticate (such as with [PAM](https://server.tymyrddin.dev/docs/pki/pam)), then there is no need to configure another package.
 
 ### SMTP
 

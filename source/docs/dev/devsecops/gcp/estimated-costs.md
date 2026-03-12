@@ -5,7 +5,7 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure GC
 
 ## Best case – Small team, Cloud Run magic, some self-restraint
 
-**€130/month**
+€130/month
 
 * Cloud Run builds, Cloud Build: €25
 * Storage (Multi-region Coldline): €10
@@ -16,11 +16,9 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure GC
 
 *You’re billed by the micrometre. Every part is fine. Until it’s not.*
 
----
-
 ## Worst case – CI logs and runaway BigQuery
 
-**€310/month**
+€310/month
 
 * GKE cluster from a demo never destroyed: €80
 * Coldline storage turned into hot blob: €35

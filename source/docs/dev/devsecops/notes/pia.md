@@ -4,21 +4,21 @@ The objective of a PIA is to perform an initial self-assessment of what business
 
 ## Privacy data attributes
 
-|        Attributes       | Related business flow or applications                                                     |
-|:-----------------------:|-------------------------------------------------------------------------------------------|
-| Privacy data type       | Describe collected or processed privacy data, such as name, address, phone                |
-| Purpose of colection    | Describe the objective of the data collection and the business                            |
-| Is it a must?           | Is the data collection essential to keep the business application running?                |
-| Ways of collection      | How the personal data is collected, such as API, email, or web form<br>registration          |
-| Lawful basis            | Is the data collection based on user agreement, contract, or legal<br>compliance?            |
-| Rights of data subject  | Can the data subject edit or delete the data?                                             |
-| Transmission            | How the data is transmitted, such as FTP, email, or API                                   |
-| Storage country         | Which country is the data stored in?                                                      |
-| Storage format          | In what format is the data stored, such as big data, relational database,<br>or paper-based? |
-| Expiration period       | Any specified expiration period of the data usage?                                        |
-| Cross-border transfer   | Will the data be transferred out of or into the EU?                                       |
-| Third-party involvement | Is any third party involved with the data processing?                                     |
-| Owner                   | Who/which team is the owner of the data?                                                  |
+|       Attributes        | Related business flow or applications                                                        |
+|:-----------------------:|----------------------------------------------------------------------------------------------|
+|    Privacy data type    | Describe collected or processed privacy data, such as name, address, phone                   |
+|  Purpose of colection   | Describe the objective of the data collection and the business                               |
+|      Is it a must?      | Is the data collection essential to keep the business application running?                   |
+|   Ways of collection    | How the personal data is collected, such as API, email, or web form<br>registration          |
+|      Lawful basis       | Is the data collection based on user agreement, contract, or legal<br>compliance?            |
+| Rights of data subject  | Can the data subject edit or delete the data?                                                |
+|      Transmission       | How the data is transmitted, such as FTP, email, or API                                      |
+|     Storage country     | Which country is the data stored in?                                                         |
+|     Storage format      | In what format is the data stored, such as big data, relational database,<br>or paper-based? |
+|    Expiration period    | Any specified expiration period of the data usage?                                           |
+|  Cross-border transfer  | Will the data be transferred out of or into the EU?                                          |
+| Third-party involvement | Is any third party involved with the data processing?                                        |
+|          Owner          | Who/which team is the owner of the data?                                                     |
 
 
 ## GDPR security requirements
@@ -39,3 +39,10 @@ _A controller is the entity that determines the purposes, conditions and means o
 | Provide the capability to export the data.                                                                                     | Recommended | Must       |
 | Secure data transmission.                                                                                                      | Must        | Must       |
 | Secure local data storage with encryption, access control, and <br>logging security controls.                                  | Must        | Must       |
+
+## Related
+
+- [AWS: AWS data protection: GDPR roadmap notes](../aws/gdpr-compliance.md)
+- [Azure: Azure data protection: Notes on meeting GDPR Requirements](../azure/gdpr-compliance.md)
+- [GCP: Notes on navigating GDPR requirements on Google Cloud](../gcp/gdpr-compliance.md)
+- [On-prem: GDPR compliance Hetzner (On-Prem/Alternative Cloud)](../on-prem/gdpr-compliance.md)

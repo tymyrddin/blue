@@ -39,3 +39,10 @@ To verify whether the application or the environment has been configured with se
 
 * [CheckSec](http://www.trapkit.de/tools/checksec.html)
 * [BinScope](https://www.microsoft.com/en-us/download/details.aspx?id=44995)
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

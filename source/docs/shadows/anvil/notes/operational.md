@@ -85,8 +85,6 @@ This ensures:
 5. Notifications are always responsible and quiet.
 6. The Patrician’s patience is finite; waste it not.
 
----
-
 *End of operational note, by memorandum from the Head of the Department of Silent Stability, initialled in a 
 handwriting that strongly suggests the Patrician has already read it.*
 

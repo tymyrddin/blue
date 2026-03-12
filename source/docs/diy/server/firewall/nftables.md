@@ -4,7 +4,7 @@ Available upstream since Linux kernel 3.13.
 
 ## Basic idea
 
-Got an idea! Working on it ... **Warning: untested!**
+Got an idea! Working on it ... Warning: untested!
 
     flush ruleset
 

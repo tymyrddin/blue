@@ -6,7 +6,7 @@ this pattern before, but she can't remember where or when.
 "We need threat intelligence," she tells Dr. Crucible. "Not just alerts on individual events, but patterns. Context. 
 Attribution. What are we seeing, what have others seen, what can we expect next?"
 
-Dr. Crucible nods. "The Circle Sea Information Sharing and Analysis Center exists precisely for this. We could 
+Dr. Crucible nods. "The Circle Sea Information Sharing and Analysis Centre exists precisely for this. We could 
 participate."
 
 ## What they built

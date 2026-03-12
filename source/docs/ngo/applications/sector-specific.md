@@ -7,7 +7,7 @@ landscape, and how they are integrated and secured, is part of the application a
 ## What to expect
 
 Resident registration software typically holds records for individual creatures: intake date,
-species, identifying information (where applicable — some residents resist categorisation),
+species, identifying information (where applicable, some residents resist categorisation),
 rehoming status, and current location within the Home. This intersects with legal obligations
 around creature welfare, documentation requirements, and reporting to relevant authorities.
 

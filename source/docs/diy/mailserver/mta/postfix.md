@@ -64,9 +64,9 @@ To make the hashfile:
 
 ## Managing mailboxes 
 
-**Don't manage mailboxes from postfix.** Redirect messages for delivery via POP/IMAP server. In case of dovecot there is `dovecot-lda` aka `deliver` that do everything and much more, like user-controlled message filtering, quota management, autoreplying etc. Most modern POP/IMAP servers have a lot of utilities for common tasks in infrastructures.
+Don't manage mailboxes from postfix. Redirect messages for delivery via POP/IMAP server. In case of dovecot there is `dovecot-lda` aka `deliver` that do everything and much more, like user-controlled message filtering, quota management, autoreplying etc. Most modern POP/IMAP servers have a lot of utilities for common tasks in infrastructures.
 
-Maildir **is** the newer and preferrable format due to the lot of improvements comparatively to mailbox. It has an index for each folder that allow to control duplicates, expiration times and even full-text search and is faster on a huge pile of messages. Dovecot can easily operate maildir with 300k messages in it without any visible slowdown.
+Maildir is the newer and preferrable format due to the lot of improvements comparatively to mailbox. It has an index for each folder that allow to control duplicates, expiration times and even full-text search and is faster on a huge pile of messages. Dovecot can easily operate maildir with 300k messages in it without any visible slowdown.
 
 ## Abuse and spam 
 
@@ -95,7 +95,7 @@ To create a database, use postmap command:
 
     # postmap hash:blacklist_incoming
 
-And append **before the first permit rule** in `/etc/postfix/main.cf`:
+And append before the first permit rule in `/etc/postfix/main.cf`:
 
     smtpd_recipient_restrictions = check_sender_access hash:/etc/postfix/blacklist_incoming
 

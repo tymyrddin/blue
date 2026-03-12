@@ -95,8 +95,8 @@ Every VM has one job and one job only:
 
 * JTAG/SWD adapters for low-level memory access
 * SPI/NAND/NOR programmers
-* USB protocol analyzers for device update capture
-* Oscilloscope / logic analyzer for curious glances at signals
+* USB protocol analysers for device update capture
+* Oscilloscope / logic analyser for curious glances at signals
 
 ## Links
 

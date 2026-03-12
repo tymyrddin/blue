@@ -126,7 +126,7 @@ Defensive assumptions:
 
 Implications:
 
-- Defense in depth (not just perimeter)
+- Defence in depth (not just perimeter)
 - Continuous monitoring (not just IDS)
 - Assume compromise detection, not just prevention
 - Honeytokens to detect unauthorized access

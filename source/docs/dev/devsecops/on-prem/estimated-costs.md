@@ -5,7 +5,7 @@ Based on this pipeline (so just a starter pipeline): [Secure on-premises CI/CD p
 
 ## Best case – Ubuntu VMs, discipline, and cron jobs
 
-**€80/month**
+€80/month
 
 * Dedicated vCPU cloud instance: €30
 * Storage (Volume + backups): €20
@@ -16,11 +16,9 @@ Based on this pipeline (so just a starter pipeline): [Secure on-premises CI/CD p
 
 *Hetzner: like having your own datacentre, but with fewer forklifts. Everything is under your control. Gloriously cheap.*
 
----
-
 ## Worst case – Forgotten volumes and no firewall
 
-**€155/month**
+€155/month
 
 * Over-provisioned cloud instance: €45
 * Unattached volumes still billing: €25

@@ -6,7 +6,7 @@
 
 Enter a passphrase. It will create 2 files in the `~/.ssh` directory: `id_rsa`, a private key and `id_rsa.pub`, a public key. 
 
-Note: **Do not leave the passphrase empty. An attacker who gets hold of your private key can otherwise connect to the hosts where you put you public key. Choose a loooooong and complex passphrase. Remember the passphrase. Better yet, put it in a password manager.**
+Note: Do not leave the passphrase empty. An attacker who gets hold of your private key can otherwise connect to the hosts where you put you public key. Choose a loooooong and complex passphrase. Remember the passphrase. Better yet, put it in a password manager.
 
 ## Copy key to server
 

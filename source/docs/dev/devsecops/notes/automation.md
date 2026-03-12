@@ -31,3 +31,10 @@ Dynamic web testing tools, such as OWASP ZAP, Arachni, Wapiti and W3af, provide 
 
 * Proactive mode means the testing tools are launched and test the web services directly. The tester decides the types of security testing (such as XSS or SQLi) of the target web service. With this kind of testing it is possible to miss certain permission-required web pages, or web pages that may require the right order of page visits.
 * Proxy mode, which can also be understood as MITM, means that the security testing tool is running as a proxy and intercepting traffic between the browser client and the target web services. In proxy mode, potential security vulnerability issues are detected based on the intercepted traffic.
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

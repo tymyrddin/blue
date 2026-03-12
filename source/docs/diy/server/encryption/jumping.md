@@ -64,7 +64,7 @@ Using the ProxyCommand option to invoke netcat as the last in the chain is a var
 
 The ''nc'' command sets and establish a TCP pipe between jumphost (or firewall) and backendserver.
 
-Note: **It is not possible to use both the ProxyJump and ProxyCommand directives in the same host configuration. The first one found is used and then the other blocked.**  
+Note: It is not possible to use both the ProxyJump and ProxyCommand directives in the same host configuration. The first one found is used and then the other blocked.
 
 ### Configuration
 

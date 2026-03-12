@@ -6,22 +6,22 @@
 
 Honeypot detection is all about inconsistencies, the tiny flaws that make a decoy feel "off" to a seasoned attacker. Common giveaways include:
 
-**Too perfect, too empty**
+Too perfect, too empty
 
 * Real systems have user artifacts (temp files, logs, quirks).
 * Honeypots often feel like a brand-new VM, pristine and unlived-in.
 
-**Limited interaction**
+Limited interaction
 
 * Low-interaction honeypots fail when probed beyond basic commands.
 * "Why can’t I curl google.com from this ‘production’ server?"
 
-**Legal tells**
+Legal tells
 
 * Defenders can’t break laws (e.g., a honeypot refusing to launch DDoS attacks).
 * Attackers test these boundaries deliberately.
 
-**Fingerprintable traits**
+Fingerprintable traits
 
 * Default credentials (admin:admin).
 * Unpatched but improbably old services (Windows Server 2008 in 2025?).
@@ -31,20 +31,20 @@ Honeypot detection is all about inconsistencies, the tiny flaws that make a deco
 
 Modern honeypot design focuses on plausible deniability:
 
-**Add "Realism" noise**
+Add "Realism" noise
 
 * Fake user histories (bash_history, logs).
 * Scheduled "maintenance" tasks (cron jobs).
 
-**Dynamic responses**
+Dynamic responses
 
 AI-generated context-aware replies (e.g., SSH honeypots that "remember" past commands).
 
-**Legal workarounds**
+Legal workarounds
 
 Simulate attack outcomes without actually attacking (e.g., logging "DDoS attempts" but not executing).
 
-**Regular updates**
+Regular updates
 
 Rotate fingerprints to match current real-world systems.
 

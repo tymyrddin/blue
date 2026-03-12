@@ -19,4 +19,9 @@ The database engine can be a common database engine such as MySQL, PostgreSQL, M
 8. Configure backups on the managed database for recovery purposes.
 9. Connect the application to the managed database and use the service.
 
+## Related
 
+- [AWS: AWS lock-in assessment](../aws/lock-in.md)
+- [Azure: Microsoft Azure lock-in assessment](../azure/lock-in.md)
+- [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
+- [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)

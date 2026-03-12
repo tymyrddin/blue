@@ -80,7 +80,7 @@ Push the changes back to the Git server:
 
     git push origin main
 
-By default, the git suite of commands utilizes OpenSSH, so our git push command should create an`ssh` connection back to the Git server and push the files there. You won’t be able to inspect the contents of the Git directory on your Git server, because it won’t contain the same file structure as your original directory. But when you pull a Git repository though, the resulting directory structure will be just as you left it.
+By default, the git suite of commands utilises OpenSSH, so our git push command should create an`ssh` connection back to the Git server and push the files there. You won’t be able to inspect the contents of the Git directory on your Git server, because it won’t contain the same file structure as your original directory. But when you pull a Git repository though, the resulting directory structure will be just as you left it.
 
 If you need to restore a repository onto another server, all you should need to do is perform a Git `clone`. To clone the repository into your current working directory:
 

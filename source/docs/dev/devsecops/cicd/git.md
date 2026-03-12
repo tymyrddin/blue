@@ -59,3 +59,9 @@ Building on that, work with operational teams and tools to respond to incidents 
 * [OWASP Source Code Analysis Tools](https://owasp.org/www-community/Source_Code_Analysis_Tools)
 * [Splunk: What Is Artificial Intelligence for IT Operations (AIOps)?](https://www.splunk.com/en_us/data-insider/ai-for-it-operations-aiops.html)
 
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

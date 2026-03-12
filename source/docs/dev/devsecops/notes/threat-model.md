@@ -82,3 +82,9 @@ Recommended modules for threat modelling and code reviewing:
 
 [![Common Threat Matrix for CI/CD Pipeline](/_static/images/rung-matrix.png)](https://github.com/rung/threat-matrix-cicd)
 
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)

@@ -16,7 +16,7 @@ The rsyslogd service is a system utility providing support for message logging. 
 * Keep it in a secure location behind a (physical) firewall.
 * Have no unnecessary services running on it.
 * Delete all other user accounts.
-* Add two snort boxes (IDS) that are actually syslog servers (yet have no IP address) and copy each packet intended for syslog server. With two boxes doing that independently from one another, court cases can be very convincingly supported. **Thank you, Dean Bushmiller, that is a very, very good idea**.
+* Add two snort boxes (IDS) that are actually syslog servers (yet have no IP address) and copy each packet intended for syslog server. With two boxes doing that independently from one another, court cases can be very convincingly supported. Thank you, Dean Bushmiller, that is a very, very good idea.
   * Promiscuous mode
   * Rule: Only listen for this IP address on this port (of syslog server)
 

@@ -28,7 +28,7 @@ Integration with Graylog and MISP. Honeypot activity triggers high-priority aler
 indicators. Automatic blocking at firewall.
 
 First major catch: attacker scans internal network, finds honeypot SSH server, spends 3 hours trying to exploit 
-it (they succeed, it's vulnerable intentionally). They don't realize it's a trap until too late. Every action logged. 
+it (they succeed, it's vulnerable intentionally). They don't realise it's a trap until too late. Every action logged. 
 Malware samples collected. TTPs analysed. Intelligence shared via MISP.
 
 Wasted attacker time: 3 hours. Cost to Golem Trust: €8/month for honeypot VMs. ROI: excellent.

@@ -16,6 +16,6 @@ Honeytech for humans
 Active defence measures, like IP auto-blocking, tarpitting (slowing down attackers), or counter-hacking
 (tracking intruders), walk a fine line between security and vigilantism.
 
-**Warning**: Check local laws, some "active" measures (like hacking back) are illegal in many jurisdictions.
+Warning: Check local laws, some "active" measures (like hacking back) are illegal in many jurisdictions.
 
 

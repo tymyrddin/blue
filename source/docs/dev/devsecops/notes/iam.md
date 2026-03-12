@@ -41,3 +41,14 @@ In AWS, ADFS can be enabled as a component of the AWS Federated Authentication s
 Also, GCP embraces SAML to do AD federation. At GCP, it starts with Google Cloud Identity, the service that GCP uses for IAM. But Google also understands that enterprises typically already have an identity store with AD. We can set up federation between GCP’s Cloud Identity or G Suite and enable user provisioning from AD, including SSO. SSO is done through SAML.
 
 A lot of companies still use ADFS, but it is no longer a hard requirement to use AD in AWS or GCP. It is possible to integrate AD directly into other clouds.
+
+## Related
+
+- [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
+- [AWS: AWS lock-in assessment](../aws/lock-in.md)
+- [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
+- [Azure: Microsoft Azure lock-in assessment](../azure/lock-in.md)
+- [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
+- [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
+- [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
+- [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)

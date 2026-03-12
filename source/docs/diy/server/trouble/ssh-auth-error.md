@@ -29,7 +29,7 @@ Besides a MitM attack (Make sure this is not the case from a trusted source. An 
 
 ## Bypassing verification (not recommended) 
 
-To disable the host key checking and the warnings, set `StrictHostKeyChecking no` in `~/.ssh/config` and `UserKnownHostsFile=/dev/null` to send the key to a null `known_hosts` file to avoid future mismatches, and **both defeat the intended verification security purpose**. 
+To disable the host key checking and the warnings, set `StrictHostKeyChecking no` in `~/.ssh/config` and `UserKnownHostsFile=/dev/null` to send the key to a null `known_hosts` file to avoid future mismatches, and both defeat the intended verification security purpose. 
 
 For all hosts
     
@@ -59,7 +59,7 @@ Get more information on what is happening with the ProxyCommand:
 
 ## HostKeyAlias
 
-HostKeyAlias specifies an alias that should be used instead of the real host name when looking up or saving the host key in the host key database files. This option is useful for tunnelling SSH connections or for **multiple servers running on a single host**. It caches the remote public under the alias name. Useful if different openSSH servers are listening on different ports of the same physical server, because normally the port number is not stored when caching public host keys. If the key has a different name (alias) both keys can be cached and valid.
+HostKeyAlias specifies an alias that should be used instead of the real host name when looking up or saving the host key in the host key database files. This option is useful for tunnelling SSH connections or for multiple servers running on a single host. It caches the remote public under the alias name. Useful if different openSSH servers are listening on different ports of the same physical server, because normally the port number is not stored when caching public host keys. If the key has a different name (alias) both keys can be cached and valid.
 
     Host jumphost
     HostName XXX.XXX.XXX.XXX

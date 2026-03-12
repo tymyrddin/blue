@@ -18,7 +18,7 @@ The Red Lantern scenarios currently under execution unfold in a mechanically con
 starting conditions, the same announcements are made, the same withdrawals occur, and the same telemetry is produced. 
 From the perspective of the machinery, the exercises are predictable.
 
-Where predictability becomes less clear is at the level that concerns Your Excellency most: **interpretation and defence**.
+Where predictability becomes less clear is at the level that concerns Your Excellency most: interpretation and defence.
 
 Several factors contribute to this.
 
@@ -38,8 +38,8 @@ do not produce spectacular outages. Instead, they manifest as legitimacy failure
 are not, trust decisions that differ by district, authority that appears intact yet behaves inconsistently. From a 
 defensive standpoint, this is the most concerning class of behaviour, precisely because it does not announce itself.
 
-The Department’s assessment is therefore not that the exercises are unreliable, but that **their lessons are easy to 
-miss unless one already knows where to look**.
+The Department’s assessment is therefore not that the exercises are unreliable, but that their lessons are easy to
+miss unless one already knows where to look.
 
 From a stability perspective, this suggests a defensive gap. Our current observational tools and habits are well 
 suited to detecting misdelivered letters. They are far less comfortable with noticing when the Registry has been 

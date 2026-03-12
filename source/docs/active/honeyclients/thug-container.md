@@ -27,7 +27,7 @@ Then mount your host `~/logs` dir and enable it to keep the logs on the host
 $ docker run -it -v ~/logs:/logs buffer/thug
 ```
 
-**Linux**
+Linux
 
 ```bash
 # Standard Linux (ext4/xfs)
@@ -37,14 +37,14 @@ docker run -it -v /home/user/thug_logs:/logs buffer/thug
 docker run -it -v /home/user/thug_logs:/logs:Z buffer/thug
 ```
 
-**BSD (FreeBSD)**
+BSD (FreeBSD)
 
 ```bash
 # FreeBSD with ZFS
 docker run -it -v /usr/home/user/thug_logs:/logs:ro buffer/thug
 ```
 
-**Windows**
+Windows
 
 ```powershell
 # PowerShell (Windows 10/11)
@@ -54,7 +54,7 @@ docker run -it -v C:\Users\YourName\thug_logs:/logs buffer/thug
 docker run -it -v %USERPROFILE%\thug_logs:/logs buffer/thug
 ```
 
-**macOS**
+macOS
 
 ```bash
 # Modern macOS (Ventura+)
