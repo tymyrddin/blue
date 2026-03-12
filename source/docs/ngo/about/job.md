@@ -72,10 +72,10 @@ Send a letter describing a complex system you have helped untangle. Keep it simp
 
 The interview process includes:
 
-- * Meeting Mrs. Clodpull
-- * Meeting the IT Manager
-- * Observing the main servers in operation
-- * Optional tour of the basement
+- Meeting Mrs. Clodpull
+- Meeting the IT Manager
+- Observing the main servers in operation
+- Optional tour of the basement
 
 Start date: when you are ready.
 
