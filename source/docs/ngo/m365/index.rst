@@ -2,7 +2,7 @@ Microsoft 365 security
 ========================
 
 .. image:: /_static/images/ngo-m365.png
-   :alt: A Teams meeting in progress on a screen in an otherwise empty open-plan office. Someone has shared their entire desktop including a spreadsheet labelled confidential donors 2024 final FINAL v3.
+   :alt: A crystal ball mounted on a cluttered desk next to a stack of parchment marked SHARED WITH EVERYONE. A small dragon has fallen asleep on the keyboard. The crystal ball is displaying what appears to be the entire donor ledger. Nobody is watching.
 
 M365 is probably the operational core of the organisation. Email, documents, collaboration,
 video calls, scheduling. It is also the most common target for phishing, business email

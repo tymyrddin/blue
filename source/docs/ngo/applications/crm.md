@@ -4,7 +4,7 @@ The CRM is the crown jewels. Handle accordingly.
 
 200,000 names, addresses, email addresses, donation histories, bank account numbers for SEPA
 direct debit mandates, communication preferences, and perhaps medical or dietary information for
-event attendees. All of it regulated under AVG. All of it attractive to data brokers, fraud
+event attendees. All of it regulated under GDPR. All of it attractive to data brokers, fraud
 actors, or anyone who wants a warm mailing list of committed donors.
 
 ## What you need to find out
@@ -13,9 +13,9 @@ Before you can assess or improve the security posture of the CRM, you need answe
 of questions.
 
 Where does the data live? The options are an on-premise database server on your own hardware,
-a SaaS platform where the data lives with the vendor, or a hybrid arrangement. For a Dutch
-non-profit, the AVG requires a Data Processing Agreement with any vendor who processes personal
-data on your behalf. Check whether one exists and whether it is current.
+a SaaS platform where the data lives with the vendor, or a hybrid arrangement. The GDPR
+requires a Data Processing Agreement with any vendor who processes personal data on your behalf.
+Check whether one exists and whether it is current.
 
 Who has access, and is it current? Map the access levels across fundraising and donor relations
 staff, finance, management, application administrators, and former staff who may still be active
@@ -30,11 +30,7 @@ forms on the website, sends data to the financial system, exports to the email m
 and has at least one integration built for a campaign three years ago that is still quietly
 running. Map these before you touch anything.
 
-## Common Dutch CRM scenarios
-
-AFAS is an integrated Dutch ERP with HR, finance, and CRM modules. Strong in the Dutch market.
-AFAS hosts in Dutch data centres in Almere, which is a data residency advantage. Entra ID
-integration via SCIM and SAML is possible. Check whether your instance has this configured.
+## Common CRM scenarios
 
 Salesforce NPSP has strong non-profit features and is widely adopted internationally. Data is
 hosted in Salesforce infrastructure. Check which region your org is in because EU orgs can be
@@ -42,11 +38,11 @@ provisioned in EU data centres, but this is not automatic. Entra ID SSO via SAML
 supported and should be configured if it is not. The Salesforce permission model is complex
 and a permission audit is worthwhile.
 
-Exact is more commonly used as an accounting system, but some organisations use it for member
-administration as well. If your accountant uses Exact and the organisation does too, confirm
-that financial access and CRM access are properly separated and audited independently.
+Other CRM platforms with non-profit tiers or sector focus exist; the questions are the same
+regardless of platform: where is the data, how is authentication handled, what integrates with
+it, and does a current DPA exist with the vendor?
 
-Sector-specific or custom systems built for animal welfare membership administration may have
+Sector-specific or custom systems built for specialist membership administration may have
 limited SSO support, legacy authentication requirements, and minimal audit logging. Document
 these limitations and factor them into your risk assessment.
 
@@ -63,5 +59,5 @@ and a prioritised list of what to address first.
 ## Related
 
 - [Application landscape](landscape.md)
-- [Data protection and AVG](../data/avg.md)
+- [Data protection and GDPR](../data/gdpr.md)
 - [Integration mapping](integration-map.md)

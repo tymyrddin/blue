@@ -15,26 +15,24 @@ the network firewall logs (what are our systems actually talking to?).
 Core productivity is M365: Exchange Online, SharePoint Online, Teams, OneDrive. Known.
 Understood, mostly. The configuration may not be what you would choose, but the perimeter is clear.
 
-The CRM or ledenadministratie is the highest-value data store in the organisation. 200,000
-records: names, addresses, donation histories, contact preferences, bank details for direct
-debit mandates. Who has access to it? How is it backed up? Is it on-premise, SaaS, or a hybrid?
-Who is the vendor, and where is the data hosted?
+The CRM or membership administration is the highest-value data store in the organisation.
+200,000 records: names, addresses, donation histories, contact preferences, bank details for
+direct debit mandates. Who has access to it? How is it backed up? Is it on-premise, SaaS, or
+a hybrid? Who is the vendor, and where is the data hosted?
 
-Possible candidates in the Dutch non-profit landscape include Salesforce NPSP, AFAS (Dutch ERP
-with CRM and HR modules, popular in mid-sized Dutch organisations), Exact (more common as an
-accounting system but used as a CRM in some organisations), sector-specific membership and
-donation tools, or a custom or legacy system that was built in 2009 and works, so.
+Possible candidates in the non-profit landscape include Salesforce NPSP, integrated ERP
+platforms with CRM and HR modules, or a custom or legacy system that was built in 2009 and
+works, so.
 
-Financial systems may be integrated with the CRM or separate. AFAS, Exact, Twinfield, and
-Unit4 are common. The data flows between donation records and financial bookings are worth
-mapping early because they are often undocumented and fragile.
+Financial systems may be integrated with the CRM or separate. The data flows between donation
+records and financial bookings are worth mapping early because they are often undocumented and
+fragile.
 
-HR and planning (Visma Raet, AFAS HR, Loket.nl, or similar) needs 380 employees' worth of
-payroll, leave management, and scheduling running somewhere. Are these systems integrated with
-Entra ID for provisioning? If not, every joiner and leaver requires a manual action in each
-system.
+HR and planning needs 380 employees' worth of payroll, leave management, and scheduling
+running somewhere. Are these systems integrated with Entra ID for provisioning? If not, every
+joiner and leaver requires a manual action in each system.
 
-Sector-specific software for animal welfare organisations covers requirements that generic ERP
+Sector-specific software for organisations of this type covers requirements that generic ERP
 does not. See the sector-specific page.
 
 Collaboration and document management nominally lives in SharePoint, but rarely exclusively.

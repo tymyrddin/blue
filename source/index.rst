@@ -17,13 +17,13 @@ coffee, because the attackers never sleep, and neither do we (but only because o
 
    docs/org/index
    docs/shadows/index
+   docs/ngo/index
    docs/stormforge/index
 
 .. toctree::
    :maxdepth: 1
    :caption: Going places
 
-   docs/ngo/index
    docs/soc/index
    docs/dev/index
    docs/home/index

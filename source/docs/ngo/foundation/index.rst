@@ -2,7 +2,7 @@ Identity and access foundations
 ====================================
 
 .. image:: /_static/images/ngo-foundation.png
-   :alt: Blueprints on a table with coffee rings on them, and a sticky note that says who has the admin credentials.
+   :alt: A large iron key board mounted on the wall of the Home's entrance hall. Many keys hang from it, labelled in faded ink. Several hooks are empty. One key is labelled Master and appears to have been copied at least four times. Mrs. Clodpull is staring at it with deep suspicion.
 
 The first question is not what tools do we need. The first question is who has access to what,
 and do we actually know?

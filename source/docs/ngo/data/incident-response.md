@@ -19,7 +19,7 @@ The IT decision-maker who can authorise emergency actions: disabling accounts, t
 offline, engaging external help.
 
 The data protection officer or legal counsel, because any incident that involves personal
-data has AVG implications and possibly a notification obligation.
+data has GDPR implications and possibly a notification obligation.
 
 Microsoft's support line, if the incident involves the M365 environment. A Microsoft support
 contract with appropriate SLA may matter if the incident requires urgent assistance.
@@ -47,15 +47,15 @@ engage external assistance.
 
 For a data breach (personal data exposed or stolen): identify what data was involved and how
 many people are affected, preserve evidence, notify the data protection officer, assess the
-AVG notification obligation.
+GDPR notification obligation.
 
-## AVG breach notification
+## GDPR breach notification
 
-The AVG requires notification to the Autoriteit Persoonsgegevens (AP) within 72 hours of
-becoming aware of a personal data breach, if the breach is likely to result in a risk to
-the rights and freedoms of natural persons. This is a short window, and breaches have a
-statistical preference for being discovered on a Friday afternoon. The notification does
-not need to be complete: it can be updated. But it needs to happen.
+The GDPR requires notification to the supervisory authority (your national data protection
+authority) within 72 hours of becoming aware of a personal data breach, if the breach is
+likely to result in a risk to the rights and freedoms of natural persons. This is a short
+window, and breaches have a statistical preference for being discovered on a Friday afternoon.
+The notification does not need to be complete: it can be updated. But it needs to happen.
 
 If the breach is likely to result in a high risk to individuals, the affected individuals
 must also be notified directly.
@@ -75,6 +75,6 @@ the environment and the response capability over time.
 
 ## Related
 
-- [AVG obligations](avg.md)
+- [GDPR obligations](gdpr.md)
 - [Phishing recognition and response](../awareness/phishing.md)
 - [MFA and account security](../foundation/mfa.md)

@@ -37,7 +37,7 @@ risk from a team using a free online survey tool to collect member contact detai
 your response accordingly.
 
 For anything that touches personal data of members, donors, volunteers, or employees, the
-calculus changes. A free tool with no Data Processing Agreement is not compliant with AVG
+calculus changes. A free tool with no Data Processing Agreement is not compliant with GDPR
 regardless of how convenient it is. That is not a negotiation: it is a legal obligation.
 
 ## Making the official alternatives usable
@@ -54,4 +54,4 @@ that made people reach for something else in the first place.
 
 - [Application landscape](landscape.md)
 - [Integration map](integration-map.md)
-- [Data protection and AVG](../data/avg.md)
+- [Data protection and GDPR](../data/gdpr.md)

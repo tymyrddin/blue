@@ -52,4 +52,4 @@ belongs in Teams and what belongs in more controlled systems.
 
 - [SharePoint and external sharing](sharepoint.md)
 - [Security awareness](../awareness/index)
-- [Data protection and AVG](../data/avg.md)
+- [Data protection and GDPR](../data/gdpr.md)

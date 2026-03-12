@@ -26,7 +26,7 @@ go unreported because people are afraid of the reaction is worse than one where 
 reported and responded to badly.
 
 Data handling: who can see what, what goes where, why donor data does not go into a personal
-Google Drive. This connects to the AVG obligations and to the shadow IT problem.
+Google Drive. This connects to the GDPR obligations and to the shadow IT problem.
 
 ## Format
 

@@ -10,7 +10,7 @@ longer if the documentation is sparse, which it usually is.
 
 Pull the full user list and cross-reference it with HR. You are looking for accounts that should
 not exist: former employees whose accounts were never disabled, generic or shared accounts with
-no named owner (servicedesk@, reception@, vrijwilligers@), guest accounts in the tenant with no
+no named owner (servicedesk@, reception@, volunteers@), guest accounts in the tenant with no
 record of who invited them or why, and service accounts with interactive login enabled.
 
 What licences are assigned, and to whom, also tells you something. An E3 or E5 licence means
@@ -23,8 +23,7 @@ an organisation that has been around long enough to have had several IT handover
 Check Entra ID under Roles and administrators, then Global administrator. How many global admins
 are there? Anything above three or four without a clear justification is too many. If you find
 eight, someone was being cautious. If you find fourteen, write it down carefully because you
-will be telling this story later. Are any of them personal accounts
-(naam.achternaam@organisatie.nl) rather than dedicated admin accounts?
+will be telling this story later. Are any of them personal accounts rather than dedicated admin accounts?
 Global admins should use dedicated cloud-only accounts with no mailbox, no licence, and
 hardware MFA.
 
@@ -34,14 +33,14 @@ temporary elevated access three years ago may still have it.
 
 ## The data residency question
 
-Dutch non-profits in M365 are almost certainly storing data in Microsoft datacentres. The EU
+Non-profits in M365 are almost certainly storing data in Microsoft datacentres. The EU
 Data Boundary rollout means your data may be processed in EU datacentres, but the default
 depends on your tenant region and the specific workload.
 
 You can check your tenant's data location in the Microsoft 365 Admin Centre under Settings,
 then Org settings, then Organisation profile, then Data location.
 
-For an organisation holding member and donor data, the data residency question has AVG
+For an organisation holding member and donor data, the data residency question has GDPR
 implications. Microsoft processes data under a Data Processing Agreement, but knowing where
 your data lives, and being able to answer the question when asked, is part of being a
 responsible data steward. Worth a conversation with your data protection officer before it

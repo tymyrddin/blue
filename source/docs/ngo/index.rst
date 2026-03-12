@@ -1,5 +1,5 @@
-Blue team @NGO
-======================
+The Home for Bewildered Beasts of Legend
+==========================================
 
 .. image:: /_static/images/ngo.png
    :alt: A cluttered but warmly lit office. Whiteboards covered in post-its, a tangle of cables, a dog asleep under the desk. Someone has written WHERE IS THE ASSET REGISTER in red marker and circled it three times.
@@ -16,14 +16,16 @@ The stakes are real: 200,000 members, donors and supporters whose data you now h
 There is no SIEM. There is no security team. There is you, a mandate to do something about
 security, and a calendar already full of stakeholder meetings.
 
-This section is for that situation: building a security foundation in a mid-sized Dutch
-non-profit, not from the top down, but from the ground up. Somewhere between a startup and an
+This section is for that situation: building a security foundation in a mid-sized non-profit,
+not from the top down, but from the ground up. Somewhere between a startup and an
 enterprise. Complex enough to matter, resource-constrained enough to hurt.
 
 .. toctree::
    :maxdepth: 2
    :caption: You cannot fix everything at once, so fix the right things first.
 
+   about/index
+   orientation/index
    foundation/index
    m365/index
    applications/index
@@ -34,9 +36,9 @@ enterprise. Complex enough to matter, resource-constrained enough to hurt.
 Not covered: audit compliance
 --------------------------------
 
-The goal here is not a checkbox. ISO 27001 and NEN 7510 exist and may eventually be relevant,
+The goal here is not a checkbox. ISO 27001 exists and may eventually be relevant,
 but a freshly hired architect in a resource-constrained non-profit does not start there.
-The goal is to reduce actual risk for actual people: the welfare workers, the volunteers,
+The goal is to reduce actual risk for actual people: the care workers, the volunteers,
 the 200,000 members and donors whose trust funds your mission.
 
 Evidence for auditors accumulates as a side effect of doing the work properly.

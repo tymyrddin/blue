@@ -7,8 +7,8 @@ nobody has decided what the rules are.
 This is not a crisis. Absolutely not. It is a normal stage for organisations in 2026. But it does need to
 be addressed, because the risks are real and specific to a non-profit context: donor data
 entered into a model with opaque data retention policies, member contact information used
-to draft outreach emails via a consumer AI tool, sensitive animal welfare cases summarised
-via a public AI service.
+to draft outreach emails via a consumer AI tool, sensitive case data about residents in care
+summarised via a public AI service.
 
 ## The first step: find out what is actually happening
 

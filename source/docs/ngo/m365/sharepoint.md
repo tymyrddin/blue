@@ -53,4 +53,4 @@ that ended, external guests who no longer need access: these are common.
 
 - [Microsoft Secure Score](secure-score.md)
 - [Application landscape: shadow IT](../applications/shadow-it.md)
-- [Data protection and AVG](../data/avg.md)
+- [Data protection and GDPR](../data/gdpr.md)

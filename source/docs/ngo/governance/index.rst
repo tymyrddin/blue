@@ -2,7 +2,7 @@ Governance and AI
 ===================
 
 .. image:: /_static/images/ngo-governance.png
-   :alt: A meeting room. On the screen, a slide that says AI Strategy v0.3 DRAFT. Around the table, people looking at their laptops. The whiteboard behind them says WHO DECIDES.
+   :alt: A long table with mismatched chairs. Around it: a werewolf, two vampires, and someone who may be a wizard. On the chalkboard behind them: WHO DECIDES, and below it in slightly smaller chalk: IS IT EVEN LEGAL. A stack of policy documents sits at one end next to an inkpot with a quill in it.
 
 An organisation that has recently discovered that its staff are using AI tools, and that
 has no policy for this, is in a situation that is familiar and addressable.

@@ -43,7 +43,7 @@ Copilot rollout, a basic sensitivity labelling scheme is a sensible precursor.
 For a non-profit, a four-label scheme is usually sufficient: Public (what can be shared
 externally without restriction), Internal (general internal use), Confidential (restricted
 to relevant teams, such as HR documents, financial records, case files), and Highly
-Confidential (donor payment data, sensitive case information, anything that triggers AVG
+Confidential (donor payment data, sensitive case information, anything that triggers GDPR
 obligations).
 
 ## The rollout conversation
@@ -59,4 +59,4 @@ use of the technology.
 
 - [AI policy](ai-policy.md)
 - [SharePoint and external sharing](../m365/sharepoint.md)
-- [Data protection and AVG](../data/avg.md)
+- [Data protection and GDPR](../data/gdpr.md)

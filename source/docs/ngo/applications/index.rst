@@ -2,7 +2,7 @@ Application landscape
 =======================
 
 .. image:: /_static/images/ngo-applications.png
-   :alt: A whiteboard covered in boxes and arrows. Some arrows have question marks. One box says unknown. Another says legacy, do not touch, David knows why.
+   :alt: A vast cork board covered in strings of different colours connecting hand-drawn cards. Some strings lead to blank cards marked unknown. One card says enchanted ledger, do not touch, Gerald knows why. A small gargoyle is asleep underneath it.
 
 The application landscape of a mid-sized non-profit that has grown organically over fifteen-plus
 years is not an architecture. It is a history.

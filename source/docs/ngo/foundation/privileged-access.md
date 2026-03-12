@@ -23,8 +23,7 @@ You almost certainly cannot implement a full Privileged Access Workstation setup
 hardware. That is fine. What you can implement costs nothing extra if you already have Entra
 ID P2 licences.
 
-Create dedicated admin accounts (admin.naam@organisatie.nl or a similar naming convention)
-that have no Exchange licence, are excluded from all normal user Conditional Access policies,
+Create dedicated admin accounts that have no Exchange licence, are excluded from all normal user Conditional Access policies,
 are subject to their own stricter Conditional Access policy, and require phishing-resistant MFA
 such as a FIDO2 security key or certificate-based authentication.
 

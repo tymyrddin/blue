@@ -32,7 +32,7 @@ For an organisation at this stage, the process does not need to be elaborate. A 
 checklist run through for every new tool request:
 
 - What does it do, and is there something in the current landscape that already does it?
-- What data will it hold or process? Does that trigger any AVG or data residency considerations?
+- What data will it hold or process? Does that trigger any GDPR or data residency considerations?
 - Where is the data hosted?
 - Does the vendor have a DPA template?
 - Will it use Entra ID SSO or require separate account management?
