@@ -16,8 +16,8 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    :caption: Mostly harmless, occasionally heroic
 
    docs/org/index
-   docs/shadows/index
    docs/ngo/index
+   docs/shadows/index
    docs/stormforge/index
 
 .. toctree::
