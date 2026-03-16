@@ -64,7 +64,6 @@ behaviours that influence them.
 * The environment is unique, challenging, and occasionally chaotic
 * Staff and creatures respond to thoughtful improvements
 * Progress is visible and valued
-* You are genuinely appreciated
 
 ## How to apply
 

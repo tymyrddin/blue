@@ -26,9 +26,9 @@ not from the top down, but from the ground up. Somewhere between a `startup <../
 
    about/index
    orientation/index
+   applications/index
    foundation/index
    m365/index
-   applications/index
    awareness/index
    governance/index
    data/index
