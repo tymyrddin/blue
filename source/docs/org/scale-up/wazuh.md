@@ -53,4 +53,8 @@ added to `~/.ssh/authorized_keys`. Alert fires immediately. Response: 12 minutes
 
 ## Related
 
-[Integrated security operations](https://purple.tymyrddin.dev/docs/secops/)
+* [Integrated security operations](https://purple.tymyrddin.dev/docs/secops/)
+
+## Resources
+
+* [Wazuh user manual](https://documentation.wazuh.com/current/user-manual/index.html)

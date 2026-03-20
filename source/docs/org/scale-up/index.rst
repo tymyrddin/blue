@@ -16,6 +16,7 @@ Growing fast. Multiple teams. Real customers with real requirements.
    config-drift.md
    dragon-attack.md
    wazuh.md
+   alternative-tools.md
    runbooks/index
 
 In this scale-up, security is definitely starting to take shape: more golems, larger crystal servers, and a slightly
