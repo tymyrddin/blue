@@ -23,9 +23,9 @@ Dr. Crucible interrupts: "Actually, I may be able to arrange a controlled dragon
 know someone at the Lancre Dragon Sanctuary."
 
 Three weeks later, they're running a disaster recovery exercise. The dragon (small, cooperative, well-compensated) 
-creates a localized emergency near the Hetzner datacenter. Not real danger, but enough to trigger failover procedures.
+creates a localised emergency near the Hetzner datacenter. Not real danger, but enough to trigger failover procedures.
 
-## What they built
+## Response
 
 Ponder and Carrot architect multi-region Disaster Recovery (DR). Primary region: Finland (fsn1). DR region: Germany 
 (nbg1). Perhaps add Helsinki (hel1) for Nordic customers.
@@ -33,7 +33,7 @@ Ponder and Carrot architect multi-region Disaster Recovery (DR). Primary region:
 Database replication: streaming replication for PostgreSQL. Write to primary, asynchronous replication to DR. 
 Replication lag monitored; alert if exceeds 1 second.
 
-Application deployment: identical infrastructure in both regions. Load balancers health-check both. GeoDNS routes 
+Application deployment: identical infrastructure in both regions. Load balancers health check both. GeoDNS routes 
 traffic to nearest healthy region.
 
 Failover automation: monitors primary region health. Three consecutive health check failures trigger automatic 
@@ -48,7 +48,7 @@ The dragon attack exercise results:
 
 Lessons learned: 17 items documented. Procedures updated. Six new runbooks created.
 
-They send the dragon an additional thank-you gift basket.
+They sent the dragon an additional thank-you gift basket.
 
 ## Runbooks
 

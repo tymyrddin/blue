@@ -16,10 +16,7 @@ Growing fast. Multiple teams. Real customers with real requirements.
    config-drift.md
    dragon-attack.md
    wazuh.md
-
-
-Not covered: Audit compliance
----------------------------------
+   runbooks/index
 
 In this scale-up, security is definitely starting to take shape: more golems, larger crystal servers, and a slightly
 less ramshackle warehouse. Protections continue being built and tested, automation is finding its rhythm, routines are

@@ -45,12 +45,12 @@ everything for the audit trail.
 
 ## Runbooks
 
-* Ansible control node setup
-* Playbook development
-* CIS hardening procedures
-* OpenSCAP scanning
-* Remediation workflows
-* Patch management
+* [Ansible control node setup](runbooks/ansible-control-node.md)
+* [Playbook development](runbooks/playbook-development.md)
+* [CIS hardening procedures](runbooks/cis-hardening.md)
+* [OpenSCAP scanning](runbooks/openscap-scanning.md)
+* [Remediation workflows](runbooks/remediation-workflows.md)
+* [Patch management](runbooks/patch-management.md)
 
 ## Related
 

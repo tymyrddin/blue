@@ -44,12 +44,12 @@ added to `~/.ssh/authorized_keys`. Alert fires immediately. Response: 12 minutes
 
 ## Runbooks
 
-* Wazuh manager deployment
-* Agent deployment at scale
-* FIM configuration
-* Active response rules
-* Vulnerability scanning
-* Integration with Graylog.
+* [Wazuh manager deployment](runbooks/wazuh-manager-deployment.md)
+* [Agent deployment at scale](runbooks/wazuh-agent-deployment.md)
+* [FIM configuration](runbooks/wazuh-fim-configuration.md)
+* [Active response rules](runbooks/wazuh-active-response.md)
+* [Vulnerability scanning](runbooks/wazuh-vulnerability-scanning.md)
+* [Integration with Graylog](runbooks/wazuh-graylog-integration.md)
 
 ## Related
 

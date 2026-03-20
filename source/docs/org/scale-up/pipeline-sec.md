@@ -35,7 +35,7 @@ Security scanning in CI/CD pipelines:
 - Container scanning with Trivy
 - Secret detection with git-secrets and TruffleHog
 
-Pipelines fail on critical vulnerabilities. No manual overrides without security review. Build artifacts include 
+Pipelines fail on critical vulnerabilities. No manual overrides without security review. Build artefacts include 
 scan results.
 
 Renovate Bot handles dependency updates automatically. Minor updates merge automatically after 3 days and passing 
@@ -47,14 +47,14 @@ Sam Vimes Jr. becomes the poster child for "why we have these policies." He take
 
 ## Runbooks
 
-* GitLab deployment
-* Runner configuration
-* SAST/DAST setup
-* Security scanning integration
-* Renovate Bot configuration
-* Pre-commit hooks
+* [GitLab deployment](runbooks/gitlab-deployment.md)
+* [Runner configuration](runbooks/runner-configuration.md)
+* [SAST and DAST setup](runbooks/sast-dast-setup.md)
+* [Security scanning integration](runbooks/security-scanning-integration.md)
+* [Renovate Bot configuration](runbooks/renovate-bot-configuration.md)
+* [Pre-commit hooks](runbooks/pre-commit-hooks.md)
 
 ## Related
 
-[Development security operations](https://blue.tymyrddin.dev/docs/dev/devsecops/)
+[Development security operations](../../dev/devsecops/index.rst)
 

@@ -45,12 +45,12 @@ Mr. Bent's return audit three months later: "Acceptable. The minus from my previ
 
 ## Runbooks
 
-* Headscale deployment
-* DERP server setup
-* ACL configuration
-* Device posture checks
-* StrongDM deployment
-* Database access workflows
-* SAML federation
-* Approval automation.
+* [Headscale deployment](runbooks/headscale-deployment.md)
+* [DERP server setup](runbooks/derp-server-setup.md)
+* [ACL configuration](runbooks/headscale-acl-configuration.md)
+* [Device posture checks](runbooks/headscale-device-posture.md)
+* [StrongDM deployment](runbooks/strongdm-deployment.md)
+* [Database access workflows](runbooks/strongdm-database-access.md)
+* [SAML federation](runbooks/keycloak-saml-federation.md)
+* [Approval automation](runbooks/approval-automation.md)
 
