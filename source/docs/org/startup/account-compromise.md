@@ -42,11 +42,11 @@ The attacker never returns. Probably moved to easier targets.
 
 ## Runbooks
 
-* Teleport deployment
-* Vault SSH secrets engine configuration
-* Certificate-based authentication setup
-* Approval workflows
-* Session recording
-* RBAC policy examples
-* Migration from password-based access
+* [Teleport deployment](runbooks/teleport-deployment.md)
+* [Vault SSH secrets engine configuration](runbooks/vault-ssh-secrets.md)
+* [Certificate-based authentication setup](runbooks/teleport-certificate-auth.md)
+* [Approval workflows](runbooks/teleport-approval-workflows.md)
+* [Session recording](runbooks/teleport-session-recording.md)
+* [RBAC policy examples](runbooks/teleport-rbac.md)
+* [Migration from password-based access](runbooks/teleport-migration.md)
 

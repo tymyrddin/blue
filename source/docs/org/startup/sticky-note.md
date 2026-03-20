@@ -46,11 +46,11 @@ Adora Belle insists everything be written down. "We're not cowboys. We're profes
 
 ## Runbooks
 
-* Keycloak deployment
-* PostgreSQL backend configuration
-* golem authentication implementation
-* Vaultwarden setup
-* Backup procedures
+* [Keycloak deployment](runbooks/keycloak-deployment.md)
+* [PostgreSQL backend configuration](runbooks/postgresql-backend.md)
+* [Golem authentication implementation](runbooks/golem-authentication.md)
+* [Vaultwarden setup](runbooks/vaultwarden-setup.md)
+* [Backup procedures](runbooks/backup-procedures.md)
 
 ## Related
 

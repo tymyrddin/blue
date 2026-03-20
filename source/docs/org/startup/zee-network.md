@@ -42,11 +42,14 @@ one was looking at network-level patterns.
 
 ## Runbooks
 
-* Zeek deployment
-* Suricata configuration
-* Port mirroring setup
-* Custom script development
-* Log integration with Graylog
-* Rule tuning
-* PCAP analysis procedures
+* [Zeek deployment](runbooks/zeek-deployment.md)
+* [Suricata configuration](runbooks/suricata-configuration.md)
+* [Port mirroring setup](runbooks/port-mirroring-setup.md)
+* [Custom script development](runbooks/zeek-custom-scripts.md)
+* [Log integration with Graylog](runbooks/zeek-graylog-integration.md)
+* [Rule tuning](runbooks/zeek-rule-tuning.md)
+* [PCAP analysis procedures](runbooks/zeek-pcap-analysis.md)
 
+## Related
+
+* [Zeek: Transforming raw packets into actionable logs](https://blue.tymyrddin.dev/docs/soc/nta/zeek/)

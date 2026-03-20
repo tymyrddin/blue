@@ -49,11 +49,11 @@ They also establish DR procedures for multi-region failover, though that comes l
 
 ## Runbooks
 
-* Restic deployment
-* Encryption configuration
-* Backup scheduling
-* Monitoring setup
-* Restore procedures
-* Testing protocols
-* Disaster Recovery planning
+* [Restic deployment](runbooks/restic-deployment.md)
+* [Encryption configuration](runbooks/restic-encryption.md)
+* [Backup scheduling](runbooks/restic-scheduling.md)
+* [Monitoring setup](runbooks/restic-monitoring.md)
+* [Restore procedures](runbooks/restic-restore.md)
+* [Testing protocols](runbooks/restic-testing.md)
+* [Disaster recovery planning](runbooks/disaster-recovery.md)
 

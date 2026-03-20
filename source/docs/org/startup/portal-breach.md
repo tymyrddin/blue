@@ -41,13 +41,13 @@ The attacker returns a week later. Angua catches them in 90 seconds.
 
 ## Runbooks
 
-* Graylog cluster deployment
-* OpenSearch configuration
-* Input setup
-* Stream rules
-* Alert configuration
-* Prometheus deployment
-* Grafana dashboards
-* Alert tuning
+* [Graylog cluster deployment](runbooks/graylog-cluster-deployment.md)
+* [OpenSearch configuration](runbooks/graylog-opensearch-configuration.md)
+* [Input setup](runbooks/graylog-input-setup.md)
+* [Stream rules](runbooks/graylog-stream-rules.md)
+* [Alert configuration](runbooks/graylog-alert-configuration.md)
+* [Prometheus deployment](runbooks/prometheus-deployment.md)
+* [Grafana dashboards](runbooks/grafana-dashboards.md)
+* [Alert tuning](runbooks/graylog-alert-tuning.md)
 
 

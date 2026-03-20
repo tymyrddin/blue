@@ -16,10 +16,11 @@ The warehouse days. Three people. First customers.
    zee-network.md
    account-compromise.md
    backups.md
+   alternative-tools.md
+   runbooks/index
 
 
 Not covered: audit compliance
---------------------------------
 
 This is where security begins: three founders, a ramshackle warehouse, and clay golems humming over crystal servers.
 Protections are in the process of being created: automation is being tamed, routines are being figured out, and the

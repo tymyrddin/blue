@@ -42,12 +42,12 @@ The `production-db-passwords.txt` file is deleted, shredded, and its existence n
 
 ## Runbooks
 
-* Vault HA deployment
-* Raft configuration
-* Database secrets engine setup
-* AppRole authentication
-* Dynamic credentials workflows
-* `git-secrets` implementation
+* [Vault HA deployment](runbooks/vault-ha-deployment.md)
+* [Raft configuration](runbooks/vault-raft-configuration.md)
+* [Database secrets engine setup](runbooks/vault-database-secrets.md)
+* [AppRole authentication](runbooks/vault-approle-auth.md)
+* [Dynamic credentials workflows](runbooks/vault-dynamic-credentials.md)
+* [git-secrets implementation](runbooks/git-secrets-implementation.md)
 
 ## Related
 
