@@ -19,9 +19,6 @@ The warehouse days. Three people. First customers.
    alternative-tools.md
    runbooks/index
 
-
-Not covered: audit compliance
-
 This is where security begins: three founders, a ramshackle warehouse, and clay golems humming over crystal servers.
 Protections are in the process of being created: automation is being tamed, routines are being figured out, and the
 golems are learning who is in charge. Any evidence auditors might need is accidental at best, like soot on a

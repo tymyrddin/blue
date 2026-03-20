@@ -9,8 +9,8 @@ Golem Trust Computing operates from a converted fish warehouse near the Shades i
 for the city's merchant guilds.
 
 They host critical systems for the Patrician's Office, the Royal Bank of Ankh-Morpork, and merchant guilds across
-the Circle Sea. All infrastructure runs on Hetzner Cloud in Finland. Everything is European
-or open source.
+the Circle Sea. All infrastructure runs on Hetzner Cloud in Finland. As much as possible is European
+and/or open source.
 
 .. toctree::
    :maxdepth: 2
