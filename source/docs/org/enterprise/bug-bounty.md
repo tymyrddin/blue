@@ -48,12 +48,12 @@ The programme becomes a talent pipeline. Three researchers are later hired as se
 
 ## Runbooks
 
-* Bug bounty environment setup
-* Triage procedures
-* Severity assessment
-* Remediation workflows
-* Researcher communication
-* Payment processes
+* [Bug bounty environment setup](runbooks/bounty-environment-setup.md)
+* [Triage procedures](runbooks/triage-procedures.md)
+* [Severity assessment](runbooks/severity-assessment.md)
+* [Remediation workflows](runbooks/bounty-remediation.md)
+* [Researcher communication](runbooks/researcher-communication.md)
+* [Payment processes](runbooks/payment-processes.md)
 
 ## Related
 

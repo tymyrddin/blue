@@ -44,10 +44,10 @@ compliance reporting. Mr. Bent reviews them quarterly.
 
 ## Runbooks
 
-* DefectDojo deployment
-* Scanner integration
-* Deduplication configuration
-* SLA setup
-* Workflow automation
-* Reporting
+* [DefectDojo deployment](runbooks/defectdojo-deployment.md)
+* [Scanner integration](runbooks/scanner-integration.md)
+* [Deduplication configuration](runbooks/deduplication-configuration.md)
+* [SLA setup](runbooks/sla-setup.md)
+* [Workflow automation](runbooks/workflow-automation.md)
+* [Reporting](runbooks/vulnerability-reporting.md)
 

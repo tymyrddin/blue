@@ -40,12 +40,12 @@ ISO auditor says.
 
 ## Runbooks
 
-* OPA deployment
-* Rego policy development
-* Gatekeeper configuration
-* Policy testing
-* Audit reporting
-* Integration patterns
+* [OPA deployment](runbooks/opa-deployment.md)
+* [Rego policy development](runbooks/rego-policy-development.md)
+* [Gatekeeper configuration](runbooks/gatekeeper-configuration.md)
+* [Policy testing](runbooks/policy-testing.md)
+* [Audit reporting](runbooks/audit-reporting.md)
+* [Integration patterns](runbooks/opa-integration-patterns.md)
 
 ## Related
 

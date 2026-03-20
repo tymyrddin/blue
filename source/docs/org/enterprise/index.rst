@@ -23,10 +23,9 @@ Banking customers. Regulations. Advanced threats.
    deception.md
    falco.md
    chaos.md
+   alternative-tools.md
+   runbooks/index
 
-
-Not covered: Audit compliance
---------------------------------
 
 At enterprise scale, security is starting to solidify across multiple floors of the warehouse, dozens of golems, and
 networks of crystal servers. Protections are implemented more systematically: automation runs reliably, routines are

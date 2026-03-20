@@ -35,13 +35,13 @@ Supply chain security becomes competitive advantage. "We can prove exactly what'
 
 ## Runbooks
 
-* Tekton pipeline setup
-* SLSA implementation
-* In-toto attestation
-* Sigstore integration
-* SBOM generation
-* Dependency verification
-* Internal mirroring
+* [Tekton pipeline setup](runbooks/tekton-pipeline-setup.md)
+* [SLSA implementation](runbooks/slsa-implementation.md)
+* [In-toto attestation](runbooks/in-toto-attestation.md)
+* [Sigstore integration](runbooks/supply-chain-signing.md)
+* [SBOM generation](runbooks/supply-chain-sbom.md)
+* [Dependency verification](runbooks/dependency-verification.md)
+* [Internal mirroring](runbooks/internal-mirroring.md)
 
 ## Related
 

@@ -38,12 +38,12 @@ hours to eight minutes. Zero-downtime deployments become standard.
 
 ## Runbooks
 
-* Kubernetes cluster setup
-* Control plane HA configuration
-* Calico deployment
-* OPA Gatekeeper policies 
-* Namespace isolation
-* Migration procedures
-* Troubleshooting
+* [Kubernetes cluster setup](runbooks/cluster-setup.md)
+* [Control plane HA configuration](runbooks/control-plane-ha.md)
+* [Calico deployment](runbooks/calico-deployment.md)
+* [OPA Gatekeeper policies](runbooks/gatekeeper-policies.md)
+* [Namespace isolation](runbooks/namespace-isolation.md)
+* [Migration procedures](runbooks/migration-procedures.md)
+* [Troubleshooting](runbooks/kubernetes-troubleshooting.md)
 
 

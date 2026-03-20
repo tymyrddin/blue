@@ -171,7 +171,7 @@ Current: [DefectDojo](https://github.com/DefectDojo/django-DefectDojo/releases)
 
 DefectDojo is an OWASP project under the BSD 3-Clause licence. The project is US-maintained but fully open source with no commercial entity driving licence changes. There is no near-term risk.
 
-[Faraday](https://github.com/infobytesec/faraday/releases) is an Argentine open source vulnerability management platform (GPL 3.0). It covers similar functionality to DefectDojo but with a stronger penetration testing workflow focus. For Golem Trust's use case (aggregating automated scan results from Wazuh, Trivy, and OpenSCAP), DefectDojo's import API support is better matched.
+[Faraday](https://github.com/infobyte/faraday/releases) is an Argentine open source vulnerability management platform (GPL 3.0). It covers similar functionality to DefectDojo but with a stronger penetration testing workflow focus. For Golem Trust's use case (aggregating automated scan results from Wazuh, Trivy, and OpenSCAP), DefectDojo's import API support is better matched.
 
 ## GeoDNS and load balancing
 

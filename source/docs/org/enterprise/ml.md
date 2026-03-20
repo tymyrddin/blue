@@ -3,7 +3,7 @@
 Dr. Crucible has been experimenting. He's applying machine learning to authentication logs, trying to detect anomalies 
 that rule-based detection misses.
 
-"Look at this," he shows Angua. "User logs in at 9:00 from Ankh-Morpork. Then at 9:15 AM from Tsort. Physically 
+"Look at this," he shows Angua. "User logs in at 9:00 from Ankh-Morpork. Then at 9:15 from Tsort. Physically 
 impossible. But our rules only flag it if it's the same session. Different sessions, we miss it."
 
 "Impossible travel," Angua says. "Classic indicator of compromised credentials."
@@ -44,12 +44,12 @@ from detection to containment.
 
 ## Runbooks
 
-* UEBA pipeline implementation
-* Baseline calculation
-* Feature engineering
-* Model training
-* Alert tuning
-* Integration with SOC workflows
+* [UEBA pipeline implementation](runbooks/ueba-pipeline.md)
+* [Baseline calculation](runbooks/baseline-calculation.md)
+* [Feature engineering](runbooks/feature-engineering.md)
+* [Model training](runbooks/model-training.md)
+* [Alert tuning](runbooks/alert-tuning.md)
+* [Integration with SOC workflows](runbooks/soc-integration.md)
 
 ## Related
 

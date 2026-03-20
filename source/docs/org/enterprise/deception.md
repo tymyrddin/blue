@@ -35,11 +35,11 @@ Wasted attacker time: 3 hours. Cost to Golem Trust: €8/month for honeypot VMs.
 
 ## Runbooks
 
-* Canary token deployment
-* Honeypot service setup
-* Alert configuration
-* Forensic data collection
-* Integration with security tools
+* [Canary token deployment](runbooks/canary-token-deployment.md)
+* [Honeypot service setup](runbooks/honeypot-setup.md)
+* [Alert configuration](runbooks/deception-alert-configuration.md)
+* [Forensic data collection](runbooks/forensic-collection.md)
+* [Integration with security tools](runbooks/deception-tool-integration.md)
 
 ## Related
 

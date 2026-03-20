@@ -41,11 +41,11 @@ before the actual attack.
 
 ## Runbooks
 
-* MISP deployment
-* Feed configuration
-* Indicator import/export
-* Integration with security tools
-* Information sharing procedures.
+* [MISP deployment](runbooks/misp-deployment.md)
+* [Feed configuration](runbooks/feed-configuration.md)
+* [Indicator import and export](runbooks/indicator-management.md)
+* [Integration with security tools](runbooks/security-tool-integration.md)
+* [Information sharing procedures](runbooks/information-sharing.md)
 
 ## Related
 

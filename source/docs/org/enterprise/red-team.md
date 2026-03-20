@@ -53,12 +53,12 @@ the servers."
 
 ## Runbooks
 
-* Red team infrastructure setup
-* Engagement planning
-* Purple team coordination
-* Attack scenario development
-* Findings documentation
-* Improvement tracking
+* [Red team infrastructure setup](runbooks/red-team-infrastructure.md)
+* [Engagement planning](runbooks/engagement-planning.md)
+* [Purple team coordination](runbooks/purple-team-coordination.md)
+* [Attack scenario development](runbooks/attack-scenarios.md)
+* [Findings documentation](runbooks/findings-documentation.md)
+* [Improvement tracking](runbooks/improvement-tracking.md)
 
 ## Related
 

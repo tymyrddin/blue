@@ -38,9 +38,9 @@ Lord Downey signs the contract. "Acceptable. You may host our contracts."
 
 ## Runbooks
 
-* Vault Transit engine setup
-* Key hierarchy design
-* Client-side encryption implementation
-* Audit logging
-* Key rotation procedures
+* [Vault Transit engine setup](runbooks/transit-engine-setup.md)
+* [Key hierarchy design](runbooks/key-hierarchy-design.md)
+* [Client-side encryption implementation](runbooks/client-side-encryption.md)
+* [Audit logging](runbooks/encryption-audit-logging.md)
+* [Key rotation procedures](runbooks/key-rotation.md)
 
