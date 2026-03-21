@@ -17,6 +17,7 @@ coffee, because the attackers never sleep, and neither do we (but only because o
 
    docs/org/index
    docs/shadows/index
+   docs/ngo/index
    docs/stormforge/index
 
 .. toctree::
