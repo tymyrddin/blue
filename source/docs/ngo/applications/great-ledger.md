@@ -1,15 +1,15 @@
 # The Great Ledger
 
-The Great Ledger is a federated registry maintained by the European Creature Welfare
-Consortium, a Brussels-based network of which the Home is a member. It serves as the shared
+The Great Ledger is a federated registry maintained by the Circle Sea Creature Welfare
+Consortium, an Ankh-Morpork-based network of which the Home is a member. It serves as the shared
 source of truth for known mythological entities across participating organisations: intake
 records, rehoming history, known relatives, previous placements, and any outstanding legal
 considerations that other facilities should be aware of before accepting a transfer.
 
 Practically, it means that when a distressed chimera arrives at the door having apparently
-escaped from a facility in Ghent, the Home can check the Ledger before proceeding with a
+escaped from a facility in Genua, the Home can check the Ledger before proceeding with a
 full intake. It means that when the Home is considering rehoming a resident to a partner
-organisation in Vienna, the Vienna facility can see the full history without requiring the
+organisation in Bonk, the Bonk facility can see the full history without requiring the
 Home to produce a physical transfer dossier, which historically involved a great deal of
 fax paper. It also means that when a creature claims to be arriving from somewhere reputable,
 this can be verified in under five minutes rather than via a phone call to a country whose
@@ -23,8 +23,8 @@ certainty.
 
 ## Technical details
 
-The Great Ledger is hosted by the Consortium's IT partner, Mnemonic Solutions GmbH, on
-infrastructure in Frankfurt. Access is via a web portal and a REST API that member
+The Great Ledger is hosted by the Consortium's IT partner, Cogsworth Systems, on
+infrastructure in Ankh-Morpork. Access is via a web portal and a REST API that member
 organisations can use to integrate the Ledger with their own systems.
 
 The Home has the web portal access. The API integration between Bestiary and the Great
@@ -63,7 +63,7 @@ and in many cases information about why a creature left its previous placement. 
 this information is sensitive in the conventional sense. Some of it is sensitive in less
 conventional ways, such as records noting that a particular entity should not be housed
 near sources of running water, or should not be informed of current events in certain
-regions of Eastern Europe, or requires that its designated handler hold a specific belief
+regions of Überwald, or requires that its designated handler hold a specific belief
 system that the handler need not share but must be willing to perform on request.
 
 The Home contributes records for all current and former residents. The thing in the

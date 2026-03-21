@@ -15,7 +15,7 @@ The IT manager had several thoughts. He did not share all of them in his reply.
 
 ## The consultancy
 
-DataProphet Solutions described themselves as specialists in "AI-driven fundraising
+Haruspex Analytics described themselves as specialists in "AI-driven fundraising
 intelligence for mission-driven organisations." Their website had a lot of photographs
 of graphs pointing upward and a testimonials page featuring charities whose logos
 the Head of Fundraising recognised. The proposal they sent was professional, detailed,
@@ -24,12 +24,12 @@ and entirely silent on data protection.
 The project would proceed in three phases. Phase one: data extraction. The Home would
 provide a full export of the Covenant database, including giving history, event
 attendance, communication engagement scores, demographic indicators, and relationship
-manager notes. Phase two: model training. DataProphet would build and validate the
+manager notes. Phase two: model training. Haruspex Analytics would build and validate the
 propensity model on their infrastructure. Phase three: deployment. The trained model
 would be delivered back to the Home as a deployable artefact for the fundraising team
 to query.
 
-The proposal did not specify which country DataProphet's infrastructure was located in.
+The proposal did not specify which country Haruspex Analytics's infrastructure was located in.
 The proposal did not include a Data Processing Agreement. The proposal did not mention
 the words "data protection impact assessment" at any point in its fourteen pages. It did
 include a very attractive graph showing projected major gift conversion uplift.
@@ -62,7 +62,7 @@ not one.
 
 ## Model training and the pickle file
 
-DataProphet delivered the trained model six weeks later. The delivery email was cheerful.
+Haruspex Analytics delivered the trained model six weeks later. The delivery email was cheerful.
 The model had performed well in validation, with an [AUC of 0.81](https://towardsdatascience.com/roc-auc-explained-a-beginners-guide-to-evaluating-classification-models/) and strong lift in the
 top two deciles. The email included a PDF of results charts and a zip file containing
 the deployment package.
@@ -71,7 +71,7 @@ The deployment package contained, among other things, a Python script and a mode
 in a format that the IT coordinator had not encountered before. The format was pickle.
 Pickle files are a Python serialisation format that executes code on load. A pickle file
 from an untrusted source is, in the technical literature, described as a known arbitrary
-code execution vector. DataProphet was a trusted partner in the sense that the Home had
+code execution vector. Haruspex Analytics was a trusted partner in the sense that the Home had
 paid them. They were not a trusted source in the sense that anyone had audited their
 build pipeline, reviewed their development practices, or verified that the file had
 not been tampered with in transit.
@@ -87,7 +87,7 @@ The model was operational for eight months before anything visibly went wrong. D
 those eight months it was used exactly as intended, generating propensity scores for
 the fundraising team's major gifts pipeline and improving the targeting of high-value
 asks. The Head of Fundraising presented results at a board meeting. The graph was
-very similar to the one on DataProphet's website.
+very similar to the one on Haruspex Analytics's website.
 
 The model's query interface had no authentication beyond a password shared across the
 fundraising team, and no rate limiting, because those were not in the original
@@ -117,7 +117,7 @@ long time without saying anything. Then he picked up the phone and called the DP
 
 ## The reckoning
 
-DataProphet's contract did not include an incident response clause. DataProphet's response
+Haruspex Analytics's contract did not include an incident response clause. Haruspex Analytics's response
 to the IT manager's email was that the file had been generated from their standard
 deployment pipeline and that to their knowledge it was clean. They offered to send an
 updated version. The IT manager declined.
@@ -126,7 +126,7 @@ The process was removed. The server was rebuilt from a clean image. The propensi
 was taken offline. The Head of Fundraising asked when it would be back. The IT manager
 said he would let her know.
 
-The DPO opened two files: one for the data transfer to DataProphet without a DPA, and
+The DPO opened two files: one for the data transfer to Haruspex Analytics without a DPA, and
 one for the potential personal data compromise arising from the anomalous process. The
 [GDPR notification runbook](../data/runbooks/gdpr-notification.md) was opened for the first 
 time outside a simulation.

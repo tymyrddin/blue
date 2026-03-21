@@ -30,7 +30,7 @@ groups of volunteers. The full story is in [Project Merlin](merlin.md).
 
 The finance team had already signed up for a gift aid processing startup whose privacy
 policy permitted use of "anonymised" data for model improvement, and whose anonymisation
-of linked gift aid records with names, addresses, and HMRC references was an optimistic
+of linked gift aid records with names, addresses, and Guild of Tax Collectors references was an optimistic
 interpretation of that word. The startup was subsequently acquired by a donor intelligence
 company. The full story is in [the ClaimCraft incident](claimcraft.md).
 

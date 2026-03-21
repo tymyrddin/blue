@@ -1,8 +1,8 @@
 # Covenant
 
 Covenant is a cloud-hosted membership and supporter management platform built specifically
-for the creature welfare sector. It is developed and maintained by Kindred Software Ltd,
-a Bristol-based company that also produces Covenant Fundraising, Covenant Events, and
+for the creature welfare sector. It is developed and maintained by Golem Trust Computing,
+an Ankh-Morpork-based company that also produces Covenant Fundraising, Covenant Events, and
 Covenant Grants, all of which are licensed separately and all of which the Home has been
 told it should really consider adding to its subscription.
 
@@ -19,9 +19,9 @@ has a read-only view for reconciliation purposes and considers this sufficient.
 
 ## Technical details
 
-Covenant is hosted on Kindred's own infrastructure, with servers in Ireland and the
-Netherlands under their standard EU Data Boundary arrangement. The Home signed a Data
-Processing Agreement with Kindred at initial onboarding. Whether the DPA reflects the
+Covenant is hosted on Golem Trust Computing's own infrastructure, with servers in the
+Ankh-Morpork data district under their standard data boundary arrangement. The Home signed
+a Data Processing Agreement with Golem Trust at initial onboarding. Whether the DPA reflects the
 current scope of processing has not been reviewed since the Covenant Events module was added
 two years ago.
 
@@ -31,11 +31,11 @@ difference in annual cost between Professional and Enterprise is enough to have 
 a deferred decision for two consecutive budget cycles.
 
 Staff access Covenant through a web browser using email addresses and passwords managed
-within the platform. Kindred supports MFA via an authenticator app, which the Home has
+within the platform. Golem Trust supports MFA via an authenticator app, which the Home has
 enabled as optional. Current MFA adoption among Covenant users is approximately forty
 percent. The remaining sixty percent have been sent a recommendation twice. Password
 complexity requirements within Covenant are set by the platform to a minimum of eight
-characters with no enforced rotation, which is Kindred's default and has not been adjusted.
+characters with no enforced rotation, which is Golem Trust's default and has not been adjusted.
 
 There are currently two Covenant administrator accounts. One belongs to the Head of
 Fundraising. The second was created for an external consultant who assisted with the
@@ -80,6 +80,6 @@ internally. The root cause of the second incident was not fully resolved before 
 member of the communications team went on parental leave, after which the priority was
 quietly reclassified.
 
-Kindred releases updates to the platform monthly. The release notes are sent by email to the
+Golem Trust releases updates to the platform monthly. The release notes are sent by email to the
 account administrator. The Head of Fundraising receives them. They are forwarded to IT
 approximately forty percent of the time.

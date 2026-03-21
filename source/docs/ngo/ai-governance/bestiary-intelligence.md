@@ -52,8 +52,9 @@ module and told the IT manager. The IT manager looked at the weekend access logs
 counted the records that had been processed. He then looked up where Fabulist Systems'
 cloud infrastructure was located.
 
-The inference endpoint was hosted by a provider with data centres in Singapore.
-Singapore was not in the EU or the EEA. The cross-border transfer had occurred without
+The inference endpoint was hosted by a provider with data centres on the Counterweight
+Continent. The Counterweight Continent was not within the recognised data protection zone.
+The cross-border transfer had occurred without
 a legal basis. The resident records involved included psychiatric diagnoses, medication
 histories, and safeguarding notes.
 

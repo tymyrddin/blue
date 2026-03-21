@@ -1,7 +1,7 @@
 # Bestiary
 
-Bestiary is the Home's resident management system. It was built by Fabulist Systems BV,
-a small Dutch software house that specialises in software for the creature welfare sector,
+Bestiary is the Home's resident management system. It was built by Fabulist Systems,
+a small software house from the Shades district that specialises in software for the creature welfare sector,
 and has been running at the Home for eleven years. The current version is 4.2.1. Version 5
 was announced in 2021 and is still, according to the Fabulist Systems website, coming soon.
 
@@ -66,7 +66,7 @@ secondary application running alongside Bestiary. The workaround has been in pla
 years and is documented in a text file on Kevin's desktop.
 
 Fabulist Systems provides support via a ticketing portal and a telephone number that goes to
-voicemail during Dutch public holidays, of which there are more than one might expect. The
+voicemail during a calendar of public holidays whose number and scheduling has never been satisfactorily explained. The
 support contract is renewed annually. The last renewal included a price increase of twelve
 percent, which was described in the accompanying letter as a reflection of increased
 operational costs. The contract was renewed anyway, because there is no migration path that

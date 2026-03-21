@@ -50,8 +50,8 @@ with expiry dates.
 
 On Wednesday at 14:15, the IT coordinator notices an anomaly in the Entra ID sign-in
 logs during a routine check: Kevin's account has authenticated from an IP address
-registered in Romania at 03:14 on Tuesday, outside Kevin's normal working hours and
-from a country Kevin has no business presence in. The IT coordinator checks the Bestiary
+registered in Überwald at 03:14 on Tuesday, outside Kevin's normal working hours and
+from a region Kevin has no business presence in. The IT coordinator checks the Bestiary
 access logs and finds the export query. They check Covenant. They call the Head of IT.
 
 It is now 14:47 on Wednesday. The question is when the organisation first became aware

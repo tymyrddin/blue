@@ -16,7 +16,7 @@ prompt injection and an undocumented fine-tuning endpoint, is in
 [Bestiary Intelligence](bestiary-intelligence.md).
 
 The short version: cloud-based inference sending resident psychiatric and medication
-records to a Singapore data centre, under a DPA written for on-premises processing,
+records to a data centre on the Counterweight Continent, under a DPA written for on-premises processing,
 discovered via a system prompt leak from a note that a locum care worker had apparently
 used to test something they had read about in a professional development resource.
 
@@ -29,10 +29,10 @@ analytics feature that "helps you understand your donors better and reach them a
 right moment." It was enabled by default on upgrade. The Home upgraded in March.
 
 Donor Intelligence analyses donor behaviour patterns using Covenant data and generates
-outreach timing recommendations. The analysis runs on Kindred Software's infrastructure
-in Ireland. Whether this constitutes new processing under the existing DPA depends on
+outreach timing recommendations. The analysis runs on Golem Trust Computing's infrastructure
+in Ankh-Morpork. Whether this constitutes new processing under the existing DPA depends on
 whether the DPA's definition of permitted purposes is broad enough to cover behavioural
-modelling for marketing optimisation. Kindred Software's legal team's position, provided
+modelling for marketing optimisation. Golem Trust Computing's legal team's position, provided
 in an email that took three weeks to arrive, is that it does. The DPO's position is
 that this is an interesting interpretation that she would like to discuss in more detail.
 
@@ -42,7 +42,7 @@ when it will be re-enabled. The IT manager has said he will let them know.
 
 ## The Great Ledger AI pilot
 
-The European Creature Welfare Consortium is piloting a species welfare scoring system
+The Circle Sea Creature Welfare Consortium is piloting a species welfare scoring system
 that uses AI to compare welfare outcomes across member organisations and generate
 comparative assessments for use in sector reporting and policy advocacy.
 
