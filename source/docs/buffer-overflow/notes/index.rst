@@ -1,5 +1,5 @@
-Notes
-=====
+Buffer overflow notes
+========================
 
 .. toctree::
    :glob:

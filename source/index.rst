@@ -31,12 +31,13 @@ coffee, because the attackers never sleep, and neither do we (but only because o
 
 .. toctree::
    :maxdepth: 1
-   :caption: Basics:
+   :caption: Middle ground:
 
    docs/buffer-overflow/index
    docs/reverse-engineering/index
    docs/steganography/index
    docs/cryptanalysis/index
+   docs/evasion/index
 
 .. toctree::
    :maxdepth: 1
