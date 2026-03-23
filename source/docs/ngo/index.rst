@@ -4,16 +4,14 @@ The Home for Bewildered Beasts of Legend
 .. image:: /_static/images/ngo.png
    :alt: A cluttered but warmly lit office. Whiteboards covered in post-its, a tangle of cables, a dog asleep under the desk. Someone has written WHERE IS THE ASSET REGISTER in red marker and circled it three times.
 
-Per usual, this organisation also runs on goodwill, donor data, and a patchwork of tools acquired over the years
+Like many NGO's, this organisation also runs on goodwill, donor data, and a patchwork of tools acquired over the years
 by people who meant well and moved on. There are integrations nobody fully understands, a CRM
 that predates three governance cycles, and a Microsoft 365 tenant configured by whoever was
 available at the time. The volunteers are enthusiastic. The budget is not.
 
-The stakes are real: 200,000 members, donors and supporters whose data you now help steward.
-
 .. toctree::
    :maxdepth: 1
-   :caption: You cannot fix everything at once, so fix the right things first.
+   :caption: The stakes are real: 200,000 members, donors and supporters whose data needs stewarding.
 
    about/index
    applications/index

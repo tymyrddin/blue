@@ -25,6 +25,7 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    :caption: Going places
 
    docs/soc/index
+   docs/reverse-engineering/index
    docs/dev/index
    docs/home/index
    docs/diy/index
