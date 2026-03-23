@@ -66,8 +66,8 @@ heads of the people who were in the room that day.
 
 ## Awareness kit in a day
 
-This one does not involve setting up servers. It involves building the materials to run a
-security awareness session, from scratch, for a specific audience.
+This one does not involve setting up servers. It involves building the materials to [run a
+security awareness session, from scratch, for a specific audience](../ngo/awareness/attack-simulation.md).
 
 The audience is defined at the start of the session. The group decides: are we building for
 the staff of a small animal shelter? The volunteers of a community radio station? The team

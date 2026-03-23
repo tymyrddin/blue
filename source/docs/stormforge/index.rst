@@ -1,5 +1,5 @@
-Stormforge
-===========================
+Stormforge training grounds
+=============================
 
 .. image:: /_static/images/stormforge.png
   :alt: A sturdy wooden ship being built in the midst of a swirling magical storm.

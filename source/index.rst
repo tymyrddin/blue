@@ -25,10 +25,21 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    :caption: Going places:
 
    docs/soc/index
-   docs/reverse-engineering/index
-   docs/steganography/index
-   docs/cryptanalysis/index
    docs/dev/index
    docs/home/index
    docs/diy/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Basics:
+
+   docs/buffer-overflow/index
+   docs/reverse-engineering/index
+   docs/steganography/index
+   docs/cryptanalysis/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Active defence:
+
    docs/active/index
