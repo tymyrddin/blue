@@ -13,7 +13,7 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Mostly harmless, occasionally heroic
+   :caption: Mostly harmless, occasionally heroic:
 
    docs/org/index
    docs/shadows/index
@@ -22,10 +22,12 @@ coffee, because the attackers never sleep, and neither do we (but only because o
 
 .. toctree::
    :maxdepth: 1
-   :caption: Going places
+   :caption: Going places:
 
    docs/soc/index
    docs/reverse-engineering/index
+   docs/steganography/index
+   docs/cryptanalysis/index
    docs/dev/index
    docs/home/index
    docs/diy/index

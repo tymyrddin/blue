@@ -13,7 +13,6 @@ out fires, Zeek’s already written the incident report... in triplicate.
    :includehidden:
    :caption: Includes a 50% chance of either solving the challenge or developing a nervous twitch when seeing Base64.
 
-   README.md
    monitoring.md
    signatures.md
    scripts.md

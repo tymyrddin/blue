@@ -1,4 +1,4 @@
-Reverse engineering for defenders
+Reverse engineering
 ===================================
 
 Understanding how malware is built and how binaries work is prerequisite knowledge for anyone doing incident response,

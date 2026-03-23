@@ -12,7 +12,6 @@ attention?
    :includehidden:
    :caption: Grab your (metaphorical) pith helmet, adventure (and maybe existential dread) awaits in every packet.
 
-   README.md
    nmap.md
    on-path.md
    hosts.md

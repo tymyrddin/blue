@@ -12,7 +12,6 @@ a fight.
    :includehidden:
    :caption: Just don’t blame it when it mistakes someone’s lunchtime Spotify stream for a cyberattack.
 
-   README.md
    ids-rules.md
    ms17-010.md
    log4j.md

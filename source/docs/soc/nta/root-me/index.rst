@@ -15,7 +15,6 @@ suffer.’ Victory tastes like a freshly decoded XOR string… and the sudden re
    :includehidden:
    :caption: Onward, brave analyst, the jungle rewards the stubborn!
 
-   README.md
    ftp-authentication.md
    telnet-authentication.md
    ethernet-frame.md

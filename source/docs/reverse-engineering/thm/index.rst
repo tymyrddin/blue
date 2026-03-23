@@ -15,3 +15,11 @@ THM Rooms
    macros.md
    bags.md
    matter.md
+
+.. toctree::
+   :maxdepth: 1
+   :includehidden:
+   :caption: More practice
+
+   Malware traffic analysis exercises <https://www.malware-traffic-analysis.net/training-exercises.html>
+   theZoo - A Live Malware Repository <https://github.com/ytisf/theZoo>
