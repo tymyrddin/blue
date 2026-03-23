@@ -33,6 +33,7 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    :maxdepth: 1
    :caption: Middle ground:
 
+   docs/persistence/index
    docs/buffer-overflow/index
    docs/reverse-engineering/index
    docs/steganography/index

@@ -151,7 +151,7 @@ for pat in patterns:
 ## Determine if exploitation succeeded
 
 A crash during exploit delivery means the attempt failed. But absence of a crash does
-not mean the attempt failed -- a successful exploit may not crash the process at all.
+not mean the attempt failed, a successful exploit may not crash the process at all.
 
 Check for post-exploitation indicators alongside the crash:
 - New child processes spawned by the service (unexpected shells, interpreters)

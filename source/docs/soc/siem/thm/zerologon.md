@@ -5,7 +5,7 @@ that allowed an attacker to go from Zero to Domain Admin in approximately one mi
 
 Zero Logon is a purely statistics based attack that abuses a feature within `MS-NRPC` (Microsoft NetLogon Remote 
 Protocol), `MS-NRPC` is a critical authentication component of Active Directory that handles authentication for User 
-and Machine accounts. In short -- the attack mainly focuses on a poor implementation of Cryptography. To be more 
+and Machine accounts. In short, the attack mainly focuses on a poor implementation of Cryptography. To be more 
 specific, Microsoft chose to use `AES-CFB8` for a function called `ComputeNetlogonCredential`, which is normally fine, 
 except they had hard coded the `Initialization Vector` to use all zeros instead of a random string. When an attacker 
 sends a message only containing zeros with the IV of zero, there is a 1-in-256 chance that the Ciphertext will be Zero.

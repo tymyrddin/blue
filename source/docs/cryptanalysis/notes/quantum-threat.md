@@ -61,7 +61,7 @@ key exchange algorithm.
 
 ECDHE is broken by Shor's algorithm. A captured TLS session using ECDHE can be
 decrypted if the ephemeral ECDH key exchange is solved, which requires the discrete
-log of the session's public values -- achievable with a CRQC.
+log of the session's public values, achievable with a CRQC.
 
 RSA key exchange (not ECDHE) has no forward secrecy even classically; it is doubly
 exposed in the quantum threat model.

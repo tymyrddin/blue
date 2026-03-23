@@ -1,7 +1,7 @@
 # Memory corruption mitigations
 
-The goal of mitigations is not to make memory corruption impossible -- that requires
-fixing the code -- but to make exploitation unreliable or infeasible even when a bug
+The goal of mitigations is not to make memory corruption impossible (that requires
+fixing the code) but to make exploitation unreliable or infeasible even when a bug
 exists. A well-mitigated system forces an attacker to chain multiple techniques
 together and reduces the probability of a reliable exploit.
 
