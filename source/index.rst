@@ -39,6 +39,11 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    docs/steganography/index
    docs/cryptanalysis/index
    docs/evasion/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: End of story:
+
    docs/collection/index
    docs/exfiltration/index
    docs/impact/index
