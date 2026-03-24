@@ -1,4 +1,4 @@
-Watching for data being gathered
+Watching data being gathered
 ================================
 
 Before anything leaves the network, it has to be collected. Attackers enumerate
