@@ -16,6 +16,7 @@ damage control ("No, CEO, the ransomware probably won’t tweet from your accoun
    :caption: Where to start? Dive into TryHackMe’s DFIR guided learning rooms (easy), Cyber Defenders Realistic investigations (intermediate) or Root-Me challenges (hard).
 
    notes/index
+   playbooks/index
    thm/index
    cd/index
    root-me/index
