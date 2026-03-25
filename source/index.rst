@@ -20,10 +20,8 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    docs/stormforge/index
    docs/active/index
 
-----
-
 Going places
-=======================
+------------------------
 
 .. image:: /_static/images/ukc2.png
   :alt: Unified Kill Chain
