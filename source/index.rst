@@ -5,7 +5,7 @@ Defence blues
   :alt: Typewriter
 
 Whether baking security into code like it’s a secret ingredient, playing
-whack-a-mole with alerts in the middle of the night, or fighting off IoT botnets from your smart fridge, the
+whack-a-mole with alerts in the middle of the night, or fighting off botnets from your smart fridge, the
 mission is the same: out-stubborn the chaos. So grab that sixth cup of
 coffee, because the attackers never sleep, and neither do we (but only because of the caffeine).
 
@@ -13,43 +13,37 @@ coffee, because the attackers never sleep, and neither do we (but only because o
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Mostly harmless, occasionally heroic:
 
    docs/org/index
    docs/shadows/index
    docs/ngo/index
    docs/stormforge/index
+   docs/active/index
+
+----
+
+Going places
+=======================
+
+.. image:: /_static/images/ukc2.png
+  :alt: Unified Kill Chain
+
+----
+
+.. toctree::
+   :maxdepth: 3
+
+   docs/purple/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: Going places:
 
    docs/soc/index
    docs/dev/index
    docs/home/index
    docs/diy/index
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Middle ground:
+----
 
-   docs/persistence/index
-   docs/buffer-overflow/index
-   docs/reverse-engineering/index
-   docs/steganography/index
-   docs/cryptanalysis/index
-   docs/evasion/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: End of story:
-
-   docs/collection/index
-   docs/exfiltration/index
-   docs/impact/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Active defence:
-
-   docs/active/index
+.. image:: /_static/images/purple2.png
+   :alt: A squirrel and a fox sit across from each other in the forest. Both have clipboards. The squirrel's says "what we hit". The fox's says "what stopped us". A falcon swooping in is reading both.
