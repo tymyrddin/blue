@@ -1,6 +1,6 @@
 # Remediation workflows
 
-Runbook for responding to configuration drift and OpenSCAP compliance failures. When a server deviates from the baseline defined in the Ansible playbooks, or when an OpenSCAP scan reports a failed control, the remediation workflow brings the host back into compliance. The response depends on whether the drift is simple (resolvable by re-running the playbook) or complex (requires investigation before remediation).
+Playbook for responding to configuration drift and OpenSCAP compliance failures. When a server deviates from the baseline defined in the Ansible playbooks, or when an OpenSCAP scan reports a failed control, the remediation workflow brings the host back into compliance. The response depends on whether the drift is simple (resolvable by re-running the playbook) or complex (requires investigation before remediation).
 
 ## Drift detection
 

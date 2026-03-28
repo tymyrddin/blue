@@ -1,6 +1,6 @@
 # Alert tuning
 
-Runbook for managing false positives, enabling GeoIP lookups, and iterating on alert conditions over time. An alert that fires too often is ignored; an alert that never fires is useless. Angua reviews alert performance monthly. This runbook covers the mechanisms she uses.
+Playbook for managing false positives, enabling GeoIP lookups, and iterating on alert conditions over time. An alert that fires too often is ignored; an alert that never fires is useless. Angua reviews alert performance monthly. This runbook covers the mechanisms she uses.
 
 ## GeoIP lookup configuration
 

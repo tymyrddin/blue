@@ -1,6 +1,6 @@
 # Rule tuning
 
-Runbook for managing false positives in Zeek notices and Suricata alerts, and for iterating on detection coverage over time. Detection without tuning is a fire alarm that goes off when someone makes toast. Angua leads tuning reviews; Ludmilla handles the Suricata rule adjustments.
+Playbook for managing false positives in Zeek notices and Suricata alerts, and for iterating on detection coverage over time. Detection without tuning is a fire alarm that goes off when someone makes toast. Angua leads tuning reviews; Ludmilla handles the Suricata rule adjustments.
 
 ## The baseline period
 

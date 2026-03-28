@@ -49,7 +49,7 @@ everything for the audit trail.
 * [Playbook development](runbooks/playbook-development.md)
 * [CIS hardening procedures](runbooks/cis-hardening.md)
 * [OpenSCAP scanning](runbooks/openscap-scanning.md)
-* [Remediation workflows](runbooks/remediation-workflows.md)
+* [Remediation workflows](playbooks/remediation-workflows.md)
 * [Patch management](runbooks/patch-management.md)
 
 ## Related

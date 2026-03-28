@@ -48,6 +48,6 @@ The attacker returns a week later. Angua catches them in 90 seconds.
 * [Alert configuration](runbooks/graylog-alert-configuration.md)
 * [Prometheus deployment](runbooks/prometheus-deployment.md)
 * [Grafana dashboards](runbooks/grafana-dashboards.md)
-* [Alert tuning](runbooks/graylog-alert-tuning.md)
+* [Alert tuning](playbooks/graylog-alert-tuning.md)
 
 

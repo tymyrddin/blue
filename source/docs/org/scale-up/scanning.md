@@ -45,7 +45,7 @@ and attends mandatory container security training.
 * [Cosign signing workflows](runbooks/cosign-signing.md)
 * [Admission controller configuration](runbooks/admission-controller.md)
 * [SBOM generation](runbooks/sbom-generation.md)
-* [Vulnerability management procedures](runbooks/vulnerability-management.md)
+* [Vulnerability management procedures](playbooks/vulnerability-management.md)
 
 ## Related
 

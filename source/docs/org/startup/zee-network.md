@@ -47,7 +47,7 @@ one was looking at network-level patterns.
 * [Port mirroring setup](runbooks/port-mirroring-setup.md)
 * [Custom script development](runbooks/zeek-custom-scripts.md)
 * [Log integration with Graylog](runbooks/zeek-graylog-integration.md)
-* [Rule tuning](runbooks/zeek-rule-tuning.md)
+* [Rule tuning](playbooks/zeek-rule-tuning.md)
 * [PCAP analysis procedures](runbooks/zeek-pcap-analysis.md)
 
 ## Related

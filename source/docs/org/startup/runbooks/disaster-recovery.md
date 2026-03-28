@@ -1,50 +1,12 @@
-# Disaster recovery planning
+# Multi-region failover procedure
 
-Runbook for multi-region failover and disaster recovery procedures. This covers scenarios that exceed what a normal restore can address: complete loss of the Helsinki region, simultaneous failure of multiple systems, or scenarios where the primary infrastructure cannot be recovered within an acceptable timeframe. Cheery's risk register classifies these as low probability but high impact. That classification is why this runbook exists.
-
-## Recovery objectives
-
-Cheery established these targets after the backup discussion with Ponder. They are not aspirational; they are the minimum acceptable performance during a DR event.
-
-| Metric | Target | Basis |
-|---|---|---|
-| Recovery Time Objective (RTO) | 4 hours | Time from declaring a DR event to restoring customer-facing services |
-| Recovery Point Objective (RPO) | 24 hours | Maximum data loss acceptable; the daily backup cadence defines this |
-| DR test success rate | 100% | Every quarterly test must succeed |
-
-The 4-hour RTO was chosen because Golem Trust's SLAs commit to notifying customers of outages within one hour and restoring services within four. An outage lasting longer than four hours requires customer communication under the contracts with the Seamstresses' Guild and the Merchants' Guild.
-
-The 24-hour RPO reflects the daily backup schedule. If higher data durability is required by a customer contract, the backup frequency must increase.
-
-## DR scenarios
-
-### Scenario 1: Single server failure
-
-A single production server becomes unrecoverable (hardware failure, data corruption, accidental deletion).
-
-Response: provision a replacement server in Helsinki, restore from Restic backup following the full server restore procedure (see the restore procedures runbook). Estimated time: 1-2 hours. This is within the RTO.
-
-### Scenario 2: Multiple server failure in Helsinki
-
-Two or more production servers fail simultaneously, or the Hetzner Helsinki datacenter experiences a significant outage.
-
-Response: provision replacement servers in Helsinki if the datacenter is recoverable, or trigger the multi-region failover procedure if it is not.
-
-Assess within 30 minutes whether Helsinki recovery is feasible. If not, proceed to multi-region failover.
-
-### Scenario 3: Complete Helsinki loss
-
-The entire Helsinki region is unavailable indefinitely (the dragon scenario Ponder mentioned; also fire, flood, or a sustained Hetzner outage).
-
-Response: provision the complete infrastructure in Hetzner Nuremberg using the DR restore procedures. This is the full DR exercise covered by the Q4 quarterly test.
-
-## Multi-region failover procedure
+Runbook for executing a failover from Helsinki to Nuremberg. Follow this runbook when the [DR scenario triage playbook](../playbooks/dr-scenario-triage.md) has determined that a full multi-region failover is required (Scenario 2 with Helsinki unrecoverable, or Scenario 3: complete Helsinki loss).
 
 Declare a DR event by notifying Adora Belle, Carrot, Ponder, and Cheery. One person (Cheery, or Carrot if Cheery is unavailable) takes the incident commander role and coordinates the response.
 
 Start the timer. The 4-hour RTO begins from this declaration.
 
-### Step 1: Assess and prioritise (0-30 minutes)
+## Step 1: Assess and prioritise (0-30 minutes)
 
 Determine which services are affected and which can be temporarily suspended. The priority order for restoration is:
 
@@ -56,7 +18,7 @@ Determine which services are affected and which can be temporarily suspended. Th
 
 Do not attempt to restore everything simultaneously. Restore in priority order.
 
-### Step 2: Provision Vault in Nuremberg (30-90 minutes)
+## Step 2: Provision Vault in Nuremberg (30-90 minutes)
 
 Provision three new Hetzner CX31 instances in the Nuremberg region (`nbg1`). The instance types, OS, and network configuration mirror Helsinki.
 
@@ -70,7 +32,7 @@ Unseal the cluster manually using the unseal keys held by Adora Belle, Carrot, a
 
 Verify Vault is operational: `vault status` should show `Sealed: false`.
 
-### Step 3: Provision core infrastructure in Nuremberg (90-180 minutes)
+## Step 3: Provision core infrastructure in Nuremberg (90-180 minutes)
 
 With Vault running, provision:
 
@@ -82,13 +44,13 @@ Database restoration uses the pg_dump exports archived in Restic. For PostgreSQL
 
 Update DNS records to point `auth.golemtrust.am`, `vault.golemtrust.am`, and customer portal domains to Nuremberg IPs. DNS TTLs are set to 300 seconds (5 minutes) on all Golem Trust domains specifically to allow rapid failover. Confirm TTLs are correctly set during normal operations; a 24-hour TTL during a DR event means customers are not redirected for 24 hours.
 
-### Step 4: Restore customer portals (180-240 minutes)
+## Step 4: Restore customer portals (180-240 minutes)
 
 Restore the application servers for each customer portal in priority order (Seamstresses' Guild first, as the longest-standing customer).
 
 Verify each portal is accessible from outside the private network before declaring it restored.
 
-### Step 5: Validate and communicate
+## Step 5: Validate and communicate
 
 Before declaring the DR event closed:
 

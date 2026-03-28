@@ -18,6 +18,7 @@ The warehouse days. Three people. First customers.
    backups.md
    alternative-tools.md
    runbooks/index
+   playbooks/index
 
 This is where security begins: three founders, a ramshackle warehouse, and clay golems humming over crystal servers.
 Protections are in the process of being created: automation is being tamed, routines are being figured out, and the

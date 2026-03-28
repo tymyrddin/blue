@@ -35,7 +35,6 @@ Operational procedures for the systems built to meet the Royal Bank of Ankh-Morp
    cosign-signing.md
    admission-controller.md
    sbom-generation.md
-   vulnerability-management.md
 
 .. toctree::
    :maxdepth: 1
@@ -56,14 +55,12 @@ Operational procedures for the systems built to meet the Royal Bank of Ankh-Morp
    playbook-development.md
    cis-hardening.md
    openscap-scanning.md
-   remediation-workflows.md
    patch-management.md
 
 .. toctree::
    :maxdepth: 1
    :caption: Disaster recovery:
 
-   multi-region-architecture.md
    database-replication.md
    failover-automation.md
    geodns-configuration.md

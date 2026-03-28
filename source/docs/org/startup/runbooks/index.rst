@@ -35,7 +35,6 @@ Operational procedures for the systems built after the sticky note incident and 
    graylog-alert-configuration.md
    prometheus-deployment.md
    grafana-dashboards.md
-   graylog-alert-tuning.md
 
 .. toctree::
    :maxdepth: 1
@@ -46,7 +45,6 @@ Operational procedures for the systems built after the sticky note incident and 
    port-mirroring-setup.md
    zeek-custom-scripts.md
    zeek-graylog-integration.md
-   zeek-rule-tuning.md
    zeek-pcap-analysis.md
 
 .. toctree::
