@@ -2,16 +2,24 @@
 
 Gale sprints are short, focused, and slightly uncomfortable. That is the format on purpose.
 
-A sprint compresses a task that normally expands to fill whatever time is available, and asks
-what can actually be done in a fixed, shorter period. The answer is usually more than expected,
-with the qualification that it requires being ruthless about what not to do, which turns out
-to be where most of the learning lives.
+A sprint compresses a task that normally expands to fill whatever time is available and asks
+what can actually be done in a fixed, shorter period. The answer is usually more than
+expected, with the qualification that it requires being ruthless about what not to do, which
+turns out to be where most of the learning lives.
 
-Sprints can be run solo. Pick one thing from this list, set a timer, do only that thing for
-the duration, stop. Repeat as the tide allows. The sprint format works for self-directed
-learning in exactly the way that open-ended I should really work on this time does not, which
-is a gentle observation that will be recognised by anyone who has had that thought on a Sunday
-evening and then not acted on it until the following Sunday.
+There is also an energy argument for the sprint format that is worth making directly.
+Open-ended security improvement work, the kind where the task is to improve things generally
+with no defined scope and no clear endpoint, is draining in a way that focused, time-boxed
+work is not. A sprint produces a result that is visible and complete. The crew knows what
+they set out to do, whether they did it, and what was harder than expected. That cycle of
+intent, action, and visible outcome sustains momentum in a way that indefinite background
+effort does not, which is why the latter tends to slow to a stop by Tuesday afternoon.
+
+Sprints can be run solo. Pick one thing, set a timer, do only that thing for the duration,
+stop. Repeat as the tide allows. The format works for self-directed learning in exactly the
+way that open-ended I should really work on this does not, which is a gentle observation
+that will be recognised by anyone who has had that thought on a Sunday evening and then not
+acted on it until the following Sunday.
 
 ## Patch sprint
 
@@ -94,3 +102,7 @@ without being either condescending or alarming. Second, the best materials are t
 the writer clearly remembered what it was like not to know this yet.
 
 That second one is the skill. The first one is just practice.
+
+## Related 
+
+- [Build-a-thon: Patch sprint](https://purple.tymyrddin.dev/docs/workshops/patch-sprint)

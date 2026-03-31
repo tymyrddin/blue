@@ -31,3 +31,32 @@ the threat intelligence runbook.
 
 The rationale for both decisions, why attacker-role training and why live defences, is
 in the rationale page. Setup instructions for the session infrastructure are in the runbooks.
+
+## Vectors
+
+Understanding what the simulation is modelling matters as much as running it well. The
+vectors pages cover the mechanics of each attack type, what makes them effective, and
+what the simulation is designed to surface in each case.
+
+- [Phishing](vectors/phishing.md)
+- [Social engineering](vectors/social-engineering.md)
+- [Volunteers and third-party access](vectors/volunteers.md)
+
+## Runbooks
+
+Step-by-step instructions for setting up and running the programme. Start with the session
+run overview if this is your first time; the individual runbooks cover each component in
+the order you would need them.
+
+- [Session run](runbooks/session-run.md)
+- [Blue team setup](runbooks/blue-team-setup.md)
+- [Outlook report button](runbooks/outlook-report-button.md)
+- [Gophish install](runbooks/gophish-install.md)
+- [Gophish sending profile](runbooks/gophish-sending-profile.md)
+- [Gophish landing page](runbooks/gophish-landing-page.md)
+- [Gophish campaign](runbooks/gophish-campaign.md)
+- [Display machine](runbooks/display-machine.md)
+- [Threat intelligence](runbooks/threat-intel.md)
+- [Advanced delivery](runbooks/advanced-delivery.md)
+- [Simulation create](runbooks/simulation-create.md)
+- [Simulation results](runbooks/simulation-results.md)

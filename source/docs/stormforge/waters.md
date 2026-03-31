@@ -1,18 +1,36 @@
 # Navigating the waters
 
-These exercises are about getting your bearings before you sail. They are not technical drills.
-They are the kind of exercises that feel suspiciously like having a conversation, right up
-until someone draws a diagram that makes the whole room go quiet.
+The waters exercises are not technical. They are also not soft, which is a distinction worth
+making clearly before anyone decides to skip this section in favour of the labs.
 
-You do not need a facilitator with a lanyard and a prepared slide deck for these. You need
-people willing to look at their situation honestly, which is harder than it sounds and more
-valuable than it looks.
+What they examine is the layer beneath the technical one: the forces that carry work forward
+and the ones that push back, the assumptions shaping decisions before anyone has named them
+assumptions, the gap between how things are supposed to work and how they actually do.
+Every security programme operates in this terrain whether it is being attended to or not.
+These exercises attend to it.
 
-Come back to these whenever a new storm appears on the horizon. The crew that mapped the
-currents in January may find the map looks entirely different in September, particularly
-if something broke in between.
+This is the layer that explains why technically correct findings go unaddressed for years.
+Why the same class of incident recurs on a quarterly cycle. Why a control that works well in
+one team fails silently in another. The political and structural currents are not separate
+from the security problem; they are the context in which every technical recommendation
+either lands or disappears. These exercises make that context visible and discussable.
+
+They are the kind of sessions that feel like a conversation, right up until someone draws a
+diagram and the room goes quiet. That moment is the point.
+
+You do not need a facilitator with a lanyard and a prepared slide deck. You need people
+willing to look at their situation honestly, which is harder than it sounds and more valuable
+than it looks. Come back to these whenever the terrain shifts. The map that made sense in
+January may look entirely different in September, particularly if something broke in between.
 
 ## Mapping the waters
+
+This is the exercise that explains why a vulnerability can be technically understood,
+correctly prioritised, and still open eighteen months later. The answer is almost always
+in the map: the two teams believe the other owns the fix, the approval process for the
+required change requires a sign-off that nobody has clear authority to give, or the
+system in question has a history that makes everyone cautious about touching it. The
+vulnerability is not the problem. The terrain is the problem.
 
 The crew takes a large piece of paper, a whiteboard, or something drawn on a shared screen
 at whatever resolution someone's laptop can manage. They draw the sea they actually sail in:
@@ -35,6 +53,11 @@ Take a photo of the map before the whiteboard gets erased for the next meeting. 
 lesson that only needs to be learned once.
 
 ## Crossing the river
+
+An incident starts. The runbook says escalate to the security lead. The security lead is
+travelling. The decision cannot wait. The exercise is about that moment: whether the crew
+can actually coordinate under pressure when the plan meets the situation it did not
+anticipate, which is most situations.
 
 The crew is split into small groups and handed a scenario: resources are limited, the path
 is not obvious, and there is a river between here and where you need to be. The river has
@@ -66,11 +89,20 @@ The key word is reasonable. The point is not to retroactively assign blame for h
 missed something. The point is to build the pattern-recognition vocabulary that makes
 the next signal slightly easier to catch.
 
-It helps to bring real examples from the news. The industry is not short of them. Stories
-of incidents where the warning signs were visible months before the event tend to generate
-good discussion and a certain amount of collective sighing.
+It helps to bring real examples from the news. The industry is not short of them. The
+colleague who became suddenly very interested in the backup schedule was, in one well-known
+case, exfiltrating data before resignation. The system that was slow for no obvious reason
+was running a credential harvester. Stories of incidents where the warning signs were
+visible months before the event tend to generate good discussion and a certain amount of
+collective sighing.
 
 ## Anchor points
+
+Most organisations have a business continuity plan. Fewer know, in practice, what actually
+holds when an incident runs past the first hour. The detection rule that reliably fires.
+The analyst who stays methodical when everyone else is reactive. The backup that has been
+tested recently enough to be trusted rather than assumed. This exercise produces that
+inventory, as opposed to the documented version.
 
 When everything is going wrong simultaneously, the crews that do best are usually the ones
 who know what they can rely on. Not optimistically, not by assumption, but actually: the
@@ -87,6 +119,12 @@ people who should not be quietly moved to a different team without anyone notici
 was holding.
 
 ## Harbour master exercise
+
+A P1 incident, first ninety minutes. The IT team is working containment. HR needs to know
+whether personal data was compromised. Legal is asking about GDPR notification windows.
+Senior management wants an update in fifteen minutes. A second affected system has just
+been identified. The exercise is set in a harbour, but the scenario it is rehearsing is
+this one.
 
 The harbour master exercise involves more incoming ships than any harbour master can
 reasonably handle, each with urgent cargo and a captain who is absolutely certain their
@@ -111,6 +149,13 @@ something actually breaks.
 
 ## Currents and countercurrents
 
+SSO adoption stalls at sixty per cent. Nobody can explain why. The currents and
+countercurrents exercise is usually where the explanation surfaces: an integration project
+that was started, never finished, and now sits in a state nobody wants to own; a team that
+lost the institutional knowledge of how the system works when its last specialist left; a
+cultural assumption that the remaining gaps are the hard cases and therefore someone else's
+problem. The technical path to completion is clear. The countercurrents are the story.
+
 Every organisation has forces that nobody fully acknowledges: the unwritten rule that a
 particular system cannot be touched because of what happened in 2019, the policy that
 technically exists but has not been enforced since its author left, the cultural current
@@ -127,3 +172,7 @@ there is how incidents get created.
 
 This exercise pairs well with Mapping the Waters. What looked like a whirlpool on the map
 might, from this angle, be a countercurrent doing a job that nobody formally asked it to do.
+
+## Related
+
+- [Foundation: Workshops and analytical processes](https://purple.tymyrddin.dev/docs/workshops/)

@@ -4,17 +4,25 @@ The tidepool experiments are for looking closely at small, contained things in o
 understand large, complicated ones.
 
 Tidepools are instructive precisely because of the boundaries. Everything that lives there
-is visible and examinable. You can observe without managing. You can put things in and watch
-what happens. You can make mistakes without sinking anything larger.
+is visible and examinable. You can observe without managing. You can introduce something and
+watch what happens. You can make mistakes without sinking anything larger, and the mistakes
+are informative in a way that clean runs are not.
+
+The labs here are designed to be self-correcting in that sense: the feedback comes from the
+exercise itself, not from someone evaluating how you approached it. A packet capture either
+tells a coherent story or it does not. A honeypot either fires when it should or it reveals
+a configuration that needs revisiting. The learner knows whether the approach is working from
+what they observe, which is the condition under which something genuinely difficult becomes
+learnable rather than just completable.
 
 The labs take more time than the workshops. Some people run them in an afternoon; others
-return to them over several sessions across a week. The lab does not know which you are and
-does not care. Take the tide as it comes.
+return across several sessions in a week. The lab does not know which you are and does not
+care. Take the tide as it comes.
 
 ## Threat intelligence lifecycle
 
 The full intelligence cycle, from collection through processing to analysis to finished
-product, sounds very formal. In practice it involves arguing about what counts as a reliable
+product, sounds very formal. In practice, it involves arguing about what counts as a reliable
 source, discovering that two-thirds of the feeds you have been trusting are just republishing
 each other, and producing a report that someone will actually act on rather than file under
 interesting reading.
@@ -53,7 +61,7 @@ escalate rather than quietly close.
 
 ## Raising a honeypot
 
-A honeypot is a thing that exists to be found. You put it somewhere plausible, make it look
+[A honeypot is a thing that exists to be found](../active/index.rst). You put it somewhere plausible, make it look
 like it could be useful to an attacker, and then watch who touches it.
 
 This lab is about building one. Participants deploy a basic honeypot in a test environment
@@ -71,6 +79,14 @@ imagination about what to watch for than they had when they left it.
 
 ## Sandcastle and storm
 
+Your EDR fires an alert on a file that arrived by email. Or a colleague opened an attachment
+and something happened: a browser window closed unexpectedly, a process appeared briefly in
+task manager, a script ran. The question is whether this is a real infection, what it may
+have done, and whether the machine needs to be isolated before you escalate. Most
+non-specialists at this point either ignore the alert or call for help without being able
+to describe what they are dealing with. This lab gives them the vocabulary and the habit
+of looking before either.
+
 Malware analysis for people who have not done malware analysis before, and who may have been
 slightly afraid to start.
 
@@ -87,3 +103,7 @@ from consequences.
 
 No prior reverse engineering experience is required. Curiosity and a willingness to be wrong
 a few times before being right are the prerequisites. The sandbox has seen worse.
+
+## Related
+
+- [Foundation: Workshops and analytical processes](https://purple.tymyrddin.dev/docs/workshops/)

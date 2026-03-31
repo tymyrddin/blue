@@ -4,16 +4,26 @@ A build-a-thon is exactly what it sounds like: a group of people building someth
 under time pressure, with the goal of having a working thing at the end rather than a
 presentation about a working thing they might build someday.
 
-The things built in Beaconbuild sessions are practical. They are designed to run on modest
-hardware with open-source tools and to be reproducible by the crew that built them, at their
-own organisation, with their own available resources, without needing the same crew present.
+The things built in Beaconbuild sessions are practical. They run on modest hardware with
+open-source tools. They are reproducible by the crew that built them, at their own
+organisation, with their own available resources, without needing the same crew present
+to explain the decisions.
+
+This is where the format differs from a vendor demonstration or a training course built
+around someone else's environment. A team that has built a thing knows how it works in a
+way that a team that has watched it built does not. They know which component took four
+hours because it was genuinely hard, and which took four hours because of one configuration
+error that will never be made again. They know how to explain every part of it to someone
+who was not there. That knowledge travels back to the organisation in a form that a slide
+deck cannot replicate, because it was produced by working through the problem rather than
+being handed the answer.
 
 Build-a-thons do not have a fixed pace. Some crews finish the core build in half the time
-and spend the rest making it better. Some crews spend most of the time on one component that
-turns out to be more interesting than expected and call the rest good enough for a prototype.
-Both produce something real. The documentation that comes out of the second type tends to be
-more thorough, because nothing concentrates the mind on writing things down like having just
-spent four hours figuring something out.
+and spend the rest making it better. Some crews spend most of the session on one component
+that turns out to be more interesting than expected and call the rest a working prototype.
+Both outcomes are real. The documentation produced by the second type tends to be more
+thorough, because nothing concentrates the mind on writing things down like having just
+spent four hours working something out.
 
 ## SIEM-in-two-days
 
@@ -47,6 +57,14 @@ The PiRogue Tool Suite is a network analysis and security monitoring platform th
 Raspberry Pi, costs less than a dinner for two, and can be carried in a small bag. It was
 built for civil society organisations operating in environments where dragging a rack of
 enterprise security hardware is not an option.
+
+The scenarios where this matters: a civil society organisation working in a high-risk context
+needs to know whether devices on their network are communicating with unexpected
+infrastructure. A rapid security assessment of a partner organisation has to be done with
+whatever fits in a bag. A conference network is shared and the question of what is happening
+on it deserves an answer. In each case, the PiRogue is operational in under an hour, costs
+less than a dinner for two, and leaves behind a build log that anyone can follow to make
+another one.
 
 In this build-a-thon, participants build one. From the hardware. The complete process: write
 the image, boot, configure, connect to a test network, watch the traffic, find something
@@ -85,3 +103,6 @@ original builders present. Materials that pass this test have a long life. Mater
 work when the person who made them explains them have a very short one, which is unfortunately
 when most awareness materials end up: filed under done, never used again.
 
+## Related
+
+- [Foundation: Build-a-thon](https://purple.tymyrddin.dev/docs/workshops/build-a-thon)
