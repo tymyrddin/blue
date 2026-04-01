@@ -21,9 +21,6 @@ available at the time. The volunteers are enthusiastic. The budget is not.
    data/index
    ai-governance/index
 
-Not covered: audit compliance
---------------------------------
-
 The goal here is not a checkbox. ISO 27001 exists and may eventually be relevant,
 but a freshly hired architect in a resource-constrained non-profit does not start there.
 The goal is to reduce actual risk for actual people and animals: the care workers, the volunteers,

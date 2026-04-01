@@ -27,8 +27,6 @@ and/or open source.
    Cloud concentration and its discontents <https://indigo.tymyrddin.dev/docs/patrician/cloud.html>
    Cloud complexity and misconfiguration epidemic <https://indigo.tymyrddin.dev/docs/debt/cloud.html>
 
-Not covered: audit compliance
---------------------------------
 Each phase focuses on what is actually built: the machinery humming in the back room, the tools that
 occasionally spark, the automation that behaves itself most days, and the security woven into daily graft. Once the
 real work is done, the evidence more or less accumulates by itself, like paperwork in the Patrician’s antechamber.

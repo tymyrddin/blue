@@ -9,17 +9,6 @@ whack-a-mole with alerts in the middle of the night, or fighting off botnets fro
 mission is the same: out-stubborn the chaos. So grab that sixth cup of
 coffee, because the attackers never sleep, and neither do we (but only because of the caffeine).
 
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-
-   docs/org/index
-   docs/shadows/index
-   docs/ngo/index
-   docs/stormforge/index
-   docs/active/index
-
 Going places
 ------------------------
 
@@ -29,17 +18,27 @@ Going places
 ----
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    docs/purple/index
-
-.. toctree::
-   :maxdepth: 1
-
    docs/soc/index
    docs/dev/index
    docs/home/index
    docs/diy/index
+
+Stories, roleplay, simulations, and simulators
+-----------------------------------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   :includehidden:
+
+   docs/org/index
+   docs/shadows/index
+   docs/ngo/index
+   docs/stormforge/index
+   docs/active/index
 
 ----
 
