@@ -1,22 +1,29 @@
-# When hackers Go Green (By recycling your own tools against you)
+# Living off the land
 
-Forget custom malware, why build your own hacking tools when the victim’s system already provides them for free? 
-Modern adversaries have embraced eco-friendly cybercrime, where they "live off the land" (LOL) by repurposing 
-perfectly legitimate software to do perfectly illegitimate things. Think of it as a digital MacGyver episode, 
-except instead of defusing bombs with paperclips, they’re stealing data with Microsoft Excel.
+Living-off-the-land attacks use tools already present on the target system rather than deploying custom malware.
+The approach has become standard because it is effective: built-in system utilities run with expected
+permissions, their activity blends into normal administrative patterns, and endpoint detection tends to trust
+signed system binaries.
 
-## The LOL Toolkit: Pre-installed chaos
+## The toolkit
 
-* LOLBAS (Living Off the Land Binaries and Scripts): Why write malware when `certutil.exe` (a Windows tool for certificates) can also download ransomware? Or when `PowerShell` can exfiltrate files faster than a USB thief in a library?
-* GTFOBins (Unix/Linux Edition): That innocent curl command? It can also pipe your `/etc/shadow` file straight to a hacker’s server. `vim`, `python`, even `tar`, all can be weaponised by someone with Google and a grudge.
-* LoLDrivers (The Dark Side of "Trusted" Drivers): Even your GPU driver isn’t safe. Attackers exploit signed-but-vulnerable drivers to disable antivirus, escalate privileges, or turn your PC into a silent cryptominer.
+LOLBAS (Living Off the Land Binaries and Scripts) catalogues the Windows built-in tools that have been abused
+for attack purposes. `certutil.exe`, a certificate management tool, can download files. `PowerShell` can
+exfiltrate data over HTTPS. `wmic` can execute code remotely. None of these behaviours trigger alerts by
+default because the tools themselves are legitimate.
 
-## Why LOL works so well
+GTFOBins performs the same function for Unix and Linux systems. `curl`, `vim`, `python`, `tar`, and many other
+standard utilities can be used for privilege escalation, data exfiltration, or persistence when combined with
+the right flags and a bit of ingenuity.
 
-* Blends in – Using built-in tools means no suspicious downloads.
-* Hard to detect – EDR systems go "Hmm, this looks normal…" while your data walks out the door.
-* Zero cost – Cybercriminals love a good BYOT (Bring Your Own Target) policy.
+LoLDrivers extends the principle to device drivers. Signed but vulnerable drivers can be loaded to disable
+security software, escalate privileges, or install persistent implants. The driver is trusted because it is
+signed; the vulnerability it contains is exploited after the trust is established.
 
-## The irony
+## Why it works
 
-The same tools admins use to secure systems (PowerShell, WMI, rsync) are now the backbone of attacks. It’s like a burglar using your own locksmithing tools to break into your house, while you’re still holding the instruction manual.
+The detection problem is genuine. A `PowerShell` script downloading a file looks identical whether it is an
+administrator running a legitimate update or an attacker exfiltrating credentials. Endpoint detection systems
+have to use context and behaviour patterns to distinguish between them, and attackers adapt to those
+heuristics as they are developed. The arms race is ongoing, and living-off-the-land techniques remain
+effective partly because they are so embedded in normal system operation.

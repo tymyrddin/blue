@@ -1,21 +1,20 @@
-How to secure your digital kitchen without losing your mind (2025 Edition)
+Using MITRE ATT&CK at home
 ======================================================================================================
 
-Let’s face it: your home network is a chaotic kitchen, your smart fridge is yelling at your router, your kid’s tablet
-is running more malware than apps, and your "secure" Wi-Fi password is probably written on a sticky note under the
-keyboard. The MITRE ATT&CK framework is like a recipe book for cyberattacks, showing exactly how hackers break in,
-what they steal, and where they hide.
+The MITRE ATT&CK framework documents the tactics and techniques adversaries use at each stage of an attack:
+getting in, executing, persisting, and exfiltrating. It was designed for enterprise security teams, but the
+underlying patterns apply at home too.
 
-For 2025, we’re not aiming for Fort Knox, we’re aiming for "not the easiest house on the block to rob." Here’s how to
-map your defences against real-world threats.
+This section maps those tactics to the home context, identifies where defences typically have gaps, and suggests
+practical responses. The goal is not comprehensive coverage but enough visibility to avoid being the path of
+least resistance.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Home cybersecurity isn’t about being unhackable, it’s about being annoying enough that hackers move on to the next house.
+   :caption: A map of the attack surface is more useful than a checklist written once and ignored.
 
-   README.md
    gaps.md
 
 

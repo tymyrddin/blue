@@ -1,19 +1,15 @@
-Mobile security: childproofing the digital junk drawer
+Mobile security
 ======================================================================================================
 
-Your smartphone is like a toddler's junk drawer: crammed with half-dead apps, questionable permissions, and enough
-personal data to make a hacker squeal with glee." In 2025, where AI-powered attacks rifle through outdated apps
-like a kid rummaging for candy and "zero-click" exploits can hijack your device faster than you can say "why does
-Flappy Bird need my contacts?", locking down your mobile mess isn't just smart, it's survival. Disable shady app
-installs (unless you enjoy surprise malware loot boxes), update religiously like you're feeding a tamagotchi,
-revoke permissions from apps that treat your microphone like their personal confessional, and slap a VPN on public
-WiFi like you're wrapping it in digital bubble wrap.
+Smartphones hold banking credentials, authentication apps, private messages, and location history. They
+are used more continuously than computers and are harder to monitor for unusual activity. The security
+controls available are fewer than on a desktop, which makes the ones that exist more important to apply.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Childproof your digital chaos before the internet's sticky fingers get into it.
+   :caption: A phone is more exposed than it looks.
 
    audit.md
    update.md

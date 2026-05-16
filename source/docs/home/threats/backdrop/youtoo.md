@@ -1,26 +1,31 @@
-# A Fairy Tale for the Digitally Naive
+# No platform is inherently safe
 
-Once upon a time, people believed Linux was Fort Knox, macOS was a walled garden, and Windows was the only malware 
-buffet in town. Then reality arrived, wielding ransomware, zero-days, and a hearty laugh at our collective hubris. 
-No device is sacred anymore. That "secure" Linux server? RansomEXX will encrypt it without even phoning home. 
-That "safe" MacBook? LockBit now has a macOS edition, because even Apple users must suffer. And Android? 
-It’s basically a ransomware piñata at this point. The lesson? Assume everything is vulnerable, because it is.
+For years it was reasonable to assume that Linux was a hardened target, macOS a walled garden, and Windows the
+primary malware platform. That period has passed. The financial incentives to attack high-value Linux servers
+were eventually large enough to justify the development effort. macOS market share grew enough to make it worth
+targeting. And cross-platform frameworks made it straightforward to port existing attacks across operating
+systems.
 
-Linux: From Bastion of Security to Bullseye: Linux runs the internet (and your smart fridge), so hackers finally 
-bothered to learn Bash. Why? Profit. High-value targets like NASA and the DoD use it, and where big money flows, 
-malware follows. RansomEXX hardcodes its victims. Tycoon hides in fake Java updates. QNAPCrypt devours NAS devices. 
-Even Erebus, a Windows-born ransomware, got a Linux port. The message is clear: Open-source doesn’t mean 
-"open season for defenders."
+## Linux
 
-macOS: The "Walled Garden" now has a Gift Shop for Hackers: Apple’s "it just works" mantra works a little too well, for 
-malware. ThiefQuest lurked in pirated Little Snitch copies. MacStealer pillaged iCloud keychains. JockerSpy turned 
-MFA into a suggestion. And now, Living Off the Land (LOL) attacks abuse built-in tools to steal passwords and bypass 
-encryption. The irony? macOS security relies on user passwords, the same ones phishing attacks snatch with laughable 
-ease. Even Silicon Valley’s golden child isn’t immune to digital pickpockets.
+Linux runs most internet infrastructure, which makes it worth attacking. RansomEXX, Tycoon, and QNAPCrypt are
+among the variants targeting Linux systems. Erebus, originally a Windows ransomware, was ported to Linux
+specifically to target servers. Living-off-the-land techniques using built-in shell tools have become standard
+because they blend into legitimate administrative activity.
 
-The Universal Truth: Malware Doesn’t Discriminate: Forget OS tribalism, modern malware is polyglot and ruthless. 
-StripedFly infects both Linux and Windows, mines Monero while stealing screenshots, and worms through networks 
-like it’s playing Plague Inc. Porting malware across platforms is now trivial, thanks to cross-platform frameworks 
-and the "write once, infect everywhere" ethos. The takeaway? Your OS won’t save you. Only paranoia with a dash of 
-humour to stay sane will.
+## macOS
 
+Apple's reputation for security has historically been earned, but it has also led to underestimation of the
+platform's exposure. ThiefQuest distributed via pirated software installers. MacStealer targeted iCloud
+keychain credentials. JockerSpy deployed via trojanised apps. Living-off-the-land attacks using built-in macOS
+tools follow the same logic as on Linux: use what is already there.
+
+macOS security relies significantly on user passwords, which phishing reliably extracts. The walled garden
+controls app distribution; it does not prevent credential theft.
+
+## Cross-platform
+
+StripedFly infects both Linux and Windows systems, mines cryptocurrency while exfiltrating data, and spreads
+via network worm behaviour. Cross-platform malware has become easier to develop and deploy. The operating
+system is increasingly less relevant as a protection; the configuration, the patch state, and the user's
+behaviour matter more.

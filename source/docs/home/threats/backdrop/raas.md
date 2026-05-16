@@ -1,13 +1,29 @@
-# Extortion for the masses
+# Ransomware as a service
 
-The cybercrime world has officially entered the gig economy, why be a lone hacker when you can franchise your chaos? Ransomware-as-a-Service (RaaS) is the Uber Eats of digital extortion, delivering encrypted files and panic to victims worldwide, with minimal effort required. No coding skills? No problem! Just sign up, pick your target, and let the ransomware developers handle the dirty work, for a generous cut of the profits, of course.
+Ransomware has become a franchise operation. Developers build and maintain the encryption tooling and associated
+infrastructure: payment portals, victim communication channels, decryption key management. Affiliates pay a
+percentage of collected ransoms in exchange for access to the kit and support. The developer takes the
+development risk; the affiliate takes the operational risk of running campaigns.
 
-Gone are the days of clumsy phishing emails (though they still linger like a bad smell). Modern RaaS operators prefer drive-by downloads, VPN exploits, and botnet-powered distribution, because why hack one machine when you can hijack thousands? Whether it’s Windows, macOS, or even Linux, no device is safe. And while mobile ransomware prefers psychological warfare (locking screens instead of encrypting files), the endgame is the same: Pay up, or lose everything.
+The distribution model has shifted over time. Early ransomware relied heavily on mass phishing campaigns. Current
+operations more often use drive-by downloads, compromised VPN credentials, or botnets for initial access. No
+operating system is exempt: Windows, macOS, and Linux variants all exist, and some ransomware families target
+backup systems specifically to remove the obvious recovery path.
 
-But here’s the real kicker, ransomware gangs now pretend they’re the good guys. Take RansomedVC, who in 2023 leaked victim data while claiming they were just "pentesting" and even helpfully threatened to report GDPR violations if ransoms weren’t paid. Nothing says "ethical extortion" like blackmailing victims with regulatory fines.
+## The extortion layer
 
-## Why RaaS is the ultimate scam
+Some groups have added a second pressure beyond file encryption. Exfiltrated data gets published, or threatened
+for publication, on dedicated leak sites. This shifts the leverage: a victim who has good backups still faces
+the question of what was taken. GDPR and similar data protection frameworks have been used by attackers as an
+additional angle, with threats to report violations if ransom is not paid.
 
-* Low barrier to entry – No tech skills? No problem! Just point, click, and extort.
-* Profit-sharing model – Developers take 20-30%, affiliates keep the rest. It’s like MLM, but with more felonies.
-* Built-in deniability – "We’re not criminals, we’re… uh… security researchers."
+RansomedVC demonstrated this in 2023, claiming to act as penetration testers and threatening regulatory
+reporting as a condition of negotiation. The legal framing was not persuasive, but it illustrated how far the
+extortion logic has developed beyond simply locking files.
+
+## For home users
+
+Home ransomware typically targets backup-connected storage: NAS devices, cloud sync folders, and external drives
+left permanently connected. The offline backup, disconnected when not in use, remains the most reliable
+mitigation. Testing the restore process matters: a backup that has never been tested is an assumption, not a
+recovery plan.

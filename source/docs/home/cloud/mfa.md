@@ -1,108 +1,100 @@
-# MFA Everywhere
+# MFA everywhere
 
-Multifactor authentication (MFA) is the #1 way to stop hackers.
+Multifactor authentication adds a second verification step beyond the password. It substantially raises
+the cost of account compromise, because a stolen password alone is no longer sufficient. See also the
+[MFA bypass techniques](../threats/backdrop/mfa.md) that are in active use, since not all MFA methods
+are equally resistant.
 
-## MFA Tools
+## MFA tools
 
-Multifactor authentication (MFA) is only as strong as the tools you use. Below are the best authenticator apps, hardware keys, and backup strategies to secure your accounts.
+### TOTP authenticator apps
 
-### TOTP authenticator apps (Time-Based One-Time Passwords)
+These apps generate 6-digit codes that refresh every 30 seconds. More resistant than SMS, which is
+vulnerable to SIM swapping.
 
-These apps generate 6-digit codes that refresh every 30 seconds. Better than SMS (SIM swapping risk).
+| Tool                        | Pros                                          | Cons                        | Best for                            |
+|-----------------------------|-----------------------------------------------|-----------------------------|-------------------------------------|
+| Aegis (Android)             | Open-source, offline, encrypted backups       | Android only                | Privacy-focused users               |
+| Raivo OTP (iOS)             | Open-source, local storage, encrypted exports | iOS only                    | iPhone users                        |
+| 2FAS (Android/iOS)          | Open-source, encrypted cloud backup           | No desktop app              | Balance of security and convenience |
+| Authy (Android/iOS/Desktop) | Cloud sync, multi-device                      | Closed-source, Twilio-owned | Convenience over maximum privacy    |
+| Google Authenticator        | Simple, widely supported                      | No backups, no multi-device | Basic use only                      |
 
-| Tool	                        | Pros	                                          | Cons	                        | Best For                          |
-|------------------------------|------------------------------------------------|------------------------------|-----------------------------------|
-| Aegis (Android)	             | Open-source, offline, encrypted backups	       | Android-only	                | Privacy-focused users             |
-| Raivo OTP (iOS)	             | Open-source, local storage, encrypted exports	 | iOS-only	                    | iPhone users who want security    |
-| 2FAS (Android/iOS)	          | Open-source, encrypted cloud backup	           | No desktop app	              | Balance of security & convenience |
-| Authy (Android/iOS/Desktop)	 | Cloud sync, multi-device	                      | Closed-source, Twilio-owned	 | Convenience over max privacy      |
-| Google Authenticator	        | Simple, widely supported	                      | No backups, no multi-device	 | Basic users (but not recommended) |
+Recommendation: Aegis (Android) or Raivo (iOS) for maximum security. Authy or 2FAS if cloud backup is important.
 
-Recommendation:
+### Hardware security keys
 
-* Maximum security? → Aegis (Android) / Raivo (iOS)
-* Convenience + backup? → Authy or 2FAS
+Physical devices (USB/NFC/Bluetooth) that perform cryptographic authentication. They prevent phishing
+because the authentication is bound to the specific domain: a key used on a phishing site cannot
+authenticate to the real site. The [MFA bypass page](../threats/backdrop/mfa.md) explains why this matters.
 
-### Hardware security keys (Strongest MFA)
+| Key              | Pros                                           | Cons                        | Best for               |
+|------------------|------------------------------------------------|-----------------------------|------------------------|
+| YubiKey 5 Series | FIDO2/U2F, NFC, works with 1000+ services      | Expensive                   | Best overall           |
+| Nitrokey FIDO2   | Open-source, EU-made                           | Fewer services supported    | Privacy-focused users  |
+| Google Titan     | Lower cost, well-supported for Google services | Limited third-party support | Google ecosystem users |
+| SoloKey v2       | Open-source, USB-C/NFC                         | Smaller brand               | Tech enthusiasts       |
 
-These physical devices (USB/NFC/Bluetooth) prevent phishing and are the gold standard for MFA.
+Buy hardware keys directly from the manufacturer. Third-party marketplace purchases carry a risk of
+tampered devices.
 
-| Key	              | Pros	                                      | Cons	                        | Best For               |
-|-------------------|--------------------------------------------|------------------------------|------------------------|
-| YubiKey 5 Series	 | FIDO2/U2F, NFC, works with 1000+ services	 | Expensive	                   | Best overall           |
-| Nitrokey FIDO2	   | Open-source, EU-made	                      | Fewer services supported	    | Privacy-focused users  |
-| Google Titan	     | Cheaper, good for Google services	         | Limited third-party support	 | Google ecosystem users | 
-| SoloKey v2	       | Open-source, USB-C/NFC	                    | Smaller brand	               | Tech enthusiasts*      | 
+Where to use hardware keys: Google, Microsoft, GitHub, Cloudflare, Coinbase, Bitwarden, 1Password.
 
-Where to use hardware keys?
+## Backup and recovery
 
-* Google, Facebook, Microsoft, GitHub, Cloudflare
-* Crypto (Coinbase, Kraken, Binance)
-* Password Managers (Bitwarden, 1Password)
+Losing MFA access can lock a user out of an account permanently.
 
-Warning: Always buy directly from the manufacturer (Amazon/eBay may sell tampered keys).
+* Print backup codes when offered (Google, Facebook, and similar services provide them during setup).
+* Export encrypted TOTP backups (Aegis and Raivo support this).
+* Register two hardware keys rather than one.
+* Set up a fallback email or phone only if it is itself secured with MFA.
 
-## Backup & Recovery Strategies
+Do not store TOTP seeds in unencrypted cloud notes or email.
 
-Losing MFA access can lock you out forever. Here’s how to avoid it:
+## Passkeys
 
-Backup methods:
+Passkeys (FIDO2) replace passwords with device-based biometrics or a hardware key. They remove the
+password from the authentication flow entirely and are resistant to phishing by design.
 
-* Print Backup Codes (Google, Facebook, etc. provide them)
-* Encrypted Exports (Aegis/Raivo allow encrypted backups)
-* Multiple Keys (Register 2 YubiKeys in case one is lost)
-* Emergency E-Mail/Phone (Set up fallback methods carefully)
+Where passkeys are supported: Google, Apple, Microsoft, GitHub, PayPal.
 
-Never Store TOTP Seeds in Cloud Notes/Email!
+Passkeys are worth adopting where available, with TOTP or hardware keys kept as a backup method.
 
-## Advanced: Passkeys (The future of MFA)
+## Recommendations by situation
 
-Passkeys (FIDO2) replace passwords with device-based biometrics (fingerprint/face unlock).
+* For most people: 2FAS or Aegis/Raivo, plus a YubiKey 5 NFC for the most important accounts.
+* For businesses: YubiKey with Authenticator.
+* Maximum security: Nitrokey for example, with KeePassXC for TOTP storage.
 
-Where to use Passkeys?
+## Setting up MFA: examples by category
 
-* Google, Apple, Microsoft, GitHub, PayPal, Best Buy
-* Best with: iPhone (iCloud Keychain), Android (Google Password Manager), or YubiKey
+These are illustrative examples. Check the security settings of any service with an account.
 
-Recommendation: Start using passkeys where possible, but keep TOTP/hardware keys as backup.
+### Smart home and IoT apps
 
-## Tool recommendations
-
-* For most people: Authy (if you need sync) or Aegis/Raivo (if you prioritise privacy) and YubiKey 5 NFC (for critical accounts)
-* For businesses: YubiKey + Duo/Microsoft Authenticator
-* For ultra-security: Nitrokey + KeePassXC (TOTP storage)
-
-## Where to set up MFA?
-
-These are but a few examples for an impression. Check where you have accounts and look it up.
-
-### Smart home & IoT apps
-
-* Google Home (Global): App → Settings → Home management → "Your Home" → Home settings → Two-step verification
-* Ring (Amazon, Global): Control Centre → Two-Step Verification → Enable
-* Xiaomi Home/Mi Home (Asia): Profile → Account & Security → Two-Factor Authentication
-* Tuya Smart (Used by many budget IoT brands): Account Security → Two-Step Verification
+* Google Home: App → Settings → Home management → "Your Home" → Home settings → Two-step verification
+* Ring (Amazon): Control Centre → Two-Step Verification → Enable
+* Xiaomi Home: Profile → Account & Security → Two-Factor Authentication
+* Tuya Smart: Account Security → Two-Step Verification
 
 ### Social media
 
-* Facebook (Global): Settings → Security & Login → Two-Factor Authentication → Authenticator App
-* Twitter/X (Global): Settings → Security → Two-Factor Authentication → Authentication App
-* WeChat (China/Global): Me → Settings → Account Security → Login Protection
-* LINE (Japan/Taiwan/Thailand): Settings → Account → Two-Step Verification
-* VK (Russia/CIS): Settings → Security → Two-Factor Authentication
-* Naver (South Korea): Settings → Security → OTP Authentication
-* WhatsApp (Global): Settings → Account → Two-Step Verification
-* Telegram (Global): Settings → Privacy & Security → Two-Step Verification
+* Facebook: Settings → Security & Login → Two-Factor Authentication → Authenticator App
+* Twitter/X: Settings → Security → Two-Factor Authentication → Authentication App
+* WeChat: Me → Settings → Account Security → Login Protection
+* LINE: Settings → Account → Two-Step Verification
+* WhatsApp: Settings → Account → Two-Step Verification
+* Telegram: Settings → Privacy & Security → Two-Step Verification
 
-### Banking & financial apps
+### Banking and financial apps
 
 US:
 
-* Chase Bank: App > Profile > Security & Settings > Two-Step Verification
-* PayPal: Settings > Security > 2FA > "Set Up" next to Authenticator App
-* Coinbase: Security > Authenticator App > Scan QR code with Authy Also add way 
+* Chase Bank: App → Profile → Security & Settings → Two-Step Verification
+* PayPal: Settings → Security → 2FA → Authenticator App
+* Coinbase: Security → Authenticator App → Scan QR code with Authy
 
-Americas (Beyond US):
+Americas (beyond US):
 
 * Nubank (Brazil): App → Profile → Security → Two-Factor Authentication
 * Mercado Pago (Latin America): Security → Two-Step Verification
@@ -112,22 +104,20 @@ Americas (Beyond US):
 Europe:
 
 * Revolut (UK/Europe): Security → Two-Factor Authentication
-* N26 (Germany/Europe): Security → TOTP (Google Authenticator)
+* N26 (Germany/Europe): Security → TOTP
 * ING (Netherlands/Europe): Security → Two-Step Verification
-* Sberbank (Russia/CIS): Security → OTP via SMS or App
 
-Asia & Africa: 
+Asia and Africa:
 
 * Alipay (China/Global): Security → SMS + TOTP
 * Paytm (India): Profile → Security → Two-Factor Authentication
 * M-Pesa (Kenya/Africa): Security → PIN + SMS Verification
 * KakaoPay (South Korea): Security → OTP Authentication
 * GrabPay (Southeast Asia): Security → Two-Step Verification
-* UPI Apps (India - PhonePe, Google Pay, BHIM): Settings → Enable App Lock + UPI PIN
 
-### And not to forget
+### Productivity tools (examples)
 
-* Microsoft 365 (Global): Security → Authenticator App or YubiKey
-* Slack (Global): Settings → Authentication → Two-Factor Auth
-* Trello (Atlassian, Global): Account → Security → Two-Factor Authentication
-* Zoom (Global): Security → Enable 2FA
+* Microsoft 365: Security → Authenticator App or YubiKey
+* Slack: Settings → Authentication → Two-Factor Auth
+* Trello (Atlassian): Account → Security → Two-Factor Authentication
+* Zoom: Security → Enable 2FA

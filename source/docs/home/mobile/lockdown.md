@@ -1,10 +1,14 @@
-# Android’s "No Stranger Danger" mode
+# Disable sideloading
 
-Why? Sideloading APKs is like accepting candy from a van with "FREE APPS" painted on the side.
+Sideloading installs apps from sources outside the official app store. Unofficial app packages are a
+common delivery mechanism for mobile malware: the app may appear functional while running something
+additional in the background.
 
-## How-to?
+## How to
 
-* Android: Settings → Security → Install unknown apps → Disable for all apps
-* iPhone: Already blocked (thanks, Apple’s walled garden).
+* Android: Settings → Security → Install unknown apps → disable for all apps
+* iPhone: blocked by default
 
-Exception: Only enable for FDroid (if you’re a FOSS nerd).
+Exception: F-Droid is a well-maintained open-source Android app repository. Enabling sideloading
+specifically for F-Droid, while keeping it disabled for everything else, is a reasonable position for
+users who want open-source alternatives.

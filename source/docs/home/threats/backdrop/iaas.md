@@ -1,29 +1,34 @@
-# Identity theft on autopilot
+# Infostealer as a service
 
-Imagine if pickpockets could outsource their work, no sticky fingers required, just a malware subscription and a dream. That’s Infostealer-as-a-Service (IaaS), the cybercriminal’s answer to passive income. For a modest fee, even the most incompetent hacker can rent a digital vacuum cleaner that sucks up everything from bank logins to crypto wallets, all while sipping a latte and letting the malware do the heavy lifting.
+Infostealers collect credentials, session tokens, and stored data from infected devices and send them to the
+operator. The as-a-service model means that the malware development, collection infrastructure, and data
+management are provided by one party and the campaigns are run by another.
 
-## How your data gets mugged
+## Common delivery vectors
 
-* "Please Enable Macros" – The Classic Con: A seemingly innocent Word doc arrives, perhaps titled "URGENT INVOICE_2023_FINAL_FINAL.docx." Enable macros, and voilà, your passwords are now on sale in a Telegram channel.
-* Fake But Fabulous – The Impersonation Game: Hackers clone trusted sites (Adobe, Dropbox, even your bank), buy Google/Facebook ads to promote them, and watch as victims voluntarily download malware, thinking it’s a legit update. Nothing builds trust like a sponsored search result!
-* App Store Squatters – The Wolf in Sheep’s Code: By sneaking corrupted apps into stores (looking at you, "Free PDF Converter Premium"), attackers turn official marketplaces into malware vending machines.
+Macro-enabled documents are a longstanding vector. A document arrives with a plausible pretext, the user enables
+macros as prompted, and the infostealer installs. The technique is old enough that some mail providers block
+macro-enabled attachments by default; it remains effective where that filtering is absent.
 
-## The shopping list: what’s in the digital duffle bag?
+Impersonation via search advertising has become more prevalent. Attackers clone the download pages of
+widely-used applications, buy search advertising for the brand name, and reach users who are actively searching
+for legitimate software. The user downloads from what appears to be the official site.
 
-IaaS doesn’t discriminate, it’ll steal your online banking creds, Netflix password, selfies, and even that Bitcoin wallet you forgot about. The data gets neatly packaged and sold to:
+App store infiltration places corrupted applications into official marketplaces. Detection and removal
+eventually happen, but downloads occur in the interim.
 
-* Fraudsters (for draining accounts)
-* Phishers (for more targeted scams)
-* Blackmailers (for "Remember these embarrassing DMs?" leverage)
+## What gets stolen
 
-## Why healthcare & finance?
+Infostealers typically target browser credential stores, where passwords and session cookies are kept;
+cryptocurrency wallets; authentication app data; and files matching patterns associated with sensitive content.
+The collected data is packaged and sent to the operator, who may use it directly or sell it.
 
-Simple: High-value data, low patience for downtime. A stolen hospital login can sell for 10x a regular email, because nothing says "pay up" like holding patient records hostage.
-Fighting Back: The Cat-and-Mouse Game
+Stolen session tokens bypass MFA entirely because the authentication already occurred. This is the mechanism
+behind many account takeovers that puzzle victims who had multi-factor authentication enabled: the attacker
+never needed to authenticate, only to use an existing authenticated session.
 
-## Defenders are stuck playing whack-a-mole with:
+## For home users
 
-* Advanced EDR (to catch fileless malware)
-* User training ("No, Dave, ‘Password123’ won’t cut it")
-* Ad-blockers for malware (Blacklisting malicious domains after they trend)
-
+Browser password managers are a common target. A dedicated password manager with local or audited cloud storage
+is a more defensible position. Keeping browsers updated closes many of the vulnerabilities that infostealers
+use for initial access to credential stores.

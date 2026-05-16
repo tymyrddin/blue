@@ -1,22 +1,41 @@
-# Now streaming on dark Webflix
+# Who is out there
 
-Forget Bond villains, today’s digital adversaries are more like a dysfunctional corporate hierarchy, where everyone’s got a quota to meet and someone always ends up with your data. Let’s meet the usual (and unusual) suspects:
+Attacks against home users come from a surprisingly wide range of actors. Understanding who they are is less
+about threat intelligence and more about calibrating expectations: not every attack is targeted, not every
+attacker is sophisticated, and the tools used by advanced groups increasingly reach unsophisticated ones.
 
-## Nation-state actors: The taxpayer-funded trolls
+## Nation-state actors
 
-These are your "elite" hackers, backed by governments, armed with zero-days, and operating with the subtlety of a sledgehammer wrapped in a flag. Whether it’s China’s "civilian" cyber militias, Russia’s "patriotic" ransomware crews, or the Five Eyes’ "we’re definitely not doing this" ops, they’ve got unlimited budgets (thanks, taxpayers!), legal immunity ("laws are for peasants"), and a playbook of lies thicker than a spy novel. Need plausible deniability? They’ll gaslight you before the breach even happens.
+State-sponsored groups operate with significant resources, legal cover, and long time horizons. Their primary
+targets are governments, critical infrastructure, and high-value individuals, but their tools and techniques
+percolate outward. Malware developed by state groups eventually appears in criminal hands. Zero-day exploits
+purchased by one government get rediscovered by another. The relevance to home users is mostly indirect: the
+techniques that hit enterprises this year tend to reach home networks within a few years, usually via criminal
+adoption of the same approaches.
 
-## Digital crime gangs: The Fortune 500 of fraud
+## Organised crime
 
-Why bother with a 9-to-5 when you can run a multinational cybercrime syndicate? These gangs operate like startups, if startups specialised in ransomware, credential stuffing, and outsourced evil. They’ve got R&D departments (reverse-engineering exploits), HR (recruiting insiders), and customer support (yes, some ransomware gangs now offer help desks). Their motto? "Why hack once when you can franchise?"
+Criminal groups have professionalised considerably. Many operate with dedicated development teams, affiliate
+networks, customer support for ransomware victims, and revenue-share models that allow low-skill operators to
+deploy sophisticated tools. The financial motive is straightforward and the economics favour volume: targeting
+many individuals with automated tools is more reliable than targeting fewer with manual effort.
 
-## Insiders: The disgruntled desk Jockeys of Doom
+## Insiders
 
-Every organisation’s got that one employee who’s one bad coffee away from burning it all down. Maybe they’re bribed by a crime gang, maybe they’re just mad Karen from Accounting got the corner office, either way, they’ve got keys to the kingdom and a grudge. Pro tip: If Bob from IT suddenly starts forwarding files to his personal email "for backup," maybe check his recent Bitcoin purchases.
+An insider with legitimate access and a grievance, a bribe, or a lapse in judgement represents a different kind
+of risk. In a home context, this usually means someone with physical access to devices or knowledge of
+credentials: a family member, a former partner, or someone with prolonged access to an account.
 
-## Literally anyone with a keyboard and a dream
+## Low-skill opportunists
 
-Thanks to Malware-as-a-Service (MaaS), cybercrime is now a DIY hobby. Want to launch a ransomware attack? There’s a subscription for that. Need a botnet? Add to cart. The barrier to entry is so low, even your neighbor’s kid could be running a phishing scam between Fortnite matches.
-The Common Thread? They’re All Lying.
+The availability of Malware-as-a-Service, crimeware kits, and detailed tutorials has made it possible to launch
+credential-stuffing campaigns, phishing operations, and ransomware attacks without significant technical skill.
+This is now the most common category. The barrier to entry is low and the automation is high.
 
-Whether it’s nation-states pretending "it wasn’t us," crime gangs offering "ethical ransomware," or Karen from HR accidentally emailing passwords to "totallylegit@business.ru," every adversary shares one skill: straight-faced deception. And with generative AI now writing their phishing emails, even their lies are getting polished.
+## The common thread
+
+Social engineering runs through nearly all of these categories. It works not because people are naive but because
+it targets how people respond under time pressure, apparent authority, and emotional load. A convincing urgent
+message from a bank, a spoofed call from a carrier, a prompt appearing at an inconvenient moment: these exploit
+patterns in human decision-making that are consistent and predictable. The technical layer of a threat is often
+the easier part to address; the social layer is the one that keeps working.

@@ -1,18 +1,19 @@
-# How to auto-update everything (2025 Edition)
+# Keeping everything updated
 
-TL;DR: Automatic updates = the digital equivalent of eating your veggies. Boring, but it keeps you alive.
+Most successful attacks exploit known vulnerabilities: flaws that have been documented, patched, and in many
+cases publicly discussed. The gap between patch release and patch adoption is the window of greatest exposure.
+Automatic updates close that gap without requiring active effort.
 
-## Operating system (The "Stop Ignoring Me" setup)
+## Operating system
 
 Windows:
 
-* Press Win + I → Windows Update → Turn on "Get the latest updates as soon as they're available"
-* (Optional) Enable "Advanced options" → "Receive updates for other Microsoft products"
+* Win + I → Windows Update → enable "Get the latest updates as soon as they're available"
+* Optional: Advanced options → "Receive updates for other Microsoft products"
 
 macOS:
 
-* System Settings → General → Software Update → Toggle on "Automatically keep my Mac up to date"
-* (For power users) sudo softwareupdate --schedule on in Terminal
+* System Settings → General → Software Update → toggle on "Automatically keep my Mac up to date"
 
 Linux (Debian/Ubuntu):
 
@@ -21,48 +22,37 @@ sudo apt install unattended-upgrades
 sudo dpkg-reconfigure unattended-upgrades  # Select "Yes"
 ```
 
-For Fedora:
+Fedora:
 
 ```bash
 sudo dnf install dnf-automatic
 sudo systemctl enable --now dnf-automatic.timer
 ```
 
-## Browsers (Where 90% of attacks happen)
+## Browsers
 
 Chrome/Edge/Brave:
 
-* Type `chrome://settings/help` → Ensure it reads "Google Chrome is up to date"
-* (Force auto-update) Windows: `services.msc` → Enable "Google Update Service (gupdate)"
+* Type `chrome://settings/help` and confirm the browser reads as up to date.
+* On Windows, ensure the Google Update Service is running: `services.msc` → Enable "Google Update Service (gupdate)"
 
 Firefox:
 
-* `about:preferences#general` → Scroll to "Firefox Updates" → Select "Automatically install updates"
+* `about:preferences#general` → scroll to "Firefox Updates" → select "Automatically install updates"
 
-## Plugins & extensions (The hidden risks)
+## Plugins and extensions
 
-Java (If you must):
+Java (if required):
 
-* Control Panel → Java → Update tab → Check "Check for Updates Automatically"
-* (Better yet) `sudo apt remove openjdk-*` on Linux
+* Control Panel → Java → Update tab → "Check for Updates Automatically"
 
 Browser extensions:
 
-* Chrome: `chrome://extensions` → Toggle "Developer mode" → Check "Update"
-* Firefox: Extensions auto-update by default (a thing it does right)
+* Chrome: `chrome://extensions` → toggle "Developer mode" → click "Update"
+* Firefox updates extensions automatically by default.
 
-## The "Remind Me Later" tax
+## The manual check
 
-Microsoft found that 60% of breaches exploit vulnerabilities where a patch existed but wasn’t installed (Source).
-
-Tip:
-
-* Set a monthly calendar reminder titled "Pretend to Care About Updates"
-* Or use tools like Patch My PC (Windows) or Homebrew (Mac) to batch-update everything
-
-## Why this matters in 2025
-
-* AI-powered attacks now exploit unpatched systems within hours of a vulnerability dropping
-* The "Oops, I forgot" era is over, attackers have automation. Your defences should too.
-
- 
+A monthly calendar event to verify that updates have applied, and to catch anything that requires manual
+approval, is worth adding. Batch-update tools like Patch My PC (Windows) or Homebrew (Mac) make it easier
+to catch third-party applications that do not auto-update.

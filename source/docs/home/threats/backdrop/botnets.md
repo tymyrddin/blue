@@ -1,18 +1,28 @@
-# The Zombie Apocalypse of the Internet (Now with faster brains!)
+# Botnets
 
-Imagine an army of mindless drones, your router, your smart fridge, your neighbor’s neglected security camera, all 
-hijacked and waiting for orders. That’s a botnet: a digital horde of compromised devices, ready to unleash chaos at 
-the whim of some shady overlord. Whether it’s DDoS-ing websites into oblivion, secretly mining crypto, or faking ad 
-clicks (because even cybercrime has a gig economy), botnets are the Swiss Army knives of the cyber underworld.
+A botnet is a network of compromised devices under centralised control. The devices, which may include home
+routers, security cameras, smart appliances, and computers, are recruited through malware infection and then
+used collectively for whatever purpose the operator chooses: DDoS attacks, credential stuffing, spam campaigns,
+cryptocurrency mining, or renting access to other criminals.
 
-## Why Botnets are thriving (Like cockroaches in a data centre)
+## Why botnets persist
 
-* More Malware = More Zombies: Every new malware family needs its own botnet for command and control (C&C), turning infected devices into a global puppet show.
-* Longer "Active Days": Botnets used to get shut down quickly, now they linger like a bad cold, thanks to smarter infrastructure.
-* Infrastructure-as-Code (IaC) = Faster, Sneakier Attacks: Why manually set up C&C servers when you can automate it with code? Attackers now spin up and tear down botnet infrastructure faster than you can say "Wait, why is my thermostat mining Monero?"
+Home devices make particularly reliable botnet nodes because they are left running continuously, rarely
+monitored for unusual activity, and often unpatched. A home router infected in 2019 may still be actively
+participating in botnet traffic. The operator sees no indication because the device functions normally for
+the household; the malicious activity runs as background traffic.
 
-## The Botnet lifecycle
+The infrastructure side has also become more resilient. Botnet command-and-control servers used to be a
+single point of failure; taking them down disrupted the botnet. Modern botnets use distributed and redundant
+C2 infrastructure, peer-to-peer communication between bots, and fast-flux DNS, which makes takedowns more
+difficult and less durable.
 
-* Recruitment – Your devices get infected (usually because you ignored one update).
-* Command & Control – Hackers remotely order them to attack, mine, or spy.
-* Profit – Either via extortion, stolen data, or sheer chaos-induced lulz.
+## The lifecycle
+
+Recruitment happens through malware delivery, default credential exploitation on IoT devices, or drive-by
+downloads. Once infected, the device registers with command-and-control infrastructure. The operator then
+directs the fleet: running attacks, relaying traffic, or subdividing access to sell to other operators.
+
+The Mirai botnet in 2016, which recruited hundreds of thousands of IoT devices using default credentials,
+demonstrated how large this problem could become when devices with poor security controls are connected at
+scale. The fundamental dynamic has not changed.

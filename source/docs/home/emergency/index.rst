@@ -1,16 +1,17 @@
-Emergency compromise response: The digital fire extinguisher
+Emergency response
 ======================================================================================================
 
-Your device(s) is/are on fire? Stop the digital arsonist by yanking the Wi-Fi plug like you’re unplugging a possessed
-toaster, then burn all bridges: reset every password starting with email (the master key to your digital life), and if
-things look grim, nuke it from orbit by restoring from a clean backup (because malware loves a good comeback tour).
-Remember: Panic is optional, but acting like a caffeinated secret agent is mandatory. Your data is counting on you.
+When something goes wrong, the first hour matters. Decisions made under stress tend to be worse than
+decisions made in advance. This section documents what to do, in order, so that the decision-making
+can happen now rather than when it is hardest to think clearly.
+
+The primary steps: disconnect, secure accounts starting with email, then document and report.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: How-to
+   :caption: What to do and in what order.
 
    actions.md
    forensics.md

@@ -1,10 +1,39 @@
-# When "Extra Security" becomes just another hurdle for hackers to vault over
+# When MFA gets bypassed
 
-Multi-Factor Authentication (MFA) was supposed to be the digital bouncer keeping the riff-raff out, until attackers realised they could just tire the bouncer out, trick him, or steal his clipboard. Now, MFA bypass techniques are evolving faster than users can say, "Wait, wasn’t this supposed to stop breaches?"
- 
-1. MFA Fatigue-The Annoyance Hack: Attackers bombard users with endless push notifications ("Is this you logging in? How about now? Now? NOW?") until sheer exhaustion or muscle memory kicks in, and click, the gates swing open. It’s like a telemarketer calling 100 times until you finally answer just to make it stop. Lesson: If your MFA prompts feel like spam, they might be spam.
-2. Man-in-the-Middle (MitM)-The Digital Doppelgänger: Why steal credentials when you can trick users into handing them over on a silver platter? Modern phishing proxies intercept MFA tokens in real-time, letting attackers waltz right in. The user sees a legit login page; the hacker gets a VIP pass to their account. Bonus points for OTP bots that automate the whole scam, because even criminals hate manual labor.
-3. Token Theft-The "Trust Me, I’m You" Gambit: Session cookies, meant to save you from constant logins, are now a hacker’s golden ticket. Steal the cookie, and voilà: the system thinks you’re the rightful owner. It’s like photocopying someone’s ID and using it to empty their bank account while they nap.
-The Future: Will MFA Need an MFA?
+Multi-factor authentication substantially raises the cost of account compromise. It is not a complete defence.
+Several bypass techniques are now in routine use, and they share a common pattern: rather than breaking the
+cryptography, they route around it by targeting the human in the authentication flow.
 
-If hackers keep outsmarting "something you know" (passwords), "something you have" (phones), and "something you are" (biometrics), what’s next? "Something you remember" (childhood trauma as a security question)? "Something you imagine" (brainwave authentication)? The more we externalise our identities into the digital void, the weirder, and riskier, security gets.
+## MFA fatigue
+
+Attackers with valid credentials send repeated push notification requests to the victim's authentication app.
+The goal is volume: enough prompts that the recipient approves one out of exhaustion, distraction, or the
+reasonable assumption that the notifications are a technical error. This works reliably enough that it has become
+a standard technique in credential-access playbooks.
+
+The response, beyond user awareness, is to switch to number-matching or to hardware keys. Both close the gap by
+changing the nature of the authentication act, not just the frequency of prompts.
+
+## Man-in-the-middle via phishing proxies
+
+Modern phishing kits intercept the authentication session in real time. The victim enters credentials on a
+convincing replica of the legitimate site; the kit forwards them to the real site and relays back the MFA
+prompt. The attacker captures the resulting session token and gains access before the session expires. OTP bots
+automate this at scale, handling the timing and interception without manual involvement.
+
+## Session token theft
+
+Authentication tokens, stored in browser cookies, allow services to recognise returning users without
+re-authentication. Stealing the cookie provides equivalent access to stealing the password, bypassing MFA
+entirely because the authentication already happened. Infostealer malware routinely targets browser credential
+stores for this reason.
+
+## Hardware keys
+
+FIDO2 hardware keys close a different gap. The key performs the authentication cryptographically, bound to the
+specific domain, so a replayed or intercepted credential from a phishing site is not valid for the real site.
+More importantly, the human is not making a decision: there is no push notification to approve, no code to
+enter, no moment of uncertainty. The decision has been removed from the flow. That is the source of the
+protection, not superior cryptography alone.
+
+For accounts that matter, hardware keys address the failure mode that other MFA methods leave open.

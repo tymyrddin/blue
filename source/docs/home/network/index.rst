@@ -1,18 +1,18 @@
-Router & network security: Locking the digital pantry
+Router and network security
 ======================================================================================================
 
-Your router is the bouncer of your digital house, except instead of keeping out troublemakers, it’s currently letting
-your smart fridge, sketchy baby monitor, and that one ancient IP camera from 2014 all party on the same Wi-Fi.
-Time to tighten security: Change the default login (because "admin/password" is just a welcome mat for hackers),
-ban remote admin access (unless you enjoy strangers rearranging your network), jail IoT devices on a guest network
-(where they can’t gossip with your laptop), and upgrade to WPA3 (because WPA2 is basically a "kick me" sign in 2025).
-A router’s job isn’t to be friendly, it’s to be the grumpy gatekeeper your smart home desperately needs.
+The router is the entry point for everything connected to the home network. A router with default
+credentials, remote administration enabled, or all devices sharing the same segment is a significantly
+easier target than one that has been configured with basic security in mind.
+
+The controls here are not difficult, but they are not done by default. Most routers ship with settings
+optimised for ease of setup rather than security.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: A router’s job isn’t to be friendly, it’s to be the grumpy gatekeeper your smart home desperately needs.
+   :caption: The router controls what gets in and what can talk to what.
 
    router-password.md
    wpa3.md

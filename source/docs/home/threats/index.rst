@@ -1,30 +1,23 @@
 When your living room becomes a cyber battleground
 ==============================================================================
 
-Your home network used to be a quiet digital cul-de-sac: now it’s Grand Central Station for every malware strain,
-phishing scam, and IoT exploit imaginable. Between government-mandated apps built like house of cards, family devices
-swapping more germs than a kindergarten flu season, and tech companies treating security as an optional premium feature,
-we’ve all become unwilling participants in the world’s largest penetration test. The attack surface isn’t just growing;
-it’s mutating faster than a virus in a petri dish of neglected software updates.
+Home networks have quietly become serious attack surface. Government apps, school portals, shared family devices,
+and the expanding population of internet-connected appliances have all expanded the exposure without a corresponding
+expansion in household security practice. The attack surface grows; the habits often do not.
 
-This is where we fight back, by treating our routers like castle gates and our smart devices like potential Trojan
-horses. Using frameworks like MITRE ATT&CK, we can stop playing whack-a-mole with threats and start strategically
-reinforcing our digital drawbridges. Because in today’s world, “home network security” isn’t paranoia, it’s just what
-responsible adults do between unplugging the kids’ infected tablet and explaining to Grandma why her “perfectly good”
-Windows 7 machine can’t go online anymore.
+This section maps the threat landscape relevant to home users: who is attacking, what techniques they use, where
+the gaps are, and what can be done about them. The MITRE ATT&CK framework provides structure for the last part.
 
 .. toctree::
    :glob:
    :maxdepth: 2
    :includehidden:
-   :caption: Your smart home is only one unpatched vulnerability away from becoming a hacker’s smart botnet.
+   :caption: Knowing what is coming in is the first step to deciding what stays out.
 
-   README.md
    backdrop/index
    backdrop-mobile/index
    mitre/index
 
 .. image:: /_static/images/in-progress.png
   :alt: Forever in progress ...
-
 

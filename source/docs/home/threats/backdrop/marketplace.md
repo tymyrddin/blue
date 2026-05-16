@@ -1,18 +1,28 @@
-# Where cybercrime shops every day like it's black friday
+# Criminal marketplaces
 
-The digital underworld’s shopping scene has undergone a glow-up, or maybe a go-dark-up. With law enforcement breathing 
-down their necks, cybercriminals have fled the Dark Web’s back alleys for the neon-lit convenience of Telegram 
-channels, where stolen data and malware are traded as casually as Pokémon cards. Why? Because nothing says 
-"discreet criminal enterprise" like a messaging app your grandma also uses to forward cat memes.
+The infrastructure supporting cybercrime includes dedicated marketplaces where stolen data, malware, and
+access credentials are bought and sold. The landscape has shifted over time as law enforcement has taken
+down prominent Dark Web markets; the response has been fragmentation and migration to more accessible platforms.
 
-But don’t think the Dark Web is out of business, it’s just the vintage option now. Places like InTheBox (a one-stop 
-malware mart for mobile mayhem), 2Easy (think eBay, but for your stolen bank logins), and Russian Market (which, 
-despite the name, is as English as a Big Mac) are still thriving. There, you can buy anything from stolen credit 
-cards to pre-hacked RDP servers, complete with Yelp-style reviews like *"Great seller! Creds worked 3/5 times!"*
+## The current picture
 
-The real innovation? Cybercrime-as-a-Subscription. Forget buying malware outright, why not rent a botnet or subscribe 
-to a ransomware toolkit? It’s the Netflix-ification of digital crime: pay monthly, cancel anytime (though good luck 
-unsubscribing from a hacker’s spam list).
+Telegram channels have become a significant venue for trading stolen data and crimeware. The platform's
+accessibility, relative to Tor-based markets, has made it attractive to both operators and buyers.
+Enforcement actions against Telegram-based criminal groups have increased, but the low barrier to creating
+new channels means disruption is temporary.
 
-Bottom line: Whether it’s Telegram’s "Malware Deals Here!" groups or the Dark Web’s OG marketplaces, business is 
-booming. The only difference? Now you don’t even need Tor, just a phone and poor life choices.
+Dark Web markets continue to operate alongside the Telegram ecosystem rather than having been replaced by it.
+Platforms like InTheBox (focused on mobile malware and overlay attacks), 2Easy, and Russian Market trade
+in stolen browser data, credentials, and access packages. Reviews, ratings, and dispute resolution mechanisms
+give these markets a degree of reliability that makes them function as genuine markets rather than simple
+scams.
+
+## What is available
+
+Stolen credential packages, categorised by account type and verified status. Pre-configured malware builds
+with infrastructure included. Access to compromised systems sold by the session or as persistent access.
+Ransomware affiliate programmes. Identity documents.
+
+The existence of markets with quality ratings and repeat sellers indicates that this is an established
+economic ecosystem, not a collection of isolated actors. The criminal infrastructure is, in most respects,
+more mature than defenders find comfortable to acknowledge.

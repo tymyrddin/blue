@@ -1,15 +1,32 @@
-# The Internet's sneakiest pickpockets
+# Drive-by downloads
 
-Picture this: you're browsing your favorite news site, sipping coffee, when, bam!, your device gets infected without you even clicking a thing. That’s the magic (or horror) of drive-by downloads, where malware hitches a ride on legitimate websites like a digital stowaway. Whether it’s a hacked ad network, a compromised plugin, or a sneaky script hiding in plain sight, these attacks turn innocent browsing into a silent heist. No consent needed, just a vulnerable browser and a sprinkle of hacker ingenuity.
+A drive-by download delivers malware to a device through a web browser, without the user intentionally
+downloading anything. The two variants differ in how much the user has to do.
 
-The two flavours of digital food poisoning
+## Authorised downloads
 
-1. "Authorised" Downloads (The Bait-and-Switch): You think you’re downloading a legit program (or ignoring a "special offer" checkbox), but surprise! You just volunteered for a malware side hustle. Classic moves include:
-   * Bundling spyware with free software ("Download this PDF converter! Terms and conditions may include ransomware.").
-   * Redirecting you to a fake update page ("Your Flash Player is totally out of date, promise!").
-2. Unauthorised Downloads (The Silent Ninja): No clicks required! Hackers exploit flaws in websites (or your browser) to force-feed malware to your device. One visit to a compromised site, and, poof, you’re now part of a botnet. Bonus points if the site was your dentist’s homepage.
+The user downloads and runs a file, but it is not what they thought it was. Common delivery mechanisms include
+bundled installers, where a legitimate application includes additional software that was not prominently
+disclosed; redirects to fake update pages; and file-sharing sites where the uploaded version has been replaced
+or was never legitimate.
 
-## The Aftermath: From annoying to apocalyptic
+The user's action is genuine. The deception is in what the action was applied to.
 
-* PUPs/PUAs: The "legal" malware, adware, toolbars, and other digital junk that turns your device into a billboard.
-* Full-scale hijacks: Spyware, ransomware, or remote access trojans (RATs) that steal data, lock files, or turn your webcam into a reality TV show.
+## Unauthorised downloads
+
+No user action is required beyond visiting a page. The malware is delivered via vulnerabilities in the browser
+itself, in browser plugins, or in the page content. A site does not need to be malicious to be a delivery
+vector: compromised advertising networks have served drive-by malware through entirely legitimate sites,
+reaching visitors who would never have visited a known-bad destination.
+
+This makes unpatched browsers a meaningful exposure. Browser vulnerabilities are actively traded and
+exploited; the window between public disclosure and patch adoption is the period of highest risk.
+
+## Aftermath
+
+Outcomes range from adware and unwanted toolbars at the nuisance end to ransomware, spyware, and remote access
+trojans at the serious end. The user may not notice anything immediately. Some malware is designed to be
+persistent and quiet rather than immediately disruptive.
+
+Ad-blockers reduce exposure by blocking the advertising networks that have historically distributed drive-by
+malware. Browser updates, applied promptly, close the specific vulnerabilities that unauthorised variants exploit.

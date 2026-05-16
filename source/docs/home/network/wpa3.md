@@ -1,9 +1,11 @@
-# Enable WPA3 Encryption
+# Enable WPA3 encryption
 
-Why? WPA2 can be cracked in hours.
+WPA2 can be cracked offline given a captured handshake and sufficient compute. WPA3 addresses this with
+a protocol that does not expose the handshake to offline dictionary attacks.
 
-Steps:
+## Steps
 
 1. In router settings, find Wireless Security.
-2. Select WPA3-Personal (if unavailable, use WPA2/WPA3 Mixed Mode).
-3. Avoid WEP/TKIP – these are ancient and unsafe.
+2. Select WPA3-Personal. If unavailable, WPA2/WPA3 Mixed Mode retains compatibility with older devices
+   while providing WPA3 for those that support it.
+3. Avoid WEP and TKIP entirely: both are cryptographically weak and have documented attack tooling.

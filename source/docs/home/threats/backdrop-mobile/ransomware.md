@@ -1,20 +1,23 @@
 # Ransomware
 
-Mobile ransomware sneaks onto your device using social engineering tactics that trick you into downloading malicious content, such as fake apps from third party app stores, app squatting, infected system or software updates, phishing, or smishing.
+Mobile ransomware reaches devices through social engineering: fake apps from third-party stores, app
+squatting, malicious system or software updates, phishing, or smishing.
 
-Traditional ransomware encrypts the files on a device, and some, but not all, Android ransomware variants do encrypt. WannaLocker uses AES encryption to encrypt files.
+Traditional ransomware encrypts files on the device. Some Android variants do this; others use different
+techniques to deny access:
 
-Different types of living of the land techniques" techniques can be used to deny a victim access to the device:
+* Abusing accessibility functionalities (MalLocker)
+* Hijacking permissions (Strandhogg attack)
+* Resetting the device PIN (DoubleLocker and CovidLock)
 
-* Abusing functionalities (MalLocker).
-* Hijacking permissions (Strandhogg attack). 
-* Resetting device PIN (DoubleLocker and CovidLock).
+WannaLocker uses AES encryption to encrypt files on infected Android devices.
 
-Both iPhone and Android users have easy access to cheap, cloud-based backup tools (Apple iCloud and Google One), which makes it easy to wipe and restore devices, in the event of a ransomware attack, with minimal loss of data.
+Both iPhone and Android users have access to cloud-based backup tools (Apple iCloud and Google One) that
+make it practical to wipe and restore a device with minimal data loss. Maintaining current backups is the
+most effective recovery option.
 
 ## Resources
 
 * [CovidLock: Mobile Coronavirus Tracking App Coughs Up Ransomware](https://www.domaintools.com/resources/blog/covidlock-mobile-coronavirus-tracking-app-coughs-up-ransomware/), 2020
 * [Sophisticated Android Ransomware Executes with the Home Button](https://threatpost.com/android-ransomware-home-button/160001/), 2020
 * [WannaLocker - The WannaCry Copycat Targeting Android Users in China](https://www.tripwire.com/state-of-security/wannalocker-wannacry-copycat-targeting-android-users-china), 2017
-

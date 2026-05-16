@@ -4,23 +4,20 @@ Blue team @Home
 .. image:: /_static/images/home.png
    :alt: Chaos at home
 
-Welcome to Blue Team @Home, the unpaid security guards of our own digital dumpster fire. Our mission?
-To sort through the commercial tech porridge (now with extra raisins of questionable security) and figure out what
-won’t get us hacked before breakfast.
+Most people who get compromised are not ignorant of the risks. They are busy, distracted, or have made a
+reasonable trade-off between effort and perceived threat. The knowledge gap is real but rarely the whole story.
+What this section addresses is the knowledge part: what the threats look like, what the controls are, and how to
+apply them without a dedicated IT department. The habit part is harder, and no encyclopaedia solves it, but the
+calendar reminder is often more important than the technical setup it is meant to prompt.
 
-The threat landscape moves faster than a toddler with your unlocked phone. Governments, schools, and every app under
-the sun are herding us online, whether we’re ready or not. Between family-shared devices (aka "malware time-share
-condos") and apps built with the security of a wet paper towel, our home networks are basically public parks for
-cybercriminals. And let’s not forget the digital divide, where "secure tech" is a luxury some can’t afford, and
-"strong password" means "whatever I can remember."
-
-So grab your DIY security toolkit (duct tape, caffeine, and a healthy distrust of "free" apps). We are not just
-users anymore. We are the accidental sysadmins of our living rooms, trying to build a moat when the castle came
-with a welcome mat. Let’s get scrubbing.
+Home networks have expanded considerably: shared devices, cloud-synced accounts, smart appliances, and mobile
+phones used for banking and authentication. Governments, schools, and employers have pushed more activity online.
+The security practice has not kept pace. The sections below cover the threat landscape, network and device
+controls, cloud and mobile security, smart device considerations, and what to do when something goes wrong.
 
 .. toctree::
    :maxdepth: 2
-   :caption: It involves less duct tape than you’d think.
+   :caption: Less complicated than it looks.
 
    threats/index
    network/index

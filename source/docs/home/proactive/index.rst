@@ -1,18 +1,18 @@
-Proactive measures: stocking the digital first-aid kit
+Proactive measures
 ======================================================================================================
 
-Think of cybersecurity like keeping a well-stocked medicine cabinet: you don't wait until you're ill to buy paracetamol.
-Regular backups are your antiseptic wipes (because losing family photos to ransomware stings worse than a paper cut),
-while a password manager acts like those childproof caps. Annoying but necessary when you've got digital toddlers
-(read: hackers) rummaging through your cabinets. Throw in some auto-updates (the equivalent of taking your vitamins)
-and you've got a decent chance of surviving the modern internet's version of norovirus season. Prevention
-might be boring, but it beats trying to explain to your bank why your password was "password123".
+Backups and a password manager address two of the most common causes of serious loss: ransomware
+encrypting files with no recovery path, and credential reuse allowing one breach to cascade across
+many accounts.
+
+Neither requires significant technical skill. Both require turning a good intention into a habit, which
+is the harder part.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: How-to
+   :caption: Simple to set up. Worth doing before it is needed.
 
    backups.md
    password-manager.md

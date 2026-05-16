@@ -1,12 +1,31 @@
-# Cybercrime's subscription box of horrors
+# Malware as a service
 
-The cloud revolution promised "frictionless innovation", and boy, did cybercriminals take that to heart. Just as businesses embraced SaaS and IaaS, the underworld rolled out its own disruptive offerings: Malware-as-a-Service (MaaS), Ransomware-as-a-Service (RaaS), and the ever-popular Crime-as-a-Service (CraaS™). Why bother coding your own exploits when you can just subscribe to someone else’s?
+The cloud ecosystem's subscription model has been adopted by criminal infrastructure as well. Malware-as-a-Service,
+Ransomware-as-a-Service, and related offerings allow operators without significant technical skill to deploy
+sophisticated attacks by renting the underlying tooling from developers who handle maintenance and updates.
 
-For a modest fee (payable in untraceable crypto, of course), even your grandma’s neighbor can now launch sophisticated attacks with the ease of ordering a pizza. Want to steal credentials? There’s an InfoStealer subscription for that. Fancy holding a company’s data hostage? RaaS kits come with 24/7 support (because even extortionists need good customer service). And let’s not forget botnet rentals, perfect for when you need to DDoS your ex’s favorite gaming server.
+The economics are straightforward. Malware developers earn a percentage of each successful attack without taking
+on the operational risk of running campaigns themselves. Affiliates gain access to polished tooling without the
+development cost. The result is a market that has dramatically lowered the skill threshold for launching attacks
+while maintaining the sophistication of the tools being used.
 
-The real kicker? While startups pitch "democratising technology," MaaS is busy democratising cybercrime. No skills? No problem! The malware devs handle updates, bug fixes, and even negotiation services (because nothing says "professional" like haggling over Bitcoin ransoms). Meanwhile, security firms counter with equally pricey "solutions" that lock clients into endless subscriptions, because in this war, everyone’s cashing in.
+## What the service layer includes
 
-Tongue-in-Cheek PSA:
+Infostealer subscriptions provide credential-harvesting malware, collection infrastructure, and panel access
+for reviewing stolen data. Ransomware kits come with deployment documentation, negotiation support, and in some
+cases dedicated leak sites for publishing exfiltrated data if ransom is refused. Botnet rental covers
+distributed infrastructure for credential stuffing, DDoS, or spam.
 
-"Deploy Disaster-Recovery-as-a-Service (DRaaS) to ensure quick recovery in case of an attack." (Or just pray your backups aren’t also in the cloud.)
+The common thread is automation. Campaigns that previously required manual effort at each stage now run largely
+unattended once configured.
 
+## The relevant implication for home users
+
+The service layer means the person running a credential-stuffing campaign against a password manager or an email
+provider may have no technical background at all. The sophistication of the tool is decoupled from the
+sophistication of the operator. Standard defences, unique passwords, MFA on important accounts, awareness of
+phishing, remain the appropriate response; the attacker's technical level does not change what works.
+
+## Resources
+
+* [Threat Spotlight: Illicit Telegram Markets & OTP Bots](https://flare.io/learn/resources/blog/threat-spotlight-illicit-telegram-markets-otp-bots/), 2022

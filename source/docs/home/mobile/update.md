@@ -1,11 +1,14 @@
-# Update everything (Because your phone is not a vintage collectible)
+# Keep mobile software updated
 
-Why? Hackers exploit known flaws, like using last year’s security patch as a welcome mat.
+Attackers exploit known vulnerabilities. A phone running an OS version from six months ago is running against
+documented, publicly available exploit information.
 
-## How-to?
+## How to
 
-* Android: Settings → System → System Update (Check monthly).
-* iPhone: Settings → General → Software Update (Enable automatic updates).
-* Apps: Enable auto-updates in Google Play/App Store.
+* Android: Settings → System → System Update (check monthly)
+* iPhone: Settings → General → Software Update (enable automatic updates)
+* Apps: enable auto-updates in Google Play or the App Store
 
-Tip: If your phone no longer gets updates, time for a new one (your banking app agrees).
+If a phone no longer receives OS updates from the manufacturer, the attack surface expands with each passing
+month. Most banking and financial apps will eventually drop support for unsupported OS versions. Replacement
+is worth planning for before it becomes urgent.

@@ -1,50 +1,42 @@
-# Backups: Your digital lifeboat (Ransomware can't swim)
+# Backups
 
-Your files are like sandcastles, one bad wave (ransomware, hardware failure, coffee spills) and poof, they’re gone. 
-Offline backups are the ultimate "nope" to hackers holding your data hostage. Here’s how to build a backup bunker 
-so simple even your grandma would approve.
+Most people who do not have backups know they should. The barrier is rarely knowledge: it is the gap between
+intending to do something and building the habit that makes it happen automatically. The calendar reminder
+suggested below is, in practice, more important than the technical setup.
 
-## Why offline backups win in 2025
+## Why offline backups
 
-* Ransomware-proof: Hackers can’t encrypt what they can’t touch (like that hard drive chilling in your sock drawer).
-* No subscription fees: Unlike cloud services, your expensive external drive won’t bill you monthly for the privilege of existing.
-* Instant recovery: No waiting for downloads when your laptop takes a swim. Just plug and rescue.
+Ransomware cannot encrypt a drive it cannot reach. An offline backup, disconnected when not in use, is the
+most reliable defence against ransomware affecting backups along with primary files. It also protects against
+hardware failure, theft, and accidental deletion.
 
-## How to build a backup bunker
+Cloud sync is not a backup. Files that are corrupted, encrypted, or deleted often sync that state to the
+cloud promptly.
 
-1. Buy a hard drive (Not a fancy one)
-   * Get a WD My Passport or Seagate Backup Plus (2TB+ for most humans).
-   * Avoid "smart" drives with apps/cloud crap (dumb metal box with a USB port).
-2. Copy your life onto it
-   * Plug it into your computer.
-   * Open File Explorer (Win) or Finder (Mac).
-   * Drag-and-drop: Photos (unless you want to lose baby pics); Documents (tax returns, resumes, that novel you’ll finish someday); Passwords (export from Bitwarden/1Password)
-   * Eject properly (right-click → "Eject" on Windows, drag to Trash on Mac).
-3. Store it like a squirrel’s nut
-   * Unplug it when done. Always.
-   * Hide it somewhere boring (drawer, fireproof safe, under the cat bed).
-   * Bonus: Make two drives, keep one offsite (work/trusted friend’s house).
+## How to set it up
 
-## Tips for backup nerds
+Buy a portable external drive (2TB is sufficient for most households). Copy the files that cannot be replaced:
 
-* Schedule manual backups (first of every month = "Backup Day").
-* Encrypt sensitive files (Veracrypt for folders, BitLocker/FileVault for full drives).
-* Test restores yearly, backups are useless if they’re corrupted.
+* Photos and videos
+* Documents (tax returns, contracts, certificates)
+* Password manager export
 
-## Why this matters more than ever
+Eject the drive properly when done. Unplug it and store it somewhere other than directly next to the computer.
 
-* Ransomware gangs now target backups first (they hate this one trick!).
-* AI-powered attacks can wipe cloud sync services in seconds.
-* Your phone/laptop will die eventually, often at the worst possible time.
+For better coverage: make two copies. Keep one at home and one elsewhere (a workplace, a family member's home,
+a safe deposit box).
 
-## Tips for maximum survival
+## Keeping it going
 
-* Store drives in a fireproof safe (e.g., SentrySafe).
-* Keep one copy offsite (work, friend’s house, safe deposit box).
-* Test restores yearly, even "indestructible" drives can fail silently.
+Set a recurring calendar reminder, monthly works for most people. Call it whatever makes it likely to happen.
+The goal is to make backup a scheduled event rather than a response to a near-miss.
 
-## TL;DR on researching drives
+Encrypt the backup drive if it contains sensitive documents. BitLocker (Windows) and FileVault (macOS) handle
+full-drive encryption. VeraCrypt works across platforms.
 
-* Normal people? WD My Passport.
-* Adventure mode? Samsung T7 Shield.
-* Prepping for Armageddon? iStorage + M-Disc combo.
+Test the restore at least once a year. A backup that has never been restored is an assumption.
+
+## The 3-2-1 rule
+
+Three copies, on two different media types, with one stored off-site. This covers hardware failure, local
+disaster, and theft simultaneously. It is worth more than any particular drive recommendation.

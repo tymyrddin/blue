@@ -1,17 +1,17 @@
-Computer security: Keeping the digital kitchen knives out of reach
+Computer security
 ======================================================================================================
 
-Lock this chaos down by stripping admin rights (because nobody needs nuclear codes to check email), automating
-updates like you’re running a robot daycare, scanning every sketchy download like it’s a suspicious alleyway USB drive,
-playing Task Manager bouncer to evict CPU-hogging malware party crashers, and wrapping sensitive files in encryption
-tighter than your weird uncle’s conspiracy theory foil hat. Because in 2025, the internet is not just watching. It is
-taking notes, and your bank login shouldn’t be its favorite notebook.
+Most successful attacks against home computers exploit predictable conditions: administrative privileges
+left on daily-use accounts, software left unpatched for months, downloads run without verification, and
+sensitive files stored without encryption.
+
+The controls in this section address each of those. None require specialist knowledge.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Be the bouncer:
+   :caption: Removing obvious footholds is most of the work.
 
    admin.md
    auto.md

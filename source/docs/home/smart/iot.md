@@ -1,126 +1,66 @@
-# Keeping your "smart" devices on a short leash (Real-world examples)
+# Connected devices: what to watch for
 
-## Smart TVs – The overly attached streaming addicts
+## Smart TVs
 
-Why they're sketchy:
+Why they matter:
 
-* They insist on tracking what you watch (even that embarrassing "90 Day Fiancé" binge)
-* Their idea of "smart" is showing you ads for things you just talked about (cough Samsung cough)
-* Their security updates vanish faster than your willpower during a Netflix marathon
+* Built-in tracking of viewing behaviour, often enabled by default
+* Targeted advertising that may use audio or content recognition
+* Firmware updates that slow or stop before the hardware does
 
-How to tame them:
+How to reduce the exposure:
 
-1. Cut off their Internet supply (Guest Wi-Fi = TV rehab)
-2. Disable their spy mode:
-   * Samsung: Settings → Support → Terms & Policies → "Viewing Information" → OFF (because no, Samsung, you're not my therapist)
-   * LG: Settings → All Settings → General → About This TV → "Live Plus" → OFF (it's neither "live" nor a "plus")
-3. Give them a dumb friend (Use a Roku/Fire Stick instead, they're cheaper and less nosy)
+1. Put the TV on a guest Wi-Fi network with client isolation enabled.
+2. Disable tracking features:
+   * Samsung: Settings → Support → Terms & Policies → "Viewing Information" → off
+   * LG: Settings → All Settings → General → About This TV → "Live Plus" → off
+3. Consider using a streaming stick (Roku, Apple TV) instead of the TV's built-in apps. The stick is easier
+   to replace and has a more contained attack surface.
 
-## Cameras – The overzealous neighborhood watch
+## Cameras
 
-Why they (Ring, Nest, Eufy) are sketchy:
+Why they matter (Ring, Nest, Eufy, and similar):
 
-* They’re basically reality TV producers waiting for you to do something awkward
-* Default passwords = hackers’ all-access pass to your personal "Truman Show"
-* Cloud storage leaks turn your front door into public access television
+* Default passwords give anyone the admin credentials
+* Cloud storage means footage exists somewhere other than your home
+* Some models have had live-feed exposure incidents from credential reuse
 
-How to tame them:
+How to reduce the exposure:
 
-1. Encrypt their Diaries (Enable E2EE in Nest/Eufy settings)
-2. Two-Factor Everything (Because "password123" isn’t a security strategy)
-3. Give them a blindfold (Physical lens covers > trusting "software off" switches)
-4. Local storage = No Cloud Drama (Like a diary with a lock instead of a Facebook post)
+1. Enable end-to-end encryption where the manufacturer offers it (Nest, Eufy).
+2. Set up two-factor authentication on the associated app account.
+3. Use physical lens covers rather than relying on software-only "off" switches.
+4. Prefer local storage modes where available.
 
-Tip: If your camera requires cloud storage, it is not a security device, it is a subscription service with a lens.
+If a camera requires cloud storage with no local option, the footage is not under your control.
 
-## Voice assistants – The eavesdropping "Helpers"
+## Voice assistants
 
-Why they (Alexa, Google Home) are sketchy:
+Why they matter (Alexa, Google Home):
 
-* They "accidentally" record everything, including that time you sang Disney songs in the shower
-* Their "skills" are just loopholes for data mining (looking at you, "Fun Cat Facts")
-* A hacked Alexa could theoretically order 100 pizzas, or worse, play Nickelback on loop
+* Always-on microphones can be triggered by words similar to the wake word
+* Skills and integrations expand the data-collection surface
+* Recorded audio is stored and sometimes reviewed
 
-How to tame them:
+How to reduce the exposure:
 
-1. Mute the Mic (Hardware switch = the digital equivalent of "I can’t hear you, la la la")
-2. Auto-delete their "Notes" (Set recordings to delete every 3 months)
-3. Block their Internet After Bedtime (Because even assistants need curfews)
-4. Audit their "Skills" (Delete "Burp Sound Generator". It is not worth the privacy trade)
+1. Use the hardware mute switch when not actively using the device.
+2. Set recordings to auto-delete (three months is a common option in settings).
+3. Schedule router-level network access to cut off internet access overnight.
+4. Remove unused skills and review active integrations periodically.
 
-## Smart appliances that definitely don’t need Internet
+## Appliances that do not need internet connectivity
 
-### The "Big Brother" fridge
+The following categories of devices benefit from network isolation or disconnection:
 
-Why? Your Samsung "Family Hub" fridge has no business checking emails, playing Spotify, or judging your midnight snack habits.
+Smart fridges: useful display features rarely justify the network access required. Samsung fridges have been
+documented to expose Wi-Fi credentials.
 
-Risk: Leaks Wi-Fi passwords (yes, this happened).
+Robot vacuums: floor-mapping data has been the subject of data-sharing discussions at several manufacturers.
+If local-only mode is available, use it.
 
-Fix: If it can’t survive without internet, it is not a fridge, it is a spy. Block it.
+Microwaves, toasters, and small appliances with Wi-Fi: the connectivity rarely adds meaningful value. Block
+their network access or use non-connected equivalents.
 
-### The Roomba that sells your floor plan
-
-Why? iRobot once planned to sell mapping data to advertisers. Your vacuum shouldn’t moonlight as a real estate scout.
-
-Risk: "Oops, your cleaning bot just uploaded your home’s blueprint to the cloud."
-
-Fix: Use local-only mode (if available) or block its Wi-Fi.
-
-### The "Helpful" smart microwave
-
-Why? Unless you’re reheating pizza via Alexa (why?!), your microwave doesn’t need Wi-Fi.
-
-Risk: Firmware hacks that turn it into a popcorn machine at 3 AM.
-
-Fix: Unplug it from Wi-Fi. If it complains, remind it it is a microwave.
-
-### The Toaster that DMs you
-
-Why? Yes, smart toasters exist. No, you don’t need Twitter on your breakfast.
-
-Risk: Gets hacked, burns your toast on purpose.
-
-Fix: Throw it out. Buy a $20 toaster. Live free.
-
-### The washing machine with a PhD in data mining
-
-Why? LG’s smart washers track your "laundry habits." Spoiler: They’re boring.
-
-Risk: "Your detergent subscription is now $50/month because you wash socks too often."
-
-Fix: Disable Wi-Fi. It is a washing machine, not a Silicon Valley startup.
-
-## 2025's worst connected offenders
-
-### The "Emotional Support" fridge
-
-Why? Samsung's new AI Nutrition Therapist fridge now analyses your food choices and suggests "guilt-free alternatives" via the door screen
-
-2025 Risk: Fridge-to-psychiatrist data sharing (now with 20% more judgment)
-
-Fix: Tape over the camera and connect it to your IoT Prison Network
-
-### The Roomba with social media
-
-Why? iRobot's new "FloorTok" feature shares your floor cleanliness score with "similar households"
-
-2025 Absurdity: Vacuums now offer cleaning subscription tiers
-
-Fix: Use the new "Dumb Mode" (requires physical switch under the device)
-
-### LG's smart closet
-
-Why? Tracks which clothes you wear least and automatically donates them (yes, this is real now)
-
-2025 Risk: Your favorite band tee might disappear because you "haven't worn it in 3 months"
-
-Fix: Remove the WiFi module (or just buy a normal closet)
-
-## Honorable mentions (Because why do these even exist?)
-
-* Smart salt shakers (Yes, really)
-* Wi-Fi pet feeders (Your cat doesn’t need an app. She owns you.)
-* "Smart" water bottles (Congratulations. Your water bottle has more RAM than your first laptop.)
-* Smart toilets (Because hackers definitely won’t prank-flush at 3 AM…)
-* Smart forks (No, your eating habits don’t need a cloud backup)
-
+The general principle: the fewer devices that have unrestricted outbound internet access, the smaller the
+lateral movement surface if any one of them is compromised.

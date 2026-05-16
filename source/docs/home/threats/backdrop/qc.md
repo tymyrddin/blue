@@ -1,33 +1,35 @@
-# The looming Tsunami (or Just a Very Expensive Puddle?)
+# Quantum computing and encryption
 
-Quantum computing promises to crack encryption like a walnut in a hydraulic press, RSA, AES, the whole digital security 
-pantry. But is it an imminent doomsday or just the Y2K of the 2020s? The truth is messy. Yes, quantum computers will 
-eventually shred today’s encryption, but "eventually" is doing heavy lifting. Current quantum machines are 
-tantrum-prone toddlers, powerful in theory, but still struggling to out-calculate a graphing calculator without 
-throwing noise-induced errors. Governments and corps are dumping billions into quantum R&D, partly out of genuine 
-fear, partly because "quantum-ready" is the new "blockchain" for funding buzzword bingo.
+Quantum computing will, at sufficient scale, be able to break the asymmetric encryption that underlies most
+internet security today: RSA, elliptic curve cryptography, and the key exchange mechanisms that protect HTTPS,
+VPNs, and messaging apps. This is not in dispute. The question is timing, and the honest answer is that nobody
+knows with confidence.
 
-## The hacker’s quantum playground
+Current quantum computers are far from the scale needed for cryptographically relevant attacks. The error rates
+remain high, the qubit counts are far below what "harvest now, decrypt later" attacks on modern key sizes would
+require, and progress has been slower than some early forecasts suggested. Practical quantum attacks on current
+encryption are likely years away, with significant uncertainty in either direction.
 
-When (not if) quantum hits the mainstream, hackers will likely use it for:
+## Harvest now, decrypt later
 
-* The Big Heist: Decrypting today’s stolen data dumps (yes, they’re hoarding encrypted files now for future quantum unlocks).
-* Signature Forgery: Breaking digital certificates to impersonate banks, governments, or your VPN.
-* Quantum Phishing: Crafting unspoofable attacks by abusing quantum properties (imagine a phishing email that proves it’s "legit").
-* But here’s the catch: Quantum won’t be a script kiddie tool. Early access will belong to nation-states, crime syndicates, and Silicon Valley’s elite, not random ransomware teens.
+The threat that is not theoretical is data collection against a future capability. Actors with sufficient
+storage are plausibly harvesting encrypted communications now, with the intention of decrypting them when
+quantum capability matures. For data that retains value over a long time horizon, this is a current risk.
+For most home users, this applies primarily to long-term sensitive communications.
 
-# The security industry’s quantum gold rush
+## Post-quantum cryptography
 
-Vendors are already selling "post-quantum" solutions (some legit, some snake oil). The hype is real, but so is the grift:
+NIST has published post-quantum cryptographic standards following a multi-year evaluation process. These are
+designed to be resistant to quantum attacks. Adoption across software, protocols, and hardware is the slow
+part. Some password managers and VPN providers have already begun migrating to post-quantum algorithms.
 
-* "Quantum-proof" encryption (NIST’s working on it, but adoption is slower than a Windows update).
-* Quantum key distribution (QKD) (works great in labs, fails spectacularly in real-world deployments).
-* Consultants charging $500/hour to explain why your PKI is "obsolete" (but won’t be for a decade).
+The practical advice for home users is to watch for and apply software updates that include post-quantum
+migration, prefer end-to-end encrypted applications that are actively maintaining their cryptographic
+implementations, and be cautious of vendor claims about "quantum-proof" products that predate the NIST standards.
 
-## When? How hard?
+## Early access
 
-Timeline: Practical quantum attacks are likely 5–15 years out (optimists say 2030, pessimists say "maybe never"). 
-Hacker access? At first, it’ll be like nuclear weapons, only the big players get toys. But as tech democratises, 
-expect Quantum-as-a-Service (QaaS) on dark web marketplaces (*"Rent our quantum cluster to crack corporate VPNs! 
-0.1 BTC/hour!"*). The real threat? We’re already behind. Data harvested today could be decrypted tomorrow, so the 
-time to upgrade is now, even if quantum feels like sci-fi.
+When quantum capability becomes practically relevant for cryptographic attacks, early access will be limited
+to nation-states and large, well-resourced organisations. Democratisation of the capability, as has happened
+with other powerful technologies, is a later-stage concern. The more immediate risk is state-level actors
+targeting high-value encrypted data they are already collecting.

@@ -1,66 +1,59 @@
-# Password managers: Your digital vault for all those keys you keep losing
+# Password managers
 
-Because your brain is for remembering birthdays, not 87 different variations of "Fluffy123!". A password manager is 
-like that ultra-organised friend who actually knows where they left their keys.
+A password manager solves one specific problem: reused passwords. When one service is breached and its
+password database leaked, the attacker can try those credentials on every other service the user has an
+account with. A unique password per service breaks that chain. Remembering unique passwords for dozens of
+accounts is not realistic without a manager.
 
-## What it fixes
+## What it does
 
-* No more recycling passwords (we see you using "Summer2024" everywhere)
-* No more frantic "forgot password?" clicks
-* No more sticky notes with your bank login stuck to the monitor
+* Generates a unique, random password for each account
+* Stores all passwords behind a single strong master password
+* Fills in login forms automatically
+* Alerts when a stored password appears in a breach
 
-## How it works
+The master password is the single credential worth protecting carefully. It is not stored anywhere the
+manager can access: if it is forgotten, the vault contents cannot be recovered.
 
-* One master password (make it strong - like "correct-horse-battery-staple" strong)
-* It generates and remembers random passwords for every site
-* Auto-fills logins so you don't have to type (or remember) anything
+## Choosing one
 
-## Bonus superpowers
+| Name | Key features | Free tier | Best for | Audit status |
+|------|-------------|-----------|----------|--------------|
+| 1Password | Strong family and team sharing | No | Families | SOC 2, ISO 27001 |
+| Bitwarden | Open-source, self-hostable | Yes | Privacy-focused users | Open-source + audited |
+| Proton Pass | Integrated with Proton Mail and VPN | Limited | Proton ecosystem users | Audited |
+| KeePassXC | Offline, hardware key support | Yes | Linux users, offline-first | Open-source |
+| Dashlane | Built-in VPN, breach monitoring | No | All-in-one | Audited |
+| NordPass | XChaCha20 encryption | Limited | NordVPN users | Audited |
+| Enpass | Local storage, no mandatory cloud | Limited | Hybrid users | Audited |
+| Keeper | Zero-knowledge file storage | No | Enterprises | FIPS 140-2 |
 
-* Alerts you when passwords are weak/reused/breached
-* Securely shares logins with family (no more texting passwords)
-* Works across all your devices (because your phone deserves security too)
+## Self-hosting and hardware options
 
-## Password managers (2025)
+| Use case | Recommendation | Why |
+|----------|----------------|-----|
+| Self-hosting | Vaultwarden (Bitwarden fork) | Full control over data |
+| Hardware security | KeePassXC + OnlyKey | Air-gapped with physical 2FA |
+| Teams | Keeper Enterprise | FIPS compliance, SIEM integration |
 
-| Name	       | Key Innovations (2025)	                                        | Free Tier or Free	 | Best For	                     | Security Audit         | 
-|-------------|----------------------------------------------------------------|--------------------|-------------------------------|------------------------|
-| 1Password	  | Quantum-resistant encryption, "Unlock with FaceID" on desktop	 | ❌ No	              | Families/Teams	               | Yes (SOC 2, ISO 27001) |
-| Bitwarden	  | Fully homomorphic encryption (beta), Self-hostable Vaults 3.0	 | ✅ Yes	             | Privacy-focused users	        | Open-source + Audited  |
-| Proton Pass | Integrated Proton Sentinel (AI threat detection)	              | ✅ Limited	         | 	Proton ecosystem users	      | Yes (2024 audit)       |
-| KeePassXC	  | Offline-first with hardware key support	                       | ✅ Yes	             | Linux/security purists	       | Open-source            |
-| Dashlane	   | Instant Dark Web scans + VPN bundle	                           | ❌ No	              | All-in-one security	          | Yes (2025 audit)       |
-| NordPass	   | Post-quantum XChaCha20 + 100GB encrypted storage	              | ✅ Limited	         | NordVPN users	                | Yes (2025 audit)       |
-| Enpass	     | Local AI breach alerts (no cloud needed)	                      | ✅ Limited	         | Hybrid (cloud/offline) users	 | Yes (2024)             |
-| Keeper	     | Zero-knowledge file storage (new in 2025)	                     | ❌ No	              | Enterprises	                  | FIPS 140-2 Certified   |
+## Passkeys
 
-## Emerging contenders (2025)
+Most managers now support FIDO2 passkeys as a primary login method. Passkeys replace the password with
+device-based biometrics or a hardware key, and are worth adopting where supported. Keeping a TOTP app or
+hardware key as backup remains sensible.
 
-* Mozilla Vault: Built into Firefox with WebAuthn support (Free)
-* Apple Passkeys Manager: iCloud Keychain with Windows/Android support
-* Google Password Manager: Now with E2EE and shared vaults
+## Worth noting
 
-## Specialised tools
+LastPass has had significant breach incidents. Its current security posture is less clearly established than
+before those events, and there are better-audited alternatives in both the free and paid tiers.
 
-| Use Case	          | Recommendation	               | Why?                               |
-|--------------------|-------------------------------|------------------------------------|
-| Self-Hosting	      | Vaultwarden (Bitwarden fork)	 | Full control over data             |
-| Hardware Security	 | KeePassXC + OnlyKey	          | Air-gapped + physical 2FA          |
-| Teams/Enterprise	  | Keeper Enterprise	            | FIPS compliance + SIEM integration |
+Any manager without a published third-party security audit or without passkey support deserves scrutiny
+before adoption.
 
-## Critical 2025 upgrades
+## Practical recommendation
 
-* Post-Quantum Encryption: Bitwarden/1Password now default to quantum-resistant algorithms.
-* AI Threat Monitoring: Proton Pass/Dashlane scan for real-time credential leaks.
-* Passkey Dominance: Most managers now support FIDO2 passkeys as primary login.
+For most people: Bitwarden (free, open-source, well-audited) or Proton Pass if already using Proton Mail.
 
-## Avoid in 2025
+For families: 1Password's family plan handles shared access cleanly.
 
-* LastPass: Still recovering from 2022-2024 breaches.
-* Any manager without third-party audits or emergency access or passkey support
-
-## Best value (2025)
-
-* Free: Bitwarden (unlimited devices)
-* Premium: Proton Pass ($2.99/mo for VPN + Mail + Drive bundle)
-* Enterprise: Keeper (GDPR/HIPAA-compliant)
+For those who want nothing in the cloud: KeePassXC with a backup copy of the database stored separately.

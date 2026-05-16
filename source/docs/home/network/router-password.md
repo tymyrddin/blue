@@ -1,14 +1,18 @@
-# Change default password (All router brands)
+# Change the default router password
 
-Why? Default logins are public knowledge (e.g., "admin:password" for Netgear, "admin:admin" for Linksys).
+Default router credentials are public knowledge. Netgear ships many routers with `admin:password`;
+Linksys with `admin:admin`. These are indexed in lookup tables and scanned for automatically.
 
-1. Find your router’s IP:
-   * Windows: Open Command Prompt > type ipconfig > look for "Default Gateway."
-   * Mac: System Settings > Wi-Fi > click your network > see "Router."
-2. Type this IP into a browser. Use current credentials (often on router sticker).
-3. Navigate to:
-   * TP-Link: System Tools > Password
-   * ASUS: Administration > System
-   * Google Nest Wi-Fi: Home app > Wi-Fi > Settings gear > Advanced Networking
+## How to
 
-Set a 12+ character password like `PurpleChewingGiraffe$42!`. Write it on paper and store in a safe.
+1. Find the router's IP address:
+   * Windows: open Command Prompt, type `ipconfig`, look for "Default Gateway"
+   * Mac: System Settings → Wi-Fi → click the network name → "Router"
+2. Type that IP address into a browser. The current credentials are often printed on the router's sticker.
+3. Navigate to the password settings:
+   * TP-Link: System Tools → Password
+   * ASUS: Administration → System
+   * Google Nest Wi-Fi: Home app → Wi-Fi → Settings gear → Advanced Networking
+
+Set a password of 12 or more characters. A random passphrase works well. Write it on paper and store it
+somewhere sensible.

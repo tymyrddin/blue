@@ -1,20 +1,24 @@
-# Block IoT Internet access with VLANs (Guest Network Method)
+# Network segmentation for IoT devices
 
-Works on most home routers, ASUS, TP-Link, Netgear, etc.
+IoT devices on the same network as computers and phones create a lateral movement path: a compromised
+device can probe other devices on the network. A guest network or VLAN puts IoT devices on an isolated
+segment.
 
-Steps:
+## Using the guest network method
 
-1. Log into your router:
-   * Type your router’s IP into a browser (usually 192.168.1.1 or 192.168.0.1).
-   * Default login is often admin + password (check the router’s sticker).
-2. Enable "Guest Network":
-   * Find Wireless Settings → Guest Network (ASUS/TP-Link) or Advanced → Guest Access (Netgear).
-   * Name it "IoT Jail" (or anything memorable).
-   * Check "Isolate devices" (blocks gadgets from talking to each other).
-3. Block Internet Access (Optional):
-   * Some routers let you restrict guest networks to local only (no web access).
+Works on most home routers: ASUS, TP-Link, Netgear, and similar.
+
+1. Log into the router:
+   * Type the router's IP into a browser (usually 192.168.1.1 or 192.168.0.1).
+   * Credentials are often on the router's sticker.
+2. Enable guest network:
+   * ASUS/TP-Link: Wireless Settings → Guest Network
+   * Netgear: Advanced → Guest Access
+   * Name it something memorable. Enable "Isolate devices" (blocks devices from seeing each other).
+3. Optionally restrict internet access:
+   * Some routers allow the guest network to be restricted to local traffic only.
    * Look for "Client Isolation" or "AP Isolation" in settings.
-4. Connect IoT devices to the Guest Network:
-   * Go to your smart device’s Wi-Fi settings and join "IoT Jail" instead of your main network.
+4. Connect IoT devices to the guest network.
 
-Done! Now your smart bulbs/cameras can’t spy on your laptop or phone.
+IoT devices on the isolated network can reach the internet (for firmware updates and cloud features)
+but cannot probe computers or phones on the primary network.

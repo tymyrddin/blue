@@ -1,20 +1,20 @@
-The silent pickpocket in your pocket
+Mobile threats
 ====================================================
 
-our phone is a treasure trove of personal data, bank logins, private messages, and those very specific search
-histories, yet we treat its security like an afterthought, assuming hackers are too busy with PCs to care.
-But mobile malware is the digital equivalent of a pickpocket who’s realised it’s easier to steal your wallet when
-you’re constantly holding it, and with attacks evolving from fake apps to IoT device hijinks, your smartphone is
-now the weakest link in your digital life. Hackers have shifted tactics, and if you’re still relying on
-"Eh, it’s just a phone" as a security strategy, you might as well hand them your passwords with a bow on top.
+Smartphones hold more personal data than most people's computers and are used for banking, messaging, and account
+authentication. That combination makes them worth targeting. Mobile malware was, for years, treated as a secondary
+concern by both users and security teams. Attackers noticed the gap.
+
+The threats covered here are not hypothetical. Fake apps reach official stores, banking trojans target Android at
+scale, and SIM swapping has become a routine social-engineering technique. Location tracking via small Bluetooth
+devices has become a documented tool of domestic abuse.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Time to wake up, before your device becomes someone else’s weapon.
+   :caption: A phone is not inherently safer than a laptop. It is just attacked differently.
 
-   README.md
    malware.md
    smishing.md
    vishing.md

@@ -1,36 +1,37 @@
-# Scan Downloads with VirusTotal: The Digital Bouncer for Sketchy Files
+# Scanning downloads with VirusTotal
 
-TL;DR: VirusTotal is the bouncer your files deserve. Use it or wake up to a PC that’s mining crypto for a hacker in Minsk.
+VirusTotal submits a file or URL to over 60 antivirus engines simultaneously and reports what each one
+detects. It is worth using before running any downloaded file that came from an unfamiliar source.
 
-## How to use VirusTotal
+## How to use it
 
-### For paranormal file activity
+1. Go to [virustotal.com](https://www.virustotal.com/) (no account required).
+2. Upload the file or paste a download URL.
+3. Wait for results and read the report:
+   * 0 detections: likely clean, but context matters.
+   * 1-3 detections: worth caution, could be a false positive, but there is no cost to not running the file.
+   * 4 or more detections: do not run it.
 
-1. Go to virustotal.com (No signup needed!)
-2. Upload the sketchy file (or paste a download URL if it’s from the web)
-3. Wait for the scan (60+ antivirus engines + AI chew on it)
-4. Read the report:
-   * ✅ 0 detections? Probably safe (but still side-eye it).
-   * ⚠️ 1-3 detections? Risky, could be a false positive, but why chance it?
-   * 🚨 4+ detections? YEET IT INTO THE SUN. (Even if it’s from your "tech-savvy" cousin.)
+## Additional scanning options
 
-### For the extra suspicious
+Right-click scanning (Windows/Mac/Linux):
 
-1. Right-Click Scanning (Windows/Mac/Linux):
-   * Install [VirusTotal Desktop](https://docs.virustotal.com/docs/desktop-apps) → Right-click any file → "Scan with VirusTotal"
-   * Integrates with Windows Explorer, macOS Finder, and Linux file managers.
-2. Browser Extension: [VT4Browsers](https://blog.virustotal.com/2022/03/vt4browsers-any-indicator-every-detail.html) lets you scan downloads before they hit your PC.
-3. Hash Check (For Nerds):
-   * Already have a file? Get its SHA256 hash (use `certutil -hashfile thesuspiciousfile.exe SHA256` on Windows).
-   * Paste the hash into VirusTotal’s search bar to see if it’s known malware.
+* Install [VirusTotal Desktop](https://docs.virustotal.com/docs/desktop-apps) for right-click integration with the file manager.
 
-## Interpreting results (The fine print)
+Browser extension:
 
-* "Undetected" but shady? Check the "behaviour" tab. If it’s secretly contacting Russian IPs, bin it.
-* "Heuristic" flags? AI thinks it acts like malware. Trust the machines.
-* "PUA" (Potentially Unwanted Application)? Often adware/bloatware. Still gross. Delete.
+* [VT4Browsers](https://blog.virustotal.com/2022/03/vt4browsers-any-indicator-every-detail.html) scans links and downloads before they reach the device.
 
-## Why this matters in 2025
+Hash check (for files already downloaded):
 
-* AI-generated malware now evades traditional antivirus. VirusTotal’s crowd-powered scans catch what your AV misses.
-* "Zero-day" attacks spread fast. If 3+ engines flag it, someone knows it’s bad.
+* Get the SHA256 hash: `certutil -hashfile filename.exe SHA256` (Windows)
+* Paste the hash into VirusTotal's search bar. Known malware samples have records regardless of filename.
+
+## Interpreting results
+
+* "Undetected" but suspicious behaviour: check the Behaviour tab for network connections or file system activity.
+* "Heuristic" flags indicate the engine considers the behaviour malware-like without a specific signature match.
+* "PUA" (Potentially Unwanted Application) typically means adware or bundled software.
+
+A clean VirusTotal result on a new file does not guarantee safety: very recent malware may have no detection
+signatures yet. The behaviour tab and the source of the download are both relevant.
