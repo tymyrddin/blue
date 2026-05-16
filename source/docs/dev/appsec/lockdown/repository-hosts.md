@@ -1,4 +1,4 @@
-# Securing hosted code repositories: Best practices
+# Securing hosted code repositories
 
 Hosting code on platforms like GitHub or GitLab comes with risks: exposed secrets, compromised accounts, or malicious 
 commits can lead to serious breaches. Here’s how to lock things down properly.

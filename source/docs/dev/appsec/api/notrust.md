@@ -18,7 +18,7 @@ class UpdateRequest(BaseModel):
     display_name: str = Field(min_length=1, max_length=100)
 
 def handle_update(request):
-    body = UpdateRequest.model_validate(request.json())
+    body = UpdateRequest.model_validate(request.get_json())
     # body.user_id is an int and > 0
     # body.display_name is a non-empty string of at most 100 characters
 ```
@@ -36,7 +36,7 @@ from flask import jsonify
 @app.route("/api/update", methods=["POST"])
 def update():
     try:
-        body = UpdateRequest.model_validate(request.json())
+        body = UpdateRequest.model_validate(request.get_json())
     except ValidationError as e:
         return jsonify({"errors": e.errors()}), 400
     # proceed with validated body
@@ -61,3 +61,39 @@ res.render("template", { content: userContent });
 For JSON responses, `res.json()` (Express) or `jsonify()` (Flask) handle serialisation. The risk in JSON APIs is not HTML injection in responses but in downstream handling: if the JSON value is later interpolated into HTML by a frontend without encoding, the API response becomes the injection vector.
 
 The encoding responsibility follows the output context, not the transport. An API that returns data which a browser will render as HTML is part of the XSS surface.
+
+## Mass assignment
+
+[Mass assignment](mass-assignment.md) occurs when request body fields are bound directly to a model without
+restricting which fields the caller is permitted to set. A caller who knows the name of an internal field (`role`,
+`balance`, `is_admin`) can write to it if the binding is unrestricted. The fix is a separate input model that
+declares exactly the fields a caller may provide, with `extra="forbid"` to reject anything else:
+
+```python
+from pydantic import BaseModel, ConfigDict, EmailStr
+
+class UserUpdateRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    name: str
+    email: EmailStr
+```
+
+The [mass assignment page](mass-assignment.md) covers Pydantic, Django REST Framework, and SQLAlchemy patterns in
+more detail.
+
+## Parameter pollution and type confusion
+
+Attackers submitting the same query parameter twice (`?id=1&id=2`) or sending a string where an integer is expected
+can slip past naïve validators. [Evasion techniques](https://red.tymyrddin.dev/docs/in/api/notes/evade.html) at the
+API layer cover this systematically. Pydantic's strict mode and explicit field definitions handle most of these
+cases, but allowlisting accepted content types adds a useful outer layer: an endpoint that expects JSON and receives
+`application/x-www-form-urlencoded` can reject the request before parsing begins:
+
+```python
+from flask import abort, request
+
+def require_json():
+    if not request.is_json:
+        abort(415)  # Unsupported Media Type
+```

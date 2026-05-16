@@ -53,12 +53,12 @@ Pyramid uses Chameleon or Mako templates by default, which have different auto-e
 
 ## Framework comparison
 
-| Framework | XSS default | CSRF default | Input validation | Auth system |
-|---|---|---|---|---|
-| Django | Auto-escaping | CsrfViewMiddleware | Forms/serialisers | Built-in |
-| Flask | Jinja2 auto-escape | Extension required | Extension required | Extension required |
-| FastAPI | Pydantic validation | Manual | Pydantic (built-in) | OAuth2/JWT |
-| Pyramid | Template-dependent | Extension required | Colander/others | ACL-based |
+| Framework | XSS default         | CSRF default       | Input validation    | Auth system        |
+|-----------|---------------------|--------------------|---------------------|--------------------|
+| Django    | Auto-escaping       | CsrfViewMiddleware | Forms/serialisers   | Built-in           |
+| Flask     | Jinja2 auto-escape  | Extension required | Extension required  | Extension required |
+| FastAPI   | Pydantic validation | Manual             | Pydantic (built-in) | OAuth2/JWT         |
+| Pyramid   | Template-dependent  | Extension required | Colander/others     | ACL-based          |
 
 ## Common risks across frameworks
 

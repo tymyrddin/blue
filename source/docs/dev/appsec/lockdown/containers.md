@@ -1,4 +1,4 @@
-# Securing containers: preventing compromise and containing breaches
+# Securing containers
 
 ## Security by design
 

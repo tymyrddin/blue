@@ -17,3 +17,9 @@ faster than you can say "Why is there a Bitcoin miner in our /users endpoint?"
    scan.md
    notrust.md
    tools.md
+   authentication.md
+   authorisation.md
+   rate-limiting.md
+   mass-assignment.md
+   business-logic.md
+   ai-surface.md

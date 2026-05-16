@@ -1,4 +1,4 @@
-# Secure servercommunication: Isolation and controlled exposure
+# Secure server communication
 
 Unrestricted communication between servers increases the attack surface. A compromised instance can pivot laterally, 
 escalating access to sensitive systems. Proper network segmentation limits blast radius and enforces least-privilege 
