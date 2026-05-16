@@ -9,8 +9,6 @@ on exploitation. Its principles influenced subsequent tools including:
 * OWASP Honeypot Project: a community effort to crowd-source attack patterns across web honeypots.
 * Client honeypots: active systems that visit URLs rather than waiting to be visited.
 
-*Nothing ruins a hacker's day like realising they've been attacking a carefully crafted decoy for three hours.*
-
 ## Worm detection
 
 Signature-based IDS fails against novel variants. The Zero-day polymorphic worms honeypot uses the
@@ -26,13 +24,11 @@ Two approaches to bot detection honeypots:
 * ODAIDS-HPS: uses nearest-neighbour algorithms to flag anomalies, identifying bot behaviour by
   deviation from normal traffic profiles.
 
-*Why suffer a DDoS attack when you can redirect it to a honeypot and watch the bots pointlessly hammer a decoy?*
-
 ## Honeytokens
 
 Honeytokens are decoy credentials, documents, or data objects designed to trigger alerts when accessed.
 Construction ranges from simple fake credentials to complete believable databases. Targeting may focus on
-phishing attempts, insider threats, or any access to systems that should be dormant.
+phishing attempts, insider threats, or any access to systems that have no legitimate traffic.
 
 Tools like HoneyGen can generate convincing decoy data at scale. Manual creation works for smaller
 environments.
@@ -45,8 +41,6 @@ For sophisticated threats:
   kill chain while under observation.
 * Honeypot agents: simulated users within the environment, behaving like real ones.
 * NIDS integration: network intrusion detection tied to honeypot activity for early warning.
-
-*The only thing better than detecting an APT is watching them spend months infiltrating a system built just for them.*
 
 ## Dynamic honeypots
 
@@ -63,8 +57,6 @@ Several systems use machine learning to adapt honeypot behaviour:
 * RASSH: uses reinforcement learning to respond dynamically to attacker actions.
 * DeepDig: learns from each intrusion attempt, improving its responses over time.
 * Intelligent Honeypot: applies solutions from past interactions to novel situations.
-
-*Nothing stings quite like realising you've been outsmarted by a machine that was pretending to be vulnerable.*
 
 ## Shadow honeypots and concealment
 

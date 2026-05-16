@@ -1,82 +1,72 @@
-# Thug in a box (Docker)
+# Thug in a container
 
-## Why containerise Thug?
-
-Because running malware analysis tools directly on your host is like tasting soup with your face. A Docker container 
-gives Thug a nice, controlled playpen. No surprises, no infected desktops.
-
-You can either use the official container, or roll your own.
+Running Thug directly on the host works, but visiting malicious content at scale creates risk of
+something escaping the tool's sandboxing. A container keeps Thug in an isolated environment with
+controlled network access and a clean filesystem on each run.
 
 ## Using the official container
 
 ### Requirements
 
-* [Have Docker installed on your system](https://docs.docker.com/get-started/get-docker/#installation)
+[Docker installed on the system](https://docs.docker.com/get-started/get-docker/#installation)
 
-### Download the latest stable container
+### Pull the container
 
 ```
 $ docker pull thughoneyclient/thug
 ```
 
-### Mount logs
-
-Then mount your host `~/logs` dir and enable it to keep the logs on the host
+### Mount logs to the host
 
 ```
 $ docker run -it -v ~/logs:/logs buffer/thug
 ```
 
-Linux
+Linux:
 
 ```bash
 # Standard Linux (ext4/xfs)
 docker run -it -v /home/user/thug_logs:/logs buffer/thug
 
-# SELinux systems (add :Z for labeling)
+# SELinux systems
 docker run -it -v /home/user/thug_logs:/logs:Z buffer/thug
 ```
 
-BSD (FreeBSD)
+BSD (FreeBSD):
 
 ```bash
-# FreeBSD with ZFS
 docker run -it -v /usr/home/user/thug_logs:/logs:ro buffer/thug
 ```
 
-Windows
+Windows:
 
 ```powershell
-# PowerShell (Windows 10/11)
+# PowerShell
 docker run -it -v C:\Users\YourName\thug_logs:/logs buffer/thug
 
-# CMD (legacy systems)
+# CMD
 docker run -it -v %USERPROFILE%\thug_logs:/logs buffer/thug
 ```
 
-macOS
+macOS:
 
 ```bash
-# Modern macOS (Ventura+)
 docker run -it -v $HOME/thug_logs:/logs buffer/thug
-
-# Legacy macOS (pre-Monterey)
-docker run -it -v /Users/yourname/thug_logs:/logs buffer/thug
 ```
 
-### Test the dockerized Thug 
+### Test the containerised Thug
 
-Analyse random samples inside the container:
+Analyse samples from the built-in set:
 
 ```
 $ for item in $(find /opt/thug/samples/ -type f | xargs shuf -e |tail -n 20); do python /opt/thug/src/thug.py -l $item; done
 ```
 
-## Roll your own container
+## Building a custom container
 
-### Step 1: Dockerfile for Thug
+### Dockerfile
 
-Create a folder (e.g. thug-container) and save the following as Dockerfile:
+Create a directory (e.g. `thug-container`) and save this as `Dockerfile`:
 
 ```
 FROM python:3.12-slim
@@ -84,10 +74,8 @@ FROM python:3.12-slim
 LABEL maintainer="Your Name <you@example.com>"
 LABEL description="Thug Honeyclient in a container"
 
-# Avoid interactive prompts
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install dependencies
 RUN apt-get update && apt-get install -y \
     git \
     libssl-dev \
@@ -99,61 +87,45 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Clone Thug
 RUN git clone https://github.com/buffer/thug.git /opt/thug
 
 WORKDIR /opt/thug
 
-# Install Thug
 RUN pip install .
 
-# Create a non-root user (optional but safer)
 RUN useradd -ms /bin/bash thuguser
 USER thuguser
 
-# Set a basic entrypoint
 ENTRYPOINT ["thug"]
 ```
 
-### Step 2: Build the container
-
-From the same directory as your Dockerfile:
+### Build
 
 ```
 docker build -t thug .
 ```
 
-### Step 3: Run Thug
-
-Scan a dodgy URL (replace with your own shady specimen):
+### Run
 
 ```
 docker run --rm thug http://example.com
 ```
 
-Or mount a local folder to store logs:
+With a local log directory:
 
 ```
 docker run --rm -v "$(pwd)/logs:/home/thuguser/logs" thug http://malicious-site.tld
 ```
 
-### Keep it clean
-
-If you're running this regularly:
+For repeated use:
 
 ```
 alias thugscan='docker run --rm thug'
 ```
 
-Now you can simply run:
-
-```
-thugscan http://bad.url
-```
-
 ## Docker Compose setup
 
-Create a directory named `thug-lab`, and inside it a `Dockerfile`:
+Create a directory `thug-lab` containing a `Dockerfile`:
 
 ```
 FROM python:3.11-slim
@@ -163,14 +135,13 @@ RUN apt-get update && \
     pip install --upgrade pip && \
     pip install thug
 
-# Set up logging dir
 RUN mkdir /logs
 
 WORKDIR /app
 ENTRYPOINT ["thug"]
 ```
 
-and a `docker-compose.yml`:
+And a `docker-compose.yml`:
 
 ```
 services:
@@ -182,15 +153,11 @@ services:
     command: ["-l", "INFO", "-o", "/logs", "-n", "-F", "/app/urls.txt"]
 ```
 
-This setup:
-
-* Runs Thug with INFO-level logging so you don’t miss anything.
-* Outputs logs to a local `logs/` folder.
-* Scans the URLs in `urls.txt` and pretends to be a nosy browser.
+This runs Thug with INFO-level logging, writes output to `./logs/`, and scans the URLs in `urls.txt`.
 
 ## Batch scan script
 
-A small shell script for everyday chaos, `scan.sh`:
+`scan.sh`:
 
 ```
 #!/bin/bash
@@ -202,15 +169,8 @@ docker-compose up --build --abort-on-container-exit
 echo "[*] Logs written to ./logs/"
 ```
 
-Make it executable:
-
 ```
 chmod +x scan.sh
-```
-
-Now just run:
-
-```
 ./scan.sh
 ```
 
@@ -222,13 +182,12 @@ http://dodgydomain.co/phish
 http://127.0.0.1:8000/test
 ```
 
-Change these to suit your particular threat-hunting expedition. No judgment.
-
 ## Reading the logs
 
-You’ll find files in the `logs/` directory, one per URL, helpfully timestamped. Each one contains delicious forensic 
-traces: headers, behaviours, and JavaScript shenanigans.
+The `logs/` directory contains one file per URL, timestamped. Each records HTTP headers,
+detected behaviours, and JavaScript activity.
 
-## Notes (working on it)
+## Network isolation
 
-These containers have no network restrictions. Consider pairing with a network firewall or Docker's `--network=none` for isolation.
+These containers have no outbound network restrictions by default. For analysis work, pair with a
+network firewall or run with `--network=none` and route traffic through a monitored proxy.

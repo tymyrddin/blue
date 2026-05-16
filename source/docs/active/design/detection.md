@@ -1,55 +1,42 @@
 # The cat-and-mouse game
 
-*If your honeypot is obvious, you are not trapping attackers. You are giving them a practice dummy.*
+Honeypot detection is about inconsistencies: the small flaws that make a decoy feel off to an
+attacker who has seen enough real systems to notice. Common giveaways:
 
-## How attackers unmask honeypots
+## Too perfect, too empty
 
-Honeypot detection is all about inconsistencies, the tiny flaws that make a decoy feel "off" to a seasoned attacker. Common giveaways include:
+Real systems accumulate artefacts: temp files, idiosyncratic log entries, command history. A honeypot
+that presents as a brand-new VM is pristine in a way that no production system actually is.
 
-Too perfect, too empty
+## Limited interaction
 
-* Real systems have user artifacts (temp files, logs, quirks).
-* Honeypots often feel like a brand-new VM, pristine and unlived-in.
+Low-interaction honeypots fail when probed beyond scripted responses. An attacker who notices that
+outbound network calls do not work, or that the shell behaves inconsistently, has found the edge of
+the emulation.
 
-Limited interaction
+## Legal tells
 
-* Low-interaction honeypots fail when probed beyond basic commands.
-* "Why can’t I curl google.com from this ‘production’ server?"
+A honeypot cannot cross certain lines. Launching actual DDoS attacks from the system, for instance.
+Attackers who probe these boundaries deliberately can use a refusal as confirmation.
 
-Legal tells
+## Fingerprintable traits
 
-* Defenders can’t break laws (e.g., a honeypot refusing to launch DDoS attacks).
-* Attackers test these boundaries deliberately.
+* Default credentials left in place.
+* Service versions that are improbably old for a supposedly active system.
+* Response timing that does not match the claimed service.
 
-Fingerprintable traits
+## Concealing traps
 
-* Default credentials (admin:admin).
-* Unpatched but improbably old services (Windows Server 2008 still running?).
-* "Honeypot-like" network delays (emulated services lag differently).
+Modern honeypot design focuses on plausibility rather than perfection:
 
-## Fighting Back: Concealing traps
-
-Modern honeypot design focuses on plausible deniability:
-
-Add "Realism" noise
-
-* Fake user histories (bash_history, logs).
-* Scheduled "maintenance" tasks (cron jobs).
-
-Dynamic responses
-
-AI-generated context-aware replies (e.g., SSH honeypots that "remember" past commands).
-
-Legal workarounds
-
-Simulate attack outcomes without actually attacking (e.g., logging "DDoS attempts" but not executing).
-
-Regular updates
-
-Rotate fingerprints to match current real-world systems.
-
-*The best honeypot doesn’t just trap attackers, it makes them doubt their own skills.*
+* Fake user histories: populated `bash_history`, realistic log entries, scheduled maintenance tasks.
+* Dynamic responses: context-aware replies rather than fixed scripts.
+* Legal workarounds: simulate attack outcomes without executing them (logging apparent DDoS attempts
+  without generating real traffic).
+* Fingerprint rotation: periodically update service versions and configuration to match current
+  real-world systems.
 
 ## Ethical note
 
-Found a fingerprintable honeypot? Report it responsibly, the goal is better defences, not easier attacks.
+Finding a detectable honeypot is worth reporting responsibly. The goal is better defences, not a
+catalogue of easy targets.

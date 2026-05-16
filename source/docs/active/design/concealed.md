@@ -1,71 +1,61 @@
-# Staying hidden in plain sight
+# Staying hidden
 
-Concealing honeypots is not about perfect mimicry. It is about being just realistic enough to waste an attacker’s time 
-while you gather intel.
+Perfect mimicry is not the goal. Being realistic enough to waste an attacker's time while gathering
+intelligence is. The two are different targets, and the difference matters for how much effort is worth
+spending on anti-detection.
 
-*If your honeypot gets detected, you are not trapping attackers. You are hosting free hacking lessons.*
+## Automatic redeployment
 
-## Automatic redeployment: The digital whack-a-mole
+Low-interaction honeypots are convincing at a glance but fragile under scrutiny. One approach is to
+stop trying to make them detection-resistant and instead redeploy them quickly when detected.
 
-Low-interaction honeypots are like cheap stage props, convincing at a glance, but fragile under scrutiny. Instead of overengineering them to resist detection, automatically redeploy them when compromised:
+Monitor ICMP traffic to the honeypot. If traffic drops below a threshold, the attacker has probably
+identified the decoy and disengaged. Spin up a fresh instance with a slightly different configuration.
+The attacker believes they have moved past the honeypot; they encounter another one. The cost of
+engineering resilience against detection shifts to the cost of fast redeployment, which is usually
+lower.
 
-How it works:
+## Latency fingerprinting
 
-* Monitor ICMP traffic (ping requests/responses).
-* If traffic drops below a threshold → attacker has bailed (likely detected the ruse).
-* Redeploy a fresh honeypot with tweaked configs.
+Honeypots often introduce predictable delays. Virtual honeypots built on Honeyd, for instance, have
+historically exhibited response times in multiples of 10ms, which is atypical for real systems.
+Scanners and probing tools can detect this pattern.
 
-Why it’s clever:
+The fix is measurement before deployment: record the response timing of the production services the
+honeypot is mimicking, then adjust the honeypot responses to match. A 23ms delay is harder to flag
+as synthetic than a 20ms or 30ms one.
 
-* No need for costly anti-detection code.
-* Attackers think they’ve "won," only to face a new, slightly different trap.
+## TCP handover transparency
 
-*The cybersecurity equivalent of a magician’s endless handkerchief trick, just when they think they’ve figured it out, there’s more.*
+Hybrid honeypots (low-interaction frontend, high-interaction backend) can leak observable artefacts
+during the handover between layers. One approach to reduce this:
 
-## Delay reduction: The art of being unremarkable
+* The frontend completes the TCP handshake as normal.
+* Rather than an overt handover, it replays the SYN packet to the backend, synchronising sequence
+  and acknowledgement numbers.
+* The attacker interacts directly with the backend without passing through a visible transition point.
 
-Honeypots often lag due to logging/analysis, tipping off attackers. Fix:
+The tradeoff is a small additional latency during handover, which needs to be within the expected
+range for the mimicked service.
 
-Problem: Virtual honeypots (e.g., Honeyd) have predictable latency (multiples of 10ms).
+## Dedicated hardware
 
-Solution: Adjust timings to match real systems.
+Software honeypots emulate systems. Hardware honeypots are systems, and the difference shows in timing
+behaviour. Real hardware has no artificial delays and handles high connection volume without the resource
+exhaustion patterns that virtualised stacks exhibit under load.
 
-* Measure real-world network delays.
-* Tweak honeypot responses to blend in.
+FPGA-based implementations take this further: they process traffic at line speed and present no OS
+attack surface of their own. The tradeoff is cost and deployment inflexibility.
 
-*A delay of 0.2 seconds might as well be a neon ‘FAKE’ sign to a patient attacker.*
+## Adaptive behaviour
 
-## Transparent process handover: The silent switch
+Several systems apply machine learning to honeypot responses:
 
-Hybrid honeypots (low + high interaction) often leak clues during TCP handoffs. Stealthier approach:
+* RASSH uses reinforcement learning to vary its responses to attacker actions rather than following
+  fixed scripts.
+* DeepDig adjusts its behaviour based on what previous intrusion attempts revealed.
+* Systems that rename or alter command outputs (renaming `ls` to `dir`, for instance) can observe
+  how an attacker adapts when the environment behaves unexpectedly.
 
-* Phase 1: Frontend honeypot completes the TCP handshake (normal-looking).
-* Phase 2: Replays the SYN packet to backend, syncing SEQ/ACK numbers.
-* Phase 3: Attacker interacts directly with backend without noticing the swap.
-
-Trade-off: Slightly slower performance, but far harder to detect.
-
-*Like a spy swapping places with a double during a handshake, smooth, silent, and utterly deceptive.*
-
-## Dedicated hardware: The uncompromising approach
-
-Software honeypots emulate systems; hardware honeypots are systems. Benefits:
-
-* No artificial delays (real hardware = realistic timing).
-* Stateless TCP stacks handle 100k+ connections (no resource exhaustion).
-* Harder to compromise (no OS vulnerabilities to exploit).
-
-Example: FPGA-based honeypots (malware collection at line speed).
-
-*Because sometimes the best way to fake a system is to be a system.*
-
-## Dynamic intelligence: The honeypot that learns
-
-Modern honeypots use AI/ML to:
-
-* Adapt behaviour based on attacker actions.
-* Block/alter program execution to seem more "real."
-* Lure attackers into revealing tactics (e.g., "Oops, ls is renamed to dir, what now?").
-
-*Why manually update your honeypot when it can outsmart attackers on its own?*
-
+The practical value is in studying how specific adversaries respond to variation, which produces more
+useful intelligence than a static environment that confirms only what the attacker already assumed.

@@ -9,7 +9,8 @@ Whether defending a home NAS or a small organisation's file server, honeypots he
 * Waste attacker time and bandwidth.
 * Trigger alerts for unauthorised activity, ideally before damage occurs.
 
-Even modest setups benefit. Just because you're not MI6 doesn't mean you're not on someone's Shodan list.
+Even modest setups benefit. Home networks and small office gateways appear on Shodan within hours of
+going online.
 
 ## What to deploy
 

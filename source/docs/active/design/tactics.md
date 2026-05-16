@@ -21,10 +21,8 @@ A honeyclient simulates a browser visiting potentially malicious content, collec
 exposing a real system to it. Thug is a practical starting point: a Python-based low-interaction
 honeyclient that emulates browser behaviour and identifies exploit attempts.
 
-It is worth running in an isolated VM or container. Thug is designed to be safe, but visiting malicious
-content at scale still carries some risk.
-
-*Nothing says "hobby" like intentionally infecting a VM for science.*
+Worth running in an isolated VM or container. Thug is designed to be safe, but visiting malicious
+content at scale still carries some residual risk.
 
 ## Attribution
 
@@ -33,8 +31,7 @@ Getting reliable attribution is difficult, but some techniques help narrow the f
 * Document beacons (the Molehunt approach): a document that contacts a controlled server when opened,
   logging the IP and user-agent of whoever opened it.
 * BeEF (Browser Exploitation Framework): adversaries use it to hijack browsers; defenders can deploy
-  it in controlled environments to study how client-side attacks unfold. "Your JavaScript. Our
-  intelligence."
+  it in controlled environments to study how client-side attacks unfold.
 * HoneyBadger: a honeypot with built-in geolocation, useful for placing activity geographically.
 
 Attribution data is useful for building threat models and for correlating activity across incidents.
@@ -48,4 +45,4 @@ Beyond individual honeypots, purpose-built traps can occupy crawlers and scanner
 * Weblabyrinth: similar approach, bots get lost in generated content.
 * Nova: a cluster of decoy hosts plausible enough to divert reconnaissance effort.
 
-*The goal is not just to detect. It is to send them down a rabbit hole with no exit.*
+The goal is not just detection. It is delay, misdirection, and observation.

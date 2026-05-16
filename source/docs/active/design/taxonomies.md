@@ -13,27 +13,23 @@ Left exposed to observe what attacks look like in the wild. Useful for:
 * Discovering zero-days before they appear in production environments.
 * Generating threat intelligence.
 
-*Why hunt vulnerabilities when you can let attackers deliver them to your doorstep?*
-
 ### Production honeypots
 
 Placed within production environments, positioned to divert attackers from real systems. Key features:
 
 * Hidden in the network, presenting as vulnerable but real-looking services.
 * Trigger alerts on first contact, before anything serious has happened.
-* Ideally convincing enough that attackers do not realise they have been diverted.
-
-*The digital equivalent of a "wet paint" sign, except the paint is alarms.*
+* Convincing enough that attackers do not realise they have been diverted.
 
 ## By interactivity: how much rope to give attackers
 
-| Type | Interactivity | Risk | Best for | Example tools |
-|------|---------------|------|----------|---------------|
-| Low-interaction | Minimal (scripted responses) | Low | Logging spray-and-pray attacks | mailoney, dionaea |
-| Medium-interaction | Partial (emulated OS/shell) | Moderate | Studying post-exploit behaviour | Cowrie (SSH proxy mode) |
-| High-interaction | Full (real VMs with vulns) | High | Advanced adversary analysis | Cowrie with custom VMs |
+| Type               | Interactivity                | Risk     | Best for                        | Example tools           |
+|--------------------|------------------------------|----------|---------------------------------|-------------------------|
+| Low-interaction    | Minimal (scripted responses) | Low      | Logging spray-and-pray attacks  | mailoney, dionaea       |
+| Medium-interaction | Partial (emulated OS/shell)  | Moderate | Studying post-exploit behaviour | Cowrie (SSH proxy mode) |
+| High-interaction   | Full (real VMs with vulns)   | High     | Advanced adversary analysis     | Cowrie with custom VMs  |
 
-Low-interaction: observe the initial probe. High-interaction: follow what happens after access is gained.
+Low-interaction captures the initial probe. High-interaction follows what happens after access is gained.
 With high-interaction, the attacker may pivot if the environment is not properly isolated.
 
 ## By deployment: where to place them
@@ -49,8 +45,6 @@ With high-interaction, the attacker may pivot if the environment is not properly
 * Location: internet-facing.
 * Purpose: collect reconnaissance and automated attack data from outside.
 * Produces: continuous attack data useful for threat intelligence.
-
-*External honeypots: the only place where constant bombardment is a good thing.*
 
 ## The Cyber Kill Chain and deception stack
 

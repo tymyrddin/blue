@@ -65,7 +65,7 @@ sudo portspoof -c /etc/portspoof/config
 * Automate alerts and blocking, but log everything: the connection history is worth reviewing later.
 * Vary ports and behaviour periodically. Inconsistency is a feature: there is no stable fingerprint
   to probe for.
-* Do not deploy honeyports on actual production ports. It's funny once.
+* Do not deploy honeyports on actual production ports. Funny once.
 
 ## Resources
 

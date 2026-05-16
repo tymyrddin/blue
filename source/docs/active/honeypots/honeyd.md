@@ -19,7 +19,12 @@ create default
 set default personality "Windows XP"
 bind 10.0.0.1 default
 add default tcp port 22 "sh /etc/honeyd/scripts/fake-ssh.sh"
+
 ```
+
+The `"Windows XP"` personality is deliberate: older-looking systems attract scanners probing for
+known legacy vulnerabilities. Honeyd ships with many personality definitions; the choice depends on
+what attacker behaviour the deployment aims to observe.
 
 ## Usage
 

@@ -20,10 +20,10 @@ Client-side honeypots visit URLs rather than waiting to be visited:
 
 ### High vs. low interaction
 
-| Type | Pros | Cons | Best for |
-|------|------|------|----------|
-| High-interaction | Deep forensic analysis | Slow, risky, can be detected | Research, APT tracking |
-| Low-interaction | Fast, scalable, safer | May miss subtle attacks | Large-scale malware scans |
+| Type             | Pros                   | Cons                         | Best for                  |
+|------------------|------------------------|------------------------------|---------------------------|
+| High-interaction | Deep forensic analysis | Slow, risky, can be detected | Research, APT tracking    |
+| Low-interaction  | Fast, scalable, safer  | May miss subtle attacks      | Large-scale malware scans |
 
 *High-interaction honeyclients are like undercover officers: excellent intelligence, but one wrong move and the cover is blown.*
 
@@ -34,7 +34,9 @@ and visits suspicious URLs in a controlled way. It simulates fetching and render
 identifying exploit attempts without fully executing what it finds.
 
 * Emulates browsers (IE, Chrome, various user-agent strings).
-* Detects exploits targeting Java, Flash, PDF, and browser engines.
+* Detects exploits targeting PDF, browser engines, and legacy plugin formats. Java and Flash browser
+  plugins have not been present in mainstream browsers since the early 2020s, so exploit detection for
+  those specifically reflects historical rather than current attack traffic.
 * Logs all HTTP requests, responses, and indicators of compromise.
 
 Thug does not execute downloaded binaries or launch a real browser. It is a lightweight, scriptable way
