@@ -38,4 +38,5 @@ Social engineering runs through nearly all of these categories. It works not bec
 it targets how people respond under time pressure, apparent authority, and emotional load. A convincing urgent
 message from a bank, a spoofed call from a carrier, a prompt appearing at an inconvenient moment: these exploit
 patterns in human decision-making that are consistent and predictable. The technical layer of a threat is often
-the easier part to address; the social layer is the one that keeps working.
+the easier part to address; the social layer is the one that keeps working. The conditions it exploits
+are not edge cases. They are Tuesday.

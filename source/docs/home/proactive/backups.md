@@ -1,8 +1,11 @@
 # Backups
 
-Most people who do not have backups know they should. The barrier is rarely knowledge: it is the gap between
+Most people who do not have backups know they need them. The barrier is rarely knowledge: it is the gap between
 intending to do something and building the habit that makes it happen automatically. The calendar reminder
 suggested below is, in practice, more important than the technical setup.
+
+The first few reminders will feel like extra work. That is the period most habits do not survive, and it
+passes. The month after the first month is considerably easier.
 
 ## Why offline backups
 

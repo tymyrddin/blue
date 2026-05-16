@@ -1,6 +1,6 @@
 # No platform is inherently safe
 
-For years it was reasonable to assume that Linux was a hardened target, macOS a walled garden, and Windows the
+For years, it was reasonable to assume that Linux was a hardened target, macOS a walled garden, and Windows the
 primary malware platform. That period has passed. The financial incentives to attack high-value Linux servers
 were eventually large enough to justify the development effort. macOS market share grew enough to make it worth
 targeting. And cross-platform frameworks made it straightforward to port existing attacks across operating

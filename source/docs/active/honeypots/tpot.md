@@ -1,6 +1,8 @@
-# T-Pot – The All-in-One cyber trap
+# T-Pot
 
-*Like a Russian doll of deception, but with more Docker.*
+All-in-one honeypot platform. Runs multiple honeypots simultaneously via Docker, with a pre-built ELK
+stack for log aggregation and visualisation. Useful when a comprehensive deployment is wanted without
+assembling components separately.
 
 ## Installation
 
@@ -10,18 +12,16 @@ cd tpotce/iso/installer/
 sudo ./install.sh --type=user
 ```
 
-*Warning: May consume more RAM than your actual production systems.*
+Resource requirements are significant: allocate accordingly.
 
 ## Usage
 
-Access the dashboard at https://your-ip:64297
-
-*Contains enough tools to make even seasoned attackers sigh.*
+Access the dashboard at `https://your-ip:64297`
 
 ## Integration
 
-* Pre-built ELK Stack: Already included (because T-Pot pities your logging skills)
-* Zeek Tagging:
+* ELK Stack: already included.
+* Zeek tagging:
     
 ```bash
 # In Zeek config  

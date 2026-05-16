@@ -1,6 +1,7 @@
-# Cuckoo sandbox – Malware’s worst Airbnb
+# Cuckoo sandbox
 
-*Where malware checks in… but doesn’t check out.*
+Malware analysis sandbox. Submits files or URLs to an isolated environment, executes them, and reports
+on behaviour: network connections, file system changes, registry modifications, and process activity.
 
 ## Installation
 
@@ -25,9 +26,7 @@ port = 2042
 cuckoo submit --url http://malware.example.com/evil.exe
 ```
 
-*The only sandbox where ‘beach’ means ‘beachhead exploit’.*
-
 ## Integration
 
-* Slack alerts: Use cuckoo-web API + webhooks
-* Splunk: Parse `storage/analyses/<id>/report.json`
+* Slack alerts: use the cuckoo-web API with webhooks.
+* Splunk: parse `storage/analyses/<id>/report.json`.

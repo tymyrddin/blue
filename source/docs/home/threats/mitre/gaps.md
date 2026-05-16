@@ -144,11 +144,11 @@ Fix:
 
 ## Future considerations
 
-| Threat | Preemptive response |
-|--------|---------------------|
-| AI-assisted phishing | Use email aliases (SimpleLogin or similar) for different services |
-| 5G IoT attacks | Isolate smart devices on a VLAN |
-| Harvest-now/decrypt-later | Switch to Signal or ProtonMail for sensitive communications |
+| Threat                    | Preemptive response                                               |
+|---------------------------|-------------------------------------------------------------------|
+| AI-assisted phishing      | Use email aliases (SimpleLogin or similar) for different services |
+| 5G IoT attacks            | Isolate smart devices on a VLAN                                   |
+| Harvest-now/decrypt-later | Switch to Signal or ProtonMail for sensitive communications       |
 
 ## Checklist
 

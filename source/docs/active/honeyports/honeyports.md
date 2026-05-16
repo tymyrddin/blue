@@ -1,67 +1,58 @@
-# Honeyports: Sweet lures
+# Honeyports: sweet lures
 
-## What’s the point?
+## What they do
 
-Most attackers begin with reconnaissance: poking around to find open doors (aka ports) on your network. Honeyports 
-look like open doors, usually on enticing services like SSH, Telnet, or SMB. But behind them is a tripwire, not a service.
+Most attackers begin with reconnaissance: probing ports to find open services. Honeyports present as
+open doors on enticing services (SSH, Telnet, SMB) but have no actual service behind them. When an
+attacker connects, the honeyport logs the IP and optionally blocks further attempts via:
 
-When an attacker attempts to connect, the honeyport quietly logs the IP address and (optionally) slams the door shut 
-behind them, automatically blocking future attempts via:
-
-* Dynamic firewall rules
-* Alerts to your SIEM/SOC
-* DNS sinkholing
-* A well-crafted passive-aggressive sysadmin email
+* Dynamic firewall rules.
+* Alerts to a SIEM or SOC.
+* DNS sinkholing.
 
 ## How it works
 
-1. Choose a port (e.g., 22 for SSH, 445 for SMB).
-2. Don’t install the actual service. That’s just inviting chaos.
-3. Start a listener: Python, PowerShell, Ruby, or even Netcat will do.
-4. When a connection hits the port, log it and fire off a response:
-   * Add to a blacklist
-   * Trigger an alert
-   * Tag in your EDR
-   * Block at the firewall
+1. Choose a port (22 for SSH, 445 for SMB, or any port that has no legitimate traffic).
+2. Do not install the actual service.
+3. Start a listener: Python, PowerShell, Ruby, or netcat.
+4. When a connection arrives, log it and fire off a response:
+   * Add to a blocklist.
+   * Trigger an alert.
+   * Block at the firewall.
 
-This works best on non-essential systems, or decoy hosts in more sensitive environments. In short: anywhere that 
-should never be receiving inbound SSH traffic.
+Works best on non-essential systems, or decoy hosts placed anywhere that has no legitimate reason to
+receive inbound traffic on that port.
 
 ## Why it works
 
-Attackers rarely resist low-hanging fruit. A port that looks open is an invitation. When they knock and the door 
-bites back, you get early warning, before they’ve even tried anything serious.
+Attackers probe low-hanging fruit. A port that looks open is an invitation. Unlike traditional IDS/IPS,
+honeyports do not rely on packet inspection or signature updates. They are simple, and that simplicity
+is also what makes them hard to evade.
 
-Unlike traditional IDS/IPS, honeyports don’t rely on packet inspection or signature updates. They’re simple, dumb, 
-and brutally effective. Which, ironically, makes them smarter than half your defensive stack.
-
-## Tools of the trade
+## Tools
 
 * [Python honeyport (Linux/Windows)](python-honeyport.md)
 * [PowerShell honeyport (Windows)](powershell-honeyport.md)
 
-### Features
+### Features common to both implementations
 
-* Realistic SSH banners (Linux/Windows variants)
-* Protocol mismatch error - Common SSH server behaviour
-* Delayed response - Simulates cryptographic negotiation
-* Auto-blocking: Linux: fail2ban → iptables;  Windows: Native firewall rules
-* Logging with timestamps for forensics
+* Realistic SSH banners (Linux and Windows variants).
+* Protocol mismatch error simulating SSH server behaviour.
+* Delayed response simulating cryptographic negotiation.
+* Auto-blocking: Linux via fail2ban to iptables; Windows via native firewall rules.
+* Logging with timestamps.
 
-On Windows, run the script as `SYSTEM` using Scheduled Tasks for stealth.
+On Windows, run the script as SYSTEM using Scheduled Tasks for persistence without a visible window.
 
-### Ruby, Bash, Netcat, etc.
+### Other approaches
 
-You can be as sophisticated or as scrappy as you like. The key is that the port listens, records, and reacts.
+Netcat, Ruby, or Bash can all serve as simple listeners. The key requirement is that the port listens,
+records the connection, and reacts.
 
 ## Portspoof
 
-Want to go full chaotic neutral? Use portspoof.
-
-Instead of one or two honeyports, Portspoof pretends every port is open and running some (fake) plausible service. 
-Scanning tools see 65,535 open ports and quickly descend into madness.
-
-It’s like turning your server into a funhouse mirror maze. Every port lies, and none of them are helpful.
+For a more disorienting approach: Portspoof responds on every port as though a plausible service is
+running. Scanning tools see 65,535 apparent open ports and produce results that are difficult to act on.
 
 ```
 sudo apt install portspoof
@@ -70,14 +61,14 @@ sudo portspoof -c /etc/portspoof/config
 
 ## Notes
 
-* Use high-interaction traps only on isolated segments or sacrificial hosts.
-* Automate alerts and blocking, but log everything. You may want to go back and see who fell for what.
-* Rotate ports and tweak behaviour regularly, nothing says "go away" like inconsistency.
-* Don’t use honeyports on actual production ports. You’ll be kicking out your own users. It’s funny once.
+* Use high-interaction traps only on isolated segments or dedicated decoy hosts.
+* Automate alerts and blocking, but log everything: the connection history is worth reviewing later.
+* Vary ports and behaviour periodically. Inconsistency is a feature: there is no stable fingerprint
+  to probe for.
+* Do not deploy honeyports on actual production ports. It's funny once.
 
 ## Resources
 
 * [Active Defence, Offensive Countermeasures, and Cyber Deception](https://www.blackhillsinfosec.com/wp-content/uploads/2020/04/Training_ActiveDefence_CyberDeception_April2020.pdf), John Strand, Bryce Galbraith and Paul Asadoorian, 2020
 * [Github: gchetrick/honeyports](https://github.com/gchetrick/honeyports)
 * [Github pages: portspoof](https://drk1wi.github.io/portspoof/)
-

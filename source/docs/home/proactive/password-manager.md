@@ -3,7 +3,8 @@
 A password manager solves one specific problem: reused passwords. When one service is breached and its
 password database leaked, the attacker can try those credentials on every other service the user has an
 account with. A unique password per service breaks that chain. Remembering unique passwords for dozens of
-accounts is not realistic without a manager.
+accounts is not realistic without a manager. Password reuse is not carelessness; it is the predictable
+outcome of being asked to maintain dozens of distinct secrets with no infrastructure to support it.
 
 ## What it does
 

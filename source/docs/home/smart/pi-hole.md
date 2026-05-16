@@ -1,36 +1,43 @@
-# Supercharge security with Pi-hole (Block TV Ads + Tracking)
+# DNS-level blocking with Pi-hole
 
-A free tool that stops smart devices from "phoning home."
+Per-device or per-app blocking of tracking and advertising domains is an ongoing task. DNS-level
+blocking handles it in one place: a local DNS server that intercepts queries to known tracking
+domains before the device can reach them. Every device on the network benefits, including those
+that do not support ad-blocking extensions.
 
-Steps
+Pi-hole is an open-source implementation of this approach. It runs on a Raspberry Pi, a spare
+machine, or a small virtual machine, and acts as the DNS resolver for the household network.
+Queries to blocked domains return nothing; everything else resolves normally.
 
-1. Get a Raspberry Pi 4 (or old laptop):
-2. Install Pi-hole:
+## Setup
 
-* Open a terminal (Mac/Linux) or PowerShell (Windows).
-* Copy/paste this command:
+Install Pi-hole on the host machine:
 
 ```bash
 curl -sSL https://install.pi-hole.net | bash
 ```
 
-* Follow the prompts (just press Enter for defaults).
+Follow the prompts. At the DNS server selection step, choose an upstream resolver (Cloudflare
+1.1.1.1 or Quad9 9.9.9.9 are common choices for privacy reasons).
 
-3. Set Pi-hole as your DNS Server:
+Set Pi-hole as the primary DNS server in the router's DHCP settings. The IP address to use is
+the Pi-hole machine's local address (for example 192.168.1.100; check the Pi-hole install output
+for the actual address).
 
-* Go to your router settings (Step 1 above).
-* Find DNS Settings → Set Primary DNS to your Pi-hole’s IP (e.g., 192.168.1.100).
+## Adding blocklists
 
-4. Block IoT tracking:
+Pi-hole ships with a default blocklist. Additional domain lists targeting smart TV and IoT
+tracking endpoints are available through the Pi-hole admin interface at Group Management →
+Blocklists. The Pi-hole documentation and community maintain curated recommendations for
+maintained lists.
 
-* Open Pi-hole’s admin page (http://192.168.1.100/admin).
-* Go to Group Management → Add "IoT" group.
-* Under Blocklists, add:
+Once DNS requests from a smart TV or IoT device are resolving through Pi-hole, the query log
+shows which domains those devices are contacting. This is often the first time a household
+discovers the volume of outbound traffic from devices that appear to be sitting idle.
 
-```
-https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt
-```
+## What it does not do
 
-This blocks Samsung/LG/Sony TVs from sending your viewing habits to advertisers.
-
-Done! Now your gadgets can’t report back to Big Tech.
+DNS blocking intercepts known bad domains. It does not inspect encrypted traffic, catch
+newly-registered domains not yet in any list, or block tracking embedded within first-party
+domains. It is one layer, not a complete solution. Combined with network segmentation for IoT
+devices, it substantially reduces the outbound tracking surface.

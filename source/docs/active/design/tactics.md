@@ -1,38 +1,51 @@
-# Deception tactics (2025 Edition)
+# Deception tactics
 
-Deception tech has evolved, but the principle remains: The best defence is making attackers regret theirs. Now, go 
-forth and waste someone’s time.
+Deception technology has evolved considerably, but the underlying principle is consistent: make the
+environment expensive to navigate. Attackers who spend hours on decoy systems are not spending those
+hours on real ones, and every action they take is logged.
 
-## Decoys: The art of wasting attackers' time
+## Decoys: occupying attacker time
 
-Decoys exist to lead cybercriminals on a merry dance away from your actual assets. Honeypots and honeynets, carefully crafted digital facades, serve two purposes:
+Decoys lead attackers away from actual assets. Honeypots and honeynets serve two purposes:
 
-* Annoy attackers by recording their every misstep.
-* Educate defenders by revealing their tools, techniques, and (lack of) patience.
+* Recording attacker tools, techniques, and progression.
+* Educating defenders by revealing what adversaries are actually doing rather than what signatures
+  suggest they might do.
 
-The right honeypot depends entirely on your environment and, more importantly, how much schadenfreude you want from your logs.
+The right honeypot depends on the environment and on how much useful signal is worth trading against
+the operational overhead of running and monitoring it.
 
-## @Home: Honeyclients for the curious
+## Honeyclients
 
-A honeyclient pretends to be a tragically outdated browser, eagerly lapping up exploits like a drunk accepting free drinks. Thug remains a delightful weekend project, just don’t blame us when your ISP emails about "suspicious activity."
+A honeyclient simulates a browser visiting potentially malicious content, collecting what happens without
+exposing a real system to it. Thug is a practical starting point: a Python-based low-interaction
+honeyclient that emulates browser behaviour and identifies exploit attempts.
 
-*Nothing says ‘hobby’ like intentionally infecting a VM for science.*
+It is worth running in an isolated VM or container. Thug is designed to be safe, but visiting malicious
+content at scale still carries some risk.
 
-## Attribution: Because knowing who to ignore is half the battle
+*Nothing says "hobby" like intentionally infecting a VM for science.*
 
-Getting attribution is like playing detective, except the suspects leave digital fingerprints everywhere. Useful tools include:
+## Attribution
 
-* Document beacons (à la Molehunt) – Because nothing says "gotcha" like a Word file that phones home.
-* BeEF (Browser Exploitation Framework) – Adversaries use it to hijack browsers; defenders use it to turn the tables. "Your JavaScript? Our intelligence."
-* HoneyBadger – Not just a meme, but a honeypot with built-in geolocation. Now you can sigh dramatically while pinpointing exactly which country’s cybercafé is bothering you today.
+Getting reliable attribution is difficult, but some techniques help narrow the field:
 
-## Traps: The digital labyrinth
+* Document beacons (the Molehunt approach): a document that contacts a controlled server when opened,
+  logging the IP and user-agent of whoever opened it.
+* BeEF (Browser Exploitation Framework): adversaries use it to hijack browsers; defenders can deploy
+  it in controlled environments to study how client-side attacks unfold. "Your JavaScript. Our
+  intelligence."
+* HoneyBadger: a honeypot with built-in geolocation, useful for placing activity geographically.
 
-Why stop at one honeypot when you can build an entire maze of misery? Tools like:
+Attribution data is useful for building threat models and for correlating activity across incidents.
+It rarely produces actionable targeting on its own.
 
-* Spidertrap – For ensnaring web crawlers in infinite loops of fake pages.
-* Weblabyrinth – Because watching bots get lost in procedurally generated nonsense never gets old.
-* Nova – A haystack of decoy hosts so convincing, even the attacker starts questioning reality.
+## Traps
+
+Beyond individual honeypots, purpose-built traps can occupy crawlers and scanners:
+
+* Spidertrap: ensnares web crawlers in loops of procedurally generated pages.
+* Weblabyrinth: similar approach, bots get lost in generated content.
+* Nova: a cluster of decoy hosts plausible enough to divert reconnaissance effort.
 
 *The goal is not just to detect. It is to send them down a rabbit hole with no exit.*
-

@@ -1,8 +1,12 @@
 # When MFA gets bypassed
 
-Multi-factor authentication substantially raises the cost of account compromise. It is not a complete defence.
-Several bypass techniques are now in routine use, and they share a common pattern: rather than breaking the
-cryptography, they route around it by targeting the human in the authentication flow.
+The widespread adoption of MFA is part of why MFA bypass has become a distinct attack category. When most
+accounts lack a second factor, stolen passwords are enough. When most accounts have one, the authentication
+layer itself becomes the target.
+
+Multi-factor authentication substantially raises the cost of account compromise. It is not a complete
+defence. Several bypass techniques are now in routine use, and they share a common pattern: rather than
+breaking the cryptography, they route around it by targeting the human in the authentication flow.
 
 ## MFA fatigue
 

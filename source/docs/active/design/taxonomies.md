@@ -1,65 +1,57 @@
 # Honeypot taxonomies
 
-Choosing a honeypot is about what annoys attackers most while keeping your logs interesting.
+Choosing a honeypot is about matching the level of attacker interaction to what is actually useful to
+collect, balanced against how much time and risk the deployment is worth.
 
-## By purpose: Research vs. Production
+## By purpose: research vs. production
 
 ### Research honeypots
 
-The academics of deception tech: Left exposed like an unlocked bicycle in Camden, just to see who takes the bait. Perfect for:
+Left exposed to observe what attacks look like in the wild. Useful for:
 
-* Documenting attacker tools, techniques, and tantrums
-* Discovering zero-days before they’re cool (or weaponised)
-* Generating threat intel while sipping tea
+* Documenting attacker tools, techniques, and progression.
+* Discovering zero-days before they appear in production environments.
+* Generating threat intelligence.
 
-*Why hunt vulnerabilities when you can let hackers deliver them to your doorstep?*
+*Why hunt vulnerabilities when you can let attackers deliver them to your doorstep?*
 
 ### Production honeypots
 
-The bouncers of your network, strategically placed to lure attackers away from the VIP section (your actual systems). Key features:
+Placed within production environments, positioned to divert attackers from real systems. Key features:
 
-* Hidden in production environments, masquerading as vulnerable services
-* Trigger alerts the moment an intruder takes the bait
-* Ideally so convincing, attackers never realise they’ve been had
+* Hidden in the network, presenting as vulnerable but real-looking services.
+* Trigger alerts on first contact, before anything serious has happened.
+* Ideally convincing enough that attackers do not realise they have been diverted.
 
-*The digital equivalent of a ‘wet paint’ sign, except the paint is alarms.*
+*The digital equivalent of a "wet paint" sign, except the paint is alarms.*
 
-## By Interactivity: How much rope to give attackers
+## By interactivity: how much rope to give attackers
 
-| Type	               | Interactivity	                | Risk	     | Best For	                        | Example Tools           |
-|---------------------|-------------------------------|-----------|----------------------------------|-------------------------|
-| Low-Interaction	    | Minimal (scripted responses)	 | Low	      | Logging spray-and-pray attacks	  | mailoney, dionaea       |
-| Medium-Interaction	 | Partial (emulated OS/shell)	  | Moderate	 | Studying post-exploit behaviour	 | Cowrie (SSH proxy mode) |
-| High-Interaction	   | Full (real VMs with vulns)	   | High	     | Advanced adversary analysis	     | Cowrie + custom VMs     |
+| Type | Interactivity | Risk | Best for | Example tools |
+|------|---------------|------|----------|---------------|
+| Low-interaction | Minimal (scripted responses) | Low | Logging spray-and-pray attacks | mailoney, dionaea |
+| Medium-interaction | Partial (emulated OS/shell) | Moderate | Studying post-exploit behaviour | Cowrie (SSH proxy mode) |
+| High-interaction | Full (real VMs with vulns) | High | Advanced adversary analysis | Cowrie with custom VMs |
 
-Golden Rule:
+Low-interaction: observe the initial probe. High-interaction: follow what happens after access is gained.
+With high-interaction, the attacker may pivot if the environment is not properly isolated.
 
-* Low-interaction = "Look but don’t touch"
-* High-interaction = "Touch, but pray they don’t pivot"
-
-## By deployment: Where to plant your digital landmines
+## By deployment: where to place them
 
 ### Internal honeypots
 
-* Location: Inside your LAN
-* Purpose: Catch insider threats or phishing-born breaches
-* Ideal Outcome: Never triggered (because if they are, your network is already toast)
+* Location: inside the LAN.
+* Purpose: catch insider threats or lateral movement from a phishing-originated breach.
+* Useful signal: any contact at all, since there is no legitimate reason to probe them.
 
 ### External honeypots
 
-* Location: The wild, wild internet
-* Purpose: Collect script kiddies, botnets, and APTs like Pokémon
-* Ideal Outcome: So much attack data, your SIEM starts sobbing
+* Location: internet-facing.
+* Purpose: collect reconnaissance and automated attack data from outside.
+* Produces: continuous attack data useful for threat intelligence.
 
-*External honeypots: the only place where ‘constant bombardment’ is a good thing.*
+*External honeypots: the only place where constant bombardment is a good thing.*
 
-## The Cyber Kill Chain & deception stack
+## The Cyber Kill Chain and deception stack
 
-For those who enjoy overcomplicating things beautifully, the paper 
-[Three Decades of Deception Techniques in Active Cyber Defence](https://arxiv.org/pdf/2104.03594.pdf) offers:
-
-* A tailored kill chain for modern threats
-* A four-layer deception stack (because why stop at one taxonomy?)
-* Enough jargon to impress at cybersecurity conferences
-
-*Required reading, if only to nod sagely when someone mentions ‘stratified deceptive countermeasures’.*
+The paper [Three Decades of Deception Techniques in Active Cyber Defence](https://arxiv.org/pdf/2104.03594.pdf) maps deception techniques to a kill chain and describes a four-layer deception stack. Worth reading for anyone designing a more comprehensive deployment.

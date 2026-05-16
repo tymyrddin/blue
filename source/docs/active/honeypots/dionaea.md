@@ -1,6 +1,8 @@
-# Dionaea – The malware motel
+# Dionaea
 
-*‘Vulnerable services’ with a strict no-cleanup policy.*
+Malware collection honeypot. Emulates vulnerable services (SMB, HTTP, FTP, and others) to attract and
+capture malware samples. Particularly useful for studying what automated attacks are distributing and
+what payloads look like before they reach production systems.
 
 ## Installation
 
@@ -23,11 +25,9 @@ python=curl,epmap,ftp,http,memcache,mssql,mysql,pptp,sip,smb,tftp,upnp
 sudo systemctl start dionaea
 ```
 
-*Sit back and wait for malware to check itself in.*
-
 ## Integration
 
-* ELK: Forward logs with Filebeat to Elasticsearch
+* ELK: forward logs with Filebeat to Elasticsearch.
 * Email alerts:
 
 ```bash

@@ -55,7 +55,11 @@ Run `htop` and look for:
 
 To investigate a process: `ps aux | grep [process name]`
 
-Check scheduled tasks: `crontab -l`
+Check persistence locations:
+
+* `crontab -l` lists scheduled tasks for the current user
+* `systemctl list-units --type=service --state=running` lists active services
+* `ls ~/.config/autostart/` shows user-level autostart entries
 
 ## Signs worth investigating
 

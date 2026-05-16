@@ -1,6 +1,7 @@
-# Cowrie – The overly talkative SSH honeypot
+# Cowrie
 
-*Records every keystroke, including their typos and existential crises.*
+SSH and Telnet honeypot. Records everything: commands entered, files downloaded, credentials attempted.
+Particularly useful for studying automated attack scripts and what happens after a successful-looking login.
 
 ## Installation (Docker)
 
@@ -24,11 +25,9 @@ fake_version = SSH-2.0-OpenSSH_7.6p1
 tail -f ~/cowrie/logs/cowrie.json
 ```
 
-*The logs are hilariously verbose. Perfect for bedtime reading.*
-
 ## Integration
 
-* Slack alerts: Use `jq` to parse JSON logs + curl to Slack webhook
+* Slack alerts: use `jq` to parse JSON logs, pipe to a Slack webhook via curl.
 * Suricata tagging:
 
 ```yaml

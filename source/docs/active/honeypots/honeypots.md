@@ -1,94 +1,94 @@
-# Honeypots: Baited and logged
+# Honeypots: baited and logged
 
 ## Why use a honeypot?
 
-Whether you're defending the family NAS or a small organisation's file server, honeypots help:
+Whether defending a home NAS or a small organisation's file server, honeypots help:
 
 * Detect intrusions before they cause harm.
 * Study attacker tactics without putting live systems at risk.
-* Waste their time, bandwidth, and hope.
+* Waste attacker time and bandwidth.
 * Trigger alerts for unauthorised activity, ideally before damage occurs.
 
 Even modest setups benefit. Just because you're not MI6 doesn't mean you're not on someone's Shodan list.
 
 ## What to deploy
 
-There are several flavours of honeypots, from "just enough to look interesting" to "full-blown attack playground". 
-Choose your spice level:
+There are several types of honeypot, from a minimal decoy to a full attack playground. The choice
+depends on how much attacker interaction is useful to collect and how much risk is acceptable.
 
 ### Low-interaction honeypots
 
-These mimic basic services (e.g. SSH, HTTP) without fully running them. Lightweight, easy to deploy, and safe as houses.
+These simulate basic services (SSH, HTTP) without fully running them. Lightweight, easy to deploy,
+and safe to operate.
 
-* Honeyd – Simulates entire systems.
-* Cowrie – Fake SSH/Telnet server. Logs everything. Very chatty.
-* Dionaea – Malware catcher posing as vulnerable services.
+* Honeyd: simulates entire networks of systems on a single host.
+* Cowrie: fake SSH/Telnet server that logs every command.
+* Dionaea: malware collection via vulnerable service emulation.
 
-Perfect for:
+Good for:
 
-* Home routers/NAS
-* Small office gateways
-* Raspberry Pis with delusions of grandeur
+* Home routers and NAS devices.
+* Small office gateways.
+* Raspberry Pi installations.
 
 ### High-interaction honeypots
 
-These run real operating systems and services (sacrificial lambs with Wireshark).
+These run real operating systems and services. More realistic, more informative, more risk.
 
-* OpenCanary – Dead simple, logs to syslog.
-* T-Pot – All-in-one honeypot platform, runs via Docker.
-* Cuckoo Sandbox – Malware analysis and detonation (if you like to live dangerously).
+* OpenCanary: low overhead, logs to syslog.
+* T-Pot: all-in-one platform running multiple honeypots via Docker.
+* Cuckoo Sandbox: malware analysis and detonation environment.
 
-Perfect for:
+Good for:
 
-* Security research
-* Blue teams with a masochistic streak
-* Enthusiasts with an isolated VLAN and too much time
-* Warning: High-interaction honeypots are great research tools but can be turned against you if improperly isolated. Always sandbox.
+* Security research.
+* Blue teams with an isolated VLAN to work in.
+* Anyone willing to manage the isolation carefully.
 
-## Tools of the trade
+High-interaction honeypots can be turned against the defender if improperly isolated. Sandbox.
 
-* [Honeyd](honeyd.md) for masochists who love config files
-* [Cowrie](cowrie.md) for SSH voyeurs
-* [Dionaea](dionaea.md) for malware hoarders
-* [OpenCanary](opencanary.md) for the terminally lazy
-* [T-Pot](tpot.md) for people who think Docker is a lifestyle
-* [Cuckoo](cuckoo.md) for those who enjoy playing with fire
+## Tools
+
+* [Honeyd](honeyd.md): simulates multiple systems on a single host
+* [Cowrie](cowrie.md): SSH/Telnet honeypot with detailed session logging
+* [Dionaea](dionaea.md): malware collection via vulnerable service emulation
+* [OpenCanary](opencanary.md): low-overhead, multi-protocol honeypot
+* [T-Pot](tpot.md): all-in-one platform running multiple honeypots via Docker
+* [Cuckoo](cuckoo.md): malware analysis sandbox
 
 ## Where to place honeypots
 
-Strategic placement is key:
+Strategic placement matters:
 
-* DMZ – External-facing honeypots bait outside attackers.
-* Internal network – Catch compromised insiders or lateral movement.
-* IoT subnet – Because your "smart" lightbulbs aren’t.
+* DMZ: external-facing honeypots attract outside attackers.
+* Internal network: catches compromised insiders or lateral movement.
+* IoT subnet: devices that have no legitimate reason to probe internal hosts.
 
-Be clear what you’re simulating, and don’t run honeypots on production ports unless you're keen on debugging broken 
-user logins.
+Be clear about what each honeypot is simulating, and avoid placing them on ports your actual services use.
 
-## Integration & alerting
+## Integration and alerting
 
-Don’t just run a honeypot and hope for the best. Integrate it:
+A honeypot only generates value if it is monitored:
 
-* Log to Syslog, Splunk, or ELK
-* Use fail2ban to block IPs hitting the honeypot
-* Set up email or Slack alerts when activity is detected
-* Tag honeypot traffic with Suricata or Zeek for deeper inspection
+* Log to Syslog, Splunk, or ELK.
+* Use fail2ban to block IPs that probe the honeypot.
+* Set up email or Slack alerts on activity.
+* Tag honeypot traffic in Suricata or Zeek for correlation.
 
 ## Honeypots in small environments
 
-Home and small business networks are soft targets, ripe for botnets, brute force, and crypto-rubbish. Honeypots offer:
+Home and small business networks are common botnet recruitment targets and see regular brute-force
+attempts. Honeypots provide:
 
-* A canary in the coal mine to spot attacks early.
-* A cheap deterrent at low cost, high value.
-* Intel collection to learn what attackers are actually doing.
+* Early warning of activity that is not visible in normal logs.
+* Threat intelligence about what automated attacks are actually doing.
 
-You don’t need a datacentre. A Raspberry Pi, an old laptop, or a corner of your ESXi box will do nicely.
+A Raspberry Pi, an old laptop, or an unused VM is sufficient.
 
 ## What a honeypot is not
 
-* It’s not a silver bullet.
-* It won’t stop an attack on its own.
-* It’s not a replacement for patching, hardening, and good logging.
-* And no, it’s not a reason to skip the firewall.
+* Not a replacement for patching and hardening.
+* Not a replacement for good logging on real systems.
+* Not a firewall substitute.
 
-Think of it as bait. Useful bait, clever bait, but bait nonetheless.
+Bait. Useful bait, but bait.

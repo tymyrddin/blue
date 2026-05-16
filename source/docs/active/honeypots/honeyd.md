@@ -1,6 +1,8 @@
-# Honeyd – The entire fake data centre
+# Honeyd
 
-*Because simulating one vulnerable system is for amateurs.*
+Simulates entire networks of virtual systems on a single host. Each virtual system can have its own
+personality (OS fingerprint), open ports, and service scripts. Useful for populating an address range
+with plausible-looking targets.
 
 ## Installation (Debian/Ubuntu)
 
@@ -24,13 +26,11 @@ add default tcp port 22 "sh /etc/honeyd/scripts/fake-ssh.sh"
 ```bash
 sudo honeyd -d -f /etc/honeyd.conf
 ```
-`
-*Now watch as attackers waste hours ‘exploiting’ your imaginary Windows XP box.*
 
 ## Integration
 
-* Syslog: Add log syslog to config
-* fail2ban: Filter SSH attempts with:
+* Syslog: add `log syslog` to the config.
+* fail2ban: filter SSH attempts with:
 
 ```
 [honeyd-ssh]  

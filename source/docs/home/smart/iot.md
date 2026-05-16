@@ -53,8 +53,8 @@ How to reduce the exposure:
 
 The following categories of devices benefit from network isolation or disconnection:
 
-Smart fridges: useful display features rarely justify the network access required. Samsung fridges have been
-documented to expose Wi-Fi credentials.
+Smart fridges: useful display features rarely justify the network access required. Connected appliances
+handling credentials have a poor history of protecting them.
 
 Robot vacuums: floor-mapping data has been the subject of data-sharing discussions at several manufacturers.
 If local-only mode is available, use it.

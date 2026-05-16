@@ -24,7 +24,7 @@ Legal tells
 Fingerprintable traits
 
 * Default credentials (admin:admin).
-* Unpatched but improbably old services (Windows Server 2008 in 2025?).
+* Unpatched but improbably old services (Windows Server 2008 still running?).
 * "Honeypot-like" network delays (emulated services lag differently).
 
 ## Fighting Back: Concealing traps

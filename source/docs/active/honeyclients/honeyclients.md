@@ -1,79 +1,64 @@
-# Honeyclients: Turning the tables
-
-Honeypots have a problem. Enter honey clients and honeyports.
+# Honeyclients: turning the tables
 
 ## The problem with passive honeypots
 
-Traditional honeypots sit there like a pub landlord waiting for trouble to walk in, useful, but hopeless against 
-drive-by downloads, malvertising, and other modern nuisances that don’t bother knocking.
+Traditional honeypots wait for connections. That works for attacks that probe for open services, but not
+for drive-by downloads, malvertising, and other threats that are delivered through browsing rather than
+direct connections.
 
-* Phishing emails? Old news.
-* Zero-day exploits? Often delivered via compromised websites, not attachments.
-* Firewall rules? Useless when the attack rides in on port 80/443 like a Trojan horse in an SSL wrapper.
+* Zero-day exploits are often delivered via compromised websites.
+* Firewall rules do nothing when the attack rides in on port 80 or 443.
+* Phishing links and malicious redirects need a client to follow them.
 
-*The internet’s become a dodgy back alley, and your firewall’s just the bouncer checking IDs at the club next door.*
+## How honeyclients work
 
-## How honeyclients fight back
+Client-side honeypots visit URLs rather than waiting to be visited:
 
-These client-side honeypots don’t wait, they go hunting.
-
-### The basics
-
-* Mimic real users (browsing, clicking, even "typing" in forms).
-* Visit sketchy sites so you don’t have to.
-* Analyse changes (new files? Modified registry? Uh-oh).
+* Simulate real users (browsing, clicking, form interaction).
+* Visit suspicious sites in a controlled environment.
+* Analyse changes to the system (new files, modified registry, new processes).
 
 ### High vs. low interaction
 
-| Type	             | Pros	                   | Cons	                         | Best for                  |
-|-------------------|-------------------------|-------------------------------|---------------------------|
-| High-interaction	 | Deep forensic analysis	 | Slow, risky, easily detected	 | Research, APT tracking    |
-| Low-interaction	  | Fast, scalable, safer	  | May miss subtle attacks	      | Large-scale malware scans |
+| Type | Pros | Cons | Best for |
+|------|------|------|----------|
+| High-interaction | Deep forensic analysis | Slow, risky, can be detected | Research, APT tracking |
+| Low-interaction | Fast, scalable, safer | May miss subtle attacks | Large-scale malware scans |
 
-*High-interaction honeyclients are like undercover cops. Great intel, but one wrong move and they’re compromised.*
+*High-interaction honeyclients are like undercover officers: excellent intelligence, but one wrong move and the cover is blown.*
 
-## Thug: The Python menace
+## Thug
 
-[Thug](https://github.com/buffer/thug) is a low-interaction honeyclient designed to emulate browser behaviour and 
-visit suspicious URLs safely (that is, safer than using your actual browser). It simulates the fetching and rendering of 
-malicious web pages, identifying exploit attempts without getting itself entirely owned in the process.
+[Thug](https://github.com/buffer/thug) is a low-interaction honeyclient that emulates browser behaviour
+and visits suspicious URLs in a controlled way. It simulates fetching and rendering malicious pages,
+identifying exploit attempts without fully executing what it finds.
 
-* Emulates browsers (IE, Chrome, even user-agent quirks).
-* Detects exploits (Java, Flash, PDF, all the classics).
-* Logs everything (because if you’re visiting malware hubs, you’d better take notes).
+* Emulates browsers (IE, Chrome, various user-agent strings).
+* Detects exploits targeting Java, Flash, PDF, and browser engines.
+* Logs all HTTP requests, responses, and indicators of compromise.
 
-Thug isn’t a full browser sandbox, it doesn’t execute binaries or launch browsers, but it’s a lightweight, 
-scriptable way to observe malicious behaviour at arm’s length. It’s particularly useful when you want 
-just enough context to spot a threat, without deploying full dynamic analysis suites.
+Thug does not execute downloaded binaries or launch a real browser. It is a lightweight, scriptable way
+to observe malicious behaviour at arm's length, useful when some context is needed without deploying a
+full dynamic analysis suite.
 
-Perfect for:
+Good for:
 
-* Malware researchers who value sleep over debugging infected containers and VMs
-* Incident responders
-* Home lab tinkerers
-* Anyone who’s ever thought "I wonder what’s on this shady URL..."
-* Digital sadists who enjoy analysing shady URLs
+* Malware researchers.
+* Incident responders investigating a suspicious URL.
+* Home lab exploration.
 
-*Thug: Because manually clicking malware links is just asking for a bad time.*
+## Tools
 
-## Tools of the trade
+* [Thug in a VM](thug-repo.md)
+* [Thug in a container](thug-container.md)
 
-* [Thug in a repo (VM)](thug-repo.md)
-* [Thug in a box (Docker)](thug-container.md)
+## DroidCollector
 
-## DroidCollector: APK spelunking without the rash
-
-DroidCollector is what happens when you want to know what that dodgy Android app does, without giving it the keys to 
-your actual phone.
-
-As of now (2025), the original DroidCollector framework, a tool designed for collecting and classifying Android applications, 
-does not appear to have an active or publicly available code repository on GitHub. While references to its dataset 
-and academic papers exist, the source code itself isn't readily accessible.
-
-Been waiting for it. If it takes too long maybe I'll just build one. Feels like a fun challenge.
+DroidCollector is a framework for collecting and classifying Android applications for analysis. As of
+writing, the original code repository does not have an active public presence, though the dataset and
+academic papers referencing it remain available.
 
 ## Resources
 
 * [Escape from Monkey Island: Evading High-Interaction Honeyclients](https://sites.cs.ucsb.edu/~chris/research/doc/dimva11_honey.pdf) (pdf)
 * [DroidCollector Framework](http://loci.ujn.edu.cn/htdocs/DroidCollector/index.html)
-

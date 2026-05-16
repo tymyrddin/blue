@@ -4,18 +4,18 @@ Honeytech for humans
 .. image:: /_static/images/honeytech.png
   :alt: Overview
 
-Active defence measures, like IP auto-blocking, tarpitting (slowing down attackers), or counter-hacking
-(tracking intruders), walk a fine line between security and vigilantism.
+Active defence measures sit on a spectrum. IP auto-blocking and tarpitting are straightforward and legal
+almost everywhere. Counter-hacking is a different matter: tracking intruders back to their own systems
+crosses into territory that is illegal in most jurisdictions, regardless of provocation.
+
+This section covers the former: deception technology that makes attackers waste time, reveals their
+techniques, and generates early warning. None of it requires breaking the law.
 
 .. toctree::
    :maxdepth: 2
-   :caption: The goal is making you the least appetising target on the menu.
+   :caption: The goal is making the environment look more interesting than it is.
 
    design/index
    honeypots/index
    honeyclients/index
    honeyports/index
-
-Warning: Check local laws, some "active" measures (like hacking back) are illegal in many jurisdictions.
-
-

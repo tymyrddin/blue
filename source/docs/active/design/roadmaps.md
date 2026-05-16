@@ -1,79 +1,80 @@
 # The honeypot arms race
 
-## Web-based traps: The art of luring script kiddies
+## Web-based traps
 
-Modern web honeypots have evolved beyond basic form fields. The Aggressive Web Honeypot (2014) pioneered JavaScript obfuscation to detect XSS and SQLi attacks - think of it as leaving digital bear traps in your website's code. While dated, its principles still influence modern tools like:
+Modern web honeypots have developed beyond basic form fields. The Aggressive Web Honeypot (2014) pioneered
+JavaScript obfuscation to detect XSS and SQLi attempts: leaving instrumented code in the site that triggers
+on exploitation. Its principles influenced subsequent tools including:
 
-* OWASP Honeypot Project: The neighborhood watch of web security, crowd-sourcing attack patterns
-* Client Honeypots: The active hunters that go searching for trouble (when you're tired of waiting for trouble to find you)
+* OWASP Honeypot Project: a community effort to crowd-source attack patterns across web honeypots.
+* Client honeypots: active systems that visit URLs rather than waiting to be visited.
 
 *Nothing ruins a hacker's day like realising they've been attacking a carefully crafted decoy for three hours.*
 
-## Worm detection: Playing whack-a-mole with malware
+## Worm detection
 
-Signature-based IDS is about as effective as using a 1990s antivirus to stop modern threats. The Zero-day polymorphic worms honeypot uses the Aho-Corasick algorithm - essentially a malware pattern recognition system that doesn't need to see every variant to sound the alarm.
+Signature-based IDS fails against novel variants. The Zero-day polymorphic worms honeypot uses the
+Aho-Corasick algorithm to recognise malware patterns without requiring a known signature: it identifies
+behavioural similarity rather than exact matches, which catches variants that would otherwise pass detection.
 
-## Botnet baiting: Turning the tables on DDoS
+## Botnet baiting
 
-Modern bot detection honeypots come in two flavors:
+Two approaches to bot detection honeypots:
 
-* Hybrid Honeypot: A digital roach motel combining Sebek (attacker recording), Dionaea (malware collection), and Snort (traffic analysis)
-* ODAIDS-HPS: Uses "nearest neighbor" algorithms to spot anomalies - perfect for when you want your security system to work like a suspicious bouncer
+* Hybrid honeypot: combines Sebek (attacker recording), Dionaea (malware collection), and Snort
+  (traffic analysis) in a single deployment.
+* ODAIDS-HPS: uses nearest-neighbour algorithms to flag anomalies, identifying bot behaviour by
+  deviation from normal traffic profiles.
 
 *Why suffer a DDoS attack when you can redirect it to a honeypot and watch the bots pointlessly hammer a decoy?*
 
-## Honeytokens: The art of digital misdirection
+## Honeytokens
 
-These come in three parts:
+Honeytokens are decoy credentials, documents, or data objects designed to trigger alerts when accessed.
+Construction ranges from simple fake credentials to complete believable databases. Targeting may focus on
+phishing attempts, insider threats, or any access to systems that should be dormant.
 
-* Construction: From simple fake credentials to entire believable databases
-* Targeting: Phishers, insiders, or just curious employees
-* Content Strategy: Real enough to fool, fake enough to trigger alerts
+Tools like HoneyGen can generate convincing decoy data at scale. Manual creation works for smaller
+environments.
 
-Tools like HoneyGen can automatically generate convincing decoys - because manually creating fake data is so 2010.
+## APT traps
 
-## APT traps: Playing the long game
+For sophisticated threats:
 
-For sophisticated threats, we use:
+* High-interaction honeypots: fully compromisable systems that allow attackers to carry out their full
+  kill chain while under observation.
+* Honeypot agents: simulated users within the environment, behaving like real ones.
+* NIDS integration: network intrusion detection tied to honeypot activity for early warning.
 
-* High-interaction honeypots: Fully compromisable systems (handle with care)
-* Honeypot agents: Digital honey traps behaving like real users
-* NIDS integration: Because you'll want warnings before the APT finishes its coffee
+*The only thing better than detecting an APT is watching them spend months infiltrating a system built just for them.*
 
-*The only thing better than detecting an APT is watching them waste six months infiltrating a system you built just for them.*
+## Dynamic honeypots
 
-## Dynamic honeypots: Shape-shifting deception
+The current generation adapts in real time:
 
-The new generation adapts in real-time using:
+* Automated fingerprinting: adjusts presentation to match the current production environment.
+* Hybrid architectures: mixes high and low interaction to balance realism with risk.
+* Cloud scaling: spins up and down decoy instances as the threat landscape changes.
 
-* Automated fingerprinting: Blending in like a digital chameleon
-* Hybrid architectures: Mixing high and low interaction elements
-* Cloud scaling: Because even decoys need elasticity these days
+## AI-assisted deception
 
-## AI-powered deception
+Several systems use machine learning to adapt honeypot behaviour:
 
-Modern systems like:
-
-* RASSH: Uses reinforcement learning to adapt to attackers
-* DeepDig: Learns from each intrusion attempt
-* Intelligent Honeypot: Applies past solutions to new threats (like a cybersecurity professor with perfect recall)
+* RASSH: uses reinforcement learning to respond dynamically to attacker actions.
+* DeepDig: learns from each intrusion attempt, improving its responses over time.
+* Intelligent Honeypot: applies solutions from past interactions to novel situations.
 
 *Nothing stings quite like realising you've been outsmarted by a machine that was pretending to be vulnerable.*
 
-## Shadow honeypots: The silent observers
+## Shadow honeypots and concealment
 
-The ninjas of the honeypot world:
+The shadow honeypot approach passes traffic through triple-ID checks before any response is sent:
 
-* Triple-ID checks: Because one layer of paranoia is never enough
-* Passive monitoring: Like having security cameras the burglar never sees
-* AIPS: For when you want all your false positives in one place
+* Passive monitoring: the honeypot observes without being visible.
+* AIPS integration: for correlating false positives across the deployment.
 
-## Concealment & forensics
+Tools like Apate (Linux Kernel Module) help conceal honeypots within the operating system, manipulating
+system calls without detection and maintaining enough performance to stay convincing.
 
-Tools like Apate (Linux Kernel Module) help:
-
-* Hide your honeypots in plain sight
-* Manipulate system calls without detection
-* Maintain just enough performance to stay convincing
-
-Forensic capabilities have evolved from simple logging to full attack reconstruction - because understanding how you were almost hacked is nearly as important as stopping it.
+Forensic capabilities have developed from simple logging to full attack reconstruction. Understanding
+precisely how an intrusion unfolded is nearly as valuable as stopping it.

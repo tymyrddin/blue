@@ -1,6 +1,7 @@
-# OpenCanary – The lazy person’s honeypot
+# OpenCanary
 
-"For when you want security theatre without the rehearsal."
+Low-overhead honeypot supporting multiple protocols. Logs to syslog by default. Minimal configuration
+required to get something useful running.
 
 ## Installation
 
@@ -26,11 +27,9 @@ Create `opencanary.conf`:
 opencanaryd --start
 ```
 
-*Logs to syslog by default, minimal effort, maximum smugness.*
-
 ## Integration
 
-* Splunk: Use syslog-ng to forward logs
+* Splunk: use syslog-ng to forward logs.
 * fail2ban:
 
 ```
