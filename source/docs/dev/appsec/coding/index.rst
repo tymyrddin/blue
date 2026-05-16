@@ -11,7 +11,6 @@ labeled "DO NOT TOUCH (Seriously, We Mean It)" just to see what happens.
    :includehidden:
    :caption: Secure code is about making sure your mistakes don’t end up on the front page of The Times.
 
-   README.md
    input.md
    output.md
    authentication.md

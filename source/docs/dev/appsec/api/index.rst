@@ -12,7 +12,6 @@ faster than you can say "Why is there a Bitcoin miner in our /users endpoint?"
    :includehidden:
    :caption: APIs without security are just fancy data faucets, and hackers love free refills.
 
-   README.md
    monitor.md
    scan.md
    notrust.md

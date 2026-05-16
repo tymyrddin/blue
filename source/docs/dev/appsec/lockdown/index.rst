@@ -1,7 +1,7 @@
 Putting your code in a digital straitjacket
 ===================================================================
 
-Applications are like overly trusting golden retrievers They’ll happily fetch data from anyone, even if that "anyone"
+Applications are like overly trusting golden retrievers. They’ll happily fetch data from anyone, even if that "anyone"
 is a hacker with a malicious payload. Time to lock that down.
 
 .. toctree::

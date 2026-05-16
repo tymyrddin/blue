@@ -10,10 +10,10 @@ welcome mat.
    :includehidden:
    :caption: TLS misconfigurations: The digital equivalent of leaving your keys in the door and hoping no one notices
 
-   README.md
    tls-ssl.md
    certs.md
    forward.md
    vulns.md
    monitoring.md
+   mtls.md
    pq.md
