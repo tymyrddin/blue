@@ -1,75 +1,62 @@
-# Securing Containers: preventing pompromise and pontaining breaches
+# Securing containers: preventing compromise and containing breaches
 
-## Security by design (Pre-Deployment)
+## Security by design
 
-Build hardened images:
+Hardened images reduce the attack surface before a container ever runs. Minimal base images (Alpine, Distroless) include
+fewer binaries and fewer vulnerabilities. Removing shells and debug tools limits what an attacker can do after gaining
+access; if no shell exists in the image, a shell cannot be spawned.
 
-* Start with minimal base images (Alpine, Distroless)
-* Remove unnecessary tools (no shells, debug binaries)
-* Scan for vulnerabilities before deployment (Trivy, Grype)
-
-Lock down configurations:
-
-* Run as non-root (USER nobody)
-* Drop unneeded kernel capabilities (--cap-drop=ALL)
-* Make filesystems read-only (--read-only)
-
-Example:
-```bash
-docker run --read-only --cap-drop=ALL --user nobody my-safe-app
-```
-
-## Runtime protection
-
-Monitor for suspicious activity:
-
-* Detect unexpected processes (Falco, Tracee)
-* Block anomalous network connections (Cilium, Calico)
-* Limit resource usage to prevent crypto-mining (--memory=500m)
-
-Enforce immutability:
-
-* No live debugging in production
-* Terminate and redeploy instead of patching
-
-Tooling:
-
-```bash
-falco -r rules/container_abuse.yaml  # Alert on shell spawns in containers
-```
-
-## Scan everything, always
-
-Layers matter: Scan base images and application layers. Check for:
-
-* Known CVEs
-* Embedded secrets
-* Malicious packages
-
-Automate checks:
-
-* Block deployments if critical issues found
-* Re-scan weekly (new vulnerabilities emerge constantly)
-
-Example:
+Pre-deployment scanning with Trivy or Grype identifies known CVEs in base images and application layers before they
+reach production:
 
 ```bash
 trivy image --severity CRITICAL my-app:latest
 ```
 
-## When prevention fails: containment
+Configuration lockdown at run time:
 
-1. Network segmentation:
-   * Service meshes (Istio mTLS)
-   * Network policies (block cross-pod traffic)
-2. Forensic readiness:
-   * Preserve compromised containers for analysis
-   * Audit trails of container lifecycle events
+```bash
+docker run --read-only --cap-drop=ALL --user nobody my-safe-app
+```
 
-## More
+Running as non-root (`USER nobody`) removes a significant class of privilege escalation paths. `--cap-drop=ALL` removes
+all Linux capabilities by default; individual capabilities can be added back selectively with `--cap-add`. `--read-only`
+prevents the container from modifying its own filesystem.
 
-* [NSA Container Hardening Guide](https://media.defense.gov/2022/Jan/26/2002929608/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220126.PDF)
-* [Google's Distroless Containers](https://github.com/GoogleContainerTools/distroless)
-* [Container Security for development teams - 2022](https://snyk.io/learn/container-security/)
+## Runtime protection
 
+Falco and Tracee detect unexpected process activity inside containers (shell spawns, network connections to unexpected
+destinations, privilege changes) by instrumenting kernel system calls:
 
+```bash
+falco -r rules/container_abuse.yaml
+```
+
+Network policies (Cilium, Calico) can restrict which pods communicate with which, reducing the lateral movement surface
+after a compromise. Resource limits (`--memory=500m`, `--cpus=1`) constrain the impact of cryptomining or
+denial-of-service payloads.
+
+Immutability is a practical containment strategy: containers in production are not debugged live. When a container
+behaves unexpectedly, it is terminated and a fresh one is deployed. The anomalous container can be preserved for
+forensic analysis before teardown if the environment supports it.
+
+## Scanning
+
+Layers accumulate over time. New vulnerabilities emerge against packages that were clean at build time, which means
+images that passed a scan at deployment may be vulnerable weeks later. Periodic re-scanning (weekly is a common cadence)
+catches this drift. Embedding the scan into the CI/CD pipeline and blocking deployments on critical findings catches it
+at the gate.
+
+## Containment when prevention fails
+
+Service meshes (Istio with mTLS) encrypt and authenticate traffic between services, making it harder for a compromised
+container to intercept traffic from adjacent ones. Network policies that block cross-pod traffic by default and permit
+only required flows limit what a compromised container can reach.
+
+Audit trails of container lifecycle events (start, stop, exec, image pulls) provide the baseline for post-incident
+analysis.
+
+## Further reading
+
+- [NSA Container Hardening Guide](https://media.defense.gov/2022/Jan/26/2002929608/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220126.PDF)
+- [Google's Distroless Containers](https://github.com/GoogleContainerTools/distroless)

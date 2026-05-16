@@ -1,122 +1,80 @@
 # Database security comparison
 
-1. PostgreSQL
+Different databases have different default security postures, and the gap between default and hardened can be
+significant.
 
-Security strengths:
+## PostgreSQL
 
-* Row-Level Security (RLS): Restrict access per user/role.
-* Native SSL/TLS: Encrypts connections by default.
-* Strong Auth: SCRAM-SHA-256 password hashing.
-* Audit Logging: Via pgAudit extension.
+Row-Level Security (RLS) restricts which rows a user or role can see, which is relevant for multi-tenant applications
+where different users query the same table. Authentication defaults to SCRAM-SHA-256 (since PostgreSQL 14), which is
+resistant to replay attacks. Audit logging is available via the pgAudit extension.
 
-Weaknesses:
+PostgreSQL has no built-in transparent data encryption; encryption at rest requires filesystem-level encryption (
+dm-crypt/LUKS on Linux) or cloud storage encryption.
 
-* Complex setup for fine-grained permissions.
-* No built-in transparent data encryption (TDE).
+Well-suited to applications with compliance requirements (HIPAA, GDPR) that need per-row access control.
 
-Best for: Enterprises needing ACLs, compliance (HIPAA/GDPR).
+## MySQL / MariaDB
 
-2. MySQL/MariaDB
+GRANT/REVOKE syntax is simpler than PostgreSQL's, which makes RBAC setup more approachable. LDAP and PAM authentication
+are supported via pluggable auth. Transparent data encryption is available in MySQL Enterprise and MariaDB.
 
-Security strengths:
+Default installs in some distributions have historically set an empty root password; `mysql_secure_installation` walks
+through the initial hardening steps. Row-level security is not native and requires views or stored procedures to
+approximate it.
 
-* Easy RBAC: Simple GRANT/REVOKE syntax.
-* TDE Support: Enterprise editions only.
-* Pluggable Auth: Supports LDAP, PAM.
+## MongoDB
 
-Weaknesses:
+Document-level access control and field-level encryption are available. Authentication supports X.509 certificates and
+LDAP. TDE (encryption at rest) is available in MongoDB Enterprise.
 
-* Weak defaults: Empty root password in some installs.
-* No RLS: Must implement via views/procedures.
+The NoSQL injection surface is different from relational databases: queries expressed as JSON objects can be manipulated
+if user input is merged into query documents without sanitisation. `$where` clause evaluation (which runs JavaScript) is
+the highest-risk feature and is disabled in recent versions by default.
 
-Best for: Web apps, legacy systems.
+Older MongoDB defaults (pre-3.0) bound to `0.0.0.0` with no authentication; versions still running those defaults on
+internet-accessible interfaces have been a consistent source of data exposure incidents.
 
-3. MongoDB
+## SQLite
 
-Security strengths:
+File-based storage means no network attack surface and no authentication mechanism. Access control is entirely
+filesystem permissions. Encryption at rest requires SQLCipher or a filesystem-level solution; the default database file
+is plaintext.
 
-* Document-Level Access Control: Field encryption possible.
-* Enterprise TDE: Automatic encryption-at-rest.
-* Audit Logging: Native in paid versions.
+Appropriate for embedded applications, desktop tools, and local data stores. Not appropriate for multi-user server
+environments without an intermediary application enforcing access control.
 
-Weaknesses:
+## Redis
 
-* NoSQL Injection: Risky if queries concatenate user input.
-* Default Bind IP: 0.0.0.0 in older versions.
+TLS support and ACL-based per-command permissions were introduced in Redis 6.0. Data is not encrypted at rest in the
+open-source version. Earlier versions had no authentication mechanism; instances bound to public interfaces and running
+pre-6.0 versions have been directly exploitable via the protocol.
 
-Best for: JSON-heavy apps, rapid prototyping.
+Redis ACLs (Redis 6+) allow restricting a user to specific commands and key patterns:
 
-4. SQLite
+```
+ACL SETUSER app_user on >password ~app:* +get +set
+```
 
-Security strengths:
+## Feature comparison
 
-* No Network Exposure: File-based = no TCP attack surface.
-* Process Isolation: Runs in app memory space.
+| Feature               | PostgreSQL    | MySQL      | MongoDB    | SQLite | Redis       |
+|-----------------------|---------------|------------|------------|--------|-------------|
+| TLS encryption        | Yes           | Yes        | Yes        | No     | Yes (v6+)   |
+| Encryption at rest    | Extensions    | Enterprise | Enterprise | No     | No          |
+| Row/document security | Yes (RLS)     | No         | Yes        | No     | No          |
+| Audit logging         | pgAudit       | Enterprise | Enterprise | No     | No          |
+| Default auth          | SCRAM-SHA-256 | Variable   | X.509/LDAP | No     | No (pre-v6) |
 
-Weaknesses:
+## Common exposure patterns
 
-* No Authentication: File permissions = only defence.
-* No Encryption: Requires third-party tools (SQLCipher).
+PostgreSQL: misconfigured RLS that exposes rows across tenant boundaries.
 
-Best for: Embedded systems, local apps.
+MySQL: default root account without a password, or with `root@%` (accessible from any host).
 
-5. Redis
+MongoDB: `$where` clause injection; unauthenticated instances on public interfaces.
 
-Security strengths:
+SQLite: world-readable database file in a web-accessible directory.
 
-* TLS Support: v6.0+ encrypts connections.
-* ACLs: Per-command permissions (v6.0+).
-
-Weaknesses:
-
-* No Encryption-at-Rest: Data stored plaintext.
-* Weak Defaults: No auth in older versions.
-
-Best for: Caching, real-time systems.
-
-## Critical security features comparison
-
-| Feature	                | PostgreSQL	        | MySQL	          | MongoDB	        | SQLite	 | Redis      | 
-|-------------------------|--------------------|-----------------|-----------------|---------|------------|
-| TLS Encryption	         | ✅	                 | ✅	              | ✅	              | ❌	      | ✅ (v6+)    | 
-| Encryption-at-Rest	     | ❌ (Extensions)	    | ✅ (Enterprise)	 | ✅ (Enterprise)	 | ❌	      | ❌          | 
-| Row/Doc-Level Security	 | ✅ (RLS)	           | ❌	              | ✅	              | ❌	      | ❌          | 
-| Audit Logging	          | ✅ (pgAudit)	       | ✅ (Enterprise)	 | ✅ (Enterprise)	 | ❌	      | ❌          | 
-| Default Auth Strength	  | ✅ (SCRAM-SHA-256)	 | ❌ (Empty root)	 | ✅ (X.509/LDAP)	 | ❌	      | ❌ (Pre-v6) | 
-
-## Top threats per database
-
-* PostgreSQL: Misconfigured RLS exposing sensitive rows.
-* MySQL: Default root@localhost with no password.
-* MongoDB: NoSQL injection via $where clauses.
-* SQLite: File corruption via app vulnerabilities.
-* Redis: Unauthenticated access leading to RCE.
-
-## Hardening checklist
-
-For All Databases:
-
-* Enable TLS (even for local connections).
-* Rotate credentials regularly.
-* Restrict network access (firewalls, VPCs).
-
-Specifically:
-
-* PostgreSQL: Enable pgAudit, use RLS.
-* MySQL: Run mysql_secure_installation, disable LOCAL INFILE.
-* MongoDB: Enable auth, disable $where/eval.
-* SQLite: Use SQLCipher for encryption.
-* Redis: Upgrade to v6+, enable ACLs.
-
-When to Use Which
-
-* GDPR/HIPAA: PostgreSQL (RLS + extensions).
-* Web Apps: MySQL (with strict RBAC).
-* Unstructured Data: MongoDB (enable field-level encryption).
-* Embedded Devices: SQLite (with filesystem encryption).
-* Caching: Redis (v6+ with TLS and ACLs).
-
-## More
-
-* [OWASP Database Security](https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html)
-* [CIS Benchmarks (For PostgreSQL/MySQL hardening)](https://www.cisecurity.org/cis-benchmarks)
+Redis: unauthenticated instance reachable from the internet, which allows reading all keys and, in some versions,
+writing arbitrary files via `CONFIG SET dir` and `CONFIG SET dbfilename`.

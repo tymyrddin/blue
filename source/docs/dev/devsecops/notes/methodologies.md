@@ -9,7 +9,7 @@ SDL principles:
 * Secure in Deployment: software deployment is accompanied by tools and guidance supporting users and administrators.
 * Communications: software developers are prepared for occurring threats by communicating openly and timely with users and administrators
 
-SDL is a collection of mandatory security activities grouped by the traditional software development lifecycle phases. Data is collected to assess training effectiveness. In-process metrics are used to confirm process compliance. Post-release metrics are used to guide future changes. SDL places heavy emphasis on understanding the cause and effect of security vulnerabilities. A development team must complete the mandatory security activities to comply with the Microsoft SDL process.
+SDL is a collection of mandatory security activities grouped by the traditional software development lifecycle phases. Data is collected to assess training effectiveness. In-process metrics are used to confirm process compliance. Post-release metrics are used to guide future changes. SDL places heavy emphasis on understanding the cause and effect of security vulnerabilities. A development team completes the mandatory security activities to comply with the Microsoft SDL process.
 
 ## OWASP's S-SDLC
 
@@ -20,7 +20,7 @@ S-SDLC Principles
 * In-process metrics are used to confirm process compliance.
 * Post-release metrics are used to guide future changes.
 * SDL places heavy emphasis on understanding the cause and effect of security vulnerabilities.
-* A development team must complete the sixteen mandatory security activities to comply with the Microsoft SDL process.
+* A development team completes the sixteen mandatory security activities to comply with the Microsoft SDL process.
 
 OWASP S-SDLC aims to build "security quality gates", to support quality and secure software made throughout the pipeline. This is done by following an Agile Security approach, where sprints are dedicated to security. Examples of Sprints can include: Code reviews, authentication, authorisation, input validation, and assessing technical risks like code injections. The gates comprise sprints focusing on similar building blocks like those seen in Microsoft SDL. OWASP S-SDLC Agile approach is heavily influenced and based on a "Maturity Model" approach, in particular OWASP SAMM. 
 
@@ -30,7 +30,7 @@ The Software Assurance Maturity Model (SAMM) is an open framework to help organi
 
 ## Building Security In Maturity Model (BSIMM)
 
-BSIMM is a study of real-world software security initiatives and reflects the current state of software security. BSIMM can be described as a "measuring stick" to understand your security posture by providing a comparison of other companies' security states. In other words, it does not tell you what you should do but rather what you are doing wrong. There are hundreds of organisations involved
+BSIMM is a study of real-world software security initiatives and reflects the current state of software security. BSIMM can be described as a "measuring stick" to understand an organisation's security posture by providing a comparison of other companies' security states. In other words, it does not prescribe what to do but rather shows what is being done differently from peers. There are hundreds of organisations involved
 
 ## Resources
 

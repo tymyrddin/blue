@@ -1,6 +1,6 @@
 # Security-testing plan and practices
 
-A security assessment plays a primary role in achieving security in SDLC and should be implemented in all phases where possible. Security testing assesses a system, software or web application for vulnerabilities and other attack vectors. Because they test from a holistic point of view of the application, they are usually carried out at the end of the SDLC, in the Operations and Maintenance phase, once the version has included all the working components and updates. There are two types of assessments: Penetration Testing and Vulnerability Assessment. Usually, a company employs and authorises external security testers to attempt to break into a company’s network and systems legally.
+A security assessment plays a primary role in achieving security in SDLC and is worth implementing in all phases where possible. Security testing assesses a system, software or web application for vulnerabilities and other attack vectors. Because they test from a holistic point of view of the application, they are usually carried out at the end of the SDLC, in the Operations and Maintenance phase, once the version has included all the working components and updates. There are two types of assessments: Penetration Testing and Vulnerability Assessment. Usually, a company employs and authorises external security testers to attempt to break into a company’s network and systems legally.
 
 ## Vulnerability assessment
 
@@ -75,13 +75,13 @@ Another type of testing goes hand in hand with SAST, Software Composition Analys
 
 DAST means Dynamic Application Security Testing, a black-box testing method that finds vulnerabilities at runtime. DAST is a tool to scan any web application to find security vulnerabilities. This tool is used to detect vulnerabilities inside a web application that has been deployed to production. DAST tools will always send alerts to the security team assigned for immediate remediation.
 
-DAST works by simulating automated attacks on an application, mimicking a malicious attacker. The goal is to find unexpected outcomes or results that attackers could use to compromise an application. Since DAST tools don't have internal information about the application or the source code, they attack just as an external hacker would, with the same limited knowledge and information about the application.
+DAST works by simulating automated attacks on an application, mimicking a malicious attacker. The goal is to find unexpected outcomes or results that attackers could use to compromise an application. Since DAST tools do not have internal information about the application or the source code, they attack just as an external hacker would, with the same limited knowledge and information about the application.
 
 DAST is a tool that can be integrated very early into the software development lifecycle. Its focus is to help organisations reduce and protect against the risk that application vulnerabilities could cause. It is very different from SAST because DAST uses the Black Box Testing Methodology; it conducts its vulnerability assessment outside as it does not have access to the application source code. DAST is typically used during the testing phase of SDLC.
 
 ### IAST
 
-IAST means Interactive Application Security Testing that analyses code for security vulnerabilities while the app is running. It is usually deployed side by side with the main application on the application server. IAST is an application security tool designed for web and mobile applications to detect and report issues even while running. Before someone can fully comprehend IAST's understanding, the person must know what SAST and DAST mean. IAST was developed to stop all the limitations in both SAST and DAST. It uses the Grey Box Testing Methodology.
+IAST means Interactive Application Security Testing that analyses code for security vulnerabilities while the app is running. It is usually deployed side by side with the main application on the application server. IAST is an application security tool designed for web and mobile applications to detect and report issues even while running. Before someone can fully comprehend IAST's understanding, understanding SAST and DAST is a prerequisite. IAST was developed to stop all the limitations in both SAST and DAST. It uses the Grey Box Testing Methodology.
 
 IAST testing occurs in real-time, just like DAST, while the application runs in the staging environment. IAST can identify the line of code causing security issues and quickly inform the developer for immediate remediation. IAST checks the source code similar to SAST, but at the post-build stage, unlike SAST, which occurs during development. 
 
@@ -93,16 +93,16 @@ During functional testing, the agent studies every pattern that a data transfer 
 
 RASP stands for Runtime Application Self Protection. RASP is a runtime application integrated into an application to analyse inward and outward traffic and end-user behavioural patterns to prevent security attacks. This tool is different from the other tools as RASP is used after product release, making it a more security-focused tool when compared to the others that are known for testing.
 
-RASP is deployed to a web or application server next to the main application while running to monitor and analyse the inward and outward traffic behaviour. Immediately once an issue is found, RASP will send alerts to the security team and immediately block access to the individual making a request. When you deploy RASP, it will secure the whole application against different attacks. It does not just wait or try to rely only on specific signatures of some known vulnerabilities.
+RASP is deployed to a web or application server next to the main application while running to monitor and analyse the inward and outward traffic behaviour. Immediately once an issue is found, RASP will send alerts to the security team and immediately block access to the individual making a request. Deployed RASP secures the whole application against different attacks. It does not just wait or try to rely only on specific signatures of some known vulnerabilities.
 
-RASP is a complete solution that observes every detail of different attacks on your application and knows your application behaviour.
+RASP is a complete solution that observes every detail of different attacks on the application and knows the application behaviour.
 
 ## Choosing tools
 
 SAST, DAST, and IAST are tools that complement each other. 
 
-* A key strength of DAST is that it identifies runtime issues, weaknesses that aren't discoverable when an application 
-isn't running.
+* A key strength of DAST is that it identifies runtime issues, weaknesses not detectable when an application 
+is not running.
 * SAST is excellent at identifying vulnerabilities while code is being written.
 * Additionally, DAST looks at how an application responds to an attack, providing helpful insight into how likely it 
 would be for that vulnerability to be manipulated.
@@ -110,10 +110,10 @@ would be for that vulnerability to be manipulated.
 helps prioritise and alert on vital critical risks, as defined by business goals and application security needs. 
 
 Security experts always support using two or more of these tools to ensure better coverage, which will lower the risk 
-of vulnerabilities in production. Ensure you fit these tools to the way engineers push code and interact with the 
+of vulnerabilities in production. Fitting these tools to the way engineers push code and interact with the 
 pipeline; watch out for integrations and focus on providing support and education vs being a blocker. 
 
-For example, if choosing SAST, you can integrate it when engineers push code, and they can get feedback on the PR 
+For example, SAST can be integrated at the point engineers push code, providing feedback on the PR 
 before merging.
 
 ## When and where?
@@ -124,7 +124,7 @@ SAST is a static approach; there is no need for a running application. Therefore
 earliest development stages. 
 
 SCA typically work best for Identifying open source components, like packages via dependencies. It is also beneficial 
-for identifying open-source licences being used, especially from a legal risk perspective. Because of this, you can 
+for identifying open-source licences in use from a legal risk perspective. This approach can 
 implement governance and control by enforcing security and licence policies across the different stages of SDLC.
 
 DAST relies on the execution of the application, so integrating it in the pipeline is not as straightforward as 
@@ -132,7 +132,7 @@ SAST. DAST is typically implemented after the acceptance stage of the code and p
 where the application starts running in testing environments (e.g. sandbox/staging) similar to IAST. 
 
 DAST and IAST reside on the far right of the pipeline because the execution of the application is required for DAST 
-tools to do their work. This can become quite time-consuming, significantly if your application has grown over time. 
+tools to do their work. This can become quite time-consuming, significantly if the application has grown over time. 
 
 RASP helps uncover third-party packages and associated vulnerabilities at runtime, more effectively enabling 
 developers to prioritise the remediation and mitigation of their highest pressing vulnerabilities. This is usually 

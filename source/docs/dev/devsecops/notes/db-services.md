@@ -14,7 +14,7 @@ The database engine can be a common database engine such as MySQL, PostgreSQL, M
 3. For relational databases, select a machine type (or size).
 4. Choose whether high availability is required.
 5. Deploy a managed database instance (or cluster).
-6. Configure network access control from your cloud environment to the managed database.
+6. Network access control from the cloud environment to the managed database is configured as part of setup.
 7. Enable logging for any access attempt or configuration changes in the managed database.
 8. Configure backups on the managed database for recovery purposes.
 9. Connect the application to the managed database and use the service.

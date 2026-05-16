@@ -9,7 +9,7 @@
 
 - EU-First Policy: Most services hosted in Germany/Finland; non-EU cloud servers require opt-in.  
 - Pseudonymisation: IP addresses anonymized in logs (e.g., `123.123.123.XXX`).  
-- Customer-Managed Encryption: Users must encrypt data on rented servers; no native key management.  
+- Customer-Managed Encryption: Data on rented servers requires customer-managed encryption; no native key management is provided.  
 
 ## Subprocessor transparency
 

@@ -1,7 +1,7 @@
 # Best practices for securing GCP services
 
 Google Cloud Platform (GCP) provides robust security features, but proper configuration is critical to protect 
-workloads, data, and identities. Following Google’s shared responsibility model, customers must secure their 
+workloads, data, and identities. Following Google’s shared responsibility model, customers securere their 
 deployments while Google handles infrastructure security.
 
 1. Identity & access management (IAM)
@@ -19,7 +19,7 @@ deployments while Google handles infrastructure security.
    * Cloud Audit Logs – Track all admin activities, data access, and system events.
    * Chronicle SIEM – Correlate GCP logs with enterprise-wide telemetry for threat hunting.
 4. Data protection
-   * Customer-Managed Encryption Keys (CMEK) – Control your own encryption keys in Cloud KMS.
+   * Customer-Managed Encryption Keys (CMEK) – Controls encryption keys in Cloud KMS.
    * Data Loss Prevention (DLP) – Automatically detect and redact sensitive data (PII, credentials).
    * Default Encryption – All data is encrypted at rest (AES-256) and in transit (TLS 1.2+).
 5. Governance & compliance

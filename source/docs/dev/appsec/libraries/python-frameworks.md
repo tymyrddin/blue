@@ -1,138 +1,77 @@
-# Python web framework security comparison
+# Python web framework security
 
-1. Django
+Python web frameworks vary in how much security they provide by default. Django takes a batteries-included approach with many protections enabled out of the box; Flask provides a minimal core and relies on extensions for most security features; FastAPI and Pyramid sit between those poles in different ways.
 
-Security strengths:
+## Django
 
-* "Batteries-included" security: Built-in protections against OWASP Top 10 risks (CSRF, XSS, SQLi)
-* Automatic escaping in templates (no |safe = no XSS)
-* ORM prevents SQL injection by default
-* Clickjacking/XSS/CSRF middleware enabled by default
+Django's default project configuration enables several security middlewares:
 
-Weaknesses:
+- CSRF protection via `CsrfViewMiddleware`
+- Clickjacking protection via `XFrameOptionsMiddleware`
+- Template auto-escaping via Jinja2-compatible templates (values in `{{ }}` are HTML-escaped by default)
+- ORM parameterisation prevents SQL injection in standard queries
 
-* Complex settings can lead to misconfigurations (e.g., DEBUG=True in production)
-* Monolithic design increases attack surface
+Common Django-specific risks:
 
-Key security features:
+`DEBUG = True` in production exposes stack traces with local variable values and the full project structure. Django raises a runtime error if `DEBUG = True` and `ALLOWED_HOSTS` is not set to `['*']`; production environments with `ALLOWED_HOSTS` configured correctly can still expose stack traces via `DEBUG`.
 
-* django-admin startproject enables security middleware by default
-* Password hashing (PBKDF2/Argon2) built-in
-* Official Security Docs
+`pickle` serialisation appears in Django's cache framework. When `django.core.cache.backends.memcached` or similar backends store session data using pickle, and an attacker can write to the cache, deserialization becomes a code execution vector. The database session backend avoids this.
 
-2. Flask
+`render_template_string()` and custom template loading from user-supplied strings bypass auto-escaping at the template level (the string is evaluated as a template, so injected template syntax executes before escaping).
 
-Security strengths:
+## Flask
 
-* Minimalist core = smaller attack surface
-* Explicit security controls (no "magic")
+Flask's core is intentionally minimal. Auto-escaping is on by default for `.html`, `.htm`, `.xml`, and `.xhtml` templates via Jinja2; `.txt` templates are not escaped.
 
-Weaknesses:
+Flask provides no CSRF protection by default. `flask-wtf` and `flask-seasurf` both add CSRF token handling.
 
-* No built-in protections: CSRF, SQLi, and XSS rely on extensions
-* Template escaping requires MarkupSafe or manual escape()
-* Easy to misconfigure (e.g., app.secret_key hardcoded)
+Common Flask-specific risks:
 
-Key security features:
+`app.secret_key` hardcoded in source code is a frequent pattern in tutorials that persists into production. The secret key is used to sign session cookies; anyone with the key can forge session cookies for any user.
 
-* flask-talisman for HTTPS/CSP headers
-* flask-seasurf for CSRF protection
-* Flask Security Checklist
+`app.debug = True` activates Werkzeug's interactive debugger, which exposes a Python REPL in the browser. The debugger PIN is breakable.
 
-3. FastAPI
+`jsonify()` is safe for serialising Python dicts to JSON; the risk is serialising data structures that contain user-controlled keys without validation.
 
-Security strengths:
+## FastAPI
 
-* Automatic input validation (Pydantic models)
-* OAuth2/JWT built-in (via fastapi.security)
-* Async reduces thread-based attacks
+FastAPI validates request bodies against Pydantic models by default, which provides type-checked, range-checked input validation at the API boundary. This is a meaningful security property: a handler that declares `user_id: int` receives an integer, not a string that happens to look like one.
 
-Weaknesses:
+`fastapi.security` provides OAuth2 and JWT utilities. The JWT implementation delegates signature verification to the `python-jose` library; key management and algorithm selection (`RS256` over `HS256` for API-to-API tokens) are application-level choices.
 
-* Dependency injection complexity can introduce risks
-* Young ecosystem (fewer battle-tested security extensions)
+OpenAPI documentation (`/docs`, `/redoc`) is enabled by default and exposes the full API schema. Disabling it in production is a simple configuration:
 
-Key security features:
+```python
+app = FastAPI(docs_url=None, redoc_url=None)
+```
 
-* SQLAlchemy ORM integration prevents SQLi
-* uvicorn with --ssl-keyfile for HTTPS
-* Security Docs
+## Pyramid
 
-4. Pyramid
+Pyramid's ACL-based permission system is more flexible than Django's group-based model and correspondingly more complex to configure correctly. Permission rules that are overly broad, or ACLs that fall through to a default `Allow` rather than `Deny`, can grant unintended access.
 
-Security strengths:
+Pyramid uses Chameleon or Mako templates by default, which have different auto-escaping behaviour from Jinja2. Mako does not auto-escape by default; escaping is explicit.
 
-* Flexible auth (ACL-based permissions)
-* Less magic = fewer hidden attack vectors
+## Framework comparison
 
-Weaknesses:
+| Framework | XSS default | CSRF default | Input validation | Auth system |
+|---|---|---|---|---|
+| Django | Auto-escaping | CsrfViewMiddleware | Forms/serialisers | Built-in |
+| Flask | Jinja2 auto-escape | Extension required | Extension required | Extension required |
+| FastAPI | Pydantic validation | Manual | Pydantic (built-in) | OAuth2/JWT |
+| Pyramid | Template-dependent | Extension required | Colander/others | ACL-based |
 
-* Steeper learning curve for security controls
-* Smaller community = slower CVE patches
+## Common risks across frameworks
 
-Key security features:
+Static analysis with `bandit` identifies common patterns (hardcoded secrets, `eval()`, `subprocess.run(shell=True)`) in Python source:
 
-* pyramid_debugtoolbar for dev-time checks
-* pyramid_jwt for stateless auth
+```bash
+bandit -r src/
+```
 
-## Critical security comparison
+Dependency scanning with `pip-audit` identifies known CVEs in installed packages:
 
-| Framework	 | XSS Protection	 | CSRF Default	 | SQLi Protection	 | Auth System	 | CVE History |
-|------------|-----------------|---------------|------------------|--------------|-------------|
-| Django	    | Auto-escaping	  | Enabled	      | ORM	             | Built-in	    | Low         | 
-| Flask	     | Manual	         | Extension	    | Extension        | Extension    | Medium      | 
-| FastAPI	   | Pydantic	       | Depends	      | SQLAlchemy	      | OAuth2/JWT	  | Low         | 
-| Pyramid	   | Manual	         | Extension	    | SQLAlchemy	      | ACL-based	   | Very Low    | 
+```bash
+pip-audit
+```
 
-## Framework-specific threats
-
-Django:
-
-* Misconfigured `ALLOWED_HOSTS` → header injection
-* `pickle` serialisation risks in caching
-
-Flask:
-
-* `app.debug=True` leaks stack traces
-* Unsafe `jsonify()` with user input
-
-FastAPI:
-
-* Dependency injection abuse
-* OpenAPI/Swagger exposure in prod
-
-Pyramid:
-
-* Complex ACL rules → permission errors
-* Less auto-escaping in templates
-
-## Universal Python risks
-
-* Dependency hijacking (PyPI malware) → Use pip-audit
-* WSGI servers (gunicorn/uWSGI) need hardening
-* Secret management (avoid .env files in prod)
-
-## Recommendations
-
-* Enterprise apps: Django (batteries-included security)
-* Microservices: FastAPI (async + Pydantic validation)
-* Prototyping: Flask (but add security extensions)
-* Flexibility needed: Pyramid (for custom auth)
-
-All frameworks require:
-
-* Content-Security-Policy headers
-* Regular safety check scans
-* HTTPS enforcement (redirect HTTP → HTTPS)
-
-## Tools for hardening
-
-* Django: django-security (middleware package)
-* Flask: flask-seasurf (CSRF), flask-talisman (CSP)
-* FastAPI: secure (headers middleware)
-* All: bandit (static analysis), safety (vuln scans)
-
-## More
-
-* [OWASP Python Security Project - PySec](https://owasp-pysec.readthedocs.io/en/latest/)
-* [PyPI Safety Checks](https://pypi.org/project/safety/)
+WSGI servers (gunicorn, uWSGI) and ASGI servers (uvicorn) have their own configuration considerations: worker count, timeout settings, and whether the development server is exposed directly to the internet rather than behind a reverse proxy.

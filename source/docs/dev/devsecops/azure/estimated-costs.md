@@ -14,7 +14,7 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure Az
 * Monitoring (minimal retention): €15
 * Key Vault, Resource Groups: €35
 
-*You’ve made peace with YAML pipelines and tag your resources religiously. Azure billing weeps with boredom.*
+*YAML pipelines configured, resources tagged. Azure billing weeps with boredom.*
 
 ### Worst case – Spaghetti pipeline, forgotten dev resources
 
@@ -27,4 +27,4 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure Az
 * Azure DevOps hosted agents scaling unchecked: €60
 * Surprise Licensing (SQL Server, Premium tier): €70
 
-*Azure: where the default setting is "Yes, bill me."*
+*Azure: where the default setting is frequently "Yes, bill me."*

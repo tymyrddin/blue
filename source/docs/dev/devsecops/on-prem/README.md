@@ -13,11 +13,11 @@ Service Account Hell
 - Rotate service account keys every 90 days, or better yet, use short-lived certificates (e.g., Vault-managed tokens).
 - Audit service accounts monthly. Orphaned keys are like unlocked backdoors.
 
-## 2. Network security: Assume you're already breached
+## 2. Network security: assume breach
 
 Segmentation Over Hope
 
-- Air-gap critical workloads: Finance and healthcare systems shouldn't share a VLAN with the office printer.
+- Air-gap critical workloads: Finance and healthcare systems and the office printer do not belong on the same VLAN.
 - Zero Trust Networking: Authenticate *every* request, even internal ones. Tools like SPIFFE/SPIRE help .
 - Firewall Rules:
   - Block all inbound traffic by default. Yes, even SSH. Use jump hosts.
@@ -26,7 +26,7 @@ Segmentation Over Hope
 Encryption In Transit
 
 - TLS 1.3 everywhere, including internal services. Self-signed certs are a last resort. Use a private PKI (e.g., Smallstep).
-- MACsec for inter-rack traffic. Because eavesdropping isn't just a cloud problem .
+- MACsec for inter-rack traffic. Because eavesdropping is not only a cloud problem .
 
 ## 3. Monitoring & threat detection
 
@@ -37,8 +37,8 @@ Log Like Big Brother Is Watching (Because He Is)
 
 Container-Specific Checks
 
-- Use Falco for runtime container monitoring. That crypto miner in your `nginx` container won't hide for long.
-- Image Scanning: Integrate Trivy or Anchore into your CI/CD pipeline *before* deployment .
+- Use Falco for runtime container monitoring. A crypto miner in an `nginx` container tends not to hide for long.
+- Image Scanning: Integrate Trivy or Anchore into the CI/CD pipeline *before* deployment .
 
 ## 4. Data protection
 
@@ -50,14 +50,14 @@ Encryption At Rest
 Sensitive Data Handling
 
 - Data Loss Prevention (DLP): Scan for PII/credentials in logs and storage. Redact or pseudonymise where possible.
-- Immutable Backups: Use write-once storage for backups. Ransomware can't encrypt what it can't overwrite.
+- Immutable Backups: Use write-once storage for backups. Ransomware cannot encrypt what it cannot overwrite.
 
 ## 5. Governance & compliance
 
 Policy As Code
 
 - Define security policies in Terraform/Ansible, not Confluence docs nobody reads. Enforce via CI/CD checks.
-- CIS Benchmarks: Hardened images for Linux/Windows. No, "default install" isn't secure .
+- CIS Benchmarks: Hardened images for Linux/Windows. "Default install" is not secure .
 
 Binary Authorisation (For Containers)
 
@@ -66,8 +66,8 @@ Binary Authorisation (For Containers)
 
 ## When to ignore these rules
 
-- Legacy systems: Can't air-gap that 2003-era ERP? Isolate it and monitor like a hawk.
-- Developer experience: Security shouldn't cripple productivity. Use vaulted credentials instead of blocking Docker entirely.
+- Legacy systems: Cannot air-gap that 2003-era ERP? Isolate it and monitor like a hawk.
+- Developer experience: Security that cripples productivity tends not to survive. Use vaulted credentials instead of blocking Docker entirely.
 
 ## How?
 

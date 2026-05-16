@@ -4,13 +4,13 @@ Each cloud provider has its own implementation of virtual networking. According 
 
 Virtual networking (such as Amazon VPC, Azure VNet, or Google Cloud Platform (GCP) VPC) is a network layer that is the responsibility of the customers (this layer enables access between virtual servers, managed storage services, managed databases, and more). Traditional on-premises networking deals with the physical connections between devices in a system: for example, concepts such as virtual local area networks (VLANs) or subnetting, to split a network (with the devices connected to a network) and create network security barriers.
 
-In the cloud, a network is software-based (software-defined networking (SDN)). In the cloud, you have micro-segmentation, which means you can configure allow and deny access control rules between two instances (even if they are located on the same subnet). You will also be able to audit and control access to a resource such as an API.
+In the cloud, a network is software-based (software-defined networking (SDN)). In the cloud, micro-segmentation allows configuring allow and deny access control rules between two instances, even on the same subnet. Auditing and controlling access to resources such as APIs is built into the model.
 
 A virtual network is a network area inside a cloud environment where most of the common cloud resources reside (such as virtual servers, managed databases, and so on). These resources are split into multiple network segments called subnets. There can be one or more virtual networks in each customer's cloud environment, but at the end of the day, the basic idea is the same:
 
 * Access to subnets is controlled by access controls (such as Layer 4 firewalls).
 * Subnets can be private (no direct access from the internet) or public (access from the internet is allowed).
-* If you need to allow access to the internet for private subnet resources, you need to configure a NAT gateway.
+* Allowing internet access for private subnet resources requires a NAT gateway.
 * Virtual networks can be connected with each other via peer connections.
 
 ## Related

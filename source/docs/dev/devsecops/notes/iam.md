@@ -10,7 +10,7 @@ Access management is made up of the following main concepts:
 
 ## AD
 
-Understanding AD is not easy, but basic knowledge is necessary when talking about IAM. An organisation should only have one central directory. Identities should only be kept in one place. That also comes with a risk: if a directory gets breached, an attacker will have access to all identities that exist within the organisation. It's crucial that the directory and the IAM system are very secure and that directory data is extremely well protected. This is an area where tools such as Saviynt and CyberArk come in; they add an extra security layer on top of IAM.
+Understanding AD is not easy, but basic knowledge is necessary when talking about IAM. An organisation typically maintains one central directory. Identities kept in one place reduces complexity but concentrates risk. That also comes with a risk: if a directory gets breached, an attacker will have access to all identities that exist within the organisation. The directory and IAM system represent a high-value target; the security of directory data is proportionally important. This is an area where tools such as Saviynt and CyberArk come in; they add an extra security layer on top of IAM.
 
 The term AD is very much associated with Microsoft, as it was developed by that company for Windows domain networks. It has become a widely accepted term for the concept itself. AD comprises basically two major components that are both relevant in cloud environments. The first component is the directory itself; the second component is the domain services.
 
@@ -29,8 +29,7 @@ AAD also provides access to SaaS solutions such as Microsoft 365 and application
 The federation between the domains in the corporate network and the corporate domain in Azure
 cloud is done with Active Directory Federation Services (ADFS). Strictly speaking, there’s no
 hard requirement to use ADFS since AAD integrates with AD natively with hybrid entities, using
-password hash-sync or passthrough authentication. For third-party MFA you will still need
-ADFS though.
+password hash-sync or passthrough authentication. For third-party MFA, ADFS is still needed.
 
 In the cloud, a corporate cloud domain is situated in the domain of the public cloud itself. In Azure, that is defined by onmicrosoft.com; this domain name address signifies that an environment resides in Azure.
 

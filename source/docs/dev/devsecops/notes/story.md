@@ -6,7 +6,7 @@ Understanding how things have improved over the years and their impact on the se
 
 In 2008, a conversation between Andrew Clay and Patrick Debois led to something quite revolutionary. While discussing the drawbacks of Agile, DevOps was born. After an event in Belgium the following year called "DevOpsDays," DevOps became the next buzzword, and its popularity increased.
 
-DevOps is quite different from other methodologies because it focuses on driving <br>"cultural change" to increase efficiency. It attempts to unite the magic of all teams working on a project, using integration and automation. With these ingredients, you get a cross-integration across all departments, QA+sysadmins+developers. 
+DevOps is quite different from other methodologies because it focuses on driving  "cultural change" to increase efficiency. It attempts to unite the magic of all teams working on a project, using integration and automation. With these ingredients, the result is cross-integration across all departments, QA+sysadmins+developers. 
 
 For example, ensuring developers can now be involved in deployment and sysadmins can now write scripts, QA can figure out how to fix flaws vs constantly testing for functionality. By introducing automation and integration of systems, these engineers can now have the same visibility at all times and interact accordingly. We will dive more into how DevOps does this in the latter rooms as we talk about pipelines, automation, Continuous Integration and Continuous Delivery (CI/CD).
 
@@ -22,7 +22,7 @@ Development infrastructure can be fully automated and operate on a self-service 
 * Organisations can now provision containerised workloads dynamically using automated, adaptive processes.
 * The declarative approach requires that users specify the end state of the infrastructure - for example, deploy these machines in a running state directly into an environment, automating the configuration choices throughout the workflow. The software builds it and releases it with no human interaction.
 
-The imperative/procedural approach takes action to configure systems in a series of actionable steps. For example, you might declare to deploy a new version of the software and automate a series of steps to get a deployment-ready state. You choose when to apply those changes at the end by adding a "gate" this gate could be a button to release the changes, e.g. "deploy changes" button, after all the automated checks and new configurations pass.
+The imperative/procedural approach takes action to configure systems in a series of actionable steps. For example, a deployment of a new version automates a series of steps to reach a deployment-ready state. The changes are applied at the end via a "gate" this gate could be a button to release the changes, e.g. "deploy changes" button, after all the automated checks and new configurations pass.
 
 In such a workflow, even a tiny problem could create a mess. Moreover, as the number of new releases increases (the actual case), the whole matter may turn disastrous. Things would surely go out of hand with an issue still unresolved and plenty of features scheduled to be released.
 
@@ -43,7 +43,7 @@ DevOps is visualised as an infinite loop, describing all the comprising phases:
 
 Security can supposedly be easily integrated because of the visibility and flexibility that DevOps introduces. "Shifting Left" means that DevOps teams focus on instilling security from the earliest stages in the development lifecycle and introducing a more collaborative culture between development and security.
 
-Since security can now be introduced early, risks are reduced massively. In the past, you would find out about security flaws and bugs at the very late stages, even in production. They are leading to stress, rollbacks, and economic losses. Integrating code analysis tools and automated tests earlier in the process can now identify these security flaws during early development.
+Since security can now be introduced early, risks are reduced massively. In the past, security flaws and bugs were found at very late stages, even in production. They are leading to stress, rollbacks, and economic losses. Integrating code analysis tools and automated tests earlier in the process can now identify these security flaws during early development.
 
 ## Shifting left
 

@@ -2,7 +2,7 @@
 
 ## Phase 1: Reality check
 
-☐ Audit your current cloud usage
+☐ Audit current cloud usage
 
 * Inventory services, dependencies, regions, and lurking Lambda functions.
 * Identify critical workloads vs vanity projects.
@@ -27,8 +27,8 @@
 
 ☐ Assess compliance risk
 
-* Are you GDPR-compliant or just spiritually so?
-* Know where your data physically lives and under which jurisdiction.
+* Is the setup GDPR-compliant or just spiritually so?
+* Know where data physically lives and under which jurisdiction.
   * [](../aws/gdpr-compliance.md)
   * [](../azure/gdpr-compliance.md)
   * [](../gcp/gdpr-compliance.md)
@@ -36,13 +36,13 @@
 
 ## Phase 2: Plan your escape
 
-☐ Choose your model
+☐ Choose the deployment model
 
 * Cloud-on-prem: full local hosting with cloud-like tools.
 * Hybrid: local core + hyperscale for bursts or AI training.
 * Multicloud: diversify, but be ready to juggle.
 
-☐ Select your toolkit
+☐ Select the toolkit
 
 * Orchestration: Kubernetes, Nomad, or a stiff gin.
 * IaaS replacement: OpenStack, Proxmox, Harvester.
@@ -52,12 +52,12 @@
 
 * [Hetzner](https://www.hetzner.com/) for power-efficient, no-nonsense infra.
 * [UpCloud](https://upcloud.com/) for low-latency EU edge.
-* [Greenhost](https://greenhost.net/) or [1984.is](https://1984.hosting/) if you fancy civil liberties with your compute.
+* [Greenhost](https://greenhost.net/) or [1984.is](https://1984.hosting/) for civil-liberties-friendly compute.
 
 ☐ Pilot and test
 
 * Start with dev/test environments.
-* Benchmark latency, throughput, and your team’s morale.
+* Benchmark latency, throughput, and team morale.
 
 ## Phase 3: Migrate like a professional
 
@@ -85,26 +85,26 @@
 
 ☐ Decommission responsibly
 
-* Delete unused cloud resources (don’t just *think* you did).
+* Delete unused cloud resources (verify rather than assume).
 * Watch final invoices like a hawk with trust issues.
 
 ☐ Update policies and documentation
 
 * New infrastructure = new responsibilities.
-* Train staff. Resist eye-rolls.
+* Train staff. Expect some eye-rolls.
 
 ☐ Monitor for regression
 
-* Don’t slide back into “just this one AWS S3 bucket…”
-* Build cloud repatriation into your tech strategy.
+* Avoid sliding back into “just this one AWS S3 bucket…”
+* Build cloud repatriation into the tech strategy.
 
-☐ Celebrate with your team
+☐ Celebrate with the team
 
 * Cake, if budget allows.
 * Stickers for the sysadmins.
 * Inner peace from no longer funding data surveillance.
 
-## Phase 5: Tell your compliance officer
+## Phase 5: Notify the compliance officer
 
-* They’ll sleep better knowing your backups don’t reside under the [CLOUD Act](https://www.justice.gov/criminal/cloud-act-resources).
-* And you might just avoid explaining your infrastructure to a [Data Protection Authority](https://en.wikipedia.org/wiki/National_data_protection_authority) with a grudge.
+* They will sleep better knowing the backups do not reside under the [CLOUD Act](https://www.justice.gov/criminal/cloud-act-resources).
+* And it may be worth avoiding explaining the infrastructure to a [Data Protection Authority](https://en.wikipedia.org/wiki/National_data_protection_authority) with a grudge.

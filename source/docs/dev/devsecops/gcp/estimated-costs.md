@@ -12,9 +12,9 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure GC
 * Egress (moderate traffic): €20
 * BigQuery (used once properly): €15
 * Monitoring: €10
-* IAM, Pub/Sub, Functions: €50 (you’re thrifty)
+* IAM, Pub/Sub, Functions: €50 (costs controlled)
 
-*You’re billed by the micrometre. Every part is fine. Until it’s not.*
+*Billed by the micrometre. Every part is fine. Until it is not.*
 
 ## Worst case – CI logs and runaway BigQuery
 
@@ -27,4 +27,4 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure GC
 * Monitoring (Ops team dumped everything): €50
 * Zombie projects from hackathon days: €45
 
-*Every GCP bill contains at least one line you can’t explain.*
+*Every GCP bill contains at least one line that resists explanation.*

@@ -10,7 +10,7 @@ Some attacks only affect one or two users, but the denial of service attack will
 
 ### Qualitative risk assessment
 
-This is the most common type of Risk Assessment that you will find in companies (hopefully). In a Qualitative Risk Assessment, the goal is to assess and classify risk into thresholds like "Low", "Medium", and "High". It systematically examines what can cause harm and what decisions should be made to define or improve adequate control measures. Like all types of Risk Assessments, each level has a priority, where "High" has the most urgency. Even though Qualitative Risk Assessments don't use numbers, a typical formula to evaluate qualitative risk is:
+Qualitative Risk Assessment is the most common type found in practice. In a Qualitative Risk Assessment, the goal is to assess and classify risk into thresholds like "Low", "Medium", and "High". It systematically examines what can cause harm and what control measures to define or improve. Like all types of Risk Assessments, each level has a priority, where "High" has the most urgency. Although Qualitative Risk Assessments do not use numbers, a typical formula to evaluate qualitative risk is:
 
     Risk = Severity x Likelihood
 
@@ -18,9 +18,9 @@ This is the most common type of Risk Assessment that you will find in companies 
 
 ### Quantitative risk assessment
 
-The Quantitative Risk Assessment is used to measure risk with numerical values. Instead of `Low`, `Medium`, and `High`, you would have numbers that represent those bands. When carrying out Quantitative Risk Analysis, we can use tools to determine `Severity` and `Likelihood` or custom series of calculations based on the company's processes. 
+The Quantitative Risk Assessment is used to measure risk with numerical values. Instead of `Low`, `Medium`, and `High`, numerical values replace that represent those bands. When carrying out Quantitative Risk Analysis, we can use tools to determine `Severity` and `Likelihood` or custom series of calculations based on the company's processes. 
 
-For example, suppose there are services with assigned business criticality levels. In that case, you can say that if a bug affects a business-critical service (an authentication service, a payment infrastructure etc.), you will assign 5 points. This highlights why it is vital to understand a security posture and its processes. Measuring risk and priority with an endemic equation to a company's services will have great results.
+For example, suppose there are services with assigned business criticality levels. In that case, a bug affecting a business-critical service (an authentication service, a payment infrastructure etc.), might receive 5 points. This illustrates the value of understanding a security posture and its processes. Measuring risk and priority with an endemic equation to a company's services will have great results.
 
 ## Real-world
 

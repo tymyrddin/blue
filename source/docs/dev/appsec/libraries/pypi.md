@@ -1,95 +1,77 @@
-# Securing Python dependencies: PyPI best practices
+# PyPI dependency security
 
-Python’s Package Index (PyPI) is a treasure trove of open-source libraries and a prime target for attackers. 
-Malicious packages, typosquatting, and vulnerable dependencies can introduce severe risks. Here’s how to use PyPI safely.
+PyPI is the primary source of Python packages and a recurring target for supply chain attacks. Malicious packages, typosquatted names, and compromised maintainer accounts have all appeared on the registry. The mitigations are mostly structural.
 
-## Key practices for secure Python development
+## Typosquatting
 
-1. Avoid Malicious Packages
-
-Typosquatting is real: Attackers upload packages with names like requets (instead of requests) to trick developers.
-
-Always double-check spellings before installing:
+Package names that differ by one character from popular packages are a known attack pattern. `requets` instead of `requests`, `djnago` instead of `django`. Verifying the spelling before installation, checking the package on PyPI for a plausible maintainer history and download count, and reviewing the GitHub repository link (if present) reduces the risk.
 
 ```bash
-pip install requests  # Correct  
-pip install requets   # Malicious?  
+pip install requests   # correct
+pip install requets    # may be malicious
 ```
 
-Research unfamiliar packages (check GitHub stars, maintainers, release history).
+## Vulnerability scanning
 
-2. licence Compliance
-
-Know what you’re using: Some licences (e.g., GPL) impose strict redistribution rules. Tools like pip-licences or fossa can audit licence risks.
-
-3. Scan for vulnerabilities
-
-Bandit: A static analysis tool to find security flaws in Python code:
+`pip-audit` checks installed packages against known CVE databases:
 
 ```bash
-pip install bandit  
-bandit -r your_project/  
+pip install pip-audit
+pip-audit
 ```
 
-Ochrona: Scans dependencies for known CVEs:
+`bandit` performs static analysis of Python source code, identifying patterns like hardcoded secrets, `eval()` use, `subprocess.run(shell=True)`, and `yaml.load()` without a safe loader:
 
 ```bash
-pip install ochrona  
-ochrona check -r requirements.txt  
+pip install bandit
+bandit -r src/
 ```
 
-4. Use Pipenv (or Poetry) for Dependency Management
+Running both in CI/CD catches issues before they reach production.
 
-Why? Combines pip and virtualenv with:
+## Reproducible environments
 
-* A Pipfile (abstract dependencies).
-* A `Pipfile.lock` (pinned, tested versions).
-
-Installation:
+`pip install` resolves to the latest compatible version unless pinned. `pip install -r requirements.txt` with pinned versions (`requests==2.31.0`) is deterministic. Poetry and Pipenv maintain lock files that pin both direct and transitive dependencies:
 
 ```bash
-pip install pipenv  
-pipenv install requests  # Adds to Pipfile  
-pipenv lock             # Generates Pipfile.lock  
+# Pipenv: install from lockfile only
+pipenv sync
+
+# Poetry: install from lockfile only
+poetry install --no-root
 ```
 
-5. Security pitfalls in Python
+In CI/CD, installing from the lockfile rather than resolving fresh means the build uses the same dependency tree that was tested.
 
-Only import trusted packages. Imports execute code:
+## TLS verification
+
+Disabling TLS certificate verification removes the security guarantee that the remote end is who it claims to be:
 
 ```python
-import malicious_module  # Runs code on import!  
+# unsafe: accepts any certificate, including from a man-in-the-middle
+requests.get("https://example.com", verify=False)
+
+# safe: default behaviour verifies the certificate chain
+requests.get("https://example.com")
 ```
 
-Keep certifi updated: Never pin its version. Always use the latest. Never disable cert verification:
+If the issue is a self-signed or internal CA certificate, passing the CA bundle path as `verify="/path/to/ca.pem"` is the appropriate fix.
 
-```python
-# NEVER DO THIS 
-requests.get("https://example.com", verify=False)  
+The `certifi` package provides the CA bundle that `requests` uses by default. Keeping it updated (via normal dependency updates) ensures the CA store reflects current trust anchors.
+
+## Deserialization
+
+Imports execute package code. A malicious package can run arbitrary code at import time via module-level statements or `__init__.py` contents.
+
+Beyond import-time risks, certain deserialization patterns in installed packages carry ongoing risk. `yaml.safe_load()` rather than `yaml.load()` for YAML from external sources; JSON for data crossing trust boundaries rather than pickle. See [python.md](../coding/python.md) for detail on these patterns.
+
+## Licence compliance
+
+Some licences (GPL, AGPL) impose conditions on redistribution and derived works. `pip-licenses` audits the licences of all installed packages:
+
+```bash
+pip install pip-licenses
+pip-licenses --format=table
 ```
 
-6. Safe data handling
-
-Avoid unsafe deserialisation:
-
-* PyYAML: Use `yaml.safe_load()` instead of `yaml.load()`.
-* Pickle: Never load pickled data from untrusted sources.
-
-## Dependency security checklist
-
-* Verify package names before installing.
-* Audit licences for compliance risks.
-* Scan code with Bandit; scan dependencies with Ochrona.
-* Use Pipenv for reproducible environments.
-* Never bypass SSL checks or pin certifi.
-* Prefer safe_load for YAML/JSON parsing.
-
-## When things go wrong
-
-* Found a malicious package? Report it to PyPI’s security team.
-* Vulnerable dependency? Update immediately or fork/fix.
-
-## More
-
-* [PyPI Security Advisory](https://pypi.org/security/)
-* [Python Security Best Practices](https://docs.python-guide.org/security/)
+Licence compliance is a legal consideration that often surfaces in enterprise environments and open-source projects with explicit licence policies.

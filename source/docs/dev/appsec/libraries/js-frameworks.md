@@ -1,136 +1,83 @@
-# JavaScript framework security comparison
+# JavaScript framework security
 
-1. React
+Modern JavaScript frameworks provide XSS protection by default through template escaping and virtual DOM abstractions. The risk is not in the frameworks themselves but in the escape hatches: directives and APIs that bypass those protections when the developer explicitly requests it.
 
-Security strengths:
+## React
 
-* JSX automatically escapes content, preventing XSS by default
-* Large ecosystem with security-focused tools (ESLint plugins, React-specific CSP)
-* Virtual DOM reduces direct DOM manipulation risks
+JSX expressions are escaped before rendering. `{userContent}` in a JSX template produces a text node, not executable HTML.
 
-Weaknesses & considerations:
+The primary risk is `dangerouslySetInnerHTML`, which bypasses JSX escaping:
 
-* DangerouslySetInnerHTML can reintroduce XSS if misused
-* Client-side state management requires anti-CSRF measures
-* Server-side rendering (Next.js) needs careful XSS/CSRF hardening
+```jsx
+// safe: JSX escapes user content
+<div>{userContent}</div>
 
-Key security features:
+// unsafe: rendered as HTML, including any scripts or event handlers
+<div dangerouslySetInnerHTML={{ __html: userContent }} />
+```
 
-* Strict Content Security Policy (CSP) support
-* Context API for secure prop drilling
+When HTML rendering is genuinely required, `DOMPurify.sanitize()` on the value before passing it to `dangerouslySetInnerHTML` reduces the XSS surface.
 
-2. Angular
+CSRF protection is not built into React; it is the responsibility of the HTTP client configuration or a library layer.
 
-Security strengths:
+## Angular
 
-* Built-in XSS protection (automatic sanitisation of bindings)
-* TypeScript-first reduces injection risks
-* Ahead-of-Time (AOT) compilation eliminates template injection risks
+Angular sanitises bound values by default. Template expressions in `{{ }}` and most attribute bindings are sanitised for their context. The risk is `bypassSecurityTrust*` functions, which explicitly mark a value as trusted:
 
-Weaknesses & considerations:
+```typescript
+// unsafe: bypasses Angular's sanitisation
+this.trustedHtml = this.sanitizer.bypassSecurityTrustHtml(userInput);
+```
 
-* Larger attack surface (complex framework, more built-in features)
-* Dependency injection system requires careful configuration
+These functions are appropriate for HTML the application generates itself. Using them on user-controlled content reintroduces the XSS risk that Angular's sanitiser prevents.
 
-Key security features:
+Angular's `HttpClient` sets `X-Requested-With` headers but does not handle CSRF token injection by default; the `HttpClientXsrfModule` provides that.
 
-* DOM sanitiser with customisable whitelists
-* Built-in CSRF protection (HttpClient)
+Ahead-of-Time (AOT) compilation eliminates template injection by compiling templates at build time rather than evaluating them at runtime.
 
-3. Vue
+## Vue
 
-Security strengths:
+Template expressions (`{{ value }}`) are HTML-escaped. The `v-html` directive renders raw HTML:
 
-* Templates auto-escape HTML (similar to React's JSX)
-* Smaller core = reduced attack surface
-* Excellent security documentation with explicit warnings
+```html
+<!-- safe: auto-escaped -->
+<div>{{ userContent }}</div>
 
-Weaknesses & considerations:
+<!-- unsafe: rendered as HTML -->
+<div v-html="userContent"></div>
+```
 
-* v-html directive can introduce XSS (like React's dangerouslySetInnerHTML)
-* Less opinionated than Angular → more security configuration left to developers
+The risk pattern is identical to React's `dangerouslySetInnerHTML`. Vue's smaller core reduces the framework's own attack surface but leaves more security decisions to the application layer.
 
-Key security features:
+## Svelte
 
-* Scoped styles prevent CSS injection
-* Composition API encourages secure state management
+Svelte compiles to vanilla JavaScript at build time. The runtime footprint is minimal, which reduces the supply chain risk from the framework itself.
 
-4. Svelte
+Template expressions are escaped by default. The `{@html}` tag renders raw HTML:
 
-Security strengths:
+```html
+<!-- safe -->
+<p>{userContent}</p>
 
-* No virtual DOM → fewer runtime attack vectors
-* Compiles to vanilla JS → minimal framework footprint
-* Automatic CSS scoping
+<!-- unsafe -->
+<p>{@html userContent}</p>
+```
 
-Weaknesses & considerations:
+The same DOMPurify approach applies when HTML rendering from user content is required.
 
-* Young ecosystem → fewer battle-tested security tools
-* {@html} tag requires manual XSS prevention
+## Framework comparison
 
-Key security features:
+| Framework | XSS default | Escape hatch | CSRF built-in |
+|---|---|---|---|
+| React | JSX escaping | `dangerouslySetInnerHTML` | No |
+| Angular | Auto-sanitise | `bypassSecurityTrust*` | HttpClientXsrfModule |
+| Vue | Template escaping | `v-html` | No |
+| Svelte | Template escaping | `{@html}` | No |
 
-* Built-in CSP compatibility
-* Minimal runtime reduces supply chain risks
+## Cross-framework concerns
 
-## Critical security comparison table
+Server-side rendering introduces a hydration phase where server-rendered HTML is attached to client-side event handlers. Inconsistencies between server and client rendering can create injection surfaces; frameworks like Next.js, Nuxt.js, and SvelteKit each have specific SSR security guidance worth reviewing.
 
-| Framework	 | XSS Protection             | CSRF Defaults        | SSR Risks                 | Supply Chain Risk       | Learning Curve |
-|------------|----------------------------|----------------------|---------------------------|-------------------------|----------------|
-| React	     | Good (JSX escape)	         | Manual setup	        | High (Next.js hydration)	 | High (large ecosystem)	 | Moderate       | 
-| Angular	   | Excellent (auto-sanitise)	 | Built-in HttpClient	 | Medium	                   | Medium	                 | Steep          | 
-| Vue	       | Good (template escape)	    | Manual setup	        | Medium (Nuxt.js)	         | Medium	                 | Gentle         | 
-| Svelte	    | Manual ({@html} risk)	     | Manual setup	        | Low (SvelteKit)	          | Low (small core)	       | Easy           | 
+Client-side routing means authentication state lives in JavaScript. Token storage in `localStorage` is readable by any script on the page; `HttpOnly` cookies are not. The choice between token and cookie session management has different XSS implications in each framework.
 
-## Framework-specific threats
-
-React:
-
-* Prop drilling → accidental secret leakage
-* Client-side routing → auth state synchronisation
-
-Angular:
-
-* Template injection via unsanitised user input
-* Dependency injection abuse
-
-Vue:
-
-* v-html misuse → DOM XSS
-* Pinia/Vuex state sanitisation
-
-Svelte:
-
-* {@html} tag → requires manual sanitisation
-* Store mutations → lack of type enforcement
-
-## Universal JavaScript security risks
-
-* NPM dependencies (all frameworks are vulnerable to supply chain attacks)
-* Server-side rendering (hydration attacks in Next/Nuxt/SvelteKit)
-* Authentication state management (JWT storage, CSRF tokens)
-
-## Recommendations by Use Case
-
-* Enterprise apps → Angular (built-in protections)
-* Startups/rapid dev → Vue (good balance)
-* Complex SPAs → React (with strict CSP)
-* Performance-critical → Svelte (low attack surface)
-
-All frameworks require:
-
-* Regular npm audit + Snyk scans
-* Security headers (CSP, X-Frame-Options)
-* Input validation/sanitisation
-
-## Tools for framework security
-
-* React: eslint-plugin-react-security
-* Angular: @angular/cli built-in audits
-* Vue: vue-security ESLint plugin
-* Svelte: svelte-check with security rules
-
-## More
-
-* [NodeJS Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
-* [State of Open Source Security 2023](https://snyk.io/reports/open-source-security/)
+Supply chain risk applies regardless of framework: all depend on npm packages. `npm audit` identifies known vulnerabilities; `npm ci` in CI/CD installs exactly the lockfile contents rather than resolving to newer compatible versions.

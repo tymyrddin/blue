@@ -1,31 +1,62 @@
-# Strict Access Control
+# Database access control
 
-## Principle of Least Privilege (PoLP)
+Broad database permissions granted for development convenience tend to persist. An application account with
+`GRANT ALL ON *.* TO 'app_user'@'%'` can read from, write to, and drop any table in any database from any host. A
+vulnerability in the application that reaches the database layer then has the same scope.
+The [broken access control](https://red.tymyrddin.dev/docs/in/app/techniques/acl.html)
+and [IDOR](https://red.tymyrddin.dev/docs/in/app/techniques/idor.html) attack pages cover how overly broad permissions
+get exploited at the application layer.
 
-Grant only the minimum permissions required for each user/application.
+## Least privilege
 
-Example:
+Each application or service component connects with the minimum permissions it needs. A read-heavy reporting service
+does not need `INSERT` or `DELETE`. A background job that processes orders does not need access to the users table.
 
+```sql
+-- avoid: full admin access from any host
+GRANT ALL ON *.* TO 'app_user'@'%';
+
+-- prefer: specific operations on a specific database, from a specific host range
+GRANT SELECT, INSERT ON app_db.* TO 'app_user'@'10.0.1.%';
 ```
--- Bad: Full admin access  
-GRANT ALL ON *.* TO 'app_user'@'%';  
 
--- Good: Restrict to specific DB and operations  
-GRANT SELECT, INSERT ON `app_db`.* TO 'app_user'@'10.0.1.%';  
+Host restriction (`10.0.1.%` rather than `%`) limits where the account can connect from, which reduces the exposure if
+credentials are compromised.
+
+## Role-based access control
+
+Defining roles (read_only, read_write, admin) and assigning users to roles is more maintainable than assigning
+permissions directly to individual accounts. When a service's access requirements change, updating the role propagates
+to all accounts with that role.
+
+PostgreSQL role example:
+
+```sql
+CREATE ROLE app_readonly;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO app_readonly;
+GRANT app_readonly TO reporting_user;
 ```
 
-## Key actions
+## Dedicated accounts per service
 
-Role-Based Access Control (RBAC): Define roles (read_only, read_write, admin) and assign permissions accordingly.
+Sharing a single database account across multiple services conflates their audit trails and makes it harder to rotate
+credentials independently. Each service connecting to the database benefits from its own credentials. In Kubernetes
+environments, secrets management tools (Vault, External Secrets Operator) can inject credentials per-pod without
+hardcoding them in environment variables.
 
-Avoid shared accounts: Each service should have its own DB credentials.
+## Reviewing current permissions
 
-## Audit permissions regularly
+Permissions accumulate over time. Periodic review identifies accounts with more access than they need:
 
-```
--- MySQL  
-SHOW GRANTS FOR 'app_user'@'%';  
+```text
+-- MySQL: show grants for a specific account
+SHOW GRANTS FOR 'app_user'@'%';
 
--- PostgreSQL  
-\du+  
+-- PostgreSQL: list all roles and their attributes
+\du+
+
+-- PostgreSQL: list table privileges in a schema
+SELECT grantee, table_name, privilege_type
+FROM information_schema.role_table_grants
+WHERE table_schema = 'public';
 ```

@@ -14,7 +14,7 @@ Based on this pipeline (so just a starter pipeline): [Secure on-premises CI/CD p
 * Monitoring with Grafana, self-hosted: €10
 * Misc (Ubuntu updates, small DNS costs): €5
 
-*Hetzner: like having your own datacentre, but with fewer forklifts. Everything is under your control. Gloriously cheap.*
+*Hetzner: like having a private datacentre, but with fewer forklifts. Gloriously cheap.*
 
 ## Worst case – Forgotten volumes and no firewall
 

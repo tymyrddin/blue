@@ -12,9 +12,9 @@ Based on this pipeline (so just a starter pipeline): [Basis for a secure AWS dep
 * Egress (CI/CD logs, artefacts): €25
 * Lambda + API Gateway: €20
 * CloudWatch (trimmed logs): €15
-* IAM, Route53, etc: free\* (\*until you need them properly)
+* IAM, Route53, etc: free\* (*until actually needed properly)
 
-*You’ve tagged everything. You delete temp resources. You even shut down dev at night. You’re either a unicorn or terrified of your CFO.*
+*Tagged everything. Temp resources deleted. Dev environments off at night. Either excellent discipline or a very attentive CFO.*
 
 ## Worst case – The Dev left some EC2s up edition
 
@@ -27,4 +27,4 @@ Based on this pipeline (so just a starter pipeline): [Basis for a secure AWS dep
 * NAT Gateway: €45
 * RDS test DB no one uses: €40
 
-*Every NAT Gateway is a slow financial haemorrhage. CloudWatch stores every sneeze. Welcome to the billing dungeon.*
+*Every NAT Gateway is a slow financial haemorrhage. CloudWatch stores everything. The billing dungeon awaits.*

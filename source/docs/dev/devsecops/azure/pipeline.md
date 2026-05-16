@@ -75,7 +75,7 @@ az security pricing create --name Containers --tier standard
 
 * Navigate to Project Settings → Service connections
 * Create an Azure Resource Manager service connection using "Workload Identity federation" (recommended) or Service Principal
-* Create a connection to your ACR
+* Create a connection to the ACR
 
 2. Configure Variable Groups
 
@@ -282,7 +282,7 @@ resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = {
     name: 'Premium'
   }
   properties: {
-    adminUserEnabled: false // Never enable admin user
+    adminUserEnabled: false // Admin user disabled
     policies: {
       quarantinePolicy: {
         status: 'enabled'
@@ -306,7 +306,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2021-07-01' = {
     type: 'SystemAssigned'
   }
   properties: {
-    kubernetesVersion: '1.24.3' // Use latest stable version
+    kubernetesVersion: '1.24.3' // Latest stable version
     enableRBAC: true
     dnsPrefix: clusterName
     agentPoolProfiles: [

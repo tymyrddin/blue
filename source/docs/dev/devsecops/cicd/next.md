@@ -15,7 +15,7 @@ across the four environments.
 | Secrets Management	 | Secrets Manager + KMS	 | Key Vault	             | Secret Manager + KMS	    | HashiCorp Vault               |
 | Identity	           | IAM Roles	             | Azure AD + RBAC	       | IAM + Workload Identity	 | Gitea OAuth + k3s RBAC        |
 
-Action Items:
+Setup steps:
 
 * AWS: Use Terraform to create ECR, EKS, and WAF (see AWS code).
 * Azure: Deploy AKS with main.bicep (Azure code).
@@ -31,7 +31,7 @@ Action Items:
 | CD Tool	           | CodePipeline	      | Azure Pipelines	  | Cloud Deploy	               | Argo CD       |
 | Security Scanning	 | Trivy + Inspector	 | Trivy + Defender	 | Trivy + Container Analysis	 | Trivy + Falco |
 
-Action Items:
+Setup steps:
 
 * AWS: Configure buildspec.yml for CodeBuild (AWS pipeline).
 * Azure: Set up azure-pipelines.yml (Azure pipeline.
@@ -47,9 +47,9 @@ Action Items:
 | Network Security	 | WAF + PrivateLink	         | NSG + Private Endpoints	 | Cloud Armor + IAP	          | WireGuard + Cloudflare |
 | Secrets	          | Secrets Manager	           | Key Vault	               | Secret Manager	             | Vault                  |
 
-Action Items:
+Setup steps:
 
-All Clouds:
+All clouds:
 
 * Use distroless/base images (see Dockerfile examples).
 * Enable vulnerability scanning (ECR/ACR/Artifact Registry/Harbor).
@@ -67,7 +67,7 @@ On-Prem:
 | Monitoring	 | CloudWatch Alarms	         | Azure Monitor Alerts	           | Cloud Monitoring	        | Prometheus + Grafana  |
 | Compliance	 | AWS Config + Security Hub	 | Azure Policy + Security Center	 | Security Command Center	 | Manual Audits + Falco |
 
-Action Items:
+Setup steps:
 
 * AWS/Azure/GCP: Enable cloud-native monitoring (see AWS, Azure, GCP).
 * On-Prem: Deploy Prometheus stack:

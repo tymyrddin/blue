@@ -8,7 +8,7 @@ With the build ready and installed on the staging environment, more security sca
 
 ## Development
 
-For secure coding, an IDE plugin to do code scanning can be used, or security unit testing and running a static code scan of the whole project. For the secure build delivery, the compiler options must be checked to have been configured properly and all the dependency components must be reviewed for known vulnerabilities.
+For secure coding, an IDE plugin to do code scanning can be used, or security unit testing and running a static code scan of the whole project. For the secure build delivery, the compiler options are checked for correct configuration and dependency components are reviewed for known vulnerabilities.
 
 ![Development automation](/_static/images/dev-automation.png)
 
