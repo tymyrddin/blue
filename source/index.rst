@@ -18,7 +18,7 @@ Going places
 ----
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    docs/home/index
    docs/diy/index
@@ -31,7 +31,7 @@ Stories, roleplay, simulations, and simulators
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 1
    :includehidden:
 
    docs/org/index
@@ -44,7 +44,7 @@ Miscellaneous
 --------------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    docs/soc/index
 
