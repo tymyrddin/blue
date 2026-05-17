@@ -20,11 +20,11 @@ Going places
 .. toctree::
    :maxdepth: 2
 
-   docs/purple/index
-   docs/soc/index
-   docs/dev/index
    docs/home/index
    docs/diy/index
+   docs/dev/index
+   docs/purple/index
+   docs/soc/index
 
 Stories, roleplay, simulations, and simulators
 -----------------------------------------------
