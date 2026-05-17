@@ -22,9 +22,9 @@ Going places
 
    docs/home/index
    docs/diy/index
+   docs/active/index
    docs/dev/index
    docs/purple/index
-   docs/soc/index
 
 Stories, roleplay, simulations, and simulators
 -----------------------------------------------
@@ -38,7 +38,15 @@ Stories, roleplay, simulations, and simulators
    docs/shadows/index
    docs/ngo/index
    docs/stormforge/index
-   docs/active/index
+
+
+Miscellaneous
+--------------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   docs/soc/index
 
 ----
 
