@@ -1,15 +1,16 @@
 Database security
 ===================================================================
 
-Databases are the digital equivalent of a diary, except instead of "Dear Diary, today I had feelings," it’s
-"Dear PostgreSQL, here’s everyone’s credit card info."
+Databases hold the data that makes applications worth attacking. SQL injection, overly permissive accounts,
+unencrypted connections, and default configurations that were never tightened are consistent findings across
+database security assessments. The controls for each are well-established; consistently applying them across
+every deployment is where they tend to fail.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Database without security is just a public API with extra steps.
 
-   README.md
+   checklist.md
    comparison.md
    *

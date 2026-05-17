@@ -4,7 +4,7 @@ Database monitoring serves two purposes: detecting active attacks or misuse in p
 record needed to understand what happened after the fact. Many breaches go undetected for months in part because the
 database logs were not being collected or reviewed.
 
-## What to log
+## Events worth logging
 
 Failed authentication attempts can indicate credential stuffing or brute-force access attempts. Repeated failures against
 multiple accounts from the same source are more informative than individual failures.

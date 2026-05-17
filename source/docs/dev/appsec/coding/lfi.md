@@ -37,7 +37,7 @@ from Python 3.9; on earlier versions, use:
         raise ValueError("access outside upload directory")
 ```
 
-The unsafe pattern for comparison — do not use:
+The unsafe pattern, for comparison:
 
 ```python
 # unsafe: checks the input string, not the resolved path

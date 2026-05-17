@@ -7,11 +7,11 @@ via request headers, path variation, and timing against predictable reset window
 defensive position is to design limits so that bypassing them requires the attacker to pay a cost similar to the
 cost of the legitimate operation.
 
-## What to rate-limit
+## Rate-limiting targets
 
 Authentication endpoints, password reset flows, and OTP verification are the highest-value targets: unlimited
-attempts allow automated credential stuffing and brute-force. Enumeration endpoints — anything that confirms whether
-a username, email, or ID exists — are a second tier. Resource-creation endpoints (account registration, API key
+attempts allow automated credential stuffing and brute-force. Enumeration endpoints (anything that confirms whether
+a username, email, or ID exists) are a second tier. Resource-creation endpoints (account registration, API key
 generation) are a third.
 
 A single global limit applied across all endpoints misses the point. Most endpoints do not need rate limiting, and
@@ -24,7 +24,7 @@ IP-based rate limiting alone is bypassable. Common vectors:
 
 - Spoofing `X-Forwarded-For` or `X-Real-IP`: if the application uses these headers to determine the client address,
   the attacker sets them to arbitrary values. Trust these headers only when the load balancer or proxy that sets them
-  is under your control and the application accepts them only from that known upstream.
+  is within the trusted network boundary and the application accepts them only from that known upstream.
 - Path variation: `/api/v1/login`, `/api/v1/login/`, and `/API/V1/LOGIN` may be treated as different paths by a
   naïve key function. Normalise the path before keying.
 - Distributed requests: many source IPs, one target account. Per-account limits (keyed on the authenticated user or

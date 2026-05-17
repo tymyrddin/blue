@@ -2,7 +2,7 @@
 
 Network scanning identifies open ports, running services, and configuration weaknesses at the network level. It provides a view of what is reachable from a given network position, which is often different from what was intended.
 
-## What network scanning finds
+## Open ports and configuration
 
 Open ports and services: services running on unexpected ports, or services that are accessible from network segments they are not intended to serve. A database port reachable from a DMZ, an administrative interface reachable from a public subnet, or development services left running on production hosts.
 

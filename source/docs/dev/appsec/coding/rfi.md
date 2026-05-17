@@ -11,7 +11,7 @@ GCP exposes equivalent data at `http://metadata.google.internal/`. An SSRF vulne
 in a cloud-hosted application can be enough to retrieve credentials and escalate to full
 account compromise.
 
-## Why blocklists fail
+## Blocklist bypass patterns
 
 The instinct is to block known bad destinations: private IP ranges, the link-local block
 (`169.254.0.0/16`), localhost. Blocklists fail because:
@@ -82,7 +82,7 @@ function fetchAllowed(rawUrl) {
 }
 ```
 
-## When allowlisting is not feasible
+## Alternatives to allowlisting
 
 Some applications genuinely need to fetch arbitrary user-supplied URLs (URL preview, webhook
 delivery, link unfurling). Options:

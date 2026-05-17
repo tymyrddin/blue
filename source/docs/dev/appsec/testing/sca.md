@@ -1,8 +1,8 @@
 # Software composition analysis
 
-Most production applications include far more third-party code than first-party code. The ratio for a typical Node.js or Python application is often 10:1 or higher when transitive dependencies are counted. SCA tools scan those dependencies for known vulnerabilities.
+Most production applications include far more [third-party code](../libraries/overview.md) than first-party code. The ratio for a typical Node.js or Python application is often 10:1 or higher when transitive dependencies are counted. SCA tools scan those dependencies for known vulnerabilities.
 
-## What SCA covers
+## Direct and transitive dependencies
 
 Direct dependencies are the packages listed in `requirements.txt`, `package.json`, or `go.mod`. Transitive dependencies are the packages those packages depend on. A vulnerability in a transitive dependency three levels deep is still exploitable; SCA tools traverse the full dependency tree.
 

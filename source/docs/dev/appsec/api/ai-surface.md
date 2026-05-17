@@ -28,7 +28,7 @@ External APIs used as data sources for retrieval-augmented generation (RAG), fin
 population are a poisoning vector if their content is accepted without validation. A compromised or adversarially
 controlled upstream API can inject content designed to bias model outputs or persist instructions across queries.
 
-Provenance tracking — recording the source and retrieval timestamp for each piece of ingested content — supports
+Provenance tracking (recording the source and retrieval timestamp for each piece of ingested content) supports
 auditability and selective removal when a source is found to be compromised. Content validation policies (schema
 enforcement, anomaly detection on ingested text) applied at the ingestion stage catch unusual patterns before they
 reach the model layer.
@@ -36,8 +36,8 @@ reach the model layer.
 ## Tool use and capability scope
 
 AI agents that call APIs as tools inherit the permissions of the credentials used for those calls. An agent given a
-credential with write access to a storage service can write to that service if induced — via prompt injection or a
-poisoned tool result — to do so.
+credential with write access to a storage service can write to that service if induced, via prompt injection or a
+poisoned tool result, to do so.
 
 Scoping credentials to the minimum operation the agent legitimately needs limits the blast radius. An agent that
 only reads from a database does not need a credential with write or delete permissions. Separate credentials per
@@ -49,6 +49,6 @@ operations.
 Multi-hop agent chains process and forward outputs from one stage to the next. A stage that receives injected
 content and forwards it without validation extends the injection's reach to all downstream stages.
 
-Validating outputs at each stage boundary — schema validation, content length checks, and structural sanity checks —
+Validating outputs at each stage boundary (schema validation, content length checks, and structural sanity checks)
 limits what any single compromised or poisoned stage can deliver downstream. The assumption that the previous
 stage's output is trustworthy is the assumption that fails first in a multi-hop injection chain.

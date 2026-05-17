@@ -51,7 +51,7 @@ def set_frame_options(response):
 
 `SameSite=Strict` or `SameSite=Lax` cookies mean that even if a page is successfully framed, the session cookie is not included in the cross-site request. This limits the damage when framing restrictions are absent: the attacker can load the page in an iframe, but the victim's authenticated session is not active inside it.
 
-SameSite cookies complement `frame-ancestors` but do not substitute for it. The combination addresses both the framing vector and the session attachment vector.
+[SameSite cookies](csrf.md) complement `frame-ancestors` but do not substitute for it. The combination addresses both the framing vector and the session attachment vector.
 
 ## Frame-busting scripts
 

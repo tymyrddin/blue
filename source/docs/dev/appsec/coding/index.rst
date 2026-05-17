@@ -1,15 +1,16 @@
 Secure coding
 ===================================================================
 
-Let’s be honest, code is like a magic spell, except instead of turning frogs into princes, it turns minor oversights
-into catastrophic breaches. And just like wizards at Unseen University, programmers have a habit of poking things
-labeled "DO NOT TOUCH (Seriously, We Mean It)" just to see what happens.
+Every entry point in an application is a potential trust boundary. The pages here address the coding-level
+controls that prevent common vulnerability classes: input validation, output encoding, authentication, access
+control, and the framework-specific defaults that determine whether a stack is safe or dangerous out of the
+box. Most of what appears in security reviews is not novel. It is familiar patterns in unfamiliar code.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Secure code is about making sure your mistakes don’t end up on the front page of The Times.
+   :caption: A vulnerability is usually a recognisable pattern. Finding it requires looking deliberately.
 
    input.md
    output.md

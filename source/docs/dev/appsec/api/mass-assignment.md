@@ -11,7 +11,7 @@ the behaviour disagree.
 
 ## Separate input models from data models
 
-The most reliable defence is a Pydantic model that declares exactly which fields the caller is permitted to provide.
+The most reliable defence is a [Pydantic model](../coding/input.md) that declares exactly which fields the caller is permitted to provide.
 Any field not in the model is either rejected or silently ignored, depending on configuration:
 
 ```python
@@ -25,7 +25,7 @@ class UserUpdateRequest(BaseModel):
 ```
 
 `extra="forbid"` causes Pydantic to raise a `ValidationError` if the request body includes any field not declared in
-the model. The alternative, `extra="ignore"` (the default), silently drops unknown fields — safer than an unrestricted
+the model. The alternative, `extra="ignore"` (the default), silently drops unknown fields, safer than an unrestricted
 ORM bind, but the rejection behaviour is worth preferring: a legitimate client that sends unexpected fields gets
 actionable feedback, and an attacker gets no more information than from a silent ignore.
 

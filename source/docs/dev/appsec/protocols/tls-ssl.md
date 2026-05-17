@@ -35,7 +35,7 @@ also faster: one round trip instead of two.
 For TLS 1.2, cipher suite selection is explicit: the server's configuration lists what it accepts, and the
 negotiation picks the first suite both parties support. For TLS 1.3, the protocol itself restricts the
 negotiation to a small set of AEAD algorithms, so explicit cipher configuration is less necessary. The TLS 1.2
-list still matters for backward-compatible deployments.
+list remains relevant for backward-compatible deployments.
 
 AEAD (Authenticated Encryption with Associated Data) is the property to require. AEAD suites encrypt and
 authenticate in a single operation, with no separate MAC step. This eliminates the padding oracle and MAC timing

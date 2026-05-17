@@ -3,7 +3,7 @@
 Web services and APIs have a different attack surface from web applications: less HTML rendering, more structured data
 exchange, and often less scrutiny applied during testing because the interface is not visible in a browser.
 
-## What to test
+## API attack surface
 
 Authentication: whether endpoints that require authentication actually enforce it, and whether authentication can be
 bypassed by omitting or manipulating tokens. JWT implementations sometimes accept tokens signed with `none` as the

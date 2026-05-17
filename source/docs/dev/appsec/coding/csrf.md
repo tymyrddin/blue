@@ -64,9 +64,9 @@ protection for Flask applications via the `CSRFProtect` extension.
 
 For JSON APIs where the client is a single-page application on the same origin, CSRF is substantially mitigated by
 requiring a custom request header (`X-Requested-With`, `X-CSRFToken`). Custom headers cannot be set by cross-origin
-forms, only by `XMLHttpRequest` or `fetch` calls from the same origin or an explicitly allowed origin.
+forms, only by `XMLHttpRequest` or `fetch` calls from the same origin or an [explicitly allowed origin](cors.md).
 
-## What does not work
+## Controls that fall short
 
 The `Referer` header is inconsistently present (some proxies strip it, some users configure their browsers to suppress
 it) and can sometimes be manipulated. Checking only for `Referer` is insufficient as a sole protection.

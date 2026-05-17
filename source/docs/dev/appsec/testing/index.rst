@@ -1,17 +1,17 @@
-Security testing for development
+Security testing
 ===================================================================
 
-Welcome to the world of security testing, where we pretend we're hackers, except we get paid to break things instead of
-arrested for it. Your code might look secure, but so did that $5 bike lock until someone sneezed on it.
-
-Why Bother? Because nothing ruins your day like explaining why your "secure" login form just spit out the entire
-user database.
+Security testing finds what code review and functional testing leave undetected, largely because neither starts
+from the assumption of an adversarial user. The disciplines here span the full development lifecycle:
+design-stage threat modelling, static and dynamic analysis during development, scanning and penetration
+testing before production, and continuous monitoring once the application is live. No single technique
+catches everything; the coverage gaps between them are where the interesting failures tend to sit.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Turning 'That could never happen!' into 'Oh. That just happened.' since forever.
+   :caption: Security gaps do not announce themselves. Finding them first requires looking deliberately.
 
    overview.md
    *

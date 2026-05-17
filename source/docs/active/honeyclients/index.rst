@@ -7,7 +7,7 @@ malicious scripts, collecting what traditional honeypots miss.
 
 .. toctree::
    :maxdepth: 1
-   :caption: The only user allowed to ignore security warnings.
+   :caption: The client goes where legitimate users do not.
 
    honeyclients.md
    thug-repo.md

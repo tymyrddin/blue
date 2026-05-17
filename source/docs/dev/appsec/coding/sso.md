@@ -16,7 +16,7 @@ Each redirect URI is registered as a complete, literal value. Wildcards expand t
 
 ### State parameter
 
-The `state` parameter is CSRF protection for the OAuth flow. The client generates a cryptographically random value, includes it in the authorisation request, and validates it when the identity provider returns the user to the callback URL:
+The `state` parameter is [CSRF](csrf.md) protection for the OAuth flow. The client generates a cryptographically random value, includes it in the authorisation request, and validates it when the identity provider returns the user to the callback URL:
 
 ```python
 import secrets

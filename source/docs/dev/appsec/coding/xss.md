@@ -15,7 +15,7 @@ Prevented by output encoding in templates (see below).
 ## Stored XSS
 
 The payload is stored (in a database, a comment field, a log view) and rendered to other
-users later. Requires both input handling and output encoding; output encoding is the more
+users later. Requires both input handling and [output encoding](output.md); output encoding is the more
 reliable control since it acts at the point of rendering.
 
 ## DOM XSS
@@ -95,7 +95,7 @@ from jinja2 import Environment
 env = Environment(autoescape=True)
 
 # render_template_string with user-controlled template text is dangerous
-# even with autoescape=True — Jinja2 expressions execute before escaping
+# even with autoescape=True: Jinja2 expressions execute before escaping
 env.from_string(user_supplied_template)  # unsafe if user controls the template
 ```
 

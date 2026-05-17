@@ -56,7 +56,7 @@ curl "https://crt.sh/?q=%.example.com&output=json" | jq '.[].name_value' | sort 
 
 Certspotter (open source) and similar tools watch CT logs continuously and deliver alerts when new certificates
 appear. This is worth setting up: the detection window between issuance and discovery is otherwise bounded only
-by how often you look.
+by the frequency of manual checks.
 
 ## Lifecycle management
 

@@ -90,7 +90,7 @@ what the token was scoped to do.
 ## Service-to-service authentication
 
 Internal services that trust each other based solely on network position (private subnet, VPC) are vulnerable when
-any service in that network is compromised. Mutual TLS (mTLS) or short-lived signed JWTs between services adds a
+any service in that network is compromised. [Mutual TLS](../protocols/mtls.md) (mTLS) or short-lived signed JWTs between services adds a
 cryptographic verification step that network position alone does not provide.
 
 Short-lived tokens (minutes rather than hours) for machine-to-machine calls reduce the window for replay. A service

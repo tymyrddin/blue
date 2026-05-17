@@ -4,7 +4,7 @@
 
 ## Authorisation at every endpoint
 
-Authentication confirms who the caller is. Authorisation determines what that caller can access. Applications that confuse the two protect endpoints with login walls but then return any resource once logged in.
+Authentication confirms who the caller is. [Authorisation](access-control.md) determines what that caller can access. Applications that confuse the two protect endpoints with login walls but then return any resource once logged in.
 
 Every endpoint that reads or modifies a resource checks ownership before returning data:
 
@@ -75,6 +75,6 @@ def disable_user(user_id: int):
 
 ## Testing
 
-Testing for IDOR in your own application requires two accounts at each privilege level. Authenticated as one user, attempt to access and modify resources belonging to another user using their resource identifiers. Any successful access is a finding.
+Testing for IDOR requires two accounts at each privilege level. Authenticated as one account, accessing resources belonging to the other tests whether the ownership check is enforced. Any successful access is a finding.
 
 Automated scanning tools do not reliably detect IDOR because the vulnerability requires understanding the application's intended access model, not just observing an unexpected response code.

@@ -1,12 +1,14 @@
 Securing web applications
 ============================================
 
-Web applications are like digital nightclubs, everyone wants in, but if you don’t check IDs, you’ll end up with malware
-dancing on the tables and hackers behind the bar mixing SQL injections into the drinks.
+Web applications combine authentication, authorisation, session management, database access, and file handling
+into a single interface. Each of those components has recognisable failure modes, and most real-world
+vulnerabilities are variations on a small set of patterns. The pages here address those patterns at the code
+level: what produces the vulnerability, and what prevents it.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Where ‘move fast and break things’ becomes ‘move fast and get breached’
+   :caption: Most vulnerabilities are recognisable patterns. The work is applying the controls consistently.
 
    lockdown/index
    coding/index

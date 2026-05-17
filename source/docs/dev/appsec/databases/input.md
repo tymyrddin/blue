@@ -1,6 +1,6 @@
 # Input handling for database operations
 
-Parameterised queries prevent SQL injection at the query level. Input validation at the application level is a separate control that catches malformed data before it reaches the database, and reduces the opportunity for second-order injection (where data stored via a parameterised query is later concatenated into another query).
+[Parameterised queries](parameterisation.md) prevent SQL injection at the query level. [Input validation at the application level](../coding/input.md) is a separate control that catches malformed data before it reaches the database, and reduces the opportunity for second-order injection (where data stored via a parameterised query is later concatenated into another query).
 
 ## Allowlist patterns
 

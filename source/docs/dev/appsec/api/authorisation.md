@@ -1,9 +1,9 @@
 # API authorisation
 
 [API authorisation failures](https://red.tymyrddin.dev/docs/in/api/notes/authorisation.html) fall into two categories:
-broken object-level authorisation (BOLA) and broken function-level authorisation (BFLA). Both appear consistently at
+broken object-level authorisation (BOLA, the API form of [IDOR](../coding/idor.md)) and broken function-level authorisation (BFLA). Both appear consistently at
 the top of API vulnerability rankings, and both stem from the same confusion: authentication confirms who is calling;
-authorisation determines what that caller is permitted to do.
+[authorisation](../coding/access-control.md) determines what that caller is permitted to do.
 
 ## Broken object-level authorisation
 
@@ -74,7 +74,7 @@ In a microservice architecture, requests from an internal upstream service may c
 network-level trust (private subnet, service mesh). A compromised upstream service then has the same access as the
 API itself.
 
-Downstream services validating the identity of their callers — via mTLS, a signed service token, or a
-gateway-issued caller claim — provide a layer that network position alone does not. This is particularly relevant for
+Downstream services validating the identity of their callers (via [mTLS](../protocols/mtls.md), a signed service token, or a
+gateway-issued caller claim) provide a layer that network position alone does not. This is particularly relevant for
 high-privilege internal endpoints that are never intended to be reachable from outside the network but are reachable
 from within it. Gateway-level authentication does not substitute for per-service authorisation.

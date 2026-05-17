@@ -76,7 +76,7 @@ DocumentBuilder db = dbf.newDocumentBuilder();
 
 The OWASP XXE Prevention Cheat Sheet maintains current recommendations for each Java XML parser.
 
-## When XML is not required
+## Eliminating the XML surface
 
 If the application receives data in XML because the client or upstream service sends it, and the format is otherwise arbitrary, JSON is the safer choice. JSON has no concept of external entities or DTDs; switching to JSON removes the XXE surface entirely.
 

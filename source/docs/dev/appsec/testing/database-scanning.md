@@ -2,7 +2,7 @@
 
 Database security testing covers the database configuration itself, not just the application layer. Parameterised queries in the application prevent SQL injection at the application layer; they do not address excessive database user permissions, unencrypted data at rest, or weak authentication on the database service itself.
 
-## What to test
+## Database attack surface
 
 SQL injection at the application level: SQLMap automates the detection of SQL injection vulnerabilities by sending crafted payloads and analysing responses. It is most useful in a controlled penetration testing context where the tester has authorisation to test the application. Running SQLMap against a production application without authorisation is unauthorised access regardless of intent.
 

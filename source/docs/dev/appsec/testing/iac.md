@@ -2,9 +2,9 @@
 
 Infrastructure as code (IaC) tools (Terraform, CloudFormation, Kubernetes manifests, Helm charts) define cloud and container infrastructure in configuration files. Those files carry the same security risks as application code: a misconfiguration checked into source control is deployed consistently across every environment.
 
-IaC scanning applies policy checks to configuration files before they are applied, catching misconfigurations at the source level rather than in a live environment.
+IaC scanning applies policy checks to configuration files before they are applied, catching misconfigurations at the source level rather than in a live environment. The [attack infrastructure](https://red.tymyrddin.dev/docs/scarlet/iac/) section covers the adversarial use of the same tooling: IaC applied deliberately to build ephemeral offensive infrastructure, with operational discipline that avoids precisely the patterns (hardcoded credentials, permissive IAM, traceable state backends) that IaC scanning looks for on the defensive side.
 
-## What gets caught
+## Common findings
 
 Common findings include: S3 buckets without access logging or public access blocks, security groups allowing inbound traffic from `0.0.0.0/0` on sensitive ports, IAM policies with `*` resources or actions, RDS instances with publicly accessible endpoints, unencrypted EBS volumes, Kubernetes pods running as root or with privileged containers.
 

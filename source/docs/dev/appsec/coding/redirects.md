@@ -64,7 +64,7 @@ Allowlisting on the hostname, not on a prefix or substring, closes most bypass r
 content (checking whether the string starts with `https://example.com`) fails against payloads like
 `https://example.com.attacker.com` or `https://example.com@attacker.com`.
 
-## What string-matching approaches miss
+## String-matching bypass patterns
 
 URL validators that check whether the target starts with or contains the application's domain are consistently bypassed:
 

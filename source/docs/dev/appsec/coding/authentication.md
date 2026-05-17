@@ -5,7 +5,7 @@
 Passwords are not stored. A hash derived from the password is stored, and on login the
 same derivation is applied to the input and compared to the stored value. The [authentication vulnerability perspective](https://red.tymyrddin.dev/docs/in/app/techniques/auth.html) covers the attack patterns this page defends against.
 
-The hash function matters. MD5, SHA-1, and SHA-256 are not password hashing functions:
+The hash function is the critical choice. MD5, SHA-1, and SHA-256 are not password hashing functions:
 they are fast, and fast hashing makes brute-force feasible. A password hashing function
 is deliberately slow and includes a per-user salt to prevent rainbow table attacks.
 
@@ -49,7 +49,7 @@ means a stolen token is valid until expiry with no way to invalidate it server-s
 
 If JWTs are used, keep the expiry short (15–60 minutes), use refresh tokens via a
 server-side store, and sign with RS256 (asymmetric) rather than HS256 (shared secret that
-must be the same across all services).
+requires a shared secret consistent across all services).
 
 ## Credential exposure
 
@@ -64,7 +64,7 @@ app.config.update(
 )
 ```
 
-`HttpOnly` prevents a successful XSS attack from extracting the session cookie via
+`HttpOnly` prevents a successful [XSS](xss.md) attack from extracting the session cookie via
 `document.cookie`. `Secure` prevents transmission over plain HTTP. `SameSite=Lax` provides
 CSRF protection for most cases without breaking normal navigation.
 

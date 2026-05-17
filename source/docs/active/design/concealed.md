@@ -1,7 +1,7 @@
 # Staying hidden
 
 Perfect mimicry is not the goal. Being realistic enough to waste an attacker's time while gathering
-intelligence is. The two are different targets, and the difference matters for how much effort is worth
+intelligence is. The two are different targets, and the difference determines how much effort is worth
 spending on anti-detection.
 
 ## Automatic redeployment

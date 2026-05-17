@@ -11,7 +11,7 @@ Default database configurations optimise for ease of installation, not security.
 
 ## TLS configuration
 
-Encrypting connections in transit matters even on private networks. Internal network traffic is readable to anyone with access to the network, and cloud environments route inter-service traffic through infrastructure that is not exclusively controlled by the application owner.
+Encrypting connections in transit extends to private networks. Internal network traffic is readable to anyone with access to the network, and cloud environments route inter-service traffic through infrastructure that is not exclusively controlled by the application owner.
 
 PostgreSQL TLS setup requires a certificate and key:
 

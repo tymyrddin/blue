@@ -1,10 +1,10 @@
 # Monitoring and anomaly detection
 
-Monitoring an API means more than watching for 5xx responses. Most API abuse — credential stuffing, quota
-exploitation, workflow shortcutting, data enumeration — produces requests that individually look legitimate. The
+Monitoring an API means more than watching for 5xx responses. Most API abuse (credential stuffing, quota
+exploitation, workflow shortcutting, data enumeration) produces requests that individually look legitimate. The
 signal is in the pattern across requests, not in any single one.
 
-## What to log
+## Log targets
 
 Log enough to reconstruct what happened: authenticated user identity (not the credential itself), endpoint path,
 HTTP method, response status, response size, and request timing. Logging full request and response bodies is
@@ -38,8 +38,8 @@ baseline traffic:
 
 - More than N failed authentication attempts against a single account in M minutes.
 - More than N export or bulk-read requests from a single account in an hour.
-- Any request to an administrative endpoint from an account that does not hold an administrative role (these
-  should be near-zero in production).
+- Any request to an administrative endpoint from an account that does not hold an administrative role (in
+  production, these are expected near-zero).
 - Responses significantly larger than the documented maximum for an endpoint.
 
 ## Tools
@@ -47,5 +47,5 @@ baseline traffic:
 AWS API Gateway paired with CloudWatch supports per-endpoint metrics and log-based alarms. The Elastic Stack (ELK)
 works well for log aggregation and structured query across request metadata. Prometheus with Grafana covers the
 metrics side: per-endpoint request rates, error rates, and latency distributions. Anomaly detection that requires
-understanding the semantics of the request — workflow sequence, object ownership — typically needs a custom layer
+understanding the semantics of the request (workflow sequence, object ownership) typically needs a custom layer
 on top of the metrics infrastructure.

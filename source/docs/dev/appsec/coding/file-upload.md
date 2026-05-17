@@ -33,7 +33,7 @@ The original pattern of `magic.from_buffer(file.read(1024))` followed by a secon
 
 ## Filename handling
 
-The original filename from the client is not safe to use on the filesystem. It can contain path separators (`../../../etc/passwd`), null bytes, or characters with special meaning on the target OS.
+The original filename from the client is not safe to use on the filesystem. It can contain [path traversal](lfi.md) sequences (`../../../etc/passwd`), null bytes, or characters with special meaning on the target OS.
 
 Generate a server-side name instead:
 
@@ -56,7 +56,7 @@ The extension in the generated name is derived from the validated MIME type, not
 
 ## Storage location
 
-Files served from the same origin as the application can be loaded in a browser context where they inherit the application's cookies and session. A stored XSS payload in an SVG file, or a crafted HTML file, runs in the victim's session if served from the same origin.
+Files served from the same origin as the application can be loaded in a browser context where they inherit the application's cookies and session. A [stored XSS](xss.md) payload in an SVG file, or a crafted HTML file, runs in the victim's session if served from the same origin.
 
 Options in order of preference:
 

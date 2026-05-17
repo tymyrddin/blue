@@ -8,7 +8,7 @@ Three directives appear frequently but are not equivalent:
 
 `no-store` instructs every cache (browser, CDN, proxy) to discard the response and not store it. Subsequent requests fetch from origin. Use for responses that contain credentials, session data, or sensitive personal information.
 
-`private` allows the browser's local cache to store the response but instructs shared caches (CDNs, reverse proxies) not to. Appropriate for personalised content that is safe to cache locally but must not be stored on a shared tier.
+`private` allows the browser's local cache to store the response but instructs shared caches (CDNs, reverse proxies) not to. Appropriate for personalised content that is safe to cache locally but not on a shared tier.
 
 `no-cache` is frequently misunderstood. It does not prevent caching; it requires the cache to revalidate with the origin before serving a stored response. The response may still be stored.
 

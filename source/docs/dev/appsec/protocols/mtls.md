@@ -6,7 +6,7 @@ no certificate of its own. Mutual TLS (mTLS) extends this: both parties present 
 each other.
 
 For browser-to-server connections this is impractical, but for service-to-service communication (microservices
-calling each other, internal APIs, clients that are not humans), mTLS is a natural fit. It replaces the
+calling each other, [internal APIs](../api/authentication.md), clients that are not humans), mTLS is a natural fit. It replaces the
 question "is this a valid session token?" with "does this client hold a certificate issued by our internal CA?"
 In a zero-trust network where services cannot safely assume that anything on the internal network is trustworthy,
 mTLS provides cryptographic identity rather than relying on network position.

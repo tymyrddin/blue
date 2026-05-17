@@ -2,7 +2,7 @@
 
 Web application scanning tests a running application for vulnerabilities by sending crafted requests and analysing responses. It covers the application layer: what the server returns in response to various inputs, rather than the network or host configuration.
 
-## What gets tested
+## Application attack surface
 
 XSS: reflected and stored. Scanners inject payloads into query parameters, form fields, headers, and cookies, then check whether the payload appears unescaped in the response or in subsequent responses.
 

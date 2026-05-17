@@ -59,7 +59,7 @@ High-interaction honeypots can be turned against the defender if improperly isol
 
 ## Where to place honeypots
 
-Strategic placement matters:
+Positioning shapes what the honeypot attracts:
 
 * DMZ: external-facing honeypots attract outside attackers.
 * Internal network: catches compromised insiders or lateral movement.

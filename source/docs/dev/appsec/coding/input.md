@@ -6,7 +6,7 @@ functions can assume their arguments are already validated; entry points cannot.
 
 Validation has two goals: confirm the value is structurally what the application expects,
 and convert it to the type that subsequent code will use. The conversion step is itself a
-form of validation — `int(value)` raises on non-numeric input without requiring a regex.
+form of validation: `int(value)` raises on non-numeric input without requiring a regex.
 
 ## Python: Pydantic
 

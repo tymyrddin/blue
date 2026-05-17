@@ -8,7 +8,7 @@ authenticated request. The vulnerability is in the state machine, not in any ind
 ## Idempotency
 
 State-changing endpoints that can be retried or replayed are a source of double-execution bugs. A payment endpoint
-called twice — due to a network timeout and a client retry — may charge twice if the server processes both requests.
+called twice (due to a network timeout and a client retry) may charge twice if the server processes both requests.
 An idempotency key, included by the caller and stored server-side, causes the second request to return the cached
 result of the first:
 
@@ -60,7 +60,7 @@ and the write.
 ## Workflow step validation
 
 Multi-step API flows (onboarding, checkout, account upgrade) are vulnerable when a later step can be called without
-completing the preceding step. The terminal step — the one that grants access, processes payment, or changes status —
+completing the preceding step. The terminal step (the one that grants access, processes payment, or changes status)
 verifies that the required earlier steps are complete:
 
 ```python
@@ -86,6 +86,6 @@ applying: a page size cap enforced server-side (the caller cannot override it up
 applied to every item in the result (not just the top-level request), and a separate, lower rate limit for export
 operations than for ordinary reads.
 
-Bulk-write endpoints — those that accept arrays of objects in a single request — warrant the same per-item
+Bulk-write endpoints (those that accept arrays of objects in a single request) warrant the same per-item
 authorisation checks as individual write endpoints. A bulk endpoint that validates the top-level request and then
 applies all items without per-item ownership checks is an IDOR at scale.

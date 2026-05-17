@@ -123,9 +123,9 @@ When the application requires evaluating user-supplied expressions (calculator, 
 engine, template language), a purpose-built library is safer than a general-purpose
 interpreter:
 
-* **Python**: `ast.literal_eval()` evaluates Python literals only (strings, numbers, lists,
+* Python: `ast.literal_eval()` evaluates Python literals only (strings, numbers, lists,
   dicts, tuples, booleans, None). It does not execute function calls or imports.
-* **JavaScript**: `isolated-vm` provides a V8 isolate with explicit memory and CPU limits.
+* JavaScript: `isolated-vm` provides a V8 isolate with explicit memory and CPU limits.
   `vm2` is an alternative though it has had historical escapes; `isolated-vm` is the more
   hardened option.
 

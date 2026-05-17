@@ -1,16 +1,16 @@
 Preventing and handling API breaches
 ===================================================================
 
-APIs are the gossipy middlemen of the digital world: they love sharing data, sometimes with people who really
-shouldn’t have it. Left unchecked, your API could go from "useful business tool" to "hacker’s favorite buffet"
-faster than you can say "Why is there a Bitcoin miner in our /users endpoint?"
-
+APIs are where authentication fails, authorisation is bypassed, and data leaves in a structured format.
+The attack surface is broader than web applications: every endpoint, every parameter, and every HTTP method
+is potentially reachable without a browser or UI friction. The pages here address the controls that need to
+be in place at the API layer.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: APIs without security are just fancy data faucets, and hackers love free refills.
+   :caption: An undocumented endpoint is not absent from the attack surface. It is absent from the test plan.
 
    monitor.md
    scan.md

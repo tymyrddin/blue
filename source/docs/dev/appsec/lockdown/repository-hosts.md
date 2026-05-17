@@ -21,7 +21,7 @@ gh api /orgs/{your-org}/members --jq '.[].login'
 Secrets reach repositories through inattention, not malice: an API key in a config file, a password in a
 test fixture. GitHub's built-in secret scanning covers a broad pattern library (AWS keys, Slack tokens, and
 others). Pre-commit hooks via `git-secrets` block common patterns before they reach the remote. Periodic
-scans of repository history with tools like truffleHog surface anything that slipped through earlier.
+scans of [repository history](../testing/secrets.md) with tools like truffleHog surface anything that slipped through earlier.
 
 ## Branch protection
 
@@ -32,7 +32,7 @@ automated tests ran and passed on the code as written.
 
 ## Dependency management
 
-Outdated libraries are a common entry point. Dependabot or Renovate raise pull requests automatically when
+Outdated [libraries](../libraries/overview.md) are a common entry point. Dependabot or Renovate raise pull requests automatically when
 new versions are available, with auto-merge configured for minor patch updates that pass CI. Major version
 upgrades warrant periodic manual review.
 
