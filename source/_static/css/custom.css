@@ -190,7 +190,7 @@ body {
 }
 
 /* ============================================= */
-/*         UNIVERSAL DARK CODE BLOCK STYLING     */
+/*         UNIVERSAL CODE BLOCK STYLING          */
 /* ============================================= */
 
 /* Target ALL pre-formatted blocks regardless of class */
@@ -199,8 +199,8 @@ pre[class*="language-"],
 pre[class*="text"],
 pre.text,
 div.highlight pre {
-  background-color: #2d2d2d !important;
-  color: #f0f0f0 !important;
+  background-color: #ddd !important;
+  color: #222 !important;
   border-radius: 6px;
   padding: 1.2em;
   margin: 1.5em 0;
@@ -208,8 +208,8 @@ div.highlight pre {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 0.8em;
   line-height: 1.5;
-  border-left: 4px solid #6f42c1 !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+  border-left: 4px solid #aaa !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08) !important;
 
   /* Critical formatting preservation */
   white-space: pre !important;
@@ -235,20 +235,33 @@ div.highlight pre code {
 /* Plain text blocks specific styling */
 pre.text,
 pre[class*="text"] {
-  color: #e8e8e8 !important; /* Slightly brighter for plain text */
+  color: #222 !important;
   font-family: inherit;
 }
 
 /* Inline code (single backticks) */
 :not(pre) > code {
-  background-color: #3a3a3a !important;
-  color: #f0f0f0 !important;
+  background-color: #ddd !important;
+  color: #222 !important;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 0.8em;
-  border: 1px solid #444 !important;
+  border: 1px solid #ccc !important;
   white-space: normal;
+}
+
+/* Force syntax token spans dark — slate theme generates light token colours
+   designed for dark backgrounds; these become invisible on the #ddd code block */
+div.highlight span {
+  color: #333 !important;
+}
+
+/* Line numbers */
+.linenos {
+  color: #999;
+  padding-right: 1em;
+  user-select: none;
 }
 
 /* Mobile responsiveness */
