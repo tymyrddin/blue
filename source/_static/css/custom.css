@@ -162,13 +162,13 @@ body {
 
 /* Code Blocks */
 .md-typeset pre > code {
-  background-color: #f8f8f8;
+  background-color: #ddd;
   color: #333 !important;
   border-radius: 4px;
 }
 
 .md-content pre {
-  background-color: #f5f5f5;
+  background-color: #ddd;
 }
 
 /* Admonitions (notes/warnings) */
