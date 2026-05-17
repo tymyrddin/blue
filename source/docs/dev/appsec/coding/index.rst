@@ -1,4 +1,4 @@
-Secure coding guidelines
+Secure coding
 ===================================================================
 
 Let’s be honest, code is like a magic spell, except instead of turning frogs into princes, it turns minor oversights

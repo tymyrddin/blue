@@ -1,49 +1,43 @@
 # Securing hosted code repositories
 
-Hosting code on platforms like GitHub or GitLab comes with risks: exposed secrets, compromised accounts, or malicious 
-commits can lead to serious breaches. Here’s how to lock things down properly.
+Code hosting platforms (GitHub, GitLab) introduce specific risks: secrets committed to history, compromised
+accounts with write access, and malicious commits that slip through review. The controls that address these
+are well-understood; the gap is usually in consistent application.
 
-## Enforce strong access controls
+## Authentication and access
 
-Require Multi-Factor Authentication (MFA) for everyone, no exceptions. Prefer hardware security keys (like YubiKeys) 
-over SMS codes. Restrict admin rights to only those who truly need them, and audit permissions regularly to catch 
-outdated access.
-
-Example:
+Multi-factor authentication for all organisation members reduces the impact of a compromised password.
+Hardware security keys (YubiKey, FIDO2) are more resistant to phishing than TOTP or SMS codes. Admin
+rights are worth auditing regularly: access accumulates, and periodic review catches accounts whose scope
+has outgrown their current role.
 
 ```bash
-# List all org members (GitHub CLI)  
+# List all org members (GitHub CLI)
 gh api /orgs/{your-org}/members --jq '.[].login'
 ```
 
-## Hunt for secrets before they leak
+## Detecting committed secrets
 
-Even careful teams accidentally commit API keys or passwords. A single exposed cloud key can lead to a costly breach. Use:
+Secrets reach repositories through inattention, not malice: an API key in a config file, a password in a
+test fixture. GitHub's built-in secret scanning covers a broad pattern library (AWS keys, Slack tokens, and
+others). Pre-commit hooks via `git-secrets` block common patterns before they reach the remote. Periodic
+scans of repository history with tools like truffleHog surface anything that slipped through earlier.
 
-* GitHub’s built-in secret scanning (checks for AWS keys, Slack tokens, etc.)
-* Pre-commit hooks like git-secrets to block leaks before they happen
-* Weekly scans of your repo history with tools like truffleHog
+## Branch protection
 
-## Lock down branches
+Branch protection rules prevent a class of risky changes before they merge. Signed commits (PGP/GPG)
+establish a chain of authorship. Blocking force pushes preserves history. Requiring pull request reviews
+(at minimum two approvals) adds a second pair of eyes. CI/CD checks as a merge prerequisite ensure that
+automated tests ran and passed on the code as written.
 
-Prevent risky changes with branch protection rules. Apply these rules to all branches, including for admins.
+## Dependency management
 
-* Require signed commits (PGP/GPG verified)
-* Block force pushes, no rewriting history
-* Mandate pull request reviews (at least two approvals)
-* Require CI/CD checks to pass before merging
-
-## Manage dependencies
-
-Outdated libraries are a top attack vector. Automate:
-
-* Security alerts (GitHub Dependabot or Renovate)
-* Patch updates (auto-merge minor version bumps)
-* Monthly reviews of major upgrades
-
-Example config (`.github/dependabot.yml`)
+Outdated libraries are a common entry point. Dependabot or Renovate raise pull requests automatically when
+new versions are available, with auto-merge configured for minor patch updates that pass CI. Major version
+upgrades warrant periodic manual review.
 
 ```yaml
+# .github/dependabot.yml
 updates:
   - package-ecosystem: "npm"
     directory: "/"
@@ -51,13 +45,9 @@ updates:
       interval: "weekly"
 ```
 
-## Prepare for the worst
+## Backup and incident readiness
 
-* Backup critical repos (use git clone --mirror)
-* Monitor audit logs for suspicious access
-* Have an incident plan for when leaks happen
-
-## More
-
-* [GitHub’s security best practices](https://docs.github.com/en/code-security/getting-started/github-security-features)
-* [Mozilla’s hard-earned GitHub rules](https://wiki.mozilla.org/GitHub/Repository_Security)
+Mirroring critical repositories (`git clone --mirror`) provides a recovery path if the hosted copy is
+deleted or corrupted. Audit logs record access events; reviewing them periodically surfaces unexpected
+access patterns. An incident plan covering the steps for when a secret leaks (rotation, scope assessment,
+notification) is considerably easier to follow when it exists before the event.

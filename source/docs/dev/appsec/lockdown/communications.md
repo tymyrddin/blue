@@ -1,34 +1,25 @@
 # Secure server communication
 
-Unrestricted communication between servers increases the attack surface. A compromised instance can pivot laterally, 
-escalating access to sensitive systems. Proper network segmentation limits blast radius and enforces least-privilege 
-principles.
+Unrestricted communication between servers expands the attack surface. A compromised instance can move
+laterally, reaching systems that would otherwise be inaccessible. Network segmentation limits that radius
+and applies least-privilege principles to the network layer.
 
 ## Network isolation
 
-Private Subnets:
+Backend services (databases, internal APIs, message queues) belong in private subnets with no public IP
+addresses. Inbound traffic from the internet reaches a load balancer or API gateway; backend services are
+not exposed directly. Outbound traffic from private subnets passes through a NAT gateway when external
+access is needed.
 
-* Deploy backend services (e.g., databases, APIs) in private subnets with no public IPs.
-* Use NAT gateways for outbound traffic if needed.
-
-VPC/VNet Peering: For cross-account/team communication, use private peering (AWS VPC, Azure VNet) instead of public routes.
-
-Example (AWS):
+For communication across account or team boundaries, private peering (AWS VPC peering, Azure VNet peering)
+keeps traffic off public routes:
 
 ```bash
 aws ec2 create-vpc-peering-connection --vpc-id vpc-123 --peer-vpc-id vpc-456
 ```
 
-## Service-specific exposure
-
-Public-Facing Services Only:
-
-* Expose only load balancers (ALB/NLB) or API gateways publicly.
-* Backend servers (e.g., app logic, databases) should never be directly internet-accessible.
-
-Security Groups & NACLs: Restrict ingress/egress to specific IPs and ports.
-
-Example (AWS SG rule):
+Security groups and network ACLs restrict ingress and egress to the specific IPs and ports that each
+service actually uses:
 
 ```bash
 aws ec2 authorize-security-group-ingress \
@@ -38,35 +29,23 @@ aws ec2 authorize-security-group-ingress \
   --cidr 203.0.113.0/24
 ```
 
-##  Zero Trust for internal traffic
+## Internal traffic encryption
 
-Mutual TLS (mTLS): Require certificate-based auth between services (e.g., Istio, Linkerd).
+mTLS (mutual TLS) authenticates both sides of a service-to-service connection and encrypts it in transit.
+Service meshes like Istio and Linkerd handle certificate issuance and rotation automatically, and can
+enforce policies such as restricting service A to a specific port on service B. Cilium and Calico provide
+network-layer policy enforcement for the same purpose.
 
-Service Meshes: Enforce policies like "Service A can only talk to Service B on port 8080" (Cilium, Calico).
+## Traffic monitoring
 
-## Monitoring & enforcement
+VPC flow logs (AWS VPC Flow Logs, Azure NSG Flow Logs) record traffic at the network level. Aggregating
+these into a monitoring system makes anomaly detection practical: a backend service that begins initiating
+unexpected outbound connections is worth examining. Automated policy checks through AWS Config or Azure
+Policy can flag security group rules that have drifted toward permissiveness.
 
-Flow Logs: Log all traffic (AWS VPC Flow Logs, Azure NSG Flow Logs) to detect anomalies.
+## Administrative access
 
-Automated Policy Checks: Tools like AWS Config or Azure Policy can flag overly permissive rules.
-
-## Implementation checklist
-
-* Isolate internal services in private subnets.
-* Expose minimally: Only public endpoints get internet access.
-* Encrypt internal traffic (TLS, mTLS).
-* Monitor traffic patterns for deviations.
-
-Example Architecture:
-
-    Public Internet → [Load Balancer] → [Private Subnet: App Servers] → [Private Subnet: Database]  
-
-## When to break isolation (carefully)
-
-* DevOps access: Use SSM Session Manager (AWS) or Bastion Hosts (with MFA) for admin access.
-* Hybrid clouds: Site-to-site VPNs or Direct Connect for on-premises links.
-
-## More
-
-* [AWS Well-Architected: Networking](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/networking.html)
-* [Azure Network Security Best Practices](https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices)
+Direct server access for operations passes through controlled channels. AWS Systems Manager Session Manager
+removes the need for an exposed SSH port; bastion hosts with MFA provide an auditable alternative where SSM
+is not available. Hybrid environments connect on-premises networks to cloud resources through site-to-site
+VPNs or direct connections rather than public interfaces.
