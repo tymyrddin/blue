@@ -29,14 +29,11 @@ that protection it silently corrupts the interrupted context.
 ## Inline assembly in C and C++
 
 GCC and Clang extended inline assembly (`asm volatile(...)`) introduces bugs that are difficult to detect because the
-compiler does not analyse the assembly operands:
-
-- Not listing all clobbered registers in the clobber list causes the compiler to assume they are preserved, producing
-  incorrect code after the inline asm block.
-- Using a hardcoded register name (`"r5"`) instead of a constraint (`"=r"(var)`) conflicts if the compiler has allocated
-  that register for something else.
-- Omitting `"memory"` from the clobber list when the assembly accesses memory through a pointer the compiler holds in a
-  register causes the compiler to use a stale cached value.
+compiler does not analyse the assembly operands. Not listing all clobbered registers tells the compiler they are
+preserved, producing incorrect code after the block. A hardcoded register name like `"r5"` instead of a constraint such
+as `"=r"(var)` conflicts silently if the compiler has already allocated that register for something else. Omitting
+`"memory"` from the clobber list when the assembly accesses memory through a pointer the compiler holds in a register
+causes it to use a stale cached value.
 
 Where hardware access is the goal, compiler intrinsics (CMSIS intrinsics on ARM, vendor-supplied headers) express the
 intent more safely than inline assembly. The clobber list of any inline assembly block is worth a dedicated code review

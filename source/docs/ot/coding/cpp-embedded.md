@@ -83,10 +83,11 @@ register_values.push_back(42);
 
 `std::terminate` is called when the C++ runtime reaches a state it cannot recover from. With `-fno-exceptions` the cases that remain are:
 
-- A pure virtual function is called — typically a programming error involving a partially-constructed or partially-destroyed object.
-- A function declared `noexcept` invokes code that would throw (possible when linking mixed codebases).
-- `new` fails and the allocation function calls `std::terminate` rather than returning null (implementation-dependent; check your toolchain's behaviour).
-- `std::abort()` is called directly.
+A pure virtual function call is one path — usually a programming error involving a partially-constructed or destroyed
+object. A function declared `noexcept` that invokes code which would throw is another, and is possible when linking
+against a library compiled with exceptions enabled. `new` failing may call `std::terminate` rather than returning null,
+depending on the toolchain's allocation function; check the behaviour of your specific runtime. `std::abort()` called
+directly reaches the same handler.
 
 The default `std::terminate` handler calls `std::abort()`, which on a bare-metal target either loops forever or triggers a reset, depending on the fault handler. Neither is a controlled response. The controlled process is now in an unknown state: actuators are at whatever position they last received a command to hold, safety interlocks depending on the PLC for confirmation may time out.
 

@@ -49,9 +49,11 @@ The Data Link Layer Length field is one byte, covering everything from the Contr
 
 The Application Layer object headers are where the more exploitable patterns appear. Each object header contains a Group, Variation, and Qualifier Code. The Qualifier Code determines how the objects in the header are counted or sized:
 
-- Qualifier 0x00 / 0x01: start–stop index range. Validate that stop >= start and that stop is within the device's configured point count.
-- Qualifier 0x07 / 0x08: count of objects. Validate count against a configured maximum before iterating.
-- Qualifier 0x28: two-byte count. Same validation; the larger field makes an overflow-inducing value easier to supply.
+Qualifier codes 0x00 and 0x01 specify a start–stop index range; validate that stop is greater than or equal to start
+and that both are within the device's configured point count. Codes 0x07 and 0x08 specify a one- or two-byte count of
+objects; validate the count against a configured maximum before iterating. Code 0x28, the two-byte count variant, makes
+an overflow-inducing value easier to supply — the validation is the same, but the wider field deserves explicit attention
+in testing.
 
 ```c
 int parse_dnp3_object_header(uint8_t *buf, size_t len,

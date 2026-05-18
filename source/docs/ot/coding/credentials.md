@@ -86,12 +86,11 @@ Secure element storage is the strongest option available on constrained hardware
 
 ## What to scan for in code review
 
-Any of the following patterns in a code review warrants investigation:
-
-- String literals that resemble passwords, API keys, or tokens (high entropy, no obvious meaning)
-- Byte arrays in `.rodata` that are 16, 24, or 32 bytes long and used as key material
-- `#define` or `const` declarations with names containing `PASSWORD`, `SECRET`, `KEY`, `TOKEN`, or `CREDENTIAL`
-- Hardcoded IP addresses or hostnames combined with credentials in the same function
-- Comments referencing removed credentials that may indicate the pattern existed and may recur
+String literals of high entropy with no obvious semantic meaning are the first thing to look for. Byte arrays in
+`.rodata` that are 16, 24, or 32 bytes long and passed to cryptographic functions are likely key material. `#define` and
+`const` declarations with names containing `PASSWORD`, `SECRET`, `KEY`, `TOKEN`, or `CREDENTIAL` are obvious candidates.
+A hardcoded IP address or hostname in the same function as a credential suggests the credential is bound to a fixed
+endpoint. Comments describing a credential as removed or replaced may indicate the pattern existed and is likely to
+recur.
 
 Static analysis tools and secret scanning (truffleHog, `git-secrets`, GitLab's secret detection) catch the obvious patterns in source. They do not catch credentials that are constructed at runtime from fragments or that arrive via a compiled-in lookup table. Those require binary analysis.
