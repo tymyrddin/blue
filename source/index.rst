@@ -24,6 +24,7 @@ Going places
    docs/diy/index
    docs/active/index
    docs/dev/index
+   docs/ot/index
    docs/purple/index
 
 Stories, roleplay, simulations, and simulators
