@@ -18,3 +18,4 @@ largely preventable through consistent application of a small set of patterns.
    hardening
    parsing
    cpp-embedded
+   concurrency
