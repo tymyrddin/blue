@@ -18,8 +18,8 @@ a local variable. It is narrower than `-fstack-protector-all` (which instruments
 `-fstack-protector` (which only instruments functions with character arrays larger than eight bytes).
 
 On RTOS targets the canary abort handler needs to be implemented: the default `__stack_chk_fail` provided by the C
-library either calls `abort()` or is a stub. In safety-critical OT code, the abort handler should log the fault,
-transition the controlled process to a safe state, and halt or restart rather than silently continuing.
+library either calls `abort()` or is a stub. In safety-critical OT code, a well-configured abort handler logs the fault, transitions the controlled process to a
+safe state, and halts or restarts rather than silently continuing.
 
 Stack canaries do not stop a heap overflow or a write-what-where primitive that targets the canary directly, but they
 stop naive stack smashing reliably.

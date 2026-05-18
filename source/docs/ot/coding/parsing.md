@@ -52,7 +52,7 @@ The Application Layer object headers are where the more exploitable patterns app
 Qualifier codes 0x00 and 0x01 specify a start–stop index range; validate that stop is greater than or equal to start
 and that both are within the device's configured point count. Codes 0x07 and 0x08 specify a one- or two-byte count of
 objects; validate the count against a configured maximum before iterating. Code 0x28, the two-byte count variant, makes
-an overflow-inducing value easier to supply — the validation is the same, but the wider field deserves explicit attention
+an overflow-inducing value easier to supply; the validation is the same, but the wider field deserves explicit attention
 in testing.
 
 ```c

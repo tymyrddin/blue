@@ -17,3 +17,4 @@ guidance assumes away.
    :caption: The gap between reliable and secure is where the work lives.
 
    coding/index
+   architecture/index

@@ -1,6 +1,6 @@
 # C++ in embedded and OT targets
 
-C++ is common in OT firmware and soft PLC runtimes. The language features that make it useful in general-purpose software — exceptions, dynamic dispatch, heap-allocated containers — carry costs in constrained and real-time environments that are worth understanding explicitly rather than discovering at the wrong moment. Several features are routinely disabled on embedded targets, and the standard library has a safe subset and a problematic one.
+C++ is common in OT firmware and soft PLC runtimes. The language features that make it useful in general-purpose software (exceptions, dynamic dispatch, heap-allocated containers) carry costs in constrained and real-time environments that are worth understanding explicitly rather than discovering at the wrong moment. Several features are routinely disabled on embedded targets, and the standard library has a safe subset and a problematic one.
 
 ## Exception handling
 
@@ -55,19 +55,19 @@ Not all of the C++ standard library is appropriate for hard real-time or severel
 
 Generally safe on embedded targets:
 
-- `<cstdint>`, `<cstring>`, `<cstdlib>` — the C compatibility headers
-- `<array>`, `<tuple>`, `<utility>`, `<optional>` — fixed-size, stack-allocated
-- `<algorithm>`, `<numeric>` — operate on ranges, no allocation
-- `<type_traits>`, `<limits>` — compile-time only
-- `<bitset>` — fixed size specified as a template parameter
+- `<cstdint>`, `<cstring>`, `<cstdlib>`: the C compatibility headers
+- `<array>`, `<tuple>`, `<utility>`, `<optional>`: fixed-size, stack-allocated
+- `<algorithm>`, `<numeric>`: operate on ranges, no allocation
+- `<type_traits>`, `<limits>`: compile-time only
+- `<bitset>`: fixed size specified as a template parameter
 
 Generally problematic:
 
-- `std::vector`, `std::string`, `std::map`, `std::unordered_map` — heap allocation, non-deterministic worst-case timing
-- `std::function` — type erasure involves a heap allocation for callable objects larger than the small-buffer optimisation threshold
-- `<iostream>`, `<fstream>` — heavy, pull in locale and formatting machinery
-- `<regex>` — heap-heavy, non-deterministic execution time
-- `<thread>`, `<mutex>`, `<condition_variable>` — map to OS primitives; available on RTOS targets that provide a POSIX layer, but not on bare metal
+- `std::vector`, `std::string`, `std::map`, `std::unordered_map`: heap allocation, non-deterministic worst-case timing
+- `std::function`: type erasure involves a heap allocation for callable objects larger than the small-buffer optimisation threshold
+- `<iostream>`, `<fstream>`: heavy, pull in locale and formatting machinery
+- `<regex>`: heap-heavy, non-deterministic execution time
+- `<thread>`, `<mutex>`, `<condition_variable>`: map to OS primitives; available on RTOS targets that provide a POSIX layer, but not on bare metal
 
 The Embedded Template Library (ETL) provides drop-in equivalents of `std::vector`, `std::string`, and similar containers with fixed capacity specified as a template parameter, no heap allocation, and deterministic performance. It is a practical replacement for the dynamic containers in codebases that cannot use the standard ones.
 
@@ -83,7 +83,7 @@ register_values.push_back(42);
 
 `std::terminate` is called when the C++ runtime reaches a state it cannot recover from. With `-fno-exceptions` the cases that remain are:
 
-A pure virtual function call is one path — usually a programming error involving a partially-constructed or destroyed
+A pure virtual function call is one path: usually a programming error involving a partially-constructed or destroyed
 object. A function declared `noexcept` that invokes code which would throw is another, and is possible when linking
 against a library compiled with exceptions enabled. `new` failing may call `std::terminate` rather than returning null,
 depending on the toolchain's allocation function; check the behaviour of your specific runtime. `std::abort()` called
@@ -108,6 +108,6 @@ int main() {
 }
 ```
 
-The handler needs to be registered before any C++ constructors that could themselves trigger termination, which in practice means as early as possible in the startup sequence. On targets where `main` is not the entry point, register it in the startup code before jumping to `main`.
+The handler needs to be registered before any C++ constructors that could themselves trigger termination: as early as possible in the startup sequence. On targets where `main` is not the entry point, register it in the startup code before jumping to `main`.
 
 The watchdog timer is the last resort: if the terminate handler itself faults before completing the safe-state transition, the watchdog expires and forces a reset. An OT system with a working watchdog has a known restart behaviour; one without has an unknown hang behaviour.

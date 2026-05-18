@@ -11,8 +11,8 @@ hardware fault. The common failure is saving and restoring the wrong set of regi
 order.
 
 On ARM Cortex-M, the hardware automatically saves and restores a subset of registers (R0–R3, R12, LR, PC, xPSR) on
-exception entry and exit. A handwritten ISR that additionally saves callee-saved registers (R4–R11) must restore them
-in exactly reversed order before the exception return:
+exception entry and exit. A handwritten ISR that additionally saves callee-saved registers (R4–R11) restores them in exactly reversed order
+before the exception return:
 
 ```asm
 my_isr:
