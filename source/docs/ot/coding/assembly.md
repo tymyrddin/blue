@@ -1,6 +1,6 @@
 # Secure patterns in assembly
 
-Handwritten assembly appears in OT/ICS codebases in three places: boot loaders and startup routines, interrupt service
+Handwritten assembly appears in OT/ICS codebases in three places: bootloaders and startup routines, interrupt service
 routines where latency requirements exclude C overhead, and inline assembly in C/C++ for hardware access or
 cycle-accurate timing. Each has its own security-relevant patterns.
 
