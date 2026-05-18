@@ -16,3 +16,4 @@ largely preventable through consistent application of a small set of patterns.
    memory
    assembly
    hardening
+   parsing
