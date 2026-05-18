@@ -19,3 +19,4 @@ largely preventable through consistent application of a small set of patterns.
    parsing
    cpp-embedded
    concurrency
+   credentials
