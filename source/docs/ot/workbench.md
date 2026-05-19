@@ -1,5 +1,7 @@
 # OT Defence Workbench
 
+![OT Defence Workbench screenshot](/_static/images/workbench.png)
+
 Most OT security labs teach attack paths. The [OT Defence Workbench](https://github.com/tymyrddin/ot-defence-workbench)
 starts from the other end: a network boundary with nothing on it, legitimate traffic that needs to get through,
 and a probe that already knows what to try.
