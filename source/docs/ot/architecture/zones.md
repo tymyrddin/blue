@@ -1,5 +1,7 @@
 # Zones, levels, and the Purdue model
 
+![Purdue model](/_static/images/purdue.png)
+
 The Purdue Reference Model, formalised in ISA-95 and widely adopted as the conceptual basis for OT network architecture,
 divides industrial systems into levels based on function and time criticality. The model predates modern networking and
 was not designed as a security framework, but it provides a vocabulary that is still useful for reasoning about trust

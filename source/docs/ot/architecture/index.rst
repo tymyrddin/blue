@@ -1,7 +1,7 @@
 OT network architecture
 ==================================
 
-.. image:: /_static/images/ot-scada.png
+.. image:: /_static/images/purdue.png
    :alt: OT SCADA
 
 Most OT security incidents do not exploit novel vulnerabilities. They exploit architecture: routes that were never
@@ -10,7 +10,7 @@ revisited. Understanding the reference models and the design decisions that foll
 evaluating what is actually in place.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Structure determines what is possible.
 
    zones

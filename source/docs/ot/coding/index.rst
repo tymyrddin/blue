@@ -10,7 +10,7 @@ integer range, every resource lifecycle. The vulnerabilities that follow from th
 largely preventable through consistent application of a small set of patterns.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: The vulnerabilities are old. The environments are not getting simpler.
 
    memory
