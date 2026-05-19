@@ -13,7 +13,7 @@ The challenge is applying controls that work within real-time and resource const
 guidance assumes away.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: The gap between reliable and secure is where the work lives.
 
    coding/index
