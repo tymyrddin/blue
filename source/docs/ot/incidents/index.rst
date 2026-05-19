@@ -1,4 +1,4 @@
-OT/ICS incidents
+Infamous OT/ICS incidents
 ==================================
 
 .. image:: /_static/images/ot-ics-smart-grid-sim.png
