@@ -13,12 +13,16 @@ The challenge is applying controls that work within real-time and resource const
 guidance assumes away.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: The gap between reliable and secure is where the work lives.
 
    coding/index
    architecture/index
    protocols/index
    incidents/index
+
+.. toctree::
+   :maxdepth: 1
+
    mitre-attack-ics
    workbench

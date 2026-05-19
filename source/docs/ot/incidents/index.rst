@@ -3,6 +3,7 @@ Infamous OT/ICS incidents
 
 .. image:: /_static/images/ot-ics-smart-grid-sim.png
    :alt: Smart grid simulation demo lab
+   :target: https://github.com/tymyrddin/smart-grid-sim
 
 The protocols section describes the gaps. The incidents section is where those gaps were used. Each page covers
 what happened, which technique or protocol made it possible, and what a defender would have needed in place
