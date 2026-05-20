@@ -4,9 +4,10 @@
 
 The incidents are instructive not because the protocols were exploited, but because they were reached.
 Modbus, MQTT, IEC 60870-5-104, IEC 61850 GOOSE: none carries authentication in its default configuration.
-Reaching the service, a TCP port or a Layer 2 multicast address, is enough to be treated as authorised.
-The network boundary is the most consistent enforcement point. Several of these protocols also carry a path
-to transport or application-layer security; the briefs work through both.
+OPC UA builds signing and certificates into the handshake but ships with a None security policy that
+disables them. Reaching the service is often enough regardless. The network boundary is the most consistent
+enforcement point; the briefs also work through what these protocols can do when their security features
+are actually turned on.
 
 The [OT Defence Workbench](https://github.com/tymyrddin/ot-defence-workbench) was built from that
 observation. This lab starts with no boundary at all and builds one brief at a time, with a probe that
@@ -19,15 +20,20 @@ Two segments. One boundary. Nothing reaches the south without crossing it.
 The north segment (10.0.1.0/24) holds a client and a probe. The south segment (10.0.2.0/24) holds a
 [Modbus/TCP](../protocols/modbus.md) asset server. The boundary node sits between them, starting as a transparent
 bridge.
+
 Building it up from there is the work.
 
 The probe generates attack traffic and reports what got through. The web interface at `http://localhost:5000`
 shows either HELD (all known checks passed) or OPEN (something got through). HELD is not the same as secure.
 The probe's battery is finite; the asset is simulated. The scoreboard reports what the probe knows, no more.
 
-Seventeen briefs, each one introducing something the previous defence did not anticipate.
+Twenty briefs, each one introducing something the previous defence did not anticipate.
 
 ## MODBUS brief ladder
+
+Modbus/TCP (port 502) carries no authentication and no integrity protection. Any host that reaches the
+port can read or write any register. The ladder covers network access control, function code filtering,
+topology-based controls, and transport upgrade to Modbus/TLS (RFC 8184, port 802). Nine briefs:
 
 ### 1 · block-probe
 
@@ -90,6 +96,10 @@ with a defined TLS variant.
 
 ## MQTT brief ladder
 
+MQTT (port 1883) was designed for lightweight publish/subscribe messaging in constrained environments.
+It ships with anonymous access and no TLS by default; any host that connects can subscribe to all topics
+or publish to command topics. Two briefs, one for each enforcement layer:
+
 ### 10 · mqtt-block-probe
 
 [MQTT](../protocols/mqtt.md) starts with anonymous access and no TLS. Any host that reaches port 1883 can
@@ -111,6 +121,10 @@ and receives process data. The comparison echoes the one between briefs 12 and 1
 same probe, same outcome, different layer.
 
 ## IEC 104 brief ladder
+
+IEC 60870-5-104 (port 2404) is the telecontrol protocol used for SCADA communication with substations
+and field devices. Any host that completes the STARTDT handshake is treated as an authorised master.
+Three briefs, each stopping the trip command at a different point:
 
 ### 12 · iec104-block-probe
 
@@ -147,6 +161,10 @@ is the point: briefs 12 and 13 held because the boundary acted. Brief 14 holds b
 
 ## GOOSE brief ladder
 
+IEC 61850 GOOSE (EtherType 0x88B8) is the Layer 2 multicast protocol used for protection tripping in
+substations. It carries no IP header and cannot be IP-routed; iptables cannot see it. The boundary runs
+a relay daemon that is the only available control point. Three briefs:
+
 ### 15 · goose-block-probe
 
 [IEC 61850](../protocols/iec61850.md) GOOSE is the Layer 2 multicast protocol used for protection tripping
@@ -173,6 +191,39 @@ frames with no MAC or an invalid MAC are silently dropped. The probe's unsigned 
 asset and produces no response. The authorised client appends a correct MAC; the asset validates and
 echoes. The three-layer GOOSE sequence completes here: relay MAC block, relay trip filter, asset security
 authentication. The parallel with the IEC 104 sequence across briefs 12 through 14 is the point.
+
+## OPC UA brief ladder
+
+OPC-UA (port 4840) is the dominant data exchange protocol in European manufacturing
+and process industry. It has three security modes (None, Sign, SignAndEncrypt) and
+three authentication methods (anonymous, username, certificate). A small ladder:
+
+### 18 · opcua-port-block
+
+[OPC UA](../protocols/opcua.md) is the dominant data exchange protocol in European manufacturing and
+process industry. This brief is the direct analogue of brief 12: the same network-layer segmentation
+principle applied to a different protocol on a different port. Blocking port 4840 at the boundary prevents
+the probe from establishing an OPC UA session. No application-layer inspection is required; OPC UA traffic
+is indistinguishable from any TCP service at the network layer.
+
+### 19 · opcua-auth
+
+Brief 18 stopped the probe at the network layer. Brief 19 removes the network control and moves the
+defence to the server itself. The boundary is transparent; the probe completes the TCP handshake, sends an
+OPC UA Hello, and receives a rejection at the ActivateSession step with BadUserAccessDenied. The port is
+open; the session is refused at the application layer. The client connects with valid credentials and reads
+process data. The analogue is brief 11's MQTT broker password authentication: same probe, same outcome,
+different protocol, same layer.
+
+### 20 · opcua-sec-policy
+
+Briefs 18 and 19 stopped the probe at the network and credential layers. Brief 20 adds a third axis: the
+security policy negotiated at session establishment. The server accepts only Basic256Sha256_Sign; when the
+probe connects with the None policy, the server returns an endpoint list containing no None-policy entry
+and the session fails. No TCP block, no credential check: the rejection happens in the handshake. The
+authorised client fetches the endpoint list, selects the matching endpoint, obtains the server certificate,
+and establishes a signed session using its own certificate and private key. OPC UA's security policy is
+not enforced at the network layer; the control is inside the protocol handshake itself.
 
 ## Both directions
 

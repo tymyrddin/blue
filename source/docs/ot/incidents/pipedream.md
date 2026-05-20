@@ -106,4 +106,5 @@ environments. The capability ceiling it reveals is the thing worth recording.
   injection, and Modbus without authentication; the protocol surfaces Pipedream targeted
 - [OT Defence Workbench](../labs/workbench): brief 8 combines source restriction and function code filtering
   as independent controls; brief 12 applies network enforcement to IEC 104, one of the protocols in
-  Pipedream's scanner
+  Pipedream's scanner; briefs 18 through 20 cover OPC UA, from port block through credential enforcement
+  to security policy negotiation, the three layers Pipedream's anonymous OPC UA component bypassed
