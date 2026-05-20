@@ -105,4 +105,6 @@ programme across seven years of operations.
 - [ICS Access and Persistence SimLab](../labs/ics-access-simlab): multi-hop credential chains to the control
   layer; unauthenticated REST injection falsifying IEC-104 readings; relay IED writes in the control zone
 - [OT Defence Workbench](../labs/workbench): brief 3 removes every direct path via DNAT proxy; brief 10
-  applies the same network enforcement to IEC 104, the protocol the Sandworm breaker commands ran on
+  applies network enforcement to IEC 104; brief 11 filters the trip command type at the boundary while
+  leaving monitoring sessions intact; brief 12 moves the defence to the asset itself via IEC 62351-5
+  authentication, the control the Sandworm sessions had no answer for

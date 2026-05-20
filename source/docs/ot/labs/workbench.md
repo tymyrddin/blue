@@ -15,8 +15,9 @@ tests both sides: whether the attack got through, and whether legitimate traffic
 
 Two segments. One boundary. Nothing reaches the south without crossing it.
 
-The north segment (10.0.1.0/24) holds a client and a probe. The south segment (10.0.2.0/24) holds a 
-[Modbus/TCP](../protocols/modbus.md) asset server. The boundary node sits between them, starting as a transparent bridge. 
+The north segment (10.0.1.0/24) holds a client and a probe. The south segment (10.0.2.0/24) holds a
+[Modbus/TCP](../protocols/modbus.md) asset server. The boundary node sits between them, starting as a transparent
+bridge.
 Building it up from there is the work.
 
 The probe generates attack traffic and reports what got through. The web interface at `http://localhost:5000`
@@ -25,7 +26,7 @@ The probe's battery is finite; the asset is simulated. The scoreboard reports wh
 
 ## The brief ladder
 
-Ten briefs, each one introducing something the previous defence did not anticipate.
+Twelve briefs, each one introducing something the previous defence did not anticipate.
 
 ### 1 · block-probe
 
@@ -79,8 +80,8 @@ to beat simultaneously.
 
 ### 9 · mqtt-block-probe
 
-MQTT starts with anonymous access and no TLS. Any host that reaches port 1883 can subscribe to the full
-topic tree and receive all process telemetry, or publish to command topics and affect physical state: no
+[MQTT](../protocols/mqtt.md) starts with anonymous access and no TLS. Any host that reaches port 1883 can subscribe to
+the full topic tree and receive all process telemetry, or publish to command topics and affect physical state: no
 credentials, no exploit, just a CONNECT packet. Researchers scanning Shodan in 2023 found over 50,000
 publicly reachable MQTT brokers with anonymous access; several served live industrial process data. On a flat
 OT network the reach requirement drops to the same subnet.
@@ -93,7 +94,8 @@ port: the probe cannot reach the broker, the client's connection still succeeds.
 [IEC 60870-5-104](../protocols/iec60870-5-104.md) carries no authentication in its base specification. Any
 host that completes the STARTDT handshake is treated as an authorised master station and may send control
 commands to field devices, including C_SC_NA_1, a single command that opens or closes a circuit breaker. In
-December 2015, Sandworm used plain IEC 104 sessions to open breakers at substations across three Ukrainian
+December 2015, [Sandworm](../incidents/ukraine-grid.md) used plain IEC 104 sessions to open breakers at substations
+across three Ukrainian
 oblasts and cut power to around 230,000 customers. In December 2016, Industroyer automated the same attack:
 a dedicated payload that enumerated information object addresses and issued trip commands without any
 credential exchange. No exploit. No credential. The protocol accepted the commands because the station
@@ -101,6 +103,26 @@ answered the phone.
 
 Brief 10 applies the same network control as brief 1: the probe cannot reach the substation controller,
 the client's monitoring connection still succeeds.
+
+### 11 · iec104-command-filter
+
+Brief 10 blocked the port. On a segment where the client and probe share a subnet, that also blocks any
+monitoring session from a host not on the allowlist. Brief 11 takes a finer approach: the session is
+allowed through, only the trip command is not. The iptables u32 module reads the IEC 104 type ID byte
+directly from the TCP payload and drops any packet carrying C_SC_NA_1 (0x2D) before any ACCEPT rule sees
+it, including the one that would pass it as part of an established session. STARTDT and TESTFR control
+frames are six bytes; the type ID sits at byte six, which does not exist for them. They pass silently.
+
+### 12 · iec104-sa
+
+Briefs 10 and 11 both held at the boundary. Brief 12 removes the boundary from the equation entirely.
+[IEC 62351-5](../protocols/iec62351.md) Security Authentication requires the sender to append a truncated HMAC to each
+I-frame
+carrying a control command; the asset verifies the MAC before acting on the ASDU. The probe connects,
+completes STARTDT, and sends the same trip command it sends in every IEC 104 brief. The command reaches
+the asset. The asset finds no valid MAC and closes the connection. The authorised client sends the same
+command with a correct HMAC and the asset acknowledges. The cross-brief comparison is the point: briefs
+10 and 11 held because the boundary acted. Brief 12 holds because the asset did.
 
 ## Both directions
 
@@ -112,7 +134,7 @@ That constraint makes the briefs harder. It also makes them closer to what defen
 environments actually involve.
 
 Custom probes are possible too: attack scripts written directly in the browser interface, saved and run
-independently without affecting the HELD/OPEN verdict. Custom filters work the same way, so an existing setup 
+independently without affecting the HELD/OPEN verdict. Custom filters work the same way, so an existing setup
 can be tested against a new probe independently.
 
 New briefs arrive when existing defences prove insufficient against a technique that emerged after them. The
@@ -133,4 +155,5 @@ python web/app.py
 The web interface comes up at `http://localhost:5000`. The probe battery, firewall component selector, and
 pass/fail results are all there.
 
-The workbench repository can be found at [github.com/tymyrddin/ot-defence-workbench](https://github.com/tymyrddin/ot-defence-workbench).
+The workbench repository can be found
+at [github.com/tymyrddin/ot-defence-workbench](https://github.com/tymyrddin/ot-defence-workbench).
