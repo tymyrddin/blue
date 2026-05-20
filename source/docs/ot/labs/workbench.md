@@ -25,9 +25,9 @@ The probe generates attack traffic and reports what got through. The web interfa
 shows either HELD (all known checks passed) or OPEN (something got through). HELD is not the same as secure.
 The probe's battery is finite; the asset is simulated. The scoreboard reports what the probe knows, no more.
 
-## The brief ladder
-
 Seventeen briefs, each one introducing something the previous defence did not anticipate.
+
+## MODBUS brief ladder
 
 ### 1 · block-probe
 
@@ -88,6 +88,8 @@ cannot reach the register map. The client connects through the encrypted channel
 the plaintext service and provide a cryptographic alternative: the same pattern applies to any protocol
 with a defined TLS variant.
 
+## MQTT brief ladder
+
 ### 10 · mqtt-block-probe
 
 [MQTT](../protocols/mqtt.md) starts with anonymous access and no TLS. Any host that reaches port 1883 can
@@ -107,6 +109,8 @@ a CONNECT packet. The broker requires username and password authentication and r
 port is open; the connection is refused at the application layer. The client connects with valid credentials
 and receives process data. The comparison echoes the one between briefs 12 and 14 in the IEC 104 sequence:
 same probe, same outcome, different layer.
+
+## IEC 104 brief ladder
 
 ### 12 · iec104-block-probe
 
@@ -140,6 +144,8 @@ The probe connects, completes STARTDT, and sends the same trip command it sends 
 The command reaches the asset. The asset finds no valid MAC and closes the connection. The authorised
 client sends the same command with a correct HMAC and the asset acknowledges. The cross-brief comparison
 is the point: briefs 12 and 13 held because the boundary acted. Brief 14 holds because the asset did.
+
+## GOOSE brief ladder
 
 ### 15 · goose-block-probe
 
@@ -182,7 +188,7 @@ independently without affecting the HELD/OPEN verdict. Custom filters work the s
 can be tested against a new probe independently.
 
 New briefs arrive when existing defences prove insufficient against a technique that emerged after them. The
-brief ladders are never finished. The attack surfaces it exercises have not changed: the protocols are the same
+brief ladders are never finished. The attack surfaces they exercise have not changed: the protocols are the same
 as when they were specified. That is a different kind of stability.
 
 ## Setup
