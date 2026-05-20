@@ -90,13 +90,6 @@ framework requiring deep knowledge of MODICON, OMRON, CODESYS, and OPC-UA, devel
 operational readiness, covering the range of equipment present in electric utility and process industry
 environments. The capability ceiling it reveals is the thing worth recording.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models the Pipedream pattern as
-`nation-pipedream`: 45 seconds of simultaneous spoofing on three devices with a demand spike and frequency
-attack representing the enumeration and disruption phase, then wiper attacks on both substations and forced
-shutdown of both EV chargers. The sequence compresses a multiphase capability into a single observable run.
-
 ## Related
 
 - [Modbus](../protocols/modbus.md): one of Pipedream's primary attack protocols; the register access model the
@@ -107,3 +100,10 @@ shutdown of both EV chargers. The sequence compresses a multiphase capability in
   beneath the Modbus and engineering protocol components
 - [CISA advisory AA22-103A](https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-103a): original
   joint advisory with technical detail, indicators of compromise, and detection guidance, April 2022
+- [Smart Grid SimLab](../labs/smart-grid-sim): nation-pipedream models the multiphase capability; spoofing,
+  demand spike, wiper attacks, and EV charger shutdown in one observable sequence
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): anonymous OPC-UA, unauthenticated REST
+  injection, and Modbus without authentication; the protocol surfaces Pipedream targeted
+- [OT Defence Workbench](../labs/workbench): brief 8 combines source restriction and function code filtering
+  as independent controls; brief 10 applies network enforcement to IEC 104, one of the protocols in
+  Pipedream's scanner

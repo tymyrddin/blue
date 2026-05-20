@@ -2,17 +2,22 @@
 
 ![OT Defence Workbench screenshot](/_static/images/workbench.png)
 
-Most OT security labs teach attack paths. The [OT Defence Workbench](https://github.com/tymyrddin/ot-defence-workbench)
-starts from the other end: a network boundary with nothing on it, legitimate traffic that needs to get through,
-and a probe that already knows what to try.
+The incidents are instructive not because the protocols were exploited, but because they were reached.
+Modbus, MQTT, IEC 60870-5-104: none carries authentication in its base specification. Any host that gets
+to port 502, 1883, or 2404 is treated as authorised. The network boundary is the only enforcement point
+any of them will ever have.
+
+The [OT Defence Workbench](https://github.com/tymyrddin/ot-defence-workbench) was built from that
+observation. This lab starts with no boundary at all and builds one brief at a time, with a probe that
+tests both sides: whether the attack got through, and whether legitimate traffic kept flowing.
 
 ## The topology
 
 Two segments. One boundary. Nothing reaches the south without crossing it.
 
-The north segment (10.0.1.0/24) holds a client and a probe. The south segment (10.0.2.0/24) holds a Modbus/TCP
-asset server. The boundary node sits between them, starting as a transparent bridge. Building it up from there
-is the work.
+The north segment (10.0.1.0/24) holds a client and a probe. The south segment (10.0.2.0/24) holds a 
+[Modbus/TCP](../protocols/modbus.md) asset server. The boundary node sits between them, starting as a transparent bridge. 
+Building it up from there is the work.
 
 The probe generates attack traffic and reports what got through. The web interface at `http://localhost:5000`
 shows either HELD (all known checks passed) or OPEN (something got through). HELD is not the same as secure.
@@ -20,7 +25,7 @@ The probe's battery is finite; the asset is simulated. The scoreboard reports wh
 
 ## The brief ladder
 
-Eight briefs, each one introducing something the previous defence did not anticipate.
+Ten briefs, each one introducing something the previous defence did not anticipate.
 
 ### 1 · block-probe
 
@@ -72,7 +77,32 @@ code filter; bypassing the function code filter still leaves the source restrict
 read nor write. The client retains full access. Two independent controls, both of which the probe would need
 to beat simultaneously.
 
-## The thing that separates it
+### 9 · mqtt-block-probe
+
+MQTT starts with anonymous access and no TLS. Any host that reaches port 1883 can subscribe to the full
+topic tree and receive all process telemetry, or publish to command topics and affect physical state: no
+credentials, no exploit, just a CONNECT packet. Researchers scanning Shodan in 2023 found over 50,000
+publicly reachable MQTT brokers with anonymous access; several served live industrial process data. On a flat
+OT network the reach requirement drops to the same subnet.
+
+Brief 9 applies segmentation. The requirement is the same as brief 1, for a different protocol on a different
+port: the probe cannot reach the broker, the client's connection still succeeds.
+
+### 10 · iec104-block-probe
+
+[IEC 60870-5-104](../protocols/iec60870-5-104.md) carries no authentication in its base specification. Any
+host that completes the STARTDT handshake is treated as an authorised master station and may send control
+commands to field devices, including C_SC_NA_1, a single command that opens or closes a circuit breaker. In
+December 2015, Sandworm used plain IEC 104 sessions to open breakers at substations across three Ukrainian
+oblasts and cut power to around 230,000 customers. In December 2016, Industroyer automated the same attack:
+a dedicated payload that enumerated information object addresses and issued trip commands without any
+credential exchange. No exploit. No credential. The protocol accepted the commands because the station
+answered the phone.
+
+Brief 10 applies the same network control as brief 1: the probe cannot reach the substation controller,
+the client's monitoring connection still succeeds.
+
+## Both directions
 
 Attack labs check whether an attack got through. This one checks both sides: whether the attack got through
 and whether legitimate traffic kept flowing. Blocking Modbus writes from the probe while also dropping the
@@ -82,7 +112,12 @@ That constraint makes the briefs harder. It also makes them closer to what defen
 environments actually involve.
 
 Custom probes are possible too: attack scripts written directly in the browser interface, saved and run
-independently without affecting the HELD/OPEN verdict.
+independently without affecting the HELD/OPEN verdict. Custom filters work the same way, so an existing setup 
+can be tested against a new probe independently.
+
+New briefs arrive when existing defences prove insufficient against a technique that emerged after them. The
+brief ladder is not finished. The attack surfaces it exercises have not changed: the protocols are the same
+as when they were specified. That is a different kind of stability.
 
 ## Setup
 
@@ -98,5 +133,4 @@ python web/app.py
 The web interface comes up at `http://localhost:5000`. The probe battery, firewall component selector, and
 pass/fail results are all there.
 
-The workbench is at [github.com/tymyrddin/ot-defence-workbench](https://github.com/tymyrddin/ot-defence-workbench)
-and more briefs will follow.
+The workbench repository can be found at [github.com/tymyrddin/ot-defence-workbench](https://github.com/tymyrddin/ot-defence-workbench).

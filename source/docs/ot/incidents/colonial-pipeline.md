@@ -82,12 +82,6 @@ effects of IT system loss on operations that depend on those IT systems for bill
 awareness. Colonial Pipeline's experience gives that argument a specific and measurable form: six days, 45
 per cent of East Coast fuel supply, and a ransom paid before the scope was fully understood.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models the Colonial Pipeline pattern
-as `nation-colonial-pipeline`: an IT-originated disruption with cascading effects reaching OT systems through
-operational dependency rather than through direct protocol-level attack.
-
 ## Related
 
 - [IT/OT boundary](../architecture/boundary.md): the segmentation layer that held during Colonial Pipeline and
@@ -96,3 +90,8 @@ operational dependency rather than through direct protocol-level attack.
   the incident tested at the entry point
 - [CISA advisory AA21-131A](https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-131a): joint advisory
   on DarkSide ransomware with indicators of compromise and mitigations, May 2021
+- [Smart Grid SimLab](../labs/smart-grid-sim): nation-colonial-pipeline models IT disruption that stops
+  operations through loss of visibility rather than direct OT damage
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): SCADA default credentials, historian SQL
+  injection and path traversal, and historian ingest poisoning; the access and monitoring chain through which
+  operators lose situational awareness

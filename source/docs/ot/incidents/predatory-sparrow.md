@@ -86,13 +86,6 @@ Stuxnet operation beginning around 2007, and numerous proxy operations in betwee
 attacks fit the pattern of calibrated destructive operations against Iranian industrial infrastructure used as
 pressure instruments rather than attempts at strategic denial.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models the Predatory Sparrow
-kill chain as `predatory-sparrow`: 15 seconds with the SIS taken offline and thermal stress accumulating on
-substation-01, then a demand spike and cascading failure in phase 2. With the safety system offline, nothing
-interrupts the fault sequence.
-
 ## Related
 
 - [IEC 61850](../protocols/iec61850.md): substation protection standard; the SIS bypass and relay bypass
@@ -101,3 +94,9 @@ interrupts the fault sequence.
   access mechanism for safety parameter manipulation in many deployed SIS environments
 - [Triton/TRISIS](triton.md): the 2017 precedent for direct SIS targeting at a Saudi petrochemical plant;
   the intended kill chain Predatory Sparrow completed five years later
+- [Smart Grid SimLab](../labs/smart-grid-sim): the predatory-sparrow scenario models the kill chain; SIS
+  offline, thermal stress accumulating, then cascading failure with nothing to interrupt it
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): relay IED overcurrent threshold writes that
+  bring the turbine down through its own protection system; protective limits turned against the process
+- [OT Defence Workbench](../labs/workbench): brief 6 drops FC06 and FC16 Modbus write commands regardless of
+  source address; the function code filter that would block the safety parameter write technique

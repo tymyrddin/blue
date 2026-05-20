@@ -82,12 +82,6 @@ system legitimately wrote and their expected value ranges, would have flagged th
 before the heating failed. The controllers were not silent throughout the attack. They responded to queries. A
 passive decoder on the segment would have seen the writes as they arrived.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation implements the Modbus write technique
-as `modbus-substation-01` and `modbus-substation-02`. The composite scenario `nation-frostygoop` fires both
-simultaneously alongside a demand spike, modelling the Lviv heating network failure pattern.
-
 ## Related
 
 - [Modbus](../protocols/modbus.md): the protocol FrostyGoop used; port 502, no authentication, write access to any
@@ -95,3 +89,9 @@ simultaneously alongside a demand spike, modelling the Lviv heating network fail
 - [Dragos: FrostyGoop](https://www.dragos.com/blog/protect-against-frostygoop-ics-malware-targeting-operational-technology):
   original public disclosure and technical analysis, July 2024
 - [Shodan: port 502](https://www.shodan.io/search?query=port%3A502): current count of internet-exposed Modbus devices
+- [Smart Grid SimLab](../labs/smart-grid-sim): the nation-frostygoop scenario models the Lviv heating network
+  pattern; simultaneous Modbus register writes against both substations alongside a demand spike
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): unauthenticated Modbus control layer on the
+  turbine PLC and relay IEDs; the same condition Lvivteploenergo exposed
+- [OT Defence Workbench](../labs/workbench): briefs 1 and 6 built around FrostyGoop; transparent bridge
+  baseline through to a function code filter that drops write commands regardless of source address

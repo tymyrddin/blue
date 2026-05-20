@@ -97,13 +97,6 @@ environments, and that Volt Typhoon had in some cases already reached across. [R
 architecture](../architecture/remote-access.md) is the second control: if the IT/OT boundary is crossed through
 a legitimate remote access path, the attacker inherits whatever the remote access account is permitted to reach.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models the Volt Typhoon pattern
-as `nation-volt-typhoon`: 120 seconds of simultaneous replay and spoofing across four devices while the
-dashboard shows a stable grid, then cascading failures on both substations and wiper attacks on both. The
-120-second dwell compresses years of maintained access into a demonstrable sequence.
-
 ## Related
 
 - [IT/OT boundary](../architecture/boundary.md): the segmentation control that determines whether IT compromise
@@ -114,3 +107,9 @@ dashboard shows a stable grid, then cascading failures on both substations and w
   joint advisory with indicators of compromise and detection guidance, May 2023
 - [Microsoft disclosure](https://www.microsoft.com/en-us/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques/):
   initial public disclosure with technical detail on TTPs and affected sectors
+- [Smart Grid SimLab](../labs/smart-grid-sim): nation-volt-typhoon compresses maintained access into 120
+  seconds of dwell; replay and spoofing before cascading failure and wiper attacks
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): persistent southbound channel to the turbine
+  PLC; telemetry flowing without further attacker presence on the inner network
+- [OT Defence Workbench](../labs/workbench): brief 7 restricts Modbus write function codes to a single
+  authorised source; limits what pre-positioned OT segment access can accomplish

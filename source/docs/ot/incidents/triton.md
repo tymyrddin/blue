@@ -81,12 +81,6 @@ The inference is straightforward: the attackers would have remained undetected h
 correctly. Five years later, Predatory Sparrow completed the same kill chain at three Iranian steel mills
 simultaneously, this time without the bug.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models the TRITON kill chain as
-`triton-full-kill-chain`: 20 seconds with the SIS disabled on both substations, then simultaneous cascading
-failures representing the process fault phase the 2017 attack was designed to reach.
-
 ## Related
 
 - [IEC 61850](../protocols/iec61850.md): substation protection standard; the relay bypass and SIS targeting
@@ -97,3 +91,7 @@ failures representing the process fault phase the 2017 attack was designed to re
   chain; five years later, without the bug
 - [CISA ICS-ALERT-17-352-01](https://www.cisa.gov/news-events/ics-advisories/ics-alert-17-352-01): original
   ICS-CERT alert from December 2017 with technical indicators and detection guidance
+- [Smart Grid SimLab](../labs/smart-grid-sim): triton-full-kill-chain models the kill chain the 2017 malware
+  was designed to complete; SIS offline on both substations then simultaneous cascading failure
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): multi-zone traversal from enterprise through
+  operational into the control zone; relay IED threshold writes that disable protective limits

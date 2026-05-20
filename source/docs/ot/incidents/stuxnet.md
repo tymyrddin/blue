@@ -69,13 +69,6 @@ The implication is architectural rather than procedural: SCADA telemetry is only
 controller providing it. Physical instrumentation on an independent data path, one the PLC cannot intercept,
 is the only layer that does not share this weakness.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models Stuxnet-style thermal
-stress as `nation-stuxnet-substation-01`, `nation-stuxnet-substation-02`, and `nation-stuxnet-both`:
-manipulation of operating parameters to accumulate physical damage on one or both substations, representing
-the sustained centrifuge destruction pattern.
-
 ## Related
 
 - [OPC DA](../protocols/opcda.md): the COM-based OPC layer Stuxnet intercepted in Step 7 to return spoofed
@@ -86,3 +79,7 @@ the sustained centrifuge destruction pattern.
   infrastructure with protocol-native modules rather than PLC firmware manipulation
 - [Kim Zetter: Countdown to Zero Day](https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/):
   Wired's account of the Stuxnet operation covering discovery, technical reconstruction, and attribution
+- [Smart Grid SimLab](../labs/smart-grid-sim): nation-stuxnet scenarios model accumulated thermal stress on
+  one or both substations while the monitoring layer reports normal readings
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): turbine PLC trip paired with historian
+  ingest poisoning; the gap between physical state and displayed state

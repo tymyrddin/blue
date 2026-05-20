@@ -86,15 +86,6 @@ Ukrainian CERT and security researchers identified the attack in the preparation
 executed. The substation was not taken offline. It was the first major failure of the Sandworm grid attack
 programme across seven years of operations.
 
-## In the simulation
-
-The [smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim) simulation models all three attack patterns.
-`nation-coordinated-blackout` fires cascading failures on both substations simultaneously, representing the
-2015 manual operation. `nation-staged-industroyer` runs 30 seconds of silent data replay while operators see
-a stable grid, then simultaneous cascading failures on both substations, representing the 2016 Industroyer
-sequence. `nation-wiper-substation-01`, `nation-wiper-substation-02`, and `nation-wiper-all-substations`
-represent the 2022 destructive payload.
-
 ## Related
 
 - [IEC 60870-5-104](../protocols/iec60870-5-104.md): the protocol both Industroyer's TCP module and
@@ -109,3 +100,9 @@ represent the 2022 destructive payload.
   the original 2017 malware analysis covering the 2016 attack
 - [Cisco: Industroyer2 and INCONTROLLER](https://blogs.cisco.com/industrial-iot/mitigating-new-industroyer2-and-incontroller-malware-targeting-industrial-control-systems):
   April 2022 technical analysis of Industroyer2 and the CaddyWiper pairing
+- [Smart Grid SimLab](../labs/smart-grid-sim): nation-coordinated-blackout, nation-staged-industroyer, and
+  nation-wiper scenarios model the 2015, 2016, and 2022 attack phases
+- [ICS Access and Persistence SimLab](../labs/ics-access-simlab): multi-hop credential chains to the control
+  layer; unauthenticated REST injection falsifying IEC-104 readings; relay IED writes in the control zone
+- [OT Defence Workbench](../labs/workbench): brief 3 removes every direct path via DNAT proxy; brief 10
+  applies the same network enforcement to IEC 104, the protocol the Sandworm breaker commands ran on
