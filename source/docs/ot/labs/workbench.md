@@ -27,7 +27,7 @@ The probe generates attack traffic and reports what got through. The web interfa
 shows either HELD (all known checks passed) or OPEN (something got through). HELD is not the same as secure.
 The probe's battery is finite; the asset is simulated. The scoreboard reports what the probe knows, no more.
 
-Twenty briefs, each one introducing something the previous defence did not anticipate.
+Twenty-one briefs, each one introducing something the previous defence did not anticipate.
 
 ## MODBUS brief ladder
 
@@ -224,6 +224,21 @@ and the session fails. No TCP block, no credential check: the rejection happens 
 authorised client fetches the endpoint list, selects the matching endpoint, obtains the server certificate,
 and establishes a signed session using its own certificate and private key. OPC UA's security policy is
 not enforced at the network layer; the control is inside the protocol handshake itself.
+
+## Rate limiting
+
+Briefs 1 through 20 controlled what connections carry: content, source address, credentials, security
+policy. Rate limiting controls how many connections a source may open, regardless of what they contain.
+A different class of control. One brief:
+
+### 21 · rate-limit
+
+iptables hashlimit tracks a token bucket per source IP. The probe makes ten rapid TCP connections to
+port 502; only the first three, the burst, succeed before the bucket empties and further connections are
+dropped. The client's single connection falls well within its own bucket and is unaffected. The failure
+mode worth knowing: this control is per source IP, not per host identity. A NAT gateway routing both
+authorised and unauthorised traffic from the same address would share one bucket, and rapid legitimate
+polling from a single source is equally affected.
 
 ## Both directions
 
