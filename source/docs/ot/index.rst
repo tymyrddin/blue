@@ -11,7 +11,7 @@ in the requirements.
 
 This section covers the gap: protocols designed without authentication, architecture built for availability
 rather than defence, coding patterns for embedded systems where memory safety has physical consequences,
-and eight incidents that document what the gap looks like when it is used.
+and ten incidents that document what the gap looks like when it is used.
 
 .. toctree::
    :maxdepth: 1

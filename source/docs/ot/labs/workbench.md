@@ -243,8 +243,8 @@ polling from a single source is equally affected.
 ## Both directions
 
 Attack labs check whether an attack got through. This one checks both sides: whether the attack got through
-and whether legitimate traffic kept flowing. Blocking Modbus writes from the probe while also dropping the
-client's reads is a fail. The requirement is a boundary that distinguishes, not one that refuses everything.
+and whether legitimate traffic kept flowing. Blocking the probe's traffic while also dropping the
+client's legitimate session is a fail. The requirement is a boundary that distinguishes, not one that refuses everything.
 
 That constraint makes the briefs harder. It also makes them closer to what defensive decisions in real OT
 environments actually involve.
@@ -252,6 +252,10 @@ environments actually involve.
 Custom probes are possible too: attack scripts written directly in the browser interface, saved and run
 independently without affecting the HELD/OPEN verdict. Custom filters work the same way, so an existing setup
 can be tested against a new probe independently.
+
+The workbench is prevention-focused. No brief asks the boundary to hold the line while also generating
+evidence. Detection and alerting are a different class of tool. The HELD/OPEN verdict records whether
+traffic passed; what was logged is not measured.
 
 New briefs arrive when existing defences prove insufficient against a technique that emerged after them. The
 brief ladders are never finished. The attack surfaces they exercise have not changed: the protocols are the same

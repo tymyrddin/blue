@@ -32,10 +32,10 @@ destination, and the specific protocol and port. Rules scoped to an address rang
 permitting an entire protocol family rather than a specific port, often reflect the convenience of the person who wrote
 the rule rather than the minimum required flow.
 
-Time-bounded rules for maintenance windows are worth implementing where the firewall supports them. A rule that permits engineering software access to a PLC during a Saturday maintenance window has no business existing
-on Sunday morning. Many OT
-environments leave maintenance rules in place indefinitely because removing them requires a change management process
-that creates friction.
+Time-bounded rules for maintenance windows are worth implementing where the firewall supports them. A rule that permits 
+engineering software access to a PLC during a Saturday maintenance window has no business existing on Sunday morning. 
+Many OT environments leave maintenance rules in place indefinitely because removing them requires a change management 
+process that creates friction.
 
 ## DMZ architecture
 
@@ -53,7 +53,7 @@ to the OT network.
 
 Security monitoring systems, whether a SIEM collecting logs from both networks or an OT-specific monitoring platform,
 also benefit from the DMZ staging pattern. Log collectors in the DMZ receive forwarded events from OT; the SIEM consumes from
-the DMZ collectors rather than polling OT systems directly.
+the DMZ collectors rather than polling OT systems directly. The [monitoring](monitoring.md) page covers how log collection fits the broader visibility architecture.
 
 ## Data diodes
 
@@ -84,3 +84,10 @@ the crossing point.
 Both patterns are common because they are operationally convenient and were typically implemented before the security
 implications were considered. Identifying them is straightforward; remediating them requires the availability windows
 and change management discipline that OT environments find expensive.
+
+## Related
+
+- [Zone architecture](zones.md): the Purdue level model the boundary sits inside
+- [Remote access architecture](remote-access.md): how controlled paths cross the boundary for maintenance and engineering
+- [Network monitoring and visibility](monitoring.md): DMZ-staged log collection and its role in detection
+

@@ -19,5 +19,7 @@ before the attack began. Demonstrated, not theoretical.
    pipedream
    ukraine-grid
    colonial-pipeline
+   oldsmar
    triton
+   havex
    stuxnet

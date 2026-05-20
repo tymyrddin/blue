@@ -74,3 +74,9 @@ transition exposes the gaps between what the architecture is supposed to be and 
 
 That gap is usually large, because OT networks accumulate connections over years of operational decisions made without a
 security lens. The model does not prescribe how to close the gap; it makes the gap visible.
+
+## Related
+
+- [IT/OT boundary](boundary.md): the Level 3/Level 4 crossing in detail
+- [Remote access architecture](remote-access.md): controlled paths across zone boundaries for maintenance
+

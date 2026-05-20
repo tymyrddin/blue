@@ -16,3 +16,5 @@ evaluating what is actually in place.
    zones
    boundary
    remote-access
+   defence-in-depth
+   monitoring

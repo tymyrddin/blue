@@ -1,7 +1,7 @@
 # Remote access architecture
 
-Remote access is the most consistently exploited initial access vector in OT incidents. The Colonial Pipeline compromise
-in 2021 gained entry through a legacy VPN account. The Oldsmar water treatment incident that same year went through
+Remote access is the most consistently exploited initial access vector in OT incidents. The [Colonial Pipeline](../incidents/colonial-pipeline.md) compromise
+in 2021 gained entry through a legacy VPN account. The [Oldsmar](../incidents/oldsmar.md) water treatment incident that same year went through
 remote desktop software. The pattern recurs because remote access was added to OT environments for legitimate operational reasons (vendor maintenance, after-hours
 engineering support) and the security architecture was never designed to match the risk.
 
@@ -52,7 +52,7 @@ it a liability: it carries the corporate network's risk onto the OT network ever
 
 Vendor remote access is a distinct risk profile from internal engineering access. Vendors may be connecting from
 unmanaged endpoints, have credentials that are not subject to the organisation's password policies, and have accounts
-that are not routinely reviewed for necessity. The Triton/TRISIS attack targeted a safety instrumented system; the
+that are not routinely reviewed for necessity. The [Triton/TRISIS](../incidents/triton.md) attack targeted a safety instrumented system; the
 initial access came through a vendor account.
 
 The architecture for vendor access is tighter than for internal engineers. Each vendor session is created in a dedicated access gateway that records the full session: keystrokes, screen content,
@@ -79,3 +79,11 @@ environments because managing two sets is friction. The same corporate Active Di
 because it already exists and separate identity management seems expensive.
 
 The cost of separation is operational. The cost of not separating was visible in the incidents that have followed.
+
+## Related
+
+- [IT/OT boundary](boundary.md): the boundary architecture that jump host and PAW access is designed to preserve
+- [Zone architecture](zones.md): the Purdue level model that remote access paths cross
+- [Colonial Pipeline](../incidents/colonial-pipeline.md): legacy VPN account as initial access vector
+- [Triton/TRISIS](../incidents/triton.md): vendor account as initial access vector to a safety system
+- [OT Defence Workbench](../labs/workbench.md): brief 3 demonstrates the jump-host DNAT proxy pattern; brief 4 shows why source-allowlist alone fails
