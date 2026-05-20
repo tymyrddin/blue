@@ -25,6 +25,6 @@ and ten incidents that document what the gap looks like when it is used.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Boring but useful.
+   :caption: Boring but can be useful on occasion.
 
    mitre-attack-ics
