@@ -104,7 +104,9 @@ programme across seven years of operations.
   nation-wiper scenarios model the 2015, 2016, and 2022 attack phases
 - [ICS Access and Persistence SimLab](../labs/ics-access-simlab): multi-hop credential chains to the control
   layer; unauthenticated REST injection falsifying IEC-104 readings; relay IED writes in the control zone
-- [OT Defence Workbench](../labs/workbench): brief 3 removes every direct path via DNAT proxy; brief 10
-  applies network enforcement to IEC 104; brief 11 filters the trip command type at the boundary while
-  leaving monitoring sessions intact; brief 12 moves the defence to the asset itself via IEC 62351-5
-  authentication, the control the Sandworm sessions had no answer for
+- [OT Defence Workbench](../labs/workbench): brief 3 removes every direct path via DNAT proxy; brief 12
+  applies network enforcement to IEC 104; brief 13 filters the trip command type at the boundary while
+  leaving monitoring sessions intact; brief 14 moves the defence to the asset itself via IEC 62351-5
+  authentication, the control the Sandworm sessions had no answer for; brief 15 applies MAC-based
+  filtering to GOOSE, the Layer 2 protocol Industroyer used to send spoofed trip commands; brief 16
+  filters at the trip payload level; brief 17 moves GOOSE authentication to the asset via IEC 62351-6

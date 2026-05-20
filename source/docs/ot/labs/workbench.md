@@ -3,9 +3,10 @@
 ![OT Defence Workbench screenshot](/_static/images/workbench.png)
 
 The incidents are instructive not because the protocols were exploited, but because they were reached.
-Modbus, MQTT, IEC 60870-5-104: none carries authentication in its base specification. Any host that gets
-to port 502, 1883, or 2404 is treated as authorised. The network boundary is the only enforcement point
-any of them will ever have.
+Modbus, MQTT, IEC 60870-5-104, IEC 61850 GOOSE: none carries authentication in its default configuration.
+Reaching the service, a TCP port or a Layer 2 multicast address, is enough to be treated as authorised.
+The network boundary is the most consistent enforcement point. Several of these protocols also carry a path
+to transport or application-layer security; the briefs work through both.
 
 The [OT Defence Workbench](https://github.com/tymyrddin/ot-defence-workbench) was built from that
 observation. This lab starts with no boundary at all and builds one brief at a time, with a probe that
@@ -26,7 +27,7 @@ The probe's battery is finite; the asset is simulated. The scoreboard reports wh
 
 ## The brief ladder
 
-Twelve briefs, each one introducing something the previous defence did not anticipate.
+Seventeen briefs, each one introducing something the previous defence did not anticipate.
 
 ### 1 · block-probe
 
@@ -78,51 +79,94 @@ code filter; bypassing the function code filter still leaves the source restrict
 read nor write. The client retains full access. Two independent controls, both of which the probe would need
 to beat simultaneously.
 
-### 9 · mqtt-block-probe
+### 9 · modbus-tls
 
-[MQTT](../protocols/mqtt.md) starts with anonymous access and no TLS. Any host that reaches port 1883 can subscribe to
-the full topic tree and receive all process telemetry, or publish to command topics and affect physical state: no
-credentials, no exploit, just a CONNECT packet. Researchers scanning Shodan in 2023 found over 50,000
-publicly reachable MQTT brokers with anonymous access; several served live industrial process data. On a flat
-OT network the reach requirement drops to the same subnet.
+Briefs 1 through 8 controlled access to the plaintext Modbus service on port 502. Brief 9 takes a
+different path: port 502 is blocked for everyone, and the asset serves a
+[Modbus/TLS](../protocols/modbus.md) listener on port 802 (RFC 8184) for authorised clients. The probe
+cannot reach the register map. The client connects through the encrypted channel and reads it. Restrict
+the plaintext service and provide a cryptographic alternative: the same pattern applies to any protocol
+with a defined TLS variant.
 
-Brief 9 applies segmentation. The requirement is the same as brief 1, for a different protocol on a different
-port: the probe cannot reach the broker, the client's connection still succeeds.
+### 10 · mqtt-block-probe
 
-### 10 · iec104-block-probe
+[MQTT](../protocols/mqtt.md) starts with anonymous access and no TLS. Any host that reaches port 1883 can
+subscribe to the full topic tree and receive all process telemetry, or publish to command topics and affect
+physical state: no credentials, no exploit, just a CONNECT packet. Researchers scanning Shodan in 2023
+found over 50,000 publicly reachable MQTT brokers with anonymous access; several served live industrial
+process data. On a flat OT network the reach requirement drops to the same subnet.
+
+Brief 10 applies segmentation. The requirement is the same as brief 1, for a different protocol on a
+different port: the probe cannot reach the broker, the client's connection still succeeds.
+
+### 11 · mqtt-auth
+
+Brief 10 stopped the probe at the network layer. Brief 11 removes the network control and moves the
+defence to the broker itself. The boundary is transparent; the probe completes the TCP handshake and sends
+a CONNECT packet. The broker requires username and password authentication and returns CONNACK code 5. The
+port is open; the connection is refused at the application layer. The client connects with valid credentials
+and receives process data. The comparison echoes the one between briefs 12 and 14 in the IEC 104 sequence:
+same probe, same outcome, different layer.
+
+### 12 · iec104-block-probe
 
 [IEC 60870-5-104](../protocols/iec60870-5-104.md) carries no authentication in its base specification. Any
 host that completes the STARTDT handshake is treated as an authorised master station and may send control
 commands to field devices, including C_SC_NA_1, a single command that opens or closes a circuit breaker. In
-December 2015, [Sandworm](../incidents/ukraine-grid.md) used plain IEC 104 sessions to open breakers at substations
-across three Ukrainian
-oblasts and cut power to around 230,000 customers. In December 2016, Industroyer automated the same attack:
-a dedicated payload that enumerated information object addresses and issued trip commands without any
-credential exchange. No exploit. No credential. The protocol accepted the commands because the station
-answered the phone.
+December 2015, [Sandworm](../incidents/ukraine-grid.md) used plain IEC 104 sessions to open breakers at
+substations across three Ukrainian oblasts and cut power to around 230,000 customers. In December 2016,
+Industroyer automated the same attack: a dedicated payload that enumerated information object addresses and
+issued trip commands without any credential exchange. No exploit. No credential. The protocol accepted the
+commands because the station answered the phone.
 
-Brief 10 applies the same network control as brief 1: the probe cannot reach the substation controller,
+Brief 12 applies the same network control as brief 1: the probe cannot reach the substation controller,
 the client's monitoring connection still succeeds.
 
-### 11 · iec104-command-filter
+### 13 · iec104-command-filter
 
-Brief 10 blocked the port. On a segment where the client and probe share a subnet, that also blocks any
-monitoring session from a host not on the allowlist. Brief 11 takes a finer approach: the session is
+Brief 12 blocked the port. On a segment where the client and probe share a subnet, that also blocks any
+monitoring session from a host not on the allowlist. Brief 13 takes a finer approach: the session is
 allowed through, only the trip command is not. The iptables u32 module reads the IEC 104 type ID byte
 directly from the TCP payload and drops any packet carrying C_SC_NA_1 (0x2D) before any ACCEPT rule sees
 it, including the one that would pass it as part of an established session. STARTDT and TESTFR control
 frames are six bytes; the type ID sits at byte six, which does not exist for them. They pass silently.
 
-### 12 · iec104-sa
+### 14 · iec104-sa
 
-Briefs 10 and 11 both held at the boundary. Brief 12 removes the boundary from the equation entirely.
-[IEC 62351-5](../protocols/iec62351.md) Security Authentication requires the sender to append a truncated HMAC to each
-I-frame
-carrying a control command; the asset verifies the MAC before acting on the ASDU. The probe connects,
-completes STARTDT, and sends the same trip command it sends in every IEC 104 brief. The command reaches
-the asset. The asset finds no valid MAC and closes the connection. The authorised client sends the same
-command with a correct HMAC and the asset acknowledges. The cross-brief comparison is the point: briefs
-10 and 11 held because the boundary acted. Brief 12 holds because the asset did.
+Briefs 12 and 13 both held at the boundary. Brief 14 removes the boundary from the equation entirely.
+[IEC 62351-5](../protocols/iec62351.md) Security Authentication requires the sender to append a truncated
+HMAC to each I-frame carrying a control command; the asset verifies the MAC before acting on the ASDU.
+The probe connects, completes STARTDT, and sends the same trip command it sends in every IEC 104 brief.
+The command reaches the asset. The asset finds no valid MAC and closes the connection. The authorised
+client sends the same command with a correct HMAC and the asset acknowledges. The cross-brief comparison
+is the point: briefs 12 and 13 held because the boundary acted. Brief 14 holds because the asset did.
+
+### 15 · goose-block-probe
+
+[IEC 61850](../protocols/iec61850.md) GOOSE is the Layer 2 multicast protocol used for protection tripping
+in substations. EtherType 0x88B8 frames are addressed to a multicast MAC and carry no IP header: they
+cannot be IP-routed, and iptables cannot see them. [Industroyer](../incidents/ukraine-grid.md)'s dedicated
+module used GOOSE in the 2016 Ukraine attack to send spoofed trip messages to breaker controllers. Because
+there is no port to filter, the boundary runs a relay daemon that explicitly forwards 0x88B8 frames between
+segments; the same relay holds a block list. The probe's MAC is added to it. The client's is not.
+
+### 16 · goose-trip-filter
+
+Brief 15 blocked the probe by source MAC, stopping all GOOSE from a known host. Brief 16 takes a finer
+approach: the relay inspects the ASN.1 allData field in the GOOSE PDU and drops any frame whose first
+entry is BOOLEAN TRUE, an execute or trip command. BOOLEAN FALSE, a cancel or normal-state publish, passes
+from any source. The probe's GOOSE frames reach the relay; only the trip payload is removed before it can
+reach field devices. This is the GOOSE analogue of brief 13's IEC 104 type ID filter: same structure,
+different protocol, different encoding.
+
+### 17 · goose-sa
+
+Briefs 15 and 16 both held at the relay. Brief 17 moves the enforcement to the asset and makes the
+boundary transparent. The asset validates an HMAC-SHA256 MAC appended after the GOOSE PDU per IEC 62351-6;
+frames with no MAC or an invalid MAC are silently dropped. The probe's unsigned trip frame reaches the
+asset and produces no response. The authorised client appends a correct MAC; the asset validates and
+echoes. The three-layer GOOSE sequence completes here: relay MAC block, relay trip filter, asset security
+authentication. The parallel with the IEC 104 sequence across briefs 12 through 14 is the point.
 
 ## Both directions
 
@@ -138,7 +182,7 @@ independently without affecting the HELD/OPEN verdict. Custom filters work the s
 can be tested against a new probe independently.
 
 New briefs arrive when existing defences prove insufficient against a technique that emerged after them. The
-brief ladder is not finished. The attack surfaces it exercises have not changed: the protocols are the same
+brief ladders are never finished. The attack surfaces it exercises have not changed: the protocols are the same
 as when they were specified. That is a different kind of stability.
 
 ## Setup

@@ -105,5 +105,5 @@ environments. The capability ceiling it reveals is the thing worth recording.
 - [ICS Access and Persistence SimLab](../labs/ics-access-simlab): anonymous OPC-UA, unauthenticated REST
   injection, and Modbus without authentication; the protocol surfaces Pipedream targeted
 - [OT Defence Workbench](../labs/workbench): brief 8 combines source restriction and function code filtering
-  as independent controls; brief 10 applies network enforcement to IEC 104, one of the protocols in
+  as independent controls; brief 12 applies network enforcement to IEC 104, one of the protocols in
   Pipedream's scanner
