@@ -18,7 +18,7 @@ Outdated versions are hacker catnip. Patch them.
 ```
 cat /etc/apache2/apache2.conf       # Apache config
 cat /etc/nginx/nginx.conf           # Nginx config
-cat /etc/php/7.x/fpm/php.ini        # PHP settings
+cat /etc/php/8.*/fpm/php.ini         # PHP settings (replace 8.* with the installed version)
 ```
 
 Look for ServerTokens, ServerSignature, directory listing, and dangerous PHP settings like `allow_url_fopen`.

@@ -39,7 +39,7 @@ This enables the generation of `Indexes` only in that folder.
 
 ## Nginx 
 
-Nginx cannot directly execute external programs (CGI). Phew. But if you really really want it to, use [fcgi](https://www.nginx.com/resources/wiki/start/topics/examples/fastcgiexample/) securely.
+Nginx cannot directly execute external programs (CGI). If CGI execution is needed, [fcgi](https://www.nginx.com/resources/wiki/start/topics/examples/fastcgiexample/) is the standard approach.
 
 ## Disable SSI and autoindex execution 
 

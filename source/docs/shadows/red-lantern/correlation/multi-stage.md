@@ -115,4 +115,4 @@ A triggered correlation indicates:
 * Routing infrastructure accepted the route
 * Validation systems endorsed the announcement
 
-This is late-stage detection, but still actionable: traffic can be rerouted, prefixes filtered, and trust anchors audited.
+This is late-stage detection, but still actionable: traffic can be rerouted, prefixes filtered, and trust anchors audited. For response actions when this alert fires, see [Playbook 2](../response/playbooks.md#playbook-2-multi-stage-bgp-attack).

@@ -16,7 +16,7 @@ Ensure the Docker daemon isn't exposed over TCP without TLS (-H tcp://0.0.0.0:23
 ps aux | grep dockerd
 ```
 
-Check daemon flags: are you using --userns-remap for user namespace isolation? You should be.
+Check daemon flags. The `--userns-remap` flag enables user namespace isolation and is worth enabling.
 
 ## Running containers & permissions
 
@@ -42,7 +42,7 @@ docker history <image>
 
 Audit image provenance. Avoid pulling random images from Docker Hub like it’s the App Store of broken dreams.
 
-Use docker scan (powered by Snyk) or:
+Use `docker scout cves <image>` (Docker Scout, available in current Docker CLI and Docker Desktop) or:
 
 ```
 trivy image <image>
@@ -57,7 +57,7 @@ docker network ls
 docker network inspect <network>
 ```
 
-Review container network configs. Containers should not be on the host network unless there’s a very good reason.
+Review container network configs. Containers on the host network bypass network isolation; keeping them off it unless there is a specific, documented reason is worth the discipline.
 
 ```
 iptables -L -n

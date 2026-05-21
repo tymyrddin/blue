@@ -1,6 +1,6 @@
 # Necessary, but not enough alone
 
-## How Sender Policy Framework (SPF) works
+## Sender Policy Framework (SPF)
 
 When someone sends an email, the recipient’s mail server performs a quick background check:
 
@@ -14,21 +14,20 @@ When someone sends an email, the recipient’s mail server performs a quick back
 * The receiving server checks if the email’s originating IP matches one of the authorised senders in the SPF record.
 * If it doesn’t match, the email fails SPF authentication, a red flag for potential forgery.
 
-"What happens next?"
+## On receipt
 
-* A failed SPF check doesn’t always mean rejection (some servers just mark it as suspicious).
-* But passing SPF boosts deliverability, reducing the chance of legitimate emails being mistaken for spam.
+A failed SPF check does not always mean rejection; some servers mark the message as suspicious rather than dropping it outright. Passing SPF improves deliverability and reduces the chance of legitimate email being flagged as spam.
 
-## The good, the bad, and the ugly of SPF
+## Strengths and limitations
 
-The Benefits
+### Strengths
 
-* Reduces email spoofing – Stops random servers from impersonating your domain.
-* Improves inbox placement – Helps genuine emails avoid the spam folder.
-* Simple to implement – Just a DNS TXT record (no complex crypto).
+* Reduces email spoofing: stops random servers from impersonating your domain.
+* Improves inbox placement: helps genuine emails avoid the spam folder.
+* Simple to set up: just a DNS TXT record, no cryptographic infrastructure required.
 
-The Limitations
+### Limitations
 
-* Breaks on forwarding – If an email is forwarded, the original SPF check may fail (since the new sender isn’t in the original domain’s SPF record).
-* Doesn’t stop visible "From" spoofing – A scammer can still fake the display name (e.g., "PayPal scammer@evil.com").
-* Requires maintenance – If you change mail providers, you must update your SPF record.
+* Breaks on forwarding: if a message is forwarded, the original SPF check may fail because the forwarding server is not in the original domain’s SPF record.
+* Does not stop visible "From" spoofing: a scammer can still fake the display name (e.g., "PayPal scammer@evil.com").
+* Requires maintenance: changing mail providers means the SPF record needs updating.

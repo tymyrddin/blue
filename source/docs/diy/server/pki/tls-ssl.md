@@ -1,70 +1,75 @@
 # TLS/SSL
 
-The CA is always the first subsystem to be configured; every other subsystem depends on the CA for its configuration. The CA, along with setting up the CA hierarchy for the PKI, issues certificates which every subsystem uses to function and sets up a security domain which establishes trusted relationships between subsystems. 
+The CA is the first subsystem to configure; every other subsystem depends on it. The CA issues certificates that each subsystem uses and establishes the trusted relationships within the PKI.
 
 ## Installation
 
-On all systems and subsystems install openssl.
+Install OpenSSL on all systems:
 
-    # apt-get install openssl
+```bash
+apt-get install openssl
+```
 
-Use the script that comes with the openssl package:
+## Setting up a CA
 
-    # /usr/lib/ssl/misc/CA.pl -newca
+The `CA.pl` helper script was removed from OpenSSL 3.0 (the default on Ubuntu 22.04+ and Debian 12+). The commands below work on any current system.
 
-The script will take you through all the steps of creating your CA. The fields do not matter much. It is rather self-explanatory.
+Set up the CA directory structure:
 
-## Configuration
+```bash
+mkdir -p /etc/ssl/ca/{certs,private,newcerts}
+chmod 700 /etc/ssl/ca/private
+touch /etc/ssl/ca/index.txt
+echo '01' > /etc/ssl/ca/serial
+```
 
-The script has created a new directory `demoCA` with the CA's private key and public key/certificate in it. Demo useful. 
+Generate the CA key and self-signed certificate. The `-days 3650` value gives a ten-year CA lifetime:
 
-    # vi /etc/ssl/openssl.cnf
+```bash
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 \
+    -out /etc/ssl/ca/private/ca.key
+chmod 400 /etc/ssl/ca/private/ca.key
+openssl req -new -x509 -days 3650 \
+    -key /etc/ssl/ca/private/ca.key \
+    -out /etc/ssl/ca/certs/ca.crt
+```
 
-Change:
+The prompts ask for the Distinguished Name fields. The Common Name is the only field likely to matter for internal use.
 
-    dir = /etc/ssl/ca
-    ...
-    default_days = 730
-    default_bits = 2048
+## Generating certificates
 
-Edit the script too:
+For each server or service that needs a certificate:
 
-    # vi /usr/lib/ssl/misc/CA.pl
+```bash
+# Generate a key and certificate signing request
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 \
+    -out hostname.key
+openssl req -new -key hostname.key -out hostname.csr \
+    -addext "subjectAltName=DNS:hostname.example.com"
+```
 
-Change:
+Replace `hostname.example.com` with the actual name clients will use to connect. Modern browsers (Chrome 58+, Safari 13+) require a Subject Alternative Name and reject certificates without one.
 
-    $DAYS="-days 730";     # 2 year
-    $CADAYS="-days 3650";  # 10 years
-    ...
-    default_bits = 2048
+Sign the request with the CA. The `-copy_extensions copyall` flag copies the SAN from the CSR into the signed certificate (OpenSSL 3.0+):
 
-And change (further down):
+```bash
+openssl x509 -req -days 730 \
+    -in hostname.csr \
+    -CA /etc/ssl/ca/certs/ca.crt \
+    -CAkey /etc/ssl/ca/private/ca.key \
+    -CAcreateserial \
+    -copy_extensions copyall \
+    -out hostname.crt
+```
 
-    system ("$REQ -new -keyout " .
+Rename `hostname.key` and `hostname.crt` to something that reflects the service (e.g. `mail.example.com.key`).
 
-to
+If the service needs to start without a passphrase, generate an unencrypted key from the outset with `genpkey` as shown above. To strip a passphrase from an existing key:
 
-    system ("$REQ -newkey rsa:2048 -keyout " .
-
-## Generating keys
-
-For creating digital certificates for servers on your LAN, for VPN clients or for whatever service you need to use with SSL, two steps are needed: 
-
-To create a private key and a certificate request (Many questions. Not important, except that the CN of the certificate must be the domain name of the site you wish to secure):
-
-    # /usr/lib/ssl/misc/CA.pl -newreq
-
-Sign the request and generate a newcert.pem with the signed certificate. You will have to enter the password for your CA key which you supplied when creating the CA key, certificate and store.
-
-    # /usr/lib/ssl/misc/CA.pl -sign
-
-The certificate's key has a passphrase assigned during the `-newreq` phase. If you want your software to be able to autostart this won't work. To remove a passphrase:
-
-    # openssl rsa -in newkey.pem -out newkey.nopass.pem
-
-Rename `newkey.pem` and `newcert.pem` to something useful, like `hostname.key` and `hostname.cert`.
+```bash
+openssl rsa -in hostname.key -out hostname.nopass.key
+```
 
 ## Configuration resources
 
 * [OpenSSL PKI Tutorial v1.1](https://pki-tutorial.readthedocs.io/en/latest/)
-* [Building a Root CA and an Intermediate CA using OpenSSL and Debian Stretch](http://dadhacks.org/2017/12/27/building-a-root-ca-and-an-intermediate-ca-using-openssl-and-debian-stretch/)

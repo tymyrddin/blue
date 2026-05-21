@@ -8,7 +8,7 @@ To view the status of services:
 
 With:
 
-* `-t service`: We want to view information about the services – or, what used to be called daemons – on the system.
+* `-t service`: We want to view information about the services (or, what used to be called daemons) on the system.
 * `--state=active`: This specifies that we want to view information about all the system services that are actually running.
 
 This command shows the status of every service that's running on your system. Generally, you do not want to see much information, although you might at times.
@@ -17,16 +17,16 @@ This command shows the status of every service that's running on your system. Ge
 
 Depending on what the server is for:
 
-* `smbd` and `nmbd` indicates a Samba Process. Do you really need to export smb share on windows or other machine?
-* `telnet` for bidirectional interactive text-oriented communication over internet or local area network? 
-* `rlogin` to log in to another host over network?
-* `rexec` to execute shell commands on a remote computer.
-* `ftp` to transfer files from one host to another host over Internet?
-* `automount` to mount different file systems automatically to bring up network file system? 
-* `named` to run NameServer (DNS)? 
-* `lpd` to print to the server. 
-* `inetd`? If you are running standalone applications like `ssh` which uses other standalone application like `mysql`, `Apache`, etc. then you don’t need inetd.
-* `portmap`, an Open Network Computing Remote Procedure Call (ONC RPC) which uses `rpc.portmap` and `rpcbind`. If these processes are running, you are running NFS server. Really? NFS server is running unnoticed?
+* `smbd` and `nmbd`: a Samba process. Consider whether SMB share export is actually needed.
+* `telnet`: unencrypted bidirectional communication; superseded by SSH in nearly all cases.
+* `rlogin`: unauthenticated remote login; superseded by SSH.
+* `rexec`: remote shell command execution; superseded by SSH.
+* `ftp`: unencrypted file transfer; SFTP or FTPS are the current alternatives.
+* `automount`: automatic filesystem mounting for NFS; worth disabling if NFS is not in use.
+* `named`: a DNS nameserver. Unnecessary on most servers unless the host is serving DNS.
+* `lpd`: a print daemon; rarely needed on headless servers.
+* `inetd`: a super-server for running standalone services on demand; unnecessary if the services it would wrap are running as their own daemons.
+* `portmap` / `rpcbind`: ONC RPC support, required for NFS. Its presence indicates an NFS server is running.
 
 ## Stop and disable
 

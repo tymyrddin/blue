@@ -1,8 +1,8 @@
 # Samhain
 
-The [Samhain](https://www.la-samhna.de/samhain/index.html) host-based intrusion detection system (HIDS) provides file integrity checking, log file monitoring/analysis, rootkit detection, port monitoring, detection of rogue SUID executables, and hidden processes. Like having tripwire when it was still working plus rkhunter rolled into one. 
+The [Samhain](https://www.la-samhna.de/samhain/index.html) host-based intrusion detection system (HIDS) provides file integrity checking, log file monitoring/analysis, rootkit detection, port monitoring, detection of rogue SUID executables, and hidden processes. It covers much of what `tripwire` and `rkhunter` address separately.
 
-Plus, it can be expanded to include more (remote) clients if set up in client-server mode and getting [Beltane II](https://www.la-samhna.de/beltane/index.html) as well (not GPL licensed and can be used on a limited amount of (10) machines for a small donation). Something that can maybe be used for guarding client machines remotely. Yum.
+It can be expanded to cover more clients in client-server mode. [Beltane II](https://www.la-samhna.de/beltane/index.html) adds a web management console (not GPL licensed; limited to 10 machines for a small donation), which may be useful for monitoring remote machines.
 
 ## Problems
 
@@ -106,7 +106,7 @@ If an intruder cannot discover that samhain is running, he cannot compromise it.
 
 where `somename` is an innocuous-sounding executable name. To make it less likely that the program isn't accidentally discovered, samhain can be set to never respond to the command line. Or, it can be set to respond to the command line only after a certain password is given:
 
-    $./configure --enable-nocl=somepass
+    $ ./configure --enable-nocl=somepass
 
 If `somepass` is set to an empty string it disables command-line interaction completely. Otherwise, invoke samhain with `somepass` as the first argument followed by the other arguments.
 
@@ -184,7 +184,7 @@ I will run with defaults for now, and make changes later.
       
 ## Initialisation
 
-Initialize the baseline database ([do NOT do twice](https://www.la-samhna.de/samhain/manual/installation-initialize.html)):
+Initialise the baseline database ([do NOT do twice](https://www.la-samhna.de/samhain/manual/installation-initialize.html)):
 
     $ samhain -t init
     [snip]
@@ -194,7 +194,7 @@ Initialize the baseline database ([do NOT do twice](https://www.la-samhna.de/sam
     NOTICE :  [2018-03-04T22:01:33+0100] msg=<Finished writing baseline database.>
     ALERT  :  [2018-03-04T22:01:33+0100] msg=<EXIT>, program=<Samhain>, status=<exit_success>
 
-Aaaaand a sheitload of errors and garble passed by on my screen for about ten minutes, including all kinds of critical issues on missing files and policies. This was on a worst-case linux, an archlinux halfway in the making (by me), and to be expected. I be reading them logs then. :D
+On a minimal or incomplete system, the initial database build produces a large volume of warnings about missing files and unmatched policies. This is expected. Review the log output to distinguish genuine configuration gaps from expected absences before adjusting `samhainrc`.
 
 ## Usage
 
@@ -202,7 +202,7 @@ Aaaaand a sheitload of errors and garble passed by on my screen for about ten mi
 
     $ samhain -t check --foreground
 
-Immediately. Okay, so more of that garble of course. Just to see what gets reported and logged as differences.
+This reports everything that has changed since the baseline was built, which is useful for verifying what samhain is tracking before running it as a daemon.
 
 ## Update baseline
 
@@ -227,17 +227,16 @@ Files may be specified in two ways, either as
     file=/path/to/some/file or
     dir=number/path/to/directory
 
-where `number` is an option defining how many subdirectories to include; up to 99 can be checked. It is not necessary to define the recursion depth. It is also possible to use wildcards, as in `file=/etc/*.conf`. Normal shell wildcards are allowed: "*", "?", and "..".
+where `number` is an option defining how many subdirectories to include; up to 99 can be checked. It is not necessary to define the recursion depth. It is also possible to use wildcards, as in `file=/etc/*.conf`. Normal shell wildcards are allowed: `*`, `?`, and `[...]`.
 
 * Put a fake file (such as "tripwire") on your filesystem and check for it in the IgnoreNone section. This will alert you if anyone pokes around and accesses that file. 
 * Put critical files such as `/etc/passwd` and programs in `/usr/sbin` in the ReadOnly section since they are read often. 
 * Put log files in GrowingLogFiles in case an intruder attempts to scrub the logs. If logs are rotated frequently put them under LogFiles. 
 * Put samhain, the configuration file, and the database file in IgnoreNone. After samhain is started as a daemon it does not need to re-read configuration file or the database. Any touching of it is very suspicious.
 
-Several hours later, after thoroughly going through `samhainrc`, I got rid of all of the errors and warnings:
+After working through the warnings in `samhainrc`, updating the database with no output is the target state:
 
     $ sudo samhain -t update
-    [happy emptiness]
       
 ## Start daemon
 

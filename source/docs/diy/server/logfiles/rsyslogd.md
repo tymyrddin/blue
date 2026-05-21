@@ -5,10 +5,10 @@ The rsyslogd service is a system utility providing support for message logging. 
 * A combined audit system for linux
 * Allows for local and remote log collection. Remote logging makes day-to-day maintenance and incident response easier, log storage more secure, auditing more effective and analysis easier across multiple platforms.
 * Allows for a single point of management 
-* Controlled per device in `/etc/syslog.conf`
+* Controlled per device in `/etc/rsyslog.conf`
 * All reported messages are collected in a message file
 * Log replication can copy the audit data to multiple remote-logging hosts
-* It is recommended to also setup logrotate and compression.
+* Setting up logrotate and compression alongside rsyslog is worth doing.
 
 ## Setting it up
 
@@ -38,7 +38,7 @@ Configuring `rsyslog` involves setting up input sources (where rsyslog receives 
 
     # vi /etc/rsyslog.conf
 
-By default, `rsyslog` uses the imjournal (importing structured log messages from systemd journal) and imusock modules (accepting syslog messages from applications running on the local system via Unix sockets). To configure it as a network and central logging server, the protocol (either UDP or TCP or both) it will use for remote syslog reception and the port it listens on must be configured.
+By default, `rsyslog` uses the imjournal (importing structured log messages from systemd journal) and imusock modules (accepting syslog messages from applications running on the local system via Unix sockets). To configure it as a network and central logging server, the protocol (either UDP or TCP or both) it will use for remote syslog reception and the port it listens on need to be configured.
 
     $ModLoad imudp
     $UDPServerRun <port>
@@ -49,8 +49,8 @@ By default, `rsyslog` uses the imjournal (importing structured log messages from
 Define the `# rules for processing the remote logs`. There be [Templates](https://www.rsyslog.com/doc/v8-stable/configuration/templates.html).
 
     $template RemoteLogs,"/var/log/remote/%HOSTNAME%/%PROGRAMNAME%.log"
-    *.* ?RemoteLogs 
-    & ~
+    *.* ?RemoteLogs
+    stop
 
 * Gather and write the received remote messages to distinct logs under `/var/log/remote/`, based on the hostname client machine name and remote client application that generated the messages as defined in the RemoteLogs template.
 * Record messages from all applications at all severity levels using the RemoteLogs template configuration.
@@ -64,7 +64,7 @@ OR for example, for allowing all hosts (but not applications) in a subnet XXX.XX
 
     $template RemoteStore, "/var/log/remote/%HOSTNAME%/%timegenerated:1:10:date-rfc3339%"
     :source, !isequal, "localhost" -?RemoteStore
-    :source, isequal, "last" ~
+    :source, isequal, "last" stop
 
 Write and quit. Restart `rsyslog` daemon:
 

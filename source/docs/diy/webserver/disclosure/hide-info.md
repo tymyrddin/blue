@@ -5,17 +5,15 @@
 If the `<Location /server-info>` directive in the `httpd.conf` configuration file is enabled, information about the Apache configuration can be read by accessing the `/server-info` page.
 The information includes server version, system paths, database names, library information, etc.
 
-This directive can be disabled by commenting out the `mod_info` module in the `httpd.conf` Apache configuration file:
+This directive can be disabled by commenting out the `info_module` directive in the `httpd.conf` Apache configuration file:
 
     #LoadModule info_module modules/mod_info.so
 
 The `<Location /server-status>` directive lists information about server performance, such as server uptime, server load, current HTTP requests, and client IP addresses. To disable this directive, comment it out in the `httpd.conf` Apache configuration file:
 
     #<Location /server-status>
-    # SetHandler server-status
-    # Order deny,allow
-    # Deny from all
-    # Allow from .domain.com
+    #    SetHandler server-status
+    #    Require local
     #</Location>
 
 The `ServerSignature` directive adds a footer to server-generated documents. The footer includes the version of Apache and the operating system. To disable this directive in the `httpd.conf` Apache configuration file:

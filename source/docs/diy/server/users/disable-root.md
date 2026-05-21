@@ -11,7 +11,7 @@ The first thing that you will want to do is to create a normal user account and 
 
 ## Disabling root SSH login
 
-To disable the `root` SSH login, set `#PermitRootLogin` to `no` in `/etc/ssh/sshd_config.conf`.
+To disable root SSH login, uncomment `PermitRootLogin` and set it to `no` in `/etc/ssh/sshd_config`.
 
 ## Disabling root using PAM
 

@@ -24,7 +24,7 @@ Append:
             delaycompress
     }
 
-This will compress and rotate logs every day and keep them for 90 days (3 months).
+This will compress and rotate logs every day, keeping the last 7 rotations.
 
   * Keep last 7 logs 
   * The logs will be rotated `daily`

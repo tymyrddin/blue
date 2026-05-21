@@ -4,7 +4,7 @@ The Cyrus IMAP server is electronic mail server open source software developed b
 
 ## Installation
 
-    # apt-get install cyrus-imapd cyrus-sasl cyrus-sasl-plain
+    # apt-get install cyrus-imapd libsasl2-modules
 
 You will be asked to set a password for the default administrative user `cyrus`
 

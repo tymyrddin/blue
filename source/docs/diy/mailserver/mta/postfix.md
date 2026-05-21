@@ -21,7 +21,7 @@
 
     # apt-get install postfix
 
-You will be asked a series of questions. On the first prompt, select //Internet Site// option as the general type for Postfix configuration, continue, and then add domain name to system mail name.
+You will be asked a series of questions. On the first prompt, select the "Internet Site" option as the general type for Postfix configuration, continue, and then add the domain name to system mail name.
  
 ## Basic configuration 
 
@@ -32,9 +32,9 @@ Configure the basics:
 # vi /etc/postfix/main.cf
 
 
-myhostname = $hostname                                   //Use command "hostname" to display your hostname
-myorigin = $mydomain                                     //Add domain, so others can not abuse the mailsystem
-relay_domains = domain1.com, domain2.com, domain3.com    //Add the domains the system will handle
+myhostname = $hostname                                   # Use command "hostname" to display your hostname
+myorigin = $mydomain                                     # Add domain, so others can not abuse the mailsystem
+relay_domains = domain1.com, domain2.com, domain3.com    # Add the domains the system will handle
 ```
 
 ### Multiple local domains 
@@ -43,7 +43,7 @@ Postfix can be configured for more than one domain via the use of a hash file. T
 
     virtual_alias_domains = hash:/etc/postfix/virtual_domains
 
-Create the file, and add all the domains postfix should accept in it (one per line). The postmap program expects the file to have 2 columns but the second column is ignored. Do add that second column and add comments like `#something` in it. It will work without, but you get warnings.
+Create the file, and add all the domains postfix will accept in it (one per line). The postmap program expects the file to have 2 columns but the second column is ignored. Do add that second column and add comments like `#something` in it. It will work without, but you get warnings.
 
 To make the hashfile:
 
@@ -56,7 +56,7 @@ Open the `/etc/postfix/main.cf` configuration file and append:
 
     check_sender_access = hash:/etc/postfix/access
 
-Create the file, and add all the host names, network addresses, and envelope sender or recipient addresses postfix should accept in it (one per line)
+Create the file, and add all the host names, network addresses, and envelope sender or recipient addresses postfix will accept in it (one per line)
 
 To make the hashfile:
 
@@ -93,7 +93,7 @@ Manually blacklisting incoming emails by sender address can easily be done with 
 
 To create a database, use postmap command:
 
-    # postmap hash:blacklist_incoming
+    # postmap hash:/etc/postfix/blacklist_incoming
 
 And append before the first permit rule in `/etc/postfix/main.cf`:
 
@@ -139,11 +139,11 @@ Postfix header or body_checks are designed to stop a flood of mail from worms or
 
 For example, postfix can search for any string in an incoming email. In `/etc/postfix/main.cf` set:
 
-    header_checks = regexp: /etc/postfix/headers_checks
+    header_checks = regexp:/etc/postfix/header_checks
 
 Then in `/etc/postfix/header_checks` append regular expressions for what to check for:
 
-    /^(.*)@domain.com/ REJECT    //Match any recipient/sender for a specific domain
+    /^(.*)@domain.com/ REJECT    # Match any recipient/sender for a specific domain
 
 The mechanism can also be used to hide a sender's IP and user agent in the `Received` header. This is a privacy concern mostly for sending email with Thunderbird. The received header will contain LAN and WAN IP and info about the email client used. 
 

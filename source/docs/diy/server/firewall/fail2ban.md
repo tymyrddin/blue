@@ -60,7 +60,7 @@ Restart fail2ban.
 
 ## Test
 
-To test fail2ban, look at the iptable rules before and after attempting to log in to a service that fail2ban is monitoring from another machine and look at the iptable rules to see if that IP source gets added:
+To test fail2ban, look at the iptables rules before and after attempting to log in to a service that fail2ban is monitoring from another machine and look at the iptables rules to see if that IP source gets added:
 
     # iptables -L 
 
@@ -84,4 +84,4 @@ To see all jails:
 
 
 ## Note for Apache
-Fail2ban scans log files like `/var/log/apache/error_log`, `/var/log/auth.log` and `/var/log/apache/access.log` and temporarily or persistently bans failure-prone addresses by updating existing firewall rules. Out of the box Fail2Ban comes with filters for various services (apache, courier, ssh, etc).
+Fail2ban scans log files like `/var/log/apache2/error.log`, `/var/log/auth.log` and `/var/log/apache2/access.log` and temporarily or persistently bans failure-prone addresses by updating existing firewall rules. Out of the box Fail2Ban comes with filters for various services (apache, courier, ssh, etc).

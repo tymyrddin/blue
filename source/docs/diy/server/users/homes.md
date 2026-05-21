@@ -38,4 +38,4 @@ To change the default permissions setting for home directories, open `/etc/login
 
 The `adduser` utility is an interactive way to create user accounts and passwords with a single command, which is unique to the Debian family of Linux distributions. Most of the default settings that are missing from the Debian implementation of useradd are already set for adduser. The only thing wrong with the default settings is that it creates user `home` directories with the wide-open `755` permissions value. 
 
-`777` is the numerical equivalent of `rwxrwxrwx` in Linux, subtracting that from the `UMASK` of `022`, you get the resulting permissions that will be set on a user's home directory and files. Change the `UMASK` to `077` in `/etc/login.defs`.
+With a UMASK of `022`, new directories get permissions `755` (`777 - 022`). Change the UMASK to `077` in `/etc/login.defs` to lock down home directories on creation.

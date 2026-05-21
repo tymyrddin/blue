@@ -4,9 +4,9 @@ Logging provides detailed information about client requests made on the web serv
 
 ## Nginx
 
-The nginx access and error logs are enabled by default and are located in `logs/error.log` and `logs/access.log` respectively. A `crit` severity level will cause nginx to log critical issues and all issues that have a higher severity level than `crit`. To set the severity level to `crit`, use the [error_log directive](https://nginx.org/en/docs/ngx_core_module.html#error_log):
+The nginx access and error logs are enabled by default. On package installs (Debian/Ubuntu), they are located at `/var/log/nginx/error.log` and `/var/log/nginx/access.log`. A `crit` severity level causes nginx to log critical issues and all issues of higher severity. To set the severity level to `crit`, use the [error_log directive](https://nginx.org/en/docs/ngx_core_module.html#error_log):
 
-    error_log logs/error.log crit;
+    error_log /var/log/nginx/error.log crit;
 
 The level of logging can be, in order of increasing severity, `debug`, `info`, `notice`, `warn`, `error`, `crit`, `alert`, or `emerg`. 
 

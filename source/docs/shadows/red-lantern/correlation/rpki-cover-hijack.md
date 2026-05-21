@@ -106,3 +106,5 @@ A triggered correlation indicates:
 This is not a false positive you ignore.
 This is a control-plane incident.
 
+For response actions when this alert fires, see [Playbook 3](../response/playbooks.md#playbook-3-rpki-cover-hijack).
+

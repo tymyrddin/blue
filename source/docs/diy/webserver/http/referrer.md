@@ -1,6 +1,6 @@
 # Referrer-Policy
 
-The `Referrer-Policy` HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.
+The `Referrer-Policy` HTTP header controls how much referrer information (sent via the Referer header) is included with requests.
 
 For example:
 

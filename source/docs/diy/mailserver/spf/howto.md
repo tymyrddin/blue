@@ -2,7 +2,7 @@
 
 ## Add SPF records to DNS
 
-In order that receiving servers can check your SPF record it must be publicly visible. This means publishing it to the DNS server for the chosen domain(s). Go to their domain zone pages and add a new TXT record. For example, to allow mail from all hosts listed in the MX records for the domain:
+The SPF record is only consulted if it is published in DNS. Add a TXT record to the DNS server for the chosen domain(s). Go to their domain zone pages and add a new TXT record. For example, to allow mail from all hosts listed in the MX records for the domain:
 
     v=spf1 mx -all
 
@@ -37,7 +37,7 @@ skip_addresses = 127.0.0.0/8,::ffff:127.0.0.0/104,::1
 ```
 
 * `debugLevel` controls the amount of information logged by the policy server. The default, level 1, logs no debugging messages, just basic SPF results and errors generated through the policy server.
-* The policy server can operate in a test only mode. This allows you to see the potential impact of SPF checking in your mail logs without rejecting mail. Headers are prepended in messages, but message delivery is not affected. This mode is not enabled by default. To enable it, set `TestOnly = 0`. This option was previously named `defaultSeedOnly`. This is still accepted, but logs an error.
+* The policy server can operate in a test only mode. This allows you to see the potential impact of SPF checking in your mail logs without rejecting mail. Headers are prepended in messages, but message delivery is not affected. This mode is not enabled by default. To enable it, set `TestOnly = 1`. This option was previously named `defaultSeedOnly`. This is still accepted, but logs an error.
 * The default HELO check rejection policy is `SPF_Not_Pass`, meaning reject if the SPF result is Fail, Softfail, Neutral, PermError. Not fully RFC 4408 compliant but HELO/EHLO is known first in the SMTP dialogue and there is no reason to waste resources on Mail From checks if the HELO check will already reject the message.
 
 ## Postfix integration

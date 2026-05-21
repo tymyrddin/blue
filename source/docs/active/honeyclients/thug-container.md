@@ -40,7 +40,7 @@ docker run -it -v /usr/home/user/thug_logs:/logs:ro buffer/thug
 
 Windows:
 
-```powershell
+```
 # PowerShell
 docker run -it -v C:\Users\YourName\thug_logs:/logs buffer/thug
 
@@ -61,6 +61,8 @@ Analyse samples from the built-in set:
 ```
 $ for item in $(find /opt/thug/samples/ -type f | xargs shuf -e |tail -n 20); do python /opt/thug/src/thug.py -l $item; done
 ```
+
+The `-l` flag tells Thug to analyse a local file rather than fetch a URL. The loop picks 20 random files from the built-in sample set and passes each one to Thug in turn.
 
 ## Building a custom container
 
@@ -128,7 +130,7 @@ alias thugscan='docker run --rm thug'
 Create a directory `thug-lab` containing a `Dockerfile`:
 
 ```
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 RUN apt-get update && \
     apt-get install -y git libxml2-dev libxslt1-dev zlib1g-dev libffi-dev build-essential && \
@@ -176,9 +178,13 @@ chmod +x scan.sh
 
 ## Sample `urls.txt`
 
+Thug supports both HTTP and HTTPS. SSL certificate verification is configurable via `ssl_verify` in
+`thug.conf`; disabling it is often necessary when analysing sites with self-signed or expired
+certificates.
+
 ```
-http://example.com/malware
-http://dodgydomain.co/phish
+https://example.com/malware
+https://dodgydomain.co/phish
 http://127.0.0.1:8000/test
 ```
 

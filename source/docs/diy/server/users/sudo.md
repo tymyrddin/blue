@@ -8,7 +8,7 @@
 
 ## Adding users to the sudo group
 
-On Ubuntu 18.04, unless otherwise specified upon account creation, the user is automatically added to the `sudo` group.
+On Ubuntu, unless otherwise specified upon account creation, the user is automatically added to the `sudo` group.
 
 To add a user who is not part of the sudo group already, add him/her with:
 
@@ -26,7 +26,7 @@ Another way to view this information is with `visudo`. This opens the sudo polic
 
 This gives the same information as `sudo -l` but with one difference; the `%sudo` indicates that it is for the group, sudo. There can be other groups in this file such as `admin`. This is where administrators can set what programs a user in a certain group can perform and whether they need a password. 
 
-In the `%sudo ALL=(ALL:ALL) ALL NOPASSWD: ALL`, the `NOPASSWD` part says that the user that is part of the sudo group does not need to enter their local password to use sudo privileges. Generally, this is not recommended - not even for home use.
+In the `%sudo ALL=(ALL:ALL) ALL NOPASSWD: ALL`, the `NOPASSWD` part says that the user that is part of the sudo group does not need to enter their local password to use sudo privileges. This is generally worth avoiding, even for home use.
 
 Users can also be added to the `sudoers` using the `sudo` policy file. Always edit sudoers with the `sudo visudo` command.
 
@@ -42,7 +42,7 @@ or for an individual user:
 
     username ALL=(ALL) ALL
 
-It is not recommended to use individual user aliases in a large network since this can become unwieldy very quickly. The first option is going to be your best bet as you can simply add users to this alias and control which commands they have access to with `sudo` easily.
+Individual user aliases in a large network can become unwieldy very quickly. The first option is going to be your best bet as you can simply add users to this alias and control which commands they have access to with `sudo` easily.
 
 ## Setting up sudo for only certain delegated privileges
 
@@ -80,7 +80,7 @@ Other programs that have a shell escape feature: `emacs`, `less`, `view`, and `m
 
 Some programs that don't have shell escapes can still be dangerous if you give users unrestricted privileges to use them, like `cat`, `cut`, `awk`, and `sed`.
 
-If you must give someone `sudo` privileges to use one of these programs, limit their use to only specific files.
+If giving someone `sudo` privileges to use one of these programs, limit their use to specific files.
 
 ## Preventing abuse via user's shell scripts
 

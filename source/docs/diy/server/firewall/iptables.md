@@ -26,17 +26,17 @@ In case it is not installed and you wish to install it:
 Start the service:
 
     # systemctl start iptables
-    # systemctl start iptables6
+    # systemctl start ip6tables
 
 Enable automatic start on system boot
 
     # systemctl enable iptables
-    # systemctl enable iptables6
+    # systemctl enable ip6tables
 
 Check iptables service status
 
     # systemctl status iptables
-    # systemctl status iptables6
+    # systemctl status ip6tables
 
 ## Chains
 
@@ -144,9 +144,9 @@ If the server cannot be pinged through the VPN, [rules to open up TUN/TAP interf
 
 Set up rules for accepting connections from the OpenVPN port (default 1194) and through the physical interface, and make the changes permanent.
 
-### SMTP Secure Sockets Layer
+### SMTP and mail ports
 
-With SMTP Secure Sockets Layer (SSL) enabled, allow connections to port 587 (similar for 465).
+Port 587 is SMTP Submission (STARTTLS); port 465 is SMTPS (SMTP over TLS). Allow connections:
 
 Add the rule for this port:
 

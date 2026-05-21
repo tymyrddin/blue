@@ -10,7 +10,7 @@ This header helps mitigate the danger of drive-by downloads.
 
 ## Nginx
 
-    X-Content-Type-Options: nosniff
+    add_header X-Content-Type-Options "nosniff" always;
 
 ## Resources
 

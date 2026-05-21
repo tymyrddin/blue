@@ -21,7 +21,7 @@ Postfix and opendkim communicate through a unix socket. Socket address is usuall
 Generate the key pair. To generate a secret signing key, you need to specify the domain used to send mails and a selector which is used to refer to the key (choose anything you like, alpha-numeric strings will do).
 
 ```text
-# opendkim-genkey -r -s myselector -b 2048 -d $domain.tld
+# opendkim-genkey -r -s myselector -b 2048 -d $domain.tld -D /etc/dkimkeys
 ```
 
 This creates two files in `/etc/dkimkeys/`: `myselector.private` and `myselector.txt`, the private and public key. Make sure that only the `opendkim` user can read them:

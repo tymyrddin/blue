@@ -2,13 +2,15 @@
 
 ## Generate a key
 
-    $ ssh-keygen -t
+    $ ssh-keygen -t ed25519
 
-Enter a passphrase. It will create 2 files in the `~/.ssh` directory: `id_rsa`, a private key and `id_rsa.pub`, a public key. 
+Enter a passphrase. It will create 2 files in the `~/.ssh` directory: `id_ed25519`, a private key and `id_ed25519.pub`, a public key. 
 
-Note: Do not leave the passphrase empty. An attacker who gets hold of your private key can otherwise connect to the hosts where you put you public key. Choose a loooooong and complex passphrase. Remember the passphrase. Better yet, put it in a password manager.
+Note: Do not leave the passphrase empty. An attacker who gets hold of your private key can otherwise connect to the hosts where you put your public key. Choose a long and complex passphrase, or store it in a password manager.
 
 ## Copy key to server
+
+The `scp` command below copies the public key directly to `authorized_keys`, replacing any existing keys on the server. Only use this on a fresh server with no other authorised keys; for any other case, the `cat` append method below is safer.
 
     $ scp ~/.ssh/id_rsa.pub user@server:~/.ssh/authorized_keys
     The authenticity of host 'XXX.XXX.XXX.XXX (XXX.XXX.XXX.XXX)' can't be established.

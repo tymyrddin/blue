@@ -18,7 +18,7 @@ To allow a user or a group to have any combination of read, write, or execute pr
     setfacl -m u:<username>:rw <file>
 
 * `-m` modify or create an ACL.
-* `u:username:r`: user's name, followed by another colon, and the list of permissions to grant 
+* `u:username:rw`: user's name, followed by another colon, and the list of permissions to grant
 this user. In this case, read and write access.
 
 Set an ACL for group access by replacing `u:` with  `g:`.
@@ -31,11 +31,11 @@ To have all files that get created in a shared directory use the same ACL:
 
 ## Using an ACL mask
 
-Remove an ACL from a file or directory with the `-x` option:
+Remove a named ACL entry from a file or directory with the `-x` option:
 
     setfacl -x u:<username> <file>
 
-The `-x` option removes the entire ACL. To remove permissions with a mask, in this case read permission:
+The `-x` option removes the specified entry only. To remove the entire ACL, use `setfacl -b`. To remove permissions with a mask, in this case read permission:
 
     setfacl -m m::r <file>
 
@@ -70,7 +70,7 @@ To add an existing user to a group (CentOS and Debian families):
 Adding users to a group by editing the `/etc/group` file:
 
     ...
-    <groupname>>:x:1005:<list of comma separated usernames>
+    <groupname>:x:1005:<list of comma separated usernames>
     ...
 
 This method is extremely handy for when you need to add lots of members to a group at the same time.

@@ -92,7 +92,9 @@ The `@` symbol will allow for passing an argument (the VNC display port). Append
     ExecStop=/usr/bin/vncserver -kill :%i
 
     [Install]
-    WantedBy=multi-user.targetReload systemd manager configuration
+    WantedBy=multi-user.target
+
+Reload the systemd manager configuration:
 
     # systemctl daemon-reload
 
@@ -113,7 +115,7 @@ Verify
 
 ## Clients
 
-  * Linux: xvnc4viewer
+  * Linux: xtigervncviewer (from the `tigervnc-viewer` package)
 
 ## Configuration resources
 

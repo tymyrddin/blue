@@ -20,7 +20,7 @@
 
     # tail -f -n 10 /var/log/syslog
 
-Escape it with the \[Ctrl]+\[x] key combination.
+Escape it with the \[Ctrl]+\[c] key combination.
 
 ## Last and lastb
 

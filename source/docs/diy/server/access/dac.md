@@ -4,11 +4,11 @@ Discretionary Access Control (DAC) really just means that each user has the abil
 
 ## Using chown
 
-One unique thing about `chown` is that you must have sudo privileges to use it, even if you're working with your own files in your own directory. You can use it to change the user of a file or directory, the group that's associated with a file or directory, or both.
+One notable thing about `chown` is that it requires sudo privileges even when working with your own files in your own directory. You can use it to change the user of a file or directory, the group that's associated with a file or directory, or both.
 
 To change the file ownership from me to `username`:
 
-    sudo chown <username>>: <file>
+    sudo chown <username>: <file>
 
 To change the group association without changing the user:
 
@@ -28,7 +28,7 @@ There are two ways to use chmod to change permissions settings: symbolic and num
 
 ### Symbolic
 
-    chmod u+x cript.sh
+    chmod u+x script.sh
     chmod g+x script.sh
     chmod o+x script.sh
     chmod u+x,g+x script.sh
@@ -104,7 +104,7 @@ sudo chattr +a <file>
 
 With IoT devices, you have a bit more to worry about than you do with normal servers. Normal servers are protected with a high degree of physical security, while IoT devices often have little to no physical security.
 
-In this context, the open "all can read" is often considered not a good idea. Yo ensure that all the configuration files on the devices are set with the `600` permissions setting: 
+In this context, the open "all can read" is often considered not a good idea. To ensure that all the configuration files on the devices are set with the `600` permissions setting: 
 
     sudo find / -iname '*.conf' -exec chmod 600 {} \;
 

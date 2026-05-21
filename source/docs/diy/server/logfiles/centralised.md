@@ -1,17 +1,17 @@
 # Centralised logging
 
-## Why?
+## Benefits
 
-* Makes searching through log data for relevant events easier and faster, especially important when the infrastructure uses separation and isolation and there are multiple servers. This makes troubleshooting and solving issues easier and faster, and without directly accessing systems. 
+* Makes searching through log data for relevant events easier and faster, especially important when the infrastructure uses separation and isolation and there are multiple servers. This makes troubleshooting and solving issues easier and faster, and without directly accessing systems.
 * Logs are backed up in a separate location, protecting them from accidental or unintentional loss, and are accessible in case one of the servers goes down or becomes unresponsive.
-* Not using computing resources for complex searches on internet facing servers.
+* Not using computing resources for complex searches on internet-facing servers.
 * Depending on how it is set up, reduces the amount of disk space used by log files.
 
-## Why not?
+## Trade-offs
 
-* Uses bandwidth. 
+* Uses bandwidth.
 
-## How?
+## Setup considerations
 
 * Set up a separate server for only logging purposes.
 * Keep it in a secure location behind a (physical) firewall.
@@ -20,7 +20,7 @@
 
 ## Which one?
 
-Rsyslog (default installed on debian) and syslog-ng are both light-weight. The configuration syntax of ''rsyslog'' is simpler than the syntax of ''syslog-ng'', but complex configuration is more clear in ''syslog-ng''. 
+Rsyslog (default installed on debian) and syslog-ng are both light-weight. The configuration syntax of `rsyslog` is simpler than the syntax of `syslog-ng`, but complex configuration is more clear in `syslog-ng`. 
 
 ## Future considerations
 

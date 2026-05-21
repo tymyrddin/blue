@@ -1,60 +1,59 @@
 # Let's Encrypt
 
-Web PKI being yet another golden goose in the context of the business model that underpins the digital world. , we also have an alternative. [Let’s Encrypt](https://letsencrypt.org/) is a free, automated, and open Certificate Authority. The below is for debian (stretch).
+[Let's Encrypt](https://letsencrypt.org/) is a free, automated, and open Certificate Authority run by the Internet Security Research Group (ISRG). Certbot is the official client for obtaining and renewing Let's Encrypt certificates.
 
-## Installation certbot
+## Installation
 
-Certbot is in active development, so the packages provided by Debian with stable releases tend to be outdated. Get a more up-to-date package by enabling the backports repository. Create the `/etc/apt/sources.list.d/letsencrypt.list` file and append:
+Install Certbot and the Nginx plugin:
 
-    # echo 'deb http://deb.debian.org/debian <distribution>-backports main contrib non-free' >> /etc/apt/sources.list.d/letsencrypt.list
+    # apt install certbot python3-certbot-nginx
 
-    # echo 'deb-src http://deb.debian.org/debian <distribution>-backports main contrib non-free' >> /etc/apt/sources.list.d/letsencrypt.list
+For Apache:
 
-Update the package list to pick up the new repository's package information:
+    # apt install certbot python3-certbot-apache
 
-    # apt update
+## Obtaining a certificate
 
-Install on Nginx with:
-
-    # apt install python-certbot-nginx -t <distribution>-backports
-
-## Get SSL certificate
-
-Get a certificate and have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step.
+Get a certificate and have Certbot edit the Nginx configuration automatically:
 
     # certbot --nginx
 
+For Apache:
+
+    # certbot --apache
+
+Certbot will prompt for a domain name and an email address for renewal notices. On success, the certificates are placed in `/etc/letsencrypt/live/<your-domain>/`.
+
 ## Verification
 
-Check the `/etc/letsencrypt/live/<your-domain>/` directory for the presence of `cert.pem`, `privkey.pem` and `chain.pem`.
+Check the certificate files are present:
 
-Certbot looks for a `server_name` directive that matches your domain. Open the server block file for your domain:
+    # ls /etc/letsencrypt/live/<your-domain>/
+    cert.pem  chain.pem  fullchain.pem  privkey.pem
 
-    # vi /etc/nginx/sites-available/yourdomain.tld
-
-If necessary, change the `server_name` directive to:
-
-    server_name yourdomain.tld www.yourdomain.tld;
-
-Verify the syntax of your configuration file:
+Verify the Nginx configuration syntax:
 
     # nginx -t
 
-Reload Nginx to load the new configuration:
+Reload to apply:
 
     # systemctl reload nginx
 
-## Firewall
-
-Punch a hole in the firewall to allow HTTPS traffic (allow the Nginx Full profile) and delete the redundant Nginx HTTP profile allowance.
-
 ## Auto renewal
 
-Certbot comes with a renew script in `/etc/cron.d` that will renew your certificates automatically before they expire (they last for 90 days). Test automatic renewal:
+Certbot installs a systemd timer that renews certificates automatically before they expire (certificates are valid for 90 days). Test the renewal process:
 
     # certbot renew --dry-run
 
+Check the timer status:
+
+    # systemctl status snap.certbot.renew.timer
+
+## Firewall
+
+HTTPS traffic (port 443) needs to be open in the firewall alongside the existing HTTP port.
+
 ## Configuration resources
 
-* [Certbot instructions](https://certbot.eff.org/lets-encrypt/debianstretch-nginx.html), EFF
-
+* [Certbot documentation](https://certbot.eff.org/), EFF
+* [Let's Encrypt documentation](https://letsencrypt.org/docs/)

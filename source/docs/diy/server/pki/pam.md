@@ -4,7 +4,7 @@ Pluggable Authentication Modules (PAM) is a suite of shared libraries, providing
 
 ## Passwords
 
-Never reuse old passwords ever. .
+Never reuse old passwords ever.
 
 Open `/etc/pam.d/common-password`:
 
@@ -12,9 +12,9 @@ To restrict users from using their old passwords on the same machine, in the `au
 
     auth sufficient pam_unix.so likeauth nullok
 
-If you want to allow a user to reuse his/her password from a number of passwords that were last used, add the following line in the `password` section: 
+To prevent a user from reusing recent passwords, add the following line in the `password` section. The `remember=3` option keeps a history of the last three passwords and rejects any that match: 
 
-    password sufficient pam_unix.so nullok use_authtok md5 shadow remember=3
+    password sufficient pam_unix.so nullok use_authtok sha512 shadow remember=3
 
 ## SSH
 
@@ -34,7 +34,7 @@ Append `/etc/pam.d/ssh`:
 
     auth required pam_listfile.so item=user sense=allow file=/etc/ssh/ssh.allow onerr=fail
 
-Add all usernames to allow access for to a `/etc/ssh/ssh.deny` file.
+Add all usernames to allow access to the `/etc/ssh/ssh.allow` file.
 
 ## SASL
 

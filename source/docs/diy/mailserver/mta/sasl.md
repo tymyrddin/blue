@@ -8,9 +8,9 @@ Install:
 
     # apt-get install libsasl2-modules sasl2-bin
 
-SASL can use different authentication methods. The default one is PAM (as configured in `/etc/conf.d/saslauthd`), but to set it up properly you have to create `/etc/sasl2/smtpd.conf`. Pambase 20190105.1-1 and newer use restrictive fallback for "other" PAM service, and a pam configuration file is required.
+SASL can use different authentication methods. The default is PAM (as configured in `/etc/default/saslauthd`). Pambase 20190105.1-1 and newer use a restrictive fallback for the "other" PAM service, so a PAM configuration file is required.
 
-Create a file `/etc/postfix/sasl/smtpd.conf`:
+Create `/etc/postfix/sasl/smtpd.conf`:
 
     pwcheck_method: saslauthd
     mech_list: PLAIN LOGIN
@@ -38,7 +38,7 @@ Add user `postfix` to the group `sasl`:
 
 Restart saslauthd:
 
-    # systemctl saslauthd  restart
+    # systemctl restart saslauthd
     [ ok ] Stopping SASL Auth. Daemon: saslauthd.
     [ ok ] Stopping SASL Auth. Daemon for Postfix: saslauthd-postf.
     [ ok ] Starting SASL Auth. Daemon: saslauthd.
@@ -54,7 +54,7 @@ Edit `/etc/postfix/main.cf`:
 
 Restart (reloading is not enough):
 
-    # systemctl postfix restart
+    # systemctl restart postfix
 
 ### SMTP
 
@@ -98,7 +98,7 @@ In `/etc/postfix/main.cf`:
     smtpd_relay_restrictions = permit_mynetworks,permit_sasl_authenticated,reject_unauth_destination
     smtpd_sasl_local_domain = $myhostname
 
-`smtpd_sender_restrictions` filters mails based on the MAIL FROM command; This command is easy faked by telneting an open relay and typing in this command, therefore mail counl be sent with a valid MAIL FROM address. Use `smtpd_client_restrictions` instead, which checks the hostname or IP address of the smtpd client (the other MTA/SMTP connecting to the internal smtpd) in a black list, if listed mail is denied.
+`smtpd_sender_restrictions` filters mails based on the MAIL FROM command; This command is easy faked by telneting an open relay and typing in this command, therefore mail could be sent with a valid MAIL FROM address. Use `smtpd_client_restrictions` instead, which checks the hostname or IP address of the smtpd client (the other MTA/SMTP connecting to the internal smtpd) in a black list, if listed mail is denied.
 
 If mails are marked as `NoBounceOpenRelay` try:
 

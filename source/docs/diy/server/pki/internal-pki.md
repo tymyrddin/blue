@@ -1,87 +1,65 @@
 # Internal PKI
 
-An Internal PKI consists of
+An internal PKI consists of a Certificate Authority (CA) certificate and key used to sign server and client certificates, plus a separate certificate and private key for the server and each client.
 
-* A master-your-own master Certificate Authority (CA) certificate and key which is used to sign each of the server and client certificates.
-* A separate certificate (also known as a public key) and private key for the server and each client.
-
-The most secure way of doing this is to generate the Certificate Authority keys on a stand-alone (not Internet-connected) machine in a secure location. 
+The most secure approach is to generate the CA keys on a machine that is not connected to the internet and kept in a secure location.
 
 ## Master Certificate Authority (CA)
 
-[easy-rsa](https://github.com/OpenVPN/easy-rsa) is a CLI utility to build and manage a PKI CA. It has a [quickstart documentation](https://github.com/OpenVPN/easy-rsa/blob/master/README.quickstart.md) and OpenVPN has example files.
+[easy-rsa](https://github.com/OpenVPN/easy-rsa) is a CLI utility for building and managing a PKI CA. Version 3 is the current release; v2 commands (`build-ca`, `clean-all`, etc.) do not exist in v3.
 
-    cd /etc/openvpn/
-    mkdir easy-rsa
-    cd easy-rsa
-    cp -r /usr/share/doc/openvpn/examples/easy-rsa/2.0/* .
+Install and create a working directory:
 
-Edit the `/etc/openvpn/easy-rsa/vars` file
-    
-    #vi /etc/openvpn/easy-rsa/vars
+```bash
+apt install easy-rsa
+make-cadir /etc/openvpn/easy-rsa
+cd /etc/openvpn/easy-rsa
+```
 
-Append content to some of its variables. This will make the next step in the process faster. You can also skip this. The only parameter which must be explicitly entered is the Common Name. 
+Initialise the PKI and build the CA. `nopass` skips the CA passphrase; omit it if the CA key needs passphrase protection:
 
-Now create the Certificate Authority Certificate and Key:
+```bash
+./easyrsa init-pki
+./easyrsa build-ca nopass
+```
 
-    # source vars
-    # ./clean-all
-    # ./build-ca
-        
-    Generating a 2048 bit RSA private key
-    ............++++++
-    ...........++++++
-    writing new private key to 'ca.key'
-    -----
-    You are about to be asked to enter information that will be incorporated
-    into your certificate request.
-    What you are about to enter is what is called a Distinguished Name or a DN.
-    There are quite a few fields but you can leave some blank
-    For some fields there will be a default value,
-    If you enter '.', the field will be left blank.
-    -----
-    Country Name (2 letter code) [KG]:
-    State or Province Name (full name) [NA]:
-    Locality Name (eg, city) [BISHKEK]:
-    Organization Name (eg, company) [OpenVPN-TEST]:
-    Organizational Unit Name (eg, section) []:
-    Common Name (eg, your name or your server's hostname) []: <hostname>
-    Email Address [me@myhost.mydomain]:
+The CA certificate is written to `pki/ca.crt`.
 
-Hit enter, and again, and again ...
+## Server certificate
 
-Later more master certificates and keys can be added, and when doing so do NOT use the `./clean-all` instruction again. It wipes the Certificate Authority.
+```bash
+./easyrsa gen-req servername nopass
+./easyrsa sign-req server servername
+```
 
-## Server key
+Confirm the details and type `yes` when prompted. The signed certificate is at `pki/issued/servername.crt`; the key is at `pki/private/servername.key`.
 
-Generate the server certificate and key with:
+## Client certificates
 
-    # ./build-key-server <servername>
+Each client gets its own certificate and key:
 
-Hit enter, and again, and again ... including when it asks you to add a pass phrase. This is between servers. When it asks you if you wish to sign, answers yes, and you also want to commit.
+```bash
+./easyrsa gen-req clientname nopass
+./easyrsa sign-req client clientname
+```
 
-## Client keys
-For security, each client will get its own certificate and key. Per client:
-
-    # ./build-key <clientname>
-
-Hit enter, and again, and again ... including when it asks you to add a pass phrase. This is between servers. When it asks you if you wish to sign, answers yes, and you also want to commit.
+Repeat for each client, substituting a distinct name each time. Certificates are in `pki/issued/`; keys are in `pki/private/`.
 
 ## Diffie-Hellman parameters
-Use the `build-dh` script to determine the encryption parameters necessary for the server end of a SSL/​TLS connection:
 
-    ./build-dh
+```bash
+./easyrsa gen-dh
+```
 
-And the system will get very busy with prime numbers.
+This writes `pki/dh.pem`. The operation takes a few minutes.
 
-## Copy keys
+## Distributing keys
 
-In the most secure possible way (for instance with `scp`), copy keys and certs to their respective locations.
+Copy the relevant files to each machine using a secure method such as `scp`:
 
-* `ca.crt`, `dh2048.pem`, `<servername>.crt`, and `<servername>.key` to `/etc/openvpn` on `<servername>`
-* `ca.crt`, `<clientname>.crt`, and `<clientname>.key` to `/etc/openvpn` on `<clientname>` for each client server.
+- To the server: `pki/ca.crt`, `pki/dh.pem`, `pki/issued/servername.crt`, `pki/private/servername.key`
+- To each client: `pki/ca.crt`, `pki/issued/clientname.crt`, `pki/private/clientname.key`
 
-## Security improvement
+## A more secure workflow
 
-All keys were created, signed and then distributed to the clients. A more secure way would be to generate the keys in their locations, submit a Certificate Signing Request (CSR) to the key-signing machine or transfer the CSR to the offline CA, the key-signing machine could have processed the request and returned a signed certificate which could have been transferred back to the clients. That way, the secret .key files stay on the machine on which they were generated.
-
+The approach above generates all keys on one machine. A more secure variant generates keys on each machine, submits a Certificate Signing Request (CSR) to the CA machine, and transfers only the signed certificate back. The private key never leaves the machine it was generated on. The easy-rsa [quickstart documentation](https://github.com/OpenVPN/easy-rsa/blob/master/README.quickstart.md) covers this flow.

@@ -12,7 +12,7 @@ Without DNSSEC, DNS is vulnerable to:
 * Man-in-the-middle (MITM) attacks – Intercepting and altering DNS responses.
 * DNS spoofing – Tricking systems into trusting malicious servers.
 
-## How DNSSEC works (without making your brain melt)
+## Signing and verification
 
 ### Signing the records: The cryptographic seal of approval
 
@@ -38,7 +38,7 @@ When a resolver (like your ISP or Google’s 8.8.8.8) gets a DNS response:
 * It verifies the signature (RRSIG) against the data.
 * If everything checks out, the record is trusted. If not? Warning signs go up.
 
-## The ugly truth: DNSSEC’s challenges
+## DNSSEC’s challenges
 
 1. Deployment is Still Patchy
    * Many domains still don’t use DNSSEC (looking at you, facebook.com).
@@ -48,16 +48,8 @@ When a resolver (like your ISP or Google’s 8.8.8.8) gets a DNS response:
    * Human error (expired keys, bad signatures) can cause outages.
 3. DNSSEC signs records but doesn’t hide them. For privacy, you still need DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT)
 
-## Should you use DNSSEC?
+## Trade-offs
 
-Yes, if:
+Worth enabling for high-value domains (banking, government, corporate infrastructure) where DNS hijacking carries serious consequences, or anywhere DNS spoofing would be a significant exposure.
 
-* You run a high-value domain (banking, government, corporate).
-* You want to prevent DNS hijacking & spoofing.
-* You’re okay with extra maintenance (key management).
-
-No, if:
-
-* Your registrar doesn’t support it (check first!).
-* You’re not prepared to monitor key expirations.
-* You think "DNS troubleshooting" sounds like a nightmare.
+Less straightforward when the registrar does not support DS record submission, or when no one on the team is prepared to monitor key expirations. Key rollovers are sensitive to timing: a gap in coverage breaks the chain and causes validation failures downstream.

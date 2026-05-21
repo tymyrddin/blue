@@ -1,6 +1,6 @@
 # Disable unwanted HTTP methods
 
-HTTP `TRACE` and `TRACK` requests can be used for legitimate purposes, such as debugging connection errors within the network, but these protocols can also compromise the security of a web server. One of the most common exploitation methods are [cross-site scripting (XSS) attacks], where attackers use and manipulate the `TRACE` and `TRACK` methods to intercept normal traffic connections, session cookies and possibly any data in transit.
+HTTP `TRACE` requests can be used for legitimate purposes such as debugging connection errors, but can also be exploited as a vector for [cross-site scripting (XSS) attacks](https://webapp.tymyrddin.dev/docs/techniques/xss), allowing attackers to intercept session cookies and data in transit. Microsoft IIS also implements a similar non-standard `TRACK` method.
 
 Disable any HTTP methods, which are not going to be used and which are not required to be implemented on the web server.
 
@@ -12,7 +12,7 @@ Add this condition in the location block of the nginx virtual host configuration
     limit_except GET HEAD POST { deny all; }
     }
 
-The server will only allow `GET`, `HEAD`, and `POST` methods and will filter out methods such as `PUT`, `DELETE`, `PATCH`, `TRACE`, `TRACK`, and `OPTIONS`.
+The server will only allow `GET`, `HEAD`, and `POST` methods and will filter out methods such as `PUT`, `DELETE`, `PATCH`, `TRACE`, and `OPTIONS`.
 
 Or for a more universal solution, add this condition to the server section (or server block):
 
@@ -51,4 +51,4 @@ Restart Apache, and create a `.htaccess` file under the document root directory 
     RewriteCond %{REQUEST_METHOD} ^(PUT|DELETE|PATCH|TRACE|OPTIONS) 
     RewriteRule .* - [F]
 
-The above configuration will disable `PUT`, `DELETE`, `PATCH`, `TRACE`, `TRACK`, and `OPTIONS` methods.
+The above configuration will disable `PUT`, `DELETE`, `PATCH`, `TRACE`, and `OPTIONS` methods.

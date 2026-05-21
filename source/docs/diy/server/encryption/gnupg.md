@@ -2,7 +2,7 @@
 
 GNU Privacy Guard (GPG) is based on Pretty Good Privacy, the OpenPGP standard.
 
-Pretty Good Privacy (PGP) is used widely to encrypt and decrypt email by using asymmetrical and symmetrical systems. When you first send your email, it is encrypted with your own public key, as well as a session key, which is a one-time use random number called a `nonce`. The session key is then encrypted into the public key and sent with the cipher text. To decrypt your email, the receiving end must use their private key in order to discover the session key. The session key combined with the private key are then used to decrypt the cipher text back into the original document.
+Pretty Good Privacy (PGP) encrypts and decrypts email using a hybrid of asymmetric and symmetric systems. The message is encrypted with a randomly generated session key. That session key is then encrypted with the recipient's public key and sent alongside the ciphertext. To decrypt, the recipient uses their private key to recover the session key, which in turn decrypts the message.
 
 GPG comes pre-installed on Ubuntu. Its main advantages:
 
@@ -34,7 +34,7 @@ The `-d` option while targeting our gpg file that was encrypted, will print out 
 
 Asymmetric encryption works by using two keys - one to encrypt, and one to decrypt. The public key is used to encrypt the data while the private key is used to decrypt the data. So using the typical Bob and Alice example, let's say Bob wants to send Alice an encrypted file.
 
-He would first encrypt the file using Alice's public key and then send the file away. Once Alice receives the file, she can decrypt it with her private key. The big takeaway here is that public keys can be shared, private keys should be kept private and held onto for dear life. NEVER SHARE YOUR PRIVATE KEY!
+He would first encrypt the file using Alice's public key and then send the file away. Once Alice receives the file, she can decrypt it with her private key. The point is that public keys can be shared freely; private keys are worth keeping private.
 
 To use the scheme, users need to extract their public keys and send them to each other. Go to the `.gnupg` folder and extract with:
 

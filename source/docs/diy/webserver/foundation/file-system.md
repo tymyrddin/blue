@@ -6,10 +6,9 @@ To restrict a directory from access by users, deny all users using the `Director
 
 ```
 <Directory "/var/www/directory">
-    Order Deny,Allow
-    Deny from all
-    Allow from 192.168.1.0/24
-    Allow from .core.com
+    Require all denied
+    Require ip 192.168.1.0/24
+    Require host .core.com
 </Directory>
 ```
 
@@ -20,9 +19,7 @@ To restrict a file using the `File` directive:
 # viewed by Web clients. 
 #
 <Files ~ "^\.ht">
-    Order allow,deny
-    Deny from all
-    Satisfy all
+    Require all denied
 </Files>
 ```
 
@@ -30,10 +27,9 @@ To limit the scope of enclosed directives by URL use the `Location` directive:
 
 ```
 <Location /admin>
-    Order Deny,Allow
-    Deny from all
-    Allow from 192.168.1.0/24
-    Allow from .core.com
+    Require all denied
+    Require ip 192.168.1.0/24
+    Require host .core.com
 </Location>
 ```
 

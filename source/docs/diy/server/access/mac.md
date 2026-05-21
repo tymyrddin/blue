@@ -1,13 +1,13 @@
 # Mandatory access control (MAC)
 
-Mandatory Access Control (MAC) is a type of Access Control. It goes along with Discretionary Access Control, Role Based Access Control, and Rule Based Access Control. MAC is considered the strongest form of access control due to allowing more control over who has access over what. In a Linux system, there are multiple ways to implement MAC. Two of which being SELinux and AppArmor.
+Mandatory Access Control (MAC) is a type of Access Control. It goes along with Discretionary Access Control, Role Based Access Control, and Rule Based Access Control. MAC is considered the strongest form of access control due to allowing more control over who has access over what. In a Linux system, there are multiple ways to implement MAC. The two most common are SELinux and AppArmor.
 
 ## SELinux
 
 SELinux is a free open source software project that was developed by the U.S. National Security Agency. While it can theoretically be installed on any Linux distribution, Red Hat-type distributions are the only ones that come with it already set up and enabled. It uses code in Linux kernel modules, along with extended filesystem attributes, to help ensure that only authorised users and processes can access either sensitive files or system resources. There are three ways in which SELinux can be used:
 
 * It can help prevent intruders from exploiting a system.
-* It can be used to ensure that only users with the proper security clearance can access files that are labeled with a security classification.
+* It can be used to ensure that only users with the proper security clearance can access files that are labelled with a security classification.
 * In addition to MAC, SELinux can also be used as a type of role-based access control.
 
 ## AppArmor

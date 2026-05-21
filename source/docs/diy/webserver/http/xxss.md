@@ -1,26 +1,20 @@
 # X-XSS-Protection
 
-The HTTP X-XSS-Protection response header is a feature of Safari, Internet Explorer 8+, and Google Chrome that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. 
+`X-XSS-Protection` is deprecated. Chrome removed it in version 78, Firefox never implemented it, and it is no longer maintained in any major browser. New deployments are better served by a strong [Content-Security-Policy](csp.md) with `script-src` restrictions, which provides equivalent or better protection across all modern browsers.
 
-For example, to prevent browsers from rendering pages if an attack is detected:
-
-    X-XSS-Protection: 1; mode=block
-
-The header can be implemented in three ways:
+The header may still appear in configurations targeting older Safari or Internet Explorer environments. It stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. The three values:
 
 * `X-XSS-Protection: 0` – disables the filter completely.
-* `X-XSS-Protection: 1` – enforces the header but only sanitises potential malicious scripts.
-* `X-XSS-Protection: 1; mode=block` – enforces the feature and completely blocks the page.
-
-These protections are largely unnecessary in modern browsers when sites implement a strong [Content-Security-Policy](csp.md) that disables the use of inline JavaScript ('unsafe-inline').
+* `X-XSS-Protection: 1` – sanitises potential malicious scripts without blocking the page.
+* `X-XSS-Protection: 1; mode=block` – blocks the page entirely if an attack is detected.
 
 ## Apache
 
-    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-XSS-Protection "0"
 
 ## Nginx
 
-    add_header X-XSS-Protection "1; mode=block" always;
+    add_header X-XSS-Protection "0" always;
 
 ## Resources
 

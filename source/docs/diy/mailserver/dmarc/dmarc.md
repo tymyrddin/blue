@@ -1,7 +1,7 @@
 # DMARC configuration
 
 DMARC allows the domain owner to specify what happens with failed emails and get feedback when they arrive. 
-Basically, there are three actions receiving servers can take if BOTH SPF and DKIM checks fail: `none`, `quarantine`, 
+Basically, there are three actions receiving servers can take if no aligned SPF or DKIM check passes: `none`, `quarantine`,
 and `reject`.
 
 Setting it up takes [five-steps as listed on the DMARC website](https://dmarc.org/overview/)

@@ -31,6 +31,14 @@ request that hits the maximum configured depth limit is worth investigating even
 
 ## Detection patterns
 
+The thresholds below are calibrated for a low-to-medium traffic API where automated tooling accounts
+for a small minority of requests and human users interact at human speeds. High-traffic APIs, machine-
+to-machine integrations, or services with aggressive client-side retry logic will produce false
+positives at these values and need higher counts or wider windows. In each case the underlying
+pattern — many paths, repeated failures, unusual ID access, concurrent identical requests — is more
+durable than the specific number. Start with these, measure the false positive rate against real
+traffic, and adjust.
+
 ### Endpoint enumeration
 
 Endpoint enumeration generates a characteristic pattern: requests to many different paths from

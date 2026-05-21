@@ -5,7 +5,7 @@ The biggest threat to server security is the code that is written for the server
 Administrators have two options:
 
 * Disable Server Side Includes (SSI) and CGI execution completely.
-* Review all programs included in the cgi-bin directory, don't allow `ExecCGI` in any other directory unless you're positive no one can place a script there that have not been reviewed, write programs that do not allow free-form user input, use drop-down menus instead of keyboard input and never trust user input.
+* Review all programs in the cgi-bin directory. Avoiding `ExecCGI` outside that directory is worth considering unless the directory's contents can be fully controlled. Programs that accept user input are safer when input is constrained, with drop-down selections preferred over free-form text fields.
 
 ## Apache 
 

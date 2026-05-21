@@ -34,9 +34,11 @@ and visits suspicious URLs in a controlled way. It simulates fetching and render
 identifying exploit attempts without fully executing what it finds.
 
 * Emulates browsers (IE, Chrome, various user-agent strings).
-* Detects exploits targeting PDF, browser engines, and legacy plugin formats. Java and Flash browser
-  plugins have not been present in mainstream browsers since the early 2020s, so exploit detection for
-  those specifically reflects historical rather than current attack traffic.
+* Detects exploits targeting PDF, browser engines, and legacy plugin formats. Java and Flash plugins
+  have not been present in mainstream browsers since the early 2020s, so Thug will not reflect current
+  browser-delivered attack traffic for those formats. The detection remains relevant for analysing older
+  malware samples, investigating compromise of legacy systems running embedded Java HMIs or aging
+  enterprise applications, and supply chain analysis of historical payloads.
 * Logs all HTTP requests, responses, and indicators of compromise.
 
 Thug does not execute downloaded binaries or launch a real browser. It is a lightweight, scriptable way

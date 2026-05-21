@@ -6,7 +6,8 @@ generally suspicious trails, static trails compiled from various AV reports and 
 It is based on a Traffic -> Sensor <-> Server <-> Client Architecture.
 
 Trail can be anything from a:
-domain name (like `zvpprsensinaix.com` for Banjori malware)
+
+* domain name (like `zvpprsensinaix.com` for Banjori malware)
 * URL (like `http://109.162.38.120/harsh02.exe` for known malicious executable)
 * IP address (for example `185.130.5.231` for known attacker) 
 * HTTP User-Agent header value (like `sqlmap` for automatic SQL injection and database takeover tool).

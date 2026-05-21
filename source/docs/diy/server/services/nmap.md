@@ -1,6 +1,6 @@
 # Auditing network services with nmap
 
-To remotely aud* the network to see what services are running on each host, without having to log in to each one, you need a tool like `nmap`. * is available for all the major operating systems, including Windows. The version that's in the Linux repositories is usually quite old. So, if you're using something other than Kali, your can [download nmap](https://nmap.org/download.html).
+To remotely audit the network and see what services are running on each host without logging in to each one, a tool like `nmap` is needed. Nmap is available for all major operating systems, including Windows. The version in Linux repositories is usually somewhat old; on systems other than Kali, you can [download nmap](https://nmap.org/download.html) directly.
 
     sudo nmap -sS IP_ADDRESS
 
@@ -20,15 +20,14 @@ An Nmap scan will show the target machine's ports in one of three states:
 ## Scan types
 
 There are lots of different scanning options, each with its own purpose. The SYN packet
-scan that we're using here is considered a stealthy type of scan because * generates less
-network traffic and fewer system log entries than certain other types of scans. With this
-type of scan, Nmap sends a SYN packet to a port on the target machine, as if * were trying
-to create a TCP connection to that machine. If the target machine responds with a
-SYN/ACK packet, * means that the port is in an open state and is ready to create the TCP
-connection. If the target machine responds with an RST packet, * means that the port is in a
-closed state. If there's no response at all, * means that the port is filtered, blocked by a
-firewall. As a normal Linux administrator, this is one of the types of scans that you would
-do most of the time.
+scan is considered a stealthy type of scan because it generates less network traffic and
+fewer system log entries than certain other types of scans. With this type of scan, Nmap
+sends a SYN packet to a port on the target machine, as if it were trying to create a TCP
+connection. If the target machine responds with a SYN/ACK packet, it means the port is in
+an open state and is ready to create the TCP connection. If the target machine responds
+with an RST packet, it means the port is in a closed state. If there is no response at all,
+it means the port is filtered by a firewall. This is one of the most common scan types for
+routine network auditing.
 
 A discovery scan is useful for when you need to just see what devices are on the network:
 

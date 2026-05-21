@@ -21,7 +21,7 @@ Start and enable it on boot
 
 ## Zones
 
-Zones are predefined sets of rules specifying what traffic should be allowed based on the level of trust on the networks a computer is connected to. Network interfaces and sources can be assigned to a zone. From untrusted to trusted:
+Zones are predefined sets of rules specifying what traffic is allowed based on the level of trust on the networks a computer is connected to. Network interfaces and sources can be assigned to a zone. From untrusted to trusted:
 
 | Zones | Meaning |
 |:---- | :---- |
@@ -85,7 +85,7 @@ To open HTTP and HTTPS ports add permanent service rules to the dmz zone
     # firewall-cmd --permanent --zone=dmz --add-service=http
     # firewall-cmd --permanent --zone=dmz --add-service=https
 
-Start building the firewall! 
+Start building the firewall.
 
 ## Usage examples
 ###  OpenVPN
@@ -96,7 +96,7 @@ When using the default port 1194, enable the openvpn service. Otherwise, create 
 
 To add masquerade to the zone:
 
-    # firewall-cmd --zone=server --add-masquerade
+    # firewall-cmd --zone=public --add-masquerade
 
 Make changes permanent:
 
@@ -104,7 +104,7 @@ Make changes permanent:
 
 ### SMTP
 
-    # firewall-cmd --permanent --add-service=smtp success
+    # firewall-cmd --permanent --add-service=smtp
 
 ## Disable FirewallD
 

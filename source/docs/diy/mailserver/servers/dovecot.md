@@ -1,8 +1,7 @@
 # Dovecot
 
 Dovecot is an open source IMAP and POP3 server for Linux/UNIX-like systems, written primarily with security in mind. 
-Dovecot aims to be a lightweight, fast and easy to set up open source mailserver. The below is for debian 9 (probably 
-also works on buster)
+Dovecot aims to be a lightweight, fast and easy to set up open source mailserver. The below applies to current Debian and Ubuntu releases.
 
 ## Installation 
 
@@ -64,6 +63,6 @@ To access the mail server from another computer, configure the server firewall t
 
 ## Configuration resources
 
-* [Dovecot configuration](https://wiki2.dovecot.org/#Dovecot_configuration)
-* [Dovecot Quick Configuration](https://wiki2.dovecot.org/QuickConfiguration)
+* [Dovecot configuration](https://doc.dovecot.org/#Dovecot_configuration)
+* [Dovecot Quick Configuration](https://doc.dovecot.org/QuickConfiguration)
 

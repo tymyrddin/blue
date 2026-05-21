@@ -1,19 +1,18 @@
-# How DKIM works (and why it is not a silver bullet)
+# DKIM: not a silver bullet
 
-DKIM operates like a digital wax seal for emails, but with more cryptography and fewer medieval vibes. Here's the 
-process in plain terms:
+DKIM operates as a cryptographic signature for emails. The process:
 
 When sending an email:
 
 1. The sender decides which parts of the email get "sealed" - either the entire message (headers and body) or specific header fields. These chosen elements become untouchable; any alteration during transit will break the seal.
 
-2. The sender's mail server automatically creates a cryptographic hash of these protected elements, then encrypts this hash using a private key. This encrypted hash becomes the DKIM signature, attached to the email like a tamper-evident sticker.
+2. The sender's mail server creates a cryptographic hash of these protected elements, then encrypts this hash using a private key. This encrypted hash becomes the DKIM signature, appended to the email headers.
 
 When receiving the email:
 
-3. The receiving server spots the DKIM signature and checks which domain/selector combo created it (think of this like checking which wax stamp was used). It then performs a DNS lookup to retrieve the sender's public key - the only key that can decrypt that particular signature.
+3. The receiving server reads the DKIM signature and identifies the domain/selector pair that created it, then performs a DNS lookup to retrieve the sender's public key.
 
-4. The magic happens: The receiver decrypts the signature to get the original hash, then generates its own hash of the protected email parts. If the two hashes match, the email passes inspection. If not, something's been meddled with.
+4. The receiver decrypts the signature to recover the original hash, then generates its own hash of the protected email parts. Matching hashes confirm nothing was altered in transit.
 
 The good:
 
@@ -22,8 +21,8 @@ The good:
 
 The reality check:
 
-* Not widely adopted, so absence of DKIM doesn't automatically mean foul play
-* Invisible to end users - you'd need to inspect email headers like a cyber detective to see it
+* Increasingly required by major providers (Gmail and Yahoo now enforce it for bulk senders), though absence alone is not conclusive evidence of foul play in other contexts
+* Invisible to end users; verification requires inspecting raw email headers
 * Doesn't stop "From:" spoofing - a message can pass DKIM while still showing a fake sender address
 * Complexity wins - the technical overhead means many organisations half-implement it or skip it entirely
 

@@ -54,8 +54,8 @@ reading the dashboard.
 ```python
 # The monitoring gap: OPC reads return what the PLC chooses to report.
 # A PLC executing attacker-supplied code returns whatever value the attacker specifies.
-from opcua import Client   # pip install opcua; deprecated in favour of asyncua but still functional
-                           # OPC UA shown here; Stuxnet targeted the older COM-based OPC DA layer in Step 7
+from asyncua.sync import Client   # pip install asyncua
+                                  # OPC UA shown here; Stuxnet targeted the older COM-based OPC DA layer in Step 7
 
 client = Client("opc.tcp://10.0.0.1:4840/")
 client.connect()

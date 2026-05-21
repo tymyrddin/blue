@@ -1,15 +1,14 @@
 # Implementing a backup plan
 
 Backups are one of those things that some people don’t seem to take seriously until it’s too late. Data
-loss can be a catastrophic event for an organisation, so it’s imperative that you implement a solid
-backup plan. 
+loss can be a catastrophic event for an organisation, and a solid backup plan is worth having in place before anything goes wrong. 
 
 There’s no one best backup solution, since it all depends on what kind of data you need to secure, and
 what software and hardware resources are available to you. This may mean that you’ll need to make some compromises, such as creating regular snapshots of
 your database server’s storage volume or regularly dumping a backup of your important databases to
 an external storage device.
 
-The `rsync` utility is one of the most valuable pieces of software around to server administrators. It
+The `rsync` utility is widely used by server administrators for good reason. It
 allows us to do some really wonderful things. In some cases, it can save us quite a bit of money. For
 example, online backup solutions are wonderful in the sense that we can use them to store off-site
 copies of our important files. And depending on the volume of data, they can be quite expensive.
@@ -32,7 +31,7 @@ By default, `rsync` copies data between two locations, but it doesn’t remove a
 
     sudo rsync -avb --delete --backup-dir=/backup/incremental /src /target
 
-Copying files from `/src` to `/target`, but now sending replaced files to the `/backup/incremental` directory. This means that when a file is going to be replaced on the target, the original file will be copied to `/backup/incremental`. This works because we used the`-b` option (backup) and the `--backup-dir` option, which means that the replaced files will not be renamed; they’ll simply be moved to the designated directory. This allows us to effectively perform incremental backups.
+Copying files from `/src` to `/target`, but now sending replaced files to the `/backup/incremental` directory. This means that when a file is going to be replaced on the target, the original file will be copied to `/backup/incremental`. This works because we used the `-b` option (backup) and the `--backup-dir` option, which means that the replaced files will not be renamed; they’ll simply be moved to the designated directory. This allows us to effectively perform incremental backups.
 
 Using the Bash shell to make incremental backups work even better:
 
@@ -44,7 +43,7 @@ Using the Bash shell to make incremental backups work even better:
 ```python
 """ Simple backup script which just creates the root structure in an other
 folder and syncs everything which recursively lies within one of the source
-folders. For files bigger than a threshold they are first gziped."""
+folders. For files bigger than a threshold they are first gzipped."""
 
 import argparse
 import gzip
@@ -83,7 +82,7 @@ def size_if_newer(source, target):
             target_ts = 0
 
     # The time difference of one second is necessary since subsecond accuracy
-    # of os.st_mtime is striped by copy2
+    # of os.st_mtime is stripped by copy2
     return src_stat.st_size if (src_stat.st_mtime - target_ts > 1) else False
 
 def threaded_sync_file(source, target, compress):

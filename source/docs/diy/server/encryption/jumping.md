@@ -74,10 +74,10 @@ Create or open `~/.ssh/config`
 
 Append the below entry (replacing ''XXX.XXX.XXX.XXX'' with actual server domain name or IP and ''user'' with actual user):
 
-    Host jumphost
+    Host backendserver
     HostName XXX.XXX.XXX.XXX
     User user
-    ProxyCommand ssh user@backendserver nc %h %p
+    ProxyCommand ssh user@jumphost nc %h %p
 
 ## ProxyJump
 

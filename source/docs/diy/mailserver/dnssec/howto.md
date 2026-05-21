@@ -1,4 +1,4 @@
-# How to enable DNSSEC on your DNS server
+# Enabling DNSSEC on a BIND server
 
 DNSSEC adds cryptographic signatures to your DNS records, preventing spoofing and cache poisoning. 
 
@@ -38,11 +38,11 @@ Edit `/etc/bind/named.conf.options` (Debian) or `/etc/named.conf` (RHEL):
 
 ```
 options {
-    dnssec-enable yes;
     dnssec-validation yes;
-    dnssec-lookaside auto;
 };
 ```
+
+`dnssec-enable` was removed in BIND 9.16 (DNSSEC is always on). `dnssec-lookaside auto` was removed in BIND 9.11. Both cause a startup failure if present.
 
 Restart BIND:
 
@@ -57,25 +57,25 @@ sudo systemctl restart bind9  # Debian/Ubuntu
 
 ```bash
 cd /etc/bind
-sudo dnssec-keygen -a RSASHA256 -b 2048 -n ZONE example.com  # ZSK
-sudo dnssec-keygen -a RSASHA256 -b 4096 -f KSK -n ZONE example.com  # KSK
+sudo dnssec-keygen -a ECDSAP256SHA256 -n ZONE example.com  # ZSK
+sudo dnssec-keygen -a ECDSAP256SHA256 -f KSK -n ZONE example.com  # KSK
 ```
 
-This creates two key pairs (.key & .private files).
+This creates two key pairs (.key & .private files). ECDSAP256SHA256 (algorithm 13) produces smaller keys and signatures than RSA and is the current recommended choice for new deployments.
 
 ### Add keys to your Zone file
 
 Edit your zone file (e.g., /etc/bind/db.example.com) and include the .key files:
 
 ```
-$INCLUDE Kexample.com.+008+12345.key  # ZSK
-$INCLUDE Kexample.com.+008+67890.key  # KSK
+$INCLUDE Kexample.com.+013+12345.key  # ZSK
+$INCLUDE Kexample.com.+013+67890.key  # KSK
 ```
 
 ### Sign the Zone
 
 ```bash
-sudo dnssec-signzone -A -3 salt -N INCREMENT -o example.com -t db.example.com
+sudo dnssec-signzone -A -3 - -N INCREMENT -o example.com -t db.example.com
 ```
 
 This generates a signed zone file (`db.example.com.signed`).
@@ -85,13 +85,13 @@ This generates a signed zone file (`db.example.com.signed`).
 In `named.conf`, replace:
 
 ```
-zone "example.com" { type master; file "db.example.com"; };
+zone "example.com" { type primary; file "db.example.com"; };
 ```
 
 with:
 
 ```
-zone "example.com" { type master; file "db.example.com.signed"; };
+zone "example.com" { type primary; file "db.example.com.signed"; };
 ```
 
 Restart BIND again:
@@ -107,7 +107,7 @@ sudo systemctl restart bind9  # or named
 This output  is needed for your registrar.
 
 ```bash
-sudo dnssec-dsfromkey Kexample.com.+008+67890.key  # KSK
+sudo dnssec-dsfromkey Kexample.com.+013+67890.key  # KSK
 ```
 
 ### Add DS Record to Domain Registrar
@@ -128,8 +128,8 @@ dig +dnssec example.com
 
 ### Online validation tools
 
-* DNSSEC Debugger
-* DNSViz
+* [DNSSEC Debugger](https://dnssec-debugger.verisignlabs.com/)
+* [DNSViz](https://dnsviz.net/)
 
 ## Common issues & fixes
 

@@ -15,7 +15,6 @@ Point Postfix to your TLS certificates by appending to `/etc/postfix/main.cf`:
 smtpd_tls_cert_file = /etc/letsencrypt/live/$domain.$tld/fullchain.pem
 smtpd_tls_key_file = /etc/letsencrypt/live/$domain.$tld/privkey.pem
 smtpd_tls_dh1024_param_file = /etc/ssl/private/2048.dh
-smtpd_tls_dh512_param_file = /etc/ssl/private/512.dh
 ```
 
 If you want the Postfix SMTP server to accept remote SMTP client certificates issued by one or more root CAs, append the root certificate to `$smtpd_tls_CAfile` or install it in the `$smtpd_tls_CApath` directory. 
@@ -123,7 +122,7 @@ By default, the OpenSSL server selects the client's most preferred cipher-suite 
 
 ### Entropy
 
-The security of cryptographic software such as TLS depends critically on the ability to generate unpredictable numbers for keys and other information. The `tlsmgr` process maintains a Pseudo Random Number Generator (PRNG) pool for the purpose. This is queried by the `smtp` and `smtpd` processes when they initialize. By default, these daemons request 32 bytes, the equivalent to 256 bits, more than enough to generate a 128 bit (or 168 bit) session key. A good entropy source is `/dev/urandom`
+The security of cryptographic software such as TLS depends critically on the ability to generate unpredictable numbers for keys and other information. The `tlsmgr` process maintains a Pseudo Random Number Generator (PRNG) pool for the purpose. This is queried by the `smtp` and `smtpd` processes when they initialise. By default, these daemons request 32 bytes, the equivalent to 256 bits, more than enough to generate a 128 bit (or 168 bit) session key. A good entropy source is `/dev/urandom`
 
     tls_random_source = dev:/dev/urandom
 

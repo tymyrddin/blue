@@ -112,5 +112,5 @@ A triggered correlation indicates:
 * Later routing events must be treated with suspicion
 * Subsequent playbooks should be escalated in confidence
 
-This correlation feeds Playbook 3.
+This correlation is [Playbook 1](../response/playbooks.md#playbook-1-roa-poisoning) in the response sequence and feeds into [Playbook 3](../response/playbooks.md#playbook-3-rpki-cover-hijack).
 

@@ -19,7 +19,7 @@ Start and enable:
 To deny all incoming and allow all outgoing connections:
 
     # ufw default allow outgoing
-    # default deny incoming
+    # ufw default deny incoming
 
 ### SSH 
 

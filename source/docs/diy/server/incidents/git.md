@@ -39,7 +39,7 @@ Make a backup of the current `/etc/apache2` directory on the web server, in case
 
     sudo cp -rp /etc/apache2 /etc/apache2.bak
 
-Then,move all the contents of /etc/apache2 into the repository:
+Then, move all the contents of /etc/apache2 into the repository:
 
     sudo mv /etc/apache2/* /git/apache2
 
@@ -47,7 +47,7 @@ The `/etc/apache2` directory is now empty. Be careful not to restart Apache at t
 
     sudo rm /etc/apache2
 
-Make sure that Apache’s files are owned by root. Using the `chown`command, as we normally would to change ownership, we’ll also change the .git directory to be owned by root as well. We don’t want that, because the user responsible for pushing changes should be the owner of the `.git` folder. To change the ownership of the files to root, without touching hidden directories such as `.git`:
+Make sure that Apache’s files are owned by root. Using the `chown` command, as we normally would to change ownership, we’ll also change the .git directory to be owned by root as well. We don’t want that, because the user responsible for pushing changes is worth keeping as the owner of the `.git` folder. To change the ownership of the files to root, without touching hidden directories such as `.git`:
 
     sudo find /git/apache2 -name '.?*' -prune -o -exec chown root:root {} +
 
@@ -68,7 +68,7 @@ To push the changes back to the Git server, associate the files within the `/git
 
     git add .
 
-If you run the git status command from within your Git repository, you should see output indicating that Git has new files that haven’t been committed yet. A Git commit simply finalizes the changes locally. Basically, it packages up your current changes to prepare them for being copied to the server.
+If you run the git status command from within your Git repository, the output indicates that Git has new files that haven’t been committed yet. A Git commit simply finalizes the changes locally. Basically, it packages up your current changes to prepare them for being copied to the server.
 
 To create a commit of all the files we’ve added so far, `cd` into the `/git/apache2` directory and run:
 
@@ -80,9 +80,9 @@ Push the changes back to the Git server:
 
     git push origin main
 
-By default, the git suite of commands utilises OpenSSH, so our git push command should create an`ssh` connection back to the Git server and push the files there. You won’t be able to inspect the contents of the Git directory on your Git server, because it won’t contain the same file structure as your original directory. But when you pull a Git repository though, the resulting directory structure will be just as you left it.
+By default, the git suite of commands utilises OpenSSH, so the git push command creates an `ssh` connection back to the Git server and pushes the files there. You won’t be able to inspect the contents of the Git directory on your Git server, because it won’t contain the same file structure as your original directory. But when you pull a Git repository though, the resulting directory structure will be just as you left it.
 
-If you need to restore a repository onto another server, all you should need to do is perform a Git `clone`. To clone the repository into your current working directory:
+If you need to restore a repository onto another server, all you need to do is perform a Git `clone`. To clone the repository into your current working directory:
 
     git clone IP_ADDRESS:/git/apache2
 
@@ -92,7 +92,7 @@ push the changes up to the server to keep the content safe:
     git commit -a -m "Updated config: details."
     git push origin main
 
-To revert changes should the configuration get changed with non-working files, locate a known working commit and get its commit hash. A good method is using the `tig` command. The tig package must be installed for this to work:
+To revert changes should the configuration get changed with non-working files, locate a known working commit and get its commit hash. A good method is using the `tig` command. The tig package needs to be installed for this to work:
 
     sudo apt install tig
 
