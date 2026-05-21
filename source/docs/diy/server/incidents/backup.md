@@ -8,12 +8,7 @@ what software and hardware resources are available to you. This may mean that yo
 your database server’s storage volume or regularly dumping a backup of your important databases to
 an external storage device.
 
-The `rsync` utility is widely used by server administrators for good reason. It
-allows us to do some really wonderful things. In some cases, it can save us quite a bit of money. For
-example, online backup solutions are wonderful in the sense that we can use them to store off-site
-copies of our important files. And depending on the volume of data, they can be quite expensive.
-With `rsync`, we can back up our data in much the same way, with not only our current files copied over
-to a backup target but also differentials. If we have another server to send the backup to, even better.
+The `rsync` utility is widely used by server administrators. Online backup solutions work well for off-site copies but can become expensive at volume. `rsync` covers the same use case: copying current files to a backup target plus differentials. A second server as backup destination makes the setup even more flexible.
 
     sudo rsync -a /home /backup
 
@@ -25,13 +20,13 @@ To point `rsync` to another server, rather than to another directory on the loca
 
     sudo rsync -av /home/myuser admin@IP_ADDRESS:/backup
 
-By default, `rsync` copies data between two locations, but it doesn’t remove anything. With the `--delete` option, you can synchronise two points, telling `rsync` to make them the same by allowing it to delete files in the target that are no longer in the source.
+By default, `rsync` copies data between two locations but does not remove anything. With the `--delete` option, you can synchronise two points, telling `rsync` to make them the same by allowing it to delete files in the target that are no longer in the source.
 
 ## Incremental backups
 
     sudo rsync -avb --delete --backup-dir=/backup/incremental /src /target
 
-Copying files from `/src` to `/target`, but now sending replaced files to the `/backup/incremental` directory. This means that when a file is going to be replaced on the target, the original file will be copied to `/backup/incremental`. This works because we used the `-b` option (backup) and the `--backup-dir` option, which means that the replaced files will not be renamed; they’ll simply be moved to the designated directory. This allows us to effectively perform incremental backups.
+Copying files from `/src` to `/target`, but now sending replaced files to the `/backup/incremental` directory. This means that when a file is going to be replaced on the target, the original file will be copied to `/backup/incremental`. The `-b` (backup) and `--backup-dir` options ensure replaced files are moved to the designated directory rather than renamed, enabling incremental backups.
 
 Using the Bash shell to make incremental backups work even better:
 

@@ -4,8 +4,8 @@
 
 Two reasons to keep track of what network services are running on a system:
 
-* To ensure that no legitimate network services that you don't need are running
-* To ensure that you don't have any malware that's listening for network connections from its master C&C
+* To confirm that no unneeded legitimate network services are running
+* To check that no malware is listening for connections from a command-and-control host
 
 To see a list of network services that are listening, waiting for someone to connect to them:
 

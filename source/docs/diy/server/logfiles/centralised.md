@@ -18,7 +18,7 @@
 * Have no unnecessary services running on it.
 * Delete all other user accounts.
 
-## Which one?
+## Choosing a tool
 
 Rsyslog (default installed on debian) and syslog-ng are both light-weight. The configuration syntax of `rsyslog` is simpler than the syntax of `syslog-ng`, but complex configuration is more clear in `syslog-ng`. 
 

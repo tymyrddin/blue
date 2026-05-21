@@ -4,18 +4,17 @@ To remotely audit the network and see what services are running on each host wit
 
     sudo nmap -sS IP_ADDRESS
 
-* `-sS`: The lowercase s denotes the type of scan that we want to do. The uppercase `S` denotes that we're doing a `SYN` packet scan. 
+* `-sS`: The lowercase s denotes the scan type. The uppercase `S` denotes a `SYN` packet scan. 
 * `IP_ADDRESS`: scanning a single machine or a group of machines or an entire network.
-* Something like `Not shown: 996 closed ports`: The fact that it's showing all of these closed
-ports instead of filtered ports tells me that there's no firewall on this machine.
+* Something like `Not shown: 996 closed ports`: showing closed ports rather than filtered ports indicates no firewall on the machine.
 
 ## Port states
 
 An Nmap scan will show the target machine's ports in one of three states:
 
 * `filtered`: This means that the port is blocked by a firewall.
-* `open`: This means that the port is not blocked by a firewall and that the service that's associated with that port is running.
-* `closed`: This means that the port is not blocked by a firewall, and that the service that's associated with that port is not running.
+* `open`: This means that the port is not blocked by a firewall and that the service that is associated with that port is running.
+* `closed`: This means that the port is not blocked by a firewall, and that the service that is associated with that port is not running.
 
 ## Scan types
 
@@ -33,11 +32,10 @@ A discovery scan is useful for when you need to just see what devices are on the
 
     sudo nmap -sn IP_ADDRESS/24
 
-With the `-sn` option, nmap will detect whether you're scanning the local subnet or a
+With the `-sn` option, nmap will detect whether the scan targets a local subnet or a
 remote subnet. If the subnet is local, nmap will send out an Address Resolution Protocol
-(ARP) broadcast that requests the IPv4 addresses of every device on the subnet. That is a
-reliable way of discovering devices because ARP isn't something that will ever be blocked
-by a firewall.
+(ARP) broadcast that requests the IPv4 addresses of every device on the subnet. ARP is not
+blocked by firewalls, making this a reliable discovery method.
 
     sudo nmap -A IP_ADDRESS
 
@@ -63,7 +61,4 @@ MAC Address: 00:0A:95:8B:E0:C0 (Apple)
 Device type: general purpose
 ```
 
-VNC can be handy at times. It's like Microsoft's Remote Desktop service for Windows,
-except that it's free, open source software. But it's also a security problem because it's an
-unencrypted protocol. So, all your information goes across the network in plain text. If you
-must use VNC, run it through an SSH tunnel.
+VNC is comparable to Microsoft's Remote Desktop service, but free and open source. It is also an unencrypted protocol, meaning all traffic crosses the network in plain text. If VNC is required, running it through an SSH tunnel is worth the extra step.

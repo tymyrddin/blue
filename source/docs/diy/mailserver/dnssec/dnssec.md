@@ -41,12 +41,12 @@ When a resolver (like your ISP or Google’s 8.8.8.8) gets a DNS response:
 ## DNSSEC’s challenges
 
 1. Deployment is Still Patchy
-   * Many domains still don’t use DNSSEC (looking at you, facebook.com).
+   * Many domains do not yet use DNSSEC.
    * Some registrars make it unnecessarily hard to enable.
 2. Complexity = Misconfigurations Galore
-   * Key rollovers must be timed perfectly, or the domain breaks.
+   * Key rollovers are sensitive to timing: a gap in coverage breaks the chain.
    * Human error (expired keys, bad signatures) can cause outages.
-3. DNSSEC signs records but doesn’t hide them. For privacy, you still need DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT)
+3. DNSSEC signs records but does not hide them. DNS-over-HTTPS (DoH) or DNS-over-TLS (DoT) is needed for privacy.
 
 ## Trade-offs
 

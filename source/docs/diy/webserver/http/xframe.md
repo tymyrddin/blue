@@ -8,8 +8,8 @@ For example, to disallow displaying of a page in a frame:
 
 This header supports two current options:
 
-* `DENY` — disables iframe embedding completely.
-* `SAMEORIGIN` — allows embedding only by pages from the same origin.
+* `DENY`: disables iframe embedding completely.
+* `SAMEORIGIN`: allows embedding only by pages from the same origin.
 
 `ALLOW-FROM` was a third option for allowing iframes from a specific URL, but it has been deprecated and removed from Chrome, Firefox, and Edge. The CSP `frame-ancestors` directive is the current replacement for origin-specific allow-listing.
 

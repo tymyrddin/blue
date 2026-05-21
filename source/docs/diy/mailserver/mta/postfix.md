@@ -8,7 +8,7 @@
 * Check configuration with the `postfix check` command.
 * To see all configuration files use the `postconf` command.
 * To see how the setup differs from the defaults, use `postconf -n`.
-* On debian, Postfix runs by default in a chroot jail. On other distro's where this is not the case, it is recommended to set it up in a jail.
+* On Debian, Postfix runs by default in a chroot jail. On other distributions where this is not the case, it is worth setting it up in a jail.
 * Limit use of Postfix services
 * Restrict which hosts are granted or refused access with the `smtpd_*_restrictions` directives.
 * The `vrfy` command allows an attacker to determine if an account exists on a system, providing significant assistance to a brute force attack on user accounts. `vrfy` may provide additional information about users on the system, such as the full names of account owners. Default is `no`. Set to `disable_vrfy_command = yes`.
@@ -115,7 +115,7 @@ Its configuration is done via editing the postgrey.service file. Copy it over to
 
     # cp /usr/lib/systemd/system/postgrey.service /etc/systemd/system/
 
-Using postgrey it is also possible to add automatic whitelisting based on successful deliveries. These then don't have to wait any more. This can be done by , you could add the adding the `--auto-whitelist-clients=5` (default is 5) but the preferred method is the override:
+Using postgrey it is also possible to add automatic whitelisting based on successful deliveries. These do not have to wait any more. This can be done by , you could add the adding the `--auto-whitelist-clients=5` (default is 5) but the preferred method is the override:
 
 ```text
 # cat /etc/systemd/system/postgrey.service.d/override.conf
@@ -158,7 +158,7 @@ Create `/etc/postfix/smtp_header_checks` and append:
 
 ### Relaying 
 
-Relaying means that a sender with host in domain A, connects to our mailer in domain B to send an email to someone in domain C. A party for spammers. The easiest way to control relaying is to use the `smtpd_recipient_restrictions` directive; If this directive is left undefined, Postfix uses the information given in the directives `permit_mynetworks` and `check_relay_domains`.
+Relaying means that a sender with host in domain A connects to the mailer in domain B to send an email to someone in domain C. A party for spammers. The easiest way to control relaying is to use the `smtpd_recipient_restrictions` directive; If this directive is left undefined, Postfix uses the information given in the directives `permit_mynetworks` and `check_relay_domains`.
 
 ## Rule-based mail processing 
 

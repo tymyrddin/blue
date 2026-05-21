@@ -30,4 +30,4 @@ This will compress and rotate logs every day, keeping the last 7 rotations.
   * The logs will be rotated `daily`
   * Each log will not be rotated until it reaches 10MB
   * If the log file is missing, go on to the next one without issuing an error message.
-  * All rotated logs, with the exception of the most recent one, should be compressed.
+  * All rotated logs, with the exception of the most recent one, are compressed.

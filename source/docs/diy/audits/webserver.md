@@ -1,7 +1,6 @@
 # Webserver audit commands
 
-Webservers are the front door to your digital house. A thorough audit ensures that door isn’t wide open (or quietly 
-missing altogether).
+Webservers are the most visible part of a public infrastructure. A thorough audit checks that the configuration is intentional, exposure is minimal, and the usual mistakes are absent.
 
 ## Software & version checks
 
@@ -11,7 +10,7 @@ nginx -v  # Nginx version
 php -v    # PHP version (if applicable)
 ```
 
-Outdated versions are hacker catnip. Patch them.
+Outdated versions carry known CVEs. Apply security patches promptly.
 
 ## Configuration review
 
@@ -29,7 +28,7 @@ Look for ServerTokens, ServerSignature, directory listing, and dangerous PHP set
 openssl s_client -connect yourdomain.com:443
 ```
 
-Check certificate validity, issuer, and expiry. Let’s Encrypt is free, so no excuses.
+Check certificate validity, issuer, and expiry. Let's Encrypt certificates are available at no cost.
 
 Use SSL Labs Test for a thorough TLS configuration review.
 
@@ -39,7 +38,7 @@ Use SSL Labs Test for a thorough TLS configuration review.
 curl -I https://yourdomain.com
 ```
 
-Ensure the presence of headers like:
+Check for the presence of:
 
 * Strict-Transport-Security
 * X-Content-Type-Options
@@ -52,7 +51,7 @@ Ensure the presence of headers like:
 ls -l /var/www/html/
 ```
 
-No 777 permissions. Ever. Not even once.
+Permissions of 777 expose files to all users on the system and are worth catching early.
 
 ## Logs & monitoring
 
@@ -61,7 +60,7 @@ tail -f /var/log/apache2/access.log
 tail -f /var/log/nginx/access.log
 ```
 
-Scan for odd requests, suspicious user agents, or IPs hammering the server.
+Scan for odd requests, suspicious user agents, or IPs making unusually high request volumes.
 
 ## Vulnerability & attack surface
 

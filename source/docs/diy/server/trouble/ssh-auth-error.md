@@ -59,7 +59,7 @@ Get more information on what is happening with the ProxyCommand:
 
 ## HostKeyAlias
 
-HostKeyAlias specifies an alias that should be used instead of the real host name when looking up or saving the host key in the host key database files. This option is useful for tunnelling SSH connections or for multiple servers running on a single host. It caches the remote public under the alias name. Useful if different openSSH servers are listening on different ports of the same physical server, because normally the port number is not stored when caching public host keys. If the key has a different name (alias) both keys can be cached and valid.
+HostKeyAlias specifies an alias used instead of the real host name when looking up or saving the host key in the host key database files. This option is useful for tunnelling SSH connections or for multiple servers running on a single host. It caches the remote public under the alias name. Useful if different openSSH servers are listening on different ports of the same physical server, because normally the port number is not stored when caching public host keys. If the key has a different name (alias) both keys can be cached and valid.
 
     Host jumphost
     HostName XXX.XXX.XXX.XXX
@@ -69,7 +69,7 @@ HostKeyAlias specifies an alias that should be used instead of the real host nam
 
 ## CheckHostIP 
 
-And what if there are 2 different host keys for the same IP, or when the IP's change (DHCP on a LAN for example)?
+When there are 2 different host keys for the same IP, or when the IP's change (DHCP on a LAN for example):
 If `CheckHostIP` is set to `yes` (default), `ssh` will check the host IP address in the known_hosts file. This allows ssh to detect if a host key changed due to DNS spoofing. If the option is set to `no`, the check will not be executed. 
 
     Host server1

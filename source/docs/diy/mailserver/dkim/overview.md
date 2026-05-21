@@ -16,13 +16,13 @@ When receiving the email:
 
 The good:
 
-* Provides proof that critical elements weren't altered in transit
+* Provides proof that critical elements were not altered in transit
 * Some implementations can verify full message integrity
 
 The reality check:
 
 * Increasingly required by major providers (Gmail and Yahoo now enforce it for bulk senders), though absence alone is not conclusive evidence of foul play in other contexts
 * Invisible to end users; verification requires inspecting raw email headers
-* Doesn't stop "From:" spoofing - a message can pass DKIM while still showing a fake sender address
+* Does not stop "From:" spoofing: a message can pass DKIM while still showing a fake sender address
 * Complexity wins - the technical overhead means many organisations half-implement it or skip it entirely
 

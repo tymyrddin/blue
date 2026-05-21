@@ -22,7 +22,7 @@ initial deployment. Increase to 604800 (one week) or higher once stable.
 
 ## Serving the policy
 
-The policy must be accessible at `https://mta-sts.example.com/.well-known/mta-sts.txt`. The
+The policy needs to be accessible at `https://mta-sts.example.com/.well-known/mta-sts.txt`. The
 `mta-sts.` subdomain is required by the standard. Nginx configuration:
 
 ```nginx

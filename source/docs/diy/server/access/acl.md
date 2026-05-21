@@ -1,7 +1,6 @@
 # Access control lists (ACL) and shared directory management (SDM)
 
-With access control list (ACL), we can allow only a certain person to access a file, or we can allow
-multiple people to access a file with different permissions for each person.
+Access control lists (ACL) allow a specific person to access a file, or multiple people with different permissions each.
 
 To view an ACL for a file or directory:
 
@@ -97,7 +96,7 @@ When the sticky bit is set on files, Linux just ignores it, whereas for director
 
     sudo chmod o+t <directoryname>
 
-To set the sticky bit in octal form, prepend the number 1 to the current (or desired) basic permissions. Since the SGID bit has a value of 2000, and the sticky bit has a value of 1000, we can just add the two together to get a value of 3000 to add to the permissions:
+To set the sticky bit in octal form, prepend the number 1 to the current (or desired) basic permissions. Since the SGID bit has a value of 2000 and the sticky bit a value of 1000, adding them gives 3000:
 
     sudo chmod 3770 <directoryname>
 

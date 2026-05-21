@@ -1,7 +1,6 @@
 # Container audit commands
 
-Containers are convenient, but left unchecked, they’re a bit like unattended camping stoves in the server room, 
-isolated until they’re not. Here’s how to audit them properly before they burn down your infrastructure.
+Containers are convenient, but misconfigured ones extend the attack surface into the host. Here is how to audit them.
 
 ## Host configuration & isolation
 
@@ -10,7 +9,7 @@ docker info
 docker version
 ```
 
-Ensure the Docker daemon isn't exposed over TCP without TLS (-H tcp://0.0.0.0:2375 is an open door to doom).
+Ensure the Docker daemon is not exposed over TCP without TLS (`-H tcp://0.0.0.0:2375` bypasses all authentication).
 
 ```
 ps aux | grep dockerd
@@ -25,13 +24,13 @@ docker ps -a
 docker inspect <container>
 ```
 
-Look for containers running as root ("User": "" means root, bad sign), or with --privileged access (even worse).
+Look for containers running as root (`"User": ""` indicates root) or with `--privileged` access. Both expand the blast radius of a compromise.
 
 ```
 docker top <container>
 ```
 
-See what processes are running inside each container. If it looks like a full OS, someone’s missed the point.
+See what processes are running inside each container. A container running a full init system suggests the image was not built with minimal scope in mind.
 
 ## Image source & trust
 
@@ -40,7 +39,7 @@ docker images
 docker history <image>
 ```
 
-Audit image provenance. Avoid pulling random images from Docker Hub like it’s the App Store of broken dreams.
+Audit image provenance. Pulling unverified images from public registries without scanning them is a common entry point.
 
 Use `docker scout cves <image>` (Docker Scout, available in current Docker CLI and Docker Desktop) or:
 
@@ -71,7 +70,7 @@ Check for firewall rules separating container traffic from the wider host networ
 docker inspect <container> | grep Mounts -A 10
 ```
 
-Avoid mounting sensitive directories (e.g., /etc, /var/run/docker.sock, or your backups folder) into containers.
+Avoid mounting sensitive directories (e.g., `/etc`, `/var/run/docker.sock`, or backup directories) into containers.
 
 ## Logging & monitoring
 
@@ -93,7 +92,7 @@ And watch for container restarts:
 docker inspect --format='{{.RestartCount}}' <container>
 ```
 
-Frequent restarts are a red flag, not just for uptime, but possibly for resilience against intrusion detection.
+Frequent restarts are worth investigating: they can indicate instability or a process crashing against a security control.
 
 ## Resource limits & abuse prevention
 
@@ -101,15 +100,11 @@ Frequent restarts are a red flag, not just for uptime, but possibly for resilien
 docker inspect --format='{{.HostConfig.Memory}}' <container>
 ```
 
-Ensure containers have memory and CPU limits set. Otherwise, one rogue process could bring down the host.
-
-Use:
+Containers without memory and CPU limits can consume host resources without bound. Set limits in Docker run commands or Compose files:
 
 ```
 --memory=512m --cpus=1
 ```
-
-...in your Docker run commands or Compose files.
 
 ## Lifecycle & orphaned resources
 
@@ -120,16 +115,16 @@ docker volume ls
 docker network ls
 ```
 
-Remove unused containers, images, volumes, and networks. Less clutter = less attack surface.
+Remove unused containers, images, volumes, and networks. Unused resources are not inherently dangerous, but they expand the audit surface and can obscure what is actually in use.
 
 ```
 docker system prune -a
 ```
 
-Careful: this removes everything not actively in use. Run it only after a proper review (and backup).
+This removes everything not actively in use. Run it only after a proper review (and backup).
 
 ## TL;DR
 
-* Don’t trust the container runtime to do your security for you. It's a convenience tool, not a security boundary.
-* Audit host-level protections (AppArmor, SELinux, seccomp, cgroups).
-* Update your container images regularly. If you’re still running Ubuntu 18.04 in containers, the clock’s ticking.
+* The container runtime provides isolation, not security. Host-level controls (AppArmor, SELinux, seccomp, cgroups) are still needed.
+* Audit image provenance. CVEs in base images are the most common container vulnerability.
+* Update container images regularly. Long-running images on outdated base OS versions accumulate unpatched CVEs over time.

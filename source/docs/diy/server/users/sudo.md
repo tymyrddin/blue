@@ -78,7 +78,7 @@ Other programs that have a shell escape feature: `emacs`, `less`, `view`, and `m
 
 ## Preventing users from using other dangerous programs
 
-Some programs that don't have shell escapes can still be dangerous if you give users unrestricted privileges to use them, like `cat`, `cut`, `awk`, and `sed`.
+Some programs that do not have shell escapes can still be dangerous if you give users unrestricted privileges to use them, like `cat`, `cut`, `awk`, and `sed`.
 
 If giving someone `sudo` privileges to use one of these programs, limit their use to specific files.
 

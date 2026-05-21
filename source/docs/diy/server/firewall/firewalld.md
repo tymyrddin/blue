@@ -26,7 +26,7 @@ Zones are predefined sets of rules specifying what traffic is allowed based on t
 | Zones | Meaning |
 |:---- | :---- |
 |`drop` |All incoming connections are dropped without any notification. Only outgoing connections are allowed.|
-|`block` |All incoming connections are rejected with an `icmp-host-prohibited` message for IPv4 and `icmp6-adm-prohibited` for IPv6n. Only outgoing connections are allowed. |
+|`block` |All incoming connections are rejected with an `icmp-host-prohibited` message for IPv4 and `icmp6-adm-prohibited` for IPv6. Only outgoing connections are allowed. |
 |`public` |For use in untrusted public areas. Do not trust other computers on the network but allow selected incoming connections. |
 |`external` |For use on external networks with NAT masquerading enabled - system acts as a gateway or router. Only selected incoming connections are allowed. |
 |`internal` |For use on internal networks - system acts as a gateway or router. Other systems on the network are generally trusted. Only selected incoming connections are allowed. |

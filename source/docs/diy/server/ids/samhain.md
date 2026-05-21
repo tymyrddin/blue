@@ -104,7 +104,7 @@ If an intruder cannot discover that samhain is running, he cannot compromise it.
 
     $ ./configure --enable-install-name=somename
 
-where `somename` is an innocuous-sounding executable name. To make it less likely that the program isn't accidentally discovered, samhain can be set to never respond to the command line. Or, it can be set to respond to the command line only after a certain password is given:
+where `somename` is an innocuous-sounding executable name. To reduce the chance of the program being discovered, samhain can be set to never respond to the command line. Or, it can be set to respond to the command line only after a certain password is given:
 
     $ ./configure --enable-nocl=somepass
 
@@ -144,9 +144,7 @@ Next step is to [Build](https://www.la-samhna.de/samhain/manual/installation-bui
     chmod: cannot access '/usr/local/sbin/samhain': No such file or directory
     make: *** [Makefile:518: install-program] Error 1
 
-Ah yes, installing an application and using `./configure` without the `--prefix=` option, the make install process will 
-install the compiled files in to the predefined paths in the system's file system, and that means special permissions 
-for writing the files is required:
+Running `./configure` without the `--prefix=` option means the make install process targets predefined system paths, which require elevated permissions:
 
     $ sudo make install
     [sudo] password for nina: 
@@ -180,7 +178,7 @@ for writing the files is required:
 
     $ sudo vi /etc/samhainrc
 
-I will run with defaults for now, and make changes later.
+The defaults are sufficient to start; configuration can be refined later.
       
 ## Initialisation
 

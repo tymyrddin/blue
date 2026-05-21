@@ -8,7 +8,7 @@ For example, to restrict most of the resource types to the same site and subdoma
 
 Inline script elements and inline script event handlers like `onload` will stop working with the above header. This is required to neutralise XSS attacks.
 
-You may see mentions of the `X-Content-Security-Policy` header, but that's an older version.
+You may see mentions of the `X-Content-Security-Policy` header, but that is an older version.
 
 Add the `Content-Security-Policy` header to match your requirements.
 

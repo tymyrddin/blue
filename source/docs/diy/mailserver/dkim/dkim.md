@@ -6,7 +6,7 @@
 
 ## Unix socket
 
-Postfix and opendkim communicate through a unix socket. Socket address is usually the one specified in `/etc/postfix/main.cf`, but the default configuration of postfix in debian runs under a chroot (`/var/spool/postfix`) so the socket must be created in the jail:
+Postfix and opendkim communicate through a unix socket. Socket address is usually the one specified in `/etc/postfix/main.cf`, but the default configuration of postfix in debian runs under a chroot (`/var/spool/postfix`) so the socket needs to be created in the jail:
 
 ```text
 # sockdir=/var/spool/postfix/var/run/opendkim

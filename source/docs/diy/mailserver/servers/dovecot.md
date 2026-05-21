@@ -46,7 +46,7 @@ service auth {
 }
 ```
 
-This will create the `private/auth` path for the SASL configuration of Postfix. Because Postfix runs chrooted in `/var/spool/postfix`, a relative path must be used.
+This will create the `private/auth` path for the SASL configuration of Postfix. Because Postfix runs chrooted in `/var/spool/postfix`, a relative path is required.
 
 ## Integration with postfix
 

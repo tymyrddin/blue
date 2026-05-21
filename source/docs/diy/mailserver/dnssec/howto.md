@@ -134,7 +134,7 @@ dig +dnssec example.com
 ## Common issues & fixes
 
 * "No DS record found" → Did you publish the DS record at your registrar?
-* "Signature expired" → Keys need rolling before they expire (automate this!).
+* "Signature expired" → Keys need rolling before they expire; automating this avoids the problem.
 * BIND won’t start → Check logs (journalctl -u bind9).
 
 

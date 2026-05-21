@@ -1,8 +1,8 @@
 # TLS configuration
 
 * Email servers wrap SMTP via direct TLS or a connection upgrade with STARTTLS at ports 465/587
-* A Postfix SMTP server needs a certificate and a private key in `.pem` format. The private key must not be encrypted (= must be accessible without a password). 
-* Public Internet MX hosts without certificates signed by a well-known public CA must still generate, and be prepared to present to most clients, a self-signed or private-CA signed certificate. 
+* A Postfix SMTP server needs a certificate and a private key in `.pem` format. The private key needs to be unencrypted (accessible without a password).
+* Public Internet MX hosts without certificates signed by a well-known public CA are still expected to generate, and present to most clients, a self-signed or private-CA signed certificate. 
 * For non-public Internet MX hosts, Postfix supports configurations with no certificates. This entails the use of anonymous TLS ciphers, which are not supported by typical SMTP clients.
 
 ## Creating keys and certificates

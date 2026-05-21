@@ -5,7 +5,7 @@
 Password expiration can be set in `/etc/login.defs`. scroll down to the "Password aging controls" section:
 
 * `PASS_MAX_DAYS`: Default `99999`; Sets the maximum number of days a password may be used.
-* `PASS_MIN_DAYS`: Default `0`; Sets the minimum number of days a user must keep their password before changing it.
+* `PASS_MIN_DAYS`: Default `0`; Sets the minimum number of days a user keeps their password before changing it.
 * `PASS_WARN_AGE`: Default `7`; Sets the number of days out from expiration that the system will warn the user.
 
 ## Password history

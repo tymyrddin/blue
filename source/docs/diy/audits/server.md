@@ -1,6 +1,6 @@
 # Server audit commands
 
-A server audit ensures security, compliance, and performance by reviewing configurations, logs, permissions, and vulnerabilities. Below is a step-by-step checklist (with comments) for auditing the 6 most widely used server operating systems.
+A server audit covers configurations, logs, permissions, and vulnerabilities across the operating system. Below is a checklist for the six most widely used server platforms.
 
 ## Linux (Ubuntu, CentOS, RHEL, Debian)
 
@@ -8,58 +8,58 @@ A server audit ensures security, compliance, and performance by reviewing config
 
 ```
 cat /etc/passwd
-# Lists all local user accounts. Look out for unexpected system users or shell access granted to accounts that shouldn’t have it.
+# Lists all local user accounts. Look for unexpected system users or accounts with shell access they do not need.
 
 cat /etc/shadow
-# Shows password hashes. Only root should read this. If it's world-readable, start panicking.
+# Shows password hashes. Readable only by root. World-readable shadow files expose password hashes to all users.
 
 sudo -l
-# Lists what commands the current user can run with sudo. Good for spotting privilege escalation risks.
+# Lists what commands the current user can run with sudo. Useful for spotting privilege escalation paths.
 
 ls -la /home/
-# Checks home directory permissions — world-readable home folders are an open invitation to nosey neighbours.
+# Checks home directory permissions. World-readable home directories expose personal files to all users on the system.
 ```
 
 ### SSH & Network Security
 
 ```
 ss -tulnp
-# Displays listening sockets and their associated services. Anything unexpected here could be a backdoor with a welcome mat.
+# Displays listening sockets and associated services. Unexpected services are worth investigating.
 
 grep "PermitRootLogin" /etc/ssh/sshd_config
-# Checks if root login over SSH is allowed. It shouldn’t be. Really.
+# Checks whether root login over SSH is permitted. Permitting it is a significant exposure.
 
 journalctl -u sshd
-# SSH logs. Look for repeated failures, odd login times, or mysterious IPs from parts of the internet that rarely mean well.
+# SSH logs. Look for repeated failures, unusual login times, or connections from unexpected sources.
 ```
 
 ### System Integrity
 
 ```
 rpm -Va
-# (RHEL/CentOS) Verifies package files for changes. Modified binaries are a sign something (or someone) has been fiddling.
+# (RHEL/CentOS) Verifies package files against the package database. Modified binaries indicate unauthorised changes.
 
 debsums -a
-# (Debian/Ubuntu) Same idea — ensures system files match the originals.
+# (Debian/Ubuntu) Same purpose: checks system files against their expected checksums.
 
 crontab -l
-# Lists scheduled tasks. Great for spotting sneaky scripts that run at 3am.
+# Lists scheduled tasks. Useful for identifying scripts scheduled to run outside business hours.
 
 sudo lynis audit system
-# Runs a full audit with security suggestions. Think of it as a very judgy system health check.
+# Comprehensive security audit with detailed recommendations. Covers a wide range of configuration checks.
 ```
 
 ### Logging & Monitoring
 
 ```
 tail -f /var/log/auth.log
-# Live stream of login attempts and sudo use. Very handy when someone’s poking about.
+# Live stream of login attempts and sudo use. Useful during an active investigation.
 
 df -h
-# Disk usage. Because nothing breaks faster than a server with 100% disk.
+# Disk usage. A full filesystem can prevent logging and cause service failures.
 
 top
-# Real-time CPU and memory usage. A mystery process eating 99% of CPU? That’s your clue.
+# Real-time CPU and memory usage. High utilisation from an unexpected process is worth investigating.
 ```
 
 ## Windows Server (2019/2022)
@@ -68,46 +68,46 @@ top
 
 ```
 Get-LocalUser
-# Lists local user accounts. Handy for spotting dormant or rogue accounts.
+# Lists local user accounts. Look for dormant accounts or accounts with unexpected permissions.
 
 Get-LocalGroupMember Administrators
-# Shows who has admin access. Spoiler: it’s often more people than you’d like.
+# Shows who has local administrator access. Worth reviewing for accounts that no longer need it.
 
 gpedit.msc
-# Opens Group Policy Editor. Check for password policies, account lockout settings, and whether someone’s disabled Windows Defender *again*.
+# Opens Group Policy Editor. Check password policies, account lockout settings, and the status of security software.
 ```
 
 ### Security & Services
 
 ```
 Get-Service | Where-Object {$_.Status -eq "Running"}
-# Lists running services. Look for anything unusual — especially third-party services that don’t belong.
+# Lists running services. Look for unrecognised or third-party services not in the expected inventory.
 
 Get-NetFirewallRule | Select Name,Enabled
-# Displays all firewall rules. Disabled rules are often the interesting (and worrying) ones.
+# Displays all firewall rules. Disabled rules are often the ones that reveal past workarounds.
 
 auditpol /get /category:*
-# Shows audit policy settings. Crucial for knowing what gets logged — and what doesn’t.
+# Shows audit policy settings. Identifies what is and is not being logged.
 ```
 
 ### Logs & Event Tracking
 
 ```
-# Event Viewer → Security logs
-# Use GUI to review login attempts, policy changes, and other delightful surprises.
+# Event Viewer -> Security logs
+# Review login attempts, policy changes, and privilege use.
 
 Get-WinEvent -LogName "Microsoft-Windows-PowerShell/Operational"
-# Logs PowerShell activity. If you didn’t write that script, best find out who did.
+# Logs PowerShell activity. Useful for spotting scripts run outside normal operations.
 ```
 
 ### Patch & Vulnerability Management
 
 ```
 wmic qfe list
-# Lists installed Windows updates. If this comes back nearly empty, someone's fallen asleep at the patch wheel.
+# Lists installed Windows updates. A sparse list indicates the system is behind on patches.
 
 Invoke-WebRequest -Uri "https://example.com/script.ps1" -OutFile "script.ps1"
-# Check user downloads for suspicious scripts. Just because it’s got “example.com” doesn’t mean it’s friendly.
+# Check user downloads for scripts retrieved from external sources.
 ```
 
 ## macOS Server (Monterey & later)
@@ -116,30 +116,30 @@ Invoke-WebRequest -Uri "https://example.com/script.ps1" -OutFile "script.ps1"
 
 ```
 dscl . list /Users
-# Lists all user accounts, including forgotten admin accounts from five years ago.
+# Lists all user accounts, including service accounts that may have accumulated over time.
 
 sudo ls -la /Users/
-# Checks home directory visibility. Same concern as Linux — nosy users and world-readable folders.
+# Checks home directory visibility. World-readable home directories carry the same risk as on Linux.
 ```
 
 ### Security & Remote Access
 
 ```
 sudo systemsetup -getremotelogin
-# Tells you if SSH is enabled. If you didn’t know it was on, that’s a red flag.
+# Shows whether SSH remote login is enabled.
 
 sudo defaults read /Library/Preferences/com.apple.loginwindow
-# Reveals login policies. Look for auto-login or insecure settings.
+# Reveals login policies. Look for auto-login or other settings that reduce authentication requirements.
 ```
 
 ### Logs & System Integrity
 
 ```
 log show --predicate 'eventMessage contains "Failed"'
-# View failed login attempts. Expect a few fat-fingered errors — or a brute-force attack.
+# Shows failed authentication events. A high volume may indicate a brute-force attempt.
 
 csrutil status
-# System Integrity Protection. Should be enabled unless you've got a good reason (and no, "because I was bored" isn’t it).
+# System Integrity Protection status. Disabled SIP removes a significant OS-level protection.
 ```
 
 ## FreeBSD
@@ -148,7 +148,7 @@ csrutil status
 
 ```
 cat /etc/passwd
-# Same as Linux — list users and check for dodgy shell access.
+# List users and check for accounts with shell access that no longer need it.
 
 sudo pkg audit
 # Checks installed packages against known vulnerabilities. Worth running regularly.
@@ -158,20 +158,20 @@ sudo pkg audit
 
 ```
 sockstat -l
-# Shows listening network sockets. Quick way to check what’s exposed to the world.
+# Shows listening network sockets. Useful for identifying exposed services.
 
 ipfw list
-# Lists firewall rules (if IPFW is used). Look for gaps wide enough to drive a lorry through.
+# Lists firewall rules (if IPFW is used). Look for overly permissive rules or gaps in coverage.
 ```
 
 ### Logs & Jail Security
 
 ```
 tail -f /var/log/auth.log
-# Auth logs. Essential for spotting login attempts and sudo use.
+# Authentication logs. Useful for spotting login attempts and sudo use.
 
 jls
-# Lists running jails (FreeBSD’s lightweight virtualisation). Make sure no one’s hiding in them.
+# Lists running jails (FreeBSD's lightweight virtualisation). Verify the inventory matches expectations.
 ```
 
 ## AIX (IBM Unix)
@@ -180,20 +180,20 @@ jls
 
 ```
 lsuser -a ALL
-# Lists all user account attributes. Good for checking odd privileges.
+# Lists all user account attributes. Useful for checking unusual privilege assignments.
 
 lssec -f /etc/security/user -s default
-# Reviews system-wide password policies. If users are allowed 3-character passwords, you’ve got work to do.
+# Reviews system-wide password policies. Short minimum lengths or absent expiry are worth flagging.
 ```
 
 ### System & Logs
 
 ```
 lssrc -a
-# Shows all active subsystems/services. Look out for ones that shouldn’t be running.
+# Shows all active subsystems and services. Look for services that are running unexpectedly.
 
 errpt -a
-# Lists detailed error logs. Very verbose, very IBM — but useful for catching hardware or OS-level issues.
+# Detailed error log. Verbose, but useful for catching hardware or OS-level issues.
 ```
 
 ## Solaris (Oracle)
@@ -202,18 +202,18 @@ errpt -a
 
 ```
 cat /etc/passwd
-# Yes, again — still relevant. Users with `/bin/bash` access can do damage.
+# List users. Accounts with /bin/bash access that do not need it are worth reviewing.
 
 auths list
-# Shows assigned authorisations. Helps spot if users have permissions they shouldn’t.
+# Shows assigned authorisations. Helps identify users with permissions beyond their role.
 ```
 
 ### Network & Logs
 
 ```
 netstat -an
-# Lists open ports and listening interfaces. Because Solaris likes to whisper its secrets quietly.
+# Lists open ports and listening interfaces.
 
 svcs -a
-# Lists all SMF services. If a malicious service is running, it’ll probably be here — pretending to be helpful.
+# Lists all SMF services. Verify the running set matches the expected inventory.
 ```

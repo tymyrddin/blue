@@ -32,7 +32,7 @@ As the vncuser, set up a secure password and create the initial configuration fi
     Starting applications specified in /home/vncuser/.vnc/xstartup
     Log file is /home/vncuser/.vnc/localhost.localdomain:1.log
 
-Enter and verify a password to access the server remotely. It must be between six and eight characters long. More than 8 characters will be truncated automatically. The process then creates the necessary default configuration files and connection information for the server.
+Enter and verify a password to access the server remotely. It is between six and eight characters long. More than 8 characters will be truncated automatically. The process then creates the necessary default configuration files and connection information for the server.
 
 ## Configuration
 

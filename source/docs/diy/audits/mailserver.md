@@ -1,6 +1,6 @@
 # Mailserver audit commands
 
-Mailservers are favourite targets for spam relays, data leaks, and reputation damage. An audit keeps your postbox safe and respectable.
+Mailservers are frequent targets for spam relay abuse, data leaks, and domain reputation damage. A regular audit keeps the configuration tight and the exposure narrow.
 
 ## Software & version checks
 
@@ -10,7 +10,7 @@ dovecot --version       # Dovecot
 exim -bV                # Exim
 ```
 
-Like milk, mail software should never be left to age unattended.
+Mail software left on outdated versions carries known vulnerabilities; patch regularly.
 
 ## Configuration review
 
@@ -20,7 +20,7 @@ cat /etc/dovecot/dovecot.conf
 cat /etc/exim4/exim4.conf.template
 ```
 
-Scan for open relays, weak auth, or misconfigured listening ports.
+Scan for open relays, weak authentication, or misconfigured listening ports.
 
 ## Authentication & encryption
 
@@ -28,11 +28,11 @@ Scan for open relays, weak auth, or misconfigured listening ports.
 openssl s_client -connect mail.example.com:465
 ```
 
-Confirm STARTTLS or SMTPS is enforced.
+Confirm STARTTLS or SMTPS is in use.
 
-Ensure support for:
+Check for:
 
-* AUTH LOGIN over TLS
+* AUTH LOGIN over TLS only
 * Modern ciphers
 * No plain-text logins
 
@@ -42,7 +42,7 @@ Ensure support for:
 postconf smtpd_recipient_restrictions
 ```
 
-Avoid open relays. Use `permit_sasl_authenticated`, `reject_unauth_destination`, etc.
+Open relays allow anyone to send mail through the server. Use `permit_sasl_authenticated`, `reject_unauth_destination`, etc. to restrict delivery.
 
 Check SPF, DKIM, DMARC with tools like:
 
@@ -60,7 +60,7 @@ postcat -vq [queueID]  # Inspect suspicious message
 tail -f /var/log/mail.log
 ```
 
-A bloated mail queue may indicate spam, stuck delivery, or something nastier.
+A bloated mail queue may indicate a spam relay, stuck delivery, or a misconfiguration under load.
 
 ## User accounts & permissions
 
@@ -73,8 +73,8 @@ Audit users with mail access, mailbox permissions, and whether users have approp
 
 ## Monitoring & rate limiting
 
-Implement:
+Consider:
 
 * Fail2ban rules for SMTP/IMAP auth failures
 * Connection limits per IP
-* Rate-limiting outbound messages to avoid blacklisting
+* Rate-limiting outbound messages to reduce blacklisting risk

@@ -12,10 +12,10 @@ SELinux is a free open source software project that was developed by the U.S. Na
 
 ## AppArmor
 
-AppArmor is the MAC system that comes installed with the SUSE and the Ubuntu families of Linux. Although it's designed to do pretty much the same job as SELinux, its mode of operation is substantially different:
+AppArmor is the MAC system that comes installed with the SUSE and the Ubuntu families of Linux. Although it is designed to do pretty much the same job as SELinux, its mode of operation is substantially different:
 
 * SELinux labels all system processes and all objects such as files, directories, or network ports. For files and directories, SELinux stores the labels in their respective inodes as extended attributes. (An inode is the basic filesystem component that contains all information about a file, except for the filename.)
-* AppArmor uses pathname enforcement, which means that you specify the path to the executable file that you want AppArmor to control. This way, there's no need to insert labels into the extended attributes of files or directories.
+* AppArmor uses pathname enforcement, which means that you specify the path to the executable file that you want AppArmor to control. This way, there is no need to insert labels into the extended attributes of files or directories.
 * With SELinux, you have system-wide protection out of the box.
 * With AppArmor, you have a profile for each individual application.
 * With either SELinux or AppArmor, you might occasionally find yourself having to create custom policy modules from scratch, especially if you're dealing with either third-party applications or home-grown software. With AppArmor, this is easier, because the syntax for writing AppArmor profiles is much easier than the syntax for writing SELinux policies. And AppArmor comes with utilities that can help you automate the process.

@@ -1,14 +1,12 @@
 # Using git for configuration management
 
-One of the most valuable assets on a server is its configuration. This is second only to the data the server stores. Often, when we implement new technology on a server, we’ll spend a great deal of time editing configuration files all over the server to make it work as best as we can. This can include any number of things, from Apache virtual host files to DHCP server configuration, DNS zone files, and more. If a server were to encounter a disaster from which the only recourse was to completely rebuild it, the last thing we’d want to do is re-engineer all of this configuration from scratch. This is where Git comes in.
+One of the most valuable assets on a server is its configuration. This is second only to the data the server stores. Implementing new technology often means editing configuration files across many locations: Apache virtual host files, DHCP server configuration, DNS zone files, and more. If a server encounters a disaster requiring a full rebuild, re-engineering that configuration from scratch is the slow path. Git offers a way to avoid it.
 
-Git isn’t just useful for software engineers. It is also a good tool we can leverage for keeping track of configuration files on our servers, for documentation, and for developing guidelines.
+Git is not just useful for software engineers. It works well for tracking configuration files on servers, for documentation, and for developing guidelines.
 
-When we make configuration changes, we can push the changes back to our Git server. If for some reason we need to restore the configuration after a server fails or is compromised via the config files, we can simply download configuration files from Git back onto the (new) server. 
+Configuration changes pushed back to a Git server create a recoverable trail. If a server fails or is compromised, the configuration files can simply be pulled from Git onto the replacement machine.
 
-Another useful aspect of this approach is that if an administrator implements a change to a
-configuration file that breaks a service, we can simply revert to a known working commit, and we’ll
-be immediately back up and running.
+If an administrator implements a change to a configuration file that breaks a service, reverting to the last known working commit brings the service back without guesswork.
 
 Install `git`:
 
@@ -59,7 +57,7 @@ Check with:
 
     ls -l /etc | grep apache2
 
-Reloading Apache, nothing should change, and it should find the same configuration files as it did
+Reloading Apache, nothing changes, and it finds the same configuration files as it did
 before.
 
     sudo systemctl reload apache2

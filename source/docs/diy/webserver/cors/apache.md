@@ -22,7 +22,7 @@ Handle preflight `OPTIONS` requests by returning 200 immediately (requires `mod_
 
     Header always set Access-Control-Allow-Origin "*"
 
-A wildcard origin cannot be combined with `Access-Control-Allow-Credentials: true`. If credentialed requests are needed, the origin must be explicitly reflected from the `Origin` request header rather than using `*`.
+A wildcard origin cannot be combined with `Access-Control-Allow-Credentials: true`. If credentialed requests are needed, the origin needs to be explicitly reflected from the `Origin` request header rather than using `*`.
 
 ## Resources
 

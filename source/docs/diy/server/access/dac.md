@@ -42,7 +42,7 @@ remove read (`r`) or write (`w`) permissions.
 
 ### Numerical
 
-With the numerical method, you'll use an octal value to represent the permissions settings on a file or directory. For the `r`, `w`, and `x` permissions, you assign the numerical values 4, 2,
+With the numerical method, use an octal value to represent the permissions settings on a file or directory. For the `r`, `w`, and `x` permissions, you assign the numerical values 4, 2,
 and 1, respectively. You would do this for the user, group, and others positions, and then
 add them all up to get the permissions value for the file or directory:
 
@@ -66,7 +66,7 @@ The numerical value for `SUID` is `4000`, and for `SGID` is `2000`. To set `SUID
 
 As useful as it may be to have SUID or SGID permissions on executable files, it is just a necessary evil. While having SUID or SGID set on certain operating system files is essential for the operation of the system, it becomes a security risk when users can set SUID or SGID on other files. 
 
-If intruders find an executable file that belongs to the root user and has the SUID bit set, they can use that to exploit the system. They may leave behind their own root-owned file with an SUID set, which will allow them to regain entry to the system the next time. If the intruder's SUID file isn't found, the intruder will still have access, even if the original problem has been fixed.
+If intruders find an executable file that belongs to the root user and has the SUID bit set, they can use that to exploit the system. They may leave behind their own root-owned file with an SUID set, which will allow them to regain entry to the system the next time. If the intruder's SUID file is not found, the intruder will still have access, even if the original problem has been fixed.
 
 ### Finding SUID or SGID files
 
@@ -83,17 +83,17 @@ If intruders find an executable file that belongs to the root user and has the S
 
 Prevent `SUID` and `SGID` usage on a partition by mounting it with the `nosuid` option.
 
-Do not set `nosuid` for the `/` partition. The operating system doesn't function properly.
+Do not set `nosuid` for the `/` partition; the operating system does not function properly without it.
 
 ## Using extended file attributes to protect sensitive files
 
 Extended file attributes will not keep intruders from accessing files, but they can help prevent sensitive files from being altered or deleted.
 
-* `a`: You can append text to the end of a file that has this attribute, but you can't
-overwrite it. Only someone with proper `sudo` privileges can set or delete this
+* `a`: Text can be appended to the end of a file that has this attribute, but it cannot
+be overwritten. Only someone with proper `sudo` privileges can set or delete this
 attribute.
 * `i`: This makes a file immutable, and only someone with proper `sudo` privileges
-can set or delete it. Files with this attribute can't be deleted or changed in any
+can set or delete it. Files with this attribute cannot be deleted or changed in any
 way. It is also not possible to create hard links to files that have this attribute.
 
 ```text
@@ -110,7 +110,7 @@ In this context, the open "all can read" is often considered not a good idea. To
 
 Only the owner of the files – root user or a system account – can read them.
 
-Test things thoroughly to ensure that you haven't broken anything. Most things work just fine with their configuration files set to a `600` permissions setting, and some do not.
+Test thoroughly to verify nothing is broken. Most things work just fine with their configuration files set to a `600` permissions setting, and some do not.
 
 
 

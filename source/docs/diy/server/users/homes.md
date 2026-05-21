@@ -8,7 +8,7 @@ Other distros set it to `022` by default, which creates home directories with a 
 
 ## Red Hat and CentOS
 
-Red Hat Enterprise Linux and all of its descendants have better out-of-the-box security than any other Linux distribution. One thing that's already been done is locking down users' home directories.
+Red Hat Enterprise Linux and all of its descendants have better out-of-the-box security than any other Linux distribution. One thing that is already done is locking down users' home directories.
 
 By default, the `useradd` utility on Red Hat-type systems creates user home directories with a permissions setting of `700`. Only the user who owns the home directory can access it. The `UMASK` is set in `/etc/login.defs`.
 

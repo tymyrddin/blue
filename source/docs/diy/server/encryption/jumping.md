@@ -4,8 +4,7 @@ Sometimes it is only possible to access a remote server using `ssh` by first log
 
 ![SSH infra](/_static/images/infra.png)
 
-This means having to authenticate twice and the chain can be long and not limited to just two hosts. I can only access 
-the remote "Backend server" via ssh by first login into an intermediary Firewall/Bastion server called "jumphost". 
+This means having to authenticate twice and the chain can be long and not limited to just two hosts. The remote "Backend server" is only accessible via ssh through an intermediary Firewall/Bastion server called "jumphost". 
 First, login to jumphost:
 
     $ ssh user@jumphost
@@ -25,7 +24,7 @@ ProxyJump directive.
 ## ForwardAgent
 
 SSH agent forwarding can be used to make access to a server. It allows for the use of local SSH keys instead of 
-leaving keys (without passphrases!) sitting on the server.
+leaving keys (without passphrases) sitting on the server.
 
 The -A option enables forwarding of the authentication agent connection:
 
@@ -58,11 +57,11 @@ ProxyCommand is an alternative for that is supposedly more secure than the above
 
 It is possible to connect via an intermediate machine using a SOCKS proxy. SOCKS4 and SOCKS5 proxies are both supported by OpenSSH. SOCKS5 allows for transparent traversal of a firewall or other application barrier by strong authentication with the help of GSS-API. Dynamic application-level port forwarding allows the outgoing port to be allocated on the fly thereby creating a proxy at the TCP session level.
 
-Using the ProxyCommand option to invoke netcat as the last in the chain is a variation of this for very old clients. The SSH protocol is forwarded by ''nc'' (netcat) instead of ''ssh''. Attention must also be paid to whether or not the username changes from host to host in the chain of SSH connections. The somewhat outdated netcat method does not allow a change of username. Other methods do. 
+Using the ProxyCommand option to invoke netcat as the last in the chain is a variation of this for very old clients. The SSH protocol is forwarded by `nc` (netcat) instead of `ssh`. Worth noting whether the username changes from host to host in the chain of SSH connections. The somewhat outdated netcat method does not allow a change of username. Other methods do. 
 
     ssh -o ProxyCommand='ssh user@jumphost nc backendserver 22' user@backendserver
 
-The ''nc'' command sets and establish a TCP pipe between jumphost (or firewall) and backendserver.
+The `nc` command sets and establish a TCP pipe between jumphost (or firewall) and backendserver.
 
 Note: It is not possible to use both the ProxyJump and ProxyCommand directives in the same host configuration. The first one found is used and then the other blocked.
 
@@ -72,7 +71,7 @@ Create or open `~/.ssh/config`
 
     $ vi ~/.ssh/config
 
-Append the below entry (replacing ''XXX.XXX.XXX.XXX'' with actual server domain name or IP and ''user'' with actual user):
+Append the below entry (replacing `XXX.XXX.XXX.XXX` with actual server domain name or IP and `user` with actual user):
 
     Host backendserver
     HostName XXX.XXX.XXX.XXX
