@@ -14,3 +14,5 @@ Unlike other devices sitting behind layers of defences and firewalls, web server
    disclosure/index
    http/index
    cors/index
+   stack
+   failures

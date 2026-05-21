@@ -1,4 +1,4 @@
-Bulletproofing servers
+Servers without a security team
 ================================================
 
 Running your own container, web, and mail servers is empowering, until it becomes a liability. Small setups are prime
@@ -12,10 +12,11 @@ Core threats to small on-prem systems
 * Mailserver abuse → Open relays, spoofed domains, spam blacklists.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Enterprise security, minus the enterprise budget (and headaches)
 
    audits/index
    server/index
    webserver/index
    mailserver/index
+   containers/index

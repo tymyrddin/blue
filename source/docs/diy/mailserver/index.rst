@@ -20,3 +20,5 @@ for a debian 9. Not much has changed.
    spf/index
    dkim/index
    dmarc/index
+   stack
+   failures
