@@ -4,18 +4,10 @@ Defence blues
 .. image:: /_static/images/writing-blue.png
   :alt: Typewriter
 
-Whether baking security into code like it’s a secret ingredient, playing
-whack-a-mole with alerts in the middle of the night, or fighting off botnets from your smart fridge, the
-mission is the same: out-stubborn the chaos. So grab that sixth cup of
-coffee, because the attackers never sleep, and neither do we (but only because of the caffeine).
+Notes on defensive security, taken along the way and left where they landed.
 
-Going places
+The field
 ------------------------
-
-.. image:: /_static/images/ukc2.png
-  :alt: Unified Kill Chain
-
-----
 
 .. toctree::
    :maxdepth: 1
@@ -24,6 +16,7 @@ Going places
    docs/diy/index
    docs/active/index
    docs/dev/index
+   docs/dfir/index
    docs/ot/index
    docs/purple/index
 
@@ -41,13 +34,13 @@ Stories, roleplay, simulations, and simulators
    docs/stormforge/index
 
 
-Miscellaneous
+Archived
 --------------------------------
 
 .. toctree::
    :maxdepth: 1
 
-   docs/soc/index
+   docs/archive-soc/index
 
 ----
 

@@ -59,7 +59,7 @@ systemctl enable --now sshguard
 
 When using the nftables backend, SSHguard creates its own `sshguard` table with chains at priority
 -10, processed before other nftables rules. No manual nftables changes are needed. See the
-[nftables](nftables.md#sshguard) page for how this fits into the broader ruleset.
+[nftables](nftables.md) page for how this fits into the broader ruleset.
 
 ## Checking blocked addresses
 

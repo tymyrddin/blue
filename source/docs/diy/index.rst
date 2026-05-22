@@ -20,3 +20,4 @@ Core threats to small on-prem systems
    webserver/index
    mailserver/index
    containers/index
+   edr/index

@@ -1,6 +1,6 @@
 # Smart Grid SimLab
 
-![Smart Grid SimLab dashboard](/_static/images/smart-grid-sim.png)
+![Smart Grid SimLab dashboard](/_static/images/ot-ics-smart-grid-sim.png)
 
 The gap between what the dashboard shows and what the grid is doing is where every incident in this section
 operates. The [Smart Grid SimLab](https://github.com/tymyrddin/smart-grid-sim) makes that gap visible, on a live dashboard, to an audience that does not 

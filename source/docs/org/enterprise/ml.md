@@ -53,6 +53,6 @@ from detection to containment.
 
 ## Related
 
-- [Blue team @SOC](../../soc/index.rst)
+- [DFIR](../../dfir/index.rst)
 - [Machines learning](https://indigo.tymyrddin.dev/docs/ml/)
 
