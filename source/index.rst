@@ -17,6 +17,7 @@ The field
    docs/active/index
    docs/dev/index
    docs/dfir/index
+   docs/ir/index
    docs/ot/index
    docs/purple/index
 

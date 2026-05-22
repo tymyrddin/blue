@@ -1,17 +1,9 @@
-Digital forensics and incident response
+Digital forensics
 ========================================
 
-Procedure notes covering acquisition, analysis, and investigation across platforms,
-alongside playbook examples for common incident types.
+Procedure notes covering acquisition, analysis, and investigation across platforms.
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Notes
+   :maxdepth: 2
 
    notes/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Playbooks
-
-   playbooks/index
