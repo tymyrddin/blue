@@ -4,7 +4,7 @@ Defence blues
 .. image:: /_static/images/writing-blue.png
   :alt: Typewriter
 
-Notes on defensive security, taken along the way and left where they landed.
+Notes on defensive security, taken along the way and left where they landed, occasionally updated.
 
 The field
 ------------------------
@@ -41,8 +41,3 @@ Archived
    :maxdepth: 1
 
    docs/archive-soc/index
-
-----
-
-.. image:: /_static/images/purple2.png
-   :alt: A squirrel and a fox sit across from each other in the forest. Both have clipboards. The squirrel's says "what we hit". The fox's says "what stopped us". A falcon swooping in is reading both.
