@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # -- Project information -----------------------------------------------------
 project = 'Defence blues'
-copyright = '2025, TyMyrddin'
+copyright = '2026, TyMyrddin'
 author = 'TyMyrddin'
 release = '0.1'
 
