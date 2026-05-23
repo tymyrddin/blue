@@ -32,7 +32,6 @@ Stories, roleplay, simulations, and simulators
    docs/org/index
    docs/shadows/index
    docs/ngo/index
-   docs/stormforge/index
 
 
 Archived
