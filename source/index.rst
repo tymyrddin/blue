@@ -12,7 +12,7 @@ The field
 
 .. toctree::
    :maxdepth: 1
-   :caption: What the work looks like when nothing is on fire and someone is still paying attention.
+   :caption: What the work looks like when "everything is on fire" and someone is still paying attention.
 
    docs/home/index
    docs/diy/index
