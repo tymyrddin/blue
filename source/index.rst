@@ -2,15 +2,17 @@ Defence blues
 ============================
 
 .. image:: /_static/images/writing-blue.png
-  :alt: Typewriter
+  :alt: Badger blues
 
-Notes on defensive security, taken along the way and left where they landed, occasionally updated.
+Notes on defensive security, taken along the way and left where they landed. Occasionally updated. Some are field notes.
+Some are the same field, in costume.
 
 The field
 ------------------------
 
 .. toctree::
    :maxdepth: 1
+   :caption: What the work looks like when nothing is on fire and someone is still paying attention.
 
    docs/home/index
    docs/diy/index
@@ -21,23 +23,25 @@ The field
    docs/ot/index
    docs/purple/index
 
-Stories, roleplay, simulations, and simulators
+Fictional premises
 -----------------------------------------------
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :includehidden:
+   :caption: Organisational dynamics, dressed in other clothes so they can be looked at squarely.
 
    docs/org/index
    docs/shadows/index
    docs/ngo/index
 
 
-Archived
+B-sides
 --------------------------------
 
 .. toctree::
    :maxdepth: 1
+   :caption: Older notes and lab writeups, still findable.
 
    docs/archive-soc/index
