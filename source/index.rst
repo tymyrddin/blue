@@ -41,7 +41,7 @@ Organisational dynamics, dressed in other clothes so they can be looked at squar
 B-sides
 --------------------------------
 
-Older notes and lab writeups, still findable.
+Older notes and lab writeups.
 
 .. toctree::
    :maxdepth: 2
