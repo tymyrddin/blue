@@ -60,3 +60,8 @@ analysis.
 
 - [NSA Container Hardening Guide](https://media.defense.gov/2022/Jan/26/2002929608/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220126.PDF)
 - [Google's Distroless Containers](https://github.com/GoogleContainerTools/distroless)
+
+## Related
+
+- [Containers and Kubernetes evasion](../../../counter/evasion/notes/containers.md)
+- [Container security gaps](../../../diy/containers/failures.md)

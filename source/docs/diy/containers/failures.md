@@ -82,3 +82,8 @@ accurate for the past, not the present.
 
 Rebuilding images on a regular cycle, re-scanning after rebuild, and redeploying updated containers keeps the image
 security layer from drifting invisibly relative to the current vulnerability landscape.
+
+## Related
+
+- [Containers and Kubernetes evasion](../../counter/evasion/notes/containers.md)
+- [Supply chain hardening](../../counter/app/supply-chain.md)

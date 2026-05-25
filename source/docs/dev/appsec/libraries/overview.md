@@ -44,3 +44,7 @@ When a dependency reports a critical CVE, the immediate question is whether the 
 reachable in the application. If it is, patching or replacing the dependency is the priority. Monitoring
 for unexpected network calls from installed packages can surface a compromised postinstall script or
 runtime exfiltration attempt.
+
+## Related
+
+- [Supply chain hardening](../../../counter/app/supply-chain.md)

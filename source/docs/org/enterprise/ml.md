@@ -53,6 +53,6 @@ from detection to containment.
 
 ## Related
 
-- [DFIR](../../dfir/index.rst)
+- [DFIR](../../archive/dfir/index)
 - [Machines learning](https://indigo.tymyrddin.dev/docs/ml/)
 

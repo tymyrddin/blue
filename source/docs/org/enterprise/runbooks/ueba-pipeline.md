@@ -203,3 +203,8 @@ ueba-models.golemtrust.am/
 ```
 
 The processor maintains an in-memory cache of loaded models. When the hourly check finds a newer `current.pkl` for a user, it loads the new model and replaces the cached version.
+
+## Related
+
+- [Long-window detection](../../../counter/evasion/notes/long-window.md)
+- [Alert tuning](alert-tuning.md)

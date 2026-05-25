@@ -19,10 +19,9 @@ What the work looks like when "everything is on fire" and someone is still payin
    docs/diy/index
    docs/active/index
    docs/dev/index
-   docs/dfir/index
    docs/ir/index
    docs/ot/index
-   docs/purple/index
+   docs/counter/index
 
 Fictional premises
 -----------------------------------------------
@@ -45,6 +44,6 @@ B-sides
 Older notes and lab writeups, still findable.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   docs/archive-soc/index
+   docs/archive/index

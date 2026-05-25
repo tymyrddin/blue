@@ -110,3 +110,8 @@ LIMIT 6;
 ```
 
 Target false positive rate: below 5%. Current rate: 3.2%. The target for the end of the year is below 2%, achievable by adding the on-call integration (currently manual) and improving the deployment window integration to automatically detect Kubernetes deployment events rather than requiring manual suppression creation.
+
+## Related
+
+- [Long-window detection](../../../counter/evasion/notes/long-window.md)
+- [UEBA pipeline implementation](ueba-pipeline.md)
