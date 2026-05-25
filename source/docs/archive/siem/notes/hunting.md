@@ -19,7 +19,7 @@ In all cases, threat intelligence resources are combined with advanced security 
 ## Threat hunting steps
 
 1. A trigger points threat hunters to a specific system or area of the network for further investigation when detection tools identify unusual actions that may indicate malicious activity. 
-2. During the investigation phase, threat hunters use technology such as [Endpoint Detection and Response (EDR)](../../../diy/edr/index.rst) to take a deep dive into potential malicious compromise of a system. 
+2. During the investigation phase, threat hunters use technology such as [Endpoint Detection and Response (EDR)](../../../counter/endpoint/index.rst) to take a deep dive into potential malicious compromise of a system. 
 3. The resolution phase involves communicating relevant malicious activity intelligence to operations and security teams for a response to the incident and mitigation of threats. 
 
 Threat hunters also analyse collected data to determine trends in an environment, eliminate current vulnerabilities and make predictions to enhance security in the future.
