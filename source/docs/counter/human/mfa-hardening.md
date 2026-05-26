@@ -56,6 +56,6 @@ are in place to detect them.
 
 - [FIDO Alliance](https://fidoalliance.org/)
 - [Microsoft guidance on phishing-resistant MFA](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-strengths)
-- [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html)
 - [COUNTERING SIM-SWAPPING (pdf)](https://www.enisa.europa.eu/sites/default/files/publications/ENISA_REPORT-Countering_SIM_Swapping.pdf)
 - [ENISA Threat Landscape](https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape)
+- [NIST SP 800-63 Digital Identity Guidelines](https://pages.nist.gov/800-63-4/)
