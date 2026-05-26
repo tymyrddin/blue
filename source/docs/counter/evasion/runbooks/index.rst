@@ -10,4 +10,5 @@ Evasion runbooks
    lolbin-detection.md
    fileless-detection.md
    byovd-detection.md
+   c2-hunt.md
    threat-hunting.md

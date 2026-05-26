@@ -63,8 +63,8 @@ Set-MpPreference -AttackSurfaceReductionRules_Ids <RuleGUID> -AttackSurfaceReduc
 
 Key rule GUIDs:
 
-- Office macro execution: `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`
-- LOLBins abuse: `5BEB7EFE-FD9A-4556-801D-275E5FFC04CC`
+- Block Office applications from creating child processes: `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`
+- Block execution of potentially obfuscated scripts: `5BEB7EFE-FD9A-4556-801D-275E5FFC04CC`
 
 ### WDAC (Windows Defender Application Control)
 

@@ -1,5 +1,5 @@
-API defence
-============
+The surface designed to be accessible
+=====================================
 
 Controls for reducing API attack surface and detecting when APIs are being enumerated or abused.
 

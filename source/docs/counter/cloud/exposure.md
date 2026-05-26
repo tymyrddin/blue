@@ -113,6 +113,106 @@ application-specific owners.
 
 GCP: use Policy Insights and recommender API to identify overly permissive bindings.
 
+## Service principals and managed identities
+
+Workload identities (managed identities, service principals, instance profiles, and cloud
+service accounts) are non-interactive by design. They do not go through MFA, and
+conditional access policies that require MFA or a compliant device do not apply to calls
+made under them. They often carry broader permissions than any individual user, because
+they were sized for a service function rather than a person, and narrowing them after
+initial deployment is rarely prioritised.
+
+### Instance metadata service
+
+Azure, AWS, and GCP VMs and containers retrieve their attached credential via the instance
+metadata service (IMDS): a link-local HTTP endpoint at 169.254.169.254, accessible from
+within the instance and from any process running on it. SSRF vulnerabilities in web
+applications on cloud VMs are routinely escalated to cloud credential theft via this path.
+
+The credential retrieved varies by provider:
+
+- AWS: temporary STS credentials for the attached IAM role, at
+  `/latest/meta-data/iam/security-credentials/<role-name>`
+- Azure: an OAuth access token for the assigned managed identity, at
+  `/metadata/identity/oauth2/token`
+- GCP: an OAuth access token for the attached service account, at
+  `/computeMetadata/v1/instance/service-accounts/default/token`
+
+All three credentials are valid from any IP, not just the originating instance. An attacker
+who retrieves one via SSRF can make authenticated API calls from their own infrastructure.
+
+*A web application running on an EC2 instance has an SSRF vulnerability. The attacker
+fetches `http://169.254.169.254/latest/meta-data/iam/security-credentials/webapp-role`
+and receives valid temporary AWS credentials. From their own machine they run
+`aws sts get-caller-identity` to confirm validity, then enumerate storage and IAM. The
+attacker's IP has never appeared in the account before. CloudTrail logs all calls under
+the instance role's identity, not the attacker's.*
+
+AWS IMDSv2 mitigates this by requiring a PUT request to obtain a session token before any
+GET request, defeating simple SSRF. Enforcing IMDSv2 on all instances and blocking
+outbound requests from web application processes to 169.254.169.254 at the network level
+are the primary controls.
+
+### Service principal hardening
+
+For Entra ID service principals, several hardening points rarely appear in default
+configurations.
+
+Prefer system-assigned managed identities over client secrets where the workload runs in
+Azure. Managed identities rotate their own credentials automatically; client secrets do
+not.
+
+Where client secrets are unavoidable, certificate credentials are worth preferring. A
+certificate is harder to exfiltrate as a plain string than a 40-character secret and
+supports shorter validity periods.
+
+Set expiry dates on all client secrets and audit them as they approach expiry, rather than
+silently renewing. A secret that has never been rotated since it was created is effectively
+a long-term credential regardless of whether it was technically set to expire in two years.
+
+Restricting which network locations a service principal can authenticate from, using named
+locations in Conditional Access, reduces the window for credential abuse.
+
+### Managed identity privilege scoping
+
+Managed identities are often assigned roles at the subscription or resource group level
+for convenience during initial deployment and never narrowed. An identity assigned
+`Contributor` at the subscription level has write access to every resource in the
+subscription, including other managed identities.
+
+Auditing what managed identities exist and what roles they hold is a routine part of cloud
+IAM review:
+
+```bash
+az role assignment list --all \
+  --query "[?principalType=='ServicePrincipal'].{Principal:principalName,Role:roleDefinitionName,Scope:scope}" \
+  --output table
+```
+
+The review question for each row: does this workload actually need this role at this
+scope? `Storage Blob Data Reader` on a specific container is a different exposure from
+`Contributor` at the subscription.
+
+### Workload identity federation
+
+Workload identity federation (Azure Federated Identity Credentials, GCP Workload Identity
+Federation) allows external workloads such as GitHub Actions pipelines or Kubernetes pods
+to exchange short-lived tokens for cloud credentials without storing a secret. Correctly
+configured, it removes the long-lived credential entirely. Incorrectly configured, it
+allows any principal that can obtain the expected external token to authenticate as the
+cloud identity.
+
+The common misconfiguration is a subject claim that does not constrain the authenticating
+context precisely enough. A federation policy scoped to a repository without specifying a
+branch or environment allows any pipeline trigger in that repository to authenticate as
+the cloud identity, not only the specific workflow that requires the credential. The
+difference between `repo:org/specific-repo:ref:refs/heads/main` and
+`repo:org/specific-repo:environment:production` is not cosmetic: one authenticates on a
+specific branch, the other on a specific deployment environment. Auditing federation
+policies against the principle of least privilege follows the same logic as auditing RBAC
+role assignments: what specifically needs to authenticate, and does the subject claim
+match that exactly?
+
 ## SaaS and integrations
 
 ### Audit OAuth applications

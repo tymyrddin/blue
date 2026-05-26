@@ -1,5 +1,5 @@
-Cloud defence
-==============
+Infrastructure you defend but do not own
+========================================
 
 Controls for reducing the cloud attack surface and detecting when enumeration and initial access
 attempts are under way. Split between what you can do before an attacker arrives and what you look

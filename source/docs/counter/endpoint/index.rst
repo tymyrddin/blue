@@ -1,5 +1,5 @@
-Controls and detection for endpoint attacks
-===========================================
+The machine at the point of impact
+==================================
 
 .. toctree::
    :glob:

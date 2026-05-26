@@ -11,6 +11,7 @@ Evasion notes
    behavioural-detection.md
    deception.md
    network-analysis.md
+   c2-signatures.md
    hardening.md
    serverless.md
    containers.md

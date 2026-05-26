@@ -16,6 +16,41 @@ Alert: Successful authentication to OT jump host from a source outside the engin
 Alert: New device (MAC address) observed on any OT segment
 ```
 
+## The historian as pivot point
+
+Historians (OSIsoft PI, AVEVA, Honeywell Uniformance, GE Proficy, and similar) sit at
+the IT/OT boundary by design. The IT-facing side serves reporting interfaces, web APIs,
+and business intelligence connections. The OT-facing side runs collector processes that
+maintain persistent connections into the OT segment: OPC DA or OPC UA clients polling
+field devices, DCS interfaces, and SCADA servers. These collector processes run on the
+historian server itself and keep active sessions open to OT hosts.
+
+An attacker who obtains access to the historian via its IT-facing interface, whether
+through a web vulnerability, a stolen credential, or a compromised workstation with
+access to the historian's administrative shares, gains a foothold on a machine with live
+connections to the OT segment. No additional lateral movement is needed to reach OT.
+The historian provides it.
+
+Monitoring the historian specifically:
+
+- New OPC UA or OPC DA sessions initiated by the historian to OT hosts outside the
+  existing collector configuration. Collector configurations are static in steady state;
+  new connections are anomalous.
+- Changes to the historian's data source configuration (new interfaces added, existing
+  interface addresses modified). Most historians log configuration changes; those logs
+  are rarely reviewed.
+- New processes on the historian server establishing outbound connections to OT segment
+  addresses. Collector agents are known, fixed processes; an unexpected process with
+  OT-segment connections is a high-confidence indicator.
+- DCOM/RPC traffic from the historian to OT segment hosts outside the expected collector
+  protocol ports.
+
+The historian is also the only system that can detect protocol-compliant OT manipulation,
+because it records what process values were before any modification. An attacker who
+sends valid OPC writes directly to a PLC, bypassing the SCADA system entirely, will not
+appear in SCADA operator logs. The historian's recorded trajectory for that process
+variable will show a discontinuity with no corresponding operator action.
+
 ## OT protocol monitoring
 
 Passive OT network monitoring (Claroty, Dragos, Nozomi, or open-source alternatives like Zeek with OT protocol dissectors) builds a baseline of normal communication patterns. Anomaly detection covers:
@@ -50,5 +85,14 @@ Most OT environments do not currently log engineering software connections at al
 ## The integrated detection picture
 
 A mature OT detection programme generates alerts from all three layers and correlates them. A sequence of: new source IP connecting to historian, followed by engineering software connection to a PLC, followed by a process variable moving outside its historical variance, is a high-confidence incident indicator. Any single one of those events might be benign; the sequence is not.
+
+*To put numbers on it: at 14:32, a connection from 10.50.2.45 reaches TCP 44818 on the
+historian at 192.168.100.20, a source address that has never appeared in that firewall
+segment's logs. At 14:41, a TIA Portal session opens from the same IP to PLC 192.168.1.10
+on port 102. At 15:07, the historian records reactor temperature rising 14 degrees above
+the approved operating range with no corresponding change order. In isolation, each event
+has a plausible explanation. The nine-minute gap between the first network event and the
+engineering software connection, and the 26-minute gap between that connection and the
+process deviation, describes a coherent sequence that is harder to explain away.*
 
 The time-to-detect for this attack pattern in many organisations is measured in days or weeks, because the three layers are monitored by different teams who do not share data. Closing this gap is the primary defensive improvement available to OT environments, and it requires less capital investment than network redesign.

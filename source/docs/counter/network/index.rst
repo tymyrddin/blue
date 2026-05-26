@@ -1,5 +1,5 @@
-Controls and detection for network attacks
-==========================================
+Traffic patterns as evidence
+============================
 
 .. toctree::
    :glob:

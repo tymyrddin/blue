@@ -1,5 +1,5 @@
-Controls and detection for OT attacks
-======================================
+Systems that were never meant to be networked
+=============================================
 
 .. toctree::
    :glob:

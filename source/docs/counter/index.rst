@@ -1,4 +1,4 @@
-Countermeasures
+Counter moves
 ===============
 
 .. image:: /_static/images/countermoves.png
@@ -9,14 +9,18 @@ Attacker techniques, defender's view. What to harden, what to detect, what to hu
 .. toctree::
    :maxdepth: 2
 
+   human/index
+   endpoint/index
+   network/index
    api/index
    app/index
    cloud/index
-   endpoint/index
-   network/index
+   containers/index
    ot/index
-   human/index
+   ad/index
+   escalation/index
    persistence/index
+   lateral/index
    evasion/index
    memory/index
    collection/index

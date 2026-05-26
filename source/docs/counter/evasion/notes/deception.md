@@ -7,7 +7,7 @@ or process has any reason to touch a honeypot.
 ## The deterministic edge
 
 Most detection is probabilistic: "this looks suspicious". Deception is deterministic:
-"nothing should ever touch this, so this touch is definitely suspicious". False
+"nothing touches this legitimately, so this touch is definitely suspicious". False
 positive rate is near zero for well-placed deception assets.
 
 It catches attackers at the reconnaissance and lateral movement phases: the moment

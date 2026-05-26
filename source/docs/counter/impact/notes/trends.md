@@ -34,7 +34,16 @@ at a rate that is anomalous compared to any legitimate process.
 
 Business process attacks generate almost no security signals. An authorised
 user modifying a payroll record looks the same as a compromised identity
-doing it. Detection requires:
+doing it.
+
+*A payroll diversion over a compromised HR manager account leaves an audit trail
+that reads: login at 22:47, navigate to payroll settings, update direct deposit
+details for three employees to a mule account, log out. Every entry is a normal
+application action performed by an authenticated identity. The SIEM sees a
+successful login and routine application activity. Nothing fires. The first
+indication of fraud may be the employees reporting missed payment.*
+
+Detection requires:
 
 - Segregation of duties controls that flag changes made outside the normal
   workflow (single-person changes to high-value records)

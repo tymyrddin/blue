@@ -38,14 +38,18 @@ Investigate applications:
 
 ```powershell
 # list apps with high-privilege Graph permissions
+# resolve Graph AppRole IDs to permission names via the Graph service principal
+$graphSP = Get-AzureADServicePrincipal -Filter "appId eq '00000003-0000-0000-c000-000000000000'"
+
 Get-AzureADServicePrincipal -All $true | ForEach-Object {
     $sp = $_
     Get-AzureADServiceAppRoleAssignment -ObjectId $sp.ObjectId |
       Where-Object { $_.ResourceDisplayName -eq 'Microsoft Graph' } |
       ForEach-Object {
+        $roleName = ($graphSP.AppRoles | Where-Object Id -eq $_.AppRoleId).Value
         [PSCustomObject]@{
             App        = $sp.DisplayName
-            Permission = $_.PrincipalDisplayName
+            Permission = $roleName
             GrantedBy  = $_.PrincipalType
         }
       }
@@ -180,7 +184,7 @@ Stolen refresh tokens used from a new location produce sign-in anomalies:
 # requires Azure AD P1 or P2
 Get-AzureADAuditSignInLogs -Filter "userPrincipalName eq 'user@domain.com'" |
   Select-Object CreatedDateTime, IpAddress, Location, ClientAppUsed,
-                IsInteractive, TokenIssuedAt |
+                IsInteractive |
   Sort-Object CreatedDateTime |
   Format-Table -AutoSize
 ```

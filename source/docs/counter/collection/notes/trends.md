@@ -49,6 +49,13 @@ SaaS enumeration using legitimate credentials: a valid OAuth token making
 Graph API calls to enumerate SharePoint sites generates no security alert.
 The activity is logged, but nobody is looking at the logs.
 
+*An attacker uses a stolen refresh token to call
+Microsoft Graph from a cloud VM for 40 minutes. In that window they enumerate
+12 SharePoint sites, download 3,400 files, and query the directory for service
+accounts. The activity produces entries in the Unified Audit Log. Without a
+rule watching for bulk Graph API calls from a new IP, or a UEBA baseline for
+that identity's normal Graph usage, none of it surfaces as an alert.*
+
 Supply chain compromise: malicious code in a build pipeline runs in the
 CI/CD environment, which is often outside the EDR and SIEM coverage. The
 build succeeds. The secrets are exfiltrated. No alert fires.

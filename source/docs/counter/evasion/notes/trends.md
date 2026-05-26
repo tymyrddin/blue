@@ -29,6 +29,15 @@ would detect them is not a theoretical risk. It has been documented in ransomwar
 deployments, nation-state operations, and red team engagements. HVCI (Hypervisor-
 Protected Code Integrity) defeats it, but HVCI is not universally deployed.
 
+*In documented cases, the driver has been a vulnerable version of a legitimate security
+product or hardware utility: a Dell firmware update driver (DBUtil_2_3.sys, CVE-2021-21551),
+a Gigabyte firmware component (gdrv.sys), a version of the MSI Afterburner driver
+(RTCore64.sys). The binary passes signature validation. The EDR
+status panel shows green. Process creation events stop arriving at the detection backend
+because the kernel callbacks have been removed. The first indication that something has
+happened often comes from network or identity telemetry, not from the endpoint that has
+been silenced.*
+
 AI-generated polymorphism: per-deployment payload mutation means hash-based detections
 fail. Behavioural detections survive, but only if the behaviour is distinctive. An
 AI-generated PowerShell variant that achieves the same effect via a different code

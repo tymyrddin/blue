@@ -56,8 +56,7 @@ Key questions:
 - What is on the stack? Repeated bytes, NOP sleds, or structured data suggest payload
   delivery rather than an organic crash.
 - What is the faulting address? An access violation at a suspicious address (small
-  integer, repeated pattern, address in a memory-mapped file that should not be
-  executable) indicates an exploitation attempt.
+  integer, repeated pattern, address in a non-executable memory region) indicates an exploitation attempt.
 
 ## Distinguish organic crash from exploit attempt
 

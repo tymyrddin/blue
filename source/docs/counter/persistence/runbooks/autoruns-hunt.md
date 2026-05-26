@@ -17,7 +17,7 @@ autorunsc.exe -accepteula -a * -c -h -s > autoruns-output.csv
 #   -a *    all entry types
 #   -c      CSV output
 #   -h      show file hashes (SHA-256)
-#   -s      check VirusTotal (requires internet)
+#   -s      verify digital signatures
 ```
 
 Review the output for:

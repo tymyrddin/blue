@@ -35,6 +35,14 @@ The highest-confidence exfiltration path for a sophisticated attacker is:
    account on an approved cloud platform
 3. The traffic is HTTPS to an approved destination; no alert fires
 
+*In proxy logs, an rclone upload to an attacker-controlled S3 bucket appears
+as a sequence of HTTPS PUT requests to `s3.amazonaws.com` with a User-Agent
+string that reads `rclone/v1.65.0`. Legitimate OneDrive sync produces PUT
+requests to `onedrive.live.com` or `*.sharepoint.com` with the sync client
+User-Agent. Both look like routine cloud storage traffic. The difference lies
+in the destination account and the file names, neither of which is visible to
+a proxy without TLS inspection and content-level DLP.*
+
 Detection requires monitoring what is uploaded to cloud storage, not just
 that a connection was made. This is a fundamentally harder problem.
 

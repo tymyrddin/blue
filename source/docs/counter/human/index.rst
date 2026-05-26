@@ -15,5 +15,7 @@ are close to useless against current techniques. The distinction is worth attent
    :includehidden:
 
    phishing-resistant
+   email-hardening
+   email-filtering
    mfa-hardening
    cloud-controls

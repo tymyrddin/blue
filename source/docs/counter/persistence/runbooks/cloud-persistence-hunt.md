@@ -132,11 +132,10 @@ credentials on every pipeline run.
 # list recent workflow file changes (git-based approach on the repo)
 git log --all --name-only --format='%H %ae %ad' -- '.github/workflows/**'
 
-# or via GitHub API
+# or via GitHub API: list recent commits, then inspect each diff individually
+# (the commits list endpoint does not include file details)
 gh api repos/ORG/REPO/commits \
-  --jq '.[] | select(.files[]?.filename | startswith(".github/workflows/")) |
-        {sha: .sha, author: .commit.author.email, date: .commit.author.date,
-         message: .commit.message}'
+  --jq '.[] | {sha: .sha, author: .commit.author.email, date: .commit.author.date, message: .commit.message}'
 
 # show the diff of a specific workflow change
 gh api repos/ORG/REPO/commits/COMMIT_SHA \

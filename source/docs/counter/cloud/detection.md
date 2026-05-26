@@ -106,6 +106,13 @@ Alert on: more than five distinct enumeration-pattern API calls (`List*`, `Descr
 from the same identity within a two-minute window, if that identity has not made similar calls
 in the past thirty days.
 
+*A representative CloudTrail sequence from a compromised developer credential: at 09:14:03,
+`GetCallerIdentity` from 185.220.101.12. At 09:14:11, `ListBuckets`. At 09:14:19,
+`DescribeInstances` in us-east-1. At 09:14:26, `ListRoles`. At 09:14:34,
+`GetAccountSummary`. Five calls across storage, compute, and IAM in 31 seconds, from an IP
+the account has never used. The GuardDuty finding for this pattern is
+`Discovery:IAMUser/AnomalousBehavior`; the raw CloudTrail events are the evidence behind it.*
+
 ### Service account key creation
 
 Creating a new access key or service account key is a common persistence mechanism. Alert immediately

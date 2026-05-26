@@ -71,7 +71,6 @@ Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' |
 Known malicious access masks for LSASS:
 - `0x1010`: PROCESS_VM_READ + PROCESS_QUERY_LIMITED_INFORMATION (common for Mimikatz)
 - `0x1FFFFF`: PROCESS_ALL_ACCESS (suspicious in any context)
-- `0x1F3FFF`: full access
 
 ## Bulk download detection
 

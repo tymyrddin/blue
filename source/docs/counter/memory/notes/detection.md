@@ -123,8 +123,7 @@ telemetry before the exploit fails.
 If a browser renderer or other sandboxed process achieves code execution, the next
 step is a sandbox escape. The escape attempt leaves traces:
 
-- The sandboxed process making syscalls it should not be able to make (seccomp
-  violation, resulting in SIGKILL)
+- The sandboxed process making syscalls outside its seccomp allowlist (resulting in SIGKILL)
 - Unexpected IPC messages to the browser process
 - Privilege changes on the browser process (Linux: UID/GID transitions in audit log)
 

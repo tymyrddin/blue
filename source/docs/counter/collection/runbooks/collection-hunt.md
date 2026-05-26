@@ -26,7 +26,7 @@ $adminHosts = @('DC01', 'MGMT01', 'SCCM01')  # populate with known admin hosts
 # from Zeek/Suricata: detect BloodHound characteristic LDAP queries
 # BloodHound queries for: objectSid, adminCount, servicePrincipalName, etc.
 # in rapid succession from a single source
-zeek-cut id.orig_h id.resp_h query -d '\t' < ldap.log |
+zeek-cut id.orig_h id.resp_h filter < ldap.log |
   awk '{count[$1]++} END {for (h in count) if (count[h] > 200) print h, count[h]}' |
   sort -k2 -rn | head -20
 ```

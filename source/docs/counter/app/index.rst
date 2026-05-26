@@ -1,5 +1,5 @@
-Web application defence
-========================
+The application layer as a target
+=================================
 
 Controls for reducing attack surface and detecting abuse. Organised around two questions:
 what reduces the chance of exploitation, and what makes exploitation visible when it happens.

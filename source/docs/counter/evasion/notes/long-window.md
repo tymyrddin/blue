@@ -26,6 +26,8 @@ Not all behavioural features produce the same diagnostic value. The most consist
 
 Working hours drift: a genuine account has a distribution of activity times. A compromised account used by someone in a different timezone drifts toward a different activity window. The drift is gradual; its direction is consistent.
 
+*A finance analyst's account shows logins distributed 08:30–17:30 for the previous 90 days. Over six weeks post-compromise, the active window shifts to 01:00–09:00 UTC. No individual login is outside business hours for someone, somewhere. The aggregate pattern is inconsistent with the account's history and inconsistent with the analyst's location data from the previous year. That shift is what a statistical model finds; no individual event rule would.*
+
 Peer group divergence: a finance analyst's access pattern looks like other finance analysts. A compromised account begins accessing systems the analyst's peers do not touch. The peer group acts as a normalisation reference; divergence from it narrows the space of legitimate explanations.
 
 Command sequence entropy: interactive sessions on Unix systems have predictable command sequences for legitimate users. An attacker exploring an environment issues a more diverse set of commands, often in short bursts. The entropy of the session's command sequence is measurably different.

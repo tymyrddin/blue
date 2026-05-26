@@ -18,13 +18,20 @@ individual host, so endpoint-based detection misses it entirely. Cloud identity
 persistence (cross-account roles, service principals added to privileged groups)
 compounds this: a single planted role can outlast every other remediation action.
 
+*A planted app registration in Entra ID often looks like: a display name that
+blends with legitimate tooling ("EnterpriseSync", "Backup Agent"), created outside
+business hours, with application-level rather than delegated permissions, a client
+secret expiring in 12 or 24 months, and no entry in the organisation's service
+account register. The creation and credential addition events appear in the Entra
+audit log. Without a review process for new app registrations or an alert on
+application-level permission grants, the entry persists indefinitely.*
+
 ### Living off the land
 
 Living off the land at the OS level means using scheduled tasks, WMI
 subscriptions, and services rather than custom implants. These are legitimate
 operating system features; the malicious entry looks structurally identical to
-the legitimate ones surrounding it. Detection requires understanding what
-*should* be present, not just what *is* present.
+the legitimate ones surrounding it. Detection requires knowing the expected state.
 
 ### Application-layer persistence
 

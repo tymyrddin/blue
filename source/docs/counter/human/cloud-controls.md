@@ -61,6 +61,13 @@ the user's normal interactive behaviour.
 None of these signals are intrinsically malicious. All of them warrant investigation when they
 appear in combination or outside expected patterns.
 
+*A concrete case: an application named "SharePoint Online Document Viewer" requests consent
+from a user for `Files.ReadWrite.All`, `Mail.Read`, and `offline_access`. The user approves.
+The Entra audit log records a "Consent to application" event with those scopes alongside
+the application registration ID. That entry exists in the logs. Without an alert rule on
+high-privilege scope additions, or a periodic review of consent grants, the delegated access
+persists until someone notices.*
+
 ## Resources
 
 - [Microsoft: Detect and remediate illicit consent grants](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/detect-and-remediate-illicit-consent-grants)

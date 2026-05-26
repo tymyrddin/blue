@@ -1,5 +1,5 @@
-Persistence
-===========
+Surviving the reboot
+====================
 
 Persistence is the attacker's way of saying "I was here, and I intend to stay." A foothold gained through a phishing
 email or an unpatched service is fragile; persistence is the part that survives a reboot, a password reset, or even

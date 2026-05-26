@@ -1,5 +1,5 @@
-Evasion
-==============================
+Plausibility as cover
+=====================
 
 The attacker's goal is plausibility. The defender's challenge is deciding whether
 something boringly normal is actually hostile.

@@ -31,3 +31,26 @@ For environments that cannot retrofit authentication to existing protocols, unid
 ## Patch management
 
 OT patch management is constrained by availability requirements: patching a PLC requires taking the controlled process offline. The practical approach is to patch during scheduled maintenance windows, to prioritise patches for internet-facing and IT-boundary systems (historians, HMIs, jump hosts), and to ensure that engineering workstations running corporate software (Office, browser, email client) are patched on the IT schedule even if the OT engineering software cannot be updated.
+
+## Wireless protocols
+
+A wireless access point physically connected to an OT switch port and providing Wi-Fi
+coverage defeats the IT/OT boundary regardless of how carefully the wired segmentation
+was designed. These are sometimes installed by maintenance teams for convenience and
+forgotten. RF site surveys and rogue AP detection on the corporate wireless infrastructure
+identify unauthorised wireless bridging; network port security on OT switches (disabling
+unused ports, MAC address filtering) limits the installation vector.
+
+WirelessHART and ISA100.11a both encrypt traffic with AES-128, but key management is
+often the weak point. WirelessHART uses a network join key shared across all devices in
+a plant area; if the join key is stored in plaintext in the gateway configuration or on
+a USB provisioning tool, it can be extracted and used to decrypt recorded traffic or to
+join rogue devices to the mesh. Separate join keys per installation zone, rotation on a
+defined schedule, and restricted physical access to gateway configuration interfaces are
+the relevant controls.
+
+Bluetooth and BLE are increasingly used by handheld configurators and vendor maintenance
+applications to communicate with field devices. Some devices accept pairing requests
+without authentication. Disabling Bluetooth on field devices when not in active
+maintenance use, using only devices that require explicit pairing confirmation, and
+restricting Bluetooth-capable tools to physically secured areas reduce this surface.
