@@ -14,5 +14,6 @@ restored.
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   trends.md
+   response.md
    runbooks/index

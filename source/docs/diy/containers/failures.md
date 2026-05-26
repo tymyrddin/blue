@@ -85,5 +85,5 @@ security layer from drifting invisibly relative to the current vulnerability lan
 
 ## Related
 
-- [Containers and Kubernetes evasion](../../counter/evasion/notes/containers.md)
+- [Containers and Kubernetes evasion](../../counter/evasion/containers.md)
 - [Supply chain hardening](../../counter/app/supply-chain.md)

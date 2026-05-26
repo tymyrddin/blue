@@ -1,5 +1,5 @@
-Crossing from foothold to target
-================================
+From target to target
+===========================
 
 An attacker rarely starts on a machine that holds valuable data. Initial access lands
 somewhere: a user's laptop, a phishing-exposed web application, a compromised vendor
@@ -12,9 +12,9 @@ This phase is what connects persistence to collection. Attackers have a durable 
 they came for. The distance between those two positions is the lateral movement problem, and is rarely a single hop.
 
 .. toctree::
-   :glob:
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   trends.md
+   detection.md
    runbooks/index

@@ -1,5 +1,5 @@
-Containers and Kubernetes
-=========================
+Where the container meets the host
+==================================
 
 A container is not a virtual machine. It shares the host kernel, which means the
 attack surface of a containerised workload extends to the kernel itself. Kubernetes
@@ -19,9 +19,9 @@ telemetry; an attacker moving through the API server using a stolen service acco
 token may produce no runtime anomalies at all.
 
 .. toctree::
-   :glob:
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   hardening.md
+   detection.md
    runbooks/index

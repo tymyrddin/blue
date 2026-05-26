@@ -12,3 +12,4 @@ what reduces the chance of exploitation, and what makes exploitation visible whe
    detection.md
    supply-chain.md
    assumptions.md
+   runbooks/index

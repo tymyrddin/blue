@@ -1,5 +1,9 @@
-Runbooks
-========
+Lateral movement hunting
+========================
+
+Runbooks for hunting authentication-based movement across the network: pass-the-hash,
+pass-the-ticket, remote service creation, WMI and PowerShell remoting, and credential
+forwarding via RDP.
 
 Each hunt produces one of three outcomes:
 

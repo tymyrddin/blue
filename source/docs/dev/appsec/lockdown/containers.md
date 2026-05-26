@@ -63,5 +63,5 @@ analysis.
 
 ## Related
 
-- [Containers and Kubernetes evasion](../../../counter/evasion/notes/containers.md)
+- [Containers and Kubernetes evasion](../../../counter/evasion/containers.md)
 - [Container security gaps](../../../diy/containers/failures.md)

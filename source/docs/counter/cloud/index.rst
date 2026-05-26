@@ -12,3 +12,4 @@ for while they are looking at you.
    exposure.md
    detection.md
    oauth-scopes.md
+   runbooks/index

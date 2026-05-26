@@ -14,9 +14,9 @@ container deployed with --privileged because the developer needed to debug somet
 preconditions tend to outlast the reasons they were created.
 
 .. toctree::
-   :glob:
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   linux-containers.md
+   windows.md
    runbooks/index

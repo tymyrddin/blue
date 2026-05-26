@@ -151,4 +151,4 @@ The `--exit-code 1` flag fails the build on critical findings.
 - [npm dependency security](../../dev/appsec/libraries/npm.md)
 - [PyPI dependency security](../../dev/appsec/libraries/pypi.md)
 - [Container security gaps](../../diy/containers/failures.md)
-- [Containers and Kubernetes evasion](../evasion/notes/containers.md)
+- [Containers and Kubernetes evasion](../evasion/containers.md)

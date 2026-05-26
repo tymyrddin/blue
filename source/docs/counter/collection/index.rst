@@ -12,5 +12,7 @@ for the shape of the activity rather than the tools themselves.
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   trends.md
+   detection.md
+   ueba-tuning.md
    runbooks/index

@@ -15,9 +15,9 @@ querying certificate templates, reading ACL edges that map a path to Domain Admi
 The exposure is structural, not incidental, and it predates the attacker's arrival.
 
 .. toctree::
-   :glob:
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   trends.md
+   detection.md
    runbooks/index

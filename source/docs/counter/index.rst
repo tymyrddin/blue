@@ -19,6 +19,7 @@ Attacker techniques, defender's view. What to harden, what to detect, what to hu
    ot/index
    ad/index
    escalation/index
+   creds/index
    persistence/index
    lateral/index
    evasion/index

@@ -113,5 +113,5 @@ Target false positive rate: below 5%. Current rate: 3.2%. The target for the end
 
 ## Related
 
-- [Long-window detection](../../../counter/evasion/notes/long-window.md)
+- [Long-window detection](../../../counter/evasion/long-window.md)
 - [UEBA pipeline implementation](ueba-pipeline.md)

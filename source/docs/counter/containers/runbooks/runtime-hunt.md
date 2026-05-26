@@ -77,7 +77,7 @@ grep '"resource":"secrets"' /var/log/kubernetes/audit.log | \
 
 ## Falco: fileless execution and memory inspection
 
-The following rules cover patterns not in `evasion/notes/containers.md`. Add to a
+The following rules cover patterns not in [evasion/containers.md](../../evasion/containers.md). Add to a
 custom Falco rules file alongside the shell spawn and package manager rules.
 
 ```yaml

@@ -19,8 +19,8 @@ $events = Get-WinEvent -ComputerName DC_NAME -FilterHashtable @{
     Id        = 4769
     StartTime = $startTime
 } | Where-Object {
-    # TicketEncryptionType = 0x17 is RC4-HMAC
-    $_.Properties[5].Value -eq '0x17'
+    # TicketEncryptionType 0x17 (23) is RC4-HMAC
+    $_.Properties[5].Value -eq 0x17
 }
 
 # group by source IP, count unique SPNs requested

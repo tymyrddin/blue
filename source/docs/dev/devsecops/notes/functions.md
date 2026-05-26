@@ -4,7 +4,7 @@ The term serverless or function as a service means that customers of the service
 
 ## Related
 
-- [Serverless and cloud-native evasion: the detection view](../../../counter/evasion/notes/serverless.md)
+- [Serverless and cloud-native evasion: the detection view](../../../counter/evasion/serverless.md)
 - [AWS: Basis for a secure AWS deployment pipeline](../aws/pipeline.md)
 - [AWS: AWS lock-in assessment](../aws/lock-in.md)
 - [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)

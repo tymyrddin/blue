@@ -13,5 +13,6 @@ is why exfiltration remains one of the hardest phases to catch in real time.
    :maxdepth: 1
    :includehidden:
 
-   notes/index
+   trends.md
+   detection.md
    runbooks/index

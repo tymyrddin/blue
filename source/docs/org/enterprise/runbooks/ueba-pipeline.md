@@ -206,5 +206,5 @@ The processor maintains an in-memory cache of loaded models. When the hourly che
 
 ## Related
 
-- [Long-window detection](../../../counter/evasion/notes/long-window.md)
+- [Long-window detection](../../../counter/evasion/long-window.md)
 - [Alert tuning](alert-tuning.md)
