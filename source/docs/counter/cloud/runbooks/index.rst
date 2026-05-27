@@ -9,3 +9,4 @@ exposure, and audit log tampering across AWS, Azure, and GCP.
 
    iam-audit.md
    cloud-hunt.md
+   aws-credentials.md

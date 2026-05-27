@@ -9,3 +9,4 @@ attacks, and service disruption scenarios.
    :includehidden:
 
    impact-response.md
+   ransomware-ngo.md

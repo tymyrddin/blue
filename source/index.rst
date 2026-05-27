@@ -19,7 +19,6 @@ What the work looks like when "everything is on fire" and someone is still payin
    docs/diy/index
    docs/active/index
    docs/dev/index
-   docs/ir/index
    docs/ot/index
    docs/counter/index
 

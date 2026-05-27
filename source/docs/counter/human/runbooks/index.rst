@@ -9,4 +9,5 @@ via authentication method changes, mailbox forwarding rules, and OAuth consent g
    :maxdepth: 1
 
    phishing-triage.md
+   phishing-sme.md
    identity-persistence-hunt.md
