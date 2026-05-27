@@ -6,7 +6,7 @@ afterwards, look at their inbox differently. The programme's job is to keep that
 alive, extend it to the threats the session did not cover, and do both in ways that remain
 grounded in what attackers are actually doing.
 
-[Realism is not a feature of this programme. It is the principle the programme is built on.](rationale.md)
+Realism is not a feature of this programme. It is the principle the programme is built on, and the [rationale page](rationale.md) explains why.
 A simulation that does not reflect current techniques does not train current recognition.
 A session that teaches abstract warning signs does not produce the same response as one
 where the participant experienced the warning sign being crafted in real time by a

@@ -19,8 +19,9 @@ twelve years and everyone has agreed, wordlessly and collectively, not to ask.
    :caption: Who we are and how we got here.
 
    about.md
+   real-world.md
+   stacks.md
+   asset-register.md
    startup.md
    scale-up.md
    enterprise.md
-   real-world.md
-   stacks.md

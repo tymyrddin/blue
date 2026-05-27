@@ -119,7 +119,7 @@ cases, the answer requires thinking about the data as the attack surface, not ju
 system that holds it.
 
 The AI proposals are not going away. The departments have identified real operational
-"needs". The IT manager and business analyst's job is not to stop them. It is to ensure that
+needs. The IT manager and business analyst's job is not to stop them. It is to ensure that
 when these systems are built or procured, the questions that nobody asked are answered
 before the data leaves the building.
 

@@ -1,5 +1,5 @@
-Incident response
-====================
+Data protection and incident response
+======================================
 
 .. image:: /_static/images/ngo-data.png
    :alt: A tall wooden filing cabinet secured with a heavy padlock. The padlock is open. The key is in it. The top drawer is labelled MEMBER RECORDS — CONFIDENTIAL and has been left slightly ajar. A phoenix is roosting on top of the cabinet, glowing faintly. Nobody has noticed.

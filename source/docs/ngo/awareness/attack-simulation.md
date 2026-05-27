@@ -57,6 +57,6 @@ the order you would need them.
 - [Gophish campaign](runbooks/gophish-campaign.md)
 - [Display machine](runbooks/display-machine.md)
 - [Threat intelligence](runbooks/threat-intel.md)
-- [Advanced delivery](runbooks/advanced-delivery.md)
+- [Payload testing](runbooks/payload-testing.md)
 - [Simulation create](runbooks/simulation-create.md)
 - [Simulation results](runbooks/simulation-results.md)

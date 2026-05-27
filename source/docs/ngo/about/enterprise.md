@@ -86,3 +86,38 @@ look at it.
 
 The thing in the basement still gets the first bucket. Some things are not an IT problem,
 and wisdom lies in knowing which.
+
+## Where the work continues
+
+Enterprise scale does not mean the work is done. It means the work has changed shape.
+
+The quarterly access review cycle runs continuously. Every quarter: guest accounts
+confirmed or removed, volunteer access checked against current roles, privileged identity
+management activations audited, and the Bestiary account list cross-referenced against the
+HR record. The first review of each year tends to surface something the previous three
+missed. This is expected, and the point is to be unsurprised by it.
+
+Annual policy review covers the acceptable use policy, AI adoption policy, data handling
+policy, and the incident response plan. Review means someone with authority reads the
+document, tests whether it reflects current practice, and signs off that it does or
+schedules the update. Review does not mean the date on the front page changes. The
+register of processing activities is updated at the same time.
+
+DPIAs attached to ongoing processing activities have their own review cycle, determined
+at the time of each assessment. The DPO tracks these. The IT function provides the
+current technical picture when they come up: what the system does now, who has access,
+what has changed since the last review.
+
+The simulation programme runs monthly. The phishing simulation technique rotates. The
+threat intelligence review happens before each cycle. At least once per year, the SIRT
+runs a tabletop exercise, not necessarily the Fabulist Incident scenario, updated to
+reflect what has changed in the environment and what has been learned from real incidents.
+The post-incident review loop feeds back into both.
+
+Vendor DPAs are reviewed when a vendor adds a materially new feature, changes their
+infrastructure, or is acquired. The DPA register is not a filing cabinet. It is a living
+document that reflects current processing.
+
+The thing in the basement's quarterly review continues to produce the same result: species
+unknown, arrangement ongoing, no action required. The IT manager has stopped writing
+comments in the action required column. Some things document themselves.

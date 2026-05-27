@@ -2,7 +2,7 @@
 
 The finance team found ClaimCraft AI at a charity sector finance conference. The
 pitch was elegant in its simplicity: upload your gift aid declarations, and the AI
-validates eligibility, flags errors, and formats the the Guild of Tax Collectors batch submission. What
+validates eligibility, flags errors, and formats the Guild of Tax Collectors batch submission. What
 previously took three days of manual review took, with ClaimCraft, approximately
 forty minutes. The price was competitive. The interface was clean. The finance
 director signed up for the trial on the conference Wi-Fi.

@@ -6,6 +6,9 @@ Runbooks
    :caption: Non-trivial awareness training:
 
    session-run.md
+   vishing-session.md
+   data-handling.md
+   pretexting.md
    blue-team-setup.md
    outlook-report-button.md
    gophish-install.md
@@ -14,6 +17,6 @@ Runbooks
    gophish-campaign.md
    display-machine.md
    threat-intel.md
-   advanced-delivery.md
+   payload-testing.md
    simulation-create.md
    simulation-results.md

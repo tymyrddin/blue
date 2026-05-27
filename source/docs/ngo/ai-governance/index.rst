@@ -38,5 +38,6 @@ What follows is a record of how that gap manifested in practice.
    talentscore.md
    copilot.md
    application-governance.md
+   ai-vendor-checklist.md
    bestiary-intelligence.md
    ml-risks.md
