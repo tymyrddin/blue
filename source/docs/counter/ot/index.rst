@@ -21,3 +21,12 @@ a PLC that delivers the wrong setpoint to an industrial process may not be.
    exposure.md
    detection.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Bring it online</a>
+            </div>
+        </div>

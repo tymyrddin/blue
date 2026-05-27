@@ -13,7 +13,7 @@ controlled network access and a clean filesystem on each run.
 ### Pull the container
 
 ```
-$ docker pull thughoneyclient/thug
+$ docker pull buffer/thug
 ```
 
 ### Mount logs to the host
@@ -35,7 +35,7 @@ docker run -it -v /home/user/thug_logs:/logs:Z buffer/thug
 BSD (FreeBSD):
 
 ```bash
-docker run -it -v /usr/home/user/thug_logs:/logs:ro buffer/thug
+docker run -it -v /usr/home/user/thug_logs:/logs buffer/thug
 ```
 
 Windows:
@@ -59,10 +59,10 @@ docker run -it -v $HOME/thug_logs:/logs buffer/thug
 Analyse samples from the built-in set:
 
 ```
-$ for item in $(find /opt/thug/samples/ -type f | xargs shuf -e |tail -n 20); do python /opt/thug/src/thug.py -l $item; done
+$ for item in $(find /opt/thug/samples/ -type f | xargs shuf -e |tail -n 20); do python /opt/thug/src/thug.py "file://$item"; done
 ```
 
-The `-l` flag tells Thug to analyse a local file rather than fetch a URL. The loop picks 20 random files from the built-in sample set and passes each one to Thug in turn.
+Passing a `file://` URI tells Thug to analyse a local file rather than fetch a URL. The loop picks 20 random files from the built-in sample set and passes each one to Thug in turn.
 
 ## Building a custom container
 
@@ -140,7 +140,7 @@ RUN apt-get update && \
 RUN mkdir /logs
 
 WORKDIR /app
-ENTRYPOINT ["thug"]
+CMD ["/bin/bash", "-c", "while IFS= read -r url; do thug \"$url\"; done < /app/urls.txt"]
 ```
 
 And a `docker-compose.yml`:
@@ -152,10 +152,9 @@ services:
     volumes:
       - ./urls.txt:/app/urls.txt:ro
       - ./logs:/logs
-    command: ["-l", "INFO", "-o", "/logs", "-n", "-F", "/app/urls.txt"]
 ```
 
-This runs Thug with INFO-level logging, writes output to `./logs/`, and scans the URLs in `urls.txt`.
+This runs Thug against each URL listed in `urls.txt`, one per line.
 
 ## Batch scan script
 

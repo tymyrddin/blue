@@ -33,3 +33,12 @@ the defender's advantage is that the attacker cannot know everything that has ch
    long-window.md
    matrix.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Step into view</a>
+            </div>
+        </div>

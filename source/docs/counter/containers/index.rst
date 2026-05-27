@@ -25,3 +25,12 @@ token may produce no runtime anomalies at all.
    hardening.md
    detection.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Cross the boundary</a>
+            </div>
+        </div>

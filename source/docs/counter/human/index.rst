@@ -20,3 +20,12 @@ are close to useless against current techniques. The distinction is worth attent
    mfa-hardening
    cloud-controls
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Click the link</a>
+            </div>
+        </div>

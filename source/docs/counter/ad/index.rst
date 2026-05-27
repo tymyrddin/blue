@@ -21,3 +21,12 @@ The exposure is structural, not incidental, and it predates the attacker's arriv
    trends.md
    detection.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Request a ticket</a>
+            </div>
+        </div>

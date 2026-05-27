@@ -46,16 +46,15 @@ pip install -r requirements.txt
 python thug.py -u http://example.com/suspicious
 ```
 
-Or point at a local file:
+Or point at a local file using a `file://` URI:
 
 ```
-python thug.py -f suspicious_file.html
+python thug.py file:///path/to/suspicious_file.html
 ```
 
 Flags worth knowing:
 
     -u            URL to analyse
-    -f            Local file to analyse
     --useragent   Browser to emulate
     --json        Output results in JSON
     --verbose     Detailed output for debugging

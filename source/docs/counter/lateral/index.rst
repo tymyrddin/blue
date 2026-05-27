@@ -18,3 +18,12 @@ they came for. The distance between those two positions is the lateral movement 
    trends.md
    detection.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Make the jump</a>
+            </div>
+        </div>

@@ -14,3 +14,12 @@ and what telemetry survives an attempt to exploit them.
    detection.md
    runbooks/index
 
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Pivot here</a>
+            </div>
+        </div>
+

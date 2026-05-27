@@ -16,3 +16,12 @@ for the shape of the activity rather than the tools themselves.
    detection.md
    ueba-tuning.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Break the quiet</a>
+            </div>
+        </div>

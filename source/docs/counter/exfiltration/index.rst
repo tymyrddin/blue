@@ -16,3 +16,12 @@ is why exfiltration remains one of the hardest phases to catch in real time.
    trends.md
    detection.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Pick a destination</a>
+            </div>
+        </div>

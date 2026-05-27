@@ -42,7 +42,7 @@ In `/var/ossec/etc/ossec.conf` on the manager:
   <white_list>100.64.0.0/10</white_list>
   <white_list>127.0.0.1</white_list>
   <white_list>95.216.0.0/16</white_list>
-</active-response>
+</global>
 ```
 
 `100.64.0.0/10` covers all Headscale addresses. `95.216.0.0/16` covers the Helsinki Hetzner range. Add the Nuremberg range as well:

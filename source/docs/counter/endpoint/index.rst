@@ -12,3 +12,12 @@ machine, and surfacing the signals that confirm they are there.
    detection.md
    assumptions.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Land here</a>
+            </div>
+        </div>

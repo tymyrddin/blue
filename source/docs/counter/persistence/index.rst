@@ -17,3 +17,12 @@ malicious entry is designed to look like its neighbours.
    trends.md
    checklist.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Still reachable</a>
+            </div>
+        </div>

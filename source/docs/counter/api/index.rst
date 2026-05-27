@@ -14,3 +14,12 @@ not just the presence of errors.
    exposure.md
    detection.md
    runbooks/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Send a request</a>
+            </div>
+        </div>

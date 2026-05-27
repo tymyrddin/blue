@@ -32,6 +32,8 @@ services:
     credentials:
       bearer:
         token_path: /var/run/opa/gitlab-token
+  graylog-decisions:
+    url: https://graylog.golems.internal:12900/api/inputs/opa-decisions
 
 bundles:
   golem-trust:
@@ -55,10 +57,6 @@ decision_logs:
   reporting:
     min_delay_seconds: 5
     max_delay_seconds: 30
-
-services:
-  graylog-decisions:
-    url: https://graylog.golems.internal:12900/api/inputs/opa-decisions
 
 plugins:
   envoy_ext_authz_grpc:
