@@ -8,7 +8,7 @@ is the only realistic one, because any single layer has a bypass.
 ## Email authentication
 
 SPF, DKIM, and DMARC are the three email authentication protocols that, [when correctly configured
-and enforced](../../diy/mailserver/index), prevent attackers from sending email that appears to originate from a domain an
+and enforced](../../diy/mail/index), prevent attackers from sending email that appears to originate from a domain an
 organisation controls. All three are well understood and widely deployed. Their collective limitation
 is that they only prevent spoofing of domains that implement them, and most phishing uses look-alike
 domains rather than direct spoofing. They remain worth deploying correctly, because direct spoofing

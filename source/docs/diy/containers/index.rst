@@ -1,10 +1,9 @@
-Hardening containers
-================================================
+Container security
+==================
 
 .. toctree::
-   :glob:
    :maxdepth: 1
-   :includehidden:
 
    stack
    failures
+   runbooks/index

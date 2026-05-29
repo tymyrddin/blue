@@ -52,12 +52,12 @@ They sent the dragon an additional thank-you gift basket.
 
 ## Runbooks
 
-* Multi-region architecture
-* Database replication setup
-* Failover automation
-* GeoDNS configuration
-* DR testing procedures
-* Recovery procedures
+* [Multi-region architecture](multi-region-architecture.md)
+* [Database replication setup](runbooks/database-replication.md)
+* [Failover automation](runbooks/failover-automation.md)
+* [GeoDNS configuration](runbooks/geodns-configuration.md)
+* [DR testing procedures](runbooks/dr-testing-procedures.md)
+* [Recovery procedures](runbooks/recovery-procedures.md)
 
 ## Related
 

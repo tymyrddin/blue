@@ -1,22 +1,23 @@
 Servers without a security team
 ================================================
 
-Running your own container, web, and mail servers is empowering, until it becomes a liability. Small setups are prime
-targets precisely because they often lack enterprise-grade defences. But with the right approach, you can build a
-"poor man’s enterprise stack" that’s both functional and resilient.
-
-Core threats to small on-prem systems:
-
-* Containers gone rogue → Unpatched images, exposed Docker sockets.
-* Webserver exploits → SQLi, brute force attacks, outdated PHP.
-* Mailserver abuse → Open relays, spoofed domains, spam blacklists.
+Most incidents affecting small organisations are preventable.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Enterprise security, minus the enterprise budget (and headaches):
 
-   audits/index
+   about
+   exposure
+
+Teams running their own servers, web applications, mail, and containers without a dedicated security function carry
+the security work themselves, usually through whoever is closest to the systems.
+
+.. toctree::
+   :maxdepth: 2
+
    server/index
-   webserver/index
-   mailserver/index
+   web/index
+   mail/index
    containers/index
+   access/index
+   incidents/index

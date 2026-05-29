@@ -5,6 +5,12 @@ Scenario-driven response guides for the scale-up phase. Each playbook covers a c
 
 .. toctree::
    :maxdepth: 1
+   :caption: Observability and alerting:
+
+   wazuh-alert-tuning.md
+
+.. toctree::
+   :maxdepth: 1
    :caption: Container security:
 
    vulnerability-management.md

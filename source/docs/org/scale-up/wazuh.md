@@ -39,7 +39,7 @@ from a test that blocked everyone including themselves.
 MITRE ATT&CK mapping provides context. Every alert maps to tactics and techniques. Helps Angua understand attack 
 patterns.
 
-Two weeks after deployment, Wazuh catches a developer's workstation compromised via phishing. unauthorised SSH key 
+Two weeks after deployment, Wazuh catches a developer's workstation compromised via phishing. Unauthorised SSH key 
 added to `~/.ssh/authorized_keys`. Alert fires immediately. Response: 12 minutes from detection to containment.
 
 ## Runbooks

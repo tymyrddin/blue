@@ -33,7 +33,7 @@ partially contained by tight runtime controls. Both matter; neither substitutes 
 
 By default, a container process runs as root inside the container. If the container process can escape (through a kernel
 vulnerability, a misconfigured volume mount, or the Docker socket), it arrives on the host as root. Running the
-container as a non-root user via `USER` in the Dockerfile or `--user` at runtime reduces the blast radius of an escape,
+container as a non-root user via `USER` in the Dockerfile or `--user` at runtime reduces the reach of an escape,
 though it does not close the escape path itself.
 
 Linux capabilities divide root's privileges into discrete units. A container by default retains a broad set of
@@ -122,7 +122,7 @@ image security layer from drifting relative to what was scanned at deployment.
 
 A compromised application inside a well-confined container can still do damage within the scope it is permitted: it can
 read data it has access to, make network connections it is allowed to make, and exfiltrate through permitted egress
-paths. Container security limits the blast radius; it does not protect the application from its own vulnerabilities.
+paths. Container security limits how far a compromise reaches; it does not protect the application from its own vulnerabilities.
 
 All containers on a host share the host kernel. A kernel vulnerability that allows container escape bypasses namespace
 isolation, capability restrictions, and user namespace remapping simultaneously. Keeping the host kernel patched is the

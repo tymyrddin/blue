@@ -22,12 +22,12 @@ and any other service that sends email using the Home's domain name. A common ga
 record that was set up when Exchange Online was provisioned and has never been updated to
 include the marketing platform added later.
 
-[DKIM](../../diy/mailserver/dkim/index.rst) adds a cryptographic signature to outgoing mail that allows recipients to verify it
+[DKIM](../../diy/mail/stack.md) adds a cryptographic signature to outgoing mail that allows recipients to verify it
 was sent by an authorised system. Exchange Online can sign outgoing mail with DKIM. Check
 whether it is configured and whether Brevo's DKIM signing is set up under Brevo's domain
 authentication settings.
 
-[DMARC](../../diy/mailserver/dmarc/index.rst) tells receiving mail servers what to do with mail that fails SPF or DKIM checks.
+[DMARC](../../diy/mail/stack.md) tells receiving mail servers what to do with mail that fails SPF or DKIM checks.
 The Home's DMARC record is currently in monitoring mode (policy: none), which was the
 correct first step. It has been in monitoring mode for long enough that the reporting data
 should by now give a clear picture of what legitimate mail is in scope. Moving to quarantine

@@ -21,7 +21,7 @@ But they're just sitting in files. No correlation. No alerting. No visibility."
 ## What they built
 
 Dr. Crucible and Angua deploy [Graylog](https://graylog.org/releases/) as their centralised logging platform. Three 
-nodes form a cluster: one master cloud instances and two additional nodes (each on an instance). 
+nodes form a cluster: one master cloud instance and two additional nodes (each on an instance). 
 [OpenSearch](https://github.com/opensearch-project/OpenSearch/releases) provides the backend search engine. 
 [MongoDB](https://www.mongodb.com/docs/manual/release-notes/) stores metadata.
 

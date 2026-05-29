@@ -51,5 +51,5 @@ Mr. Bent's next audit: "Acceptable. This is proper zero-trust implementation."
 
 ## Related
 
-[Secure servercommunication: Isolation and controlled exposure](https://blue.tymyrddin.dev/docs/dev/appsec/lockdown/communications.html)
+[Secure server communication: Isolation and controlled exposure](https://blue.tymyrddin.dev/docs/dev/appsec/lockdown/communications.html)
 

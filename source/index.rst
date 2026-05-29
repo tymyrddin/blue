@@ -33,7 +33,9 @@ Organisational dynamics, dressed in other clothes so they can be looked at squar
    :includehidden:
 
    docs/org/index
-   docs/shadows/index
+   docs/establishment/index
+   docs/surveys/index
+   docs/society/index
    docs/ngo/index
 
 
