@@ -10,6 +10,7 @@ Room characterises. It does not interpret.
    :maxdepth: 1
 
    overview.md
-   design.md
-   notes.md
    walkthrough-society-notification.md
+   walkthrough-automated-sensor.md
+   walkthrough-correlation-hold.md
+   walkthrough-drop.md
