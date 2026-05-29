@@ -80,10 +80,6 @@ elsewhere.
 The Long Table reviews assessments before they reach the Patrician. Its composition is not listed
 anywhere that an outside observer would find. It produces a single consolidated view.
 
-The Repair Shop manages situations requiring technical access to infrastructure under conditions
-that do not permit engagement through normal channels. Its remit is described in internal
-documentation as "continuity of operational support." This description is accurate.
-
 The Receiving Desk processes incoming material: Society notifications, Office advisories,
 third-party submissions, and items whose provenance is not recorded in the intake log. Everything
 that arrives is logged. What happens to it after that is the Receiving Desk's operational matter.

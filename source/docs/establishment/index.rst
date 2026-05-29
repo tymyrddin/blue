@@ -19,7 +19,6 @@ It stops conditions.
 
    quiet-room/index
    long-table/index
-   repair-shop/index
    receiving-desk/index
 
 .. toctree::

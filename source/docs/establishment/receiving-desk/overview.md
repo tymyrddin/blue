@@ -26,7 +26,7 @@ confidence classification, the triage determination, and the routing decision. R
 are recorded where the channel allows it. Where it does not, the case reference number is the only link.
 
 Triage routes each case to the appropriate division. Signals-layer findings go to the Quiet Room.
-Intelligence-layer findings go to the Long Table. Hardware or firmware submissions go to the Repair Shop.
+Intelligence-layer findings, including firmware vulnerability findings, go to the Long Table.
 Submissions that span categories are split and routed separately, with a note in each case record linking
 to the others.
 
