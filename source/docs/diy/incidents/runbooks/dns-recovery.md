@@ -36,7 +36,7 @@ Before taking action, confirm what is actually broken. The response differs depe
 ## Regaining registrar access
 
 8. Use the registrar's account recovery process. This typically requires access to the recovery email address or phone number on file. If those have also been changed: contact the registrar's abuse or support team directly.
-9. Once access is restored: enable MFA immediately.
+9. Once access is restored: enable MFA immediately (see [MFA rollout](../../access/runbooks/mfa-rollout.md)).
 10. Review account recovery contacts and remove any that were added without authorisation.
 
 ## Domain transfer recovery
@@ -68,3 +68,8 @@ Screenshot DNS records before and after changes. Preserve registrar access logs 
 - Document all DNS records in a separate location (a shared document, version control) so that a known-good state exists outside the registrar.
 - Confirm all domains have transfer lock enabled.
 - Confirm the registrar account uses a non-personal, shared team email as the account address, so access does not depend on a single person's email being available.
+
+## Related runbooks
+
+- [MFA rollout](../../access/runbooks/mfa-rollout.md), the control that prevents most registrar-account takeovers in the first place.
+- [Secret rotation](../../access/runbooks/secret-rotation.md) if the registrar credentials themselves were exposed.

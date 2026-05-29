@@ -12,7 +12,7 @@ Services accumulate internet exposure by accident. A firewall rule opened for a 
 
 Run this step from a host outside the organisation's own network: a personal device on mobile data, or a VPS. The point is to see what an attacker sees.
 
-1. Port scan the organisation's primary IP addresses and domain names:
+1. Port scan the organisation's primary IP addresses and domain names (the [nmap runbook](../../server/runbooks/nmap.md) covers the scan types and reading the output):
    ```
    nmap -sV -p 1-65535 target.ip.address
    ```
@@ -61,3 +61,8 @@ All externally reachable services are intentional and documented. No unexpected 
 - Compare findings against the previous quarter's review to confirm prior issues were resolved.
 - Update the list of intentionally exposed services.
 - Schedule the next review.
+
+## Related runbooks
+
+- [Configure the firewall with UFW](../../server/runbooks/ufw.md) for closing the unexpected open ports this review finds.
+- [Container security review](../../containers/runbooks/container-review.md), since Docker can publish ports past the host firewall.

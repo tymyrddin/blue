@@ -43,3 +43,10 @@ File the outcome: date, which services were reviewed, accounts removed or downsc
 
 - Note any tools where user management is difficult or opaque. These accumulate access drift the fastest and are worth replacing or auditing more frequently.
 - Schedule the next review.
+
+## Related runbooks
+
+- [Offboarding](offboarding.md), the one-off departure this review catches when it is missed.
+- [Suspicious OAuth application review](oauth-review.md) for connected apps rather than user accounts.
+- [Third-party and vendor access](third-party-access.md) for the external grants this review revisits.
+- [MFA rollout](mfa-rollout.md) for accounts the review finds without it.

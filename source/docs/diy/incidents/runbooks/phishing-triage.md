@@ -27,10 +27,10 @@ Assume credentials may be compromised. Start with the most privileged accounts.
 
 6. Change the password for the account the recipient was logged into at the time of the click.
 7. Revoke all active sessions for that account. Most providers offer "sign out all other devices" in account security settings.
-8. Enable MFA on that account if not already active. (See: MFA rollout runbook.)
+8. Enable MFA on that account if not already active (see [MFA rollout](../../access/runbooks/mfa-rollout.md)).
 9. Check the browser for newly installed extensions. Some phishing sites install a credential-stealing extension silently.
 10. Review the authentication log for the affected account for unusual logins in the hours following the click.
-11. If the link prompted the recipient to enter credentials and they did: rotate all accounts where that same password was used. Credential reuse is common and attackers test for it.
+11. If the link prompted the recipient to enter credentials and they did: [rotate](../../access/runbooks/secret-rotation.md) all accounts where that same password was used. Credential reuse is common and attackers test for it.
 12. If an attachment was opened: assume the device may be compromised. Consider whether it should be isolated from the network pending a full review.
 
 ## All clear when
@@ -47,3 +47,8 @@ If the phishing appears targeted (references the organisation, a team member by 
 
 - Note the phishing technique in a shared team document. Patterns from real examples build better awareness than hypothetical training scenarios.
 - If multiple team members received the same email, the team's email addresses may have been harvested. Check how those addresses are publicly exposed.
+
+## Related runbooks
+
+- [Suspicious OAuth application review](../../access/runbooks/oauth-review.md) if the link sought an app authorisation rather than a password (consent phishing).
+- [MFA rollout](../../access/runbooks/mfa-rollout.md) and [secret rotation](../../access/runbooks/secret-rotation.md) for the credential side of the response.

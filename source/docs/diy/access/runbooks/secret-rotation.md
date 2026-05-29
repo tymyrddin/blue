@@ -88,3 +88,8 @@ protection law. Seek legal advice before concluding no notification is required.
   `.gitignore` was set up, credentials passed to a process in a way that ended up in logs.
 - Add pre-commit secret scanning (`gitleaks`, `detect-secrets`) to the repository.
 - Audit all other secrets for similar exposure risk.
+
+## Related runbooks
+
+- [CI/CD credential handling](cicd-credentials.md) for pipeline secrets, a common place they leak.
+- [SSH key setup and rotation](../../server/runbooks/key-management.md) for the server-key case specifically.

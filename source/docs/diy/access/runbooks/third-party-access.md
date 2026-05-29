@@ -50,3 +50,9 @@ one reviewing a staging environment.
 Vendor security incidents can expose organisation data even when the access was appropriately scoped and properly
 revoked. Monitoring vendor security notices for services with access to sensitive data is worth the effort for the
 most critical integrations.
+
+## Related runbooks
+
+- [SaaS access review](saas-access-review.md), where ongoing integrations are revisited.
+- [Secret rotation](secret-rotation.md) for credentials a vendor held when access ends.
+- [Suspicious OAuth application review](oauth-review.md) for vendor integrations connected via OAuth.

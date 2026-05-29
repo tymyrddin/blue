@@ -16,8 +16,8 @@ An engineer who does not know the team's practices will fill the gaps with whate
    ```
    ssh-keygen -t ed25519 -C "name@organisation"
    ```
-   Add the public key to `authorized_keys` on the servers they need. Do not grant access to production systems until day-one orientation is complete.
-2. Set up MFA on all accounts before granting access to production systems. (See: MFA rollout runbook.)
+   Add the public key to `authorized_keys` on the servers they need ([SSH key setup](../../server/runbooks/key-management.md) covers the method). Do not grant access to production systems until day-one orientation is complete.
+2. Set up MFA on all accounts before granting access to production systems (see [MFA rollout](mfa-rollout.md)).
 3. Grant repository access scoped to the projects they are working on. Do not grant broad access "because it's easier."
 4. Grant cloud console access with a role appropriate to their current responsibilities. No admin access by default.
 5. Add to the shared password manager and confirm they know how to retrieve credentials they legitimately need.
@@ -43,3 +43,9 @@ Confirm before the first production access:
 - At for example 30 days: verify access scope is still appropriate. Roles sometimes expand during onboarding and are not revisited.
 - Add to the offboarding checklist for when the time comes.
 - Note the onboarding date in the access inventory.
+
+## Related runbooks
+
+- [MFA rollout](mfa-rollout.md) for the multi-factor step in full.
+- [Secret rotation](secret-rotation.md) for how the team handles credentials the new engineer will encounter.
+- [Offboarding](offboarding.md), the mirror image for when they leave.

@@ -52,7 +52,7 @@ had access to. Git history and cloud IAM access logs are useful sources if no in
 
 ### Shared credentials
 
-11. Rotate any shared credentials the person had access to: admin passwords, root keys, shared API keys. Update all
+11. [Rotate](secret-rotation.md) any shared credentials the person had access to: admin passwords, root keys, shared API keys. Update all
     systems using those credentials.
 
 ## Done
@@ -69,6 +69,13 @@ Notify the team once offboarding is complete. Do not announce the timing of revo
 - Review authentication logs for 30 days for access attempts from the person's known IP ranges.
 - Delete (rather than keeping suspended) accounts after the applicable data retention period, typically 30 days.
 - Update the access inventory to reflect the changes.
+
+## Related runbooks
+
+- [Secret rotation](secret-rotation.md) for the shared credentials the person could read.
+- [SSH key setup and rotation](../../server/runbooks/key-management.md) for the server-side key revocation method.
+- [Suspicious OAuth application review](oauth-review.md) for connected apps authorised under the account.
+- [SaaS access review](saas-access-review.md), the periodic counterpart to a one-off departure.
 
 ## Legal notes
 

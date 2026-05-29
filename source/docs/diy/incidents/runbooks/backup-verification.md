@@ -59,6 +59,11 @@ Treat a failed restore as a production risk until it is resolved. The backup is 
   that has never been tested.
 - Schedule the next verification.
 
+## Related runbooks
+
+- [Bootable recovery media](../../server/runbooks/brm.md) for the imaging and bare-metal restore side of recovery.
+- [Backup](../backup.md), the analytical page on coverage, the 3-2-1 principle, and recovery time.
+
 ## Legal notes
 
 Some data protection regulations require demonstrable ability to restore personal data within a defined timeframe.

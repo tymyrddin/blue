@@ -18,7 +18,7 @@ If disk encryption is confirmed active and the device was locked at the time of 
 
 ## Immediate actions
 
-1. Revoke all SSH keys that were stored on or generated from the laptop. Check `~/.ssh/id_*` and any keys added to authorised hosts in recent months. (See: offboarding runbook for the method.)
+1. Revoke all SSH keys that were stored on or generated from the laptop. Check `~/.ssh/id_*` and any keys added to authorised hosts in recent months ([offboarding](../../access/runbooks/offboarding.md) and [SSH key setup and rotation](../../server/runbooks/key-management.md) cover the method).
 2. Invalidate browser sessions for critical accounts. Most providers offer "sign out all other sessions" in account security settings:
    - AWS: sign out of all sessions in IAM or via the console
    - GitHub: Settings, Sessions, revoke others
@@ -30,7 +30,7 @@ If disk encryption is confirmed active and the device was locked at the time of 
 
 5. What data was stored locally? Local database copies, customer data exports, private keys, and local `.env` files are the highest-risk items.
 6. What was the device's access scope at the time of loss? Review the access inventory for the team member.
-7. Were passwords saved in the browser without a master password lock? Treat those credentials as compromised and rotate them.
+7. Were passwords saved in the browser without a master password lock? Treat those credentials as compromised and [rotate them](../../access/runbooks/secret-rotation.md).
 8. Was the device used for two-factor authentication (authenticator app)? The active sessions already being revoked addresses this for most accounts, but confirm.
 
 ## All clear when
@@ -54,3 +54,8 @@ Many data protection regulations treat a laptop with access to personal data as 
 - Confirm full disk encryption status across all remaining team laptops.
 - Confirm MDM enrolment and remote wipe capability for all team laptops.
 - Review the policy on what data is permitted to be stored locally versus in cloud storage only.
+
+## Related runbooks
+
+- [Offboarding](../../access/runbooks/offboarding.md) and [secret rotation](../../access/runbooks/secret-rotation.md) for the access-revocation side, which overlaps heavily with this.
+- [Backup verification](backup-verification.md) for whether the local data lost was recoverable elsewhere.

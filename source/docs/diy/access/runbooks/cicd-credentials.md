@@ -34,6 +34,6 @@ All secrets are in the encrypted store, not in configuration files. Service acco
 
 ## Follow-up
 
-- Rotate all pipeline secrets when a team member with access to the CI/CD console leaves.
+- [Rotate](secret-rotation.md) all pipeline secrets when a team member with access to the CI/CD console leaves.
 - Add secret scanning to repository commits.
 - Document which secrets exist, what they access, and when they were last rotated.

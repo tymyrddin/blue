@@ -45,8 +45,12 @@ Preserve the access log before revoking additional integrations. Some platforms 
 ## Follow-up
 
 - Audit all OAuth applications across all company accounts. Remove any not in active use.
-- Add OAuth application review to the quarterly SaaS access review.
+- Add OAuth application review to the quarterly [SaaS access review](saas-access-review.md).
 - Consider enabling organisational restrictions on OAuth app authorisation: GitHub allows blocking all third-party apps except approved ones; Google Workspace has similar controls.
+
+## Related runbooks
+
+- [Phishing report triage](../../incidents/runbooks/phishing-triage.md), since an unexpected OAuth grant often arrives through consent phishing.
 
 ## Legal notes
 
