@@ -1,5 +1,9 @@
 # Signals intake, Society notification
 
+![QR-2026-0031](/_static/images/walkthrough-society-notification.png)
+
+*Tags tlp:amber + Long-Table + reliability="4" + Society-notification; attrs 94.23.117.8, AS16276, 10.44.12.0/24.*
+
 The Quiet Room receives forwarded material from the Receiving Desk. The case carries a source
 taxonomy and reliability score assigned at intake; the Quiet Room reviews the signal content,
 confirms or adjusts the classification, and produces a characterised event for routing.
@@ -9,23 +13,23 @@ This walkthrough follows one case from receipt to MISP record.
 
 ## The material
 
-RD-2026-0047-B arrives from the Receiving Desk. The subcase contains:
+The Receiving Desk forwards T. Vanholt's pcap submission. The forwarded material contains:
 
 - Source IP: 94.23.117.8 (AS16276, OVH SAS, FR)
 - Target subnet: 10.44.12.0/24 (Ankh-Morpork water treatment signalling infrastructure)
 - Observed period: approximately 2026-04-28 onwards
 - Attachment: pcap excerpt, PGP-signed by T. Vanholt
 
-The routing note records that a related firmware vulnerability is in the Long Table pipeline
-under RD-2026-0047-A. The pcap was separated from the firmware finding at Receiving Desk
-intake and travels this path independently.
+The routing note records a related firmware vulnerability already in the Long Table pipeline
+under RD-2026-0047-A: the same researcher submitted the pcap alongside the firmware finding,
+and the two travel separate paths from the Receiving Desk onward.
 
 ## Case record: QR-2026-0031
 
 | Field           | Value                                   |
 |-----------------|-----------------------------------------|
-| Date of receipt | 2026-05-28                              |
-| Source          | Receiving Desk (RD-2026-0047-B)         |
+| Date of receipt | Day of intake                           |
+| Source          | Receiving Desk (parent RD-2026-0047)    |
 | Origin          | T. Vanholt, Civil Observers' Society    |
 | Routing note    | Related Long Table case: RD-2026-0047-A |
 
@@ -123,7 +127,7 @@ Long Table questions.
 | MISP event      | QR-2026-0031 (tlp:amber, Long Table sharing group) |
 | Cross-reference | RD-2026-0047-A (Long Table)                        |
 | Pcap            | Attached to MISP event, unexpanded                 |
-| Analyst review  | Completed 2026-05-28                               |
+| Analyst review  | Completed same day                                 |
 
 The case is closed at the Quiet Room. The Long Table determines whether further work is
 warranted.

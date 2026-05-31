@@ -15,6 +15,12 @@ It stops conditions.
 
 .. toctree::
    :maxdepth: 1
+   :caption: Worked example:
+
+   case-thread.md
+
+.. toctree::
+   :maxdepth: 1
    :caption: Operational divisions:
 
    quiet-room/index
@@ -23,7 +29,7 @@ It stops conditions.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Active projects:
+   :caption: Other projects:
 
    red-lantern/index
 

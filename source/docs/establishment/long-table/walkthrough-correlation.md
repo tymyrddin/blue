@@ -1,5 +1,9 @@
 # Correlation, converging cases
 
+![LT-2026-0007 OpenCTI Case-Incident knowledge graph](/_static/images/walkthrough-correlation.png)
+
+*The convergence: CVE-2026-4471 + 94.23.117.8 + 10.44.12.0/24 + the four input reports, linked; RD-0048 absent.*
+
 The Long Table receives findings and signals from the divisions ahead of it and holds them in one view.
 Most of the time a piece of material sits on its own. Occasionally several arrive that describe the same
 thing from different directions. This walkthrough follows four inputs that converge on a single CVE and a
@@ -7,8 +11,8 @@ single target, and the assessment that results.
 
 ## The inputs
 
-By 2026-05-28 four items in the pipeline reference Acme Industrial Gateway v2.3.1 or the water treatment
-signalling subnet.
+By the time the case is opened, four items in the pipeline reference Acme Industrial Gateway v2.3.1 or the
+water treatment signalling subnet.
 
 | Reference      | Origin                          | Content                                           | Reliability |
 |----------------|---------------------------------|---------------------------------------------------|-------------|
@@ -27,7 +31,7 @@ relationships between them.
 
 | Field         | Value                                                    |
 |---------------|----------------------------------------------------------|
-| Date opened   | 2026-05-28                                               |
+| Date opened   | Day of correlation                                       |
 | Trigger       | Shared infrastructure across two divisions, same CVE     |
 | Inputs        | RD-2026-0047-A, QR-2026-0031, RD-2026-0049, QR-2026-0032 |
 | Determination | Pending correlation                                      |

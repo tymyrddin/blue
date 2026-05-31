@@ -48,9 +48,14 @@ attention on it.
 ## No MISP event
 
 No MISP event is created. The drop log entry is the only record. The drop log is internal to the Quiet
-Room and is not in any Long Table sharing group; the overview is explicit that the drop log is not
+Room and is not in any Long Table sharing group; the drop log is not
 reviewed by the Long Table in the normal course of operations. Routing this upward would hand the division
 above exactly the volume the threshold exists to keep from it.
+
+```bash
+cat /state/drops.log
+{"ts": 1780235126.911509, "iso": "2026-05-31T13:45:26.911516+00:00", "indicator": "203.0.113.77", "source": "third-party-feed", "reliability": 1, "reason": "below threshold, no local correlation"}
+```
 
 Drop log entry:
 

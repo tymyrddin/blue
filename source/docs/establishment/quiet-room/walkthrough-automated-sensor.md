@@ -1,21 +1,25 @@
 # Signals intake, automated sensor path
 
-The Society notification walkthrough follows material that arrived forwarded, with a source and a
-reliability already attached. Most of what the Quiet Room handles does not arrive that way. It arrives
-from the sensors: Suricata and Zeek on the perimeter, producing events with no human behind them and no
+![QR-2026-0032 automated sensor event](/_static/images/walkthrough-automated-sensor.png)
+
+*Tags Quiet-Room + tlp:white + reliability="2", no Long-Table; attrs 94.23.117.8 → 10.44.12.7.*
+
+The [Society notification walkthrough](walkthrough-society-notification.md) follows material that arrived forwarded, 
+with a source and a reliability already attached. Most of what the Quiet Room handles does not arrive that way. It 
+arrives from the sensors: Suricata and Zeek on the perimeter, producing events with no human behind them and no
 context beyond what the network showed. This walkthrough follows one automated event from the sensor to
 its disposition.
 
 ## The material
 
-A Suricata alert fires on 2026-05-28. The rule matches the exploitation pattern for the Acme Industrial
+A Suricata alert fires. The rule matches the exploitation pattern for the Acme Industrial
 Gateway update service. The alert carries what an alert carries: a rule signature, a source address, a
 destination, and a timestamp. No context. No source. No researcher.
 
 - Rule: exploitation attempt, Acme Gateway update service (TCP/8443)
 - Source IP: 94.23.117.8
-- Destination: within 10.44.12.0/24
-- Alert time: 2026-05-28
+- Destination: 10.44.12.7, within 10.44.12.0/24
+- Alert time: day of intake
 
 The address is familiar, but the sensor does not know that. The automated path does not read the case
 store before emitting an event. Whether this address means anything is a question that comes after intake,
@@ -25,7 +29,7 @@ not before it.
 
 | Field           | Value                              |
 |-----------------|------------------------------------|
-| Date of receipt | 2026-05-28                         |
+| Date of receipt | Day of intake                      |
 | Source          | Quiet Room sensor (Suricata)       |
 | Origin          | Automated, no human source         |
 | Routing note    | Pending correlation check          |
@@ -76,8 +80,9 @@ Attributes:
 |-----------|----------------|---------------------------------------|
 | ip-src    | 94.23.117.8    | source of the alert                   |
 | asn       | AS16276        | OVH SAS, FR                           |
+| ip-dst    | 10.44.12.7     | targeted host within the subnet       |
 | ip-dst/24 | 10.44.12.0/24  | water treatment signalling subnet     |
-| datetime  | 2026-05-28     | alert time                            |
+| datetime  | day of intake  | alert time                            |
 | text      | QR-2026-0032   | internal reference                    |
 | text      | QR-2026-0031   | correlated event, source IP match     |
 
