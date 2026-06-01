@@ -64,7 +64,7 @@ redundant. In a cycle it is the immune system, because a demand-driven instituti
 shape of its own priorities: it looks at water, finds water, confirms the worry, and does not see the grid
 until the grid is alight.
 
-So the unbidden finding has a particular standing. It answers no held requirement, which makes it either
+So the unbidden finding has a particular status. It answers no held requirement, which makes it either
 noise or the first sign of a requirement not yet held. It is set down, or it is taken up. Which of the two,
 and on whose reading, is not recorded, and that decision, the quiet promotion of an orphan into a standing
 concern, is the most political act the institution performs.
