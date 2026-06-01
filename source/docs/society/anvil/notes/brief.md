@@ -1,11 +1,11 @@
 # Internal brief (circulation restricted)
 
-From: Coordinating Committee, Civil Observers’ Society
+From: Coordinating Committee, Civil Observers' Society
 To: Senior Members, Analysts, and the Usual Sensible People
 Subject: The Silent Anvil
 
 By direction of [the Patrician](https://indigo.tymyrddin.dev/docs/vetinari/) (whose interest in *not being surprised* 
-remains as keen as ever), this brief sets out the operating principles of the Society’s latest undertaking, 
+remains as keen as ever), this brief sets out the operating principles of the Society's latest undertaking, 
 informally known as the Silent Anvil.
 
 You will note the absence of trumpets. This is intentional.
@@ -119,7 +119,7 @@ We do not announce.
 
 We observe, we confirm, and we inform, quietly.
 
-This approach has the Patrician’s full confidence, which is not a thing given lightly and is best not squandered.
+This approach has the Patrician's full confidence, which is not a thing given lightly and is best not squandered.
 
 Please proceed accordingly.
 

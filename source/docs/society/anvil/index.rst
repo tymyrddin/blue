@@ -15,17 +15,22 @@ oversight, ensuring that the Society maintains operational discretion while proa
 systems and consumer devices.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Working with hidden vulnerabilities:
+   :maxdepth: 1
 
    notes/index
    obsidian/index
    forge/index
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Code:
+
+   Passive scanner spike @GitHub <https://github.com/tymyrddin/passive-scanner>
+
 .. raw:: html
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Initiate secure handshake</a>
+                <a href="https://tymyrddin.dev/contact/">A quiet word</a>
             </div>
         </div>

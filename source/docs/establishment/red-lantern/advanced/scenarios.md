@@ -900,7 +900,7 @@ brittle, unrealistic scenarios.
 
 ## Conclusions
 
-The workflow matters more than the code:
+The workflow is the point, not the code:
 
 - Steps 1-3 (Threat, Topology, Attack sequence) are the foundation
 - Poor threat modelling → irrelevant scenarios
@@ -950,20 +950,20 @@ organisation specifically. Though in Ankh-Morpork, it's usually wise to have pla
 
 Scenario examples:
 
-- [simulator/scenarios/easy/playbook1/](https://github.com/ninabarzh/red-lantern-sim/tree/main/simulator/scenarios/easy/playbook1) - Basic BGP hijack
-- [simulator/scenarios/medium/playbook2/](https://github.com/ninabarzh/red-lantern-sim/tree/main/simulator/scenarios/easy/playbook1) - ROA manipulation (reference implementation)
-- [simulator/scenarios/advanced/playbook3/](https://github.com/ninabarzh/red-lantern-sim/tree/main/simulator/scenarios/easy/playbook1) - Sub-prefix exploitation
+- [simulator/scenarios/easy/playbook1/](https://github.com/tymyrddin/red-lantern-sim/tree/main/simulator/scenarios/easy/playbook1) - Basic BGP hijack
+- [simulator/scenarios/medium/playbook2/](https://github.com/tymyrddin/red-lantern-sim/tree/main/simulator/scenarios/easy/playbook1) - ROA manipulation (reference implementation)
+- [simulator/scenarios/advanced/playbook3/](https://github.com/tymyrddin/red-lantern-sim/tree/main/simulator/scenarios/easy/playbook1) - Sub-prefix exploitation
 
 Telemetry components:
 
-- [telemetry/generators/bmp_telemetry.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/telemetry/generators/bmp_telemetry.py) - BGP route monitoring
-- [telemetry/generators/router_syslog.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/telemetry/generators/router_syslog.py) - Router log events
-- [telemetry/generators/latency_metrics.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/telemetry/generators/latency_metrics.py) - Application performance
+- [telemetry/generators/bmp_telemetry.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/telemetry/generators/bmp_telemetry.py) - BGP route monitoring
+- [telemetry/generators/router_syslog.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/telemetry/generators/router_syslog.py) - Router log events
+- [telemetry/generators/latency_metrics.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/telemetry/generators/latency_metrics.py) - Application performance
 
 Output adapters:
 
-- [simulator/output/adapter.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/output/adapter.py) - general class
-- [simulator/output/bmp_adapter.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/output/bmp_adapter.py) - BMP log formatting
-- [simulator/output/router_adapter.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/output/router_adapter.py) - Syslog formatting
-- [simulator/output/rpki_adapter.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/output/rpki_adapter.py) - RPKI event formatting
-- [simulator/output/tacacs_adapter.py](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/output/tacacs_adapter.py) - Authentication logs
+- [simulator/output/adapter.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/output/adapter.py) - general class
+- [simulator/output/bmp_adapter.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/output/bmp_adapter.py) - BMP log formatting
+- [simulator/output/router_adapter.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/output/router_adapter.py) - Syslog formatting
+- [simulator/output/rpki_adapter.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/output/rpki_adapter.py) - RPKI event formatting
+- [simulator/output/tacacs_adapter.py](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/output/tacacs_adapter.py) - Authentication logs

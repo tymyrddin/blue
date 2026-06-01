@@ -20,12 +20,13 @@ rules distinguish a coordinated campaign from background noise.
    failure-patterns.md
    heuristics.md
    human-intent-testing.md
+   platforms.md
 
 
 .. raw:: html
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact">Request Tactical Banter</a>
+                <a href="https://tymyrddin.dev/contact">Request tactical banter</a>
             </div>
         </div>

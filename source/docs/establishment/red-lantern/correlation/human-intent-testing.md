@@ -26,13 +26,13 @@ Makes sequences explicit before any logs or rules are involved. Analysts can rea
 * Partial sequence: Optional stages missing; correlation fires at last confirmed stage.
 * Failure: Missing required stages, out-of-order events, or incorrect field matching prevents correlation.
 
-Provides a clear “ground truth” against which to judge correlation logic, even before generating logs.
+Provides a clear "ground truth" against which to judge correlation logic, even before generating logs.
 
 ## Step 3: Walk through sequences manually
 
 * Take each scenario and step through the events in order:
 
-  * Mark which stages should trigger correlations.
+  * Mark which stages are expected to trigger correlations.
   * Note whether optional signals are present or absent.
   * Check that confidence level matches expectations.
 
@@ -70,7 +70,7 @@ Detects logical flaws early, without waiting for logs or a monitoring engine.
 
 * Even without timestamps, consider plausible delays between stages:
 
-  * “Fast” progression vs. “delayed validator response”
+  * "Fast" progression vs. "delayed validator response"
   * Optional signals that might arrive asynchronously
 
 * Note whether the correlation logic, as designed, would still fire correctly.
@@ -88,5 +88,3 @@ Ensures that the operational ruleset reflects deliberate design choices rather t
 
 * Test medium and advanced attacks, multi-source events, and optional signal variations.
 * Treat each correlation as a living artefact; validate whenever new scenarios, signals, or decoders are introduced.
-
--

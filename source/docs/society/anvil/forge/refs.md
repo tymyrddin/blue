@@ -1,6 +1,6 @@
 # References and resources
 
-Support passive fingerprinting, correlation, and enrichment activities within the Fingerprint Forge. This page focuses on datasets, reference material, and internal discipline required to turn raw artefacts into stable identifiers.
+The datasets, reference material, and quiet discipline the Fingerprint Forge leans on to turn raw artefacts into stable identifiers. Passive fingerprinting, correlation, and enrichment, with the sources that make each of them possible.
 
 ## Passive datasets and observation sources
 

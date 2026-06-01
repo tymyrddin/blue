@@ -5,31 +5,31 @@ This is the counterbalance: principles and heuristics that, when applied early, 
 
 ## Heuristic 1: Define explicit sequences
 
-* Sequence matters: every correlation benefits from a clear first, second, third stage.
-* Parent–child relationships: Encode which events must fire before others.
+* Sequence is the spine: every correlation benefits from a clear first, second, third stage.
+* Parent-child relationships: Encode which events fire before others.
 * State progression: Each step moves forward; nothing rewinds or skips arbitrarily.
 
-Analysts can reason about the alert. Apparently, the system refuses to correlate out-of-order events.
+Analysts can reason about the alert, and the system refuses to correlate out-of-order events.
 
 ## Heuristic 2: Bound optional signals
 
 * Clearly mark optional steps.
-* Optional signals should enhance confidence, not gate correlation.
+* Optional signals can enhance confidence without gating correlation.
 * If an optional signal is missing, the correlation still fires at the last confirmed stage.
 
 Reduces environmental dependency and avoids false negatives.
 
 ## Heuristic 3: Use precise field matching
 
-* Each stage must check relevant fields consistently (e.g., prefix, ASN).
-* Avoid “.*” everywhere unless absolutely necessary.
+* Each stage checks relevant fields consistently (e.g., prefix, ASN).
+* Avoid ".*" everywhere unless absolutely necessary.
 * Ensure normalization across log sources.
 
 Prevents accidental correlations of unrelated events.
 
 ## Heuristic 4: Encode confidence progression
 
-* Confidence levels should accumulate as the attack unfolds.
+* Confidence levels accumulate as the attack unfolds.
 * Final alerts reflect the highest confirmed stage, not just the last event.
 * Avoid resetting severity when optional steps fire.
 
@@ -54,13 +54,13 @@ Prevents both missed detection and correlation drift.
 ## Heuristic 7: Keep enrichment and derived signals optional
 
 * Only include signals that add insight without blocking detection.
-* Derived signals (computed, enriched) should never replace core evidence.
+* Derived signals (computed, enriched) never replace core evidence.
 
 Correlation remains grounded in observable events. Optional enhancements improve context but do not gate alerts.
 
 ## Heuristic 8: Treat correlation as a living artefact
 
-* Correlations must evolve as decoders, log sources, and network environments change.
+* Correlations evolve as decoders, log sources, and network environments change.
 * Continuous testing is the discipline that prevents silent failures.
 * Document changes in sequence, field mappings, confidence logic, and exclusions.
 
@@ -76,7 +76,7 @@ Rules become auditable, testable, and portable across monitoring platforms.
 
 ## Heuristic 10: Validate every correlation scenario
 
-* Every correlation should have at least one ground truth scenario.
+* Every correlation benefits from at least one ground truth scenario.
 * Test both the complete sequence and plausible partial sequences.
 * Confirm alerts fire only when expected and reflect intended confidence levels.
 
@@ -86,4 +86,4 @@ Detects silent failures, accidental correlations, and environmental assumptions 
 
 Good correlation is not magic. It is a disciplined craft: Correlate what belongs together. Reject what does not. Make every alert explainable.
 
-This mindset ensures your rules remain reliable, auditable, and actionable, no matter how complex the attack or how noisy the environment.
+This mindset tends to keep rules reliable, auditable, and actionable, however complex the attack or noisy the environment.

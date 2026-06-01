@@ -1,12 +1,12 @@
 # Operational note
 
-*Civil Observers’ Society (internal, strictly not for the gullible)*
+*Civil Observers' Society (internal, strictly not for the gullible)*
 
 ## Preface
 
 By direction of [the Patrician](https://indigo.tymyrddin.dev/docs/vetinari/) (who maintains an abiding dislike of 
 surprises, and a tendency to have an opinion on everything), this note records the twin undertakings of the 
-Society’s latest enterprise, informally known as the Silent Anvil.
+Society's latest enterprise, informally known as the Silent Anvil.
 
 The Anvil has two arms: the Obsidian Desk, where firmware is interrogated with the delicacy of a tax inspector 
 opening a dusty ledger, and the Fingerprint Forge, where the results of that interrogation are turned into passive, 
@@ -83,7 +83,7 @@ This ensures:
 3. Unsafe or uncertain artefacts are flagged, not deployed.
 4. Behavioural probing occurs only in the lab, never at internet scale.
 5. Notifications are always responsible and quiet.
-6. The Patrician’s patience is finite; waste it not.
+6. The Patrician's patience is finite; waste it not.
 
 *End of operational note, by memorandum from the Society Coordinating Committee, initialled in a 
 handwriting that strongly suggests the Patrician has already read it.*

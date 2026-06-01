@@ -66,7 +66,7 @@ The response value is containment, attribution, and preventing recurrence.
 
 ## Testing and validation
 
-The [red-lantern-sim](https://github.com/ninabarzh/red-lantern-sim) generates deterministic telemetry
+The [red-lantern-sim](https://github.com/tymyrddin/red-lantern-sim) generates deterministic telemetry
 for all three playbooks. Running a scenario through the simulator and confirming that the
 corresponding correlation fires is the practical way to verify detection coverage before relying on
 it in production.

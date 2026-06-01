@@ -20,7 +20,7 @@ disclosed finding. It answers:
 Every step is recorded in the audit log. The record is written as each step completes, not compiled
 retrospectively. It cannot be edited without the edit being visible.
 
-## Why this matters for responsible disclosure
+## Why responsible disclosure
 
 Vendors receiving vulnerability reports have reasonable grounds to be sceptical. A report that says "your
 device has a buffer overflow in the authentication handler" without evidence is not actionable. A report that

@@ -5,7 +5,7 @@ normal network churn that makes detecting attacks more challenging, and more rea
 
 ## Understanding background feeds
 
-### What are feeds?
+### Feeds in brief
 
 Feeds generate time-stamped events that simulate normal operational activity:
 
@@ -16,7 +16,7 @@ Feeds generate time-stamped events that simulate normal operational activity:
 Feeds run independently of scenarios. The simulator merges scenario events and background events into a single 
 sorted timeline, creating realistic operational context.
 
-### Why use feeds?
+### Noise makes it realistic
 
 Without feeds:
 
@@ -39,7 +39,7 @@ With feeds:
 11:00:45 - BGP: Normal prefix update (NOISE)
 11:01:03 - Traffic interception starts (ATTACK)
 ```
-Attack events are mixed with operational noise. Analysts must distinguish signal from background.
+Attack events are mixed with operational noise. Telling signal from background is now the analyst's job.
 
 
 ## Feed architecture
@@ -73,7 +73,7 @@ Key principles:
 3. Independent: Don't reference scenario data or timing
 4. Tagged: Include source identifier for filtering/analysis
 
-### How feeds integrate
+### Merging into the timeline
 
 The simulator merges scenario and feed events:
 
@@ -394,7 +394,7 @@ value = rng.randint(1, 100)
 value = random.randint(1, 100)  # Different each run
 ```
 
-Why: Scenarios should be reproducible. Same inputs = same outputs.
+Why: scenarios are meant to be reproducible. Same inputs, same outputs.
 
 ### 2. Realistic event rates
 
@@ -409,7 +409,7 @@ CMDBNoiseFeed(change_rate=0.1)      # One change every 10 seconds
 BGPNoiseFeed(update_rate=100.0)     # 100 updates/second - unrealistic
 ```
 
-Rule of thumb: Background should be 5-10x the scenario event rate, not 100x.
+Rule of thumb: background works best around 5-10x the scenario event rate, not 100x.
 
 ### 3. Tag feed events clearly
 
@@ -444,7 +444,7 @@ as_path = [12345, 67890]  # Not your network
 
 ### 5. Don't reference scenario data
 
-Feeds must be independent:
+Feeds stay independent:
 
 ```python
 # BAD: References scenario
@@ -726,9 +726,9 @@ drill and the real thing." Background feeds provide that realism:
 - Tag events clearly for filtering during analysis
 - Match your actual infrastructure (AS numbers, prefixes, systems)
 
-Start with the provided [BGP noise feed](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/feeds/bgp/bgp_noise_feed.py) 
-and [CMDB noise feeds](https://github.com/ninabarzh/red-lantern-sim/blob/main/simulator/feeds/change_mgmt/cmdb_noise_feed.py), 
-then add custom feeds that reflect your operational environment. A financial institution's feeds should look different 
+Start with the provided [BGP noise feed](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/feeds/bgp/bgp_noise_feed.py) 
+and [CMDB noise feeds](https://github.com/tymyrddin/red-lantern-sim/blob/main/simulator/feeds/change_mgmt/cmdb_noise_feed.py), 
+then add custom feeds that reflect your operational environment. A financial institution's feeds would look different 
 from a cloud provider's.
 
 ## Related

@@ -1,6 +1,6 @@
 # Multi-stage BGP attack correlation logic
 
-## What this correlation detects
+## The pattern
 
 A deliberate, multi-phase BGP control-plane attack in which an adversary:
 
@@ -11,7 +11,7 @@ A deliberate, multi-phase BGP control-plane attack in which an adversary:
 
 This is not a noisy hijack. It is a patient campaign that succeeds by corrupting trust mechanisms rather than bypassing them.
 
-## Why this matters
+## Visible only in combination
 
 Single BGP alerts are almost always ambiguous:
 

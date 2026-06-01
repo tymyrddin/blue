@@ -16,6 +16,6 @@ provides realistic attack sequences for exercising those procedures before they 
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact">Ring the Bell for the Night Watch</a>
+                <a href="https://tymyrddin.dev/contact">Ring the bell for the Night Watch</a>
             </div>
         </div>

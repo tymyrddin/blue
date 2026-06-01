@@ -1,12 +1,14 @@
-# Office of Civil Surveys
+# About the Office of Civil Surveys
 
-The Office of Civil Surveys has a letterbox, a name on a door, and a mandate that nobody has ever summarised
+![A modest 1960s civic office building in a postwar European city, viewed from across a tree-lined boulevard on an overcast late afternoon](/_static/images/office-office.png)
+
+The Office of Civil Surveys has a letterbox, a name on the door, and a mandate that nobody has ever summarised
 in fewer than four pages without losing something important. It publishes an annual survey of the city's
 condition, issues advisories when the city's condition warrants them, and screens individuals who require
 access to materials that could embarrass the Palace if they reached the wrong hands.
 
 It is not a security service. It is a civic function. The distinction is maintained carefully, in writing,
-by people who understand exactly why it matters.
+by people who understand exactly what is happening.
 
 ## Siting and mandate
 

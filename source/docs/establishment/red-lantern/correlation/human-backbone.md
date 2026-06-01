@@ -6,7 +6,7 @@ signals into structured narratives that reflect attacker intent. We use a runnin
 ## Correlation input mapping
 
 The first step is to define, explicitly and non-negotiably, which log sources feed which correlations, and what 
-authority each source has. For example [correlation-input-map.md](https://github.com/ninabarzh/red-lantern-detection/blob/main/correlations/correlation-input-map.md).
+authority each source has. For example [correlation-input-map.md](https://github.com/tymyrddin/red-lantern-detection/blob/main/correlations/correlation-input-map.md).
 
 That file answers one question only: *which decoded fields are allowed to influence which correlations, and why*.
 
@@ -84,4 +84,4 @@ The analytical design is now complete. Next steps are implementation-focused, bu
 * Test correlations using synthetic, time-ordered event timelines
 * Validate that correlations trigger only when the intended story is present
 
-Implementation adds no new meaning. The documentation defines what matters. The thinking is done, the boundaries are set, and the wiring can now begin.
+Implementation adds no new meaning. The documentation defines what counts. The thinking is done, the boundaries are set, and the wiring can now begin.

@@ -1,7 +1,7 @@
 # Generic detection patterns
 
 Before diving into platform-specific syntax, it helps to think about detection patterns independently of 
-implementation. The Scarlet Semaphore does not care what SIEM you use, and neither should your detection logic.
+implementation. The Scarlet Semaphore does not care what SIEM you use, and your detection logic need not either.
 
 ## Pattern 1: Anomalous BGP announcements
 

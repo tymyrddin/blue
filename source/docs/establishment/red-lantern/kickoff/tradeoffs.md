@@ -1,46 +1,48 @@
-# Trade-offs to be made for our detection system
+# Trade-offs in the detection system
+
+Every choice below buys one thing by giving up another. None of them has a free side.
 
 ## Sensitivity vs specificity
 
-High sensitivity (catches everything) → Many false positives 
+High sensitivity (catches everything) brings a flood of false positives.
 
-High specificity (only true positives) → Miss subtle attacks
+High specificity (only true positives) misses subtle attacks.
 
-Our approach: 
+Where the system sits:
 
-- Start specific (fewer alerts, higher quality)
-- Tune towards sensitivity over time as baselines improve.
+- Start specific, fewer alerts, higher quality
+- Drift towards sensitivity over time, as baselines improve
 
 ## Real-time vs batch
 
-Real-time processing: Immediate alerts, higher resource cost  
+Real-time processing gives immediate alerts, at a higher resource cost.
 
-Batch processing: Delayed alerts, cheaper, better for forensics
+Batch processing gives delayed alerts, cheaper, and reads better for forensics.
 
-Our approach: 
+Where the system sits:
 
 - Real-time for critical signals
-- Batch for trend analysis.
+- Batch for trend analysis
 
 ## Centralised vs distributed
 
-Centralised SIEM: Single pane of glass, single point of failure  
+A centralised SIEM is a single pane of glass, and a single point of failure.
 
-Distributed: Resilient, harder to correlate
+Distributed is resilient, and harder to correlate.
 
-Our approach: 
+Where the system sits:
 
 - Centralised Wazuh for primary detection
-- Out-of-band backup for validation.
+- An out-of-band backup for validation
 
 ## Automation vs human-in-loop
 
-Full automation: Fast response, risk of false-positive damage  
+Full automation is fast, and carries the risk of false-positive damage.
 
-Human approval: Slower, but safer
+Human approval is slower, and safer.
 
-Our approach:
+Where the system sits:
 
 - Automate alerting and evidence collection
-- Require human approval for defensive actions (announcements, filtering)
-- Exception: Automated blackholing for confirmed DDoS
+- Keep a human in the loop for defensive actions (announcements, filtering)
+- The one exception: automated blackholing for a confirmed DDoS

@@ -1,6 +1,6 @@
 # Wazuh decoders
 
-## How the decoder pipeline works
+## A log line's journey
 
 The journey of a log line through Wazuh follows a sensible, orderly queue:
 
@@ -42,9 +42,9 @@ Now the rules can ask for `field_name`.
 
 ## Examples
 
-[Red Lantern detections: Wazuh decoders](https://github.com/ninabarzh/red-lantern-detection/tree/main/wazuh)
+[Red Lantern detections: Wazuh decoders](https://github.com/tymyrddin/red-lantern-detection/tree/main/wazuh)
 
-## Order matters for ambiguous logs
+## First match wins
 
 If two decoders could match the same log, the first one in the file wins. Always put the specific decoders before the 
 general ones. It's like dealing with a mob, address the one with the detailed grievance list before the one just 

@@ -1,17 +1,17 @@
 # Passive scanner architecture
 
-Documenting the architecture for the [🐙 Passive scanner spike @GitHub](https://github.com/ninabarzh/passive-scanner/), 
-defining components, data flow, and responsibilities. This ensures the spike is structured for future scaling while 
-keeping the Desk → Forge → Scanner workflow intact.
+The architecture behind the [🐙 Passive scanner spike @GitHub](https://github.com/tymyrddin/passive-scanner/): its components, how data moves through them, and who is responsible for what. The aim is a spike that can grow without being rebuilt, while the Desk → Forge → Scanner workflow stays intact.
 
 ## Principles
 
-* Fingerprint logic is immutable design input: `fingerprint.yaml` defines probes and match logic. This layer never changes during provider swaps.
-* Providers are replaceable services: External datasets (Netlas, Censys, etc.) are accessed via a defined interface.
-* Evaluator is deterministic: Match logic is applied to observations without side effects.
-* Controller orchestrates, not decides: `scan.py` sequences the flow but does not implement probe logic.
+* The fingerprint logic is immutable design input. `fingerprint.yaml` defines the probes and the match logic, and that layer does not change when a provider is swapped underneath it.
+* Providers are replaceable services. External datasets (Netlas, Censys, and the rest) are reached through one defined interface.
+* The evaluator is deterministic. Match logic applies to observations and produces no side effects.
+* The controller orchestrates rather than decides. `scan.py` sequences the flow; it does not implement probe logic.
 
 ## Directory structure
+
+The top-level layout maps straight onto the subsystems:
 
 ```
 passive-scanner/
@@ -37,67 +37,67 @@ passive-scanner/
 
 ### Fingerprint layer
 
-* loader.py: Parse `fingerprint.yaml` into internal data structures.
-* model.py: Define `Probe`, `Fingerprint`, `MatchResult` objects.
-* Responsibilities: Maintain tool-agnostic representation of probes and match logic.
+* `loader.py`: parses `fingerprint.yaml` into internal data structures.
+* `model.py`: defines the `Probe`, `Fingerprint`, and `MatchResult` objects.
+* The job: a tool-agnostic representation of probes and match logic.
 
 ### Providers
 
-* base.py: Abstract class defining `search_probe(probe, targets)`.
-* netlas.py: Implements Netlas-specific queries.
-* censys.py: Optional fallback provider.
-* Responsibilities: Return observations per probe without evaluating match logic.
+* `base.py`: the abstract class defining `search_probe(probe, targets)`.
+* `netlas.py`: the Netlas-specific queries.
+* `censys.py`: an optional fallback provider.
+* The job: return observations per probe, and leave the match logic well alone.
 
 ### Planner
 
-* planner.py: Maps probes to provider query syntax.
-* Example: `http.headers.server:"DeviceOS/2.1.4"`
-* Responsibilities: Keep API-specific logic isolated.
+* `planner.py`: maps probes to provider query syntax.
+* For example: `http.headers.server:"DeviceOS/2.1.4"`
+* The job: keep the API-specific logic in one place.
 
 ### Evaluation engine
 
-* evaluator.py: Apply `match_logic` to grouped observations.
-* evidence.py: Structure evidence per IP for JSONL output.
-* Responsibilities: Ensure deterministic, testable logic evaluation.
+* `evaluator.py`: applies `match_logic` to grouped observations.
+* `evidence.py`: structures the evidence per IP for JSONL output.
+* The job: deterministic, testable logic evaluation.
 
-### CLI/Controller
+### CLI / controller
 
-* scan.py: Orchestrates loading fingerprints, reading targets, calling planner/provider/evaluator, emitting results.
-* Responsibilities: Glue only, no logic decisions.
+* `scan.py`: loads fingerprints, reads targets, calls planner, provider, and evaluator in turn, and emits results.
+* The job: glue, and no logic decisions of its own.
 
 ### IO
 
-Currently not used in the spike. Is for later.
+Not wired into the spike yet. It is for later.
 
-* targets.py: Handle IP/netblock input.
-* output.py: Emit JSONL lines: `<timestamp>, <ip>, <match_result>, <evidence_snippet>`.
+* `targets.py`: handles IP and netblock input.
+* `output.py`: emits JSONL lines: `<timestamp>, <ip>, <match_result>, <evidence_snippet>`.
 
 ## Data flow
 
-1. scan.py loads `fingerprint.yaml` and `targets.txt`.
-2. planner.py converts each probe into provider-specific queries.
-3. provider executes queries and returns raw observations.
-4. evaluator.py groups observations per IP, applies `match_logic`, outputs `MatchResult`.
-5. output.py writes JSONL with matched IPs and evidence.
+1. `scan.py` loads `fingerprint.yaml` and `targets.txt`.
+2. `planner.py` turns each probe into provider-specific queries.
+3. The provider runs the queries and returns raw observations.
+4. `evaluator.py` groups observations per IP, applies `match_logic`, and produces a `MatchResult`.
+5. `output.py` writes JSONL with the matched IPs and the evidence.
 
-Note: No packets are sent. This is passive, internet-facing scanning.
+No packets are sent. This is passive, internet-facing scanning.
 
 ## Spike success criteria
 
-* CLI tool runs and consumes one `fingerprint.yaml`.
-* Queries Netlas for 100 test IPs, outputs structured results.
-* Findings documented with API limits, data quality, and gaps.
-* End-to-end flow verified; no assumptions about full-scale or active scanning.
+* The CLI tool runs and consumes one `fingerprint.yaml`.
+* It queries Netlas for 100 test IPs and outputs structured results.
+* The findings are documented, API limits, data quality, and gaps included.
+* The end-to-end flow is verified, with no assumptions made about full scale or active scanning.
 
 ## Scaling considerations
 
-* Add providers: Netlas → Censys → local datasets???
-* Caching & pagination: Wrap providers.
-* Parallelization: Later enhancement; controller remains unchanged.
-* Bulk fingerprints: Evaluator unchanged, planner handles translation.
-* Active probes: Separate provider module, no effect on fingerprint model.
+* More providers: Netlas → Censys → local datasets, eventually.
+* Caching and pagination: wrap the providers.
+* Parallelisation: a later enhancement; the controller stays as it is.
+* Bulk fingerprints: the evaluator is untouched, the planner handles the translation.
+* Active probes: a separate provider module, with no effect on the fingerprint model.
 
-## Non-goals (current spike)
+## Non-goals, for the current spike
 
 * GUI
 * Concurrent fingerprint evaluation
@@ -105,5 +105,4 @@ Note: No packets are sent. This is passive, internet-facing scanning.
 * Optimisation for speed
 * Full error handling
 
-This document defines the backbone for the passive-scanner spike. It ensures the Desk → Forge → Scanner pipeline is 
-testable, modular, and ready for incremental enhancement.
+This is the backbone for the passive-scanner spike: testable, modular, and ready to grow a piece at a time.

@@ -1,18 +1,14 @@
 # Fingerprint creation methodology
 
-Create deterministic detection logic for specific vulnerable firmware versions using only static artefacts from the Obsidian Desk.
+Turning the Obsidian Desk's static evidence into deterministic detection logic for one specific vulnerable firmware version. No live traffic, no guesswork, just the artefacts and the logic that tells them apart.
 
-Input: Obsidian Desk's Vulnerability Report and Artefact List for a specific firmware version (e.g., `VendorX-DeviceY-Firmware-v2.1.4-sha256:abc123`).
+Input: the Desk's vulnerability report and artefact list for a given version (`VendorX-DeviceY-Firmware-v2.1.4-sha256:abc123`).
 
-Output: A `fingerprint.yaml` specification that can be implemented in a scanner.
+Output: a `fingerprint.yaml` a scanner can implement.
 
-## Overview
+## The shape of it
 
-Fingerprint creation is a design and logic task. You are an engineer drafting a precise blueprint from static evidence. 
-Coding comes next, guided entirely by these blueprints. This separation keeps the process clean, testable, and 
-tool-agnostic.
-
-## Process flow
+This is a design task before it is a coding task. The work here is drafting a precise blueprint from static evidence; the code comes afterwards and follows the blueprint without improvising. Keeping the two apart is what makes the whole thing testable and tool-agnostic.
 
 ```
                    +------------------------+
@@ -60,14 +56,11 @@ tool-agnostic.
                                     +-------------------------+
 ```
 
-## Phase 1: Translating artefacts into probes
+## Phase 1: artefacts into probes
 
-The raw material is the *Artefact List*. Ignore anything that requires state, authentication, or behavioural 
-interaction (logins, configuration changes). Focus only on publicly observable items.
+The raw material is the artefact list. Anything that needs state, authentication, or behavioural interaction (logins, configuration changes) gets set aside; the focus stays on what is publicly observable without poking anything.
 
-For each artefact, write a Probe Definition in plain language. Each probe defines a single, self-contained check.
-
-### Examples
+Each artefact becomes a probe definition, written in plain language, each one a single self-contained check.
 
 | Desk Artefact                                    | Probe Definition                                                                                                                                   |
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -76,13 +69,11 @@ For each artefact, write a Probe Definition in plain language. Each probe define
 | `SSH Banner: "SSH-2.0-OpenSSH_8.4p1"`            | "Connect to port 22. Read initial banner. Match regex `^SSH-2\.0-OpenSSH_8\.4p1`."                                                                 |
 | `HTML Title: "Device Admin v2.1.4"`              | "HTTP GET on port 80, path `/login.html`. Search response body for `<title>Device Admin v2.1.4</title>`."                                          |
 
-Key Insight: Not every artefact is unique. Some may be shared across versions. Focus on static, version-specific strings.
+The thing to watch: not every artefact is unique. Some are shared across versions, and a fingerprint built on one of those will cheerfully match the wrong firmware. The static, version-specific strings are the ones that earn their keep.
 
-## Phase 2: Defining match logic
+## Phase 2: match logic
 
-A Fingerprint is one or more Probe Definitions combined with match logic. Decide what constitutes a positive match for the exact firmware version.
-
-### Logic table example
+A fingerprint is one or more probe definitions plus the logic that says what counts as a hit for the exact version.
 
 | Target Firmware Version | Probe 1: HTTP Banner       | Probe 2: TLS Cert Serial | Match Logic                                       |
 |-------------------------|----------------------------|--------------------------|---------------------------------------------------|
@@ -90,34 +81,26 @@ A Fingerprint is one or more Probe Definitions combined with match logic. Decide
 | VendorX Switch v2.1.5   | `"Server: SwitchOS/2.1.5"` | `"1234-ABCD"`            | Match if: (Probe 1 is TRUE)                       |
 | VendorX Router v2.1.4   | `"Server: RouterOS/2.1.4"` | `"5678-EFGH"`            | Match if: (Probe 1 is TRUE) AND (Probe 2 is TRUE) |
 
-### Decision rules
+The rules of thumb that tend to hold:
 
-1. Single Unique Probe: If one probe uniquely identifies the firmware, use it alone
-2. Combination Required: If multiple probes needed for uniqueness, combine with AND logic
-3. Insufficient Data: If no combination is unique, fingerprint cannot be created (need more artefacts)
-4. Avoid OR Logic: Reduces specificity; use only when absolutely necessary
+1. One unique probe: if a single probe identifies the firmware on its own, it can stand alone.
+2. Combination required: where uniqueness needs more than one, AND-logic ties them together.
+3. Insufficient data: if no combination is unique, the fingerprint cannot be made yet, and the answer is more artefacts, not looser logic.
+4. OR-logic is a last resort: it widens the net and costs specificity, so it earns its place only when nothing else will do.
 
-## Phase 3: Static validation
+## Phase 3: static validation
 
-Validation occurs before any code is written. This is logic checking, not live scanning.
+Validation happens before a line of code is written. This is logic checking, not live scanning.
 
-### Positive check
+The positive check: confirm every artefact in the probe definitions actually exists in the Desk's `analysis/` files (the `rootfs` dump, the `strings` output). That proves the probe is grounded in something real.
 
-Confirm every artefact in the Probe Definitions exists in the Desk's `analysis/` files (e.g., `rootfs` dump, `strings` 
-output). This proves the probe is valid.
+The negative check: run the match logic against artefacts from other versions (v2.1.5, v2.0.0). A v2.1.4 fingerprint that matches any of them is a false-positive generator, and goes back for refinement.
 
-### Negative check (False positives)
+All of it runs on static files. No emulators, no live scanning.
 
-Use analysis of other firmware versions (v2.1.5, v2.0.0). Run the match logic against artefacts from these versions. 
-A v2.1.4 fingerprint must *not* match any other version.
+## Phase 4: the fingerprint specification
 
-All validation uses static files only. No emulators. No live scanning.
-
-## Phase 4: The Fingerprint Specification
-
-The deliverable is a specification document, not code. It is a blueprint for the scanner.
-
-### Example `fingerprint.yaml`
+The deliverable is a specification, not code. A blueprint the scanner reads.
 
 ```yaml
 fingerprint_id: "FP-2026-001"
@@ -135,8 +118,6 @@ validation_note: "Logic passes positive check against rootfs dump. Does not matc
 confidence: "high"
 ```
 
-### Field definitions
-
 | Field            | Purpose                          | Example                                                 |
 |------------------|----------------------------------|---------------------------------------------------------|
 | `fingerprint_id` | Unique identifier                | `"FP-2026-001"`                                         |
@@ -146,4 +127,4 @@ confidence: "high"
 | `match_logic`    | Boolean expression for match     | `"probes[0].receive_match and probes[1].receive_match"` |
 | `confidence`     | Likelihood of accurate detection | `"high"`, `"medium"`, `"low"`                           |
 
-This methodology produces blueprints. Implementation comes next, guided by these precise specifications.
+What comes out of all this is a blueprint. The implementation follows it, which is the easy part once the thinking is done.

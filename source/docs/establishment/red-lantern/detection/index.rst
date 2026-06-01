@@ -20,6 +20,6 @@ and validated without live traffic or production risk.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact">Check the Barrel's Bottom</a>
+                <a href="https://tymyrddin.dev/contact">Check the barrel's bottom</a>
             </div>
         </div>

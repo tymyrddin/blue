@@ -1,27 +1,25 @@
 # Firmware acquisition
 
-Concrete, reproducible methods to acquire firmware and related artefacts from devices and software, using tools that actually exist and workflows that survive contact with reality.
+Getting firmware off a device, or out of a vendor's update bundle, using tools that exist and workflows that survive contact with reality. This is written as an internal laboratory standard and published as-is, on the theory that there is nothing here worth hiding and a fair amount worth borrowing. It assumes a controlled environment and cares more about provenance, repeatability, and evidence than about convenience.
 
-Positioning: This document is written as an internal laboratory standard (SOP) and published externally for transparency and reuse. It assumes a controlled research environment and prioritises provenance, repeatability, and evidentiary integrity over convenience.
+Everything below happens on sacrificial hardware, on an isolated lab network. No production systems. No customer environments. No "just this once".
 
-Laboratory context: All procedures below are conducted on sacrificial hardware within an isolated lab network. No production systems. No customer environments. No “just this once”.
+Acquisition is the first step in the Obsidian Desk workflow, and the one everything else leans on. If it is sloppy, everything downstream is fiction.
 
-The first step in the Obsidian Desk workflow, providing verified binaries for structured research. If acquisition is sloppy, everything downstream is fiction.
+## Vendor packages, the baseline
 
-## Acquire from vendor packages (baseline)
-
-Typical formats include:
+The formats that turn up most often:
 
 `.bin`, `.img`, `.upd`, `.pkg`, `.rom`, `.exe` / `.msi` (engineering tools), `.apk` / `.ipa` (mobile apps)
 
-Baseline procedure:
+The baseline procedure is unglamorous:
 
-1. Download firmware or installer
-2. Verify checksum (if provided)
-3. Extract contents
-4. Record provenance immediately
+1. Download the firmware or installer
+2. Verify the checksum, where one is offered
+3. Extract the contents
+4. Record provenance immediately, before it evaporates
 
-Vendor packages are the cleanest starting point, when available. They are also the least representative of what actually runs on deployed devices. Treat them as baseline artefacts. Examples below.
+Vendor packages are the cleanest starting point when they are available. They are also the least representative of what actually runs on a deployed device, which has usually been patched, half-patched, or never touched since it left the warehouse. They are best treated as baseline artefacts rather than ground truth. A few worked examples follow.
 
 ### Siemens SIMATIC S7-1212C (non-fail-safe), DC/DC/DC
 
@@ -29,31 +27,31 @@ Order number: 6ES7212-1AE40-0XB0
 
 Intended acquisition path: Siemens tooling (TIA Portal)
 
-Why this device?
+Why this device:
 
 * Extremely common in the wild: small plants, OEM panels, building automation, and budget-constrained environments.
-* Non-fail-safe: avoids the certification-heavy, legally sensitive F-CPU ecosystem.
-* DC/DC/DC variant has a simpler hardware profile and fewer relay-specific artefacts.
+* Non-fail-safe, which sidesteps the certification-heavy, legally sensitive F-CPU ecosystem.
+* The DC/DC/DC variant has a simpler hardware profile and fewer relay-specific artefacts.
 * Siemens documentation, tooling, and community material are strongest for the 1212C.
-* Representative attack surface:
+* A representative attack surface:
   * S7CommPlus
   * Embedded web server
   * Firmware update mechanism
 * Known historical weaknesses (authentication, information disclosure, hardening gaps).
 
-Why this is painful (and still useful)?
+The catch, and why it is still worth the bother:
 
-* Firmware is not provided as a standalone binary.
-* Access requires registration and tooling approval.
-* Firmware artefacts are accessed indirectly via TIA Portal, cached, fragmented, and wrapped in internal package formats.
+* Firmware is not handed over as a standalone binary.
+* Access wants registration and tooling approval first.
+* Firmware artefacts arrive indirectly through TIA Portal: cached, fragmented, and wrapped in internal package formats.
 
-Expectation management: Siemens firmware acquisition is toolchain archaeology, not a download. You will not get a neat `.bin`. Reproducibility depends on:
+A note on expectations. Siemens firmware acquisition is toolchain archaeology, not a download, and there is no neat `.bin` waiting at the end of it. Reproducibility depends on:
 
 * TIA Portal version
 * Installed device support packages
-* Update workflow used
+* The update workflow used
 
-Record all of this. If you cannot reproduce the environment, you cannot reproduce the artefact.
+All of which is worth writing down. If the environment cannot be reproduced, neither can the artefact.
 
 ### Moxa NPort 5250AI-M12
 
@@ -63,14 +61,14 @@ Firmware version: 2.0
 Filename: `moxa-nport-5250ai-m12-models-firmware-v2.0.rom`
 Download date: 2026-01-06
 
-Why this device?
+Why this device:
 
-* Representative industrial serial-to-Ethernet gateway (common in OT networks).
-* Exposes multiple network services (TCP/IP, Modbus/TCP, SNMP, HTTP).
+* A representative industrial serial-to-Ethernet gateway, common in OT networks.
+* Exposes several network services (TCP/IP, Modbus/TCP, SNMP, HTTP).
 * Manageable size and complexity for lab analysis.
-* Firmware publicly available without authentication.
+* Firmware available publicly, no authentication required.
 
-This is what “good” vendor access looks like.
+This is roughly what "good" vendor access looks like, and it is rarer than one would like.
 
 ### Vertiv / Liebert IS-UNITY-DP card
 
@@ -81,18 +79,18 @@ Release date: November 2025
 Protocols: Web, Velocity Protocol, SN Sensor, LIFE™, SNMP, SMTP, SMS, Telnet
 Compliance claims: California IoT Security Law, UL2900-1, IEC 62443-4-2
 
-Why?
+Why this device:
 
 * Embedded industrial management firmware (OT/ICS).
-* Rich network surface and web interface.
+* A rich network surface and a web interface.
 * Versioned releases with notes and checksums.
 * Publicly listed, downloadable for registered users.
 
-Compliance claims are not security guarantees, but they do improve documentation quality.
+Compliance claims are not security guarantees. They do tend to come with better documentation, which is its own small mercy.
 
-## Acquire from companion mobile apps (very common)
+## Companion mobile apps, very common
 
-Mobile apps frequently embed firmware URLs, update logic, API paths, and device identifiers.
+Mobile apps are leaky. They frequently carry firmware URLs, update logic, API paths, and device identifiers, all sitting in plain sight for anyone who unpacks them.
 
 ### Android (APK)
 
@@ -102,7 +100,7 @@ strings classes.dex | less
 jadx-gui vendor_app.apk
 ```
 
-Look for:
+Worth looking for:
 
 * Firmware download URLs
 * Update API endpoints
@@ -110,7 +108,7 @@ Look for:
 * Device identifiers
 * TLS pinning material
 
-Firmware downloads are often plain HTTPS blobs referenced directly in the app.
+The firmware itself is often a plain HTTPS blob, referenced directly in the app.
 
 ### iOS (IPA)
 
@@ -119,20 +117,20 @@ unzip vendor_app.ipa
 strings Payload/*.app/* | less
 ```
 
-Use:
+Tools that earn their place here:
 
-* Ghidra or Hopper for binaries
+* Ghidra or Hopper for the binaries
 * MitM only in an offline lab, never against live cloud services
 
-If you break pinning to see what the app does, document that you did.
+If pinning has to be broken to see what the app does, that fact belongs in the notes.
 
-## Acquire via update interception (lab network)
+## Update interception on the lab network
 
 ### Setup
 
-* Dedicated lab router or Linux box
+* A dedicated lab router or Linux box
 * No internet forwarding
-* Device connected only to the lab LAN
+* The device connected only to the lab LAN
 
 Tools: `tcpdump`, `mitmproxy`, `ngrep`
 
@@ -140,15 +138,15 @@ Tools: `tcpdump`, `mitmproxy`, `ngrep`
 tcpdump -i eth0 -w update_capture.pcap
 ```
 
-Trigger an update via UI or app. Capture:
+Trigger an update from the UI or app, and capture:
 
 * Update URLs
 * Firmware blobs
 * Version metadata
 
-Do not let the device reach the real internet.
+The one rule that does not bend: the device does not reach the real internet.
 
-### Common blockers (this is normal)
+### Common blockers, all of them normal
 
 * TLS certificate pinning
 * Encrypted firmware payloads
@@ -156,9 +154,9 @@ Do not let the device reach the real internet.
 * Hardcoded IPs or DoH
 * Delta or patch-based updates
 
-If nothing appears on the wire, that is a result, not a failure. Record it.
+If nothing appears on the wire, that is a result, not a failure. It also goes in the notes.
 
-## Acquire via vendor engineering software
+## Vendor engineering software
 
 Common for PLCs and industrial devices.
 
@@ -169,33 +167,31 @@ Typical tools:
 * Schneider Control Expert
 * Vendor-specific loaders
 
-Procedure
+The shape of it:
 
-1. Install software in a VM
-2. Connect device on isolated LAN
+1. Install the software in a VM
+2. Connect the device on an isolated LAN
 3. Perform read / backup / upload operations
-4. Monitor filesystem activity
+4. Watch the filesystem while it happens
 
-Firmware artefacts often appear in:
+Firmware artefacts have a habit of turning up in:
 
 * `ProgramData`
 * `AppData`
 * Temporary directories
 * Vendor cache folders
 
-Filesystem monitoring beats guessing.
+Watching the filesystem beats guessing where the tool left things.
 
-## Acquire from removable media
+## Removable media
 
-Some devices support firmware export or update via USB or SD.
-
-Procedure
+Some devices will export or update firmware over USB or SD, which is obliging of them.
 
 1. Insert blank media
-2. Trigger “export”, “backup”, or “update”
-3. Capture resulting files
+2. Trigger "export", "backup", or "update"
+3. Capture whatever lands
 
-Inspect with:
+Then inspect it:
 
 ```bash
 binwalk
@@ -203,17 +199,17 @@ strings
 hexdump -C
 ```
 
-Do not assume exported backups are complete or unencrypted.
+An exported backup is not guaranteed to be complete, or unencrypted. Pleasant when it is.
 
-## Acquire via UART (very common, very effective)
+## UART, very common and very effective
 
-Hardware
+Hardware:
 
-* USB-TTL adapter (FTDI, CP2102, CH340)
+* A USB-TTL adapter (FTDI, CP2102, CH340)
 * Jumper wires
-* Logic level confirmed (3.3 V vs 5 V)
+* The logic level confirmed first (3.3 V vs 5 V), because getting this wrong is how a board becomes a paperweight
 
-Identify pins: `TX`, `RX`, `GND`, `VCC`. Confirm with silkscreen or multimeter.
+Identify the pins: `TX`, `RX`, `GND`, `VCC`. The silkscreen or a multimeter will tell you.
 
 ```bash
 screen /dev/ttyUSB0 115200
@@ -225,27 +221,27 @@ Power the device. Common boot environments:
 * RedBoot
 * Vendor shells
 
-Look for `printenv`, `bdinfo`, `ls`, `dump`, `read`, `loady`, `loadb`, `tftp`. Capture all output to file.
+The interesting verbs to reach for are `printenv`, `bdinfo`, `ls`, `dump`, `read`, `loady`, `loadb`, `tftp`, and capturing all output to a file saves repeating the séance later.
 
-### Procedure: from console to binary
+### From console to binary
 
-1. Interrupt boot. Send break during startup to reach bootloader.
+1. Interrupt the boot. A break sent during startup reaches the bootloader.
 
-2. Map memory. Identify flash layout using:
+2. Map the memory. Flash layout shows up through:
    * `printenv`
    * `bdinfo`
-   * `/proc/mtd` (if Linux shell available)
+   * `/proc/mtd` (if a Linux shell is available)
 
-3. Dump memory.
+3. Dump the memory.
 
-   * Bootloader: use `md.b`, `dump`, or equivalent; script terminal capture.
-   * OS shell: use `dd` on `/dev/mtd*`; exfiltrate via serial or lab-only networking.
+   * Bootloader: `md.b`, `dump`, or the local equivalent; the terminal capture can be scripted.
+   * OS shell: `dd` on `/dev/mtd*`, then exfiltrate over serial or lab-only networking.
 
-4. Reconstruct. Combine partitions (bootloader, kernel, rootfs) into a full image for analysis.
+4. Reconstruct. The partitions (bootloader, kernel, rootfs) combine into a full image for analysis.
 
 UART often yields more than JTAG, with fewer regrets.
 
-## Acquire via JTAG / SWD (destructive, last resort)
+## JTAG and SWD, destructive, last resort
 
 Tools: J-Link, ST-Link, OpenOCD
 
@@ -257,30 +253,30 @@ openocd -f interface/jlink.cfg -f target/stm32f4x.cfg
 dump_image firmware.bin 0x08000000 0x100000
 ```
 
-Decision point: If read-out protection is enabled, stopping here may be necessary. Continuing may:
+A decision point worth pausing at. If read-out protection is enabled, stopping here may be the sensible move. Pressing on can:
 
 * Permanently lock the device
-* Cross legal or contractual boundaries
-* Consume significant time for little gain
+* Cross a legal or contractual line
+* Burn a lot of time for very little
 
-This is not a technical failure. It is a judgement call.
+Stopping is not a technical failure. It is a judgement call, and usually the right one.
 
-## Acquire from flash chips directly
+## Flash chips, directly
 
-When everything else fails, hardware:
+When everything else has failed, there is always hardware:
 
-* SPI programmer (CH341A, Dediprog)
-* SOIC clip
+* An SPI programmer (CH341A, Dediprog)
+* A SOIC clip
 
 ```bash
 flashrom -p ch341a_spi -r firmware.bin
 flashrom -p ch341a_spi -v firmware.bin
 ```
 
-Sanity checks:
+Sanity checks before trusting the dump:
 
-* Perform multiple reads; hashes must match
-* Check for all-0xFF / all-0x00 regions
-* Compare dump size to expected flash size
+* Read it more than once; the hashes want to match
+* Look for all-`0xFF` / all-`0x00` regions, which usually mean a bad read
+* Compare the dump size against the expected flash size
 
 Confidence comes from repetition, not hope.

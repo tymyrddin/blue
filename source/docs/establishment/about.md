@@ -1,4 +1,6 @@
-# Civic Defence Establishment
+# About the Civic Defence Establishment
+
+![An empty, dimly lit bureaucratic corridor with unmarked doors, no signage, no windows](/_static/images/silent-stability.png)
 
 The Civic Defence Establishment is publicly acknowledged. It has a building, a staff complement, a budget line
 that uses the phrase "continuity of civic function," a public-facing name, and named subordinate offices. The

@@ -1,6 +1,6 @@
 # RPKI cover hijack correlation logic
 
-## What this correlation detects
+## The pattern
 
 An active BGP hijack or interception in which an adversary:
 
@@ -11,7 +11,7 @@ An active BGP hijack or interception in which an adversary:
 
 Unlike noisy hijacks, this attack succeeds by abusing trust, not ignoring it.
 
-## Why this matters
+## Slipping past classic detection
 
 Classic hijack detection looks for:
 
@@ -42,7 +42,7 @@ No DPI. No traffic capture. No heroics.
 This correlation assumes access to:
 
 * BMP (BGP Monitoring Protocol): Authoritative view of announcements and withdrawals
-* RPKI validator logs: Validation outcome for the observed prefix–origin pairs
+* RPKI validator logs: Validation outcome for the observed prefix-origin pairs
 
 Optional but useful:
 
@@ -101,7 +101,7 @@ A triggered correlation indicates:
 
 * Routing trust has been successfully abused
 * Immediate mitigation is required
-* Trust anchors and ROAs must be audited
+* Trust anchors and ROAs need auditing
 
 This is not a false positive you ignore.
 This is a control-plane incident.

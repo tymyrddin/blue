@@ -16,7 +16,7 @@ Decrypted content:
 ```
 To:      security@desk.establishment.internal
 From:    t.vanholt@civil-observers.internal
-Subject: CVD submission — Acme Industrial Gateway v2.3.1
+Subject: CVD submission: Acme Industrial Gateway v2.3.1
 
 Submission type: coordinated disclosure
 CVE: CVE-2026-4471
@@ -115,7 +115,7 @@ that a related firmware vulnerability is in the Long Table pipeline under RD-202
 Acknowledgement sent to T. Vanholt on 2026-05-28 via PGP-encrypted reply:
 
 ```
-Subject: RE: CVD submission — Acme Industrial Gateway v2.3.1
+Subject: RE: CVD submission: Acme Industrial Gateway v2.3.1
 
 Receipt confirmed. Case reference: RD-2026-0047.
 Triage determination due by 2026-06-09.

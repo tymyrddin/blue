@@ -1,4 +1,4 @@
-# To His Eminence, the Patrician of Ankh‑Morpork
+# To His Eminence, the Patrician of Ankh-Morpork
 
 December 20, 2025
 
@@ -9,7 +9,7 @@ continue under observation. Their remit remains experimentation: testing what ha
 questioned, signs are rearranged, and in some cases the Registry itself is quietly edited.
 
 The Establishment has complied with its instruction not to interfere. We have limited ourselves to 
-observation, measurement, and analysis, with particular attention to what these exercises reveal about city‑wide 
+observation, measurement, and analysis, with particular attention to what these exercises reveal about city-wide 
 stability and the resilience of our trust mechanisms.
 
 I report the following.
@@ -26,19 +26,19 @@ First, the Scarlet Semaphore deliberately employs realistic timing and partial p
 reach all quarters at once, nor do withdrawals occur cleanly or symmetrically. This reflects the city as it is, 
 not as we might prefer it. The consequence is that defensive observers see effects that are locally consistent 
 but globally uneven. Nothing here is random, yet it is not immediately obvious what should be expected without 
-prior knowledge of the exercise’s intent.
+prior knowledge of the exercise's intent.
 
 Second, the scope of each exercise is implicit rather than declared. The Semaphore knows which districts are meant 
 to be affected and for how long. Observers must infer this from artefacts alone. This is acceptable for 
-experimentation, but it complicates the Establishment’s task of distinguishing between ordinary noise, recoverable 
-incidents, and signals of deeper control‑plane concern.
+experimentation, but it complicates the Establishment's task of distinguishing between ordinary noise, recoverable 
+incidents, and signals of deeper control-plane concern.
 
 Third, the more subtle exercises, particularly those touching the Registry itself, are intentionally quiet. They 
 do not produce spectacular outages. Instead, they manifest as legitimacy failures: routes that ought to be accepted 
 are not, trust decisions that differ by district, authority that appears intact yet behaves inconsistently. From a 
 defensive standpoint, this is the most concerning class of behaviour, precisely because it does not announce itself.
 
-The Establishment’s assessment is therefore not that the exercises are unreliable, but that their lessons are easy to
+The Establishment's assessment is therefore not that the exercises are unreliable, but that their lessons are easy to
 miss unless one already knows where to look.
 
 From a stability perspective, this suggests a defensive gap. Our current observational tools and habits are well 

@@ -2,7 +2,7 @@
 
 ![Correlation hold](/_static/images/walkthrough-correlation-hold.png)
 
-This walkthrough follows two events that arrive low and leave together and are help for analyst review: *The tag bar: 
+This walkthrough follows two events that arrive low and leave together and are held for analyst review: *The tag bar: 
 Quiet-Room, tlp:amber, needs-review, reliability="3", and no Long-Table yet; the merged attributes: the 
 shared internal host 198.51.100.23, the external range 203.0.113.45, and the lookalike payroll domain.*
 

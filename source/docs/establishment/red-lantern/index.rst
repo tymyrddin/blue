@@ -16,9 +16,7 @@ reversible flow, ensuring we have more eyes on the tide without ever needing to 
 
 .. toctree::
    :glob:
-   :maxdepth: 2
-   :includehidden:
-   :caption: Alert eyes, silent observation. Under construction.
+   :maxdepth: 1
 
    kickoff/index
    detection/index
@@ -27,10 +25,18 @@ reversible flow, ensuring we have more eyes on the tide without ever needing to 
    threat-intel/index
    advanced/index
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Code:
+
+   Red Lantern simulator @GitHub <https://github.com/tymyrddin/red-lantern-sim>
+   Red Lantern detection @GitHub <https://github.com/tymyrddin/red-lantern-detection>
+
+
 .. raw:: html
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://red.tymyrddin.dev/docs/scarlet/op-red-lantern/">Request Calibrated Advice</a>
+                <a href="https://red.tymyrddin.dev/docs/scarlet/op-red-lantern/">Request calibration</a>
             </div>
         </div>

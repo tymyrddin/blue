@@ -35,7 +35,7 @@ alerts. Regression testing with the simulator ensures that:
 
 ### Detection-as-code workflows
 
-The simulator also enables “detection-as-code” practices. By treating detection logic like software: version-controlled, 
+The simulator also enables "detection-as-code" practices. By treating detection logic like software: version-controlled, 
 tested, and reviewed, we gain:
 
 * Safe deployment of new or updated rules.

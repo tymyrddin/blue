@@ -1,8 +1,18 @@
+.. raw:: html
+
+   <div class="logo-container" aria-hidden="true">
+     <div class="logo-image">
+       <img src="../../_static/images/oocs-logo.png" alt="">
+     </div>
+     <div class="logo-text">
+       <div class="display-heading">Office of Civil Surveys</div>
+       <p class="display-tagline">Survey the visible. Notice the rest.</p>
+     </div>
+   </div>
+   <hr class="logo-rule">
+
 Office of Civil Surveys
 =====================================
-
-.. image:: /_static/images/office-office.png
-   :alt: A modest 1960s civic office building in a postwar European city, viewed from across a tree-lined boulevard on an overcast late afternoon. Modernist concrete and stone facade with a regular grid of small window.
 
 Officially within the Ankh-Morpork Municipal Planning Commission. Concerned with routes, flows, and signal paths
 through the city. The name is accurate. Most of what it surveys is not.
@@ -24,6 +34,6 @@ through the city. The name is accurate. Most of what it surveys is not.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Initiate Knowledge Harvest</a>
+                <a href="https://tymyrddin.dev/contact/">Quietly, if possible</a>
             </div>
         </div>

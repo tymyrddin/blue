@@ -1,12 +1,12 @@
-# Firmware extraction & workspace creation
+# Firmware extraction and workspace creation
 
-This is the analytical and procedural step following firmware acquisition. Its goal is to systematically unpack a verified firmware binary, establish its integrity, and construct the standardised analysis workspace for the Obsidian Desk. The completed workspace is the mandatory prerequisite for all Vulnerability Research.
+The step between acquiring a binary and learning anything from it. The goal is to unpack a verified firmware image, establish that it is intact, and lay out the standard analysis workspace the Obsidian Desk works from. Until that workspace exists, the research phase has nowhere to stand.
 
-Prerequisite: A single, acquired firmware binary file (e.g., `firmware.bin`) and its associated `source.yaml` metadata, confirming its hash and origin.
+What it assumes you are holding: a single acquired firmware binary (say, `firmware.bin`) and its `source.yaml`, which records the hash and where it came from.
 
-## 1. File and structure analysis
+## File and structure analysis
 
-Before extraction, understand the binary's layout to plan the process.
+A look at the layout before the unpacking, so the process has a plan rather than a hope.
 
 ```bash
 # Determine file type and identify embedded components
@@ -15,48 +15,59 @@ binwalk firmware.bin
 hexdump -C -n 512 firmware.bin | less
 ```
 
-*   `binwalk` is primary. Its output showing offsets and signatures is your extraction map.
-*   Action: Record the full output of these commands to a `triage.log` file in your working directory.
+`binwalk` is the one that does the heavy lifting; its offsets and signatures are the extraction map. The full output of these three is worth keeping in a `triage.log` in the working directory, because it is the thing you will want to reread when something does not line up later.
 
-## 2. Partition extraction and filesystem handling
+## Partition extraction and filesystem handling
 
-Using the map from Step 1, extract the main operational components.
+With the map from the previous step, the main components come out.
 
-*   Automated extraction with `binwalk`:
-    ```bash
-    binwalk -e -M firmware.bin
-    ```
-    This recursively carves out identified files into a `_firmware.bin.extracted/` directory. Inspect its contents.
-*   Manual extraction with `dd`:
-    For precision or when automated extraction fails, use `dd` with specific `skip` (offset) and `count` (size) values from your analysis.
-    ```bash
-    dd if=firmware.bin of=rootfs.squashfs bs=1 skip=<offset> count=<size>
-    ```
-*   Mounting Common Embedded Filesystems:
-    To browse the device's operating system, mount extracted filesystem images read-only.
-    ```bash
-    # For SquashFS (very common)
-    sudo mount -t squashfs -o loop,ro rootfs.squashfs /mnt/analysis/
-    ```
-    Browse `/mnt/analysis/` to confirm expected directories (`/etc`, `/bin`, `/usr`, `/www`) are present.
+Automated extraction with `binwalk`:
 
-## 3. Populate the analysis workspace
+```bash
+binwalk -e -M firmware.bin
+```
 
-Construct the research-ready directory structure within the `analysis/` hierarchy.
+This recursively carves the identified files into a `_firmware.bin.extracted/` directory, which then repays a careful look.
 
-1.  Copy the Filesystem:
-    ```bash
-    mkdir -p analysis/vendor/device/version/extracted/rootfs
-    sudo cp -r /mnt/analysis/* analysis/vendor/device/version/extracted/rootfs/
-    sudo chown -R $USER:$USER analysis/vendor/device/version/
-    ```
-2.  Stage Key Binaries: Identify and copy critical executables (e.g., network daemons, web server) to `extracted/binaries/` for later analysis.
-3.  Finalise Documentation:
-    *   Move the `triage.log` file into the analysis directory.
-    *   Create the `notes.md` file. Its first line must be the source hash: `Source Binary: raw/vendor/device/version/firmware.bin (sha256:xxx)`.
-    *   Append initial observations: architecture, kernel version, key services found.
+Manual extraction with `dd`, for precision or for when the automated pass gives up:
 
-The resulting standard structure for a target is:
+```bash
+dd if=firmware.bin of=rootfs.squashfs bs=1 skip=<offset> count=<size>
+```
+
+The `skip` (offset) and `count` (size) values come from the analysis above.
+
+Mounting common embedded filesystems, read-only, to browse the device's operating system:
+
+```bash
+# For SquashFS (very common)
+sudo mount -t squashfs -o loop,ro rootfs.squashfs /mnt/analysis/
+```
+
+A glance through `/mnt/analysis/` confirms the expected directories (`/etc`, `/bin`, `/usr`, `/www`) are present, and quietly flags it when they are not.
+
+## Populating the analysis workspace
+
+Building the research-ready structure inside the `analysis/` hierarchy.
+
+Copy the filesystem:
+
+```bash
+mkdir -p analysis/vendor/device/version/extracted/rootfs
+sudo cp -r /mnt/analysis/* analysis/vendor/device/version/extracted/rootfs/
+sudo chown -R $USER:$USER analysis/vendor/device/version/
+```
+
+Stage the key binaries: the network daemons, the web server, and anything else worth a closer look go into `extracted/binaries/`.
+
+Finalise the documentation:
+
+* The `triage.log` moves into the analysis directory.
+* The `notes.md` file gets created, and its first line is the source hash: `Source Binary: raw/vendor/device/version/firmware.bin (sha256:xxx)`. Everything in the workspace traces back to that line.
+* Initial observations get appended: architecture, kernel version, the services that turned up.
+
+The structure a target ends up with:
+
 ```
 analysis/vendor/device/version/
 ├── extracted/
@@ -66,9 +77,10 @@ analysis/vendor/device/version/
 └── notes.md            # Source hash and initial notes
 ```
 
-Hand-off Condition: This directory, with a browsable filesystem and a logged structure, is the direct input for the Vulnerability Research phase.
+This directory, with a browsable filesystem and a logged structure, is the direct input for the research phase.
 
-### Post-Process
+A tidy exit:
+
 ```bash
 sudo umount /mnt/analysis/  # Cleanly unmount
 rm -f rootfs.squashfs       # Remove temporary extract
@@ -76,11 +88,11 @@ rm -f rootfs.squashfs       # Remove temporary extract
 
 ## Integrity and verification
 
-Firmware that cannot be proven unchanged is not evidence; it is gossip.
+Firmware that cannot be proven unchanged is not evidence. It is gossip.
 
-### Hashing and checksums for provenance
+### Hashing for provenance
 
-Immediately after acquisition and before any analysis, calculate cryptographic hashes.
+Immediately after acquisition, and before anything touches the artefact, the hashes get taken:
 
 ```bash
 sha256sum firmware.bin > firmware.bin.sha256
@@ -88,11 +100,11 @@ sha1sum firmware.bin >> firmware.bin.sha256
 md5sum firmware.bin >> firmware.bin.sha256
 ```
 
-Hashes are calculated once, stored alongside the artefact, and never recalculated over modified files.
+They are calculated once, stored alongside the artefact, and never recalculated over a modified file. A hash taken after the fact is a hash of whatever you did to it.
 
-## Metadata and provenance (canonical format)
+## Metadata and provenance
 
-Every artefact requires a structured metadata record. YAML is the canonical format.
+Every artefact carries a structured metadata record. YAML is the canonical format.
 
 ```yaml
 # File: source.yaml
@@ -118,11 +130,12 @@ If you cannot say where a file came from, it does not exist.
 
 ## Storage and cataloguing
 
-Do not improvise directory names. Automation will assume you did not. Consistency is everything.
+Improvised directory names are a false economy: the automation will assume you did not improvise, and behave accordingly. Consistency is the whole game here.
 
 ### Lab filing structure
 
-Example baseline layout:
+A baseline layout:
+
 ```
 .
 ├── analysis
@@ -181,10 +194,11 @@ Example baseline layout:
 48 directories, 6 files
 ```
 
-Rules:
-*   Raw firmware is read-only.
-*   Extracted artefacts are derived, not replaced.
-*   Notes reference artefacts by hash, not filename.
-*   Deletions require supervisor sign-off.
+The conventions that keep it honest:
 
-The vault is not a scratch directory. It is evidence storage.
+* Raw firmware is read-only.
+* Extracted artefacts are derived, never overwritten back onto the source.
+* Notes reference artefacts by hash, not filename.
+* Deletions go through supervisor sign-off.
+
+The vault is not a scratch directory. It is evidence storage, and it behaves like one.

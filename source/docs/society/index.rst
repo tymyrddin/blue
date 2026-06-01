@@ -1,8 +1,18 @@
+.. raw:: html
+
+   <div class="logo-container" aria-hidden="true">
+     <div class="logo-image">
+       <img src="../../_static/images/cos-logo.png" alt="">
+     </div>
+     <div class="logo-text">
+       <div class="display-heading">Civil Observers' Society</div>
+       <p class="display-tagline">We notice things.</p>
+     </div>
+   </div>
+   <hr class="logo-rule">
+
 Civil Observers' Society
 =====================================
-
-.. image:: /_static/images/anvil.png
-   :alt: A secretive workshop hidden in a Victorian-steampunk city, glowing screens and mechanical contraptions everywhere, engineers in trench coats examining circuit boards and firmware code, shelves full of PLCs and embedded devices, warm lamplight, a sense of careful observation and quiet diligence
 
 Volunteer security researchers doing firmware analysis and tool-building under the guise of responsible
 disclosure. Under guise of, because they also want to have fun. A name that slightly resembles the Office of
@@ -25,6 +35,6 @@ Civil Surveys. Nobody has formally clarified whether this is intentional.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Initiate Secure Handshake</a>
+                <a href="https://tymyrddin.dev/contact/">Notice us back</a>
             </div>
         </div>

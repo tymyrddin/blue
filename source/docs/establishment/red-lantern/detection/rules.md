@@ -1,6 +1,6 @@
 # Writing Wazuh rules
 
-## What rules actually do
+## From fields to alarms
 
 Rules are the final cog in the detection machine. Decoders have done the messy work of turning log lines into neat 
 fields. Rules look at those fields, spot the patterns that shouldn't be there, and decide when to raise the alarm.
@@ -31,7 +31,7 @@ A useful rule adds conditions. For instance, to catch a hijack from our Red Lant
 
 ## Examples
 
-[Red Lantern detections: Wazuh rules](https://github.com/ninabarzh/red-lantern-detection/tree/main/wazuh)
+[Red Lantern detections: Wazuh rules](https://github.com/tymyrddin/red-lantern-detection/tree/main/wazuh)
 
 ## Severity levels
 
@@ -39,11 +39,11 @@ Wazuh uses levels 0 to 15. Higher numbers mean more urgent alerts. The Establish
 
 *   Level 0-3, Informational - BGP sessions establishing, routine updates. Logged, but don't page anyone.
 *   Level 4-7, Low Severity - A peer added without a ticket, a single failed login. Note it for the morning report.
-*   Level 8-10, Medium Severity - An RPKI invalid, an unexpected route. An analyst should look within the hour.
+*   Level 8-10, Medium Severity - An RPKI invalid, an unexpected route. Get an analyst on it within the hour.
 *   Level 11-12, High Severity - A clear hijack, unauthorised config change. Investigate immediately.
 *   Level 13-15, Critical - Multiple hijacks, evidence of a coordinated attack. Wake people up.
 
-Choosing thresholds depend on contextual tolerance for drama. A university network might tolerate more than a bank.
+Threshold choice depends on contextual tolerance for drama. A university network might tolerate more than a bank.
 
 ## Using groups
 

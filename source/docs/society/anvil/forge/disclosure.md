@@ -1,61 +1,52 @@
 # Responsible disclosure considerations
 
-When a vulnerability is discovered in a commercial product, obligations extend beyond the immediate finding.
+A vulnerability found in a commercial product comes with obligations that outlast the finding itself. This is the part where the work stops being technical and starts being about who gets told, in what order, and how much.
 
 ## Vendor notification
 
-If the vulnerability affects a product used by other organisations:
+Where the vulnerability affects a product other organisations also run, the order that tends to work:
 
-1. Notify the vendor first, before public disclosure
-2. Provide sufficient detail for reproduction
-3. Allow reasonable time for patching, typically 90 days
-4. Coordinate disclosure timing with the vendor
+1. The vendor first, before any public disclosure
+2. Enough detail for them to reproduce it
+3. Reasonable time to patch, typically ninety days
+4. The disclosure timing worked out together rather than sprung on them
 
-## Coordination with relevant authorities
+## Coordinating with the authorities
 
-For critical infrastructure findings, relevant civic and national authorities are worth notifying:
+For critical-infrastructure findings, the relevant civic and national authorities are worth bringing in. They can do things a lone researcher cannot:
 
-- They can coordinate with vendors across affected sectors
-- They can issue advisories to operators who may not otherwise learn of the issue
-- They can support responsible disclosure timelines where vendor response is slow
+- Coordinate with vendors across the affected sectors
+- Issue advisories to operators who would otherwise never hear about it
+- Hold a responsible-disclosure timeline together when a vendor drags its feet
 
-In Ankh-Morpork, this means the Establishment's Receiving Desk, which handles incoming material of exactly
-this kind. The Receiving Desk does not confirm receipt publicly.
+In Ankh-Morpork, this means the Establishment's Receiving Desk, which handles incoming material of exactly this kind. The Receiving Desk does not confirm receipt publicly, which is rather the point of it.
 
-## What the affected operator receives
+## What reaches the operator
 
-Operators and vendors who hold or deploy vulnerable equipment are entitled to the findings, but judgement applies:
+Operators and vendors holding vulnerable equipment are entitled to the findings, but a little judgement travels with them:
 
-- Avoid providing full exploit code unless operationally necessary
-- Consider whether the report may be further distributed beyond the immediate recipient
-- Redact sensitive details if the report will reach a wider audience
-- Confirm that findings are not trivially weaponisable from the report alone
+- Full exploit code can usually stay out, unless there is an operational reason for it
+- The report may be passed on further than its first recipient, which is worth assuming
+- Sensitive detail can be redacted where the report will reach a wider audience
+- A finding that is trivially weaponisable from the report alone wants a second look before it goes out
 
 ## An example
 
-A zero-day vulnerability discovered in a widely deployed industrial gateway: authentication bypass via a
-crafted HTTP request. The disclosure sequence:
+A zero-day in a widely deployed industrial gateway: authentication bypass via a crafted HTTP request. How the disclosure ran:
 
-1. Vendor notified immediately with proof of concept
-2. Relevant civic authorities notified with coordination details
-3. Affected operators provided with detailed mitigation steps
-4. Full exploit code not included in written reports
-5. Ninety-day disclosure timeline agreed with vendor
-6. Advisory published after patch was available
+1. Vendor notified immediately, with proof of concept
+2. Relevant civic authorities notified, with coordination details
+3. Affected operators given detailed mitigation steps
+4. Full exploit code kept out of the written reports
+5. A ninety-day timeline agreed with the vendor
+6. Advisory published once the patch was available
 
-The vendor patched within 45 days. Public disclosure followed at 90 days. The finding reached the people
-who needed it without reaching the people who would misuse it. That is the intended outcome.
+The vendor patched in 45 days. Public disclosure followed at 90. The finding reached the people who needed it without reaching the people who would misuse it, which is the outcome the whole exercise is for.
 
 ## The balance of proof and safety
 
-The fundamental tension in OT vulnerability research is this: a finding needs to be credible without the
-demonstration causing harm. Proving that something dangerous is possible, without doing the dangerous thing,
-requires more care than a standard security disclosure.
+The standing tension in OT vulnerability research: a finding has to be credible without the demonstration causing harm. Proving something dangerous is possible, without doing the dangerous thing, takes more care than an ordinary disclosure.
 
-Simulator attacks are more persuasive than theoretical descriptions. Video evidence is more persuasive than
-static screenshots. Detailed technical analysis is more persuasive than assertion alone. But crossing into
-actual manipulation of production systems is not a proof technique. It is negligence.
+A simulator attack persuades more than a theoretical description. Video evidence persuades more than a static screenshot. Detailed technical analysis persuades more than assertion. But stepping across into actual manipulation of a production system is not a proof technique. It is negligence with better PR.
 
-Document everything safely demonstrable, explain clearly what cannot be safely demonstrated and why, and
-trust that a well-evidenced finding will be taken seriously. If it is not taken seriously without a live
-demonstration on production infrastructure, the problem is not the documentation.
+The working approach: document everything that can be shown safely, say plainly what cannot be shown and why, and trust that a well-evidenced finding carries. If it does not carry without a live demonstration on production infrastructure, the problem was never the documentation.

@@ -1,6 +1,6 @@
 # Testing correlation logic
 
-## Why correlation rules must be tested deliberately
+## Correlation fails quietly
 
 Correlation rules fail quietly. Single-event detections either fire or they do not. Correlation rules depend on a 
 chain of assumptions: multiple decoders, correct field extraction, correct sequencing, state retention across time, 
@@ -9,9 +9,9 @@ and correct expiry. If any part fails, nothing alerts. There is no obvious error
 Testing exists to break that silence on purpose. The goal of correlation testing is not to prove that correlation 
 works once. The goal is to prove that it works only when it should, and fails when it must.
 
-## What testing validates
+## Five questions testing answers
 
-Each encoded correlation must be tested against five questions:
+Each encoded correlation faces five questions:
 
 1. Does the intended sequence trigger the alert?
 2. Does an incomplete sequence fail to trigger it?
@@ -25,7 +25,7 @@ If any of these answers is wrong, the correlation logic is wrong, regardless of 
 
 Testing is performed against *intent*, not implementation detail.
 
-We are testing: *“When these observable events occur in this order, within this window, the system must recognise the attack.”*
+We are testing: *"When these observable events occur in this order, within this window, the system must recognise the attack."*
 
 Rule IDs, decoders, and platforms are implementation details. The encoded correlation is the contract.
 
@@ -41,7 +41,7 @@ A valid test confirms that:
 * Multiple independent validator confirmations raise confidence.
 * Optional authentication or management logs enhance context but are not required.
 
-### What to test
+### Test cases
 
 * Positive case: Multiple validators report conflicting or malicious ROA state for the same prefix and origin AS within the defined window.
 * Negative case: A single validator report does not escalate to high confidence.
@@ -62,7 +62,7 @@ The detection logic asserts:
 2. RPKI validation confirms legitimacy.
 3. A subsequent withdrawal increases confidence but is optional.
 
-### What to test
+### Test cases
 
 * Positive case: Announcement followed by valid RPKI state results in a confirmed alert.
 * Confidence progression: Withdrawal increases severity but absence of withdrawal does not suppress detection.
@@ -86,7 +86,7 @@ It asserts:
 
 Each step increases confidence but should not invalidate earlier conclusions.
 
-### What to test
+### Test cases
 
 * Complete sequence: All stages occur in order and produce a high-confidence alert.
 * Partial sequence: Missing later stages do not suppress earlier alerts.
@@ -100,19 +100,19 @@ If the system correlates out-of-order events or ignores time boundaries, the det
 
 Correlation is directional.
 
-Testing must explicitly verify that:
+Testing explicitly verifies that:
 
 * Parent stages fire before child stages.
 * Child stages do not retroactively bind to unrelated parent events.
 * State expires cleanly after the timeframe.
 
-A system that correlates “eventually” instead of “correctly” will generate convincing but false narratives.
+A system that correlates "eventually" instead of "correctly" will generate convincing but false narratives.
 
 ## Testing exclusion and noise resistance
 
-Correlation rules must be selective.
+Correlation rules live or die on selectivity.
 
-Testing must confirm that:
+Testing confirms that:
 
 * Unrelated routing churn does not trigger correlations.
 * Background validator updates do not escalate alerts.
@@ -124,7 +124,7 @@ False positives in correlation are worse than missed alerts. They fabricate inci
 
 Each correlation uses alert levels to encode confidence.
 
-Testing must verify that:
+Testing verifies that:
 
 * Confidence increases monotonically with evidence.
 * Confidence does not decrease or reset unexpectedly.
@@ -136,7 +136,7 @@ If analysts cannot trust alert severity to reflect evidentiary strength, the cor
 
 Correlation testing is not a one-time activity.
 
-It must be repeated when:
+It is worth repeating when:
 
 * Decoders change
 * Timeframes are tuned
@@ -152,7 +152,7 @@ When testing is complete:
 
 * Every encoded correlation fires only on its intended attack pattern.
 * Confidence levels reflect evidence, not guesswork.
-* Time and order matter, and are enforced.
+* Time and order are enforced.
 * Noise stays noise.
 
 At that point, the correlation rules stop being hopeful XML and become operational instruments. And there will still be 

@@ -1,6 +1,6 @@
 # References and resources
 
-Tools, documentation, and lab material to support research and hands-on analysis in the context of Anvil. This page prioritises practical investigation of OT/ICS devices, protocols, and environments over abstract compliance or vendor marketing.
+The tools, documentation, and lab material the Anvil's research actually runs on. The bias here is towards getting hands on OT/ICS devices, protocols, and environments, rather than towards compliance checklists or vendor marketing.
 
 ## Binary and firmware analysis
 

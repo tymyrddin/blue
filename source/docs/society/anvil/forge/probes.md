@@ -1,8 +1,8 @@
 # Probe design patterns
 
-Common probe types and their implementation patterns:
+The probe types that come up most often, and the shape each one takes in a fingerprint. Three patterns cover the bulk of what passive identification needs.
 
-## HTTP Probes
+## HTTP probes
 
 ```yaml
 protocol: "tcp/http"
@@ -11,7 +11,7 @@ send: "GET / HTTP/1.1\r\nHost: {{target}}\r\n\r\n"
 receive_match: "Server:.*2\\.1\\.4"
 ```
 
-## TLS Probes
+## TLS probes
 
 ```yaml
 protocol: "tls"
@@ -20,7 +20,7 @@ extract: "certificate.serial"
 match_value: "00:AB:CD:EF"
 ```
 
-## TCP Banner probes
+## TCP banner probes
 
 ```yaml
 protocol: "tcp"

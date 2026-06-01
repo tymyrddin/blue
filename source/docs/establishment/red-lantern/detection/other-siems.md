@@ -19,14 +19,14 @@ for syntax. The detection logic translates even if the query language looks comp
 [Splunk](https://www.splunk.com/) uses SPL (Search Processing Language) for queries and detections. The simulator's 
 JSON output works well with Splunk's JSON parsing capabilities.
 
-Examples in [Red Lantern detection: Splunk](https://github.com/ninabarzh/red-lantern-detection/tree/main/splunk)
+Examples in [Red Lantern detection: Splunk](https://github.com/tymyrddin/red-lantern-detection/tree/main/splunk)
 
 ## Elastic Security rules
 
 [Elastic Security](https://www.elastic.co/security) uses the Elastic Common Schema (ECS) and KQL (Kibana Query 
 Language) or EQL (Event Query Language) for detection rules.
 
-Examples in [Red Lantern detection: Elastic Security](https://github.com/ninabarzh/red-lantern-detection/tree/main/elastic)
+Examples in [Red Lantern detection: Elastic Security](https://github.com/tymyrddin/red-lantern-detection/tree/main/elastic)
 
 ## Microsoft Sentinel KQL queries
 
@@ -34,14 +34,14 @@ Examples in [Red Lantern detection: Elastic Security](https://github.com/ninabar
 for detection rules. If you have Sentinel, you probably have Azure infrastructure, so integrating the simulator 
 requires ingesting logs to Azure.
 
-Examples in [Red Lantern detection: Microsoft Sentinel](https://github.com/ninabarzh/red-lantern-detection/tree/main/sentinel)
+Examples in [Red Lantern detection: Microsoft Sentinel](https://github.com/tymyrddin/red-lantern-detection/tree/main/sentinel)
 
 ## Google Chronicle YARA-L rules
 
 [Chronicle](https://chronicle.security/) uses YARA-L (YARA Language) for detection rules. YARA-L is designed for 
 high-scale event correlation and threat hunting.
 
-Examples in [Red Lantern detection: Google Chronicle](https://github.com/ninabarzh/red-lantern-detection/tree/main/chronicle)
+Examples in [Red Lantern detection: Google Chronicle](https://github.com/tymyrddin/red-lantern-detection/tree/main/chronicle)
 
 ## Platform selection considerations
 

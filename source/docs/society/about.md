@@ -1,4 +1,6 @@
-# Civil Observers' Society
+# About the Civil Observers' Society
+
+![A secretive workshop hidden in a Victorian-steampunk city, glowing screens and mechanical contraptions everywhere](/_static/images/anvil.png)
 
 The Civil Observers' Society is a legally endorsed, operationally independent volunteer organisation. It has
 a charter, a code of conduct, a screening process for members, and a public record of every case it has

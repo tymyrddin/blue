@@ -1,8 +1,18 @@
-Civic Defence Establishment
-=====================================
+.. raw:: html
 
-.. image:: /_static/images/silent-stability.png
-   :alt: An empty, dimly lit bureaucratic corridor with unmarked doors, no signage, no windows. A single steampunk desk lamp casts soft blue light onto neatly stacked papers with no readable text. No humans present.
+   <div class="logo-container" aria-hidden="true">
+     <div class="logo-image">
+       <img src="../../_static/images/cde-logo.png" alt="">
+     </div>
+     <div class="logo-text">
+       <div class="display-heading">Civic Defence Establishment</div>
+       <p class="display-tagline">Aligned with the city's interests</p>
+     </div>
+   </div>
+   <hr class="logo-rule">
+
+Civic Defence Establishment
+===========================
 
 Ankh-Morpork's formal defensive body: mandate-driven, budget-bearing, and operating under a name that does not
 appear on any building. The Establishment monitors, hardens, trains, and analyses. It does not stop crimes.
@@ -12,18 +22,7 @@ It stops conditions.
    :maxdepth: 1
 
    about.md
-
-.. toctree::
-   :maxdepth: 1
-   :caption: The cycle:
-
    direction.md
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Worked example:
-
-   case-thread.md
 
 .. toctree::
    :maxdepth: 1
@@ -35,8 +34,9 @@ It stops conditions.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Other projects:
+   :caption: Active projects:
 
+   case-thread.md
    red-lantern/index
 
 
@@ -44,6 +44,6 @@ It stops conditions.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Initiate Knowledge Harvest</a>
+                <a href="https://tymyrddin.dev/contact/">Lodge an enquiry</a>
             </div>
         </div>

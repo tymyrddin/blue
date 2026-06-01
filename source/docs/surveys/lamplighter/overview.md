@@ -23,7 +23,7 @@ Nobody has asked what it covers beyond the city.
 
 Someone has been testing. Not breaking. Measuring.
 
-Small probes. Harmless-seeming experiments. The sort of thing (former) hackers recognise immediately
+Small probes and spikes. Harmless-seeming experiments. The sort of thing former hackers recognise immediately
 and never admit to out loud.
 
 The Civil Observers' Society noticed.
@@ -51,5 +51,5 @@ will know how close the city came to needing a different kind of stability arran
 
 The lamps will stay lit.
 
-According to [the Patrician](https://indigo.tymyrddin.dev/docs/vetinari/), this is the only
+According to [a document not in this directory](https://indigo.tymyrddin.dev/docs/vetinari/), this is the only
 acceptable definition of success.

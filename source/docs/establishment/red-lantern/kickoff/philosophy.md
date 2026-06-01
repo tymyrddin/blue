@@ -18,27 +18,27 @@ Reality in 2025:
 - Mistakes happen constantly
 - Insider threats exist
 
-Implication: Perfect prevention is impossible. Focus on reducing time-to-detection.
+Perfect prevention, then, is not on the table. The lever that is left is time-to-detection, and that is where the attention goes.
 
 ### Detection requires visibility
 
-You cannot detect what you cannot see.
+Nothing gets detected that nobody can see.
 
-Minimum viable visibility:
+Minimum worth having:
 
 - BGP UPDATE/WITHDRAW messages from multiple vantage points
 - Routing table snapshots
 - Configuration change logs
 - Authentication/access logs
 
-Better visibility:
+Better, where it can be had:
 
 - Network performance metrics (latency, jitter, loss)
 - NetFlow/IPFIX traffic analysis
 - RPKI validator state
 - Change management system integration
 
-Excellent visibility:
+Better still:
 
 - Synthetic monitoring from multiple locations
 - Honeypot prefixes (canaries)
@@ -47,9 +47,7 @@ Excellent visibility:
 
 ### Correlation over perfection
 
-Single signals are ambiguous. Correlation provides confidence.
-
-Examples:
+A single signal is ambiguous. Correlation is what turns it into confidence.
 
 | Signal            | Alone              | With correlation                    |
 |-------------------|--------------------|-------------------------------------|
@@ -57,7 +55,7 @@ Examples:
 | Latency spike     | Network congestion | + Subprefix announce = Interception |
 | Login from Russia | Remote worker      | + ROA deletion = Compromise         |
 
-Wazuh strategy:
+Mapping onto Wazuh:
 
 - Low-severity rules for single signals (level 3-7)
 - Medium-severity for suspicious patterns (level 8-10)
@@ -65,68 +63,65 @@ Wazuh strategy:
 
 ### False positives kill detection programs
 
-Alert fatigue is real. If every alert is "probably nothing," analysts stop caring.
+Alert fatigue is real, and unforgiving. Once every alert is "probably nothing", analysts stop reading them, and the one that mattered goes by with the rest.
 
-Managing false positives:
+Keeping false positives survivable:
 
-1. Tune thresholds - Latency spike at 100ms vs 200ms
-2. Use allow-lists - Known CDNs, anycast providers
-3. Require correlation - Don't alert on single ambiguous signal
-4. Test with legitimate changes - Does routine maintenance trigger alerts?
-5. Feedback loop - Analysts mark false positives, rules improve
+1. Tuned thresholds, a latency spike at 100ms versus 200ms
+2. Allow-lists for known CDNs and anycast providers
+3. Correlation, rather than an alert on a single ambiguous signal
+4. Testing against legitimate change, to see whether routine maintenance trips the wire
+5. A feedback loop, where analysts mark false positives and the rules learn
 
-Target rates:
+Rates worth aiming at:
 
-- Critical alerts (L12+): <1 false positive per month
-- High alerts (L10-11): <1 false positive per week
-- Medium alerts (L7-9): <5 false positives per day
-- Low alerts (L3-6): Informational, aggregated
+- Critical alerts (L12+): under 1 false positive per month
+- High alerts (L10-11): under 1 false positive per week
+- Medium alerts (L7-9): under 5 false positives per day
+- Low alerts (L3-6): informational, aggregated
 
-### Speed matters
+### Speed is the whole game
 
-Attack windows are short. Detection must be faster.
+Attack windows are short, and detection that arrives after them is history, not defence.
 
 Typical attack timelines:
 
 - Fat-finger hijack: 10-120 minutes
-- Subprefix interception: Hours to days
-- Control-plane attack: Hours (but impact can be minutes)
+- Subprefix interception: hours to days
+- Control-plane attack: hours (though the impact can land in minutes)
 
-Detection time targets:
+Where the time goes:
 
-- Signal generation: < 30 seconds (BGP feeds update frequently)
-- Rule evaluation: < 5 seconds (Wazuh is fast)
-- Alert delivery: < 30 seconds (email/webhook)
-- Human response time: Variable (this is your bottleneck)
+- Signal generation: under 30 seconds (BGP feeds update frequently)
+- Rule evaluation: under 5 seconds (Wazuh is fast)
+- Alert delivery: under 30 seconds (email/webhook)
+- Human response time: variable, and this is the bottleneck
 
-Total time from attack to human awareness: < 5 minutes for critical alerts
+From attack to a human knowing about it: under 5 minutes for critical alerts, on a good day.
 
 ### Attribution is hard, detection is not
 
-Do not conflate detection with attribution. Detection asks: "Did something suspicious happen?" Attribution asks: 
-"Who did it and why?"
+Detection and attribution are different questions, and conflating them is a common way to get stuck. Detection asks "did something suspicious happen?" Attribution asks "who did it, and why?"
 
-Example:
+- Detection: ROA deleted, RPKI state flipped, victim route rejected, caught in 2 minutes.
+- Attribution: insider? nation-state? supply chain? accident? possibly weeks or months, possibly never.
 
-- Detection: ROA deleted, RPKI state flipped, victim route rejected (DETECTED in 2 minutes)
-- Attribution: Was it insider? Nation-state? Supply chain? Accident? (May take weeks/months)
-
-Focus on detection first. Attribution is forensics, legal, and diplomatic work.
+Detection comes first. Attribution is forensics, legal, and diplomatic work, and it keeps.
 
 ### Assume breach
 
-If you're high-value, assume someone's already tried to compromise your routing.
+For anything high-value, the safer assumption is that someone has already had a go at the routing.
 
-Defensive assumptions:
+What that assumption implies:
 
 - Credentials are occasionally compromised
 - Insiders may be malicious
 - Supply chain is not fully trustworthy
 - Zero-days exist in routing platforms
 
-Implications:
+And so:
 
-- Defence in depth (not just perimeter)
-- Continuous monitoring (not just IDS)
-- Assume compromise detection, not just prevention
-- Honeytokens to detect unauthorized access
+- Defence in depth, not just a perimeter
+- Continuous monitoring, not just an IDS
+- Detection of compromise, not only its prevention
+- Honeytokens, to catch the access nobody authorised

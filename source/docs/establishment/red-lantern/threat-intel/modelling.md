@@ -1,12 +1,12 @@
 # Threat modelling
 
-Much like Lord Vetinari's approach to governing Ankh-Morpork, wherein one must understand all possible avenues of 
+Much like Lord Vetinari's approach to governing Ankh-Morpork, wherein one understands all possible avenues of 
 insurrection before they're attempted, threat modelling for BGP hijacking requires a methodical examination of how 
 miscreants might abuse the routing infrastructure. As Commander Vimes would observe, "If you know what the villains 
 are planning, you can be there with a nice cup of cocoa and some rather uncomfortable questions."
 
 The Red Lanterns project employs a comprehensive threat modelling framework to extract actionable intelligence from 
-[BGP simulator scenarios](https://github.com/ninabarzh/red-lantern-sim). Think of it as the City Watch's intelligence 
+[BGP simulator scenarios](https://github.com/tymyrddin/red-lantern-sim). Think of it as the City Watch's intelligence 
 gathering operation, but for network infrastructure.
 
 ## Overview
@@ -126,7 +126,7 @@ These represent the places where, had the City Watch been properly vigilant, the
 
 ### Automated extraction
 
-The [`threat_modeller.py`](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/threat-modelling/threat_modeller.py) tool automates scenario extraction:
+The [`threat_modeller.py`](https://github.com/tymyrddin/red-lantern-detection/blob/main/threat-modelling/threat_modeller.py) tool automates scenario extraction:
 
 ```python
 from threat_modeller import ScenarioThreatModelExtractor
@@ -519,7 +519,7 @@ Threat modelling isn't a one-time exercise:
 
 ## Tools and resources
 
-Threat Modeller: [`threat_modeller.py`](https://github.com/ninabarzh/dept-silent-stability/blob/main/red-lantern/threat-modelling/threat_modeller.py)
+Threat Modeller: [`threat_modeller.py`](https://github.com/tymyrddin/red-lantern-detection/blob/main/threat-modelling/threat_modeller.py)
 
 Required Python Packages: None (pure Python 3.12)
 
