@@ -91,7 +91,7 @@ After each real incident and each simulation, the post-incident review updates t
 structure: contacts checked, escalation paths confirmed, runbooks adjusted for what was
 learned. The loop is described in the post-incident runbook.
 
-For further guidance on building out the SIRT capability, [this SIRT documentation](https://purple.tymyrddin.dev/docs/secops/sirt/index.html)
+For further guidance on building out the SIRT capability, [this SIRT documentation](https://purple.tymyrddin.dev/docs/incident-response/sirt/)
 gives a short quick start on roles, structure, responsible disclosure, external partnerships, metrics, and the
 improvement loop in detail.
 

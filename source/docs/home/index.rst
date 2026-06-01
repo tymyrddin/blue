@@ -12,7 +12,7 @@ calendar reminder is often more important than the technical setup it is meant t
 
 Home networks have expanded considerably: shared devices, cloud-synced accounts, smart appliances, and mobile
 phones used for banking and authentication. Governments, schools, and employers have pushed more activity online.
-The security practice has not kept pace. The sections below cover the threat landscape, network and device
+The security practice has not kept pace: The threat landscape, network and device
 controls, cloud and mobile security, smart device considerations, and what to do when something goes wrong.
 
 .. toctree::
@@ -29,3 +29,10 @@ controls, cloud and mobile security, smart device considerations, and what to do
    proactive/index
 
 
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Even less complicated</a>
+            </div>
+        </div>

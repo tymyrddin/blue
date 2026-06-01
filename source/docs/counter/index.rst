@@ -28,3 +28,12 @@ Attacker techniques, defender's view. What to harden, what to detect, what to hu
    exfiltration/index
    impact/index
    friction
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">More moves?</a>
+            </div>
+        </div>

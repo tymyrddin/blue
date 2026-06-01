@@ -62,4 +62,4 @@ They sent the dragon an additional thank-you gift basket.
 ## Related
 
 - [Business continuity planning](https://purple.tymyrddin.dev/docs/risk-management/)
-- [DR scenario testing](https://purple.tymyrddin.dev/docs/choreographies/scenario-planning)
+- [DR scenario testing](https://purple.tymyrddin.dev/docs/continuity/)

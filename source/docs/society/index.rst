@@ -30,7 +30,6 @@ Civil Surveys. Nobody has formally clarified whether this is intentional.
    anvil/index
    sceptical-engine/index
 
-
 .. raw:: html
 
         <div class="page__article">

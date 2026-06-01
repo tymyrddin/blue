@@ -8,7 +8,7 @@ Active defence measures sit on a spectrum. IP auto-blocking and tarpitting are s
 almost everywhere. Counter-hacking is a different matter: tracking intruders back to their own systems
 crosses into territory that is illegal in most jurisdictions, regardless of provocation.
 
-This section covers the former: deception technology that makes attackers waste time, reveals their
+Deception technology that makes attackers waste time, reveals their
 techniques, and generates early warning. None of it requires breaking the law.
 
 .. toctree::
@@ -19,3 +19,12 @@ techniques, and generates early warning. None of it requires breaking the law.
    honeypots/index
    honeyclients/index
    honeyports/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Bait, not chase</a>
+            </div>
+        </div>

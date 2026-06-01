@@ -53,7 +53,7 @@ added to `~/.ssh/authorized_keys`. Alert fires immediately. Response: 12 minutes
 
 ## Related
 
-* [Integrated security operations](https://purple.tymyrddin.dev/docs/secops/)
+* [Integrated security operations](https://purple.tymyrddin.dev/docs/incident-response/soc/)
 
 ## Resources
 

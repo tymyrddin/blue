@@ -29,7 +29,6 @@ through the city. The name is accurate. Most of what it surveys is not.
    lamplighter/index
    watch-tower/index
 
-
 .. raw:: html
 
         <div class="page__article">

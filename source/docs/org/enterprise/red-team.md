@@ -63,4 +63,4 @@ the servers."
 ## Related
 
 - [Red wilds](https://red.tymyrddin.dev/)
-- [Colourful teaming](https://purple.tymyrddin.dev/docs/teaming/)
+- [Colourful teaming](https://purple.tymyrddin.dev/docs/purple/)

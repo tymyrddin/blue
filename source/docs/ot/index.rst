@@ -28,3 +28,12 @@ and ten incidents that document what the gap looks like when it is used.
    :caption: Boring but can be useful on occasion.
 
    mitre-attack-ics
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">More work than that?</a>
+            </div>
+        </div>

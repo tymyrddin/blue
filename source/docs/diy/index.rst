@@ -21,3 +21,12 @@ the security work themselves, usually through whoever is closest to the systems.
    containers/index
    access/index
    incidents/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Tiny bit of advice?</a>
+            </div>
+        </div>

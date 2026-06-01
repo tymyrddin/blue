@@ -51,5 +51,5 @@ The `production-db-passwords.txt` file is deleted, shredded, and its existence n
 
 ## Related
 
-- [SIRT formation with Carrot as incident commander](https://purple.tymyrddin.dev/docs/secops/sirt/)
+- [SIRT formation with Carrot as incident commander](https://purple.tymyrddin.dev/docs/incident-response/sirt/)
 - [Knowledge transfer and IR playbooks](https://purple.tymyrddin.dev/docs/knowledge-transfer/)

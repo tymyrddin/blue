@@ -4,7 +4,7 @@ Blue team for dev
 .. image:: /_static/images/devops.png
    :alt: DevOps complexity
 
-Welcome to the wild world of securing web applications, where every line of code is a potential backdoor, every
+In the wild world of securing web applications, every line of code is a potential backdoor, every
 dependency is a ticking time bomb, and somehow, Dave still has production access.
 
 DevSecOps is what happens when you realise that "security as an afterthought" is like putting a seatbelt on after
@@ -16,3 +16,12 @@ the car crash.
 
    appsec/index
    devsecops/index
+
+
+.. raw:: html
+
+        <div class="page__article">
+            <div class="page-post-card__link">
+                <a href="https://tymyrddin.dev/contact/">Forethought?</a>
+            </div>
+        </div>
