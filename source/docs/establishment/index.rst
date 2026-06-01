@@ -15,6 +15,12 @@ It stops conditions.
 
 .. toctree::
    :maxdepth: 1
+   :caption: The cycle:
+
+   direction.md
+
+.. toctree::
+   :maxdepth: 1
    :caption: Worked example:
 
    case-thread.md

@@ -55,6 +55,20 @@ threat pattern is the Quiet Room's output. What that pattern means is determined
 It does not investigate. An alert that appears to warrant investigation is passed upward with that
 observation noted. The investigation is not the Quiet Room's function.
 
+## The opinion it never forms
+
+Characterising and not interpreting is set out above as a limit on the function. It is also the function.
+Interpretation is where a judgement can be wrong, can be shown to be biased, can be asked to account for
+itself. The Quiet Room declines to form one. It establishes that a pattern is present and consistent,
+attaches a score reached by rule rather than by anyone's view, and passes the meaning upward for someone
+else to own. A reliability of 2 is a 2 by definition; no analyst chose it, so no analyst can be asked why.
+The procedure carries the weight a person would otherwise have to.
+
+Much of what passes through leaves no opinion behind it, which is closer to the design than to a shortfall.
+The room is quiet in the sense that little of what it does is loud enough to land on a record: signals
+arrive, are scored and routed or dropped, and the responsibility for what they mean comes to rest somewhere
+else. The competence is genuine. The deniability is the arrangement the competence serves.
+
 ## The logs that do not exist
 
 Suricata records network flows, and network flows contain IP addresses, which are personal data under
