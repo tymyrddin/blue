@@ -22,6 +22,6 @@ preparation.
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Initiate Knowledge Harvest</a>
+                <a href="https://tymyrddin.dev/contact/">Lay it bare</a>
             </div>
         </div>

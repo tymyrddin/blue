@@ -26,6 +26,6 @@ controlled laboratory conditions, and to enable discreet, responsible notificati
 
         <div class="page__article">
             <div class="page-post-card__link">
-                <a href="https://tymyrddin.dev/contact/">Deploy Universal Connector</a>
+                <a href="https://tymyrddin.dev/contact/">Press a print</a>
             </div>
         </div>
