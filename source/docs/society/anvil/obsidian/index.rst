@@ -1,8 +1,8 @@
 Obsidian Desk
 =====================================
 
-.. image:: /_static/images/anvil.png
-   :alt: A secretive industrial‑style workshop hidden in a Victorian‑steampunk city, glowing screens and mechanical contraptions everywhere, female engineers in trench coats and goggles examining circuit boards and firmware code, shelves full of PLCs, RTUs, smart home devices, and labelled firmware bins, copper pipes and gears, warm lamplight, shadows suggesting secrecy, digital schematics projected in mid-air, a sense of careful observation and quiet diligence
+.. image:: /_static/images/room-obsidian-desk.png
+   :alt: A forensic firmware analysis obsidian workbench in a small dedicated lab room at night, viewed at eye level.
 
 Research lab for safe, controlled extraction and analysis of firmware from industrial control systems and
 internet‑exposed smart devices. Supports attribution, static fingerprint generation, and responsible detection

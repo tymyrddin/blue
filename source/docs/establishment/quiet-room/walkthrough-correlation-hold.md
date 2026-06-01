@@ -107,16 +107,18 @@ commodity kit, or coincidence is not characterised here.
 
 ## Case record status
 
-| Field           | Value                                            |
-|-----------------|--------------------------------------------------|
-| Status          | Correlated, routed to Long Table                 |
-| MISP event      | QR-2026-0033 (tlp:amber, reliability 3)         |
-| Basis           | Two reliability 2 sensor events, correlated      |
-| Analyst review  | Completed same day                               |
+| Field          | Value                                       |
+|----------------|---------------------------------------------|
+| Status         | Correlated, routed to Long Table            |
+| MISP event     | QR-2026-0033 (tlp:amber, reliability 3)     |
+| Basis          | Two reliability 2 sensor events, correlated |
+| Analyst review | Completed same day                          |
 
 The combination is routed. Either event alone would have been held or dropped.
 
+```
 [^domain]: In the screenshot the domain reads `q<id>.city-payroll-portal.example`. The leading `q<id>`
     label changes between captures and carries no meaning for the case; the look-alike domain itself is
     `city-payroll-portal.example`. The prose stays generic because the prefix is an artefact of capture,
     not a feature of the finding.
+```

@@ -1,8 +1,8 @@
 Fingerprint Forge
 =====================================
 
-.. image:: /_static/images/anvil.png
-   :alt: A secretive industrial‑style workshop hidden in a Victorian‑steampunk city, glowing screens and mechanical contraptions everywhere, female engineers in trench coats and goggles examining circuit boards and firmware code, shelves full of PLCs, RTUs, smart home devices, and labelled firmware bins, copper pipes and gears, warm lamplight, shadows suggesting secrecy, digital schematics projected in mid-air, a sense of careful observation and quiet diligence
+.. image:: /_static/images/room-fingerprint-forge.png
+   :alt: A small civic workshop interior at night. The room serves two interrelated functions: making fingerprints, and using them. On the left, a card-making workstation with a small hand press and racks of small printed index cards arranged in numbered slots.
 
 To identify deployments of known‑vulnerable OT/ICS firmware on the public internet, using artefacts extracted in
 controlled laboratory conditions, and to enable discreet, responsible notification.
