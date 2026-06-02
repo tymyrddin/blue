@@ -2,7 +2,7 @@
 
 Four hunts for injection probe activity in web application logs: SQL injection, server-side
 template injection, path traversal and local file inclusion, and command injection. Detection
-from logs is a trailing indicator — the probe has already been sent — but it provides
+from logs is a trailing indicator (the probe has already been sent), but it provides
 attribution, timing, and scope that confirm whether a vulnerability reached an exploitable
 target.
 

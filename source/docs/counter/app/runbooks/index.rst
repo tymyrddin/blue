@@ -9,3 +9,4 @@ web application access logs.
 
    webapp-scan-hunt.md
    webapp-inject-hunt.md
+   webapp-exploit-hunt.md
