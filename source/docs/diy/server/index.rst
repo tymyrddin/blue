@@ -1,6 +1,9 @@
 Server hardening
 ================
 
+.. image:: /_static/images/infra.png
+   :alt: Infrastructure
+
 .. toctree::
    :maxdepth: 1
 

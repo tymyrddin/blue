@@ -1,6 +1,9 @@
 Mail security
 =============
 
+.. image:: /_static/images/mailserver.png
+   :alt: Mailserver
+
 .. toctree::
    :maxdepth: 1
 

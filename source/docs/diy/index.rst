@@ -1,20 +1,20 @@
 Servers without a security team
 ================================================
 
-Most incidents affecting small organisations are preventable.
+.. image:: /_static/images/serverroom.png
+   :alt: Serverroom
 
-.. toctree::
-   :maxdepth: 1
-
-   about
-   exposure
+Most incidents affecting startups and small engineering teams happen because of known, preventable things: credentials
+in configuration files, password authentication left enabled on SSH, software unpatched for months, services reachable
+from the internet that have no business being there.
 
 Teams running their own servers, web applications, mail, and containers without a dedicated security function carry
 the security work themselves, usually through whoever is closest to the systems.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
+   exposure
    server/index
    web/index
    mail/index
