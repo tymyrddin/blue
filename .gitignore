@@ -32,3 +32,4 @@ htmlcov/
 # Not the static site, will be generated on push
 build/
 _build
+source/_static/immaterial_cache/
