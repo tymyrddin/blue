@@ -23,6 +23,7 @@ It stops conditions.
 
    about.md
    direction.md
+   inferred-systems.md
 
 .. toctree::
    :maxdepth: 1

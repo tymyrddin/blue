@@ -8,9 +8,9 @@ Golem Trust Computing operates from a converted fish warehouse near the Shades i
 (former HEX operator at Unseen University) and Adora Belle Dearheart (postal systems expert) provide cloud hosting
 for the city's merchant guilds.
 
-They host critical systems for the Patrician's Office, the Royal Bank of Ankh-Morpork, and merchant guilds across
-the Circle Sea. All infrastructure runs on Hetzner Cloud in Finland. As much as possible is European
-and/or open source.
+They host critical systems for the Patrician's Office, the Civic Defence Establishment, the Royal Bank of Ankh-Morpork,
+and merchant guilds across the Circle Sea. All infrastructure runs on Hetzner Cloud in Finland. As much as possible is
+European and/or open source.
 
 .. toctree::
    :maxdepth: 2
