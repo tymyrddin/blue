@@ -80,3 +80,9 @@ or Event 7 from Sysmon) and in process creation logs.
 
 Dcsync, which replicates credential hashes over the directory replication protocol without
 touching the file, is covered in the Active Directory section.
+
+## Limiting the blast radius
+
+Detection tells you a dump happened; key design decides how much it was worth. A scoped key
+hierarchy, in which one compromised secret does not decrypt the rest, is built in
+[key hierarchy design](../../org/enterprise/runbooks/key-hierarchy-design.md).

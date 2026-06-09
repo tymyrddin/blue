@@ -146,3 +146,7 @@ zeek-cut id.orig_h id.orig_p id.resp_h id.resp_p proto duration \
 ```
 
 If the output is empty, either no traffic is reaching `eth1` or Zeek is not reading the interface. Check the port mirroring configuration (see the port mirroring runbook) and confirm that `eth1` is in promiscuous mode with `ip link show eth1`.
+
+## The defender's view
+
+A sensor is justified by what it lets you catch. The attacker behaviours these Zeek logs are built to surface, name-resolution poisoning, Kerberoasting, DNS tunnelling, host scanning, and lateral movement, are catalogued from the hunting side in [detecting network attacks](../../../counter/network/detection.md). Dr. Crucible wanted the catalogue; that page is what the catalogue gets read against.

@@ -23,7 +23,7 @@ often triggering Event 4740 (account lockout).
 
 ## Event sources
 
-**Domain account authentication** produces events on domain controllers:
+Domain account authentication produces events on domain controllers:
 
 - Event 4625: failed logon. The Status and SubStatus fields carry the failure reason.
   `0xC000006A` is the wrong password; `0xC0000064` is an unknown username; `0xC0000234`
@@ -38,12 +38,12 @@ often triggering Event 4740 (account lockout).
   a short window confirms an automated spray; the tool exceeded the lockout threshold
   before it could tune its pacing.
 
-**Local account authentication** and **RDP failures** produce Event 4625 on the targeted
+Local account authentication and RDP failures produce Event 4625 on the targeted
 machine rather than the domain controller. Remote Desktop brute force is a common initial
 access technique and appears as a high volume of Event 4625 with LogonType 10 from external
 IP ranges.
 
-**Web application and API authentication** abuse appears in application access logs rather
+Web application and API authentication abuse appears in application access logs rather
 than Windows Security events. The detection logic is the same but the field names differ;
 the app/ and api/ sections cover those patterns.
 
@@ -60,3 +60,11 @@ hours) and grouping by source IP exposes the spread even when the per-hour volum
 The Protected Users security group removes NTLM fallback and shortens Kerberos ticket
 lifetimes, which forces Kerberos preauthentication failures to appear in Event 4771 and
 makes spray attempts against those accounts more visible.
+
+## Closing the door
+
+Detection catches a spray in progress; it does not stop one succeeding. The controls that do
+that are identity-side: multi-factor authentication, lockout thresholds tuned to slow an
+attacker without locking out the workforce, and federated sign-in that keeps a domain
+authentication endpoint off the open road. Golem Trust Computing's build of that layer is in
+[Keycloak deployment](../../org/startup/runbooks/keycloak-deployment.md).

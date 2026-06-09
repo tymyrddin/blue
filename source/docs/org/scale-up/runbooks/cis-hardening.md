@@ -141,3 +141,7 @@ Some CIS Level 2 controls are not applied because they conflict with operational
 `auditd`: the Wazuh agent handles audit log collection. The `auditd` daemon's raw log files are redundant and are not configured separately.
 
 Ludmilla reviews the exceptions list quarterly and confirms the compensating controls remain in place.
+
+## The defender's view
+
+Hardening narrows the attack surface; it does not tell you when someone tests what remains. The cloud recon, initial-access, and misconfiguration-abuse patterns this baseline is meant to deny are catalogued from the hunting side in [cloud attack detection](../../../counter/cloud/detection.md).

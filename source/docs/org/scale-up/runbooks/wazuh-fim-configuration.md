@@ -154,3 +154,7 @@ An alert should appear in the dashboard within a few seconds under Integrity Mon
 ```
 rm /etc/wazuh-fim-test-*
 ```
+
+## The defender's view
+
+File integrity monitoring earns its keep against persistence. The techniques it is built to catch, planted files, modified configurations, and tampered scheduled tasks, are gathered in the [persistence hunting checklist](../../../counter/persistence/checklist.md).

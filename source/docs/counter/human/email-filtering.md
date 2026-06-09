@@ -126,3 +126,7 @@ message is quarantined before delivery. Three days later, the same macro arrives
 a password-protected ZIP file with the password in the email body. The sandbox does not attempt password
 extraction from the email body. The message is delivered with an external sender
 banner. The user opens the archive, enters the password, and enables the macro.*
+
+## Related
+
+- [How a resource-constrained NGO runs this filtering layer](../../ngo/m365/defender.md)

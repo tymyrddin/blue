@@ -66,3 +66,7 @@ is concrete and the behaviour change is simple.
 
 - [ENISA Threat Landscape](https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape)
 - [DMARC.org](https://dmarc.org/)
+
+## Related
+
+- [How a resource-constrained NGO enforces this](../../ngo/foundation/conditional-access.md)

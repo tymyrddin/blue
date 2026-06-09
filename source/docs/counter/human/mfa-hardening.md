@@ -121,3 +121,7 @@ are in place to detect them.
 - [COUNTERING SIM-SWAPPING (pdf)](https://www.enisa.europa.eu/sites/default/files/publications/ENISA_REPORT-Countering_SIM_Swapping.pdf)
 - [ENISA Threat Landscape](https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape)
 - [NIST SP 800-63 Digital Identity Guidelines](https://pages.nist.gov/800-63-4/)
+
+## Related
+
+- [How a resource-constrained NGO actually rolls this out](../../ngo/foundation/mfa.md)

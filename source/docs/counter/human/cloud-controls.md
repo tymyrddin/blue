@@ -74,3 +74,8 @@ persists until someone notices.*
 - [Microsoft: Tenant restrictions](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/tenant-restrictions)
 - [Google: Control which third-party apps access Google Workspace data](https://support.google.com/a/answer/7281227)
 - [ENISA Threat Landscape](https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape)
+
+## Related
+
+- [How a resource-constrained NGO controls SharePoint sharing](../../ngo/m365/sharepoint.md)
+- [How a resource-constrained NGO governs Teams](../../ngo/m365/teams.md)

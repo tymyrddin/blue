@@ -133,3 +133,9 @@ When an alert fires, establish: what did the identity access, what did it change
 indication that the initial credential acquisition was legitimate? If access was obtained through
 credential stuffing or from an unexpected source, rotate the credential, revoke active sessions, and
 review what was accessed in the window between first access and detection.
+
+## Closing the gaps
+
+Detection catches what the configuration let through. The preventive side, a hardened baseline and
+policies that refuse a bad deployment at the door, is built in [CIS hardening](../../org/scale-up/runbooks/cis-hardening.md)
+and [admission control](../../org/scale-up/runbooks/admission-controller.md).

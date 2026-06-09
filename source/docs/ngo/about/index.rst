@@ -19,6 +19,7 @@ twelve years and everyone has agreed, wordlessly and collectively, not to ask.
    :caption: Who we are and how we got here.
 
    about.md
+   across-the-disc.md
    real-world.md
    stacks.md
    asset-register.md

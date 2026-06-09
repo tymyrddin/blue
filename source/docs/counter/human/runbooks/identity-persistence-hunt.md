@@ -153,3 +153,9 @@ scopes: the filter catches everything matching those patterns, not only maliciou
 the entries worth investigating. Correlating the `PrincipalId` against the sign-in log
 and the application's registration date distinguishes a long-standing productivity tool
 from a recently registered application consented to during an active compromise.
+
+## Related
+
+- [Entra ID audit on a live tenant](../../../ngo/foundation/entra-id.md)
+- [Privileged access management on a live tenant](../../../ngo/foundation/privileged-access.md)
+- [Offboarding and access lifecycle on a live tenant](../../../ngo/foundation/offboarding.md)

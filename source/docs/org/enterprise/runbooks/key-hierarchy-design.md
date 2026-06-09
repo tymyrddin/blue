@@ -122,3 +122,7 @@ vault list transit/keys
 ```
 
 Each key's configuration is then inspected individually to verify the above constraints. The results are recorded in the quarterly compliance report that Otto prepares for Mr. Bent.
+
+## The defender's view
+
+A key hierarchy is a wager about what an attacker gets when they reach a host. The credential-dumping techniques it is meant to contain, from LSASS and the SAM to NTDS extraction, are set out in [credential dumping](../../../counter/creds/dumping.md).

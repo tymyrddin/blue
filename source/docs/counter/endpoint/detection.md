@@ -85,3 +85,9 @@ in the past 90 days. No individual fact is conclusive. The combination of a
 sensitive file, an unusual IP, an out-of-hours timestamp, and a peer group
 divergence is unlikely to describe a legitimate user, and that is what fires the
 alert.*
+
+## Standing up the sensor
+
+The endpoint telemetry these detections read, process creation, file access, authentication, and the
+behavioural baseline behind the example above, is collected by the Wazuh agent. Its deployment is in
+[Wazuh agent deployment](../../org/scale-up/runbooks/wazuh-agent-deployment.md).

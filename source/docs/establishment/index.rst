@@ -1,3 +1,6 @@
+Civic Defence Establishment
+===========================
+
 .. raw:: html
 
    <div class="logo-container" aria-hidden="true">
@@ -11,9 +14,6 @@
    </div>
    <hr class="logo-rule">
 
-Civic Defence Establishment
-===========================
-
 Ankh-Morpork's formal defensive body: mandate-driven, budget-bearing, and operating under a name that does not
 appear on any building. The Establishment monitors, hardens, trains, and analyses. It does not stop crimes.
 It stops conditions.
@@ -23,7 +23,12 @@ It stops conditions.
 
    about.md
    direction.md
-   inferred-systems.md
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Reference:
+
+   infra/index
 
 .. toctree::
    :maxdepth: 1

@@ -197,3 +197,7 @@ If Keycloak fails to start, the most common causes in order of frequency are:
 4. Port 8443 is already in use. `ss -tlnp | grep 8443`.
 
 Mr. Pump does not experience authentication failures. If the golem authentication provider is failing, see the golem authentication runbook.
+
+## The defender's view
+
+This layer earns its keep against a specific attack. Password spraying, credential stuffing, and brute force, and how each reads in the authentication logs, are covered in [password spraying, stuffing, and brute force](../../../counter/creds/spraying.md). The multi-factor authentication and lockout policy configured here are what turn a spray that finds a valid password into one that still fails.

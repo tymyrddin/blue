@@ -94,3 +94,4 @@ than subsequent ones. That is normal, and the point is not to be surprised by it
 - [Covenant](../applications/covenant.md)
 - [The Great Ledger](../applications/great-ledger.md)
 - [The Coven](../applications/the-coven.md)
+- [Hunting identity persistence and OAuth consent abuse](../../counter/human/runbooks/identity-persistence-hunt.md)

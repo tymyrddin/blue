@@ -10,3 +10,6 @@ traffic patterns.
    :includehidden:
 
    exfil-hunt.md
+   stego-image-analysis.md
+   stego-traffic-analysis.md
+   stego-exfiltration-investigation.md

@@ -209,3 +209,7 @@ When deploying these policies to an existing cluster:
 5. Monitor for unexpected blocks after each switch
 
 Do not switch all policies to `Enforce` simultaneously. If something breaks, it is easier to identify the cause when policies are switched one at a time.
+
+## The defender's view
+
+An admission policy decides what may run; detection decides whether something already did. The behaviours that slip past policy, recon, unexpected access, and post-deployment abuse, are covered from the hunting side in [cloud attack detection](../../../counter/cloud/detection.md).

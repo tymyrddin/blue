@@ -37,7 +37,7 @@ jq -r --arg id "$IDENTITY" --arg prefix "$RESOURCE_PATH" \
 ```
 
 Legitimate users access their own resources. An identity that reads hundreds of distinct
-order or account records — especially in sequential or alphabetically clustered patterns —
+order or account records, especially in sequential or alphabetically clustered patterns,
 is enumerating rather than browsing. BOLA is often silent: every request succeeds with
 `200`, nothing triggers rate limits, and no anomaly is visible in isolation.
 

@@ -137,3 +137,7 @@ kubectl rollout status daemonset/falco -n falco
 ```
 
 There will be a brief detection gap on each node as its pod restarts. Cheery from the security team keeps an eye on Graylog during upgrades to confirm alerts resume on each node after the pod comes back up.
+
+## The defender's view
+
+Falco is justified by what its rules catch. The container compromise patterns these rules are written against, runtime shell spawns, suspicious exec, and the escalation chains that cross into the Kubernetes API, are catalogued in [detecting container attacks](../../../counter/containers/detection.md).

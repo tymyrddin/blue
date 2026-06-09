@@ -71,3 +71,4 @@ kept longer for legal or operational reasons can be handled by exception.
 - [Security awareness](../awareness/index)
 - [The Coven](../applications/the-coven.md)
 - [Data protection and GDPR](../data/gdpr.md)
+- [Controlling cloud storage and OAuth exposure](../../counter/human/cloud-controls.md)

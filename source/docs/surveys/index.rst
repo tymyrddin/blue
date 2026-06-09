@@ -24,6 +24,12 @@ through the city. The name is accurate. Most of what it surveys is not.
 
 .. toctree::
    :maxdepth: 1
+   :caption: Reference:
+
+   infra/index
+
+.. toctree::
+   :maxdepth: 1
    :caption: Active projects:
 
    lamplighter/index

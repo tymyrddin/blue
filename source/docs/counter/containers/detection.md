@@ -130,3 +130,9 @@ calls alone are definitive; the sequence across both layers is.
 Correlating Kubernetes audit log events with Falco events requires a shared identifier.
 The pod name and namespace appear in both; a SIEM or log aggregator that joins on these
 fields across the two log sources makes the correlation practical.
+
+## Standing up the sensor
+
+The runtime signals above, shell spawns inside pods, unexpected exec, and drift from the image, are
+produced by Falco. Golem Trust Computing's deployment of it is in
+[Falco deployment](../../org/enterprise/runbooks/falco-deployment.md).

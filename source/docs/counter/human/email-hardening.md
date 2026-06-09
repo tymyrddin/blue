@@ -76,3 +76,7 @@ DKIM delegation to SaaS platforms gives those platforms signing authority for th
 - [RFC 8460: TLS-RPT](https://datatracker.ietf.org/doc/html/rfc8460)
 - [DMARC.org](https://dmarc.org/)
 - [dmarcian SPF surveyor](https://dmarcian.com/spf-survey/)
+
+## Related
+
+- [How a resource-constrained NGO configures this in Exchange Online](../../ngo/m365/exchange.md)

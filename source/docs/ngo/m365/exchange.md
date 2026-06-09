@@ -84,3 +84,4 @@ Microsoft Secure Score recommendation.
 - [Defender for Office 365](defender.md)
 - [Security awareness](../awareness/vectors/phishing.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
+- [Email delivery controls (SPF, DKIM, DMARC)](../../counter/human/email-hardening.md)

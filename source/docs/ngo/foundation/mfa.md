@@ -94,3 +94,4 @@ follow from it.
 - [Offboarding and access lifecycle](offboarding.md)
 - [GDPR obligations](../data/gdpr.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
+- [Hardening MFA against real-world attacks](../../counter/human/mfa-hardening.md)

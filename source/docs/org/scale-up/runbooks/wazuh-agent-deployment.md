@@ -163,3 +163,7 @@ Assign agents to groups:
 ```
 
 Group-specific configuration files are stored on the manager at `/var/ossec/etc/shared/<group-name>/`. When an agent checks in, it downloads the configuration for its assigned group.
+
+## The defender's view
+
+An agent is only as useful as the detections it feeds. The endpoint behaviours this telemetry is meant to surface, credential access, suspicious process activity, and user-behaviour anomalies, are set out in [detecting endpoint attacks](../../../counter/endpoint/detection.md).

@@ -69,3 +69,5 @@ cannot see.
 - [SharePoint and external sharing](sharepoint.md)
 - [Defender for Office 365](defender.md)
 - [Identity foundations](../foundation/entra-id.md)
+- [MFA rollout](../foundation/mfa.md)
+- [Conditional Access](../foundation/conditional-access.md)

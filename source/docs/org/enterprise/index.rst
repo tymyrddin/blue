@@ -13,6 +13,9 @@ Banking customers. Regulations. Advanced threats.
    kubernetes.md
    service-mesh.md
    encryption-reqs.md
+   quantum-threat.md
+   post-quantum.md
+   trends.md
    opa.md
    vuln-mgmnt.md
    bug-bounty.md

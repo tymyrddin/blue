@@ -34,26 +34,8 @@ Organisational dynamics, dressed in other clothes so they can be looked at squar
 
    docs/org/index
    docs/establishment/index
+   docs/circle-sea/index
    docs/surveys/index
    docs/society/index
    docs/ngo/index
-
-Crossing over
---------------------------------
-
-Blue is the controls. Purple is the threat modelling and the practices around it.
-
-.. toctree::
-   :maxdepth: 1
-
-   docs/purple-bridge
-
-B-sides
---------------------------------
-
-Older notes and lab writeups.
-
-.. toctree::
-   :maxdepth: 1
-
-   docs/archive/index
+   docs/scenarios/index

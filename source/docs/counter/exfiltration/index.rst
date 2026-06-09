@@ -15,6 +15,10 @@ is why exfiltration remains one of the hardest phases to catch in real time.
 
    trends.md
    detection.md
+   steganography.md
+   steganalysis.md
+   detecting-ai-stego.md
+   network-detection.md
    runbooks/index
 
 

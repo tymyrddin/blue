@@ -1,0 +1,67 @@
+# Exercise Quiet Yard
+
+The rented compute most of the Disc leans on has a bad morning. The golems answer slowly, then not at
+all. For a few hours, nobody who depends on the Trust can get a word in, and a great many institutions
+discover at the same moment how much of what they call their own runs in someone else's yard.
+
+## Who is in the room
+
+- [Golem Trust Computing](../org/index): the provider, and the yard the words are written in. Whatever
+  broke, broke here, and only the Trust can say why, when it can say anything.
+- [The Royal Bank](../org/scale-up/royal-bank.md): its ledgers run on Trust golems. A few hours of
+  silence from the Bank is a run waiting for a reason.
+- [The Civic Defence Establishment](../establishment/index): its open and low tiers sit on rented
+  golems. The sealed tier does not, which is suddenly the whole of the point.
+- [The Circle Sea Arrangement](../circle-sea/index): several allies hold their own custody on the Trust
+  as well. The standing argument about who holds the golem's word has become a continuity crisis none
+  of them chose this morning.
+- [The Home for Bewildered Beasts of Legend](../ngo/index): the outlier. It could never afford the
+  Trust and runs on a cheaper foreign tenant, so its lights stay on while the sovereign estate gropes
+  for a candle. Nobody finds this comfortable.
+
+## The first hours
+
+The Bank notices first, because the Bank always notices money first. Then the Establishment's
+public-facing services drop, one after another, in the order they were cheapest to rent. Allied desks
+that share the scheme go dark without explanation, which means the explanations start travelling by the
+old methods, on paper and at a run. The Trust's people in the Shades are calm and useless in equal
+measure: the word in the head is not responding, and a golem that will not hear its word is just a very
+expensive doorstop.
+
+The sealed tier keeps working. That is the only reassurance available, and it is also, retroactively,
+the entire justification for its cost. By midday the question has stopped being when the yard comes
+back, and become who knew it could go like this, and why the answer was filed rather than fixed.
+
+## Decision points
+
+- Who is told, and in what order: the Patrician, the Bank, the allies, the public? Each telling is a
+  thing that cannot be untold, and the order is itself a message.
+- Whether to fail over to the sovereign arrangement that has been announced three times and finished
+  none of them.
+- What an ally is owed when the thing that is down is the custody it trusted to the city's provider, and
+  whether the answer is different from what the city would expect in their place.
+- Whether to let the public believe it was weather, or admit that half the city ran through a single
+  yard in the Shades.
+
+## If it escalates
+
+- The word did not break. It was changed. Someone working under the Trust's own arrangements rewrote
+  it, and the outage is the cover rather than the event.
+- An ally's desk comes back up before the city's does, which raises the unwelcome thought that an
+  ally's keys were never as shared as the scheme always claimed.
+- The Bank's silence lasts long enough that the silence becomes the story, and the story is no longer
+  about compute at all.
+
+## The detail, if you want it
+
+- How the Trust is built to survive exactly this, and did not: [multi-region architecture](../org/scale-up/multi-region-architecture.md),
+  [failover automation](../org/scale-up/runbooks/failover-automation.md),
+  [GeoDNS](../org/scale-up/runbooks/geodns-configuration.md), and
+  [disaster recovery](../org/startup/runbooks/disaster-recovery.md).
+- Who actually holds the word, in concrete terms: [key hierarchy design](../org/enterprise/runbooks/key-hierarchy-design.md).
+- The standing argument this morning makes real: the Circle Sea [threat picture](../circle-sea/threats.md)
+  and the [lever](../circle-sea/members.md) it names.
+- Why the sealed tier kept running: [resilience](../establishment/infra/resilience.md) and
+  [communications and command](../establishment/infra/communications-and-command.md).
+- Why the Home, of all places, stayed up: [across the Disc](../ngo/about/across-the-disc.md).
+- The availability and impact techniques underneath it: [counter moves on impact](../counter/impact/index).

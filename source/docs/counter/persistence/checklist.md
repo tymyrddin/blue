@@ -183,3 +183,9 @@ SELECT proname, prosecdef, proowner::regrole FROM pg_proc WHERE prosecdef = true
 - CloudWatch log subscriptions forwarding to unexpected destinations
 - SSM Parameter Store values modified outside of normal deployment processes
 - Secrets Manager secrets accessed by unexpected IAM entities (check CloudTrail)
+
+## Watching for the changes
+
+Many of these persistence artefacts, modified configurations, planted files, and altered scheduled
+tasks, are file changes a host can be made to report on. Golem Trust Computing's File Integrity
+Monitoring build is in [Wazuh FIM configuration](../../org/scale-up/runbooks/wazuh-fim-configuration.md).

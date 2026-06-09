@@ -86,3 +86,4 @@ confirm it works.
 - [Conditional Access](conditional-access.md)
 - [Offboarding](offboarding.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
+- [Hunting identity persistence and OAuth consent abuse](../../counter/human/runbooks/identity-persistence-hunt.md)

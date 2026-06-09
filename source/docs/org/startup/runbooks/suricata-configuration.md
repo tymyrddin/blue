@@ -168,3 +168,7 @@ To confirm Suricata is processing rules, send a test request that matches a know
 ## Custom rules
 
 Custom rules for the Golem Trust context are maintained separately. See the custom rule development runbook for how they are written and loaded. Custom rules live in `/etc/suricata/rules/golemtrust.rules` and are loaded alongside the ET Open rules via the `suricata-update` local rules configuration.
+
+## The defender's view
+
+Suricata's alerts are worth only as much as the techniques behind them. The intrusion patterns this ruleset is meant to catch, and the detection logic that tells a real one from noise, are set out in [detecting network attacks](../../../counter/network/detection.md). Watch first, block when certain is an easier rule to hold when the watching is pointed at a known list.

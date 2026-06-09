@@ -88,3 +88,4 @@ it produces a picture of the problem and no movement toward addressing it.
 - [Offboarding and access lifecycle](offboarding.md)
 - [Covenant](../applications/covenant.md)
 - [The Great Ledger](../applications/great-ledger.md)
+- [Hunting identity persistence and OAuth consent abuse](../../counter/human/runbooks/identity-persistence-hunt.md)

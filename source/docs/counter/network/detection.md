@@ -69,3 +69,7 @@ Pass-the-hash and pass-the-ticket movement leaves authentication logs at both so
 - LSASS access events from processes that are not credential managers (Event ID 10 in Sysmon: process access to LSASS).
 
 The most reliable lateral movement detection correlates authentication success events with the network path: if a user authenticates to a server but no interactive session exists on the workstation attributed to that user at the time, the authentication is likely automated or relayed.
+
+## Producing the data
+
+The detection logic above assumes the events already exist, which is a build problem rather than an analytic one. Golem Trust Computing runs its network visibility on Zeek and Suricata; the taps, span ports, and rule tuning that produce the flow, DNS, and protocol data these alerts feed on are documented as part of the firm's own estate, in [Zeek deployment](../../org/startup/runbooks/zeek-deployment.md) and [Suricata configuration](../../org/startup/runbooks/suricata-configuration.md).

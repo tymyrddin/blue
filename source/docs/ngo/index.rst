@@ -9,6 +9,10 @@ by people who meant well and moved on. There are integrations nobody fully under
 that predates three governance cycles, and a Microsoft 365 tenant configured by whoever was
 available at the time. The volunteers are enthusiastic. The budget is not.
 
+It is also bigger than the Ankh-Morpork building suggests. The Home is the flagship of a network that
+reaches across the Disc, which is most of why a charity's data stewardship turns out not to be a small
+problem. How that came about, and who finds it quietly useful, is in :doc:`across the Disc <about/across-the-disc>`.
+
 .. toctree::
    :maxdepth: 1
    :caption: The stakes are real: 200,000 members, donors and supporters whose data needs stewarding.
