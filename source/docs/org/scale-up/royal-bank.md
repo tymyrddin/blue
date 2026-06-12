@@ -10,9 +10,9 @@ Ankh-Morpork is considering your services. However, we have certain... requireme
 He opens the portfolio and hands here a document. Adora Belle's eyes widen.
 
 - Section 47, subsection 12b: "No user shall have implicit trust on the production network. All access must be 
-explicitly granted, time-limited, and audited."
+  explicitly granted, time-limited, and audited."
 - Section 89, subsection 3a: "Network segmentation must prevent lateral movement. Compromising one system shall not 
-grant access to others."
+  grant access to others."
 - Section 103, subsection 7c: "All administrative sessions must be recorded and retained for seven years."
 
 "This," says Adora Belle after Mr. Bent leaves, "changes everything. We need a proper zero-trust architecture."

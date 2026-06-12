@@ -4,14 +4,14 @@ Campaigns, manoeuvres and scenarios
 .. image:: /_static/images/discworld-map.png
    :alt: Map of discworld
 
-The Fictional premises are the cast and the ground. Defence scenarios can play out across the Disc: a single shock
-followed through the institutions it touches, to the point where someone has to decide something they would
-rather not. Pages stay in-disc-world on purpose.
+Transition from a slow-burning fantasy crisis (like a Golem outage) into modern, technical blue-team incident
+response and serious countermoves.
 
 .. toctree::
    :maxdepth: 1
 
    golem-trust-outage.md
+   golem-trust-denial.md
 
 .. raw:: html
 

@@ -20,6 +20,17 @@ notices, recruitment, the annual report once it is out, all living on rented gol
 a default rather than a decision. The city's headcount is a fraction
 of a larger force's. The shape of the estate is not.
 
+The other end of the sentence exists as well. For the things that cannot live in the open, the
+city keeps the sealed tier: a handful of golems the body owns outright, their words written and
+kept in-house, in a cellar with no address. It replaces nothing at
+[Golem Trust Computing](../../org/index). The open rungs stay on rented golems, which carry the
+work better and at a price the ledger can survive; what the cellar adds is one further
+classification step above the steps that already exist, for the small body of material that
+cannot be allowed to depend on anyone else's yard. The price of the step is its size. A golem
+whose word has never left the building cannot be silenced from outside it. It also cannot be
+rented by the hour, which is why there are so few of them, and why nothing moves onto them
+without an argument.
+
 ## Defence business systems
 
 Below the administrative layer sits a defence-specific ecosystem, the part that would read, to an

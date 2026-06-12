@@ -6,35 +6,38 @@ discover at the same moment how much of what they call their own runs in someone
 
 ## Who is in the room
 
-- [Golem Trust Computing](../org/index): the provider, and the yard the words are written in. Whatever
+- [Golem Trust Computing](../org/index.rst): the provider, and the yard the words are written in. Whatever
   broke, broke here, and only the Trust can say why, when it can say anything.
 - [The Royal Bank](../org/scale-up/royal-bank.md): its ledgers run on Trust golems. A few hours of
   silence from the Bank is a run waiting for a reason.
-- [The Civic Defence Establishment](../establishment/index): its open and low tiers sit on rented
+- [The Civic Defence Establishment](../establishment/index.rst): its open and low tiers sit on rented
   golems. The sealed tier does not, which is suddenly the whole of the point.
-- [The Circle Sea Arrangement](../circle-sea/index): several allies hold their own custody on the Trust
+- [The Circle Sea Arrangement](../circle-sea/index.rst): several allies hold their own custody on the Trust
   as well. The standing argument about who holds the golem's word has become a continuity crisis none
   of them chose this morning.
-- [The Home for Bewildered Beasts of Legend](../ngo/index): the outlier. It could never afford the
+- [The Home for Bewildered Beasts of Legend](../ngo/index.rst): the outlier. It could never afford the
   Trust and runs on a cheaper foreign tenant, so its lights stay on while the sovereign estate gropes
   for a candle. Nobody finds this comfortable.
 
 ## The first hours
 
-The Bank notices first, because the Bank always notices money first. Then the Establishment's
+The Bank notices first, because the Bank always notices first. It's about money. Then the Establishment's
 public-facing services drop, one after another, in the order they were cheapest to rent. Allied desks
 that share the scheme go dark without explanation, which means the explanations start travelling by the
 old methods, on paper and at a run. The Trust's people in the Shades are calm and useless in equal
 measure: the word in the head is not responding, and a golem that will not hear its word is just a very
 expensive doorstop.
 
-The sealed tier keeps working. That is the only reassurance available, and it is also, retroactively,
-the entire justification for its cost. By midday the question has stopped being when the yard comes
-back, and become who knew it could go like this, and why the answer was filed rather than fixed.
+The sealed tier keeps working, because it was never in the yard: a handful of golems the
+Establishment owns outright, their words written and kept in-house, in a cellar with no address.
+That is the only reassurance available, and it is also, retroactively, the entire justification for
+its cost. Nobody suggests moving anything else onto it. It is sealed, and small, for the same
+reasons it is still up. By midday the question has stopped being when the yard comes
+back, and becomes who knew it could go like this, and why the answer was filed rather than fixed.
 
 ## Decision points
 
-- Who is told, and in what order: the Patrician, the Bank, the allies, the public? Each telling is a
+- Who is told by whom, and in what order: the Patrician, the Bank, the allies, the public? Each telling is a
   thing that cannot be untold, and the order is itself a message.
 - Whether to fail over to the sovereign arrangement that has been announced three times and finished
   none of them.
@@ -42,6 +45,14 @@ back, and become who knew it could go like this, and why the answer was filed ra
   whether the answer is different from what the city would expect in their place.
 - Whether to let the public believe it was weather, or admit that half the city ran through a single
   yard in the Shades.
+
+What waiting buys: nothing that keeps. Every hour without an account from the city is an hour in which someone else's
+account hardens, and the elses available today include foreign desks, a cheerfully unaffected Home for
+Bewildered Beasts, and a Bank whose counterparties do not wait for facts when absences will do. 
+
+The weather story expires at the speed of witnesses, and this particular morning has been minting witnesses since 
+breakfast. After it expires, the question on the table is no longer what broke, which was survivable, but who decided 
+the city should hear about the sky instead, which is not.
 
 ## If it escalates
 
@@ -58,10 +69,12 @@ back, and become who knew it could go like this, and why the answer was filed ra
   [failover automation](../org/scale-up/runbooks/failover-automation.md),
   [GeoDNS](../org/scale-up/runbooks/geodns-configuration.md), and
   [disaster recovery](../org/startup/runbooks/disaster-recovery.md).
-- Who actually holds the word, in concrete terms: [key hierarchy design](../org/enterprise/runbooks/key-hierarchy-design.md).
+- Who actually holds the word, in concrete
+  terms: [key hierarchy design](../org/enterprise/runbooks/key-hierarchy-design.md).
 - The standing argument this morning makes real: the Circle Sea [threat picture](../circle-sea/threats.md)
   and the [lever](../circle-sea/members.md) it names.
-- Why the sealed tier kept running: [resilience](../establishment/infra/resilience.md) and
+- Why the sealed tier kept running: [the clerical estate](../establishment/infra/enterprise-and-business.md),
+  [resilience](../establishment/infra/resilience.md), and
   [communications and command](../establishment/infra/communications-and-command.md).
 - Why the Home, of all places, stayed up: [across the Disc](../ngo/about/across-the-disc.md).
-- The availability and impact techniques underneath it: [counter moves on impact](../counter/impact/index).
+- The availability and impact techniques underneath it: [counter moves on impact](../counter/impact/index.rst).
