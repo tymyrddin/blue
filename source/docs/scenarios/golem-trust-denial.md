@@ -6,7 +6,7 @@ come back unheard. No smoke, no failure, no weather to blame. Somewhere in the T
 is an instruction, properly sealed, and one man's account has been closed the way a clerk closes
 an account: quietly, correctly, and on purpose.
 
-## In the room
+## At the counter
 
 - [Golem Trust Computing](../org/index.rst): the provider. Its yard is healthy and its paperwork is in
   order, and this morning both of those are the problem rather than the reassurance.
@@ -66,7 +66,7 @@ anyone whose life's work lives in the yard. The lever worked because it was neve
 once, visibly, and on one name, it converts from leverage into a reason, and reasons are the one
 thing sovereignty projects have always lacked more than funds.
 
-## If it escalates
+## If it hardens
 
 - The seal is genuine and nobody in the city issued it. Someone has learned to write instructions
   through the Trust's own arrangements, and the lever the city stands accused of pulling turns out
@@ -116,17 +116,17 @@ department, chartered to do what the Trust does, badly at first, on Fungolian so
 None of it is announced as a consequence, and all of it is one. The Trust keeps the contract and
 loses the future, one unrenewed service at a time. The city keeps the lever and learns what a
 lever costs once it has been seen: every member that can afford a cellar digs one, every member
-that cannot subsidises somebody who might, and the dependency the arrangement quietly rested on is
+that cannot, subsidises somebody who might, and the dependency the arrangement quietly rested on is
 walked back by the ally with the most legitimate access and the longest memory. Whether the city
 ever pulled the lever has stopped being the question. It paid for the demonstration either way.
 
-## The detail, if you want it
+## Behind the seal
 
 - The lever, named long before it was pulled: the Circle Sea [threat picture](../circle-sea/threats.md)
   and the [members page](../circle-sea/members.md) that spells out whose gift it sits in.
-- What barred means in concrete terms, and who holds the word:
+- Barred, in concrete terms, and where the word sits:
   [key hierarchy design](../org/enterprise/runbooks/key-hierarchy-design.md).
-- Why the Establishment keeps a cellar nobody can close from outside:
+- The cellar the Establishment keeps, that nobody can close from outside:
   [the clerical estate](../establishment/infra/enterprise-and-business.md) and
   [resilience](../establishment/infra/resilience.md).
 - The impact family underneath it, where the systems work perfectly and decline to admit you:

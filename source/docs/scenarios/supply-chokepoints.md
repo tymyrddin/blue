@@ -1,6 +1,6 @@
 # Manoeuvre Narrow Margin
 
-The city does not end at its gates. Its survival is written in five hundred miles of turnpike, three
+The city does not end at its gates. Its survival is written in five hundred miles of motorway, three
 deep-water river mouths, and a single mountain pass where the carriage axles run hot. To cripple it,
 an adversary need not guess a password or poison a ledger. They need only arrange that three physical
 things cannot pass each other in a narrow space.
@@ -25,7 +25,7 @@ things cannot pass each other in a narrow space.
 It begins as administrative friction. A timber wagon breaks its rear axle on the Ramtop high road,
 exactly where the cutting narrows to twelve feet. Three hours later a barge of low-grade tallow
 grounds itself on a mudbank in the Ankh, across the deep-water channel. By evening a routine customs
-inspection at the turnpike slows to a crawl, because the paperwork requirement was quietly amended by
+inspection at the motorway slows to a crawl, because the paperwork requirement was quietly amended by
 an anonymous ministerial circular three days ago.
 
 The logs read as unfortunate coincidence and local traffic management. Then the pattern lines up. The
@@ -64,7 +64,7 @@ every purpose the adversary has, a supply line that has been cut.
   choose this morning to rediscover ancient powers to levy their own tolls, turning a foreign
   sabotage into a domestic windfall nobody will want to give back.
 
-## The detail, if you want it
+## Along the road
 
 - The impact family this opens: [when geography is the wall](../counter/impact/chokepoints.md).
 - The redundancy that does nothing until the morning it is everything:

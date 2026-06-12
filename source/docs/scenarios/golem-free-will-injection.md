@@ -81,13 +81,13 @@ right is an hour not spent asking who wrote the words they are reading from.
   labour back. The Trust loses the thing that made it the Trust, which is a different exercise again,
   and a slower one: [Campaign Closed Account](golem-trust-denial.md).
 
-## The detail, if you want it
+## Into the clay
 
-- How a trusted update becomes the attack, and what watching the supply chain asks of a body:
+- A trusted update turned into the attack, and the watch the supply chain asks for:
   [counter moves on the supply chain](../counter/app/supply-chain.md).
-- Who actually holds the word, in concrete terms:
+- Where the word actually sits, in concrete terms:
   [key hierarchy design](../org/enterprise/runbooks/key-hierarchy-design.md).
-- The reach that became the route, and why the Home's quiet ubiquity is its asset and its liability
+- The reach that became the route: the Home's quiet ubiquity, its asset and its liability
   at once: [across the Disc](../ngo/about/across-the-disc.md).
 - The impact families underneath it: [integrity](../counter/impact/integrity.md), where the workers
   are rewritten, and [availability](../counter/impact/availability.md), where the hands fold.

@@ -1,7 +1,7 @@
 # Exercise Dark Turbine
 
 The cleanest kill is the one where the machine destroys itself on its own momentum. By working the
-timing differences between the mismatched controllers in a multi-vendor plant, an adversary nudges
+timing differences between the mismatched controllers in a multivendor plant, an adversary nudges
 the rotational synchronisation of the city's main generators out of true. Nothing is deleted. The
 steel is simply persuaded to chew through its own bearings.
 
@@ -25,7 +25,7 @@ steel is simply persuaded to chew through its own bearings.
 
 The first sign is acoustic, not digital. Senior mechanics notice a harmonic groan in the foundations
 of the turbine house, a frequency with no natural source. On the monitors the generator speed wanders
-by less than half a percent, and the tools file it as routine load balancing.
+by less than half a per cent, and the tools file it as routine load balancing.
 
 The language changes when the first bearing housing shears through four inches of dwarven iron. The
 latency logs show out-of-phase synchronisation commands sent to individual controllers at precisely
@@ -57,7 +57,7 @@ enough to name, the bearings have already paid for it.
   arrays during the first hour's housekeeping, so the instant the main grid drops and the backups
   take the load, they enter the same self-destructive rhythm and tear themselves apart on cue.
 
-## The detail, if you want it
+## Into the bearings
 
 - Driving rotating machinery past itself, and wrecking plant on purpose:
   [Stuxnet](../ot/incidents/stuxnet.md) and [Predatory Sparrow](../ot/incidents/predatory-sparrow.md).

@@ -67,13 +67,13 @@ records out the door.
 - The weather covered the exit. The network slowdown during the leak was explained, helpfully, as bad
   weather on the Trunk, so the city spent a day using the sky to hide the adversary's tracks.
 
-## The detail, if you want it
+## Inside the archive
 
 - The impact family this belongs to, where your own posture is the threat:
   [administrative hijack](../counter/impact/administrative-hijack.md).
 - The other posture in the same family, the rules turned into a lockdown rather than the tools into a
   courier: [Exercise Clean Slate](compliance-lockdown.md).
-- Why the sealed tier was the one thing the backup could not reach:
+- The sealed tier, the one thing the backup could not reach:
   [the clerical estate](../establishment/infra/enterprise-and-business.md), and the morning that
   proved the point, [Exercise Quiet Yard](golem-trust-outage.md).
 - Watching native tools do un-native things, and data being staged and moved:

@@ -59,7 +59,7 @@ The calm screens buy time, while the room argues whether it is being lied to. Ev
 debating sensor calibration is an hour the iron spends past its tolerances, and the cleanest version
 of this attack never has to do anything except keep the screens calm.
 
-## If it escalates
+## If the iron wins
 
 - The logic is in the firmware. The intruder did not merely send bad setpoints; they used the
   engineering access to flash the remote units, so a reboot reloads the attack from local memory and
@@ -70,7 +70,7 @@ of this attack never has to do anything except keep the screens calm.
   violet sparks into the noon sky, which makes the supply-line explanation look like exactly what it
   is.
 
-## The detail, if you want it
+## Down to the iron
 
 - The provider, and the doors into its iron: [Unseen University Power and Light](https://red.tymyrddin.dev/docs/power/),
   in particular the [engineering workstation](https://red.tymyrddin.dev/docs/power/exploitation/runbooks/uupl-eng-ws.html)

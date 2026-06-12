@@ -82,14 +82,14 @@ the city has spent two days assembling the case against itself.
 - The weather story holds so well that the city notices it would prefer to keep it, and the question
   stops being who darkened the Trunk and becomes who decided to tell the public about the sky.
 
-## The detail, if you want it
+## Down the wire
 
-- What rides the Trunk and what was built to survive a tower going dark:
+- Riding the Trunk, and the layer built to survive a tower going dark:
   [communications and command](../establishment/infra/communications-and-command.md).
 - The standing question this morning makes real, named in the city's own planning:
-  [Direction](../establishment/direction.md), on who reads the Grand Trunk and who could darken a
+  [Direction](../establishment/direction.md), on reading the Grand Trunk, and who could darken a
   tower.
-- Who reads the traffic, and why that is the awkward part of saying so:
+- Reading the traffic, and the awkward part of saying so:
   [collection](../surveys/infra/collection.md).
 - The availability techniques underneath it, and the containment that follows:
   [availability under attack](../counter/impact/availability.md) and

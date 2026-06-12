@@ -61,7 +61,7 @@ is the one the victim chooses freely on excellent-looking evidence.
 ## The ghost hardens
 
 - The goal was never the war. It was the reaching for it: the spent reserves, the named enemy, the
-  posture that cannot be quietly withdrawn once an ally has seen it. The demonstration is the city
+  posture that cannot be quietly withdrawn, once an ally has seen it. The demonstration is the city
   acting on its own corrupted certainty.
 - The ghost outlives its own exposure. Proving the data false tomorrow does not recall the posture
   taken today, and the hawkish allies who saw the threat argue that a forgery proves something about
@@ -82,9 +82,9 @@ is the one the victim chooses freely on excellent-looking evidence.
   Disc's human terrain turned into a list of people to find. The feed was always the Home's value and
   its danger. Lost this way, it is the people who pay, not the city.
 
-## The detail, if you want it
+## Under the readings
 
-- The Survey as the thing worth steering, and why twelve numbered copies are tracked:
+- The Survey as the thing worth steering, and the reason twelve numbered copies are tracked:
   [the State of the City Survey](../surveys/about.md).
 - The feed, the reach, and the exposure that comes with it:
   [across the Disc](../ngo/about/across-the-disc.md).

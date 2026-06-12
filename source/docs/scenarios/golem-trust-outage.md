@@ -68,7 +68,7 @@ The weather story expires at the speed of witnesses, and this particular morning
 breakfast. After it expires, the question on the table is no longer what broke, which was survivable, but who decided 
 to tell the city about the sky instead, which is not.
 
-## If it escalates
+## When it deepens
 
 - The word did not break. It was changed. Someone working under the Trust's own arrangements rewrote
   it, and the outage is the cover rather than the event.
@@ -85,20 +85,20 @@ to tell the city about the sky instead, which is not.
   is repriced by sundown, and the adversary has ruined a balance sheet without touching a coin, only
   by pausing the ledger long enough for everyone to see that it could be paused.
 
-## The detail, if you want it
+## Inside the yard
 
-- How the Trust is built to survive exactly this, and did not: [multi-region architecture](../org/scale-up/multi-region-architecture.md),
+- The architecture built to survive exactly this, and that did not: [multi-region architecture](../org/scale-up/multi-region-architecture.md),
   [failover automation](../org/scale-up/runbooks/failover-automation.md),
   [GeoDNS](../org/scale-up/runbooks/geodns-configuration.md), and
   [disaster recovery](../org/startup/runbooks/disaster-recovery.md).
-- Who actually holds the word, in concrete
+- Where the word actually sits, in concrete
   terms: [key hierarchy design](../org/enterprise/runbooks/key-hierarchy-design.md).
 - The standing argument this morning makes real: the Circle Sea [threat picture](../circle-sea/threats.md)
   and the [lever](../circle-sea/members.md) it names.
-- Why the sealed tier kept running: [the clerical estate](../establishment/infra/enterprise-and-business.md),
+- The sealed tier that kept running: [the clerical estate](../establishment/infra/enterprise-and-business.md),
   [resilience](../establishment/infra/resilience.md), and
   [communications and command](../establishment/infra/communications-and-command.md).
-- Why the Home, of all places, stayed up: [across the Disc](../ngo/about/across-the-disc.md). 
-- What a few hours of silence does to a ledger, and the counterparties who do not wait for facts: [the Royal Bank](../org/scale-up/royal-bank.md).
+- The Home staying up, of all places: [across the Disc](../ngo/about/across-the-disc.md). 
+- A few hours of silence on a ledger, and the counterparties who do not wait for facts: [the Royal Bank](../org/scale-up/royal-bank.md).
 - The impact families underneath it: [concentration](../counter/impact/concentration.md), the
   dependency, and [availability](../counter/impact/availability.md), the outage it became.

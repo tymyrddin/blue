@@ -67,7 +67,7 @@ gates until it starves, slowly, in perfect and fully certified compliance.
 - The Bank exports the freeze. Its compliance engines stop international transfers to unaligned hubs,
   and an internal over-configuration becomes a regional credit freeze nobody ordered.
 
-## The detail, if you want it
+## Behind the rules
 
 - The impact family this belongs to, where your own posture is the threat:
   [administrative hijack](../counter/impact/administrative-hijack.md).

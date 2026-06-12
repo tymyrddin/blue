@@ -1,6 +1,9 @@
 # When the network is the target
 
-The crisis that dramatises this: [Operation Foul Weather](../../scenarios/clacks-routing-attack.md).
+The crises that dramatise this: [Operation Foul Weather](../../scenarios/clacks-routing-attack.md)
+head-on, with [Exercise Quiet Yard](../../scenarios/golem-trust-outage.md) and
+[Operation Idle Hands](../../scenarios/golem-free-will-injection.md) arriving at the same loss from
+their own families.
 
 Most availability planning assumes the failure announces itself. A line goes dead, an alarm sounds,
 a runbook opens. A harder case is the line that stays up and lies. Traffic is not stopped so much as

@@ -1,7 +1,8 @@
 # When nothing breaks but everything lies
 
-The crises that dramatise this: [Campaign Poisoned Well](../../scenarios/poisoned-survey-data.md)
-and [Operation Idle Hands](../../scenarios/golem-free-will-injection.md).
+The crises that dramatise this: [Campaign Poisoned Well](../../scenarios/poisoned-survey-data.md),
+[Operation Idle Hands](../../scenarios/golem-free-will-injection.md), and
+[Exercise Heavy Water](../../scenarios/power-telemetry-falsification.md), the last of them on the iron.
 
 The most expensive impact can leave the infrastructure running perfectly. Nothing is encrypted,
 nothing is deleted, and every system reports green. What has changed is the data or the instructions
