@@ -69,7 +69,9 @@ records out the door.
 
 ## Inside the archive
 
-- The impact family this belongs to, where your own posture is the threat:
+- The impact family this belongs to, the whole archive copied out while the city's own tools carried it:
+  [when nothing breaks and the secret is already gone](../counter/impact/confidentiality.md).
+- The method, where your own posture is the threat:
   [administrative hijack](../counter/impact/administrative-hijack.md).
 - The other posture in the same family, the rules turned into a lockdown rather than the tools into a
   courier: [Exercise Clean Slate](compliance-lockdown.md).

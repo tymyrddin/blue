@@ -1,14 +1,17 @@
 # When your own posture is the threat
 
-The crises that dramatise this: [Exercise Clean Slate](../../scenarios/compliance-lockdown.md) and
-[Campaign Living Archive](../../scenarios/continuity-exfiltration.md).
+The crises that dramatise this: [Exercise Clean Slate](../../scenarios/compliance-lockdown.md),
+[Campaign Living Archive](../../scenarios/continuity-exfiltration.md),
+[Operation Shadow Protocol](../../scenarios/ipv6-autoconfig-takeover.md), and
+[Operation DHCP Deception](../../scenarios/dhcp-route-poisoning.md).
 
 Every other impact family involves the adversary bringing something: a payload, a stolen key, a
 blocked road. This one involves bringing nothing. The attacker studies the organisation's structural
 habits, finds the systems trusted implicitly, and changes a destination or a threshold. It is living
 off the land scaled up from the single host to the whole institution: where the tactical version
 abuses a built-in binary to avoid dropping malware, the strategic version abuses a policy, a mandate,
-or a maintenance window, and lets a perfectly compliant, heavily automated bureaucracy do the work.
+a maintenance window, or the network's own autoconfiguration, and lets a perfectly compliant, heavily
+automated estate do the work.
 Nothing fires, because nothing is wrong in the only sense the monitoring understands wrong.
 
 ## The shape of it

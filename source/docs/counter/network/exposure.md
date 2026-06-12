@@ -94,4 +94,63 @@ For enterprise wireless using 802.1X, clients validate the RADIUS server certifi
 
 BCP 38 egress filtering at network boundaries drops packets with source addresses that do not belong to the originating prefix, preventing IP spoofing across provider boundaries. Applying equivalent controls at internal segment boundaries extends this protection inward.
 
-Restrict BGP announcements to authorised prefixes via route filter policies. RPKI ROAs published for all announced prefixes allow downstream networks to reject invalid route announcements via BGPsec-capable routers.
+## BGP origin validation
+
+A route-origin hijack works because the routing system trusts whatever a registry announces. Two controls answer it, one on the announcing side and one on the receiving side.
+
+On the announcing side, every prefix an organisation originates is covered by a published Route Origin Authorisation (ROA) in the RPKI, binding the prefix to its legitimate origin AS and a maximum prefix length. A ROA with a tight `maxLength` denies an attacker the more-specific announcement, a /24 carved out of an announced /20, that wins the route by being longer.
+
+On the receiving side, Route Origin Validation (ROV) drops or de-preferences any route whose origin the RPKI marks invalid, before it can become the preferred path. ROV depends on a local validator (Routinator, OctoRPKI, or `rpki-client`) feeding validated payloads to the routers over RTR.
+
+```
+! Cisco IOS-XR: validate against RPKI and let invalids lose path selection
+router bgp 65000
+ rpki server 10.0.0.2
+  transport tcp port 3323
+ address-family ipv4 unicast
+  bgp bestpath origin-as use validity
+```
+
+Inbound prefix filters and a maximum-prefix limit per peer bound the damage where validation is unavailable: a peer that suddenly announces far more prefixes than its baseline, or a prefix outside an agreed list, is refused rather than accepted.
+
+```
+! Cisco IOS: per-peer guards
+router bgp 65000
+ neighbor 192.0.2.1 prefix-list CUSTOMER-IN in
+ neighbor 192.0.2.1 maximum-prefix 500 90 restart 30
+```
+
+## IPv6 first-hop security
+
+IPv6 address autoconfiguration trusts the local segment by default: a host accepts the first Router Advertisement it hears, including the gateway, the on-link prefix, and, where the RDNSS option is present, the resolver it names. A rogue RA or a rogue DHCPv6 server on the segment therefore reroutes traffic or redirects name resolution with no exploit at all. The controls below restore the IPv4-equivalent first-hop protections to IPv6, which dual-stack networks frequently leave off.
+
+RA Guard drops Router Advertisements on access ports, permitting them only on the ports where the legitimate routers live.
+
+```
+! Cisco IOS: RA Guard on host-facing ports
+ipv6 nd raguard policy HOST-PORTS
+ device-role host
+interface GigabitEthernet0/1
+ ipv6 nd raguard attach-policy HOST-PORTS
+```
+
+DHCPv6 Guard does the same for DHCPv6, dropping server-sourced messages (Advertise, Reply) on ports that are not the authorised server's.
+
+```
+! Cisco IOS: DHCPv6 Guard on host-facing ports
+ipv6 dhcp guard policy HOST-PORTS
+ device-role client
+interface GigabitEthernet0/1
+ ipv6 dhcp guard attach-policy HOST-PORTS
+```
+
+IPv6 Snooping builds a binding table of legitimate address-to-port mappings from observed NDP and DHCPv6, the IPv6 equivalent of DHCP snooping, and is the foundation the guards and any source-guard policy rest on.
+
+```
+! Cisco IOS: IPv6 snooping
+ipv6 snooping policy SNOOP
+interface GigabitEthernet0/1
+ ipv6 snooping attach-policy SNOOP
+```
+
+Where the switching layer cannot enforce these, host RA acceptance can be constrained to a known link-local gateway, but dropping the rogue advertisement at the port is the stronger control.

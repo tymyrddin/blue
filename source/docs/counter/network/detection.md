@@ -70,6 +70,32 @@ Pass-the-hash and pass-the-ticket movement leaves authentication logs at both so
 
 The most reliable lateral movement detection correlates authentication success events with the network path: if a user authenticates to a server but no interactive session exists on the workstation attributed to that user at the time, the authentication is likely automated or relayed.
 
+## BGP route-origin hijack detection
+
+A route-origin hijack is visible the moment it propagates, because routing is public: the organisation's own prefixes begin appearing in the global table with an origin AS that is not theirs, or as a more-specific announcement that did not exist yesterday. The data comes from the routers' own BGP tables and from public route collectors (RIPE RIS, RouteViews) or a monitoring service, compared against the organisation's known-good origins.
+
+Alert when:
+
+- A prefix the organisation originates appears in the global table from a different origin AS (a multiple-origin-AS, or MOAS, conflict).
+- A more-specific prefix, a /24 inside an announced /20, appears for address space the organisation announces only in aggregate.
+- A route the local RPKI validator marks invalid is present in, or selected from, the BGP table.
+- An announcement for the organisation's space appears and withdraws within minutes, consistent with a short interception window.
+
+A local validator makes the third check enforceable rather than observational. The first two need a feed of the global table, since a hijack of the organisation's prefixes may never traverse its own routers at all.
+
+## IPv6 first-hop attack detection
+
+Rogue Router Advertisements and rogue DHCPv6 servers announce themselves on the segment by their nature, which makes them detectable wherever ICMPv6 and DHCPv6 are observed: a span port feeding Zeek or `tshark`, the switch's own RA Guard and DHCPv6 Guard drop counters, or a dedicated monitor such as `ndpmon`. The baseline is the set of MAC and link-local addresses that legitimately act as router and DHCPv6 server on each segment.
+
+Alert when:
+
+- A Router Advertisement (ICMPv6 type 134) originates from a link-local address or MAC that is not a known gateway.
+- Two different sources advertise a default-router lifetime on the same segment, or an RA changes the announced prefix or RDNSS resolver.
+- A DHCPv6 Advertise or Reply (UDP 547) arrives from a host that is not the authorised DHCPv6 server.
+- RA Guard or DHCPv6 Guard drop counters increment on an access port, which records the rogue advertisement at the moment it was refused.
+
+The RDNSS option inside an RA is worth watching specifically: a rogue RA that leaves routing alone but names an attacker-controlled resolver redirects name resolution while the path looks unchanged.
+
 ## Producing the data
 
 The detection logic above assumes the events already exist, which is a build problem rather than an analytic one. Golem Trust Computing runs its network visibility on Zeek and Suricata; the taps, span ports, and rule tuning that produce the flow, DNS, and protocol data these alerts feed on are documented as part of the firm's own estate, in [Zeek deployment](../../org/startup/runbooks/zeek-deployment.md) and [Suricata configuration](../../org/startup/runbooks/suricata-configuration.md).

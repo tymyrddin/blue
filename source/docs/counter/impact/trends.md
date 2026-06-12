@@ -14,22 +14,25 @@ who catch them early can limit damage significantly.
 ## Families of impact
 
 It helps to separate impact by what is lost rather than what is done.
-Destruction and extortion, the family this page covers in most detail, encrypts,
-wipes, or diverts. Availability degrades the carrying layer without stopping it.
+Destruction and extortion, the loudest of them, encrypts, wipes, or
+diverts. Availability degrades the carrying layer without stopping it.
 Concentration is the failure of a provider the organisation depends on and does
 not control. Integrity leaves everything running and alters the data or
 instructions inside. Access denial revokes legitimate access while the
 infrastructure works perfectly. Chokepoints leave the digital layer healthy and
 stall the physical inputs it was meant to process. Administrative hijack brings no
 tools at all, turning the organisation's own trusted rules and utilities against
-it. The families differ most in how much signal they leave: destruction is loud by
+it. Confidentiality loss takes nothing and breaks nothing, copying the secret while
+the original sits undisturbed, so the only sign is the thing surfacing on the far
+side. The families differ most in how much signal they leave: destruction is loud by
 the end, and the others can be close to silent. That asymmetry is the through-line, and it is why detection built
 around encryption events tends to miss the quieter ones entirely.
 
-## Ransomware: what defenders can detect
+## The loud end: ransomware
 
-Ransomware deployment involves a sequence of preparatory actions, each of
-which is detectable:
+Destruction announces itself by the end, which is why most monitoring is
+built for it. Ransomware deployment runs through a sequence of preparatory
+actions, each detectable before the encryption that ends it:
 
 Shadow copy deletion is one of the strongest signals. Legitimate processes
 rarely delete shadow copies; malware does it systematically before encrypting.
@@ -45,11 +48,14 @@ Mass file modification or extension change: ransomware appending a custom
 extension to every file in a directory generates file modification events
 at a rate that is anomalous compared to any legitimate process.
 
-## Business process attacks: what defenders miss
+## The quiet end: when nothing fires
 
-Business process attacks generate almost no security signals. An authorised
-user modifying a payroll record looks the same as a compromised identity
-doing it.
+Most of the families sit at the other end of the spectrum. Integrity,
+administrative hijack, and confidentiality loss share one inconvenient
+property: they are built out of authorised actions, so telemetry tuned for
+malware sees a normal day. A business process attack is the plainest case.
+An authorised user modifying a payroll record looks the same as a
+compromised identity doing it.
 
 *A payroll diversion over a compromised HR manager account leaves an audit trail
 that reads: login at 22:47, navigate to payroll settings, update direct deposit
@@ -86,14 +92,20 @@ Backup access monitoring: any access to backup infrastructure by any
 identity is worth logging and reviewing. Backup servers benefit from minimal
 exposure and are not accessible from general-purpose domain admin accounts.
 
-## The data extortion gap
+These are the loud end's controls. The quiet families answer to different
+ones: segregation of duties, provenance of access, and business-logic
+monitoring rather than backup hardening.
 
-Ransomware detection frameworks focus on encryption events. Data extortion
+## The disclosure gap: extortion and espionage
+
+Ransomware detection frameworks focus on encryption events. Disclosure
 requires none. If data has already left an organisation before the
-extortion demand arrives, there is no technical control that recovers it.
-The only defence against data extortion is preventing the exfiltration in
-the first place.
+extortion demand arrives, there is no technical control that recovers it,
+and the only defence is preventing the exfiltration in the first place.
 
-This makes exfiltration detection (covered in the exfiltration section)
-the critical control point for the extortion threat, not anything in the
-impact phase.
+Extortion is the loud half of that. The quiet half is espionage, the
+[confidentiality](confidentiality.md) family, where there is no demand at
+all and the secret simply surfaces on the far side. Both are losses a copy
+makes permanent, which is why exfiltration detection (in the
+[exfiltration section](../exfiltration/index.rst)) is the control point for
+either, not anything in the impact phase itself.

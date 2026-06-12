@@ -15,6 +15,7 @@ is left standing but becomes entirely untrustworthy.
    availability.md
    concentration.md
    integrity.md
+   confidentiality.md
    access-denial.md
    chokepoints.md
    administrative-hijack.md

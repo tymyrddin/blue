@@ -60,6 +60,8 @@ with its own neighbours, useful for exactly the reasons it is occasionally exasp
 
 ## Fungolia
 
+![Fungolia map](/_static/images/fungolia.png)
+
 Fungolia is the closest of the Circle Sea powers, and the most watched. Both halves of that are true
 at once, and the second follows from the first.
 
@@ -74,6 +76,26 @@ the post then reads more closely than holding requires, and which capital reads 
 home, is not a question the arrangement was ever built to answer. The ally with the most legitimate
 access is, for that exact reason, the one worth watching most closely. There is no version of the
 arrangement that grants the access without granting the exposure, because they are the same grant.
+
+What the exposure runs on, in practice, is four bodies that between them hold Fungolia's wires, and each
+turns up in the city's casework for a reason of its own. The [Ministry of Digital
+Affairs](https://red.tymyrddin.dev/docs/earthworks/fmda/) is the regulator and registrar, allocating the
+country's spectrum and address blocks and, with some ceremony, scheduling the committees that ratify such
+things; it is also the body that reconstructs the breach when one of Fungolia's ministries is opened up,
+which it does at the stately pace of a bureaucracy required by law to disagree with itself before it acts.
+[FungusFiber Internet](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/) is the country's sole
+regional registry and main provider, a network whose firmware suggests an intention to update it somewhere
+around 2019, and the registry whose routes the city's own traffic to the frontier happens to ride.
+[MycoSec Labs](https://red.tymyrddin.dev/docs/earthworks/mycosec/) handles security research and
+consultancy from a sprawl of chambers under the capital, which is also, by treaty, where a good deal of
+the city's mirrored material sits.
+[OpenHands International](https://red.tymyrddin.dev/docs/earthworks/openhands/) runs digital-rights
+monitoring out of a converted underground library, an NGO whose field reporting tends to interest certain
+services rather more than its funding would suggest.
+
+None of the four was built to be a frontier of the alliance, and all four are. The city's exposure to
+Fungolia is less an abstraction filed under the observer post than these specific wires, run by these
+specific bodies, on the usual Fungolian blend of good intentions and deferred maintenance.
 
 ## Klatch
 
