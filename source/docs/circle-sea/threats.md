@@ -26,6 +26,12 @@ intelligence work goes out under names the red files have learned to read, Shado
 Shadow Hydra, APT-29, and Shadow Wire, APT-62, the same hand in different gloves, turned mostly on the
 alliance and now and then on the neighbour.
 
+Shadow Wire is the quiet one of the three. Where Shadow6 goes at the protocol and Shadow Hydra at the
+map, Shadow Wire goes at the edges nobody guards: a tired tunnel, an unpatched branch, a charity's
+site-to-site link left standing where someone set it up years ago. It does not break the centre. It
+finds the soft join at the far end of the wire and reads what runs through it, which is how a regency
+that cannot reach the city's secrets reaches instead the people who quietly gather them.
+
 That neighbour is Zlobenia, richer, more modern, and ruled by a Prince Heinrich who wishes very much to
 be taken seriously on the Sto Plains and increasingly is. The two have been at their war so long that it
 has stopped being an event and become a climate, and neither expects to win it so much as to deny the
