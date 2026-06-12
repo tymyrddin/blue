@@ -24,7 +24,7 @@ steel is simply persuaded to chew through its own bearings.
 ## The first signs
 
 The first sign is acoustic, not digital. Senior mechanics notice a harmonic groan in the foundations
-of the turbine house, a frequency that should not exist. On the monitors the generator speed wanders
+of the turbine house, a frequency with no natural source. On the monitors the generator speed wanders
 by less than half a percent, and the tools file it as routine load balancing.
 
 The language changes when the first bearing housing shears through four inches of dwarven iron. The

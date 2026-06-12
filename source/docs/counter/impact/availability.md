@@ -46,4 +46,5 @@ been read, rather than after the traffic has already flowed through it.
   signal integrity.
 - [Detection false positives](../friction/detection-false-positives.md): why a real signal gets
   dismissed as routine noise, which is the whole game in a slow-burn attack.
-- [Responding to impact events](response.md): containment and continuity once the impact lands.
+- [Responding to it](runbooks/availability-response.md): the do-this-now runbook for the failure
+  modes above.

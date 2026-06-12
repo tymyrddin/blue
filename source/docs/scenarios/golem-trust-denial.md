@@ -131,3 +131,4 @@ ever pulled the lever has stopped being the question. It paid for the demonstrat
   [resilience](../establishment/infra/resilience.md).
 - The impact family underneath it, where the systems work perfectly and decline to admit you:
   [access denial](../counter/impact/access-denial.md).
+- The same attack from the other side: [access removal and deplatforming](https://red.tymyrddin.dev/docs/out/impact/notes/access-removal.html).

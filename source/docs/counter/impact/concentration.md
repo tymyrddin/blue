@@ -42,4 +42,5 @@ morning it is needed.
   controls that survive a third-party failure.
 - [Application control](../friction/application-control-creep.md): raising the cost for an adversary
   who reaches a high-value dependency, and the exclusion creep that erodes it.
-- [Responding to impact events](response.md): continuity and recovery once the estate goes dark.
+- [Responding to it](runbooks/concentration-response.md): the continuity runbook for when the
+  provider goes dark.

@@ -18,6 +18,12 @@ the gap between stated benefit and deployed reality is large enough to affect de
    hvci-overhead.md
    application-control-creep.md
    casb-dlp-latency.md
+   patch-maintenance-windows.md
+   network-segmentation.md
+   least-privilege.md
+   log-volume.md
+   backup-restore-testing.md
+   runbooks/index
 
 The honest framing across these categories: the controls are worth deploying. The friction is worth
 naming, because practitioners who understand it can plan for it, resource it, and make informed

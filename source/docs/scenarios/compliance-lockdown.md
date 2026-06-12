@@ -71,6 +71,7 @@ gates until it starves, slowly, in perfect and fully certified compliance.
 
 - The impact family this belongs to, where your own posture is the threat:
   [administrative hijack](../counter/impact/administrative-hijack.md).
+- The same attack from the other side: [living off the posture](https://red.tymyrddin.dev/docs/out/impact/notes/administrative-hijack.html).
 - The other posture in the same family, the tools turned into a courier rather than the rules into a
   lockdown: [Campaign Living Archive](continuity-exfiltration.md).
 - When a control costs more than it protects, by design or by accident:

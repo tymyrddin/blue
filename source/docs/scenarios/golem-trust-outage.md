@@ -66,7 +66,7 @@ Bewildered Beasts, and a Bank whose counterparties do not wait for facts when ab
 
 The weather story expires at the speed of witnesses, and this particular morning has been minting witnesses since 
 breakfast. After it expires, the question on the table is no longer what broke, which was survivable, but who decided 
-the city should hear about the sky instead, which is not.
+to tell the city about the sky instead, which is not.
 
 ## If it escalates
 

@@ -33,7 +33,7 @@ drift out of step, so the record of who said what no longer quite agrees with it
 garbled headers belong to this phase, and are read, for two days, as a replication bug in somebody
 else's database.
 
-Then the routing update. A relay that should not have the authority broadcasts a shutter
+Then the routing update. A relay with no right to the authority broadcasts a shutter
 optimisation, properly signed, and the Trunk reorganises itself around it. The allied commands wake
 to find they are each at the centre of a small, tidy network that contains only themselves. Nothing
 is down. Everything is sorted into the wrong piles, which is worse, because a deadline is obvious
@@ -80,7 +80,7 @@ the city has spent two days assembling the case against itself.
   quietly steers by has been steering it somewhere ever since. That is its own exercise:
   [Campaign Poisoned Well](poisoned-survey-data.md).
 - The weather story holds so well that the city notices it would prefer to keep it, and the question
-  stops being who darkened the Trunk and becomes who decided the public should hear about the sky.
+  stops being who darkened the Trunk and becomes who decided to tell the public about the sky.
 
 ## The detail, if you want it
 
@@ -94,5 +94,6 @@ the city has spent two days assembling the case against itself.
 - The availability techniques underneath it, and the containment that follows:
   [availability under attack](../counter/impact/availability.md) and
   [on the network](../counter/network/index.rst).
+- The same attack from the other side: [denial and disruption](https://red.tymyrddin.dev/docs/out/impact/notes/availability.html).
 - The guild whose name comes up first, and whose infiltration is the whole question:
   [the Scarlet Semaphore](https://red.tymyrddin.dev/docs/scarlet/).

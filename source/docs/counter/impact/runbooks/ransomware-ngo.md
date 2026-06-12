@@ -24,7 +24,7 @@ Person who discovers it:
 
 Everyone in the office:
 - Unplug network cables from affected computers (pull them out)
-- Turn off WiFi on affected laptops (airplane mode or switch off)
+- Turn off Wi-Fi on affected laptops (aeroplane mode or switch off)
 - DO NOT shut down computers yet. We may need forensics.
 - Stop others from logging in to shared drives or systems
 
@@ -169,7 +169,7 @@ Arguments against:
 - No guarantee you'll get your data back (many don't)
 - Funds criminal activity
 - May violate sanctions (some ransomware groups are sanctioned entities)
-- You become a known payer (may be targeted again)
+- You become a known payer (maybe targeted again)
 - Even if you get decryption key, files may be corrupted
 
 Arguments for (rare cases only):
@@ -273,7 +273,7 @@ Once you're back online, fix these immediately:
    - Enable ransomware protection in Windows Security
 
 6. Network segmentation:
-   - Guest WiFi separate from work WiFi
+   - Guest Wi-Fi separate from work Wi-Fi
    - Servers isolated if you have them
 
 7. Monitoring:
@@ -335,10 +335,3 @@ This playbook assumes:
 If you have more resources: Get professional incident response help. This playbook is for "we are on our own and 
 need to act now" situations.
 
-```{raw} html
-<div class="page-post-card__link">
-    <a href="https://tymyrddin.dev/contact/">
-      See something you like? Let’s create your custom playbook.
-    </a>
-</div>
-```

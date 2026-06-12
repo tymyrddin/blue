@@ -93,3 +93,4 @@ is the one the victim chooses freely on excellent-looking evidence.
   [in the cloud](../counter/cloud/index.rst).
 - The impact family underneath it, where nothing breaks but the readings lie:
   [integrity](../counter/impact/integrity.md).
+- The same attack from the other side: [data and decision manipulation](https://red.tymyrddin.dev/docs/out/impact/notes/manipulation.html).

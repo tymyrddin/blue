@@ -40,3 +40,5 @@ your own people to go quiet.
   provider-held keys.
 - [Counter moves on the human layer](../human/index.rst): the people side, including the chilling
   effect on reporting.
+- [Responding to it](runbooks/access-denial-response.md): break-glass, provenance, and recovery from
+  a lockout.

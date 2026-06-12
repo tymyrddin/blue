@@ -52,3 +52,5 @@ can be shown.
 - [Counter moves on the supply chain](../app/supply-chain.md): trusted updates as an attack path.
 - [Counter moves on exfiltration](../exfiltration/index.rst): the channel that data manipulation and
   extortion both ride.
+- [Responding to it](runbooks/integrity-response.md): containment, ground truth, and rollback when a
+  feed is lied to.

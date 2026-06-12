@@ -79,3 +79,5 @@ records out the door.
 - Watching native tools do un-native things, and data being staged and moved:
   [counter moves on evasion](../counter/evasion/index.rst), [collection](../counter/collection/index.rst),
   and [exfiltration](../counter/exfiltration/index.rst).
+- The same drain from the attacker's side: [living off the cloud](https://red.tymyrddin.dev/docs/out/exfiltration/notes/living-off-cloud.html)
+  and [cloud-sync exfiltration](https://red.tymyrddin.dev/docs/out/exfiltration/runbooks/cloud-sync-exfil.html).

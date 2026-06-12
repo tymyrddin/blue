@@ -91,6 +91,8 @@ right is an hour not spent asking who wrote the words they are reading from.
   at once: [across the Disc](../ngo/about/across-the-disc.md).
 - The impact families underneath it: [integrity](../counter/impact/integrity.md), where the workers
   are rewritten, and [availability](../counter/impact/availability.md), where the hands fold.
+- The same attack from the other side, the automation-and-firmware half:
+  [data and decision manipulation](https://red.tymyrddin.dev/docs/out/impact/notes/manipulation.html).
 - The quiet phase nobody was watching, and how staged data is spotted by its shape rather than its
   tools: [counter moves on collection](../counter/collection/index.rst) and
   [on exfiltration](../counter/exfiltration/index.rst).
