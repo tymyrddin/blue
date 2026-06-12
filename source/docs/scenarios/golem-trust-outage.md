@@ -4,7 +4,7 @@ The rented compute most of the Disc leans on has a bad morning. The golems answe
 all. For a few hours, nobody who depends on the Trust can get a word in, and a great many institutions
 discover at the same moment how much of what they call their own runs in someone else's yard.
 
-## Who is in the room
+## In the room
 
 - [Golem Trust Computing](../org/index.rst): the provider, and the yard the words are written in. Whatever
   broke, broke here, and only the Trust can say why, when it can say anything.
@@ -44,9 +44,23 @@ back, and becomes who knew it could go like this, and why the answer was filed r
 - What an ally is owed when the thing that is down is the custody it trusted to the city's provider, and
   whether the answer is different from what the city would expect in their place.
 - Whether to let the public believe it was weather, or admit that half the city ran through a single
-  yard in the Shades.
+  yard in the Shades. Owning it first is the only way to deny the foreign desks the chance to set the
+  terms of the city's panic. Owning it at all is the admission that the city built the morning it is
+  now explaining.
+- Whether to pour the city's emergency traffic into the sealed tier, the one thing still answering.
+  It is the obvious redoubt and, for that reason, the obvious place to want the city herded. Trusting
+  it before someone has read its in-house words is a convenience the outage may have been arranged to
+  extract.
+- Whether to requisition a slice of the Home's cheap foreign tenant, the only infrastructure in the
+  city still alive, to carry the state traffic the dead yard cannot. The humiliation is the smaller
+  cost. The larger one is that the tenant belongs to someone, and a city routing its truth over a
+  rival's ground has told the rival where to listen.
+- Whether to call a ledger holiday before the Bank's silence becomes a run: freeze automated
+  settlement by decree and stand behind every balance with metal in the Palace vaults until the
+  golems wake. A guarantee the city can physically honour is the one promise the morning cannot
+  garble.
 
-What waiting buys: nothing that keeps. Every hour without an account from the city is an hour in which someone else's
+Waiting buys nothing that keeps. Every hour without an account from the city is an hour in which someone else's
 account hardens, and the elses available today include foreign desks, a cheerfully unaffected Home for
 Bewildered Beasts, and a Bank whose counterparties do not wait for facts when absences will do. 
 
@@ -58,10 +72,18 @@ the city should hear about the sky instead, which is not.
 
 - The word did not break. It was changed. Someone working under the Trust's own arrangements rewrote
   it, and the outage is the cover rather than the event.
+- The sealed tier was the point, not the survivor. The outage was never meant to take the city's
+  compute so much as to drive everything of consequence onto the one network the city believed it
+  could not lose, where something had been waiting for the traffic to arrive.
 - An ally's desk comes back up before the city's does, which raises the unwelcome thought that an
   ally's keys were never as shared as the scheme always claimed.
+- The Home's lights staying on were never luck. The cheap foreign tenant belongs to a rival, and its
+  uptime through the city's worst morning is an advertisement: their stack stood where the city's
+  premium yard fell, and the whole Disc was watching when it did.
 - The Bank's silence lasts long enough that the silence becomes the story, and the story is no longer
-  about compute at all.
+  about compute at all. Counterparties across the Circle Sea cannot close the day, the city's credit
+  is repriced by sundown, and the adversary has ruined a balance sheet without touching a coin, only
+  by pausing the ledger long enough for everyone to see that it could be paused.
 
 ## The detail, if you want it
 
@@ -76,5 +98,7 @@ the city should hear about the sky instead, which is not.
 - Why the sealed tier kept running: [the clerical estate](../establishment/infra/enterprise-and-business.md),
   [resilience](../establishment/infra/resilience.md), and
   [communications and command](../establishment/infra/communications-and-command.md).
-- Why the Home, of all places, stayed up: [across the Disc](../ngo/about/across-the-disc.md).
-- The availability and impact techniques underneath it: [counter moves on impact](../counter/impact/index.rst).
+- Why the Home, of all places, stayed up: [across the Disc](../ngo/about/across-the-disc.md). 
+- What a few hours of silence does to a ledger, and the counterparties who do not wait for facts: [the Royal Bank](../org/scale-up/royal-bank.md).
+- The impact families underneath it: [concentration](../counter/impact/concentration.md), the
+  dependency, and [availability](../counter/impact/availability.md), the outage it became.

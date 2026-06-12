@@ -5,7 +5,7 @@ Defence blues
   :alt: Badger blues
 
 Notes on defensive security, taken along the way and left where they landed. Occasionally updated. Some are field notes.
-Some are the same field, in costume.
+Some are in a similar field, in costume.
 
 The field
 ------------------------

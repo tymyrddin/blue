@@ -1,4 +1,4 @@
-# Exercise Closed Account
+# Campaign Closed Account
 
 Nothing is down. The yard in the Shades runs as well as it ever has, the golems answer every word
 put to them, and the morning would be unremarkable except at one desk in Fungolia, where the words
@@ -6,7 +6,7 @@ come back unheard. No smoke, no failure, no weather to blame. Somewhere in the T
 is an instruction, properly sealed, and one man's account has been closed the way a clerk closes
 an account: quietly, correctly, and on purpose.
 
-## Who is in the room
+## In the room
 
 - [Golem Trust Computing](../org/index.rst): the provider. Its yard is healthy and its paperwork is in
   order, and this morning both of those are the problem rather than the reassurance.
@@ -20,7 +20,7 @@ an account: quietly, correctly, and on purpose.
 - [The Circle Sea Arrangement](../circle-sea/index.rst): which has had a name for this exact lever for
   years, and has spent the same years being assured that naming it was paranoia.
 
-## The first hours
+## A denial, discovered
 
 An outage announces itself. A denial has to be discovered. The clerk spends the first hour blaming
 his own end, the second blaming the clacks, and the third listening to a Trust functionary
@@ -44,14 +44,22 @@ appetite for saying so out loud.
   message, and the audience is every member with an account and every clerk with an opinion.
 - Whether the Trust can be made to show the instruction, and to whom: the man himself, his
   ministry, the arrangement, the Patrician. A provider that shows one instruction has promised to
-  show the next.
+  show the next. The version that would actually settle Fungolia is the one the city would least
+  choose: a joint registry, the members' clerks reading the seal's provenance together, proving
+  decree from forgery and, in the same motion, ending the privacy that made the lever worth holding.
 - What the Establishment does about its own tenancy, given that nothing has changed since
   yesterday except what is known. The cellar is too small to take in anything that runs at scale,
   which was always the price of the cellar.
+- Whether to hand trusted allies a key of their own: a local token that guarantees a member its own
+  data even when the yard in the Shades says otherwise. It would slow the digging of cellars and the
+  quiet exits. It would also concede, in writing, that the lever was always real, which is the one
+  admission the lever depended on never having to make.
 - Whether the lever, now that it has been seen in motion, is owned as policy or disowned as error,
-  and which of those an ally would find more frightening.
+  and which of those an ally would find more frightening. A named and bounded rule for when an
+  account may close is a thing an ally can plan around. An unexplained closure is a thing an ally can
+  only fear, and fear is the more expensive export.
 
-What silence buys: time for arithmetic. At every senior desk around the Circle Sea the sum is the
+Silence buys time for arithmetic. At every senior desk around the Circle Sea the sum is the
 same: what it would cost to take the compute home, and what it costs to stay. At desks of a more
 junior kind a smaller sum is being worked, concerning what may now safely be said in print by
 anyone whose life's work lives in the yard. The lever worked because it was never pulled. Pulled
@@ -63,7 +71,15 @@ thing sovereignty projects have always lacked more than funds.
 - The seal is genuine and nobody in the city issued it. Someone has learned to write instructions
   through the Trust's own arrangements, and the lever the city stands accused of pulling turns out
   to be a lever anyone with the right clerk can reach. The list of candidates opens, uncomfortably,
-  with the ally that holds the most legitimate access.
+  with the ally that holds the most legitimate access. The city is left with two answers and no good
+  one: deny the closure and the allies hear a cowardly cover-up; admit it was never the city's to
+  deny and confess, to everyone at once, that the Master Key no longer answers only to the city. The
+  one thread left to pull is the functionary who slid the sealed instruction into the ledger, which
+  turns a question of statecraft into a quiet hunt through the Trust's own paper.
+- The clerks do not wait for cellars. Word that a life's work can vanish on a sealed whim teaches
+  every senior desk around the Circle Sea to keep a copy somewhere the yard cannot reach, and the
+  somewheres within reach this week are cheap, foreign, and unsecured. To guard their work from the
+  city's lever, the arrangement's own people carry it quietly out of the one place it was safe.
 - A second account closes, somewhere harder to explain, and the pattern stops reading as policy
   and starts reading as a demonstration.
 - Fungolia does not complain, which is worse. A capital that protests believes it was wronged; a
@@ -75,8 +91,11 @@ thing sovereignty projects have always lacked more than funds.
 
 The account comes back, eventually. The instruction is rescinded, or lapses, or is found to have
 been an error at a level where errors have no authors. Nothing is mended by it. The clerk writes
-differently for the rest of his career, and so does everyone who watched him learn why. A bar can
-be lifted. The demonstration that one could be placed is not the kind of thing that lifts.
+differently for the rest of his career, and so does everyone who watched him learn why. A feed of
+honest reporting runs on people willing to write down what they think; teach them that candour is
+what closed the account, and the reporting thins to whatever was safe to have written, which is the
+city's own eyes dimming one cautious clerk at a time. A bar can be lifted. The demonstration that
+one could be placed is not the kind of thing that lifts.
 
 Trust of this sort does not return; it is re-priced, at every renewal, in clauses the Trust's
 lawyers pretend not to notice. Fungolia does not leave the yard, because leaving loudly is an
@@ -110,4 +129,5 @@ ever pulled the lever has stopped being the question. It paid for the demonstrat
 - Why the Establishment keeps a cellar nobody can close from outside:
   [the clerical estate](../establishment/infra/enterprise-and-business.md) and
   [resilience](../establishment/infra/resilience.md).
-- The availability and impact techniques underneath it: [counter moves on impact](../counter/impact/index.rst).
+- The impact family underneath it, where the systems work perfectly and decline to admit you:
+  [access denial](../counter/impact/access-denial.md).

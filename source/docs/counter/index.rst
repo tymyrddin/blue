@@ -27,7 +27,7 @@ Attacker techniques, defender's view. What to harden, what to detect, what to hu
    collection/index
    exfiltration/index
    impact/index
-   friction
+   friction/index
 
 
 .. raw:: html

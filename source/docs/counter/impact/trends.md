@@ -11,6 +11,21 @@ to detect and contain the intrusion has usually already passed.
 That said, the impact phase does create detectable signals, and defenders
 who catch them early can limit damage significantly.
 
+## Families of impact
+
+It helps to separate impact by what is lost rather than what is done.
+Destruction and extortion, the family this page covers in most detail, encrypts,
+wipes, or diverts. Availability degrades the carrying layer without stopping it.
+Concentration is the failure of a provider the organisation depends on and does
+not control. Integrity leaves everything running and alters the data or
+instructions inside. Access denial revokes legitimate access while the
+infrastructure works perfectly. Chokepoints leave the digital layer healthy and
+stall the physical inputs it was meant to process. Administrative hijack brings no
+tools at all, turning the organisation's own trusted rules and utilities against
+it. The families differ most in how much signal they leave: destruction is loud by
+the end, and the others can be close to silent. That asymmetry is the through-line, and it is why detection built
+around encryption events tends to miss the quieter ones entirely.
+
 ## Ransomware: what defenders can detect
 
 Ransomware deployment involves a sequence of preparatory actions, each of

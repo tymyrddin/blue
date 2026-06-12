@@ -169,3 +169,13 @@ Get-ADUser -Filter { AdminCount -eq 1 } | ForEach-Object {
     Add-ADGroupMember -Identity 'Protected Users' -Members $_
 }
 ```
+
+Enforce write-once (WORM) on the off-site backup bucket so a compromised
+administrator cannot delete it within the retention period:
+
+```text
+aws s3api put-object-lock-configuration \
+  --bucket backup-bucket \
+  --object-lock-configuration \
+  '{"ObjectLockEnabled":"Enabled","Rule":{"DefaultRetention":{"Mode":"COMPLIANCE","Days":30}}}'
+```

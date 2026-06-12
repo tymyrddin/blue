@@ -31,7 +31,7 @@ shifts to those layers until the compromised host is isolated and reimaged.
 
 HVCI (Hypervisor-Protected Code Integrity) prevents unsigned kernel drivers from loading, defeating
 the BYOVD vector at the kernel level. Its performance overhead on older hardware is real and is
-covered in the [operational cost section](../friction.md).
+covered in [the operational cost of HVCI](../friction/hvci-overhead.md).
 
 ## Credential Guard prerequisites and workarounds
 

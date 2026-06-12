@@ -1,5 +1,5 @@
-Responding to active impact
-===========================
+Responding to active impact runbooks
+=======================================
 
 Runbooks for responding to active impact events, covering ransomware, destructive
 attacks, and service disruption scenarios.
