@@ -29,7 +29,6 @@ border.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Watching Fungolia
 
    ipv6-autoconfig-takeover.md
    dhcp-route-poisoning.md
@@ -46,7 +45,6 @@ take.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Holding the routes
 
    bgp-route-hijack.md
    ai-bgp-hijack.md
@@ -61,7 +59,6 @@ breach in Fungolia's underground bureaucracy is one the city has a stake in too.
 
 .. toctree::
    :maxdepth: 1
-   :caption: The Ministry casebook
 
    cloud-identity-exfil.md
    wiper-diversion.md
