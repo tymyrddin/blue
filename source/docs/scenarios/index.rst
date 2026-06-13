@@ -25,7 +25,9 @@ response and serious countermoves.
 A second set shares one premise. Fungolia is the closest ally and the most watched: the city's secrets
 sit mirrored on its network by treaty, so a state that owns the ally's wire owns the access the city
 granted. The city is never the target, only exposed, and it learns of each attack by watching its own
-border.
+border. The four here read as the defender's side of the exercises run by
+`MycoSec <https://red.tymyrddin.dev/docs/earthworks/mycosec/>`_, the Fungolian red-team consultancy
+whose deliberately exposed labs make the ground for them.
 
 .. toctree::
    :maxdepth: 1
@@ -35,7 +37,7 @@ border.
    ai-autonomous-intrusion.md
    broken-trust.md
 
-A third pair needs no tap at all. FungusFiber Internet is Fungolia's regional registry, the firm whose
+A third pair needs no tap at all. `FungusFiber Internet <https://red.tymyrddin.dev/docs/earthworks/fungusfiber/>`_ is Fungolia's regional registry, the firm whose
 core routers announce which way the frontier's traffic goes, and routing is a public commons: a route
 hijacked there is announced to the whole internet, the city's registry included. The Establishment runs
 its own registry and reads the same global table everyone reads, so it sees a bad origin the
@@ -50,7 +52,7 @@ take.
    ai-bgp-hijack.md
 
 Two more come from inside Fungolia, from the Ministry of Digital Affairs' own files. Here the breached
-party and the body reconstructing the breach are both Fungolian: FMDA, the ministry that allocates the
+party and the body reconstructing the breach are both Fungolian: `FMDA <https://red.tymyrddin.dev/docs/earthworks/fmda/>`_, the ministry that allocates the
 country's spectrum and registries and schedules its emergency committees, investigates attacks on its
 sister ministries and writes down every step the adversary took. The alliance reads along because the
 material in those ministries is not Fungolia's alone, a foreign ministry holds the arrangement's
