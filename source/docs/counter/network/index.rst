@@ -13,6 +13,7 @@ the evidence lives in connection metadata.
 
    exposure.md
    detection.md
+   correlation.md
    runbooks/index
 
 

@@ -109,6 +109,21 @@ available options appear to be. It presents that determination before the Patric
 The presentation is acknowledged. What shapes the presentation before it reaches the page is not in the
 presentation.
 
+## Watching, not intervening
+
+The Establishment's instinct is to watch rather than to act. Where it finds something already underway, the
+default is observation, measurement and analysis, and intervention waits on a confirmed threat to continuity
+rather than on curiosity. The posture carries a few unwritten rules, the kind that circulate by being
+understood rather than issued: nothing is done that cannot be undone, nothing is done that cannot be
+explained, and if the city notices, the work was done badly. The point of watching is to learn how trust
+moves through the city, not to demonstrate cleverness, and a finding that ends up somewhere awkward is
+corrected quietly.
+
+The value of the posture is that it adds eyes without disturbing what is being watched. A reversible process
+stays reversible, and the institution takes its informational yield without having to reveal that it was ever
+there. Heroics are discouraged for the same reason the euphemism layer is calibrated: visibility is the thing
+that tends to break the arrangement.
+
 ## The attack surface
 
 The gap between what the Establishment observes and what the city can do about it is the attack surface. The

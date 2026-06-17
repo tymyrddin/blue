@@ -33,8 +33,9 @@ a dedicated cyber command; others spread the capability across several organisat
 produce coordination problems that look like turf and are really architecture.
 
 For the city the capability is distributed by design and by deniability. The hardening and detection
-work sits with the Establishment; [Red Lantern](../red-lantern/index) runs detection and response;
-the [Watch Tower](../../surveys/watch-tower/index) places firmware findings in threat context. The
+work sits with the Establishment, including the
+[correlation of control-plane signals](../../counter/network/correlation.md) that turns single events into
+incidents; the [Watch Tower](../../surveys/watch-tower/index) places firmware findings in threat context. The
 honeypots sit where honeypots sit, quietly, and nothing should touch them that has any business
 being elsewhere. No single body owns the whole of it, which is sometimes a weakness and sometimes
 the point.

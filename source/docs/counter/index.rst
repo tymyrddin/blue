@@ -12,6 +12,7 @@ Attacker techniques, defender's view. What to harden, what to detect, what to hu
    human/index
    endpoint/index
    network/index
+   inter-domain/index
    api/index
    app/index
    cloud/index

@@ -43,7 +43,6 @@ It stops conditions.
    :caption: Active projects:
 
    case-thread.md
-   red-lantern/index
 
 
 .. raw:: html
