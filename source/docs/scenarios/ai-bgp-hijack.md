@@ -98,4 +98,4 @@ took.
 - The peer that isn't, running its court's machine against the frontier: the Circle Sea
   [threat picture](../circle-sea/threats.md).
 - The technical lab execution behind this narrative:
-  [FungusFiber: hijacking the ISP](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/hijack-isp.html).
+  [Operation Spore Cloud](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/spore-cloud.html).

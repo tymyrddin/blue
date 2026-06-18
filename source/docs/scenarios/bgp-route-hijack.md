@@ -74,7 +74,7 @@ reading the public table, reconstructed the climb after the fact.
 
    ```text
    FungusFiber-Core-Router# configure terminal
-   FungusFiber-Core-Router(config)# router bgp 65001
+   FungusFiber-Core-Router(config)# router bgp 64500
    FungusFiber-Core-Router(config-router)# network 198.51.100.0 mask 255.255.255.0
    FungusFiber-Core-Router(config-router)# end
    ```

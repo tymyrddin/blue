@@ -37,19 +37,25 @@ whose deliberately exposed labs make the ground for them.
    ai-autonomous-intrusion.md
    broken-trust.md
 
-A third pair needs no tap at all. `FungusFiber Internet <https://red.tymyrddin.dev/docs/earthworks/fungusfiber/>`_ is Fungolia's regional registry, the firm whose
-core routers announce which way the frontier's traffic goes, and routing is a public commons: a route
-hijacked there is announced to the whole internet, the city's registry included. The Establishment runs
-its own registry and reads the same global table everyone reads, so it sees a bad origin the
-moment it propagates, no covert access required. The exposure is the city's own, its traffic to and
-through the frontier rides those routes, and whoever owns the ally's registry owns the path the packets
-take.
+A third set needs no tap at all. `FungusFiber Internet <https://red.tymyrddin.dev/docs/earthworks/fungusfiber/>`_
+is Fungolia's regional registry, the firm whose
+core routers announce which way the frontier's traffic goes, and routing is a public commons: what it
+announces, the whole internet hears, the city's registry included. The Establishment runs its own registry and
+reads the same global table everyone reads, so it sees the trouble the moment it propagates, no covert access
+required. The loudest of these is an outright hijack, a prefix arriving from the wrong place; the quieter ones
+never throw an invalid at all, a frontier degraded to coerce, a baseline moved over years, a stutter timed to
+a summit, where every route is valid and the hard part is proving anything is wrong. The exposure is the
+city's own, its traffic to and through the frontier rides those routes, and whoever owns the ally's registry
+owns the path the packets take.
 
 .. toctree::
    :maxdepth: 1
 
    bgp-route-hijack.md
    ai-bgp-hijack.md
+   bgp-degradation.md
+   bgp-narrative.md
+   bgp-positioning.md
 
 Two more come from inside Fungolia, from the Ministry of Digital Affairs' own files. Here the breached
 party and the body reconstructing the breach are both Fungolian: `FMDA <https://red.tymyrddin.dev/docs/earthworks/fmda/>`_, the ministry that allocates the
