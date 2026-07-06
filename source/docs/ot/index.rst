@@ -1,7 +1,7 @@
 OT and ICS security
 ====================================
 
-.. image:: /_static/images/ot-company-location.png
+.. image:: /_static/images/ot-ics-blue.png
    :alt: UUPL
 
 A circuit breaker that opens on command is doing its job. One that opens because an attacker sent the
