@@ -51,7 +51,7 @@ Any service not matching the `principals` list that attempts to reach `banking-a
 
 ## Allow rule: JWT claim matching
 
-For requests originating from outside the cluster (via the ingress gateway), the identity is carried in a JWT rather than a SPIFFE certificate. Combine `RequestAuthentication` with `AuthorizationPolicy` to require both a valid JWT and a specific claim:
+For requests originating from outside the cluster (via the ingress gateway), the identity is carried in a JWT. Combine `RequestAuthentication` with `AuthorizationPolicy` to require both a valid JWT and a specific claim:
 
 ```
 apiVersion: security.istio.io/v1beta1

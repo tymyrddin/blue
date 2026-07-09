@@ -65,7 +65,7 @@ diff -r /etc/nginx /etc/nginx.restored
 
 Review the diff before replacing the live configuration.
 
-To restore from a specific snapshot rather than `latest`:
+To restore from a specific snapshot:
 
 ```
 restic restore <snapshot-id> \

@@ -15,7 +15,7 @@ Each scenario is built from the following components, following the ATT&CK kill 
 Initial access: the scenario must specify how the attacker first enters the environment. Options used at Golem Trust:
 - Phishing email with malicious attachment (GoPhish campaign, Caldera sandcat agent payload)
 - Stolen credential (using a set of credentials obtained by Mr. Teatime in a prior assumed-breach engagement)
-- Exposed service exploit (tested only against staging, not production, without explicit authorisation)
+- Exposed service exploit (tested only against staging, without explicit authorisation)
 
 Execution: how the attacker runs their code. Caldera abilities handle this: cmd.exe, PowerShell, bash, Python.
 
@@ -109,7 +109,7 @@ Novice: script-kiddie TTPs. Off-the-shelf tools (Metasploit modules, Nmap, defau
 
 Intermediate: APT-lite TTPs. Living-off-the-land techniques, custom payloads, some OPSEC (clearing logs, using legitimate tools). These scenarios test whether detection rules are specific enough to catch subtle malicious use of legitimate tools.
 
-Advanced: Tsort APT-calibre. (Tsort is Golem Trust's internal name for the most sophisticated threat actor in their threat model, named after the Disc's great river, which is very long, very patient, and goes where it intends to go.) Custom tools, supply chain access, long dwell time, low-and-slow exfiltration. These scenarios often reveal gaps that require architectural changes rather than rule updates.
+Advanced: Tsort APT-calibre. (Tsort is Golem Trust's internal name for the most sophisticated threat actor in their threat model, named after the Disc's great river, which is very long, very patient, and goes where it intends to go.) Custom tools, supply chain access, long dwell time, low-and-slow exfiltration. These scenarios often reveal gaps that require architectural changes.
 
 ## Scenario review by Carrot
 

@@ -24,8 +24,7 @@ because Defender has been updated, the security team selects a different techniq
 is not a maintenance burden. It is the work.
 
 Keeping the simulation current requires threat intelligence. The security team needs to
-know what is getting through organisational defences in the sector right now, not what
-was getting through eighteen months ago when the simulation library was last updated.
+know what is getting through organisational defences in the sector right now.
 Sources and a working method for translating threat intel into Gophish campaigns are in
 the threat intelligence runbook.
 

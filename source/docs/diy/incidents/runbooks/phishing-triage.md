@@ -8,7 +8,7 @@ A team member reports receiving a suspicious email. Also triggered when someone 
 
 Two different situations. The response differs significantly.
 
-- Received only, not opened or interacted with: low urgency. Proceed to "Received only" steps.
+- Received only: low urgency. Proceed to "Received only" steps.
 - Link clicked or attachment opened: high urgency. Proceed directly to "Link clicked or attachment opened" steps.
 
 ## Received only
@@ -41,7 +41,7 @@ For clicked: credentials rotated, sessions revoked, MFA active, authentication l
 
 ## Communication
 
-If the phishing appears targeted (references the organisation, a team member by name, or a specific project) rather than generic bulk phishing: record the content for awareness, and consider whether customers or partners may have received similar emails.
+If the phishing appears targeted (references the organisation, a team member by name, or a specific project): record the content for awareness, and consider whether customers or partners may have received similar emails.
 
 ## Follow-up
 

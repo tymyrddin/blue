@@ -66,11 +66,11 @@ Confirm the session cookie carries `Secure`, `HttpOnly`, and `SameSite`. Then lo
 
 ## Done
 
-Session cookies carry `Secure`, `HttpOnly`, and `SameSite`. Login and session behaviour confirmed working. Any cookie that legitimately needs JavaScript access is deliberately exempt from `HttpOnly`, not exempt by accident.
+Session cookies carry `Secure`, `HttpOnly`, and `SameSite`. Login and session behaviour confirmed working. Any cookie that legitimately needs JavaScript access is deliberately exempt from `HttpOnly`.
 
 ## Rollback
 
-Remove or relax the added attributes and reload. If `SameSite=Strict` breaks a needed cross-site flow, `Lax` is the usual middle ground rather than dropping the attribute entirely.
+Remove or relax the added attributes and reload. If `SameSite=Strict` breaks a needed cross-site flow, `Lax` is the usual middle ground.
 
 ## Follow-up
 

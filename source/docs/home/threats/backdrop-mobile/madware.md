@@ -3,7 +3,7 @@
 Madware is mobile adware: software installed on a phone, often without the user's explicit
 knowledge, whose purpose is to serve advertising and extract data that supports it. The
 distinction from general malware is mainly one of intent: the goal is monetisation through
-advertising rather than credential theft or financial fraud, though the two overlap more than
+advertising, though the two overlap more than
 the category implies.
 
 ## How it arrives

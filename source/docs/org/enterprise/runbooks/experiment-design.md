@@ -12,7 +12,7 @@ Golem Trust uses eight Litmus experiment types.
 
 `network-loss`: drops a configurable percentage of network packets to or from a pod. Tests whether the application handles partial network connectivity gracefully, whether circuit breakers trigger, and whether timeouts are set appropriately.
 
-`network-latency`: injects a configurable millisecond delay on network traffic. Tests whether applications degrade gracefully under latency (returning slow responses) rather than failing hard (returning errors or timing out clients).
+`network-latency`: injects a configurable millisecond delay on network traffic. Tests whether applications degrade gracefully under latency (returning slow responses).
 
 `cpu-hog`: consumes a configurable percentage of CPU on a target node. Tests whether resource limits prevent the CPU-starved pod from affecting neighbours, and whether the application continues to function (possibly slowly) under CPU pressure.
 

@@ -7,7 +7,7 @@ The command layer is the join.
 
 ## Communications
 
-Most defensive bodies of any size run several overlapping signals systems rather than one, because
+Most defensive bodies of any size run several overlapping signals systems, because
 the requirements pull in different directions.
 
 The administrative networks carry routine business and resemble ordinary government clacks. The

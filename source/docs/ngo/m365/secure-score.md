@@ -6,8 +6,7 @@ It is a prioritised to-do list with a number attached.
 
 The number is not the point. A tenant with a high Secure Score and an unreviewed Global
 Administrator account belonging to a former employee has a configuration problem that the
-number does not capture. Use the score to find the configuration gaps, not to report on
-security posture to people who will interpret a number as a measure of safety.
+number does not capture. Use the score to find the configuration gaps.
 
 ## How to use it
 

@@ -36,7 +36,7 @@ An incident that goes to law enforcement, insurance, or a regulatory body needs 
 
 ## Recognising when to escalate
 
-A small team without security expertise is at a disadvantage in incident response. The escalation decision is worth making in advance rather than during the incident.
+A small team without security expertise is at a disadvantage in incident response. The escalation decision is worth making in advance.
 
 Indicators that the situation warrants external help: evidence the attacker has reached multiple systems; data that may require breach notification under applicable law; an attack that appears targeted rather than opportunistic; uncertainty about whether the threat has been fully contained.
 

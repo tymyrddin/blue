@@ -46,7 +46,7 @@ gitlab-runner register \
   --locked false
 ```
 
-The `docker` executor runs each job in a fresh container, providing isolation between jobs and between tenants. The default image `debian:bookworm-slim` is pulled from Harbor (the Golem Trust Harbor mirror of Docker Hub), not directly from Docker Hub.
+The `docker` executor runs each job in a fresh container, providing isolation between jobs and between tenants. The default image `debian:bookworm-slim` is pulled from Harbor (the Golem Trust Harbor mirror of Docker Hub).
 
 Edit `/etc/gitlab-runner/config.toml` after registration to set resource limits and pull policy:
 

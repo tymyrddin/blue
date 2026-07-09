@@ -1,6 +1,6 @@
 # Email delivery controls
 
-Domain authentication and SMTP transport hardening address the delivery layer rather than the content of lures or user behaviour. SPF, DKIM, and DMARC together establish whether email claiming to originate from a domain was authorised by that domain; MTA-STS and TLS-RPT constrain how SMTP connections are made. Together they close the attack surface that makes direct domain spoofing trivially easy without them.
+Domain authentication and SMTP transport hardening address the delivery layer rather than the content of user behaviour. SPF, DKIM, and DMARC together establish whether email claiming to originate from a domain was authorised by that domain; MTA-STS and TLS-RPT constrain how SMTP connections are made. Together they close the attack surface that makes direct domain spoofing trivially easy without them.
 
 The gap between having records and having effective controls is considerable. Many organisations have SPF and DKIM records and a DMARC record at p=none. None of that configuration provides enforcement.
 

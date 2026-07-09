@@ -119,8 +119,7 @@ exfiltration and slow data egress. It operates independent of endpoint state: re
 callbacks does not affect network visibility.
 
 Its blindness to HTTPS content limits detection of cloud-based C2 and steganographic
-techniques to metadata and behavioural signals (volume, frequency, destination concentration)
-rather than content inspection.
+techniques to metadata and behavioural signals (volume, frequency, destination concentration).
 
 Minimum deployment: DNS query logging at the recursive resolver (not the endpoint); NetFlow
 or connection logs from perimeter and internal segment boundaries; baselining per-host

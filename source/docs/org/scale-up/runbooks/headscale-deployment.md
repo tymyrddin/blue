@@ -112,7 +112,7 @@ On each server that should join the zero-trust network, install the Tailscale cl
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
-Register the node with Headscale rather than Tailscale's cloud. Generate a pre-authentication key for the relevant namespace:
+Register the node with Headscale. Generate a pre-authentication key for the relevant namespace:
 
 ```
 headscale preauthkeys create --user infrastructure --expiration 1h --reusable

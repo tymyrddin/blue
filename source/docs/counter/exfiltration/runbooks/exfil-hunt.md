@@ -145,6 +145,6 @@ When an exfiltration hunt produces a hit:
 4. Check whether the source file(s) have been deleted from the host
    (suggests cleanup; exfiltration was intentional)
 5. Check persistence mechanisms on the host (exfiltration often occurs
-   after persistence is established, not before)
+   after persistence is established)
 6. Estimate whether this is an isolated event or part of an ongoing campaign
 7. Preserve all relevant logs before any remediation that might clear them

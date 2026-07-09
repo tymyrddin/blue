@@ -21,8 +21,7 @@ something that will let them fix the problem remotely.
 
 The defence is the same as for phishing: verify through a different channel before acting.
 IT will never call to ask for a password. Microsoft does not call unsolicited to fix
-computers. If there is any uncertainty, hang up and call back on a number found independently,
-not one the caller provides.
+computers. If there is any uncertainty, hang up and call back on a number found independently.
 
 Training for vishing works best through roleplay rather than description. People who have
 thought through how they would respond to a social engineering call are considerably better
@@ -36,8 +35,7 @@ Less common but worth addressing for an organisation with physical premises that
 visits. Someone claiming to be a contractor, an inspector, a volunteer, or a delivery person
 can sometimes gain physical access to areas where they should not be. The appropriate
 response is consistent access control: visitors are accompanied, credentials are checked
-against expectation, and unusual access requests are escalated rather than accommodated out
-of politeness.
+against expectation, and unusual access requests are escalated.
 
 The Home's front-of-house culture, warm and accommodating by design, is worth discussing
 explicitly in awareness sessions. The question is not whether to be welcoming but how to

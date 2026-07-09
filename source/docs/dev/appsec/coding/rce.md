@@ -12,7 +12,7 @@ constructed.
 
 `subprocess.run()` with a list does not invoke a shell. Each list element is a separate
 argument, so shell metacharacters (`; | && > $()`) in user input are treated as literal
-strings, not control flow:
+strings:
 
 ```python
 import subprocess

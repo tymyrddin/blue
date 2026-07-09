@@ -27,10 +27,10 @@ Attackers who probe these boundaries deliberately can use a refusal as confirmat
 
 ## Concealing traps
 
-Modern honeypot design focuses on plausibility rather than perfection:
+Modern honeypot design focuses on plausibility:
 
 * Fake user histories: populated `bash_history`, realistic log entries, scheduled maintenance tasks.
-* Dynamic responses: context-aware replies rather than fixed scripts.
+* Dynamic responses: context-aware replies.
 * Legal workarounds: simulate attack outcomes without executing them (logging apparent DDoS attempts
   without generating real traffic).
 * Fingerprint rotation: periodically update service versions and configuration to match current
@@ -38,5 +38,4 @@ Modern honeypot design focuses on plausibility rather than perfection:
 
 ## Ethical note
 
-Finding a detectable honeypot is worth reporting responsibly. The goal is better defences, not a
-catalogue of easy targets.
+Finding a detectable honeypot is worth reporting responsibly. The goal is better defences.

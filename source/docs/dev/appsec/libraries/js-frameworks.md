@@ -6,8 +6,7 @@ protections when the developer explicitly requests it.
 
 ## React
 
-JSX expressions are escaped before rendering. `{userContent}` in a JSX template produces a text node, not executable
-HTML.
+JSX expressions are escaped before rendering. `{userContent}` in a JSX template produces a text node.
 
 The primary risk is `dangerouslySetInnerHTML`, which bypasses JSX escaping:
 
@@ -40,8 +39,7 @@ reintroduces the XSS risk that Angular's sanitiser prevents.
 Angular's `HttpClient` sets `X-Requested-With` headers but does not handle CSRF token injection by default; the
 `HttpClientXsrfModule` provides that.
 
-Ahead-of-Time (AOT) compilation eliminates template injection by compiling templates at build time rather than
-evaluating them at runtime.
+Ahead-of-Time (AOT) compilation eliminates template injection by compiling templates at build time.
 
 ## Vue
 
@@ -95,5 +93,4 @@ script on the page; `HttpOnly` cookies are not. The choice between token and coo
 implications in each framework.
 
 Supply chain risk applies regardless of framework: all depend on npm packages. `npm audit` identifies known
-vulnerabilities; `npm ci` in CI/CD installs exactly the lockfile contents rather than resolving to newer compatible
-versions.
+vulnerabilities; `npm ci` in CI/CD installs exactly the lockfile contents.

@@ -29,8 +29,7 @@ The executable opened. The loader reached its destination.
 This is not a failure of Defender specifically. It is a description of the current
 threat landscape: attacker techniques are developed against the defences that targets are
 known to run, and techniques that pass those defences are the ones used in campaigns. This
-is why the security awareness programme runs simulations against live Defender rather than
-bypassing it. The question is not whether Defender catches everything, it does not, but
+is why the security awareness programme runs simulations against live Defender. The question is not whether Defender catches everything, it does not, but
 whether the organisation's detection and response capability catches what Defender misses.
 
 ## Checking what is configured

@@ -14,7 +14,7 @@ application's domain appears in the URL, lending it credibility, while the desti
 ## Avoid external redirect parameters
 
 The safest path is to not accept external URLs as redirect targets at all. Post-login redirects within the application
-can use path-only values rather than full URLs:
+can use path-only values:
 
 ```python
 from urllib.parse import urlparse
@@ -60,7 +60,7 @@ def validate_redirect_url(url: str) -> str:
     return url
 ```
 
-Allowlisting on the hostname, not on a prefix or substring, closes most bypass routes. URL validation on string
+Allowlisting on the hostname closes most bypass routes. URL validation on string
 content (checking whether the string starts with `https://example.com`) fails against payloads like
 `https://example.com.attacker.com` or `https://example.com@attacker.com`.
 

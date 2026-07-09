@@ -45,7 +45,7 @@ To change a threshold, navigate to Alerts, then Event Definitions, click the ale
 
 Lowering a threshold (more sensitive): do this if genuine attacks are going undetected. Accept that false positives may increase temporarily while the new threshold is validated.
 
-Raising a threshold (less sensitive): do this if a rule is firing on benign activity. Before raising, understand why the benign activity matches the rule. It may be that the rule needs a better query rather than a higher threshold.
+Raising a threshold (less sensitive): do this if a rule is firing on benign activity. Before raising, understand why the benign activity matches the rule. It may be that the rule needs a better query.
 
 Increasing the grace period: do this if repeated alerts for the same event are creating noise. The grace period suppresses re-alerting within its window; set it long enough to cover the typical duration of the triggering behaviour.
 
@@ -86,4 +86,4 @@ If an attack or anomaly was not detected by existing alerts, conduct a brief pos
 3. If yes: write the rule. If no: identify what additional logging or data enrichment would have made a rule possible, and implement that first.
 4. Do not write a rule so specific that it only catches the exact technique used in the incident. Write for the class of technique.
 
-The Seamstresses' Guild attacker used curl. The rule Angua wrote looks for scripted user agents broadly, not curl specifically. The attacker returned a week later using a different tool. The rule caught them anyway.
+The Seamstresses' Guild attacker used curl. The rule Angua wrote looks for scripted user agents broadly. The attacker returned a week later using a different tool. The rule caught them anyway.

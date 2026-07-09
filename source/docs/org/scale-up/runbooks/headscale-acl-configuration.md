@@ -191,4 +191,4 @@ curl -sk https://bank-app-01/health
 psql -h bank-db-01 -U test
 ```
 
-The second command should time out or be refused at the network level, not just return an authentication error. A TCP connection that reaches the database but fails authentication indicates the ACL is not blocking the path; investigate and correct the ACL before proceeding.
+The second command should time out or be refused at the network level. A TCP connection that reaches the database but fails authentication indicates the ACL is not blocking the path; investigate and correct the ACL before proceeding.

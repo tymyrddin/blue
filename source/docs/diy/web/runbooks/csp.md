@@ -58,7 +58,7 @@ sudo apachectl configtest && sudo systemctl reload apache2
 curl -sI https://example.com | grep -i content-security-policy
 ```
 
-Confirm the enforcing header is present (not report-only). Load the site in a browser and confirm the console shows no CSP violations from legitimate content, and that scripts, styles, and images render.
+Confirm the enforcing header is present. Load the site in a browser and confirm the console shows no CSP violations from legitimate content, and that scripts, styles, and images render.
 
 ## Done
 

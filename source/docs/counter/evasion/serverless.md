@@ -97,7 +97,7 @@ endpoint DLP in the serverless execution environment.
 ## Hardening the execution environment
 
 The execution role is the primary control surface. Scope it to exactly the resources the function touches:
-resource ARNs rather than `*` wildcards, specific actions rather than broad permission sets. A function
+resource ARNs rather than `*` wildcards, specific actions. A function
 that reads from one S3 bucket and writes to one DynamoDB table needs exactly those two permissions.
 
 ```json

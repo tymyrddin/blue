@@ -1,6 +1,6 @@
 # Zeek deployment
 
-Runbook for deploying Zeek as a network security monitor. Zeek runs on a dedicated Hetzner instance, `nsm.golemtrust.am`, which receives a mirrored copy of all traffic traversing the main Hetzner private network. Dr. Crucible chose Zeek specifically because it produces structured, protocol-aware logs rather than raw packet captures. "We do not want to read every letter," he said. "We want the catalogue."
+Runbook for deploying Zeek as a network security monitor. Zeek runs on a dedicated Hetzner instance, `nsm.golemtrust.am`, which receives a mirrored copy of all traffic traversing the main Hetzner private network. Dr. Crucible chose Zeek specifically because it produces structured, protocol-aware logs. "We do not want to read every letter," he said. "We want the catalogue."
 
 ## Instance and interface requirements
 

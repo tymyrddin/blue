@@ -8,7 +8,7 @@ OnDataChange is not the client polling, it is the server calling back into the c
 server opening connections in the reverse direction over negotiated dynamic ports. That is the property that makes an
 OPC DA client and server notoriously hard to separate with a firewall, and it is a fair part of why OPC UA was created
 with its single outbound channel and pre-sent Publish requests. DCOM authentication does exist, but configuring it well
-is fiddly, so OPC DA in practice tends to be kept on a trusted segment or tunnelled rather than exposed.
+is fiddly, so OPC DA in practice tends to be kept on a trusted segment or tunnelled.
 
 ## Starting in 1996
 

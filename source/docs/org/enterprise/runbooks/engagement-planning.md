@@ -14,7 +14,7 @@ Physical security test assesses the warehouse and office facilities. Mr. Teatime
 
 Social engineering campaigns test staff susceptibility to phishing and pretexting. Given that Sam Vimes Jr. has now clicked on a phishing link in every single exercise, these campaigns serve a dual purpose: measurement and targeted training. Duration: two weeks. Authorisation: Carrot and Adora Belle.
 
-Purple team exercise is a collaborative engagement where both red and blue teams know an exercise is occurring. Mr. Teatime announces the technique at the start of each scenario. The purpose is detection improvement, not surprises. Duration: one day per month. Authorisation: Carrot. Angua is informed.
+Purple team exercise is a collaborative engagement where both red and blue teams know an exercise is occurring. Mr. Teatime announces the technique at the start of each scenario. The purpose is detection improvement. Duration: one day per month. Authorisation: Carrot. Angua is informed.
 
 ## Engagement planning document
 

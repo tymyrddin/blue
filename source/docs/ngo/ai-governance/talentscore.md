@@ -60,9 +60,7 @@ fond of, pointed this out specifically.
 ## The subject access request
 
 Three of the rejected applicants submitted subject access requests within a two-week
-period. This was, the IT manager said to the business analyst, not a coincidence: it
-suggested that someone had mentioned the Home's screening process in a community that
-had experience of exactly this kind of tool. The three SARs asked, among other things,
+period. This was, the IT manager said to the business analyst, not a coincidence. The three SARs asked, among other things,
 for the logic of any automated decision-making applied to their applications.
 
 Under Article 22, data subjects have the right to meaningful information about

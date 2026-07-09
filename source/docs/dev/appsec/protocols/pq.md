@@ -14,7 +14,7 @@ ML-KEM-768 corresponds to what was referred to as Kyber768 during the NIST compe
 
 ## Hybrid key exchange
 
-Hybrid key exchange combines a classical algorithm (X25519) with a post-quantum one (ML-KEM-768), so security degrades to classical strength if the post-quantum component is broken, rather than failing entirely. This is the prevalent migration approach: it provides post-quantum protection for future decryption attacks without relying solely on algorithms that are newer and have had less public cryptanalysis.
+Hybrid key exchange combines a classical algorithm (X25519) with a post-quantum one (ML-KEM-768), so security degrades to classical strength if the post-quantum component is broken. This is the prevalent migration approach: it provides post-quantum protection for future decryption attacks without relying solely on algorithms that are newer and have had less public cryptanalysis.
 
 OpenSSL's support for ML-KEM in stable releases is still in progress as of 2025. The OQS (Open Quantum Safe) project maintains an OpenSSL fork and provider with post-quantum support:
 
@@ -27,7 +27,7 @@ The group name `kyber768` may still appear in some implementations using earlier
 
 ## TLS 1.3 side channels
 
-Separate from post-quantum concerns, TLS 1.3 has been subject to timing side-channel research (Raccoon, Lucky13 variants in specific implementations). These affect specific implementations rather than the protocol itself; patching the TLS library to a current version addresses this.
+Separate from post-quantum concerns, TLS 1.3 has been subject to timing side-channel research (Raccoon, Lucky13 variants in specific implementations). These affect specific implementations; patching the TLS library to a current version addresses this.
 
 ## Practical readiness
 

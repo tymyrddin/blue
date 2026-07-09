@@ -6,7 +6,7 @@ protection is immediate and the cost is an outage, and the outage is the part th
 
 The gap that follows is not ignorance. Between a patch being released and a patch being deployed sits
 a maintenance window that has to be scheduled, announced, and survived, and for many organisations
-that window is weeks rather than hours. Attackers reverse-engineer the patch to build the exploit in
+that window is weeks. Attackers reverse-engineer the patch to build the exploit in
 days. The exposure is the difference, and it is created by the deployment friction rather than by
 anyone failing to know the patch exists.
 
@@ -19,5 +19,5 @@ permanent exposure.
 The emergency path is the release valve and its own risk. An out-of-band patch deployed without the
 usual testing trades the vulnerability for a regression, and a bad patch that takes down the estate
 is indistinguishable, on the morning, from the attack it was meant to prevent. The honest position is
-that patch latency is a managed risk, not a solved one, and the management is mostly about which
+that patch latency is a managed risk, and the management is mostly about which
 exposures are carried deliberately, and for how long.

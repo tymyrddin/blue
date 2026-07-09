@@ -19,7 +19,7 @@ participants recognise: the Microsoft 365 login or the Covenant login.
 5. Click Import. Gophish fetches the HTML and inline assets.
 6. Review the imported page in the HTML editor. Remove any external script references
    that would cause the page to load Microsoft's actual login logic. The form should
-   submit to Gophish, not to Microsoft.
+   submit to Gophish.
 7. Enable "Capture Submitted Data".
 8. Enable "Capture Passwords". Captured credentials are visible only in the Gophish
    admin interface on the display machine and are not stored externally.
@@ -32,8 +32,7 @@ participants recognise: the Microsoft 365 login or the Covenant login.
 
 ## QR code variant
 
-For the QR code phishing demonstration, the landing page URL is embedded in a QR code
-rather than placed as a link in the email body.
+For the QR code phishing demonstration, the landing page URL is embedded in a QR code.
 
 1. Launch the campaign and copy the phishing URL from the campaign details page.
 2. Generate a QR code pointing to that URL using any QR code generator.
@@ -44,7 +43,6 @@ rather than placed as a link in the email body.
 ## Notes
 
 Participants will see the cloned page and may notice it is not the real Microsoft login.
-This is intentional: the session is about recognition and the debrief, not about
-fooling people indefinitely. The redirect page confirming the simulation appears
+This is intentional: the session is about recognition and the debrief. The redirect page confirming the simulation appears
 immediately after credential submission, closing the loop while the participant is
 still engaged.

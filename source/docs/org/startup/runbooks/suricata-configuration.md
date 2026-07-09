@@ -16,7 +16,7 @@ systemctl stop suricata
 systemctl disable suricata
 ```
 
-Suricata will be managed by a custom service configuration rather than the default systemd unit, to ensure it reads from the correct interface.
+Suricata will be managed by a custom service configuration to ensure it reads from the correct interface.
 
 ## Interface configuration
 

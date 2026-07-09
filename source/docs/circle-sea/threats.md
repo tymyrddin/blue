@@ -51,7 +51,7 @@ while the quiet work goes on along a border nobody is watching.
 The Agatean Empire, away across the water on the Counterweight Continent, is the only power large
 enough to count as a second bloc, and so it is the one the arrangement keeps half an eye on out of
 sheer arithmetic. It is vast, ancient, and entirely certain of its own centrality, a civilisation
-that regards the Circle Sea powers as distant curiosities rather than rivals.
+that regards the Circle Sea powers as distant curiosities.
 
 The catch, repeated through every assessment that has ever treated the Empire as a looming menace, is
 that the Empire is not coming. Its energies turn inward, on a bureaucracy of immense age and an elite

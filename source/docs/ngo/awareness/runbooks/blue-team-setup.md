@@ -38,7 +38,7 @@ campaigns. The session is not adversarial. Both sides learn from watching both s
 6. If a second projector is available, connect the blue team machine to it and project
    the inbox alongside the Gophish dashboard on the main display. If only one projector
    is available, the facilitator switches between the Gophish dashboard and the inbox
-   during the debrief rather than during live play.
+   during the debrief.
 
 ## During the session
 

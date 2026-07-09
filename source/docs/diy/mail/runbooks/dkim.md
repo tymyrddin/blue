@@ -75,7 +75,7 @@ smtpd_milters = unix:/var/run/opendkim/opendkim.sock
 non_smtpd_milters = unix:/var/run/opendkim/opendkim.sock
 ```
 
-`milter_default_action = accept` means mail still flows if OpenDKIM is down, rather than queuing; the trade-off is unsigned mail during an outage. Restart Postfix:
+`milter_default_action = accept` means mail still flows if OpenDKIM is down; the trade-off is unsigned mail during an outage. Restart Postfix:
 
 ```
 sudo systemctl restart postfix

@@ -25,7 +25,7 @@ For each exception, record:
 - a review date (most legacy exceptions have none)
 
 Flag: exceptions with no use case, no owner, or no review date. Those are the
-ones that accreted, not the ones that were decided.
+ones that accreted.
 
 ## Trim
 

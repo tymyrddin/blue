@@ -20,7 +20,7 @@ At the application level, a few practices reduce the blast radius when a smuggli
 
 Connection isolation: using a unique backend connection per request (disabling connection pooling between frontend and backend) prevents one request's smuggled prefix from contaminating the next request's connection. The performance cost is real; it is a tradeoff.
 
-Request ID propagation: adding a unique identifier to each request at the frontend and verifying it at the backend makes it possible to detect when a request arrives without the identifier, which indicates a smuggled origin. This is a detection measure, not a prevention.
+Request ID propagation: adding a unique identifier to each request at the frontend and verifying it at the backend makes it possible to detect when a request arrives without the identifier, which indicates a smuggled origin. This is a detection measure.
 
 ## Infrastructure auditing
 

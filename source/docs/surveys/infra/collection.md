@@ -1,8 +1,7 @@
 # The collection layer
 
 Everything begins with collection. A service of any size tends to work several disciplines at
-once, because each one sees what the others miss, and the value is usually in the overlap rather
-than in any single feed.
+once, because each one sees what the others miss, and the value is usually in the overlap.
 
 The five disciplines below are the ordinary spread. None of them is exotic. What varies between
 services is the weighting, and the weighting is itself a clue to what a service is for.

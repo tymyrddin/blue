@@ -1,7 +1,7 @@
 # Run a container as non-root
 
 Hardening runbook. Makes a container run as an unprivileged user, so that a process escaping the
-container arrives on the host as a nobody rather than as root. It is the first confinement barrier;
+container arrives on the host as a nobody. It is the first confinement barrier;
 the [container stack](../stack.md) covers how it layers with the rest.
 
 ## When to run
@@ -57,7 +57,7 @@ docker inspect --format '{{.Config.User}}' <container>
 docker exec <container> id
 ```
 
-The first should show the configured user, not empty. `id` from inside should report a non-zero uid and gid. Confirm the
+The first should show a configured user. `id` from inside should report a non-zero uid and gid. Confirm the
 application still starts, serves, and can write wherever it legitimately needs to.
 
 ## Done

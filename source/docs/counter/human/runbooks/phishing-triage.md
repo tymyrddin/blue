@@ -7,9 +7,9 @@ bypassed through a reverse proxy.
 AiTM phishing does not defeat MFA cryptographically. It proxies the authentication in
 real time: the victim authenticates to the proxy, the proxy forwards credentials and
 the TOTP code to the real service, and receives a valid session token that is then used
-independently. Detection is at the sign-in log layer, not the authentication layer: the
-session token issued to the legitimate user and the session used from the attacker's IP
-are the same token, used from different locations.
+independently. Detection is at the sign-in log layer: the session token issued to the
+legitimate user and the session used from the attacker's IP are the same token, used
+from different locations.
 
 Data sources: raw message files in `.eml` format, retrieved from the quarantine or the
 user's mailbox; Microsoft Entra ID sign-in logs via the Microsoft Graph PowerShell
@@ -113,9 +113,9 @@ Get-MgAuditLogSignIn -Filter (
 A successful sign-in from an IP with no prior history for that user, where
 `AuthenticationRequirement` shows MFA was satisfied, is consistent with AiTM token theft
 but not conclusive on its own. Confidence increases when the IP resolves to a hosting
-provider rather than a residential or corporate range, subsequent API activity from that
-IP is inconsistent with the user's normal behaviour, or a forwarding rule or OAuth
-consent event appears in the minutes following the sign-in.
+provider, subsequent API activity from that IP is inconsistent with the user's normal
+behaviour, or a forwarding rule or OAuth consent event appears in the minutes following
+the sign-in.
 
 The Evilginx and Modlishka proxy frameworks produce exactly this pattern: a successful
 TOTP-based authentication followed by session token replay from infrastructure the

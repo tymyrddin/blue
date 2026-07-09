@@ -77,7 +77,7 @@ It does not discard the claim entirely. The ninety-day retention is the differen
 act now and pretending the claim was never made. The two are not the same.
 
 It does not tell the Long Table. Silence is the correct output for material at this standing. The drop log
-exists so that a later correlation has something to find, not so that the division above has more to read.
+exists so that a later correlation has something to find.
 
 ## Case record status
 

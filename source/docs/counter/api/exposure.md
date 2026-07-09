@@ -65,7 +65,7 @@ reliable way to catch regressions.
 ### JWT hardening
 
 Reject tokens with the `none` algorithm unconditionally. Explicitly allowlist the algorithms the
-API accepts rather than accepting whatever the token header declares:
+API accepts:
 
 ```python
 jwt.decode(token, secret, algorithms=["HS256"])  # not algorithms=jwt.algorithms.get_default_algorithms()

@@ -53,7 +53,7 @@ For rules generating thousands of events per hour with no operational value, eit
 
 ## False positive rules
 
-False positives are almost always caused by a legitimate process that matches a condition written for a narrower scope. The fix is always to extend the condition via `override: append` rather than disabling the rule outright.
+False positives are almost always caused by a legitimate process that matches a condition written for a narrower scope. The fix is always to extend the condition via `override: append`.
 
 To identify the fields of a specific event, enable JSON output and watch the log file:
 

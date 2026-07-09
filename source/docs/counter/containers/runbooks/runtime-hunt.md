@@ -168,5 +168,4 @@ grep "system:serviceaccount:${POD_NS}:${SA}" /var/log/kubernetes/audit.log | \
 
 A service account from an application namespace making RBAC modifications or secret
 access calls in the window following a Falco shell spawn from the same pod is the
-escalation chain worth treating as a confirmed incident rather than an alert requiring
-further triage.
+escalation chain worth treating as a confirmed incident.

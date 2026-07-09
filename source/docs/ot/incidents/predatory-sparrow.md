@@ -77,8 +77,7 @@ Gonjeshke Darande has claimed the June 2022 steel mill attacks and an October 20
 distribution network, which disrupted sales at tens of thousands of petrol stations across the country.
 Both operations were announced publicly, with video evidence and written statements. The explicit public
 framing of the attacks as responses to Iranian government actions, combined with the demonstrated capability
-to reach and damage industrial systems, is consistent with a state-affiliated operation rather than independent
-criminal or hacktivist activity.
+to reach and damage industrial systems, is consistent with a state-affiliated operation.
 
 The broader Iran-Israel covert conflict contextualises the operations. It has included Iranian attacks on Israeli
 water infrastructure in 2020, Israeli operations against Iranian nuclear facilities across several years, the

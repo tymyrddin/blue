@@ -29,7 +29,7 @@ def safe_open(filename: str) -> bytes:
     return target.read_bytes()
 ```
 
-The check happens on the resolved path, not the raw string. `is_relative_to()` is available
+The check happens on the resolved path. `is_relative_to()` is available
 from Python 3.9; on earlier versions, use:
 
 ```python
@@ -40,7 +40,7 @@ from Python 3.9; on earlier versions, use:
 The unsafe pattern, for comparison:
 
 ```python
-# unsafe: checks the input string, not the resolved path
+# unsafe: checks the input string
 def unsafe_open(filename: str) -> bytes:
     if ".." in filename:
         raise ValueError("invalid path")

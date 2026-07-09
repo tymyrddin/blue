@@ -2,8 +2,7 @@
 
 ## The problem with impact-focused detection
 
-Security monitoring is built around detecting compromise, not detecting
-impact. By the time a ransomware deployment or data extortion event occurs,
+Security monitoring is built around detecting compromise, not impact. By the time a ransomware deployment or data extortion event occurs,
 the attacker has typically been present for days or weeks. The impact event
 is the last step, and an organisation's best opportunity to detect and
 contain the intrusion has usually already passed.

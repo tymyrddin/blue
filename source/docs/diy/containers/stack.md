@@ -19,7 +19,7 @@ rebuilt or replaced.
 
 Scanning images for known CVEs before deployment catches the most common class of container vulnerability. Tools like
 `trivy` or Docker Scout check image layers against vulnerability databases; running them as part of the build process
-rather than after deployment shifts the discovery earlier.
+shifts the discovery earlier.
 
 Minimal base images reduce the available attack surface. An image built on Alpine or a distroless base contains far
 fewer packages, and therefore fewer exploitable binaries, than one built on a full Debian or Ubuntu image. Tooling that
@@ -88,8 +88,7 @@ performance-sensitive applications; outside those cases it removes a meaningful 
 
 Docker modifies iptables rules to handle container port publishing and network address translation. These rules are
 applied automatically and may not match the intent of manually configured firewall rules. Reviewing the actual iptables
-state after container startup, rather than assuming the configured firewall covers container traffic, reflects what is
-actually in effect.
+state after container startup reflects what is actually in effect.
 
 ## Secrets management
 

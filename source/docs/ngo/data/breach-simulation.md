@@ -127,11 +127,10 @@ systems without SSO integration, a dwell time that produces regulatory ambiguity
 involving both sensitive personal records and third-party personal data.
 
 Subsequent simulations can extend the same scenario in different directions. A ransomware
-variant where the attacker encrypts the Bestiary server rather than exfiltrating it changes
+variant where the attacker encrypts the Bestiary server changes
 the containment decisions and the notification calculus. A variant where the Covenant
 export includes payment tokenisation data introduces a different notification threshold.
-A variant where the breach is reported to the Home by an external party rather than
-discovered internally tests the responsible disclosure intake process.
+A variant where the breach is reported to the Home by an external party tests the responsible disclosure intake process.
 
 Each variant uses the same SIRT structure, the same runbooks, and the same applications.
 The scenario changes. The foundation holds.

@@ -48,4 +48,4 @@ Policy can flag security group rules that have drifted toward permissiveness.
 Direct server access for operations passes through controlled channels. AWS Systems Manager Session Manager
 removes the need for an exposed SSH port; bastion hosts with MFA provide an auditable alternative where SSM
 is not available. Hybrid environments connect on-premises networks to cloud resources through site-to-site
-VPNs or direct connections rather than public interfaces.
+VPNs or direct connections.

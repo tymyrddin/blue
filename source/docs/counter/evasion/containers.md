@@ -92,7 +92,7 @@ Ephemeral containers (`kubectl debug`) run alongside an existing pod and share i
 
 ## Hardening that creates detection signal
 
-Immutable containers: setting `readOnlyRootFilesystem: true` in the pod security context means any write attempt to the container filesystem generates a kernel error and, with Falco, a rule violation. An attacker who tries to write a tool or establish a backdoor produces a visible event rather than silently succeeding.
+Immutable containers: setting `readOnlyRootFilesystem: true` in the pod security context means any write attempt to the container filesystem generates a kernel error and, with Falco, a rule violation. An attacker who tries to write a tool or establish a backdoor produces a visible event.
 
 Network policies: unexpected egress from a container with no legitimate reason for external connections is a clear signal. A network policy engine (Calico, Cilium) that blocks and logs violations provides the baseline for anomaly detection.
 

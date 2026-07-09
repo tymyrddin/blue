@@ -13,7 +13,7 @@ $1  source IP
 $7  request path
 $9  HTTP status code
 $11 referer
-$12 user-agent (within quotes; use grep patterns on the full line rather than awk field extraction)
+$12 user-agent (within quotes; use grep patterns on the full line)
 ```
 
 Example log line:

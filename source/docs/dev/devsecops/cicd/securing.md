@@ -12,8 +12,7 @@ restricted permissions) limits the blast radius of a compromised job. A job that
 environment can access artefacts from other jobs, residual credentials, and potentially the host system.
 
 RBAC on pipeline permissions restricts which jobs can deploy, which can access secrets, and which can modify pipeline
-configuration. The principle is the same as for any other system: the minimum access needed for the job to run, not the
-maximum that is convenient.
+configuration. The principle is the same as for any other system: the minimum access needed for the job to run.
 
 ## Secrets management
 

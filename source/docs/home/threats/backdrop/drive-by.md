@@ -26,7 +26,7 @@ exploited; the window between public disclosure and patch adoption is the period
 
 Outcomes range from adware and unwanted toolbars at the nuisance end to ransomware, spyware, and remote access
 trojans at the serious end. The user may not notice anything immediately. Some malware is designed to be
-persistent and quiet rather than immediately disruptive.
+persistent and quiet.
 
 Ad-blockers reduce exposure by blocking the advertising networks that have historically distributed drive-by
 malware. Browser updates, applied promptly, close the specific vulnerabilities that unauthorised variants exploit.

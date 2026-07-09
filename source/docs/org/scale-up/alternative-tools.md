@@ -104,8 +104,7 @@ running both provides cross-validation but adds pipeline complexity.
 
 [cdxgen](https://github.com/CycloneDX/cdxgen/releases) is an OWASP project (Apache 2.0) for generating CycloneDX SBOMs 
 from source code. It supports more language ecosystems than Syft for source-level 
-analysis. Useful if SBOM requirements extend to the application dependency graph rather than only the container image 
-layer.
+analysis. Useful if SBOM requirements extend to the application dependency graph.
 
 ## CI/CD platform
 

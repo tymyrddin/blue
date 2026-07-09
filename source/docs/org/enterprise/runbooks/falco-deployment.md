@@ -1,6 +1,6 @@
 # Falco deployment
 
-Falco runs on every Kubernetes node at Golem Trust as a DaemonSet, watching system calls from every container on every host. Dr. Crucible describes it as "Angua on every corner, and she never sleeps." This runbook covers the Helm-based installation procedure, the standard configuration file, output channel configuration, and how to verify that the DaemonSet is healthy across all nodes. Images are pulled from the internal Harbor registry rather than directly from Docker Hub, in line with Ludmilla's supply chain policy.
+Falco runs on every Kubernetes node at Golem Trust as a DaemonSet, watching system calls from every container on every host. Dr. Crucible describes it as "Angua on every corner, and she never sleeps." This runbook covers the Helm-based installation procedure, the standard configuration file, output channel configuration, and how to verify that the DaemonSet is healthy across all nodes. Images are pulled from the internal Harbor registry, in line with Ludmilla's supply chain policy.
 
 ## Prerequisites
 

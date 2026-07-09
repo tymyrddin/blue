@@ -103,7 +103,7 @@ netsh advfirewall firewall add rule name="Block certutil outbound" `
 
 Document which LoLbins are actively used by IT operations before restricting them.
 Restricting a LoLbin that SCCM or a management tool relies on creates operational
-problems. Build the exclusion list from evidence, not assumption.
+problems. Build the exclusion list from evidence.
 
 ## Credential protections
 

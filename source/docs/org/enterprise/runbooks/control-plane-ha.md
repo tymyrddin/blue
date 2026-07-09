@@ -29,7 +29,7 @@ The Hetzner load balancer is configured via the Hetzner Cloud console or API. It
 - All three control plane nodes as targets
 - Algorithm: round-robin
 
-The load balancer IP is used as `--control-plane-endpoint` in kubeadm. It must be stable (use the reserved IP feature in Hetzner, not the auto-assigned floating IP).
+The load balancer IP is used as `--control-plane-endpoint` in kubeadm. It must be stable (use the reserved IP feature in Hetzner).
 
 ## kube-vip for virtual IP
 

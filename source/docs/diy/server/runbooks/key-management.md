@@ -28,7 +28,7 @@ On a fresh server where access is set up out of band, the public key goes into `
 
 ### Risk
 
-Copying a key with `scp` directly onto `authorized_keys` overwrites every existing key on the server. Use `ssh-copy-id` or an append (`cat >>`), not a plain copy, on any server with other keys in place.
+Copying a key with `scp` directly onto `authorized_keys` overwrites every existing key on the server. Use `ssh-copy-id` or an append (`cat >>`) on any server with other keys in place.
 
 ## Verify
 

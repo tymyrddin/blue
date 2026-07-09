@@ -32,7 +32,7 @@ a safe deposit box).
 ## Keeping it going
 
 Set a recurring calendar reminder, monthly works for most people. Call it whatever makes it likely to happen.
-The goal is to make backup a scheduled event rather than a response to a near-miss.
+The goal is to make backup a scheduled event.
 
 Encrypt the backup drive if it contains sensitive documents. BitLocker (Windows) and FileVault (macOS) handle
 full-drive encryption. VeraCrypt works across platforms.

@@ -82,7 +82,7 @@ or run a whois lookup. Identify the owning process. Check where that executable 
 A legitimate process in an unexpected directory is worth investigating. A connection to a
 major cloud provider is not automatically benign.
 
-Document what you find rather than acting on each item immediately. The pattern matters more
+Document what you find acting on each item immediately. The pattern matters more
 than any single connection.
 
 Save output to a file for reporting:

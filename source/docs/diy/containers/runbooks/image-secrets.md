@@ -68,7 +68,7 @@ docker history --no-trunc <image> | grep -iE "password|secret|token|key|--build-
 docker inspect <container> | grep -iA5 '"Env"'
 ```
 
-Neither should reveal a credential value. From inside the container, confirm secrets arrive as files under `/run/secrets/` rather than as environment variables:
+Neither should reveal a credential value. From inside the container, confirm secrets arrive as files under `/run/secrets/`:
 
 ```
 docker exec <container> env | grep -iE "password|secret|token"
@@ -78,7 +78,7 @@ This should return nothing sensitive.
 
 ## Done
 
-No secret in `docker history` or the build arguments. No credential in the container's environment. Run-time secrets arrive as mounted files or from a secrets manager. `.dockerignore` excludes credential files. Any secret previously baked into a pushed image has been rotated, not just removed.
+No secret in `docker history` or the build arguments. No credential in the container's environment. Run-time secrets arrive as mounted files or from a secrets manager. `.dockerignore` excludes credential files. Any secret previously baked into a pushed image has been rotated.
 
 ## Rollback
 

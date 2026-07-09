@@ -14,7 +14,7 @@ from flask import abort, g
 def get_invoice(invoice_id: int):
     invoice = Invoice.query.get_or_404(invoice_id)
 
-    # ownership check, not just authentication
+    # ownership check
     if invoice.owner_id != g.current_user.id:
         abort(403)
 
@@ -77,4 +77,4 @@ def disable_user(user_id: int):
 
 Testing for IDOR requires two accounts at each privilege level. Authenticated as one account, accessing resources belonging to the other tests whether the ownership check is enforced. Any successful access is a finding.
 
-Automated scanning tools do not reliably detect IDOR because the vulnerability requires understanding the application's intended access model, not just observing an unexpected response code.
+Automated scanning tools do not reliably detect IDOR because the vulnerability requires understanding the application's intended access model.

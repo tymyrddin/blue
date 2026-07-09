@@ -104,7 +104,7 @@ Bind this flow to the `golem-service` client under Authentication Flow Overrides
 
 ## Verification
 
-Test with a known golem identity (use the test golem `golem-test` registered in the staging environment, not Mr. Pump in production):
+Test with a known golem identity (use the test golem `golem-test` registered in the staging environment):
 
 ```
 curl -s -X POST "https://auth.golemtrust.am/realms/golemtrust-internal/protocol/openid-connect/token" \

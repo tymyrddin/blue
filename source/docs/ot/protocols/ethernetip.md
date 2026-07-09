@@ -3,7 +3,7 @@
 ![EtherNet/IP message exchange](/_static/images/protocol-eip.png)
 
 EtherNet/IP is CIP carried over Ethernet, and its character is the split down the middle of the diagram. RegisterSession
-returns a session handle, which is a routing token rather than a credential: it identifies the conversation, it does not
+returns a session handle, which is a routing token: it identifies the conversation, it does not
 authenticate the originator. Explicit messaging then runs request/response over TCP for configuration and diagnostics,
 each SendRRData wrapping a CIP service. ForwardOpen is the pivot. It asks the Connection Manager to set up a Class 1
 connection at a requested packet interval, and once that exists the actual process data leaves TCP entirely and runs as

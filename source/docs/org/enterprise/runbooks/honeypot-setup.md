@@ -155,7 +155,7 @@ def debug_users():
     })
 ```
 
-The warning message in the response is intentional. It makes the endpoint look like a real developer oversight rather than a trap.
+The warning message in the response is intentional. It makes the endpoint look like a real developer oversight.
 
 ## Alert transport
 

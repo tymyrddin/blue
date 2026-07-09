@@ -14,8 +14,7 @@ modification process, not the carrier.
 
 A GAN-generated image carrying a payload via SteganoGAN, or a diffusion-generated image
 with latent noise encoding, was never modified. Its statistical properties reflect the
-generative model's training distribution, not a modification process. The classifier has
-nothing to find.
+generative model's training distribution. The classifier has nothing to find.
 
 The only detectable property is that the image is AI-generated, which is a different
 problem from steganography detection.
@@ -95,6 +94,6 @@ side regardless of the embedding method.
 Watch for periodic image retrieval patterns in network logs. Steganographic C2 leaves a
 timing footprint even when the content is undetectable.
 
-Treat AI-generated image detection as a useful signal, not a conclusion. An AI-generated
+Treat AI-generated image detection as a useful signal. An AI-generated
 image is not proof of steganographic content, but it raises the prior probability enough
 to justify deeper investigation.

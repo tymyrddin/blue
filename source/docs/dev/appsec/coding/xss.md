@@ -34,7 +34,7 @@ content is dangerous even when the content looks clean:
 // unsafe: innerHTML parses and executes HTML, including <script> and event handlers
 document.getElementById("output").innerHTML = userInput;
 
-// safe: textContent treats the value as a text node, not markup
+// safe: textContent treats the value as a text node
 document.getElementById("output").textContent = userInput;
 ```
 
@@ -83,8 +83,7 @@ Django:
 </script>
 ```
 
-The Django filter for JavaScript context is `|escapejs` (a filter on the value, not a
-template tag). It escapes characters that would break out of a JavaScript string literal.
+The Django filter for JavaScript context is `|escapejs`, a filter on the value. It escapes characters that would break out of a JavaScript string literal.
 
 Jinja2:
 
@@ -101,7 +100,7 @@ env.from_string(user_supplied_template)  # unsafe if user controls the template
 
 ## Content Security Policy
 
-CSP is a defence-in-depth measure, not a primary control. A well-configured CSP header
+CSP is a defence-in-depth measure. A well-configured CSP header
 reduces the impact of XSS that bypasses output encoding, but encoding is the primary
 defence.
 

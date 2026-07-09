@@ -2,9 +2,9 @@
 
 The HTTP `Host` header tells the server which virtual host the client is requesting. When application code uses the `Host` header value to construct URLs (for password reset links, redirects, canonical links, or cache keys), an attacker can substitute an arbitrary hostname and influence that output. The [Host header attack techniques](https://red.tymyrddin.dev/docs/in/app/techniques/headers.html) page covers the escalation paths: password reset poisoning, cache poisoning, and SSRF via routing misconfigurations.
 
-## Use a configured hostname, not the request header
+## Use a configured hostname
 
-The Host header is client-controlled. Any URL constructed from it is attacker-influenced. The server's own hostname is a deployment configuration value, not something to read from the request:
+The Host header is client-controlled. Any URL constructed from it is attacker-influenced. The server's own hostname is a deployment configuration value:
 
 ```python
 # Django: use the Sites framework or a settings value

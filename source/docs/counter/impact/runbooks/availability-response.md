@@ -28,7 +28,7 @@ systemctl status <service>; journalctl -u <service> --since -30min
 ```
 
 Cross-check monitoring against reality. In a routing or integrity attack the dashboards read green
-while the service is wrong, so trust the process, not the screen.
+while the service is wrong, so trust the process.
 
 ## Contain by failure mode
 

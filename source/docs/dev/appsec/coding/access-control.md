@@ -8,7 +8,7 @@ what it is applied to, and what bypasses it when applied at the wrong layer.
 
 ## Authorisation at the endpoint, not the UI
 
-Hiding a link or a button based on a user's role is a UI convenience, not an access control. Any user with a valid session who knows the endpoint path can call it directly. The control is applied at the endpoint:
+Hiding a link or a button based on a user's role is a UI convenience. Any user with a valid session who knows the endpoint path can call it directly. The control is applied at the endpoint:
 
 ```python
 from functools import wraps

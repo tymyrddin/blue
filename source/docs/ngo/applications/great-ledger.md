@@ -12,8 +12,7 @@ full intake. It means that when the Home is considering rehoming a resident to a
 organisation in Bonk, the Bonk facility can see the full history without requiring the
 Home to produce a physical transfer dossier, which historically involved a great deal of
 fax paper. It also means that when a creature claims to be arriving from somewhere reputable,
-this can be verified in under five minutes rather than via a phone call to a country whose
-telephony infrastructure is not always cooperative.
+this can be verified in under five minutes.
 
 The Consortium operates the Ledger under a data sharing agreement signed by all member
 organisations. The Home signed the current version of the agreement three years ago. There
@@ -53,7 +52,7 @@ still active and forwarded to a shared mailbox that is checked inconsistently.
 ## What it holds and who can see it
 
 The Great Ledger holds records contributed by all forty-seven member organisations. Each
-organisation can see all records, not only their own. This is by design: the Consortium's
+organisation can see all records. This is by design: the Consortium's
 position is that effective cross-border rehoming and transfer management requires
 comprehensive visibility, and that member organisations have accepted appropriate data
 handling obligations under the sharing agreement.

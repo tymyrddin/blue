@@ -61,7 +61,7 @@ openssl x509 -req -days 730 \
     -out hostname.crt
 ```
 
-Rename the key and certificate to reflect the service (`mail.example.com.key`). A service that needs to start without a passphrase prompt uses an unencrypted key, generated unencrypted from the outset rather than stripped later where possible.
+Rename the key and certificate to reflect the service (`mail.example.com.key`). A service that needs to start without a passphrase prompt uses an unencrypted key, generated unencrypted from the outset.
 
 ## Verify
 

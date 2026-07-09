@@ -4,7 +4,7 @@ Open Policy Agent runs in two distinct modes at Golem Trust. The first is OPA Ga
 
 ## Standalone OPA: binary installation
 
-The standalone OPA server runs as a systemd service on a dedicated VM in each Hetzner region. The binary is downloaded from the Golem Trust internal mirror rather than directly from GitHub:
+The standalone OPA server runs as a systemd service on a dedicated VM in each Hetzner region. The binary is downloaded from the Golem Trust internal mirror:
 
 ```
 curl -fsSL https://artifacts.golems.internal/opa/v0.68.0/opa_linux_amd64 \

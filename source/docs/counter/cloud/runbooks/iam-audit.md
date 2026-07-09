@@ -43,7 +43,7 @@ aws iam list-roles --query 'Roles[].RoleName' --output text | \
 ```
 
 Any user with a directly attached `AdministratorAccess` policy warrants documentation.
-IAM best practice places admin permissions on roles, not users, so users with directly
+IAM best practice places admin permissions on roles, so users with directly
 attached policies are a finding regardless of the specific policy name.
 
 ## AWS: access keys older than 90 days

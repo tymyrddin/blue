@@ -59,7 +59,7 @@ Roles are self-contained. The `common` role installs baseline packages, sets the
 
 ## Writing tasks
 
-Tasks should be idempotent: running a task twice must produce the same result as running it once. Use Ansible modules rather than shell commands wherever possible. Modules handle idempotency; shell commands usually do not.
+Tasks should be idempotent: running a task twice must produce the same result as running it once. Use Ansible modules wherever possible. Modules handle idempotency; shell commands usually do not.
 
 Preferred:
 
@@ -116,7 +116,7 @@ Apply to staging:
 ansible-playbook -i inventory/staging/hosts.yml site.yml
 ```
 
-Review the output. Any task reporting `changed` should be examined. Tasks that are expected to be idempotent (already applied in a previous run) should report `ok`, not `changed`. Repeated `changed` results on re-runs indicate a non-idempotent task that should be fixed before applying to production.
+Review the output. Any task reporting `changed` should be examined. Tasks that are expected to be idempotent (already applied in a previous run) should report `ok`. Repeated `changed` results on re-runs indicate a non-idempotent task that should be fixed before applying to production.
 
 ## Merge request requirements
 

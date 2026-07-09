@@ -4,7 +4,7 @@ Runbook for Teleport's role-based access control. This document defines the role
 
 ## Role design principles
 
-Roles are named after job functions, not permissions. A role called `developer` is easier to reason about than a role called `ssh-non-prod-read-write`. When a developer's responsibilities change, the role changes; when a new developer joins, the role is assigned without re-examining permissions.
+Roles are named after job functions. A role called `developer` is easier to reason about than a role called `ssh-non-prod-read-write`. When a developer's responsibilities change, the role changes; when a new developer joins, the role is assigned without re-examining permissions.
 
 Every role specifies the minimum access required for the job. When in doubt, grant less and allow access requests to cover exceptional needs. The access request workflow (see the approval workflows runbook) exists for cases that fall outside the normal role scope.
 

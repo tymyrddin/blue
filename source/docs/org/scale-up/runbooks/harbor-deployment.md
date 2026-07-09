@@ -97,7 +97,7 @@ Harbor organises images into projects. Create the following projects after insta
 
 `golemtrust-staging`: staging images. Vulnerability scanning required. Content trust optional.
 
-`base-images`: curated base images (Debian, Python, Node, etc.) pulled from upstream and rescanned weekly. Teams pull base images from here, not from Docker Hub.
+`base-images`: curated base images (Debian, Python, Node, etc.) pulled from upstream and rescanned weekly. Teams pull base images from here.
 
 `third-party`: vetted third-party images (Redis, PostgreSQL, etc.) that have been reviewed and signed. Ludmilla approves additions.
 

@@ -6,7 +6,7 @@ Most production applications include far more [third-party code](../libraries/ov
 
 Direct dependencies are the packages listed in `requirements.txt`, `package.json`, or `go.mod`. Transitive dependencies are the packages those packages depend on. A vulnerability in a transitive dependency three levels deep is still exploitable; SCA tools traverse the full dependency tree.
 
-A new CVE can make a previously-clean dependency tree vulnerable without any code changes. Continuous monitoring (rather than a one-time scan) provides ongoing visibility.
+A new CVE can make a previously-clean dependency tree vulnerable without any code changes. Continuous monitoring provides ongoing visibility.
 
 ## Tools
 

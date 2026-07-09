@@ -27,7 +27,7 @@ raises the question of whether that uptime is luck or an advertisement for someo
 
 ## Countermoves
 
-Continuity planning that assumes the provider, not just the hardware, can be the thing that fails.
+Continuity planning that assumes the provider can be the thing that fails.
 The requisitioned fallback, taking a slice of whatever civilian or foreign infrastructure is still
 alive, carries legal and geopolitical friction, and routing your own traffic over someone else's
 ground tells that someone where to listen. Narrative control is the other live decision: owning a

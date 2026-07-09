@@ -47,7 +47,7 @@ ansible-playbook site.yml --limit <hostname>
 
 This resets the host to the desired state. The subsequent drift check run should report no changes.
 
-Document the remediation in the drift register (see below). If the same drift recurs on the same host, investigate the cause rather than just re-applying.
+Document the remediation in the drift register (see below). If the same drift recurs on the same host, investigate the cause.
 
 ## Complex remediation
 

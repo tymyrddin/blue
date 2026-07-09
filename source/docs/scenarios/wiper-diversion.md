@@ -21,11 +21,10 @@ weeks before the first machine died, was never Fungolia's loss alone.
   and tunnel-maps the thing worth a war to two neighbours, guarded by a gateway nobody had patched and a
   staff curious about conference agendas.
 - Midnight Sun, the unit the files number APT-44: the attacker that came through two doors at once, held
-  the ground for months, and burned the place on the way out so the theft would look like the catastrophe
-  rather than hide inside one.
+  the ground for months, and burned the place on the way out so the theft would look like the catastrophe.
 - [The Fungolia Ministry of Digital Affairs (FMDA)](https://red.tymyrddin.dev/docs/earthworks/fmda/): the
   investigator, which walked into a wiped network and a panicking response and had to make the unwelcome
-  case that the wiper was the diversion, not the attack.
+  case that the wiper was the diversion.
 - The Circle Sea Arrangement: which leans on FDEI's grid and tunnels for infrastructure it cannot build
   twice, and which inherits the loss of the schematics whether or not it is told they left.
 

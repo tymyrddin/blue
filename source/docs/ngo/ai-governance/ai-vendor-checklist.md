@@ -62,7 +62,7 @@ category. Ongoing mitigation efforts are not the same as resolved mitigation eff
 **What serialisation format is the delivered model artefact in?**
 Certain formats, including Python pickle files, execute code on load. A delivered model
 in such a format from a vendor whose build pipeline has not been audited is a code
-execution risk, not merely a data handling one. Ask for the format explicitly. Ask for
+execution risk. Ask for the format explicitly. Ask for
 a hash to verify the file has not been modified in transit.
 [Relevant: Oracle]
 
@@ -129,7 +129,7 @@ something more reliable.
 ## Before signing off
 
 The IT function and the DPO both review the completed checklist. Items marked unknown
-require follow-up before deployment, not after. Items marked not in place require a
+require follow-up before deployment. Items marked not in place require a
 documented decision: accepted risk with a review date, or deployment blocked until
 resolved.
 

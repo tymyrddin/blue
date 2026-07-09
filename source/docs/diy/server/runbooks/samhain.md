@@ -12,11 +12,11 @@ Samhain detects change against a baseline. If the baseline is built on a system 
 
 ## What it covers
 
-Samhain checks file integrity, watches logs, detects rootkits, monitors ports, and flags rogue SUID executables and hidden processes. It is a detection control, not a prevention one: it catches an intruder who is already in but still present.
+Samhain checks file integrity, watches logs, detects rootkits, monitors ports, and flags rogue SUID executables and hidden processes. It is a detection control: it catches an intruder who is already in but still present.
 
 ## Setup, briefly
 
-Samhain ships as source, not a packaged binary, so setup is more involved than a typical `apt install`. The full build (download, GPG signature verification, `./configure`, `make`, `make install`) is on the project site. Verify the download signature before building: it is the step that confirms the source has not been tampered with.
+Samhain ships as source, so setup is more involved than a typical `apt install`. The full build (download, GPG signature verification, `./configure`, `make`, `make install`) is on the project site. Verify the download signature before building: it is the step that confirms the source has not been tampered with.
 
 ```
 gpg --verify samhain-current.tar.gz.asc samhain-current.tar.gz

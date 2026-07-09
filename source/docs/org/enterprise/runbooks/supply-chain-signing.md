@@ -4,7 +4,7 @@ Signing an artefact is only useful if the verification is enforced. Golem Trust 
 
 ## How keyless signing works
 
-Traditional Cosign signing uses a long-lived private key stored as a secret. Keyless signing replaces this with a short-lived certificate issued by Sigstore Fulcio, bound to the OIDC identity of the signer. In Golem Trust's pipeline, the signer is the Tekton Chains controller's Kubernetes ServiceAccount. Fulcio issues a certificate proving that the signing event was performed by that ServiceAccount identity, and records the certificate in the Rekor transparency log. The certificate expires after ten minutes; verification uses the Rekor log entry rather than a stored key.
+Traditional Cosign signing uses a long-lived private key stored as a secret. Keyless signing replaces this with a short-lived certificate issued by Sigstore Fulcio, bound to the OIDC identity of the signer. In Golem Trust's pipeline, the signer is the Tekton Chains controller's Kubernetes ServiceAccount. Fulcio issues a certificate proving that the signing event was performed by that ServiceAccount identity, and records the certificate in the Rekor transparency log. The certificate expires after ten minutes; verification uses the Rekor log entry.
 
 The OIDC issuer is the build cluster's Kubernetes OIDC endpoint. This must be registered with Fulcio. For the public Sigstore instance this registration is automatic; for a self-hosted instance it requires explicit configuration.
 

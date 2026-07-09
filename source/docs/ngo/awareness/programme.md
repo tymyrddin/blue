@@ -1,6 +1,6 @@
 # Extending into a security awareness programme
 
-The purple team session is the beginning, not the programme. What it produces is a group
+The purple team session is the beginning. What it produces is a group
 of people who have felt both sides of a phishing attempt and who will, for some time
 afterwards, look at their inbox differently. The programme's job is to keep that instinct
 alive, extend it to the threats the session did not cover, and do both in ways that remain
@@ -70,8 +70,7 @@ side before they are asked to defend against it.
 The vishing session takes the phishing session's format and moves it to the phone. The
 threat intelligence component covers what vishing calls targeting the sector currently
 sound like, the pretexts being used, and the social engineering techniques that make
-them effective. Participants then make the calls rather than just receiving a briefing
-about them. A small group takes turns calling a designated number answered by a colleague
+them effective. Participants then make the calls. A small group takes turns calling a designated number answered by a colleague
 playing a staff member, working from a scenario and trying to extract a credential reset,
 a payment action, or physical access. The display equivalent is a shared note visible to
 the room logging what each caller tried and what response they got. The debrief is

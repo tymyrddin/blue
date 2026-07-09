@@ -25,5 +25,4 @@ extortion logic has developed beyond simply locking files.
 
 Home ransomware typically targets backup-connected storage: NAS devices, cloud sync folders, and external drives
 left permanently connected. The offline backup, disconnected when not in use, remains the most reliable
-mitigation. Testing the restore process matters: a backup that has never been tested is an assumption, not a
-recovery plan.
+mitigation. Testing the restore process matters: a backup that has never been tested is an assumption.

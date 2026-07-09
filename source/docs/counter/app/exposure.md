@@ -67,7 +67,7 @@ from being sent with cross-origin requests, eliminating most CSRF attack scenari
 JWT implementations restricted to an explicit algorithm allowlist prevent the class of
 attacks where the token controls its own verification method. The `none` algorithm warrants unconditional rejection. Asymmetric
 algorithms (RS256, ES256) are preferable to symmetric ones (HS256) for tokens validated
-across multiple services. Key rotation belongs in the production runbook, not the backlog.
+across multiple services. Key rotation belongs in the production runbook.
 
 Short expiry times on password reset tokens and one-time codes (fifteen minutes is a common
 ceiling), binding to the issuing email address, and invalidation after first use are the
@@ -97,8 +97,7 @@ double-spend from race conditions and duplicate submissions.
 
 Workflow state transitions validated server-side at every step close the step-skipping
 attack surface. If a refund is only valid when an order is in
-"delivered" status, that status check goes at the refund endpoint, not implied by the UI
-flow that precedes it.
+"delivered" status, that status check goes at the refund endpoint.
 
 ## File upload hardening
 
@@ -145,8 +144,7 @@ The safest position is not to deserialise at all: replacing serialised objects i
 cookies, tokens, or parameters with opaque identifiers that map to server-side state removes
 the attack surface entirely.
 
-Where deserialisation is unavoidable, a type-safe format (JSON or MessagePack rather than
-Java's native serialisation, Python `pickle`, or Ruby `Marshal`) reduces the attack surface.
+Where deserialisation is unavoidable, a type-safe format (JSON or MessagePack) reduces the attack surface.
 Native serialisation in use warrants a deserialisation filter that allowlists the permitted
 types before any object is instantiated. Java's serialisation filter API (available natively
 since Java 17, and via `ObjectInputFilter` from Java 9) is the relevant mechanism:

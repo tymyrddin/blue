@@ -26,7 +26,7 @@ sudo nmap -sS target.ip.address
 - `closed`: reachable host, but nothing listening on that port.
 - `filtered`: a firewall is blocking the port. This is the expected state for everything that is not deliberately exposed.
 
-A line like `Not shown: 996 closed ports` (rather than filtered) suggests no firewall is in front of the host.
+A line like `Not shown: 996 closed ports` suggests no firewall is in front of the host.
 
 ## Fuller detail
 
@@ -36,11 +36,11 @@ To identify service versions and the operating system, and run nmap's built-in c
 sudo nmap -A target.ip.address
 ```
 
-This reports open, closed, and filtered ports, identifies service versions, attempts OS detection, and runs a set of detection scripts. Slower and far noisier than `-sS`; use it when detail is wanted, not for a quick check.
+This reports open, closed, and filtered ports, identifies service versions, attempts OS detection, and runs a set of detection scripts. Slower and far noisier than `-sS`; use it when detail is wanted.
 
 ## Discovering hosts
 
-To find what is on a subnet rather than scan one host:
+To find what is on a subnet:
 
 ```
 sudo nmap -sn 192.168.1.0/24

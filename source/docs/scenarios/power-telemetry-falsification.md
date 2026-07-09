@@ -80,7 +80,7 @@ of this attack never has to do anything except keep the screens calm.
 - Safety systems turned against the process they guard: [Triton](../ot/incidents/triton.md).
 - Making the machinery believe it is colder than it is: [FrostyGoop](../ot/incidents/frostygoop.md).
 - The maintenance link nobody counts as a door: [remote access](../ot/architecture/remote-access.md).
-- Watching the wire and the process rather than the screen: [exposure](../counter/ot/exposure.md),
+- Watching the wire and the process: [exposure](../counter/ot/exposure.md),
   [detection](../counter/ot/detection.md), and the [protocol hunt](../counter/ot/runbooks/ot-protocol-hunt.md).
 - The impact family this belongs to, off the iron, where nothing breaks but the readings lie:
   [integrity](../counter/impact/integrity.md).

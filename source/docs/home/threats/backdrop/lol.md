@@ -1,6 +1,6 @@
 # Living off the land
 
-Living-off-the-land attacks use tools already present on the target system rather than deploying custom malware.
+Living-off-the-land attacks use tools already present on the target system.
 The approach has become standard because it is effective: built-in system utilities run with expected
 permissions, their activity blends into normal administrative patterns, and endpoint detection tends to trust
 signed system binaries.

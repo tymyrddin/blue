@@ -1,6 +1,6 @@
 # Workflow automation
 
-Carrot had noticed that vulnerabilities were being found faster than they were being fixed, not because the teams were negligent, but because the path from "finding identified" to "someone is actually working on it" involved too many manual steps. A finding would sit in DefectDojo, unassigned, while its SLA clock ticked down. The workflow automation layer solves this by routing findings to the correct team automatically, creating Jira tickets for actionable items, and notifying the relevant channel when something critical appears. This runbook covers notification webhooks, auto-assignment logic, Jira integration, two-way sync, bulk operations, and notification channels.
+Carrot had noticed that vulnerabilities were being found faster than they were being fixed. A finding would sit in DefectDojo, unassigned, while its SLA clock ticked down. The workflow automation layer solves this by routing findings to the correct team automatically, creating Jira tickets for actionable items, and notifying the relevant channel when something critical appears. This runbook covers notification webhooks, auto-assignment logic, Jira integration, two-way sync, bulk operations, and notification channels.
 
 ## Notification webhooks
 

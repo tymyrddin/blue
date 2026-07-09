@@ -1,6 +1,6 @@
 # Rate limiting with ModEvasive
 
-Hardening runbook. Installs ModEvasive on Apache to block source IPs that exceed a request-rate threshold. A supplementary layer against brute-force requests and low-rate application flooding, not a replacement for network-level rate limiting.
+Hardening runbook. Installs ModEvasive on Apache to block source IPs that exceed a request-rate threshold. A supplementary layer against brute-force requests and low-rate application flooding.
 
 ## When to run
 

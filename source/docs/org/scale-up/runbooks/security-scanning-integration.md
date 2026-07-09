@@ -30,7 +30,7 @@ trufflehog:
     - if: $CI_COMMIT_BRANCH == "main"
 ```
 
-`--since-commit HEAD~1` scans only the commits in the current push rather than the entire repository history on every run. Full history scans are run weekly (see below).
+`--since-commit HEAD~1` scans only the commits in the current push. Full history scans are run weekly (see below).
 
 `--only-verified` reduces false positives by only flagging credentials that TruffleHog has confirmed are valid by testing them against the relevant API. This means a rotated credential that is no longer valid will not block the pipeline. The trade-off is that some real leaked secrets may not be flagged until they are tested; the pre-commit hook (which scans without verification) acts as a second layer.
 
@@ -139,6 +139,6 @@ TruffleHog and Dependency-Check findings feed into Graylog via GitLab webhooks. 
 - Trigger on: Pipeline events, Job events
 - SSL verification: enabled
 
-Create a Graylog stream for pipeline security findings. Apply an alert condition: if any pipeline event with `status: failed` and `stage: secrets` arrives, send a Graylog alert to the `#security-alerts` channel immediately. A secret detection failure is treated as an incident, not a routine pipeline failure.
+Create a Graylog stream for pipeline security findings. Apply an alert condition: if any pipeline event with `status: failed` and `stage: secrets` arrives, send a Graylog alert to the `#security-alerts` channel immediately. A secret detection failure is treated as an incident.
 
 Dependency-Check failures on the `main` branch also trigger an alert. Dependency-Check failures on merge requests do not alert immediately (they appear in the merge request and are the developer's responsibility to resolve).

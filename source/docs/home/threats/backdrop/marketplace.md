@@ -11,11 +11,10 @@ accessibility, relative to Tor-based markets, has made it attractive to both ope
 Enforcement actions against Telegram-based criminal groups have increased, but the low barrier to creating
 new channels means disruption is temporary.
 
-Dark Web markets continue to operate alongside the Telegram ecosystem rather than having been replaced by it.
+Dark Web markets continue to operate alongside the Telegram ecosystem.
 Platforms like InTheBox (focused on mobile malware and overlay attacks), 2Easy, and Russian Market trade
 in stolen browser data, credentials, and access packages. Reviews, ratings, and dispute resolution mechanisms
-give these markets a degree of reliability that makes them function as genuine markets rather than simple
-scams.
+give these markets a degree of reliability that makes them function as genuine markets.
 
 ## What is available
 
@@ -24,5 +23,5 @@ with infrastructure included. Access to compromised systems sold by the session 
 Ransomware affiliate programmes. Identity documents.
 
 The existence of markets with quality ratings and repeat sellers indicates that this is an established
-economic ecosystem, not a collection of isolated actors. The criminal infrastructure is, in most respects,
+economic ecosystem. The criminal infrastructure is, in most respects,
 more mature than defenders find comfortable to acknowledge.

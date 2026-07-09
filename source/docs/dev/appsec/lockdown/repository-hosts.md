@@ -18,7 +18,7 @@ gh api /orgs/{your-org}/members --jq '.[].login'
 
 ## Detecting committed secrets
 
-Secrets reach repositories through inattention, not malice: an API key in a config file, a password in a
+Secrets reach repositories through inattention: an API key in a config file, a password in a
 test fixture. GitHub's built-in secret scanning covers a broad pattern library (AWS keys, Slack tokens, and
 others). Pre-commit hooks via `git-secrets` block common patterns before they reach the remote. Periodic
 scans of [repository history](../testing/secrets.md) with tools like truffleHog surface anything that slipped through earlier.

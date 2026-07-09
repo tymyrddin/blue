@@ -15,14 +15,14 @@ the authenticated identity (not just the session token, but the resolved user or
 the HTTP method, the full request path including query parameters, the response status code, the
 response time, and the source IP address.
 
-Client IP is most reliably recorded from the actual network connection, not from the `X-Forwarded-For`
-header, unless the infrastructure guarantees that header is set by a trusted proxy. Recording
+Client IP is most reliably recorded from the actual network connection, unless the infrastructure
+guarantees that header is set by a trusted proxy. Recording
 the header value unvalidated means an attacker can write whatever they want into the client IP
 field of your logs.
 
 ### Schema and introspection query logging
 
-For GraphQL APIs, log the full query body, not just the operation name. Introspection queries,
+For GraphQL APIs, log the full query body. Introspection queries,
 batched queries, and unusually complex queries are all visible in the query body. An operation
 named `userProfile` that contains an introspection query is not a normal user profile request.
 

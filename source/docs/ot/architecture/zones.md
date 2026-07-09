@@ -64,7 +64,7 @@ problem; their network reach was not reviewed from a security perspective.
 
 Remote desktop solutions that bypass Level 2 and reach directly to Level 1 PLCs remove the supervisory layer from the
 access path entirely. The jump host architecture exists precisely to prevent this: all remote access terminates at a
-controlled point in Level 2 or the DMZ, not at the field device.
+controlled point in Level 2 or the DMZ.
 
 ## The model as a design tool
 

@@ -128,7 +128,7 @@ Unattended-Upgrade::Automatic-Reboot-Time "02:00";
 0 2 * * 0 test -f /var/run/reboot-required && reboot
 ```
 
-This balances security (kernel patches applied promptly) against availability (reboots are planned, not spontaneous).
+This balances security (kernel patches applied promptly) against availability (reboots are planned).
 
 ## CIS controls not applied
 

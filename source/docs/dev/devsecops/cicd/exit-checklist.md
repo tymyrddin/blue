@@ -78,14 +78,14 @@
 
 ☐ Implement backup & disaster recovery
 
-* Test restores, not just backups.
+* Test restores.
 * Store backups somewhere Uncle Sam doesn’t have keys.
 
 ## Phase 4: Post-migration hygiene
 
 ☐ Decommission responsibly
 
-* Delete unused cloud resources (verify rather than assume).
+* Delete unused cloud resources (verify).
 * Watch final invoices like a hawk with trust issues.
 
 ☐ Update policies and documentation

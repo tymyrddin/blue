@@ -1,6 +1,6 @@
 # Scanner integration
 
-Cheery's requirement was clear: every scanner must feed into DefectDojo automatically, without manual CSV downloads or copy-and-paste. The goal is that when a vulnerability is found, it appears in DefectDojo within minutes, not days. This runbook covers the integration configuration for each scanner: Trivy (container images), OpenVAS/Greenbone (infrastructure), GitLab SAST (application code), Wazuh (host OS packages), and manual penetration test imports. Each scanner uses DefectDojo's import API with a dedicated token stored in Vault, and failures alert Cheery via Graylog.
+Cheery's requirement was clear: every scanner must feed into DefectDojo automatically, without manual CSV downloads or copy-and-paste. The goal is that when a vulnerability is found, it appears in DefectDojo within minutes. This runbook covers the integration configuration for each scanner: Trivy (container images), OpenVAS/Greenbone (infrastructure), GitLab SAST (application code), Wazuh (host OS packages), and manual penetration test imports. Each scanner uses DefectDojo's import API with a dedicated token stored in Vault, and failures alert Cheery via Graylog.
 
 ## DefectDojo import API
 

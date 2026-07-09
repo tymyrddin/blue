@@ -18,4 +18,4 @@ lateral path nobody needed and folds along the one the administrators use every 
 Microsegmentation promises a tighter boundary and multiplies the maintenance to match: more segments,
 more rules, more exceptions, more drift. It is among the strongest controls against lateral movement
 and among the most expensive to keep honest, and the deployments that hold up tend to be the ones
-that treated the rule review as the actual product rather than the initial cutover.
+that treated the rule review as the actual product.

@@ -28,13 +28,13 @@ Conditional access policies in Entra ID can require compliant device status for 
 
 Enterprise browser policies can disable installation of extensions from outside the approved list. Chrome and Edge support extension allowlisting through administrative templates. Extensions that request permissions to read all site data (`<all_urls>` or `*://*/*`) are worth requiring explicit approval for.
 
-HSTS enforcement and certificate pinning for internal web applications prevents TLS stripping attacks. Browser-in-the-browser attacks that spoof authentication dialogs are mitigated by ensuring all authentication flows use the system browser rather than embedded WebViews.
+HSTS enforcement and certificate pinning for internal web applications prevents TLS stripping attacks. Browser-in-the-browser attacks that spoof authentication dialogs are mitigated by ensuring all authentication flows use the system browser.
 
 ## MFA and session controls
 
 Phishing-resistant MFA (hardware security keys or passkeys) replaces push notifications and OTP codes, which are vulnerable to real-time phishing and push notification fatigue attacks respectively. FIDO2 authenticators are bound to the origin, so credentials cannot be submitted to a phishing site even if the user visits one.
 
-Session lifetime limits and continuous access evaluation reduce the window during which stolen tokens are valid. Conditional access policies that re-evaluate access on signals such as unfamiliar location, new device, or suspicious activity patterns can revoke sessions during an active attack rather than waiting for the token to expire.
+Session lifetime limits and continuous access evaluation reduce the window during which stolen tokens are valid. Conditional access policies that re-evaluate access on signals such as unfamiliar location, new device, or suspicious activity patterns can revoke sessions during an active attack.
 
 ## Related
 

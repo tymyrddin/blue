@@ -110,7 +110,7 @@ Update `authorised_db_clients` when new application servers are authorised to co
 
 ## Banking fraud patterns (Moist von Lipwig)
 
-Moist contributes pattern signatures based on fraud techniques he encountered before joining Golem Trust in a consulting capacity. These are Suricata rules rather than Zeek scripts, because they match on specific payload content.
+Moist contributes pattern signatures based on fraud techniques he encountered before joining Golem Trust in a consulting capacity. These are Suricata rules because they match on specific payload content.
 
 Create `/etc/suricata/rules/golemtrust.rules`. The following detects a pattern associated with credential stuffing tools that use a characteristic HTTP header ordering:
 
@@ -148,7 +148,7 @@ zeekctl deploy
 
 ## Testing custom detection
 
-Test each new script or rule in the staging environment before deploying to production. Staging is a separate Zeek instance reading from a PCAP file rather than a live interface; Dr. Crucible maintains test PCAP files in `src/nsm-tests/pcaps/` in the internal repository.
+Test each new script or rule in the staging environment before deploying to production. Staging is a separate Zeek instance reading from a PCAP file; Dr. Crucible maintains test PCAP files in `src/nsm-tests/pcaps/` in the internal repository.
 
 To replay a PCAP against the current Zeek configuration:
 

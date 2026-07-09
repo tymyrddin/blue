@@ -4,7 +4,7 @@ The scenarios below describe what becomes exploitable when a server hardening co
 
 ## Root SSH login enabled
 
-The target account is known (root), its existence is guaranteed on every Linux system, and its privileges are total. Brute force or credential stuffing requires only a valid password, not an enumeration step first. Any IP address that can reach port 22 can attempt authentication indefinitely, constrained only by rate limiting that may or may not be in place.
+The target account is known (root), its existence is guaranteed on every Linux system, and its privileges are total. Brute force or credential stuffing requires only a valid password. Any IP address that can reach port 22 can attempt authentication indefinitely, constrained only by rate limiting that may or may not be in place.
 
 Disabling `PermitRootLogin` forces attackers to first identify a valid user account before attempting escalation. Named accounts with `sudo` scoped to what they need provide the same operational access with a smaller attack surface.
 
@@ -18,11 +18,11 @@ Setting `PasswordAuthentication no` in `sshd_config` removes the password path o
 
 A compromised session, an unattended terminal, a stolen session token, or a brief moment of physical access gives someone control of the user account. NOPASSWD means no additional authentication stands between that access and root. A momentary opportunity escalates immediately and silently.
 
-Removing NOPASSWD and scoping sudo to specific named commands limits what a compromised session can do. An attacker who gets the user account gets only what that account is permitted to do, not everything root can.
+Removing NOPASSWD and scoping sudo to specific named commands limits what a compromised session can do. An attacker who gets the user account gets only what that account is permitted to do.
 
 ## MAC in permissive mode
 
-AppArmor or SELinux is installed, the service is running, and the audit log is filling up with violations. Nothing is blocked. A compromised web server process reads `/etc/shadow`, writes a cron entry, or spawns a reverse shell. The MAC framework records each violation faithfully; the attacker proceeds through them without friction. Permissive mode is intended for policy development, not production.
+AppArmor or SELinux is installed, the service is running, and the audit log is filling up with violations. Nothing is blocked. A compromised web server process reads `/etc/shadow`, writes a cron entry, or spawns a reverse shell. The MAC framework records each violation faithfully; the attacker proceeds through them without friction. Permissive mode is intended for policy development.
 
 Setting profiles to enforce mode after confirming that legitimate application behaviour generates no violations closes this. The log from permissive mode is the input to that confirmation.
 

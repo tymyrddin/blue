@@ -14,7 +14,7 @@ The asset register does not need to be a project. It needs to start.
 
 ## What goes in it
 
-The Home's asset register covers systems, not physical hardware. One row per system.
+The Home's asset register covers systems. One row per system.
 The columns that matter:
 
 **System name.** What staff call it. Bestiary. Covenant. The Great Ledger. Exchange
@@ -58,7 +58,7 @@ Then run the discovery conversations. One short meeting per department: what too
 you use to do your work? What do you use to share files with people outside the
 organisation? What do you use when the approved system is slow or broken? The answers
 will include The Coven, The Burrow, and Sendstone. Add them. The register is a record
-of what exists, not a list of what has been approved.
+of what exists.
 
 Then run the technical audit. Check the Entra ID app registrations for OAuth consents.
 Check the Exchange mail flow rules for forwarding configurations. Check the SharePoint
@@ -68,7 +68,7 @@ think to mention them.
 
 The result after these three steps is not a complete asset register. It is the first
 version of one, which is the only kind that has ever existed. Completeness comes from
-maintenance, not from trying to get it right the first time.
+maintenance.
 
 ## Maintenance
 

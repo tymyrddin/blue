@@ -46,7 +46,7 @@ Losing MFA access can lock a user out of an account permanently.
 
 * Print backup codes when offered (Google, Facebook, and similar services provide them during setup).
 * Export encrypted TOTP backups (Aegis and Raivo support this).
-* Register two hardware keys rather than one.
+* Register two hardware keys.
 * Set up a fallback email or phone only if it is itself secured with MFA.
 
 Do not store TOTP seeds in unencrypted cloud notes or email.

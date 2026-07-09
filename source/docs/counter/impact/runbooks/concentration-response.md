@@ -13,18 +13,18 @@ dig +short <provider-api-host> @1.1.1.1        # resolution from outside the est
 mtr -rwzc10 <provider-edge>                    # where the path actually breaks
 ```
 
-- Check the provider's own status channel and Service Health / account-health API, not only the
-  console, which may be down with everything else.
-- Map the blast radius across functions, not hosts: which business processes stop, in what order, and
-  which share this provider directly or transitively (its identity provider for auth, its DNS, its
-  CDN, its queues). The transitive dependencies are the ones that surprise.
+- Check the provider's own status channel and Service Health / account-health API. The console may
+  be down with everything else.
+- Map the blast radius: which business processes stop, in what order, and which share this provider
+  directly or transitively (its identity provider for auth, its DNS, its CDN, its queues). The
+  transitive dependencies are the ones that surprise.
 
 Accept early that the cause may not be fixable from this side or independently verifiable. The
 provider's timeline is the timeline.
 
 ## Invoke continuity, not repair
 
-Declare the incident and run the continuity plan rehearsed beforehand, not one invented now:
+Declare the incident and run the continuity plan rehearsed beforehand:
 
 - Severity, and the degraded-mode service level (RTO / RPO) per affected function
 - For each stopped process: its manual or alternate path, and the named owner who runs it
@@ -52,6 +52,5 @@ damaging account.
 
 ## After
 
-- Record which dependency was load-bearing and undeclared. Concentration risk is usually discovered,
-  not designed, and the transitive dependencies are the gap.
+- Record which dependency was load-bearing and undeclared. The transitive dependencies are the gap.
 - Re-test the failover that did not work, against the clock, before the next time.

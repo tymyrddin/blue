@@ -24,8 +24,7 @@ SaaS accounts. Password manager membership, shared document systems, incident re
 ## The timing problem
 
 There is a window between when a person stops being a team member and when access is fully revoked. In most cases,
-offboarding happens during notice periods or after the fact rather than at the moment of departure, which extends the
-window.
+offboarding happens during notice periods or after the fact, which extends the window.
 
 A departing employee who knows they are leaving has time to act before access is removed. Immediate revocation of the
 highest-privilege access on the day of departure, with lower-priority items following shortly after, reflects the
@@ -45,7 +44,7 @@ local access is revoked.
 Locally stored credentials. API keys copied into a local environment file, passwords stored in a personal password
 manager, screenshots of secrets taken for reference.
 
-Rotating the credentials themselves, rather than only revoking known access entries, closes the shadow credential
+Rotating the credentials themselves closes the shadow credential
 problem. A rotated credential renders unknown copies useless. This is more disruptive but is the only approach that
 covers what is not on any list.
 

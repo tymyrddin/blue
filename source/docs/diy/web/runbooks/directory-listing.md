@@ -4,7 +4,7 @@ Hardening runbook. Stops the web server from displaying the contents of a direct
 
 ## When to run
 
-On a new web server during setup. On an existing server where a [public exposure review](../../incidents/runbooks/exposure-review.md) or a directory request returned a file listing rather than a 404 or the intended page.
+On a new web server during setup. On an existing server where a [public exposure review](../../incidents/runbooks/exposure-review.md) or a directory request returned a file listing.
 
 ## What it is and is not
 
@@ -59,11 +59,11 @@ Request a directory that has no index file, from a browser or:
 curl -s https://example.com/somedir/ | head
 ```
 
-The response should be a 403 or 404, not a list of files. Check a directory known to lack an index page, since one with `index.html` present will not reveal the setting either way.
+The response should be a 403 or 404. Check a directory known to lack an index page, since one with `index.html` present will not reveal the setting either way.
 
 ## Done
 
-Requests to index-less directories return 403 or 404, not a file listing. The web server config passes its syntax check and has been reloaded.
+Requests to index-less directories return 403 or 404. The web server config passes its syntax check and has been reloaded.
 
 ## Rollback
 

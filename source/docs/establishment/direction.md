@@ -12,8 +12,7 @@ have skipped. Material that would have been filed is now flagged. Material that 
 Nothing names the shift. The intake reading itself has changed. Collection answers to direction without originating in
 it.
 
-Direction is the phase the documentation has the least to say about, because it is something done to the institution
-rather than something the institution does. Priorities arrive without a covering note. Standing requirements are
+Direction is the phase the documentation has the least to say about, because it is something done to the institution. Priorities arrive without a covering note. Standing requirements are
 circulated by being already understood. The list for the year is held somewhere, consulted, and not published.
 
 ## The list that is held
@@ -69,7 +68,7 @@ noise or the first sign of a requirement not yet held. It is set down, or it is 
 and on whose reading, is not recorded, and that decision, the quiet promotion of an orphan into a standing
 concern, is the most political act the institution performs.
 
-## Cadence, not event
+## Cadence
 
 A watch-house moves when a bell rings. A ministry produces on a rhythm, and the rhythm does not wait for the
 world. The brief is delivered on its day whether the day brought anything. "Nothing new this week on
@@ -92,7 +91,7 @@ forms](quiet-room/overview.md).
 
 ## Sought, admitted, and not known
 
-Direction holds three postures toward knowledge, not two. There is what is sought, which is tasking. There
+Direction holds three postures toward knowledge. There is what is sought, which is tasking. There
 is what is admitted, which is the open door. And there is what is arranged not to be known, because knowing
 creates an obligation and an unasked question creates none. The [logs that are not confirmed to
 exist](quiet-room/overview.md) are the clearest case: a thing the institution has declined to be in a

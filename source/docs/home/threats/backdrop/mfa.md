@@ -5,8 +5,7 @@ accounts lack a second factor, stolen passwords are enough. When most accounts h
 layer itself becomes the target.
 
 Multi-factor authentication substantially raises the cost of account compromise. It is not a complete
-defence. Several bypass techniques are now in routine use, and they share a common pattern: rather than
-breaking the cryptography, they route around it by targeting the human in the authentication flow.
+defence. Several bypass techniques are now in routine use, and they share a common pattern: they route around the cryptography by targeting the human in the authentication flow.
 
 ## MFA fatigue
 
@@ -16,7 +15,7 @@ reasonable assumption that the notifications are a technical error. This works r
 a standard technique in credential-access playbooks.
 
 The response, beyond user awareness, is to switch to number-matching or to hardware keys. Both close the gap by
-changing the nature of the authentication act, not just the frequency of prompts.
+changing the nature of the authentication act.
 
 ## Man-in-the-middle via phishing proxies
 
@@ -38,6 +37,6 @@ FIDO2 hardware keys close a different gap. The key performs the authentication c
 specific domain, so a replayed or intercepted credential from a phishing site is not valid for the real site.
 More importantly, the human is not making a decision: there is no push notification to approve, no code to
 enter, no moment of uncertainty. The decision has been removed from the flow. That is the source of the
-protection, not superior cryptography alone.
+protection.
 
 For accounts that matter, hardware keys address the failure mode that other MFA methods leave open.

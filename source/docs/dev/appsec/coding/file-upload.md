@@ -6,7 +6,7 @@ File uploads are a consistent source of vulnerabilities not because the feature 
 
 A file extension is metadata supplied by the client. It can be anything. Checking that the filename ends in `.jpg` before saving it does not prevent a PHP webshell named `shell.php.jpg`, and on some configurations does not prevent the server from executing it.
 
-The MIME type derived from file content is more reliable. The `python-magic` library wraps libmagic, which reads the file header (magic bytes) rather than the filename:
+The MIME type derived from file content is more reliable. The `python-magic` library wraps libmagic, which reads the file header (magic bytes):
 
 ```python
 import magic
@@ -20,7 +20,7 @@ def check_mime_type(file_bytes: bytes) -> str:
     return mime
 ```
 
-Note that `magic.from_buffer()` takes bytes, not a file object. Read the full content (or enough of it for reliable detection) before calling, then use those same bytes for storage:
+Note that `magic.from_buffer()` takes bytes. Read the full content (or enough of it for reliable detection) before calling, then use those same bytes for storage:
 
 ```python
 def handle_upload(file) -> None:
@@ -52,7 +52,7 @@ def safe_filename(original: str, mime_type: str) -> str:
     return f"{uuid.uuid4()}{ext}"
 ```
 
-The extension in the generated name is derived from the validated MIME type, not from the original filename, so the two are consistent even if the client supplied a misleading name.
+The extension in the generated name is derived from the validated MIME type, so the two are consistent even if the client supplied a misleading name.
 
 ## Storage location
 

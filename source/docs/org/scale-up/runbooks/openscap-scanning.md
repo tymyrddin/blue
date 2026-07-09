@@ -37,7 +37,7 @@ oscap xccdf eval \
 
 The scan produces two outputs: an XML results file (machine-readable, suitable for DefectDojo import) and an HTML report (human-readable, suitable for audit review). Both are stored under `/var/lib/openscap/`.
 
-The scan exit code indicates the overall result: `0` means all checks passed, `2` means some checks failed. The pipeline treats exit code `2` as a warning rather than a failure; the report is reviewed to determine whether failures are known exceptions or new issues.
+The scan exit code indicates the overall result: `0` means all checks passed, `2` means some checks failed. The pipeline treats exit code `2` as a warning; the report is reviewed to determine whether failures are known exceptions or new issues.
 
 ## Ansible-managed scan schedule
 
@@ -125,4 +125,4 @@ A finding that appears on a host where it previously passed indicates configurat
 
 A finding that appears on all hosts simultaneously indicates the Ansible playbooks do not fully cover that control, or that a new version of the SCAP content has added a check that was not previously tested. These are addressed by updating the `cis-debian` role.
 
-Findings that are confirmed as not applicable (false positives for Golem Trust's specific configuration) are added to the tailoring file rather than suppressed in DefectDojo, so that the tailoring file remains the single authoritative record of accepted exceptions.
+Findings that are confirmed as not applicable (false positives for Golem Trust's specific configuration) are added to the tailoring file, so that the tailoring file remains the single authoritative record of accepted exceptions.

@@ -32,8 +32,8 @@ before the recipient clicks anything. It does not stop determined attackers; it 
 the category of attack where the recipient did not notice the email was external.
 
 First-contact safety tips mark email from senders the recipient has never exchanged
-messages with. On targeted attacks where the attacker is impersonating a new contact
-rather than a known one, this is a higher-signal banner than the generic external
+messages with. On targeted attacks where the attacker is impersonating a new contact,
+this is a higher-signal banner than the generic external
 sender warning.
 
 ## Gateway policy
@@ -44,7 +44,7 @@ distinguish general spam scoring from bulk email classification, applying strict
 to high-volume commercial senders than to individual messages with the same score. Tightening
 thresholds for high-risk recipients (finance, accounts payable, executives whose contact
 details are publicly listed) is straightforward and worth applying before a targeted campaign
-arrives rather than after.
+arrives.
 
 Allow-list risk is underappreciated. Gateway allow lists that exempt senders or domains
 from filtering are a frequent bypass point. A vendor domain added to a gateway allow list
@@ -95,7 +95,7 @@ URL rewriting replaces clickable links in email with proxy URLs. When the recipi
 clicks, the gateway checks the destination in that moment before redirecting. This covers
 post-delivery weaponisation: a link that is benign when the message arrives and is
 weaponised hours later bypasses scan-at-delivery entirely. Time-of-click inspection is
-the correct comparison point, not whether scanning happened at all.
+the correct comparison point.
 
 QR codes in email body or attachments encode URLs as images. No clickable hyperlink is
 present in the message, so link filtering has nothing to inspect. The URL is only decoded

@@ -1,9 +1,9 @@
 # Run the pretexting walkthrough
 
 The pretexting walkthrough tests physical access control and identity verification
-through a live scenario rather than a presentation about why they matter. A facilitator,
-or a colleague from another department, approaches the building's access points or
-working areas claiming a plausible false identity. What happens next is the exercise.
+through a live scenario. A facilitator or a colleague from another department
+approaches the building's access points or working areas claiming a plausible false
+identity. What happens next is the exercise.
 
 The Home's front-of-house culture is warm and accommodating by design, which is
 appropriate for an organisation that depends on public goodwill and volunteer
@@ -75,8 +75,7 @@ and what made them decide to act as they did.
 
 Then cover the correct procedure:
 - Unexpected visitors without confirmed appointments are received at reception and asked
-  to wait while the appointment is verified through an internal contact, not through
-  the visitor's own phone or documentation.
+  to wait while the appointment is verified through an internal contact.
 - Access to restricted areas, the server room, the east wing residential areas, the
   medical bay, is not granted without confirmation from the named internal contact and
   sign-in in the visitor log.

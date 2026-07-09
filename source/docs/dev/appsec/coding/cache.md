@@ -51,7 +51,7 @@ If the application uses `X-Forwarded-Host` to construct absolute URLs in the res
 
 Mitigations:
 
-- Configure the application to trust only a fixed set of upstream headers, not whatever arrives in the request
+- Configure the application to trust only a fixed set of upstream headers
 - Audit which headers are unkeyed at the CDN layer; CDN configurations often have an explicit list of headers excluded from cache keys by default
 - Use cache-busting query parameters or ETags for dynamic content that varies by context
 

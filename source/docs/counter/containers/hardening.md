@@ -23,7 +23,7 @@ Read-only root filesystem (`readOnlyRootFilesystem: true` in the pod security co
 prevents writes to the container filesystem at runtime. Applications that need writable
 space mount specific directories as tmpfs volumes. Attempts to write outside those mount
 points fail at the kernel level and generate a visible signal. This turns misconfigured
-or exploited containers into noisy rather than silent failures.
+or exploited containers into noisy failures.
 
 Capability stripping removes Linux capabilities the application does not need.
 `capabilities.drop: ["ALL"]` removes the full set; capabilities the application
@@ -73,9 +73,9 @@ unauthenticated requests. Both appear occasionally in clusters configured for br
 API discovery or in misconfigured admission setups.
 
 Cross-namespace escalation: a service account in a low-privilege namespace with a
-ClusterRoleBinding rather than a RoleBinding can access resources across all namespaces.
+ClusterRoleBinding can access resources across all namespaces.
 Applications with no reason to reach outside their namespace are candidates for
-RoleBindings scoped to that namespace rather than cluster-scoped bindings.
+RoleBindings scoped to that namespace.
 
 ## Pod security contexts
 

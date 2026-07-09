@@ -51,8 +51,7 @@ Guard is unavailable on those guests. The Windows Security page may show partial
 The WDigest re-enable path: an attacker with Local Administrator or SYSTEM access can set
 `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest\UseLogonCredential` to 1,
 re-enabling cleartext credential caching. This works whenever VBS is not running, because the key
-modifies LSASS behaviour rather than the VBS configuration. The change takes effect at the next
-user logon; no reboot is required.
+modifies LSASS behaviour. The change takes effect at the next user logon; no reboot is required.
 
 Enforcement requires both Credential Guard enabled via Group Policy or MDM, and the WDigest registry
 key protected against modification. Tamper Protection in Defender or a WDAC rule restricting registry

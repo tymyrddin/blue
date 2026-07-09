@@ -1,6 +1,6 @@
 # C++ in embedded and OT targets
 
-C++ is common in OT firmware and soft PLC runtimes. The language features that make it useful in general-purpose software (exceptions, dynamic dispatch, heap-allocated containers) carry costs in constrained and real-time environments that are worth understanding explicitly rather than discovering at the wrong moment. Several features are routinely disabled on embedded targets, and the standard library has a safe subset and a problematic one.
+C++ is common in OT firmware and soft PLC runtimes. The language features that make it useful in general-purpose software (exceptions, dynamic dispatch, heap-allocated containers) carry costs in constrained and real-time environments that are worth understanding explicitly. Several features are routinely disabled on embedded targets, and the standard library has a safe subset and a problematic one.
 
 ## Exception handling
 

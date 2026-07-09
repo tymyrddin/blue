@@ -50,7 +50,7 @@ email. Nobody is certain what he might do with it, but his enquiries have so far
 limited to asking about availability and whether breakfast is included.
 
 The security work at startup is not glamorous. It is making sure the shared email account
-belongs to the organisation rather than to the person who happened to create it. It is
+belongs to the organisation. It is
 enabling two-step verification before a phishing email makes that conversation urgent. It is
 writing things down, not because writing things down is inherently secure, but because the
 alternative is that the knowledge walks out with the person who holds it.

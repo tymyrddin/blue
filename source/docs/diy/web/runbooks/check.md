@@ -19,11 +19,11 @@ This returns the response headers. Check for the ones that should be present:
 - `X-Content-Type-Options: nosniff` (MIME-type enforcement)
 - `X-Frame-Options` or CSP `frame-ancestors` (clickjacking protection)
 
-Each absent header is a gap corresponding to its runbook. Confirm the values match what the config sets, not just that the header exists: a `Content-Security-Policy` containing `unsafe-inline`, for instance, is present but weak.
+Each absent header is a gap corresponding to its runbook. Confirm the values match what the config sets: a `Content-Security-Policy` containing `unsafe-inline`, for instance, is present but weak.
 
 ## With an online grader
 
-[securityheaders.com](https://securityheaders.com/) grades a site A+ to F based on the headers present and gives a per-header breakdown. [KeyCDN's HTTP header checker](https://tools.keycdn.com/curl) shows the raw headers without a grade. Useful for a quick external read, and for sharing a result. Note that a high grade reflects header presence, not correctness of the policy values, so read the breakdown rather than trusting the letter.
+[securityheaders.com](https://securityheaders.com/) grades a site A+ to F based on the headers present and gives a per-header breakdown. [KeyCDN's HTTP header checker](https://tools.keycdn.com/curl) shows the raw headers without a grade. Useful for a quick external read, and for sharing a result. Note that a high grade reflects header presence, not correctness of the policy values, so read the breakdown.
 
 ## Verify
 

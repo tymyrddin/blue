@@ -38,7 +38,7 @@ intake.
 
 The automated path assigns both axes on intake without an analyst. Source taxonomy: Other. The event did
 not come from a Society notification or an Office advisory; it came from the Quiet Room's own sensor, which
-the taxonomy carries as Other with a provenance note rather than as a fourth category. Reliability: 2,
+the taxonomy carries as Other with a provenance note. Reliability: 2,
 the default for a single automated sensor event. One sensor, one alert, no corroboration: that is a 2 by
 definition, and it is assigned by rule, not by judgement.
 

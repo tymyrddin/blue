@@ -39,7 +39,7 @@ smtpd_recipient_restrictions =
 
 ### Risk
 
-Restriction rules are order-sensitive. A `permit` placed too early short-circuits the rejects that follow it, leaving the relay open despite the rules looking correct. Keep `reject_unauth_destination` ahead of any blanket `permit`. Confirm `mynetworks` contains only loopback (and any genuinely trusted internal range), not a broad subnet that turns into a relay path.
+Restriction rules are order-sensitive. A `permit` placed too early short-circuits the rejects that follow it, leaving the relay open despite the rules looking correct. Keep `reject_unauth_destination` ahead of any blanket `permit`. Confirm `mynetworks` contains only loopback (and any genuinely trusted internal range).
 
 ## Disable address harvesting
 
@@ -78,7 +78,7 @@ postconf smtpd_recipient_restrictions      # confirm reject_unauth_destination p
 postconf mynetworks                        # confirm loopback only
 ```
 
-The relay test should return `554` or `550` relay access denied. Confirm `VRFY` is refused: `VRFY postmaster` over an SMTP session should return a `502` or `252`, not a real answer.
+The relay test should return `554` or `550` relay access denied. Confirm `VRFY` is refused: `VRFY postmaster` over an SMTP session should return a `502` or `252`.
 
 ## Done
 
@@ -86,7 +86,7 @@ The relay test should return `554` or `550` relay access denied. Confirm `VRFY` 
 
 ## Rollback
 
-The pre-edit `main.cf.old` is the fallback: restore it and reload. For a single bad restriction line, edit it out and reload rather than reverting the whole file, so other hardening stays in place.
+The pre-edit `main.cf.old` is the fallback: restore it and reload. For a single bad restriction line, edit it out and reload, so other hardening stays in place.
 
 ## Follow-up
 

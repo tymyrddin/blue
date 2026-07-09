@@ -13,7 +13,7 @@ phones, lost authenticators, lockouts after repeated failures, travelling users 
 Implementing the correct helpdesk recovery flow (verifying identity before resetting MFA) is a
 separate project that many organisations have not completed. The gap left is a helpdesk reset process
 that accepts weaker identity verification, which allows MFA bypass through social engineering at the
-helpdesk rather than through push fatigue.
+helpdesk.
 
 Passkeys (FIDO2 authenticators) eliminate push fatigue entirely. They are also origin-bound,
 which means a phishing site cannot relay the credential. Hardware security keys cost money. Browser

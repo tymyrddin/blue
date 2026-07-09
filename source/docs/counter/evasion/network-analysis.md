@@ -121,8 +121,8 @@ images with high pixel entropy in the LSBs (LSB steganography produces statistic
 artefacts in bit planes). This is expensive but detectable in high-value environments.
 
 Unusual user agents: C2 polling code often uses Python requests, curl, or custom
-user agent strings rather than a browser. Filter proxy logs for non-browser user
-agents making image requests to cloud storage APIs.
+user agent strings. Filter proxy logs for non-browser user agents making image
+requests to cloud storage APIs.
 
 ## Low-and-slow exfiltration
 

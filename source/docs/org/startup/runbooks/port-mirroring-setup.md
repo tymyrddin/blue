@@ -39,7 +39,7 @@ iface gre-mirror inet manual
   post-down ip tunnel del gre-mirror || true
 ```
 
-Update `/opt/zeek/etc/node.cfg` to use `gre-mirror` as the monitoring interface rather than `eth1`, and update the Suricata `af-packet` interface setting to `gre-mirror` as well. Restart both services after this change.
+Update `/opt/zeek/etc/node.cfg` to use `gre-mirror` as the monitoring interface, and update the Suricata `af-packet` interface setting to `gre-mirror` as well. Restart both services after this change.
 
 ## Traffic mirroring on each production server
 

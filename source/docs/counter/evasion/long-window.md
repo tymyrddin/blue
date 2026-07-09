@@ -44,7 +44,7 @@ The learning window creates a gap that is sometimes exploitable: a new account, 
 
 A single alert threshold creates a binary choice: act or ignore. A tiered approach separates soft signals from hard ones.
 
-A lower threshold routes events to an analyst queue: worth reviewing, not worth waking anyone up. A higher threshold triggers immediate action (PagerDuty, automated session review, account suspension pending verification). The analyst queue absorbs false positive volume; the high threshold preserves signal-to-noise ratio for auto-response.
+A lower threshold routes events to an analyst queue: worth reviewing. A higher threshold triggers immediate action (PagerDuty, automated session review, account suspension pending verification). The analyst queue absorbs false positive volume; the high threshold preserves signal-to-noise ratio for auto-response.
 
 Calibrating the high threshold is consequential. Too high, and real incidents reach full impact before detection. Too low, and auto-response fires on legitimate anomalies (travel, incident response activity, on-call access), poisoning the feedback loop.
 

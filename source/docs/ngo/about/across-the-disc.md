@@ -15,7 +15,7 @@ whoever is keeping or hunting or housing them, and write down what they find.
 ## The visible work
 
 The public mission is real and unglamorous. Intake and medical care, rehoming, the slow advocacy of
-persuading a city that a basilisk is a refugee rather than a hazard. Field workers negotiate with
+persuading a city that a basilisk is a refugee. Field workers negotiate with
 local authorities, lean on Guilds, document mistreatment, and keep the records that let a creature
 moved across three borders be reunited with whatever counts as its family.
 

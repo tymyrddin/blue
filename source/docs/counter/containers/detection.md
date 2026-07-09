@@ -73,7 +73,7 @@ high-signal indicator. The baseline for each image determines what is expected. 
 Python web application that never runs bash or sh produces a shell spawn event only
 when something unexpected is happening. The Falco rule structure for shell spawn
 detection is covered in `evasion/notes/containers.md`; the detection value is in
-establishing per-image baselines rather than a single cluster-wide rule.
+per-image baselines.
 
 The `memfd_create` syscall creates an anonymous in-memory file not backed by the
 filesystem. Combined with `execveat`, it allows payload execution without writing

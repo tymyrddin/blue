@@ -41,8 +41,7 @@ fix repairs. It is a thing stopped at the source and rebuilt, or not at all.
 ## Countermoves
 
 The common thread is that integrity defence is provenance defence. Watching the shape of data being
-gathered and staged rather than the tools that gather it. Tagging suspect streams rather than
-destroying them, to keep the channel and the read it carries. Treating the supply chain as a trust
+gathered and staged. Tagging suspect streams to keep the channel and the read it carries. Treating the supply chain as a trust
 boundary in its own right, where the question is not whether a component runs but whether its origin
 can be shown.
 

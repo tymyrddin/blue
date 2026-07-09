@@ -35,7 +35,7 @@ controls as an operator at the workstation.
 Whether the account used was a vendor credential, a shared credential, or obtained by other means was not
 confirmed in public reporting. The workstation reportedly ran Windows 7, which had reached end of support
 in January 2020. An out-of-support operating system is not necessarily compromised, but its patch coverage
-is bounded by what remains unpatched rather than by what is kept current.
+is bounded by what remains unpatched.
 
 The TeamViewer connection was logged. The log showed a connection. It did not trigger an alert.
 

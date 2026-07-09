@@ -20,7 +20,7 @@ compounds this: a single planted role can outlast every other remediation action
 
 *A planted app registration in Entra ID often looks like: a display name that
 blends with legitimate tooling ("EnterpriseSync", "Backup Agent"), created outside
-business hours, with application-level rather than delegated permissions, a client
+business hours, with application-level permissions, a client
 secret expiring in 12 or 24 months, and no entry in the organisation's service
 account register. The creation and credential addition events appear in the Entra
 audit log. Without a review process for new app registrations or an alert on

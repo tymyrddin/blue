@@ -48,7 +48,7 @@ service context are the signal.
 
 To broaden beyond known patterns, flag pipes with names that are short random hex strings
 (eight to sixteen characters) or random alphanumeric sequences, which suggest
-programmatically generated names rather than named service pipes:
+programmatically generated names:
 
 ```powershell
     # additional heuristic: pipe names matching random-looking patterns

@@ -2,15 +2,14 @@
 
 Decisions made in the first hour after an incident are usually made under stress, and stress
 reliably degrades decision quality. This list exists so those decisions can be made now, in
-advance, rather than during the event.
+advance.
 
 The instinct in the first hours is often to understand what happened before doing anything.
 This is usually wrong. Accounts can be emptied and identity documents used while you are
 still investigating. Act first; understand later.
 
 1. Disconnect all devices from the network (unplug the router if needed).
-2. Call banks using numbers from the back of the card, not from any email or message
-   received. Request fraud alerts. Replace compromised cards.
+2. Call banks using numbers from the back of the card. Request fraud alerts. Replace compromised cards.
 3. Report identity theft if personal identity documents were exposed.
 
 ## Where to report

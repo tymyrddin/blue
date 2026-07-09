@@ -6,7 +6,7 @@ Severity determines the reward tier, the remediation SLA, and how urgently the a
 
 The CVSS base score is calculated from six base metrics: Attack Vector, Attack Complexity, Privileges Required, User Interaction, Scope, and the three impact metrics (Confidentiality, Integrity, Availability). Use the NVD CVSS calculator at `https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator` or the offline equivalent in the security team's tooling.
 
-Record the full CVSS vector string, not just the numeric score. The vector string is what gets stored in DefectDojo and referenced in the remediation ticket. An example:
+Record the full CVSS vector string. The vector string is what gets stored in DefectDojo and referenced in the remediation ticket. An example:
 
 ```
 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N

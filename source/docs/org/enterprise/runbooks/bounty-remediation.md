@@ -1,6 +1,6 @@
 # Remediation workflows
 
-A bug bounty programme that finds vulnerabilities but fixes them slowly is worse than one that does not exist, because it creates a growing list of confirmed, researcher-known vulnerabilities sitting unpatched. Golem Trust's first-month average fix time of 3.7 days, against a 7-day SLA for High findings, was not an accident; it reflected how the remediation workflow was designed from the start. The researcher is a stakeholder in the fix, not just the reporter of it: they are notified when the fix reaches the bug bounty environment, given 7 days to verify it, and treated as the final quality gate before the finding is closed. This runbook covers the remediation SLA schedule, the fix workflow, researcher verification, and coordinated disclosure.
+A bug bounty programme that finds vulnerabilities but fixes them slowly is worse than one that does not exist, because it creates a growing list of confirmed, researcher-known vulnerabilities sitting unpatched. Golem Trust's first-month average fix time of 3.7 days, against a 7-day SLA for High findings, was not an accident; it reflected how the remediation workflow was designed from the start. The researcher is a stakeholder in the fix: they are notified when the fix reaches the bug bounty environment, given 7 days to verify it, and treated as the final quality gate before the finding is closed. This runbook covers the remediation SLA schedule, the fix workflow, researcher verification, and coordinated disclosure.
 
 ## SLA schedule
 

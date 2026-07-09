@@ -53,7 +53,7 @@ access, then execute.
 ## Bootloader integrity
 
 A bootloader that verifies a firmware image before transferring control is an effective barrier against unauthorised
-firmware. The guarantee depends entirely on performing the check before execution begins, not after.
+firmware. The guarantee depends entirely on performing the check before execution begins.
 
 ```c
 /* verify first, transfer control second */

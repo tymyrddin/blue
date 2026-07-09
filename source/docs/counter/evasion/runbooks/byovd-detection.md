@@ -113,8 +113,7 @@ the absence of this heartbeat from enrolled hosts.
 
 ## Detect EDR process termination
 
-If the BYOVD attack uses process termination (e.g. procexp152.sys) rather than
-callback removal:
+If the BYOVD attack uses process termination (e.g. procexp152.sys):
 
 ```powershell
 # monitor for unexpected termination of known EDR processes
@@ -128,8 +127,7 @@ foreach ($proc in $edrProcesses) {
 }
 ```
 
-Windows Event ID 4689 (Process exit) combined with the process name of the EDR
-product is a direct indicator if the termination was not a scheduled stop.
+Windows Event ID 4689 (Process exit) combined with an EDR process name indicates unexpected termination.
 
 ## Investigate a BYOVD incident
 

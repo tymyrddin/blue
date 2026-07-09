@@ -95,7 +95,7 @@ All three nodes should appear with their roles (cluster_manager, data, ingest).
 
 ## Index settings for Graylog
 
-Graylog manages its own index lifecycle, but OpenSearch needs appropriate index settings to handle log volume efficiently. These are configured in Graylog's index set settings (System, Indices) rather than directly in OpenSearch.
+Graylog manages its own index lifecycle, but OpenSearch needs appropriate index settings to handle log volume efficiently. These are configured in Graylog's index set settings (System, Indices).
 
 Recommended index set settings for the default Graylog index:
 

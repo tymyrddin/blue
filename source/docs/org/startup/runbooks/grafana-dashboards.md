@@ -136,7 +136,7 @@ Panel: Vault token issuance rate
 - Visualisation: Stat
 
 Panel: Top source IPs (last hour)
-- This panel uses a Graylog data source rather than Prometheus. Add Graylog as a data source using the Graylog Grafana plugin and configure it to query the `Web access` stream. Dr. Crucible installed the plugin; if it is absent, `grafana-cli plugins install graylog-datasource`.
+- This panel uses a Graylog data source. Add Graylog as a data source using the Graylog Grafana plugin and configure it to query the `Web access` stream. Dr. Crucible installed the plugin; if it is absent, `grafana-cli plugins install graylog-datasource`.
 
 Save the dashboard and pin it to the home screen. Adora Belle should see it immediately on login.
 

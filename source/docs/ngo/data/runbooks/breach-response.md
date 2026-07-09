@@ -9,7 +9,7 @@ every action and timestamp as steps are completed.
 - Incident declared by the Head of IT or IT coordinator.
 - SIRT roles confirmed: incident lead, technical lead, communications lead, documentation
   lead.
-- DPO notified. This happens before the runbook starts, not as a step within it.
+- DPO notified. This happens before the runbook starts.
 
 ## Immediate containment
 

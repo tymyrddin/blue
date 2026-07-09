@@ -205,10 +205,9 @@ cloud identity.
 The common misconfiguration is a subject claim that does not constrain the authenticating
 context precisely enough. A federation policy scoped to a repository without specifying a
 branch or environment allows any pipeline trigger in that repository to authenticate as
-the cloud identity. The
-difference between `repo:org/specific-repo:ref:refs/heads/main` and
-`repo:org/specific-repo:environment:production` is not cosmetic: one authenticates on a
-specific branch, the other on a specific deployment environment. Auditing federation
+the cloud identity. The difference between `repo:org/specific-repo:ref:refs/heads/main` and
+`repo:org/specific-repo:environment:production`: one authenticates on a specific branch, the
+other on a specific deployment environment. Auditing federation
 policies against the principle of least privilege follows the same logic as auditing RBAC
 role assignments: what specifically needs to authenticate, and does the subject claim
 match that exactly?

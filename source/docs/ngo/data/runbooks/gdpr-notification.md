@@ -17,7 +17,7 @@ reasonably have known that a breach had occurred or was occurring.
 Document the awareness timeline:
 - When did the incident first come to the attention of any staff member?
 - When was it escalated to someone with responsibility for data protection?
-- When was it confirmed as a personal data breach rather than a suspected one?
+- When was it confirmed as a personal data breach?
 
 The DPO makes the determination of when awareness is established for GDPR purposes.
 Document the reasoning. This decision will be scrutinised if the supervisory authority

@@ -82,8 +82,7 @@ image layers. Intermediate layers that delete secrets still retain them in the l
 Kubernetes, Docker Swarm) provide secrets management that injects secrets at runtime without embedding them in the
 image.
 
-Multi-stage builds produce final images that contain only the runtime artefacts, not the build toolchain, compilers, or
-intermediate files. A well-structured multi-stage build significantly reduces the attack surface and limits what an
+Multi-stage builds produce final images that contain only the runtime artefacts. A well-structured multi-stage build significantly reduces the attack surface and limits what an
 attacker who modifies the build process can include in the final image.
 
 Private registries behind a firewall with RBAC on push and pull access reduce the risk of pulling a tampered image.

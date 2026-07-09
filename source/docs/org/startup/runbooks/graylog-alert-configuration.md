@@ -139,6 +139,6 @@ Alternatively, Angua's preferred method: trigger a few intentional failed logins
 
 ## Acknowledging alerts
 
-When an alert fires, acknowledge it in Slack by reacting with the checkmark emoji. This is convention rather than enforcement; Graylog does not currently integrate with the Slack acknowledgement. The 10-minute SMS escalation timer is based on Graylog's own grace period and notification sequence, not on Slack activity.
+When an alert fires, acknowledge it in Slack by reacting with the checkmark emoji. This is convention; Graylog does not currently integrate with the Slack acknowledgement. The 10-minute SMS escalation timer is based on Graylog's own grace period and notification sequence.
 
 A more formal acknowledgement workflow is on Dr. Crucible's list for when the team grows. For now, convention is sufficient: acknowledge in Slack, investigate, post a brief outcome note in the thread.

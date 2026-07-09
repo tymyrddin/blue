@@ -104,7 +104,7 @@ vault kv put kv/golemtrust/backup-status/restore-test \
 
 Also record results in the internal wiki with a short narrative: what was tested, what happened, what was learned, and whether any changes to backup configuration or procedure are warranted.
 
-If the test fails, record the failure reason. Do not mark a failed test as passed. A failed test is information: it tells you what is broken before a real incident forces you to find out. Cheery treats a failed test the same way she treats a found accounting error: it is preferable to finding it now rather than later, and the response is to fix the underlying problem, not the record.
+If the test fails, record the failure reason. Do not mark a failed test as passed. A failed test is information: it tells you what is broken before a real incident forces you to find out. Cheery treats a failed test the same way she treats a found accounting error: it is preferable to finding it now, and the response is to fix the underlying problem, not the record.
 
 ## Lessons learned register
 
@@ -112,6 +112,6 @@ Maintain a lessons learned register in the wiki alongside the test results. Comm
 
 The first test revealed that the age private key was not documented in the restore procedure. Added to the runbook.
 
-The Q3 test revealed that the `teleport` agent configuration was not backed up because the token file was excluded by the backup script's exclusion patterns. Updated the exclusion list to include only the token file itself, not the entire `/etc/vault/` directory.
+The Q3 test revealed that the `teleport` agent configuration was not backed up because the token file was excluded by the backup script's exclusion patterns. Updated the exclusion list to include only the token file itself.
 
 Each test should attempt to find at least one thing that can be improved. A test that finds nothing can be improved is probably not thorough enough.

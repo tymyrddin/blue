@@ -55,7 +55,7 @@ is in fact load-bearing.
 
 The governance is formal. There are policies for acceptable use, AI adoption, data handling,
 vendor assessment, and incident response. They are reviewed annually by people who have read
-them. The incident response plan has been tested, not just written. The breach notification
+them. The incident response plan has been tested. The breach notification
 process is understood by the people who would need to execute it at two in the morning,
 because they have rehearsed it in conditions calm enough to learn from.
 

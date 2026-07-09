@@ -42,7 +42,7 @@ Server-side sessions are simpler than token-based approaches and easier to revok
 The session ID is a random opaque value; the session data lives on the server. Django's
 built-in session framework and Flask-Session both follow this model.
 
-JWT tokens are signed bearer tokens, not sessions. They are appropriate for stateless API
+JWT tokens are signed bearer tokens. They are appropriate for stateless API
 authentication between services, or for short-lived single-use tokens (email verification,
 password reset). Using JWTs as long-lived session tokens without a revocation mechanism
 means a stolen token is valid until expiry with no way to invalidate it server-side. The [JWT attack techniques](https://red.tymyrddin.dev/docs/in/app/techniques/jwt.html) page covers the most common ways JWT implementations are exploited.

@@ -9,7 +9,7 @@ profile suggests.
 Electronic health records, telemedicine platforms, and networked clinical devices now depend on shared
 digital infrastructure. A breach in a healthcare system can expose medical records at scale; a ransomware
 attack on a hospital network creates pressure to pay quickly because clinical operations cannot easily run
-without system access. "HIPAA-compliant" describes a regulatory floor, not a security ceiling.
+without system access. "HIPAA-compliant" describes a regulatory floor.
 
 ## Agriculture
 
@@ -21,8 +21,7 @@ well-positioned attacker is a slower and harder-to-attribute form of interferenc
 ## Vehicles and transport
 
 Networked vehicles, including consumer cars with cellular connectivity, present attack surfaces that were not
-present a decade ago. Demonstrated attacks on vehicle systems have been mostly research-context rather than
-criminal, but the underlying connectivity is real and the security model for automotive software is less
+present a decade ago. Demonstrated attacks on vehicle systems have been mostly research-context, but the underlying connectivity is real and the security model for automotive software is less
 mature than for conventional computing.
 
 ## Smart cities

@@ -62,4 +62,4 @@ Widen `frame-ancestors` to include a newly needed embedder, or remove the header
 ## Follow-up
 
 - Confirm with a [security header check](check.md).
-- `frame-ancestors` is part of [CSP](csp.md); a site setting a full CSP can carry the frame control there rather than in a separate header.
+- `frame-ancestors` is part of [CSP](csp.md); a site setting a full CSP can carry the frame control there.

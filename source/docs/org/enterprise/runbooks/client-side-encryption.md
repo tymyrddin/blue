@@ -1,6 +1,6 @@
 # Client-side encryption implementation
 
-Lord Downey's requirement was unambiguous: even Golem Trust's own staff must be technically incapable of reading the Guild's data, not merely prohibited from doing so. The implementation that satisfies this requirement is client-side encryption. The Assassins' Guild application calls Vault Transit to encrypt data before it ever leaves the Guild's own application process. Golem Trust receives and stores only ciphertext. This runbook covers the integration pattern, the Python implementation using the `hvac` library, the decryption path, error handling requirements, and the SDK wrapper pattern used to abstract Vault calls from application code.
+Lord Downey's requirement was unambiguous: even Golem Trust's own staff must be technically incapable of reading the Guild's data. The implementation that satisfies this requirement is client-side encryption. The Assassins' Guild application calls Vault Transit to encrypt data before it ever leaves the Guild's own application process. Golem Trust receives and stores only ciphertext. This runbook covers the integration pattern, the Python implementation using the `hvac` library, the decryption path, error handling requirements, and the SDK wrapper pattern used to abstract Vault calls from application code.
 
 ## Integration pattern
 
@@ -94,7 +94,7 @@ def decrypt(client: hvac.Client, ciphertext: str, record_id: str) -> str:
     return plaintext_bytes.decode("utf-8")
 ```
 
-If the context does not match the one used during encryption, Vault returns an error and `hvac` raises an exception. The application must treat this as a fatal error, not a retriable one.
+If the context does not match the one used during encryption, Vault returns an error and `hvac` raises an exception. The application must treat this as a fatal error.
 
 ## Error handling: fail closed
 

@@ -4,7 +4,7 @@
 
 ## Error handling
 
-Production error responses convey only what the caller needs to act on the error. Stack traces, exception messages, query strings, and internal path information are for logs, not responses:
+Production error responses convey only what the caller needs to act on the error. Stack traces, exception messages, query strings, and internal path information are for logs:
 
 ```python
 # Flask example

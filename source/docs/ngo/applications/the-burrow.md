@@ -51,7 +51,7 @@ that she notices when someone is no longer active.
 There are currently nineteen people with access. All nineteen are current staff or active
 volunteers. This is better than many shadow IT systems. It does not address the fact that
 the data is hosted on Notion's infrastructure under a free personal account, subject to
-Notion's terms of service rather than a Data Processing Agreement with the Home, in a
+Notion's terms of service, in a
 jurisdiction that depends on which Notion legal entity the account is associated with,
 which has not been established.
 

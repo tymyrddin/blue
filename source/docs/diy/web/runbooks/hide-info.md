@@ -8,7 +8,7 @@ On a new web server during setup. On an existing server where `curl -I` shows a 
 
 ## What it closes
 
-This is an information leak, not a direct compromise. The version number lets an attacker skip the guesswork and go straight to the exploits matching that release. Removing it does not patch anything; it removes the signpost. It pairs with [disabling directory listing](directory-listing.md).
+This is an information leak. The version number lets an attacker skip the guesswork and go straight to the exploits matching that release. Removing it does not patch anything; it removes the signpost. It pairs with [disabling directory listing](directory-listing.md).
 
 ## Apache
 
@@ -62,7 +62,7 @@ sudo nginx -t && sudo systemctl reload nginx
 curl -I https://example.com
 ```
 
-The `Server` header should read `Apache` or `nginx` with no version number and no OS string. Confirm `/server-status` and `/server-info` (Apache) return 403 or 404, not a status page.
+The `Server` header should read `Apache` or `nginx` with no version number and no OS string. Confirm `/server-status` and `/server-info` (Apache) return 403 or 404.
 
 ## Done
 

@@ -106,8 +106,7 @@ away? What did the responder notice?
 
 The second covers the practical takeaways: verification through a different channel is
 the defence. IT does not call to ask for passwords. A caller who creates urgency and
-discourages verification is using urgency as a technique, not describing a genuine
-emergency. The correct response to any unexpected request for access or sensitive
+discourages verification is using urgency as a technique. The correct response to any unexpected request for access or sensitive
 information is to end the call and call back on a number found independently.
 
 End with the equivalent of the phishing session's closing note: the calls made in this

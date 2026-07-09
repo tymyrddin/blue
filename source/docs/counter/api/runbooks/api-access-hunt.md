@@ -3,8 +3,7 @@
 Three hunts for post-authentication API abuse: object-level authorisation bypass through
 resource ID enumeration, bulk data access indicating exfiltration via the API, and token
 anomalies that suggest theft and replay. These patterns are visible only in authenticated
-session logs; they require knowing which identity accessed which resource, not just
-whether the request was authorised.
+session logs; they require knowing which identity accessed which resource.
 
 Data source: structured JSON API access logs with authentication context. The identity
 field is the resolved user or service identity, not the session token. Token theft
@@ -38,7 +37,7 @@ jq -r --arg id "$IDENTITY" --arg prefix "$RESOURCE_PATH" \
 
 Legitimate users access their own resources. An identity that reads hundreds of distinct
 order or account records, especially in sequential or alphabetically clustered patterns,
-is enumerating rather than browsing. BOLA is often silent: every request succeeds with
+is enumerating. BOLA is often silent: every request succeeds with
 `200`, nothing triggers rate limits, and no anomaly is visible in isolation.
 
 ## Bulk data access

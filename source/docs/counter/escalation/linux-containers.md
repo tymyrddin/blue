@@ -59,7 +59,7 @@ environments more often than in deliberately designed production configuration.
 
 Container isolation rests on Linux namespaces, which limit what the container can see, and
 cgroups, which limit what it can consume. Both are kernel features that can be weakened or
-bypassed through runtime configuration choices. Container escapes in practice are almost
+bypassed through runtime configuration choices. Container escapes are almost
 always configuration errors, not kernel vulnerabilities.
 
 Privileged containers (`--privileged`) receive the full Linux capability set, including

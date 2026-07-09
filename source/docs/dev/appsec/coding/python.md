@@ -89,7 +89,7 @@ from jinja2 import Environment
 
 env = Environment(autoescape=True)
 
-# safe: user_value is a variable, not part of the template
+# safe: user_value is a variable
 template = env.from_string("Hello, {{ name }}!")
 output = template.render(name=user_value)
 
@@ -119,7 +119,7 @@ response = requests.get(url)
 ```
 
 If the problem is a self-signed or internal CA certificate, the correct fix is to pass the CA bundle path as
-`verify="/path/to/ca-bundle.pem"`, not to disable verification.
+`verify="/path/to/ca-bundle.pem"`.
 
 ## eval and safe alternatives
 

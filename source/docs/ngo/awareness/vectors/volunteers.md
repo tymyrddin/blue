@@ -30,8 +30,7 @@ or the medical bay. Relying on an annual email with a training link will not rea
 and it will not reach them at the right moment.
 
 More effective approaches are a short security briefing as part of every volunteer induction,
-delivered in person by whoever is running the induction rather than delegated to an online
-module; a one-page reference card given to every volunteer at induction and available at the
+delivered in person by whoever is running the induction; a one-page reference card given to every volunteer at induction and available at the
 front desk, covering what phishing looks like, what to do if something seems wrong, and who
 to contact; and occasional awareness messages through whatever channel actually reaches the
 volunteer population, which at the Home includes The Coven for the night shift, the volunteer
@@ -44,8 +43,7 @@ The MFA rollout guidance covers this in more detail. The short version is: requi
 volunteers who have access to sensitive systems. For volunteers with minimal access, make
 MFA as easy as possible to configure and offer hands-on help during the initial rollout.
 For volunteers who genuinely cannot use standard MFA methods due to device constraints or
-accessibility needs, find a documented alternative with a review date rather than creating
-a permanent exception with no oversight.
+accessibility needs, find a documented alternative with a review date.
 
 ## Volunteers as social engineering targets
 

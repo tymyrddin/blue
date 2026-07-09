@@ -24,12 +24,11 @@ user-specific data.
 
 `Access-Control-Allow-Credentials: true` allows the browser to include cookies and other credentials in a cross-origin
 request. The combination of `Access-Control-Allow-Origin: *` and `Access-Control-Allow-Credentials: true` is rejected by
-browsers: a server that wants credentialed cross-origin requests only accepts an explicit origin, not a wildcard.
+browsers: a server that wants credentialed cross-origin requests only accepts an explicit origin.
 
 ## Allowlisting origins
 
-The correct pattern for multi-origin CORS is an explicit server-side allowlist, not a reflection of whatever `Origin`
-header the request sends:
+The correct pattern for multi-origin CORS is an explicit server-side allowlist:
 
 ```python
 ALLOWED_ORIGINS = {

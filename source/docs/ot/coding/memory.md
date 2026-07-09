@@ -60,7 +60,7 @@ if (buf == NULL) {
 ```
 
 Signed integer overflow is undefined behaviour in C. Use `size_t` or explicitly sized unsigned types (`uint32_t`,
-`uint64_t`) for length values, not `int`.
+`uint64_t`) for length values.
 
 ## Heap buffer overflows
 

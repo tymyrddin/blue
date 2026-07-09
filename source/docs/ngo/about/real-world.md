@@ -27,7 +27,7 @@ by necessity.
 
 Germany, Switzerland, Luxembourg, and the Nordic countries host well-endowed foundations
 with long mandates and international ambitions. These are different animals. They plan in
-decades rather than grant cycles. They have the resources to do things properly, which also
+decades. They have the resources to do things properly, which also
 means they have the resources to build the kind of technical debt that only becomes visible
 when something expensive needs replacing. Large, stable organisations have a particular
 talent for inheriting their own past decisions.
@@ -48,8 +48,7 @@ which is its own kind of security consideration.
 ## Money and what it does to an organisation
 
 Funding is arguably the most important variable, because it determines how much planning is
-possible and how much of the organisation's energy goes into securing next year's survival
-rather than this year's work.
+possible and how much of the organisation's energy goes into securing next year's survival.
 
 Welfare-integrated NGOs in Germany, Austria, and the Nordics receive stable, often multi-year
 government funding. The good news is predictable income and the ability to plan. The other

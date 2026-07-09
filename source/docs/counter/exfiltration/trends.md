@@ -43,8 +43,7 @@ User-Agent. Both look like routine cloud storage traffic. The difference lies
 in the destination account and the file names, neither of which is visible to
 a proxy without TLS inspection and content-level DLP.*
 
-Detection requires monitoring what is uploaded to cloud storage, not just
-that a connection was made. This is a fundamentally harder problem.
+Detection requires monitoring what is uploaded to cloud storage. This is a fundamentally harder problem.
 
 ## Low-and-slow defeats volume-based detection
 
@@ -61,10 +60,9 @@ deviation cannot be detected. This requires:
 
 - User and entity behaviour analytics (UEBA) that establish per-user norms
   for data access volume, timing, and destination
-- Cloud API monitoring that tracks upload volume, not just authentication
+- Cloud API monitoring that tracks upload volume
 - File access baselining in SaaS platforms (SharePoint, OneDrive, Google Drive)
-- Content-aware DLP that monitors what is uploaded, not just that an upload
-  occurred
+- Content-aware DLP that monitors what is uploaded
 
 None of these are simple to implement. Many organisations have some but
 not all, and the gaps between them are where exfiltration goes undetected.

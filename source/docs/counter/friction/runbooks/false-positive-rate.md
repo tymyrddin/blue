@@ -21,14 +21,14 @@ For a rolling 30-day window, per rule:
 - analyst_hours   = sum of triage time
 
 Rank by analyst_hours descending. The worst rules are the ones eating the
-most time at the lowest tp_ratio, not the loudest by volume alone.
+most time at the lowest tp_ratio.
 
 ## Act on the ranking
 
 - A rule firing mostly false positives provides closer to no detection than partial detection, because
   it trains the analyst to dismiss the category, real ones included. Tune it or disable it; leaving it
   noisy is the more expensive choice.
-- Tune by raising the true-positive ratio, not by making the rule fire less. An exclusion that removes
+- Tune by raising the true-positive ratio. An exclusion that removes
   a known-benign source is calibration, not compromise. Record each exclusion with a reason and a
   review date.
 - A rule that cannot be made to fire with reason to investigate is a candidate for retirement, or for

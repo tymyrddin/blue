@@ -208,8 +208,7 @@ A complete cloud escalation sequence tends to look like: `GetCallerIdentity` fro
 IP, followed by enumeration (`ListBuckets`, `ListRoles`, `DescribeInstances`), followed
 by `AssumeRole` toward a higher-privilege role, followed by IAM modification. Each step
 appears in CloudTrail as a separate event. A SIEM query joining these events on the
-session token or access key ID surfaces the chain as a single finding rather than
-isolated alerts.
+session token or access key ID surfaces the chain as a single finding.
 
 The session token in AWS CloudTrail (`userIdentity.sessionContext.sessionIssuer.arn`)
 links all API calls made with a specific set of assumed-role credentials. Pivoting on

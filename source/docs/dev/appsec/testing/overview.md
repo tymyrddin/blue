@@ -23,7 +23,7 @@ the automated alternatives.
 
 ## Automation in CI/CD
 
-Integrating security tools into the build pipeline means scans happen on every commit rather than periodically. Most
+Integrating security tools into the build pipeline means scans happen on every commit. Most
 SAST and SCA tools provide CI integrations and can be configured to fail the build on findings above a defined severity
 threshold.
 

@@ -1,6 +1,6 @@
 # Code review
 
-Security-focused code review looks at code from the perspective of an attacker rather than a functional reviewer. The question is not whether the code does what it is supposed to do, but whether it can be made to do something it is not supposed to do.
+Security-focused code review looks at code from the perspective of an attacker. The question is not whether the code does what it is supposed to do, but whether it can be made to do something it is not supposed to do.
 
 Automated tools (linters, SAST scanners) catch repeatable patterns reliably. Manual review catches logic errors, access control assumptions, and trust boundary violations that pattern matching misses.
 

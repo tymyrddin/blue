@@ -29,7 +29,7 @@ services:
       - NET_BIND_SERVICE
 ```
 
-The common ones an application might genuinely need: `NET_BIND_SERVICE` (bind a port below 1024), `CHOWN` and `SETUID`/`SETGID` (drop privileges at startup, common in web servers), `DAC_OVERRIDE` (bypass file permission checks, worth questioning rather than granting reflexively). Most need none.
+The common ones an application might genuinely need: `NET_BIND_SERVICE` (bind a port below 1024), `CHOWN` and `SETUID`/`SETGID` (drop privileges at startup, common in web servers), `DAC_OVERRIDE` (bypass file permission checks, worth questioning). Most need none.
 
 ## Finding what is needed
 
@@ -37,7 +37,7 @@ The empirical route: drop all, start the container, and watch what fails. A capa
 
 ## Risk
 
-Dropping a capability the application relies on breaks it, usually at startup or on the first operation that needs the privilege. The failure is specific and the fix is to add that one capability back, so the iterate-from-empty approach is low-risk as long as it is done before deployment rather than discovered in production. `--cap-add` of a broad capability such as `SYS_ADMIN` undoes most of the benefit; treat a request for it as a sign to look closer at what the container is doing.
+Dropping a capability the application relies on breaks it, usually at startup or on the first operation that needs the privilege. The failure is specific and the fix is to add that one capability back, so the iterate-from-empty approach is low-risk as long as it is done before deployment. `--cap-add` of a broad capability such as `SYS_ADMIN` undoes most of the benefit; treat a request for it as a sign to look closer at what the container is doing.
 
 ## Verify
 
@@ -49,7 +49,7 @@ This should show `[ALL]` dropped and only the intended capabilities added. Confi
 
 ## Done
 
-The container drops `ALL` and adds back only a short, justified list. The application functions. No capability request broader than the specific operation it covers. The setting is in the image's Compose or run configuration, not a one-off flag.
+The container drops `ALL` and adds back only a short, justified list. The application functions. No capability request broader than the specific operation it covers. The setting is in the image's Compose or run configuration.
 
 ## Rollback
 

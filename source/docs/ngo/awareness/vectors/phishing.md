@@ -54,7 +54,7 @@ campaign events.
 
 The display is visible to everyone. The red team can see whether their email was clicked or
 reported. The blue team can see what the attacker's view looks like. Neither side is
-operating in the dark, which is the point: this is a learning exercise, not a test.
+operating in the dark, which is the point: this is a learning exercise.
 
 After the session, the debrief reviews the full campaign results on the display together.
 The emails that were clicked are examined with their authors: what made this work? The

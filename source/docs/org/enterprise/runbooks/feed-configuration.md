@@ -20,7 +20,7 @@ Enabled: Yes
 Caching enabled: Yes
 ```
 
-After adding, enable caching to allow Graylog's lookup table adapter to query locally rather than hitting the CIRCL API for every alert enrichment. The cached data is stored in MISP's Redis instance and refreshed with each pull.
+After adding, enable caching to allow Graylog's lookup table adapter to query locally. The cached data is stored in MISP's Redis instance and refreshed with each pull.
 
 ## AlienVault OTX
 

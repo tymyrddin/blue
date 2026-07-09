@@ -79,7 +79,7 @@ should continue.
 A process that depends on someone remembering to file a ticket at the right moment will
 fail in a busy organisation. The sustainable version requires HR to notify IT via a
 standard form at the start of the departure notice period, and for IT to work through a
-checklist that covers every application in the landscape, not just Entra ID. Completion
+checklist that covers every application in the landscape. Completion
 is documented and attached to the HR record.
 
 Quarterly, run an access review of all active accounts against the current HR and volunteer

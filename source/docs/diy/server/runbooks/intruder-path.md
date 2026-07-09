@@ -8,7 +8,7 @@ When a server is suspected of being compromised and the question is what the int
 
 ## Risk
 
-On a compromised server, the system's own tools may have been replaced to hide the intruder. `ps`, `ls`, `netstat`, `top`, and `ifconfig` are common targets. Output from these on a suspect host can be misleading. Where it counts, inspect from a [trusted live environment](brm.md) rather than trusting the running system.
+On a compromised server, the system's own tools may have been replaced to hide the intruder. `ps`, `ls`, `netstat`, `top`, and `ifconfig` are common targets. Output from these on a suspect host can be misleading. Where it counts, inspect from a [trusted live environment](brm.md).
 
 ## The typical path, and its traces
 
@@ -45,7 +45,7 @@ ip link | grep -i promisc
 
 ### Hidden files and tools
 
-Sniffer binaries, their config, and captured data are often hidden in `/dev`, which should contain device nodes, not regular files:
+Sniffer binaries, their config, and captured data are often hidden in `/dev`, which should contain device nodes:
 
 ```
 find /dev -type f
@@ -83,4 +83,4 @@ Each item above has been checked. The findings establish whether a compromise oc
 ## Follow-up
 
 - For containment, evidence preservation, and escalation, see [the first hour](../../incidents/first-hour.md).
-- Recovery from a confirmed compromise generally means a rebuild from [verified backups](../../incidents/runbooks/backup-verification.md), not cleaning in place.
+- Recovery from a confirmed compromise generally means a rebuild from [verified backups](../../incidents/runbooks/backup-verification.md).

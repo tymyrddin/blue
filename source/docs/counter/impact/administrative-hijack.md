@@ -39,7 +39,7 @@ mandate that copies everything, copied to one address too many.
 
 Detection built to catch intrusion finds nothing here, because there is no intrusion. The tools are
 native, the certificates valid, the policy signed, the job scheduled. The signal, where it exists, is
-in the shape rather than the act: a maintenance window that runs longer than its baseline, a
+in the shape: a maintenance window that runs longer than its baseline, a
 replication job with a destination it did not have last month, a compliance posture that tightened
 without a debate, a clerk's token used for a configuration change at an odd hour. Each reads as
 routine administration until someone asks why.

@@ -109,7 +109,7 @@ available options appear to be. It presents that determination before the Patric
 The presentation is acknowledged. What shapes the presentation before it reaches the page is not in the
 presentation.
 
-## Watching, not intervening
+## Watching
 
 The Establishment's instinct is to watch. Where it finds something already underway, the
 default is observation, measurement and analysis, and intervention waits on a confirmed threat to continuity.

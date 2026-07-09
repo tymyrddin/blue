@@ -10,7 +10,7 @@ often surface endpoints that do not appear in the documentation at all.
 Shadow and deprecated endpoints. Older API versions (`/v1/`, `/v2/`) may still be reachable even when the
 documentation covers only the current version. These endpoints frequently receive less testing and fewer security
 updates. Scanning involves replaying traffic through a proxy to surface paths that appear in JavaScript bundles or
-mobile app binaries, not only those in the OpenAPI spec.
+mobile app binaries.
 
 Excessive data exposure. Responses that return more fields than the documented schema suggests (including
 internal identifiers, timestamps, or fields relevant to other users) are worth flagging. Comparing the documented

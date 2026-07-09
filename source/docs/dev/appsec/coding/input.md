@@ -34,8 +34,8 @@ class BookingRequest(BaseModel):
 booking = BookingRequest.model_validate(request.json())
 ```
 
-The validated `booking` object carries typed fields: `booking.check_in` is a `date`, not a
-string. Downstream code does not need to revalidate.
+The validated `booking` object carries typed fields: `booking.check_in` is a `date`.
+Downstream code does not need to revalidate.
 
 ## JavaScript/TypeScript: Zod
 

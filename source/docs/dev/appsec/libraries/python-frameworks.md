@@ -35,7 +35,7 @@ Common Flask-specific risks:
 
 ## FastAPI
 
-FastAPI validates request bodies against Pydantic models by default, which provides type-checked, range-checked input validation at the API boundary. This is a meaningful security property: a handler that declares `user_id: int` receives an integer, not a string that happens to look like one.
+FastAPI validates request bodies against Pydantic models by default, which provides type-checked, range-checked input validation at the API boundary. This is a meaningful security property: a handler that declares `user_id: int` receives an integer.
 
 `fastapi.security` provides OAuth2 and JWT utilities. The JWT implementation delegates signature verification to the `python-jose` library; key management and algorithm selection (`RS256` over `HS256` for API-to-API tokens) are application-level choices.
 
@@ -47,7 +47,7 @@ app = FastAPI(docs_url=None, redoc_url=None)
 
 ## Pyramid
 
-Pyramid's ACL-based permission system is more flexible than Django's group-based model and correspondingly more complex to configure correctly. Permission rules that are overly broad, or ACLs that fall through to a default `Allow` rather than `Deny`, can grant unintended access.
+Pyramid's ACL-based permission system is more flexible than Django's group-based model and correspondingly more complex to configure correctly. Permission rules that are overly broad, or ACLs that fall through to a default `Allow`, can grant unintended access.
 
 Pyramid uses Chameleon or Mako templates by default, which have different auto-escaping behaviour from Jinja2. Mako does not auto-escape by default; escaping is explicit.
 
@@ -74,4 +74,4 @@ Dependency scanning with `pip-audit` identifies known CVEs in installed packages
 pip-audit
 ```
 
-WSGI servers (gunicorn, uWSGI) and ASGI servers (uvicorn) have their own configuration considerations: worker count, timeout settings, and whether the development server is exposed directly to the internet rather than behind a reverse proxy.
+WSGI servers (gunicorn, uWSGI) and ASGI servers (uvicorn) have their own configuration considerations: worker count, timeout settings, and whether the development server is exposed directly to the internet.

@@ -15,7 +15,7 @@ Create a Beats input in Graylog. Navigate to System, then Inputs, then Launch ne
 - Title: `Wazuh Alerts`
 - Port: 5044
 - TLS: enabled (upload the Graylog server certificate)
-- No authentication (Beats uses TLS mutual auth, not passwords)
+- No authentication (Beats uses TLS mutual auth)
 
 Note the input ID for use in the stream configuration below.
 

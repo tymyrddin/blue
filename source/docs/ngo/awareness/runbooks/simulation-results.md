@@ -61,4 +61,4 @@ campaign, add a row:
 Review the full log at the end of the programme year. The trend across twelve months is
 the evidence base for arguing for resources, adjusting the session curriculum, and
 demonstrating to management that the programme is responding to the actual threat
-landscape rather than running the same simulation on repeat.
+landscape.

@@ -60,7 +60,7 @@ location /api/auth/login {
 }
 ```
 
-`$binary_remote_addr` uses the connection address, not any forwarded header.
+`$binary_remote_addr` uses the connection address.
 
 ## Window semantics
 

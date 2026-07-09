@@ -33,8 +33,7 @@ when someone clicks Share determines what most users do in practice.
 
 If the default is Anyone with the link, staff will routinely create public links without
 thinking about it, because it is the easiest option. Changing the default to People in
-your organisation, or Specific people, makes external sharing a conscious choice rather
-than the path of least resistance. This single change prevents a category of accidental
+your organisation, or Specific people, makes external sharing a conscious choice. This single change prevents a category of accidental
 data exposure without blocking legitimate collaboration.
 
 ## Reviewing existing links

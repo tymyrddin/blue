@@ -9,7 +9,7 @@ Harbor's built-in Trivy scanner runs automatically when an image is pushed, when
 Ensure the Trivy adapter is listed and active. Click Edit to configure:
 
 - Skip update on failure: disabled (if the vulnerability database cannot be updated, scans fail)
-- Ignore unfixed vulnerabilities: disabled (vulnerabilities without a fix are still reported; whether they block promotion is a policy decision, not a Trivy decision)
+- Ignore unfixed vulnerabilities: disabled (vulnerabilities without a fix are still reported; whether they block promotion is a policy decision)
 - Insecure registry: disabled
 - GitHub token: add a GitHub personal access token to avoid rate limiting when Trivy downloads the vulnerability database
 
@@ -111,7 +111,7 @@ jobs:
 Create a `.trivyignore` file in each repository for known false positives that have been reviewed and accepted. Document each entry with a reason and an expiry date:
 
 ```
-# CVE-2023-XXXXX - affects only Windows builds, not applicable to Linux containers
+# CVE-2023-XXXXX - affects only Windows builds
 # Accepted: 2026-01-15, Review by: ludmilla.katzenzungen, Expires: 2026-07-15
 CVE-2023-XXXXX
 ```

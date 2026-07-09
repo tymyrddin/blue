@@ -69,7 +69,7 @@ Vault nodes receive additional FIM rules via the `vault-nodes` group configurati
     <directories realtime="yes" check_all="yes" report_changes="yes">/etc/vault.d</directories>
     <directories realtime="yes" check_all="yes">/etc/systemd/system/vault.service.d</directories>
 
-    <!-- Vault audit log directory: alert on deletion only, not modification -->
+    <!-- Vault audit log directory: alert on deletion only -->
     <directories realtime="yes" check_owner="yes" check_perm="yes">/var/log/vault</directories>
   </syscheck>
 </agent_config>

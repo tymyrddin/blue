@@ -29,7 +29,7 @@ Block IPs that trigger brute force alerts. The built-in `firewall-drop` command 
 
 Rule 5763 fires when Wazuh detects SSH brute force (10 failed attempts within 2 minutes). The timeout of 3600 seconds (one hour) reverses the block automatically, preventing permanent lockout from transient scanners.
 
-The `<location>local</location>` directive runs the response only on the agent that received the alert. This means an SSH brute force against `gitlab.golemtrust.am` only blocks the attacker on that host, not on all hosts.
+The `<location>local</location>` directive runs the response only on the agent that received the alert. This means an SSH brute force against `gitlab.golemtrust.am` only blocks the attacker on that host.
 
 ## Protecting Golem Trust IP ranges from auto-blocking
 

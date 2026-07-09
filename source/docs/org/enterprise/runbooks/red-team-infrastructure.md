@@ -1,6 +1,6 @@
 # Red team infrastructure setup
 
-Mr. Teatime requires a workspace that is entirely his own. Not because he is secretive by nature, though he is, but because any connection between the red team's attack tooling and Golem Trust's production environment would be a catastrophic mistake. The infrastructure described here is physically and logically separate from everything else the Trust operates. When Mr. Teatime's tools attempt to scan a subnet, they are scanning the right subnet, not accidentally the payment processing cluster.
+Mr. Teatime requires a workspace that is entirely his own. Not because he is secretive by nature, though he is, but because any connection between the red team's attack tooling and Golem Trust's production environment would be a catastrophic mistake. The infrastructure described here is physically and logically separate from everything else the Trust operates. When Mr. Teatime's tools attempt to scan a subnet, they are scanning the right subnet.
 
 ## Hetzner project structure
 

@@ -120,7 +120,7 @@ These merge requests are not auto-merged even if the update would normally quali
 
 ## Notifications
 
-Configure Renovate to assign merge requests to the repository's default reviewer group rather than leaving them unassigned. In `renovate.json`, add:
+Configure Renovate to assign merge requests to the repository's default reviewer group. In `renovate.json`, add:
 
 ```
 "reviewers": ["golemtrust/security"],

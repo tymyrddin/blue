@@ -30,7 +30,7 @@ Head of Security Operations
 Golem Trust
 ```
 
-Condition 2: replication lag must be below 1 second. Chaos experiments on Kubernetes nodes should not affect database replication, but confirming lag is low before starting ensures any replication issues that exist independently of the experiment are identified before, not during, the test.
+Condition 2: replication lag must be below 1 second. Chaos experiments on Kubernetes nodes should not affect database replication, but confirming lag is low before starting ensures any replication issues that exist independently of the experiment are identified before the test.
 
 ```
 # Check PostgreSQL replication lag

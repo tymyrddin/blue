@@ -97,7 +97,6 @@ localhost proxy to handle cases where session boundaries prevent the standard Ju
 CLSID approach from succeeding.
 
 All of these require SeImpersonatePrivilege as a precondition. An interactive shell or
-injected code running as a service account holding this privilege, rather than under a
-constrained user account, is the entry condition. The privilege is commonly present
+injected code running as a service account holding this privilege is the entry condition. The privilege is commonly present
 precisely because the compromised service was running under an account the framework
-chose for convenience rather than least-privilege.
+chose for convenience.

@@ -13,7 +13,7 @@ The process typically involves:
 3. Applying STRIDE to each component and flow
 4. Identifying mitigations for threats that pose unacceptable risk
 
-The output is a list of threats with associated risk ratings and mitigations, not a pass/fail assessment.
+The output is a list of threats with associated risk ratings and mitigations.
 
 DREAD (Damage, Reproducibility, Exploitability, Affected users, Discoverability) is a risk scoring framework sometimes used alongside STRIDE. Its use has declined in favour of CVSS and more context-specific scoring, but it remains a useful prompt for structured discussion.
 

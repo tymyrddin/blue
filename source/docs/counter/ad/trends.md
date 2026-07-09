@@ -50,7 +50,7 @@ WriteProperty or WriteDACL on the template allows an attacker to modify it to ad
 conditions ESC1 requires, enrol, then restore the template. The change window is brief.
 
 ESC6 applies when the CA carries the `EDITF_ATTRIBUTESUBJECTALTNAME2` policy flag, which
-permits arbitrary SAN values on any template, not only those explicitly configured for it.
+permits arbitrary SAN values on any template.
 Any template with Client Authentication becomes an ESC1 equivalent when this flag is set.
 
 ESC8 uses NTLM relay. The CA's web enrolment endpoint accepts NTLM authentication by

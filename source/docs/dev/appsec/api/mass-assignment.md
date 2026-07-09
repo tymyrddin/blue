@@ -18,7 +18,7 @@ Any field not in the model is either rejected or silently ignored, depending on 
 from pydantic import BaseModel, ConfigDict, EmailStr
 
 class UserUpdateRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")  # reject unknown fields rather than ignoring
+    model_config = ConfigDict(extra="forbid")  # reject unknown fields
 
     name: str
     email: EmailStr

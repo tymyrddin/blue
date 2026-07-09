@@ -101,7 +101,7 @@ output.logstash:
   loadbalance: true
 ```
 
-The `json.keys_under_root: true` setting causes Filebeat to promote all JSON fields to top-level Graylog fields rather than nesting them inside a `json` object. This makes Zeek fields such as `id.orig_h`, `id.resp_h`, and `proto` directly searchable in Graylog.
+The `json.keys_under_root: true` setting causes Filebeat to promote all JSON fields to top-level Graylog fields. This makes Zeek fields such as `id.orig_h`, `id.resp_h`, and `proto` directly searchable in Graylog.
 
 Note that Zeek writes to `current/` while it is running. When Zeek rotates logs, the current file is renamed and a new one is started. Filebeat tracks the file by inode, so it follows correctly across rotations. The rotated logs in `/opt/zeek/logs/<date>/` are not shipped again; only the `current/` files are monitored.
 

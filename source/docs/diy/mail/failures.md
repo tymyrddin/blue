@@ -10,7 +10,7 @@ DMARC at `p=quarantine` or `p=reject` with alignment enforced closes this.
 
 ## DMARC at p=none
 
-The domain publishes DMARC. Aggregate reports arrive. Spoofed mail still delivers. `p=none` is an observation mode, not an enforcement mode; nothing happens to mail that fails alignment. An attacker running a phishing campaign against the domain's customers generates entries in the next aggregate report and nothing else. The domain owner learns about it after the campaign has run.
+The domain publishes DMARC. Aggregate reports arrive. Spoofed mail still delivers. `p=none` is an observation mode; nothing happens to mail that fails alignment. An attacker running a phishing campaign against the domain's customers generates entries in the next aggregate report and nothing else. The domain owner learns about it after the campaign has run.
 
 Promoting to `p=quarantine` and then `p=reject`, using aggregate reports to confirm legitimate streams pass first, closes this.
 
@@ -22,7 +22,7 @@ Changing `mode` to `enforce` once the certificate and TLS configuration are conf
 
 ## SPF without DKIM
 
-A message forwarded through a mailing list arrives carrying the forwarding server's IP, not the original sender's. SPF fails for the original domain because the forwarding server is not listed. Without a DKIM signature to fall back on, DMARC alignment fails too. Legitimate mail forwarded from the domain is indistinguishable from spoofed mail at the receiving end. SPF alone cannot survive the forwarding path.
+A message forwarded through a mailing list arrives carrying the forwarding server's IP. SPF fails for the original domain because the forwarding server is not listed. Without a DKIM signature to fall back on, DMARC alignment fails too. Legitimate mail forwarded from the domain is indistinguishable from spoofed mail at the receiving end. SPF alone cannot survive the forwarding path.
 
 Deploying DKIM gives DMARC a second alignment path that travels with the message through forwarding.
 

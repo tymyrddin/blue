@@ -18,7 +18,7 @@ routes, and whoever owns the ally's registry owns the path the packets take.
   Fungolia's local internet registry, whose core routers announce the frontier's routes to the world, and
   whose habit of leaving legacy management services answering on the perimeter makes the oldest box the
   way in.
-- Shadow6, the Borogravian regency's cyber wing: under standing orders to paralyse, not to wreck, so it
+- Shadow6, the Borogravian regency's cyber wing: under standing orders to paralyse, so it
   wants the routing intact and obedient, a highway it can point rather than a road it has to close.
 - [The Civic Defence Establishment](../establishment/index.rst): which runs its own registry
   and reads the global table everyone reads, and which assumes its own traffic is safe because it is

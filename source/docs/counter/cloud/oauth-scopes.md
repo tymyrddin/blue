@@ -110,7 +110,7 @@ application credentials tend to produce larger incidents.
 
 ```powershell
 # list all service principals with application permissions, sorted by scope
-# this groups dangerous permissions together rather than burying them by application name
+# this groups dangerous permissions by scope, not by application name
 Get-MgServicePrincipal -All | ForEach-Object {
     $sp = $_
     Get-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $sp.Id |
@@ -131,8 +131,8 @@ Get-MgServicePrincipal -All | ForEach-Object {
 
 Sorting by scope produces a list grouped by permission type. All
 `Application.ReadWrite.All` grants appear together, all `Directory.ReadWrite.All` grants appear
-together. The most dangerous grants become visible at the top of the output rather than scattered
-across a long list of application names.
+together. The most dangerous grants appear at the top of the output instead of hidden among many
+application names.
 
 ```bash
 # Google Workspace: list apps with domain-wide delegation

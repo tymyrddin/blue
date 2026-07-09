@@ -19,7 +19,7 @@ mobile carrier account warnings are the current standard patterns. Some campaign
 conversational smishing: an initial message that seems benign, a response, then a gradual
 escalation to a request. The extra exchange builds perceived legitimacy.
 
-Callback phishing uses text messages that contain a phone number rather than a link. The
+Callback phishing uses text messages that contain a phone number. The
 message reports a problem (a fraudulent transaction, an account suspension) and asks the
 recipient to call. On the call, the attacker collects the information directly.
 
@@ -29,7 +29,7 @@ The indicators that hold across most variants:
 
 * Unexpected urgency, especially around accounts, deliveries, or fees
 * A link using a shortened URL or a domain that approximates the real one
-* A phone number to call rather than a website address
+* A phone number to call
 * A request for information (card details, one-time codes, passwords) that the genuine
   organisation would already have or would not ask for by text
 

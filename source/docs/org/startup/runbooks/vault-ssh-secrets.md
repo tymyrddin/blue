@@ -147,7 +147,7 @@ The private key and certificate are temporary; delete them after use:
 rm /tmp/deploy-key /tmp/deploy-key.pub /tmp/deploy-key-cert.pub
 ```
 
-Automated scripts should generate a fresh key pair on each invocation, request a certificate, connect, complete their work, and clean up. The one-hour TTL is the outer bound; a well-written script holds the certificate for seconds, not minutes.
+Automated scripts should generate a fresh key pair on each invocation, request a certificate, connect, complete their work, and clean up. The one-hour TTL is the outer bound; a well-written script holds the certificate for seconds.
 
 ## Verification
 

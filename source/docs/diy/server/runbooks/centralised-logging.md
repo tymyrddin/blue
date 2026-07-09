@@ -4,7 +4,7 @@ Monitoring-enablement runbook. Forwards logs off each server to a separate desti
 
 ## When to run
 
-During initial setup of any server holding data worth protecting. On an existing fleet that keeps logs only locally. The value is established before an incident, not during one.
+During initial setup of any server holding data worth protecting. On an existing fleet that keeps logs only locally. The value is established before an incident.
 
 ## Why it is worth the effort
 
@@ -30,7 +30,7 @@ After configuring forwarding, confirm logs arrive on the destination:
 
 1. Generate a log event on a source host (an SSH login, or `logger "test message"`).
 2. Confirm the message appears on the destination within a few seconds.
-3. Confirm the destination is receiving from every host that should be shipping, not just the one tested.
+3. Confirm the destination is receiving from every host that should be shipping.
 
 A source host whose entries stop appearing is either down or no longer forwarding; either is worth noticing.
 

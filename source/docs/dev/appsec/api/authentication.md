@@ -83,8 +83,7 @@ def verify_oauth_token(token: str, public_key: str, expected_audience: str) -> d
     )
 ```
 
-Scope validation checks that the token carries the specific permission required by the endpoint, not just that it is
-a valid token. An endpoint that checks only signature validity accepts any valid token from the issuer, regardless of
+Scope validation checks that the token carries the specific permission required by the endpoint. An endpoint that checks only signature validity accepts any valid token from the issuer, regardless of
 what the token was scoped to do.
 
 ## Service-to-service authentication
@@ -93,6 +92,6 @@ Internal services that trust each other based solely on network position (privat
 any service in that network is compromised. [Mutual TLS](../protocols/mtls.md) (mTLS) or short-lived signed JWTs between services adds a
 cryptographic verification step that network position alone does not provide.
 
-Short-lived tokens (minutes rather than hours) for machine-to-machine calls reduce the window for replay. A service
+Short-lived tokens (minutes) for machine-to-machine calls reduce the window for replay. A service
 that rotates credentials automatically via a secrets manager (Vault, AWS Secrets Manager) at short intervals is a
 stronger position than one using long-lived static credentials shared across all callers.

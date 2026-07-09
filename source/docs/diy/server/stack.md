@@ -8,7 +8,7 @@ Server hardening controls fall into four layers: access and authentication, whic
 
 [Disabling direct root login](runbooks/disable-root.md) over SSH forces an attacker to compromise a regular user account before attempting privilege escalation. It narrows the target but does not eliminate it: a compromised sudo user is one command away from root if sudo is not scoped.
 
-[SSH key authentication](runbooks/harden-ssh.md) removes the password brute-force attack surface entirely. A server that accepts only key-based authentication cannot be broken into by guessing credentials, regardless of how many attempts an attacker makes. [Fail2ban](runbooks/fail2ban.md) rate-limits authentication attempts and issues temporary bans on repeated failures, which is useful for services that cannot drop passwords entirely (web auth, mail auth, admin panels), but it is a rate-limiter, not a substitute for strong authentication. Against a distributed brute force using many source IPs, it provides limited protection. Key auth removes the need for it on SSH.
+[SSH key authentication](runbooks/harden-ssh.md) removes the password brute-force attack surface entirely. A server that accepts only key-based authentication cannot be broken into by guessing credentials, regardless of how many attempts an attacker makes. [Fail2ban](runbooks/fail2ban.md) rate-limits authentication attempts and issues temporary bans on repeated failures, which is useful for services that cannot drop passwords entirely (web auth, mail auth, admin panels). Against a distributed brute force using many source IPs, it provides limited protection. Key auth removes the need for it on SSH.
 
 ### sudo and least privilege
 
@@ -36,7 +36,7 @@ The gap neither control addresses is lateral movement after access. Once an atta
 
 ### DAC and ACL
 
-Discretionary access control through standard Unix permissions and ACLs controls which users and processes can read, write, or execute files. It is the baseline layer and the one most often misconfigured. SUID and SGID bits on executables grant the process the owner's privileges rather than the caller's; a root-owned SUID binary that an attacker can influence becomes a privilege escalation path.
+Discretionary access control through standard Unix permissions and ACLs controls which users and processes can read, write, or execute files. It is the baseline layer and the one most often misconfigured. SUID and SGID bits on executables grant the process the owner's privileges; a root-owned SUID binary that an attacker can influence becomes a privilege escalation path.
 
 DAC is enforced by the kernel but scoped to the identity of the calling user or process. A process running as root has no DAC restriction. An attacker who gains root through any path bypasses DAC entirely.
 
@@ -50,7 +50,7 @@ MAC is what closes the gap DAC leaves open. A web server process compromised thr
 
 ### File integrity monitoring
 
-[Samhain](runbooks/samhain.md) maintains a cryptographically verified baseline of the filesystem and alerts on changes to binaries, configuration files, SUID executables, and running processes. It is a detection control, not a prevention one. Its value is catching an attacker who has already succeeded but is still present: modified system binaries, new SUID files, hidden processes.
+[Samhain](runbooks/samhain.md) maintains a cryptographically verified baseline of the filesystem and alerts on changes to binaries, configuration files, SUID executables, and running processes. It is a detection control. Its value is catching an attacker who has already succeeded but is still present: modified system binaries, new SUID files, hidden processes.
 
 The baseline requires a clean initial state. A baseline built on a system that is already compromised is not a reliable reference. And an attacker with root access can attempt to subvert the monitoring itself, which is why Samhain supports [stealth operation](runbooks/samhain.md) and remote log forwarding.
 

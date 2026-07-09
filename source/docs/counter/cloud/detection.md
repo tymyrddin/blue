@@ -5,7 +5,7 @@ distinguishing an attacker enumerating resources from a developer who rarely log
 a credential stuffing attempt from a user who forgot their password.
 
 Detection requires both the logs and a baseline of what normal looks like, so that deviations are
-meaningful rather than noise.
+meaningful.
 
 ## Instrumentation
 

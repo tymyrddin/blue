@@ -30,6 +30,6 @@ How often depends on how often the data changes and how much loss is acceptable.
 
 ## Recovery time
 
-The question worth answering before an incident rather than during one: if this server needed to be rebuilt from scratch, how long would it take?
+The question worth answering before an incident: if this server needed to be rebuilt from scratch, how long would it take?
 
 Running through the rebuild process once, even partially, surfaces dependencies and gaps that are not visible until they are needed. A rebuild completed in hours is a different situation from one that takes days. The difference often comes down to whether the configuration is reproducible from version control and whether the restore process has been practised.

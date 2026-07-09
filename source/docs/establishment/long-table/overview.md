@@ -41,8 +41,8 @@ infrastructure, and keeps its own repository. It also processes vulnerability fi
 against CVE databases and exploitation catalogues, which is adjacent to part of what the Long Table does.
 
 The two are not the same pipeline, and the Establishment's own vulnerability findings are handled here,
-at the Long Table, not passed across to the Watch Tower. Where the two instances share material at all,
+at the Long Table. Where the two instances share material at all,
 it crosses an institutional boundary, the Office's network and the Establishment's are not the same
-network, and what crosses is governed by sharing-group rules rather than by a shared event store. A
+network, and what crosses is governed by sharing-group rules. A
 firmware vulnerability under active exploitation may produce a finding on both sides; they are correlated,
-if at all, by agreement, not by default.
+if at all, by agreement.

@@ -57,7 +57,7 @@ For each potential technique, establish:
 ## Current techniques and Gophish implementation notes
 
 This section is updated each simulation cycle by the security team. Archive previous
-entries rather than deleting them: the history of what has been used and when is part
+entries: the history of what has been used and when is part
 of the programme record.
 
 ### QR code phishing
@@ -82,7 +82,7 @@ phishing link. Defender allows the first link because the domain is trusted.
 
 In Gophish: host a simple HTML page on OneDrive or SharePoint that contains a button
 linking to the Gophish tracking URL. Use `{{.URL}}` to generate the tracking URL from
-within the hosted document rather than the email body. The email body link points to
+within the hosted document. The email body link points to
 the OneDrive or SharePoint URL.
 
 Effective pretexts: shared document notifications, grant application submissions,
@@ -94,7 +94,7 @@ The email contains an HTML attachment that assembles and downloads a file in the
 using JavaScript. The attachment itself is clean at the point of scanning.
 
 In Gophish: attach the HTML file to the campaign email. The landing page is the HTML
-file itself rather than a hosted page. Configure the attachment in the email template.
+file itself. Configure the attachment in the email template.
 The `{{.URL}}` variable can be embedded in the JavaScript within the HTML file so that
 Gophish records the open event when the file executes.
 

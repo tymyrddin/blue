@@ -13,7 +13,7 @@ application's system prompt and may follow them.
 
 Practical controls:
 
-- Treat external API content as data, not as instructions. Structural prompting (system prompt and user turn
+- Treat external API content as data. Structural prompting (system prompt and user turn
   separation) and explicit instruction in the system prompt about not following embedded commands reduce the
   exposure, though they do not eliminate it.
 - Validate and constrain the content before it reaches the model: schema validation on the API response, length

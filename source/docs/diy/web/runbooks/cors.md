@@ -45,7 +45,7 @@ The allowed origin should be reflected back; the disallowed one should not appea
 
 ## Rollback
 
-Add a newly discovered legitimate origin to the allow-list. If a tightening broke a client, the fix is the specific origin, not reopening the policy.
+Add a newly discovered legitimate origin to the allow-list. If a tightening broke a client, the fix is the specific origin.
 
 ## Follow-up
 

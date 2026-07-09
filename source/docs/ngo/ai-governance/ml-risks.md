@@ -60,7 +60,7 @@ Prompt injection works by embedding instructions in text that the model processe
 of its input. A care note that contains, alongside legitimate clinical content, text
 designed to be read as an instruction by the model can cause the model to behave
 differently: returning information it should not, ignoring its safety constraints, or
-generating outputs that serve the attacker's purpose rather than the carer's.
+generating outputs that serve the attacker's purpose.
 
 Resident case notes at the Home are written by care staff and volunteers. The notes are
 not validated for content beyond basic length checks. An attacker who can contribute to
@@ -115,8 +115,7 @@ The business analyst summarised it for the IT manager in a single observation: e
 of these risks exists because someone made a decision about an AI tool without asking what
 happens to the data after the model is built, deployed, or queried. The GDPR questions and
 the adversarial ML questions are the same question from two different angles. In both
-cases, the answer requires thinking about the data as the attack surface, not just the
-system that holds it.
+cases, the answer requires thinking about the data as the attack surface.
 
 The AI proposals are not going away. The departments have identified real operational
 needs. The IT manager and business analyst's job is not to stop them. It is to ensure that

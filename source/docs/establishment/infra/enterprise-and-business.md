@@ -17,7 +17,7 @@ The infrastructure runs to enterprise datacentres, sovereign and private compute
 for the things that can live in the open, and classified environments for the things that cannot.
 For the city this is the open end of the classification ladder: the public-facing name and its
 notices, recruitment, the annual report once it is out, all living on rented golems and treated as
-a default rather than a decision. The city's headcount is a fraction
+a default. The city's headcount is a fraction
 of a larger force's. The shape of the estate is not.
 
 The other end of the sentence exists as well. For the things that cannot live in the open, the

@@ -132,7 +132,7 @@ Image.fromarray(lsb.astype(np.uint8)).save('lsb_plane.png')
 ```
 
 A random LSB plane looks like white noise. A pattern, gradient, or recognisable structure
-in the LSB plane indicates the bits were deliberately placed, not random. An ordered
+in the LSB plane indicates the bits were deliberately placed. An ordered
 sequential fill (reading order across the image) is characteristic of simple LSB tools.
 
 ## Frequency domain analysis

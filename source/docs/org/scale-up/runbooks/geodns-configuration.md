@@ -10,7 +10,7 @@ The Cloudflare account is shared between Carrot (account owner) and Ludmilla (ad
 
 ## Load balancer configuration
 
-Cloudflare Load Balancing is used rather than simple A record updates for the primary traffic routing. Load Balancing allows Cloudflare to perform its own health checks and switch between origins without requiring the Frankfurt monitor to act.
+Cloudflare Load Balancing is used for the primary traffic routing. Load Balancing allows Cloudflare to perform its own health checks and switch between origins without requiring the Frankfurt monitor to act.
 
 Create two origin pools in Cloudflare Load Balancing:
 

@@ -12,7 +12,7 @@ in this environment." The hunt collects and analyses data to confirm or refute i
 
 Structure each hunt:
 
-1. Define the hypothesis (specific technique, not "is there an attacker")
+1. Define the hypothesis (specific technique)
 2. Identify the data sources needed
 3. Query and collect the relevant data
 4. Apply analysis to identify anomalies
@@ -47,7 +47,7 @@ $events | Group-Object { $_.Properties[10].Value } |
   Select-Object Count, @{n='CommandLine';e={$_.Name}} |
   Format-Table -AutoSize
 
-# investigate low-frequency command lines (occur once or twice, not repeated)
+# investigate low-frequency command lines (occur once or twice)
 $rare = $events | Group-Object { $_.Properties[10].Value } | Where-Object { $_.Count -le 2 }
 $rare | ForEach-Object {
     Write-Output "Rare command: $($_.Name)"

@@ -25,7 +25,7 @@ Join each change against the change-management record. A change with no ticket i
 - Revert it on a path the frozen controls do not gate, using break-glass if the normal change
   pipeline is itself frozen.
 - Treat the lockdown as an incident even though every part of it is compliant; the absent alert is
-  the point, not reassurance.
+  the point.
 
 ## Contain the housekeeping drain (tools turned outward)
 

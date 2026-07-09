@@ -12,7 +12,7 @@ than a dead one, because a deadline invites remediation and a lying one invites 
 
 ## The shape of it
 
-Deliberate degradation of the carrying layer rather than its destruction. The adversary moves off
+Deliberate degradation of the carrying layer. The adversary moves off
 binary states and works the margins: routing updates that reorganise the network around a relay
 that should not hold the authority, non-repudiation that drifts out of step so the record of who
 said what no longer agrees with itself, commands sorted into islands that cannot hear each other
@@ -35,13 +35,13 @@ fallback assumed to be unwatched is a fallback an unhurried adversary has had th
 study.
 
 Re-keying mid-crisis is the second, and it blinds the defender too. A stolen but genuine signing
-key means trusting any signed update becomes a choice rather than a default, and revoking it darkens
+key means trusting any signed update becomes a choice, and revoking it darkens
 everyone for a while, the defender included. The window that buys can be the window the adversary
 was after. Defending the integrity of the network can mean darkening your own assets, at an hour
 someone else chose.
 
 The discipline underneath both is treating a recovered network as suspect until its provenance has
-been read, rather than after the traffic has already flowed through it.
+been read.
 
 ## Read across
 

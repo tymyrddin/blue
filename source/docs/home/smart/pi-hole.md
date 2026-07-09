@@ -39,5 +39,5 @@ discovers the volume of outbound traffic from devices that appear to be sitting 
 
 DNS blocking intercepts known bad domains. It does not inspect encrypted traffic, catch
 newly-registered domains not yet in any list, or block tracking embedded within first-party
-domains. It is one layer, not a complete solution. Combined with network segmentation for IoT
+domains. It is one layer. Combined with network segmentation for IoT
 devices, it substantially reduces the outbound tracking surface.

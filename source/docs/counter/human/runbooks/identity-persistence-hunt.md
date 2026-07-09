@@ -147,7 +147,7 @@ sign-in event is worth treating as a confirmed persistence mechanism pending fur
 investigation.
 
 Existing grants from the second query may include legitimate applications with broad
-scopes: the filter catches everything matching those patterns, not only malicious grants.
+scopes: the filter catches everything matching those patterns.
 `ClientId` is a service principal object ID; resolve names with
 `Get-MgServicePrincipal -ServicePrincipalId <ClientId> | Select-Object DisplayName` for
 the entries worth investigating. Correlating the `PrincipalId` against the sign-in log

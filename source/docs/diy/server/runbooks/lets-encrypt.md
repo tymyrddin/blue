@@ -52,7 +52,7 @@ The `notAfter` date should be roughly 90 days out.
 
 ## Auto-renewal
 
-Let's Encrypt certificates last 90 days. Certbot installs a timer that renews them automatically. Confirm it works, rather than assuming it does:
+Let's Encrypt certificates last 90 days. Certbot installs a timer that renews them automatically. Confirm it works:
 
 ```
 sudo certbot renew --dry-run

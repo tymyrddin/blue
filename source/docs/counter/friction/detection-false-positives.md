@@ -10,11 +10,11 @@ to no detection, because the processing overhead eliminates the human capacity t
 real ones.
 
 A tuned detection rule is not one that fires rarely. It is one that fires with a high true positive
-ratio. The exclusion list on a rule is calibration, not compromise. The goal is that when the rule
-fires, the analyst has reason to investigate rather than reason to dismiss.
+ratio. The exclusion list on a rule is calibration. The goal is that when the rule
+fires, the analyst has reason to investigate.
 
 Measuring false positive rate requires tracking analyst disposition on every alert. Many environments
-do not do this systematically. Without it, false positive rate is a feeling rather than a metric,
+do not do this systematically. Without it, false positive rate is a feeling,
 and calibration has no feedback signal. The "our detection is probably too noisy, but we're not sure"
 state is common.
 

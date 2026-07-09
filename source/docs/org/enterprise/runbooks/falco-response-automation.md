@@ -109,7 +109,7 @@ spec:
   egress: []
 ```
 
-Cheery is automatically paged when an isolation policy is applied, as this affects all workloads in the namespace, not just the compromised pod.
+Cheery is automatically paged when an isolation policy is applied, as this affects all workloads in the namespace.
 
 ## Dry-run mode
 

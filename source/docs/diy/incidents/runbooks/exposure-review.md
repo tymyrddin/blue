@@ -27,7 +27,7 @@ Run this step from a host outside the organisation's own network: a personal dev
    curl -I https://domain/wp-config.php
    curl -I https://domain/backup.zip
    ```
-   A 200 response on any of these is a finding requiring immediate action, not just a note.
+   A 200 response on any of these is a finding requiring immediate action.
 
 ## In the cloud console
 

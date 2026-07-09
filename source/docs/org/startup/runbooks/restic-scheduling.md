@@ -71,7 +71,7 @@ restic forget \
 echo "$(date): Weekly backup complete" >> /var/log/restic-backup.log
 ```
 
-Note that the weekly backup includes `/` as the root path rather than individual directories. This captures everything, including paths that the daily backup may exclude for space reasons. The `/opt/vault/data` exclusion remains in both scripts.
+Note that the weekly backup includes `/` as the root path. This captures everything, including paths that the daily backup may exclude for space reasons. The `/opt/vault/data` exclusion remains in both scripts.
 
 ## Repository check script
 

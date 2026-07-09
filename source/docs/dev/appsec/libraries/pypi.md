@@ -41,7 +41,7 @@ pipenv sync
 poetry install --no-root
 ```
 
-In CI/CD, installing from the lockfile rather than resolving fresh means the build uses the same dependency tree that was tested.
+In CI/CD, installing from the lockfile means the build uses the same dependency tree that was tested.
 
 ## TLS verification
 

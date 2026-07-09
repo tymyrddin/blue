@@ -123,5 +123,4 @@ kubectl get clusterroles,roles -A -o json | \
 ```
 
 Cross-reference this output with the binding queries above to identify which service
-accounts hold secret read access in practice, rather than which role definitions
-include it.
+accounts hold secret read access in practice.

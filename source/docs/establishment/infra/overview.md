@@ -13,8 +13,7 @@ at the bottom to the platforms at the top.
 
 The city's own version is smaller, and stranger again, because much of its force is borrowed and
 much of its mechanism is denied. Where a larger ministry owns a thing, the city often hires it from
-a Guild, leases it from an ally, or declines to admit it exists. That gap is part of the design,
-not a flaw in it. The pages that follow walk the layers; where the city departs from the general
+a Guild, leases it from an ally, or declines to admit it exists. That gap is part of the design. The pages that follow walk the layers; where the city departs from the general
 shape, they say so.
 
 ## The digital map in words

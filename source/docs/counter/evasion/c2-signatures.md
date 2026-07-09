@@ -6,7 +6,7 @@ them. Those fingerprints are catalogued in threat intelligence feeds and matched
 automatically. The harder case is an operator who has customised their tooling: replaced
 default TLS certificates, written a custom malleable profile, changed default pipe names.
 What remains is behavioural: the interval pattern, the traffic asymmetry, the process
-parentage, rather than any specific signature.
+parentage.
 
 Most detections in practice hit the uncustomised case.
 
@@ -65,8 +65,7 @@ tools run against specific targets.
 
 After establishing an initial outbound TCP beacon, Cobalt Strike can pivot to SMB-based
 communication through Windows Named Pipes. The pivoting host listens on a named pipe;
-other compromised hosts connect to it and relay their traffic through it rather than making
-direct outbound connections. From a network perspective, only the pivot host appears to
+other compromised hosts connect to it and relay their traffic through it. From a network perspective, only the pivot host appears to
 have external C2 traffic; the other hosts have no anomalous outbound connections at all.
 Detection shifts entirely to the endpoint.
 

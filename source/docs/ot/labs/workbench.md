@@ -56,7 +56,7 @@ to the asset requires going through the single visible gate.
 ### 4 · spoof-proof
 
 The probe adopts the client's address (10.0.1.10) and attempts a direct connection. The jump-host FORWARD DROP
-blocks it regardless, because the rule is topological rather than address-based. A source-allowlist defence
+blocks it regardless, because the rule is topological. A source-allowlist defence
 fails this check. The jump-host holds.
 
 ### 5 · source-restricted-proxy
@@ -244,7 +244,7 @@ polling from a single source is equally affected.
 
 Attack labs check whether an attack got through. This one checks both sides: whether the attack got through
 and whether legitimate traffic kept flowing. Blocking the probe's traffic while also dropping the
-client's legitimate session is a fail. The requirement is a boundary that distinguishes, not one that refuses everything.
+client's legitimate session is a fail. The requirement is a boundary that distinguishes.
 
 That constraint makes the briefs harder. It also makes them closer to what defensive decisions in real OT
 environments actually involve.

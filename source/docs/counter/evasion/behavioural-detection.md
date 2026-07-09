@@ -68,9 +68,8 @@ with encoded command" is low value; an alert for "PowerShell with encoded comman
 from a user who has never previously run PowerShell" is high value.
 
 UEBA (User and Entity Behaviour Analytics) systems maintain per-user and per-system
-baselines and alert on deviation rather than absolute behaviour. This significantly
-reduces false positive rates for LoLbin and script-based attacks while maintaining
-sensitivity.
+baselines and alert on deviation. This significantly reduces false positive rates for
+LoLbin and script-based attacks while maintaining sensitivity.
 
 ## Tuning detection rules
 

@@ -36,7 +36,7 @@ Quotes, backslashes, and line terminators break out of the string:
 ```
 
 The safest approach is to pass values from the server to the page via a data attribute or
-a JSON endpoint rather than inlining them in script tags.
+a JSON endpoint.
 
 ## URL context
 

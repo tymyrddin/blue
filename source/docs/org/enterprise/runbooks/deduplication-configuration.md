@@ -14,7 +14,7 @@ DefectDojo computes a hash for each imported finding using a combination of fiel
 
 If an incoming finding produces the same hash as an existing finding in the same product, DefectDojo treats it as a duplicate. The existing finding is retained and the new finding is marked as a duplicate and linked. The finding count increases but the active finding count does not.
 
-The deduplication algorithm is applied per-product, not globally. The same CVE in the Infrastructure product and the Royal-Bank-Integration product is not deduplicated, because they represent the same vulnerability in different systems, and each has its own SLA and ownership.
+The deduplication algorithm is applied per-product. The same CVE in the Infrastructure product and the Royal-Bank-Integration product is not deduplicated, because they represent the same vulnerability in different systems, and each has its own SLA and ownership.
 
 ## Configuring deduplication in System Settings
 
@@ -29,7 +29,7 @@ Push findings to Jira (for High and Critical): Enabled
 
 The "Close old findings when reimporting" option is critical: when a scanner re-runs and a previously found vulnerability is no longer present (because it was patched), DefectDojo automatically closes the old finding. Without this setting, closed vulnerabilities must be tracked and closed manually.
 
-Per-scan-type deduplication overrides can be set at the Engagement level. For Trivy scans of container images, set the deduplication scope to "Product" (rather than "Engagement") so that the same CVE in two different container images within the same product is correctly deduplicated.
+Per-scan-type deduplication overrides can be set at the Engagement level. For Trivy scans of container images, set the deduplication scope to "Product" so that the same CVE in two different container images within the same product is correctly deduplicated.
 
 ## The 347-to-258 reduction explained
 
@@ -73,7 +73,7 @@ Before merging, confirm that both findings genuinely refer to the same vulnerabi
 
 ## Risk acceptance
 
-False positives and accepted risks are handled via DefectDojo's risk acceptance feature, not by deleting findings. This preserves the audit trail.
+False positives and accepted risks are handled via DefectDojo's risk acceptance feature. This preserves the audit trail.
 
 To accept a risk:
 

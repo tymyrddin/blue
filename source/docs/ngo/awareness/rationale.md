@@ -2,7 +2,7 @@
 
 Two decisions in this programme are unusual enough to warrant explanation: the choice to
 use attacker-role training, and the choice to run in-house simulations against live
-defences rather than using a managed platform with bypass rules.
+defences.
 Both decisions have the same root. The goal is behaviour change, not completion rates, and
 those two goals produce different programmes.
 
@@ -69,8 +69,7 @@ The in-house approach requires the security team to track what is actually worki
 the wild, translate it into Gophish campaigns, and test each payload against live
 defences before deploying it. This is harder than selecting a template from a managed
 platform's library. It is harder because it is the actual work. The value of the
-simulation is precisely that it reflects the current threat rather than a historical
-inventory of techniques that were common when the library was compiled.
+simulation is precisely that it reflects the current threat.
 
 ## The professional commitment this requires
 

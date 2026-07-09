@@ -31,7 +31,7 @@ symmetric key search, this halves the effective key length:
 
 128 bits of security is considered adequate by current standards. The practical
 guidance is to migrate to AES-256 if not already using it, and to double hash output
-lengths for long-term security (SHA-384 or SHA-512 rather than SHA-256).
+lengths for long-term security (SHA-384 or SHA-512).
 
 ## Harvest-now-decrypt-later
 
@@ -50,7 +50,7 @@ relevant:
 - Code signing keys
 
 Organisations holding data in these categories should treat post-quantum migration
-as urgent, not deferred.
+as urgent.
 
 ## Forward secrecy and the current exposure window
 

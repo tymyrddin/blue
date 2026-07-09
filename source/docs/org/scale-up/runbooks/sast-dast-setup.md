@@ -97,7 +97,7 @@ False positives are suppressed by adding a `.gl-sast-ignore` file to the reposit
   "vulnerabilities": [
     {
       "id": "<finding-id-from-report>",
-      "comment": "False positive: pattern matches test fixture, not production code. Reviewed: ludmilla.katzenzungen, 2026-03-15"
+      "comment": "False positive: pattern matches test fixture. Reviewed: ludmilla.katzenzungen, 2026-03-15"
     }
   ]
 }

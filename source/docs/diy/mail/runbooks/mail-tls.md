@@ -9,7 +9,7 @@ When setting up a mail server that should accept or send mail over encrypted con
 ## What gets encrypted where
 
 - Outbound (port 25 to other servers): opportunistic. Use TLS when the far end offers it.
-- Inbound submission from users (port 587 STARTTLS, port 465 SMTPS): required. These carry credentials, so encryption is mandatory, not optional.
+- Inbound submission from users (port 587 STARTTLS, port 465 SMTPS): required. These carry credentials, so encryption is mandatory.
 
 ## Certificate
 

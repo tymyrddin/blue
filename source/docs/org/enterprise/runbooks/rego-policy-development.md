@@ -32,7 +32,7 @@ deny contains msg if {
 }
 ```
 
-The `deny contains msg` pattern collects all violations into a set rather than short-circuiting at the first one. This gives admission webhook callers a complete list of problems in a single rejection.
+The `deny contains msg` pattern collects all violations into a set. This gives admission webhook callers a complete list of problems in a single rejection.
 
 ## Example: Royal Bank databases must have encryption enabled
 

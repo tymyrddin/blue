@@ -1,6 +1,6 @@
 # Set up SASL authentication
 
-Hardening runbook. Adds SASL authentication to Postfix so that only authenticated users can send outbound mail through the server. This is what lets the relay stay closed to everyone except known users, rather than relying on network position alone. It is the companion to [hardening Postfix](postfix.md).
+Hardening runbook. Adds SASL authentication to Postfix so that only authenticated users can send outbound mail through the server. This is what lets the relay stay closed to everyone except known users. It is the companion to [hardening Postfix](postfix.md).
 
 ## When to run
 

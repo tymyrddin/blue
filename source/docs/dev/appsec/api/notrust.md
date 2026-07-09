@@ -23,7 +23,7 @@ def handle_update(request):
     # body.display_name is a non-empty string of at most 100 characters
 ```
 
-`model_validate()` raises `ValidationError` if any field fails. The calling code receives a typed, validated object, not raw request data.
+`model_validate()` raises `ValidationError` if any field fails. The calling code receives a typed, validated object.
 
 ## Validation failures
 

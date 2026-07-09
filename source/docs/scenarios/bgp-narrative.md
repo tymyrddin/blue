@@ -35,7 +35,7 @@ and a spread of vantage points, and found it brief by design.
    committee's coordination frontend, the media platform, chosen for embarrassment rather than volume, and for
    leaning on a particular FungusFiber upstream.
 2. The bend: a brief more-specific and a selective prepend on those prefixes only, toward certain regions only,
-   steering the chosen flows onto a congested path so they degraded rather than dropped, valid throughout.
+   steering the chosen flows onto a congested path so they degraded, valid throughout.
 3. The window: the worst of it on the summit's opening session, the calendar choosing the moment.
 4. The chorus: Agatean-aligned outlets reporting Fungolian technical failures, social platforms amplifying the
    complaints, the routing instability becoming proof of a story that predated it, with Deep Vector saying

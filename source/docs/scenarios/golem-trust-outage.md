@@ -71,8 +71,8 @@ to tell the city about the sky instead, which is not.
 ## When it deepens
 
 - The word did not break. It was changed. Someone working under the Trust's own arrangements rewrote
-  it, and the outage is the cover rather than the event.
-- The sealed tier was the point, not the survivor. The outage was never meant to take the city's
+  it, and the outage is the cover.
+- The sealed tier was the point. The outage was never meant to take the city's
   compute so much as to drive everything of consequence onto the one network the city believed it
   could not lose, where something had been waiting for the traffic to arrive.
 - An ally's desk comes back up before the city's does, which raises the unwelcome thought that an

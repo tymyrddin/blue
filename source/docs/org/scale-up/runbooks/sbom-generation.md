@@ -1,6 +1,6 @@
 # SBOM generation
 
-Runbook for generating and managing Software Bills of Materials using Syft. An SBOM is a list of every component in a software artefact: operating system packages, language libraries, binaries, and their versions. When a new vulnerability is announced, the SBOM makes it possible to answer the question "which of our images contains the affected component?" in seconds rather than hours. This capability was specifically requested by Cheery after the `totally-not-malware` incident revealed that nobody knew what was in any of the images.
+Runbook for generating and managing Software Bills of Materials using Syft. An SBOM is a list of every component in a software artefact: operating system packages, language libraries, binaries, and their versions. When a new vulnerability is announced, the SBOM makes it possible to answer the question "which of our images contains the affected component?" in seconds. This capability was specifically requested by Cheery after the `totally-not-malware` incident revealed that nobody knew what was in any of the images.
 
 ## Syft installation
 

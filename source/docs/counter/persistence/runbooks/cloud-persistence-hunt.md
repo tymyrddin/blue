@@ -175,7 +175,7 @@ Effective cloud persistence hunting requires correlating multiple signals:
 | Service principal added to privileged group, no change request            | Identity persistence           |
 | Bucket policy changed, new GetObject requests from external IP            | Data staging or exfiltration   |
 
-Build detections around these correlations rather than individual events.
+Build detections around these correlations.
 A single IAM user creation may be legitimate; an IAM user creation followed
 within 24 hours by an access key creation and an `AssumeRole` call from an
 external IP is a pattern worth escalating.

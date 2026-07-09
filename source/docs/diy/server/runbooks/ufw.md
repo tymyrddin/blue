@@ -71,7 +71,7 @@ Default inbound is deny. Only the intended ports are open. SSH still reachable. 
 sudo ufw disable
 ```
 
-This removes all firewall rules and reverts to no filtering. Use it to recover access, then re-enable with the SSH rule in place. To remove a single rule rather than all of them, `sudo ufw status numbered` then `sudo ufw delete <number>`.
+This removes all firewall rules and reverts to no filtering. Use it to recover access, then re-enable with the SSH rule in place. To remove a single rule, `sudo ufw status numbered` then `sudo ufw delete <number>`.
 
 ## Follow-up
 

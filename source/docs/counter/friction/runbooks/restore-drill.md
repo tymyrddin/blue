@@ -3,18 +3,16 @@
 Proves that a backup can actually be recovered from, against the clock, before the day it is the only
 option. Pairs with [backups are cheap, restores are not](../backup-restore-testing.md).
 
-## Pick a real target, not a convenient one
+## Pick a system whose loss would hurt
 
-- Choose a system whose loss would hurt: a production database, an identity store, a critical
-  file share. A drill against the easy system proves the easy system.
+- An identity store, a production database, a critical file share. A drill against the easy system proves the easy system.
 - Decide the success criteria before starting: recovered to which point in time, within how long, with
   what verified intact. A restore that returns data nobody has checked is not a proven restore.
 
 ## Restore to isolation
 
 - Restore into an isolated environment, never over the live system
-- Restore from the copy you would actually use in an incident, including the
-  off-site or object-locked copy, not only the fast local one
+- Restore from the off-site or object-locked copy you would actually use in an incident, not the fast local one
 - Time it: start the clock at "decision to restore", stop it at "verified usable"
 
 ## Verify, do not assume

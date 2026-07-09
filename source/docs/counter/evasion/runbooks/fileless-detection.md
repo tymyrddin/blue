@@ -1,7 +1,7 @@
 # Detecting fileless and in-memory execution
 
 Fileless payloads leave no file on disk. Detection relies on script block logging,
-ETW telemetry, memory scanning, and behavioural indicators rather than file hashes.
+ETW telemetry, memory scanning, and behavioural indicators.
 
 ## Enable script block logging
 
@@ -153,7 +153,7 @@ Get-WinEvent -LogName 'Microsoft-Windows-PowerShell/Operational' |
 Note: a successful AMSI bypass means subsequent script blocks are not scanned and
 may not be logged. The bypass attempt itself is logged (before AMSI is disabled);
 subsequent activity may not be. Treat any AMSI bypass detection as a high-priority
-incident, not just an informational alert.
+incident.
 
 ## Correlating across telemetry sources
 

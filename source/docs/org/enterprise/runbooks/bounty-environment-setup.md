@@ -129,7 +129,7 @@ The scope document published on HackerOne and Intigriti lists these endpoints ex
 
 All events from the bug bounty environment flow to a separate Graylog instance: `graylog-bugbounty.golems.internal`. This instance is completely independent of the production Graylog cluster. Researcher activity, including vulnerability exploitation attempts, must not contaminate production security monitoring with false positive signals.
 
-The bug bounty Graylog instance is configured with a shorter retention period (30 days) and is accessible to Angua and the security team. Log data from this instance is treated as research activity logs, not security incidents, unless there is evidence of a researcher attempting to pivot to production infrastructure.
+The bug bounty Graylog instance is configured with a shorter retention period (30 days) and is accessible to Angua and the security team. Log data from this instance is treated as research activity logs unless there is evidence of a researcher attempting to pivot to production infrastructure.
 
 Falco also runs in the bug bounty cluster, reporting to the bug bounty Graylog instance. This provides visibility into unusual container behaviour during active research sessions.
 

@@ -32,4 +32,4 @@ testssl.sh https://target.example.com
 
 Network scanning can disrupt services if not managed carefully. Aggressive scanning against live services can trigger rate limiting, consume resources, or generate enough log noise to mask other events. Scans against systems the tester does not own or have explicit authorisation to scan are unauthorised access regardless of intent or tool.
 
-In production environments, scanning is typically scheduled during maintenance windows or run from a management network rather than a customer-facing network position.
+In production environments, scanning is typically scheduled during maintenance windows or run from a management network.

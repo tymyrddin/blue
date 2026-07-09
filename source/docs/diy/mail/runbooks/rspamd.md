@@ -27,7 +27,7 @@ milter_protocol = 6
 milter_default_action = accept
 ```
 
-`milter_default_action = accept` means mail still flows if Rspamd is down, rather than queuing. The trade-off is unfiltered mail during an outage. Reload:
+`milter_default_action = accept` means mail still flows if Rspamd is down. The trade-off is unfiltered mail during an outage. Reload:
 
 ```
 sudo systemctl reload postfix
@@ -62,7 +62,7 @@ sudo chown _rspamd:_rspamd /var/lib/rspamd/dkim/example.com.2024.key
 sudo chmod 640 /var/lib/rspamd/dkim/example.com.2024.key
 ```
 
-Configure signing in `/etc/rspamd/local.d/dkim_signing.conf` pointing at the key and selector, then publish the record from the `.txt` file at `2024._domainkey.example.com`. Run either Rspamd or OpenDKIM for signing, not both.
+Configure signing in `/etc/rspamd/local.d/dkim_signing.conf` pointing at the key and selector, then publish the record from the `.txt` file at `2024._domainkey.example.com`. Run either Rspamd or OpenDKIM for signing.
 
 Reload to apply:
 

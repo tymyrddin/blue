@@ -8,7 +8,7 @@ On a public-facing web application that cannot be quickly patched against common
 
 ## Approach
 
-Run in detection-only mode first, then switch to blocking once the rules are confirmed not to break legitimate traffic. Starting in blocking mode on a live site risks rejecting real requests that happen to match a rule. The Core Rule Set, not hand-written rules, is the maintained source of detection logic.
+Run in detection-only mode first, then switch to blocking once the rules are confirmed not to break legitimate traffic. Starting in blocking mode on a live site risks rejecting real requests that happen to match a rule. The Core Rule Set is the maintained source of detection logic.
 
 ## Nginx
 

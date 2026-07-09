@@ -23,7 +23,7 @@ def get_order(order_id: int):
     ).scalar_one_or_none()
 
     if order is None:
-        abort(404)  # 404, not 403: avoid confirming the resource exists
+        abort(404)  # 404: avoid confirming the resource exists
 
     return order
 ```

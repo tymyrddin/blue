@@ -9,7 +9,7 @@ an account: quietly, correctly, and on purpose.
 ## At the counter
 
 - [Golem Trust Computing](../org/index.rst): the provider. Its yard is healthy and its paperwork is in
-  order, and this morning both of those are the problem rather than the reassurance.
+  order, and this morning both of those are the problem.
 - [A Fungolian civil servant](../circle-sea/members.md): a senior clerk in a ministry of the
   closest and most watched of the arrangement's powers, cleared under the shared scheme, lately
   unguarded in print about the Patrician's policies, and this morning unable to reach twenty years

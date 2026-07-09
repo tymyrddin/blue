@@ -42,7 +42,7 @@ Thresholds take effect immediately without a full restart.
 
 ## Disabling Suricata rules
 
-Use `suricata-update` to manage disabled rules rather than editing rule files directly. This ensures disabled rules are not re-enabled automatically when rules are updated.
+Use `suricata-update` to manage disabled rules. This ensures disabled rules are not re-enabled automatically when rules are updated.
 
 Add to `/etc/suricata/disable.conf`:
 

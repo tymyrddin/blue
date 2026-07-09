@@ -19,7 +19,7 @@ is the thing that turns a pile of facts into a person doing something.
 
 This is also why storage is, on its own, the least powerful layer in the estate despite being the
 largest. Holding everything decides nothing. What can be reached, by whom, and joined to what,
-decides a great deal, and that lives in the identity and analysis layers rather than here.
+decides a great deal, and that lives in the identity and analysis layers.
 
 ## Fusion and analysis
 

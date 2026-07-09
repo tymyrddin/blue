@@ -11,7 +11,7 @@ Runbook for backup and recovery of all Golem Trust production systems. A backup 
 | Vaultwarden    | /opt/vaultwarden/data | rsync + tar     | Daily at 02:30       | 30 days      |
 | Server configs | /etc on both servers  | etckeeper + git | On change            | Full history |
 
-Backups are encrypted with age (the tool, not the concept, though both are relevant) and stored on a Hetzner Storage Box (`backup.golemtrust.am`) in the same Helsinki region, with a weekly copy sent to a second Storage Box in Nuremberg (`backup-dr.golemtrust.am`). Ponder considered Überwald for offsite storage but conceded that the latency was a concern.
+Backups are encrypted with age (the tool) and stored on a Hetzner Storage Box (`backup.golemtrust.am`) in the same Helsinki region, with a weekly copy sent to a second Storage Box in Nuremberg (`backup-dr.golemtrust.am`). Ponder considered Überwald for offsite storage but conceded that the latency was a concern.
 
 ## Setting up age encryption
 

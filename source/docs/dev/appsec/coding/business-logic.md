@@ -42,7 +42,7 @@ def confirm():
     cart_id = request.form["cart_id"]
     cart = Cart.query.get_or_404(cart_id)
 
-    # recalculate from the database, not from the submitted form
+    # recalculate from the database
     total = sum(
         item.product.current_price * item.quantity
         for item in cart.items

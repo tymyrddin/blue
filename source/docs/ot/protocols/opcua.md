@@ -2,8 +2,8 @@
 
 ## Beginnings
 
-OPC Unified Architecture, published by the OPC Foundation from 2006, was designed with security as a first-class concern
-rather than an afterthought. It includes a formal security model with authentication, message signing, and encryption
+OPC Unified Architecture, published by the OPC Foundation from 2006, was designed with security as a first-class concern.
+It includes a formal security model with authentication, message signing, and encryption
 built into the specification. It is likely the protocol in this section with the most security capability. It is also 
 the one most commonly misconfigured, because its security features require setup effort and the path of least resistance 
 leaves them disabled.

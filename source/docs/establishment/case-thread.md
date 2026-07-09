@@ -48,8 +48,7 @@ Days later a sensor raises its own hand. A Suricata rule fires on the same sourc
 reaching a host inside the same subnet, nothing behind it but a rule signature and a timestamp. On its own
 it is a reliability-two alert, below the line, the kind the perimeter produces all day. But
 [QR-2026-0032](quiet-room/walkthrough-automated-sensor.md) touches infrastructure already in the pipeline,
-so instead of being dropped it is held for correlation and passed up as context at its own modest
-reliability, not inflated to match the company it now keeps. The sensor does not know it has corroborated
+so instead of being dropped it is held for correlation and passed up as context at its own reliability. The sensor does not know it has corroborated
 anything. The pipeline knows.
 
 ## The Long Table assembles it

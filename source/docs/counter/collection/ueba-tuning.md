@@ -5,7 +5,7 @@ functional is almost entirely a calibration problem. An uncalibrated UEBA system
 enough false positives to train analysts to ignore it, or is tuned so conservatively it misses
 real incidents. Neither state resembles detection.
 
-Calibration is ongoing work, not a one-time deployment step.
+Calibration is ongoing work.
 
 ## User archetypes
 

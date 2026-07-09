@@ -4,7 +4,7 @@ Hardening runbook. Scopes administrative access so that compromising one account
 
 ## When to run
 
-On a new server during setup. On an existing server where admin accounts hold unrestricted sudo (`ALL=(ALL) ALL`). When a new person needs a specific subset of admin actions rather than full root.
+On a new server during setup. On an existing server where admin accounts hold unrestricted sudo (`ALL=(ALL) ALL`). When a new person needs a specific subset of admin actions.
 
 ## Risk
 
@@ -34,7 +34,7 @@ sudo -l -U username
 
 ## Scoping access to specific commands
 
-For an account that only needs a defined set of actions, grant those commands rather than full root. In `visudo`:
+For an account that only needs a defined set of actions, grant those commands. In `visudo`:
 
 ```
 Cmnd_Alias SERVICES = /bin/systemctl restart nginx, /bin/systemctl restart postfix

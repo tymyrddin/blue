@@ -62,7 +62,7 @@ intervention at each affected substation.
 Industroyer also included a configurable scheduling component that could be set to execute at a specified time
 with no active attacker connection, a backdoor for persistent re-entry, and a self-overwrite component that
 destroyed the malware after execution to impede forensic analysis. The 2016 attack is widely assessed as a
-limited test rather than a maximum-impact operation: the affected substation was relatively small and power was
+limited test: the affected substation was relatively small and power was
 restored quickly.
 
 ## April 2022

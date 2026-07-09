@@ -8,7 +8,7 @@ visible assets are used well.
 ## Intelligence
 
 Most defence bodies keep some intelligence capability of their own, even where separate agencies
-exist, because command needs an assessment it controls rather than one it has to request. The
+exist, because command needs an assessment it controls. The
 infrastructure runs to intelligence databases, imagery analysis, geospatial systems, interfaces to
 signals collection, sharing platforms, and the fusion centres where it all comes together.
 

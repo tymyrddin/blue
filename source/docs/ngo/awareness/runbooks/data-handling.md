@@ -83,4 +83,4 @@ The debrief also covers what to do after a mistake. If you opened it, say so imm
 If you forwarded it, say so. The response to a mistake caught quickly is remediation.
 The response to a mistake discovered weeks later, because nobody said anything, is
 considerably worse. The culture the exercise is building is one where early disclosure
-is the reflex, not the exception.
+is the reflex.

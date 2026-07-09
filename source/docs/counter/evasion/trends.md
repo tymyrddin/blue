@@ -34,9 +34,7 @@ product or hardware utility: a Dell firmware update driver (DBUtil_2_3.sys, CVE-
 a Gigabyte firmware component (gdrv.sys), a version of the MSI Afterburner driver
 (RTCore64.sys). The binary passes signature validation. The EDR
 status panel shows green. Process creation events stop arriving at the detection backend
-because the kernel callbacks have been removed. The first indication that something has
-happened often comes from network or identity telemetry, not from the endpoint that has
-been silenced.*
+because the kernel callbacks have been removed. The first indication that something has happened often comes from network or identity telemetry.*
 
 AI-generated polymorphism: per-deployment payload mutation means hash-based detections
 fail. Behavioural detections survive, but only if the behaviour is distinctive. An
@@ -49,14 +47,13 @@ no payload to inspect. Detection requires content-level analysis of image upload
 downloads, which is expensive and produces high false positive rates.
 
 Environmental awareness: samples that detect sandbox conditions and behave benignly
-during automated analysis are now the norm, not the exception. Detonation-based
+during automated analysis are now the norm. Detonation-based
 detection is unreliable against any attacker who has bothered to implement the
 standard environment checks.
 
 ## Where detection still holds
 
-Not all of this is hopeless. Detection is probabilistic and layered; the goal is
-raising attacker cost and reducing dwell time, not achieving perfect detection.
+Not all of this is hopeless. Detection is probabilistic and layered; the goal is raising attacker cost and reducing dwell time.
 
 Behavioural detection catches the majority of attackers who are not highly disciplined.
 LoLbin usage, even well-executed, often produces process chains (Word spawning

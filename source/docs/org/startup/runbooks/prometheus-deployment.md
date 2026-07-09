@@ -135,7 +135,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-Replace `10.0.0.X` with the node's private IP. Node exporter should listen only on the private network interface, not on the public IP.
+Replace `10.0.0.X` with the node's private IP. Node exporter should listen only on the private network interface.
 
 ```
 systemctl daemon-reload

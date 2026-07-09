@@ -1,6 +1,6 @@
 # Triage procedures
 
-Angua receives every bug bounty submission within minutes of it being posted on HackerOne or Intigriti. The 24-hour SLA for initial triage response is not aspirational; it is the contractual commitment listed on both programme pages, and researchers notice when it slips. Good triage is what distinguishes a programme that attracts serious researchers from one that does not. A valid finding gets acknowledged quickly and specifically; a duplicate gets a respectful explanation; an out-of-scope submission gets redirected rather than simply dismissed. This runbook covers the full triage flow from submission notification to DefectDojo entry.
+Angua receives every bug bounty submission within minutes of it being posted on HackerOne or Intigriti. The 24-hour SLA for initial triage response is not aspirational; it is the contractual commitment listed on both programme pages, and researchers notice when it slips. Good triage is what distinguishes a programme that attracts serious researchers from one that does not. A valid finding gets acknowledged quickly and specifically; a duplicate gets a respectful explanation; an out-of-scope submission gets redirected. This runbook covers the full triage flow from submission notification to DefectDojo entry.
 
 ## Submission notification
 

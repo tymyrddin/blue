@@ -2,10 +2,9 @@
 
 Modern applications contain far more third-party code than first-party code. For most production systems, the majority
 of code running came from package registries, base images, and CI tooling that the team did not write and rarely
-inspects. Supply chain attacks exploit that asymmetry. Rather than attacking the application directly, they compromise
-something it depends on: a widely-used npm package, a base container image, a GitHub Action, a Terraform module. The
-payload arrives through the normal deployment pipeline, signed and verified by the same tooling that handles legitimate
-code.
+inspects. Supply chain attacks exploit that asymmetry. They compromise something it depends on: a widely-used npm
+package, a base container image, a GitHub Action, a Terraform module. The payload arrives through the normal
+deployment pipeline, signed and verified by the same tooling that handles legitimate code.
 
 ## The four stages
 
@@ -33,7 +32,7 @@ specifications (`requests==2.31.0` in pip, a committed `package-lock.json` for n
 versions. `npm ci` installs from the lockfile exactly; `npm install` re-resolves semver ranges against the current
 registry state. In CI environments, `npm ci` is the appropriate command.
 
-For container images, pinning to a digest rather than a tag makes tampering visible:
+For container images, pinning to a digest makes tampering visible:
 
 ```text
 FROM python:3.12-slim@sha256:4a3f1f3b2e8c...

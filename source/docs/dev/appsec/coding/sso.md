@@ -6,7 +6,7 @@ SSO concentrates authentication into a single identity provider that multiple ap
 
 ### Redirect URI validation
 
-The authorisation code is delivered to the redirect URI registered by the application. The identity provider validates this URI before issuing the code. The validation is exact match against a list of registered URIs, not a prefix or substring check:
+The authorisation code is delivered to the redirect URI registered by the application. The identity provider validates this URI before issuing the code. The validation is exact match against a list of registered URIs:
 
 - Substring matching accepts `https://example.com.attacker.com` as a match for `example.com`
 - Prefix matching accepts `https://example.com/../../../attacker.com` after path normalisation
@@ -75,7 +75,7 @@ decoded = jwt.decode(
     token,
     public_key,
     algorithms=["RS256"],
-    audience=["https://myapp.example.com"],  # validated, not optional
+    audience=["https://myapp.example.com"],  # validated
     issuer="https://idp.example.com",
 )
 ```

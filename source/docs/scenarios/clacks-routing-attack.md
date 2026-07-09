@@ -42,8 +42,7 @@ and a lying one is not.
 ## Decision points
 
 - Whether to revoke the Master Shutter-Key and re-key the Trunk mid-crisis. The signature was
-  genuine, which means the key was stolen, which means trusting any signed update is now a choice
-  rather than a default. Re-keying darkens everyone for a while, the city included, and the while is
+  genuine, which means the key was stolen, which means trusting any signed update is now a choice. Re-keying darkens everyone for a while, the city included, and the while is
   the window. A city that blinds itself to be safe has done, on its own authority and at the chosen
   hour, the one thing an adversary could never have done for it.
 - Whether to fall back to the Post Office: riders and pigeons carrying the one instruction the
@@ -76,7 +75,7 @@ the city has spent two days assembling the case against itself.
   the yard outage raised: that the scheme's shared keys were never as evenly shared as the scheme
   always claimed.
 - The Home's garbled headers were never the damage; they were the cover for it. While the analysts
-  chased a replication bug, the content underneath was edited rather than lost, and the feed the city
+  chased a replication bug, the content underneath was edited, and the feed the city
   quietly steers by has been steering it somewhere ever since. That is its own exercise:
   [Campaign Poisoned Well](poisoned-survey-data.md).
 - The weather story holds so well that the city notices it would prefer to keep it, and the question

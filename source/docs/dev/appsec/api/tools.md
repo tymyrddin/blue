@@ -4,13 +4,13 @@ These four tools cover the interactive side of API security work: sending and re
 
 ## Postman
 
-An HTTP client that organises requests into collections with environment variables for switching cleanly between development, staging, and production contexts. Test scripts written in JavaScript execute after each response and can assert status codes, response bodies, headers, and timing, making it practical to attach security checks to functional test suites rather than running them separately. Newman, the CLI companion, runs collections in CI.
+An HTTP client that organises requests into collections with environment variables for switching cleanly between development, staging, and production contexts. Test scripts written in JavaScript execute after each response and can assert status codes, response bodies, headers, and timing, making it practical to attach security checks to functional test suites. Newman, the CLI companion, runs collections in CI.
 
 Useful for building a reusable library of security-relevant requests, exploring undocumented endpoints, and verifying that individual endpoints behave as expected across different auth states and privilege levels.
 
 ## Insomnia
 
-A REST and GraphQL client with good native support for OAuth2 token flows. Token acquisition, refresh, and injection into subsequent requests are handled without manual copy-paste, which matters when the authentication layer itself is what is being tested rather than the endpoints behind it. Less ecosystem overhead than Postman; a reasonable choice when collection management is not the priority.
+A REST and GraphQL client with good native support for OAuth2 token flows. Token acquisition, refresh, and injection into subsequent requests are handled without manual copy-paste, which matters when the authentication layer itself is what is being tested. Less ecosystem overhead than Postman; a reasonable choice when collection management is not the priority.
 
 ## K6
 

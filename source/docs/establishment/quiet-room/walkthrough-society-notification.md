@@ -103,8 +103,7 @@ Attributes:
 | text      | QR-2026-0031    | internal reference                 |
 | text      | RD-2026-0047-A  | related Long Table case            |
 
-The pcap is attached to the MISP event as a file object, not expanded into individual
-attributes. Attribute expansion from pcap content is the Long Table's decision.
+The pcap is attached to the MISP event as a file object. Attribute expansion from pcap content is the Long Table's decision.
 
 ## What the Quiet Room does not do
 

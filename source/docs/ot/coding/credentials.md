@@ -68,7 +68,7 @@ void derive_device_key(uint8_t *key_out, size_t key_len) {
 }
 ```
 
-The manufacturer secret never appears in the firmware. An attacker who extracts the firmware can see the derivation function but cannot reconstruct keys for other devices without the secret. The quality of this approach depends entirely on keeping the manufacturer secret out of the binary, which means it lives in a hardware security module at the factory, not in a build system variable.
+The manufacturer secret never appears in the firmware. An attacker who extracts the firmware can see the derivation function but cannot reconstruct keys for other devices without the secret. The quality of this approach depends entirely on keeping the manufacturer secret out of the binary, which means it lives in a hardware security module at the factory.
 
 ### Secure element storage
 

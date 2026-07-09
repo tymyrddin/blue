@@ -1,8 +1,7 @@
 # What the departments have in mind
 
 The IT manager and business analyst spent a morning doing discovery conversations.
-The framing was: we are trying to understand what is useful so we can support it, not
-looking for rule violations. By lunchtime, the IT manager had filled most of a notepad
+The framing was: we are trying to understand what is useful so we can support it. By lunchtime, the IT manager had filled most of a notepad
 and had the expression of someone who has opened a door they cannot now close.
 
 ## The proposals

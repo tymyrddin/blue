@@ -8,7 +8,7 @@ advertises as acceptable determines much of the attack surface.
 
 ## Protocol version selection
 
-Each deprecated TLS version carries a specific reason for retirement, not a vague sense that newer is better.
+Each deprecated TLS version carries a specific reason for retirement.
 
 SSLv3 fell to POODLE in 2014. POODLE is a padding oracle attack against SSLv3's CBC mode: an attacker in a
 man-in-the-middle position can force a browser to retry a failed TLS connection using SSLv3 and then exploit the

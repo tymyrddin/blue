@@ -8,7 +8,7 @@ Preparation: before it is needed, while the system is healthy. Use: when the ins
 
 ## Risk
 
-`dd` writes to whatever device is named and destroys everything on it. Naming the wrong device overwrites a disk in use. Run `lsblk` first and confirm the target is the USB stick, not a system disk, before every `dd`.
+`dd` writes to whatever device is named and destroys everything on it. Naming the wrong device overwrites a disk in use. Run `lsblk` first and confirm the target is the USB stick before every `dd`.
 
 ## Preparing the media
 

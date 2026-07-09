@@ -2,7 +2,7 @@
 
 Monitoring an API means more than watching for 5xx responses. Most API abuse (credential stuffing, quota
 exploitation, workflow shortcutting, data enumeration) produces requests that individually look legitimate. The
-signal is in the pattern across requests, not in any single one.
+signal is in the pattern across requests.
 
 ## Log targets
 

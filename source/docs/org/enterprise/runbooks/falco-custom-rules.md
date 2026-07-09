@@ -163,7 +163,7 @@ To tune a default rule without replacing it entirely, use `override: append` to 
   condition: and not proc.name = vault-agent
 ```
 
-This appends the exception to the original condition rather than replacing the rule. It is the preferred pattern for reducing false positives because it survives Falco upgrades: the base rule is still updated by the upstream chart, and the override is applied on top.
+This appends the exception to the original condition. It is the preferred pattern for reducing false positives because it survives Falco upgrades: the base rule is still updated by the upstream chart, and the override is applied on top.
 
 ## Testing rules with dry-run
 

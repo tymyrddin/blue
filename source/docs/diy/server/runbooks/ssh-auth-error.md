@@ -53,7 +53,7 @@ The cause is identified. For a genuine change, the old key is removed and the ne
 
 ## Do not paper over it
 
-Setting `StrictHostKeyChecking no` or pointing `UserKnownHostsFile` at `/dev/null` silences the warning by disabling the check entirely. That removes the protection against interception for every future connection, not just this one. It is not a fix.
+Setting `StrictHostKeyChecking no` or pointing `UserKnownHostsFile` at `/dev/null` silences the warning by disabling the check entirely. That removes the protection against interception for every future connection. It is not a fix.
 
 ## Follow-up
 

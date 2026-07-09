@@ -46,8 +46,7 @@ finance lead, whose names and roles are visible on the Home's website and are th
 likely targets for business email compromise. Configure these as protected users in a custom
 anti-phishing policy in the Defender portal under Threat policies.
 
-The Fabulist email impersonated a vendor contact, not an internal figure, which is why
-impersonation protection for external senders matters as much as for internal ones. The
+The Fabulist email impersonated a vendor contact. The
 vendor name and contact details were correct because they were taken from the Fabulist
 Systems website. There is no technical control that catches this entirely, but a policy that
 flags lookalike domains and unexpected first-contact senders raises the visible signal.

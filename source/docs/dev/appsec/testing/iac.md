@@ -2,7 +2,7 @@
 
 Infrastructure as code (IaC) tools (Terraform, CloudFormation, Kubernetes manifests, Helm charts) define cloud and container infrastructure in configuration files. Those files carry the same security risks as application code: a misconfiguration checked into source control is deployed consistently across every environment.
 
-IaC scanning applies policy checks to configuration files before they are applied, catching misconfigurations at the source level rather than in a live environment. The [attack infrastructure](https://red.tymyrddin.dev/docs/scarlet/iac/) section covers the adversarial use of the same tooling: IaC applied deliberately to build ephemeral offensive infrastructure, with operational discipline that avoids precisely the patterns (hardcoded credentials, permissive IAM, traceable state backends) that IaC scanning looks for on the defensive side.
+IaC scanning applies policy checks to configuration files before they are applied, catching misconfigurations at the source level. The [attack infrastructure](https://red.tymyrddin.dev/docs/scarlet/iac/) section covers the adversarial use of the same tooling: IaC applied deliberately to build ephemeral offensive infrastructure, with operational discipline that avoids precisely the patterns (hardcoded credentials, permissive IAM, traceable state backends) that IaC scanning looks for on the defensive side.
 
 ## Common findings
 
@@ -22,6 +22,6 @@ KICS (Keeping Infrastructure as Code Secure): open-source from Checkmarx; suppor
 
 ## Integration
 
-IaC scanning integrates into CI at the point where Terraform plans or Kubernetes manifests are generated. Failing the pipeline on high-severity findings prevents misconfigured infrastructure from reaching production. As with SAST, the practical approach is to start with a focused set of high-confidence rules rather than enabling every check, to avoid training the team to ignore the scanner output.
+IaC scanning integrates into CI at the point where Terraform plans or Kubernetes manifests are generated. Failing the pipeline on high-severity findings prevents misconfigured infrastructure from reaching production. As with SAST, the practical approach is to start with a focused set of high-confidence rules, to avoid training the team to ignore the scanner output.
 
 Drift detection (comparing live infrastructure against the IaC definition) is a related concern: resources created outside the IaC process bypass the scanning gate. Tools like AWS Config, Terraform Cloud, and Pulumi provide drift detection capabilities.

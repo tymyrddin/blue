@@ -113,7 +113,7 @@ The `first broker login` flow handles JIT provisioning. On a Bank employee's fir
 4. The new account is assigned the `banking-ops-user` role via the hardcoded role mapper
 5. The employee is logged in without further prompts
 
-If an account with the same email already exists (created manually, for example), Keycloak links it to the federated identity rather than creating a duplicate. Review the `first broker login` flow configuration to confirm the linking behaviour is set to `confirm` (requires the user to confirm the link on first federation login) rather than `automatic`, unless the Bank's IT contact has confirmed that the email addresses are authoritative.
+If an account with the same email already exists (created manually, for example), Keycloak links it to the federated identity. Review the `first broker login` flow configuration to confirm the linking behaviour is set to `confirm` (requires the user to confirm the link on first federation login), unless the Bank's IT contact has confirmed that the email addresses are authoritative.
 
 ## Quarterly access review
 
