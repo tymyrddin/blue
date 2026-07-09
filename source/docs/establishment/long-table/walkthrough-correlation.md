@@ -110,3 +110,4 @@ well it is supported. What is done about it is not its function.
 
 The assessment is escalated beyond the Long Table; the case is not closed with it. The correlation stays
 open here, so that further inputs against the same cluster attach to it rather than starting a new one.
+Last updated: 31 May 2026

@@ -153,3 +153,4 @@ All servers run their backup at 23:00, but the actual start times are staggered 
 - Other servers: 40 minutes onwards, 5 minutes apart
 
 At current backup sizes, each server's daily incremental takes between two and ten minutes. The stagger is conservative; adjust it downwards once the actual backup durations are known from the first month of operation.
+Last updated: 10 July 2026

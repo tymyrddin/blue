@@ -136,3 +136,4 @@ kubectl logs -n calico-system -l app=calico-node -c calico-node | grep -i deny
 ```
 
 Ponder has a standing request that all new NetworkPolicy changes go through a pull request review before being applied to production namespaces. This caught three misconfigured policies in the first month after the migration.
+Last updated: 20 March 2026

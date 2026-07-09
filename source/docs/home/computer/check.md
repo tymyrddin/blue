@@ -68,3 +68,4 @@ Check persistence locations:
 * Unusual outbound network connections (check firewall logs)
 * Files in `C:\Users\[You]\AppData\Local\Temp` running as programs
 * Processes named after common applications running when those applications are closed
+Last updated: 16 May 2026

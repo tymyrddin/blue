@@ -91,3 +91,4 @@
 
 Restrict port 3333 to the display machine's IP address. Port 80 should be reachable from
 participant workstations and the sandbox inbox but not from the internet.
+Last updated: 21 March 2026

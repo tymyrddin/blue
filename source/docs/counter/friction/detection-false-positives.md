@@ -22,3 +22,4 @@ The practical consequence: the cost of a detection rule is not the engineering t
 The cost is the analyst time consumed by every false positive it generates for as long as it runs.
 A rule that generates ten false positives per analyst per week consumes roughly three hours of
 analyst time per week, indefinitely, until it is tuned or disabled.
+Last updated: 10 July 2026

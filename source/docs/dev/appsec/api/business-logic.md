@@ -89,3 +89,4 @@ operations than for ordinary reads.
 Bulk-write endpoints (those that accept arrays of objects in a single request) warrant the same per-item
 authorisation checks as individual write endpoints. A bulk endpoint that validates the top-level request and then
 applies all items without per-item ownership checks is an IDOR at scale.
+Last updated: 17 May 2026

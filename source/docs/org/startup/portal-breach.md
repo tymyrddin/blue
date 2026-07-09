@@ -51,3 +51,4 @@ The attacker returns a week later. Angua catches them in 90 seconds.
 * [Alert tuning](playbooks/graylog-alert-tuning.md)
 
 
+Last updated: 29 May 2026

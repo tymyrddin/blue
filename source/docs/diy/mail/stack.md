@@ -89,3 +89,4 @@ Content-based deception, a message that passes all checks but carries a phishing
 is out of scope. That is the domain of filtering, not authentication.
 
 The stack is a necessary foundation. It is not a ceiling.
+Last updated: 29 May 2026

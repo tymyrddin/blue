@@ -32,3 +32,4 @@ Separate from post-quantum concerns, TLS 1.3 has been subject to timing side-cha
 ## Practical readiness
 
 For most applications, the more pressing question is where RSA or EC keys protect data with long-term sensitivity, and whether the TLS library and key exchange configuration in use will support hybrid ML-KEM/X25519 when it becomes available in stable releases. NIST and CISA have published migration guidance; the timeline for mandatory migration in regulated environments is being established on a sector-by-sector basis.
+Last updated: 10 July 2026

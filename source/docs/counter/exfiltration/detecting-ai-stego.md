@@ -97,3 +97,4 @@ timing footprint even when the content is undetectable.
 Treat AI-generated image detection as a useful signal. An AI-generated
 image is not proof of steganographic content, but it raises the prior probability enough
 to justify deeper investigation.
+Last updated: 10 July 2026

@@ -59,3 +59,4 @@ The programme becomes a talent pipeline. Three researchers are later hired as se
 
 [Responsible disclosure programme](https://purple.tymyrddin.dev/docs/incident-response/sirt/)
 
+Last updated: 02 June 2026

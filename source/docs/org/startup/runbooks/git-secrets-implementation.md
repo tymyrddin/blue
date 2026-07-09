@@ -153,3 +153,4 @@ When a new repository is created:
 4. Confirm with Ludmilla that the configuration is in place before the first push to main
 
 Ludmilla reviews new repository configurations as part of code review. If she asks whether git-secrets is configured, the answer should be yes and demonstrable.
+Last updated: 10 July 2026

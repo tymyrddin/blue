@@ -145,3 +145,4 @@ falcosidekick_outputs_total{output="THROTTLING"}
 ```
 
 The dashboard is provisioned automatically via Grafana's configmap-based provisioning. If the panels show no data, verify that Prometheus is scraping the `falcosidekick` service on port 2801 by checking the Prometheus targets page.
+Last updated: 20 March 2026

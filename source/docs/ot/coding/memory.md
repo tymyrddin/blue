@@ -113,3 +113,4 @@ treating as a code review reference rather than a compliance checkbox.
 Compiler warnings catch a substantial portion of the above before static analysis runs. At minimum:
 `-Wall -Wextra -Wformat-security -Wshadow -Wconversion` on GCC or Clang, with `-Werror` in CI to prevent warning
 accumulation.
+Last updated: 10 July 2026

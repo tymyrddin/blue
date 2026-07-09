@@ -59,3 +59,4 @@ Many data protection regulations treat a laptop with access to personal data as 
 
 - [Offboarding](../../access/runbooks/offboarding.md) and [secret rotation](../../access/runbooks/secret-rotation.md) for the access-revocation side, which overlaps heavily with this.
 - [Backup verification](backup-verification.md) for whether the local data lost was recoverable elsewhere.
+Last updated: 29 May 2026

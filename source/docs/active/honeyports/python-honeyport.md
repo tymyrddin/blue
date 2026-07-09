@@ -73,3 +73,4 @@ failregex = ^.* - Connection from <HOST>$
 ```
 
 Restart: `sudo systemctl restart fail2ban`
+Last updated: 19 May 2025

@@ -59,3 +59,4 @@ Several systems apply machine learning to honeypot responses:
 
 The practical value is in studying how specific adversaries respond to variation, which produces more
 useful intelligence than a static environment that confirms only what the attacker already assumed.
+Last updated: 17 May 2026

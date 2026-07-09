@@ -140,3 +140,4 @@ Attack pattern trends: a line chart showing the total number of deception events
 Top attacker IPs: a table of the source IPs responsible for the most deception events in the past 30 days, enriched with MISP context and geolocation. IPs that appear repeatedly without being blocked (because they are reaching the honeypot via Tor, which changes exit nodes) are tagged for manual review.
 
 The dashboard URL: `https://graylog.golemtrust.am/dashboards/deception-overview`. Access requires the `security-analyst` role in Graylog.
+Last updated: 20 March 2026

@@ -173,3 +173,4 @@ Clean up after the test:
 # On primary:
 psql -U postgres -d postgres -c "DROP TABLE repl_test;"
 ```
+Last updated: 20 March 2026

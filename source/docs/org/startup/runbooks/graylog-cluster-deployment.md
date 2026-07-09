@@ -203,3 +203,4 @@ nginx -t && systemctl reload nginx
 Log in at `https://graylog.golemtrust.am` with username `admin` and the root password stored in Vaultwarden. Navigate to System, then Nodes. All three nodes should appear as running. Navigate to System, then Indices; the default index set should be green.
 
 If a node does not appear, check `journalctl -u graylog-server -n 100` on that node. Common failures are MongoDB connectivity (check replica set status) and OpenSearch connectivity (check the OpenSearch runbook).
+Last updated: 20 March 2026

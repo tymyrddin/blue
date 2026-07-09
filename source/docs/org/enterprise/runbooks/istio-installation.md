@@ -144,3 +144,4 @@ istioctl uninstall --revision default
 ```
 
 Ponder keeps a runbook checklist on the team wiki for each Istio upgrade, including the rollback procedure, which is simply relabelling the namespace back to the previous revision.
+Last updated: 20 March 2026

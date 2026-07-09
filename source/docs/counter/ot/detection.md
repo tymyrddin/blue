@@ -96,3 +96,4 @@ engineering software connection, and the 26-minute gap between that connection a
 process deviation, describes a coherent sequence that is harder to explain away.*
 
 The time-to-detect for this attack pattern in many organisations is measured in days or weeks, because the three layers are monitored by different teams who do not share data. Closing this gap is the primary defensive improvement available to OT environments, and it requires less capital investment than network redesign.
+Last updated: 26 May 2026

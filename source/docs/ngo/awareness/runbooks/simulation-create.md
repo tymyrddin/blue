@@ -50,3 +50,4 @@ Run the results review runbook. Brief the department leads for any team with a c
 submission rate above zero before the results are shared more broadly. A staff member who
 submitted credentials to a realistic simulation payload should have their password reset
 and sessions revoked as a precaution, treated the same way a real incident would be treated.
+Last updated: 21 March 2026

@@ -28,3 +28,4 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure GC
 * Zombie projects from hackathon days: €45
 
 *Every GCP bill contains at least one line that resists explanation.*
+Last updated: 17 May 2026

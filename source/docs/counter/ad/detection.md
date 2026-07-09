@@ -120,3 +120,4 @@ controller. At 03:00, Event ID 4662 fires on the domain NC object from a source 
 not a domain controller. The domain object SACL was configured eighteen months ago
 after a prior incident. The alert fires. An analyst picks it up at 08:00 and finds the
 02:30 access recorded in the DC's security log under a different event class, unreviewed.*
+Last updated: 27 May 2026

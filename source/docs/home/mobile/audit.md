@@ -20,3 +20,4 @@ separate work profile, limiting their access to the main device environment.
 
 Apps also change. An update can request new permissions that were not present at install; a review done
 once does not stay current. Treating the permissions audit as a recurring task is the version that actually provides coverage.
+Last updated: 10 July 2026

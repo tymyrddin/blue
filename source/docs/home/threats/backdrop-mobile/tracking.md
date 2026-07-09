@@ -22,3 +22,4 @@ iOS 14.5 or later.
 ## Resources
 
 * [Android will now warn about unknown Bluetooth trackers, like AirTag, travelling with you](https://techcrunch.com/2023/07/27/android-will-now-warn-about-unknown-bluetooth-trackers-like-airtag-traveling-with-you/), TechCrunch, July 2023
+Last updated: 16 May 2026

@@ -89,3 +89,4 @@ Set `SecRuleEngine DetectionOnly` (stops blocking, keeps logging) or `Off`, and 
 
 - A WAF filters request content; [ModEvasive](mod_evasive.md) handles request rate. They cover different attacks.
 - Review the audit log periodically; rule matches indicate what is being attempted against the site.
+Last updated: 10 July 2026

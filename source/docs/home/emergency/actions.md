@@ -68,3 +68,4 @@ Saudi Arabia: [National Cybersecurity Authority](https://www.nca.gov.sa).
 
 Credit bureaus (freeze credit): Equifax, Experian, TransUnion (availability varies by
 country).
+Last updated: 10 July 2026

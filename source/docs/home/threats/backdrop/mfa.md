@@ -40,3 +40,4 @@ enter, no moment of uncertainty. The decision has been removed from the flow. Th
 protection.
 
 For accounts that matter, hardware keys address the failure mode that other MFA methods leave open.
+Last updated: 10 July 2026

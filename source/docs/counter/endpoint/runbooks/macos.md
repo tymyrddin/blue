@@ -35,3 +35,4 @@ AppleScript, JXA (JavaScript for Automation), and persistence through launch age
 sudo lsof -i -P -n | grep ESTABLISHED
 sudo nettop -P -m route
 ```
+Last updated: 27 May 2026

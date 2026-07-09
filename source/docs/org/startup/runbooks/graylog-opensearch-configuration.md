@@ -121,3 +121,4 @@ Disk throughput: OpenSearch is I/O intensive during indexing. On Hetzner CX31 in
 If the cluster cannot elect a manager (all three nodes show as red or the cluster health endpoint is unreachable), check that at least two nodes are running and reachable on port 9300. The cluster requires a quorum of two of three nodes.
 
 If only one node is running and the cluster will not recover, do not attempt to force an election by setting `cluster.initial_cluster_manager_nodes` to a single node. This risks split-brain on recovery. Restore the second node from backup or bring it back online first.
+Last updated: 10 July 2026

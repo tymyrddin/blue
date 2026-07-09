@@ -125,3 +125,4 @@ zeek-cut id.orig_h id.resp_h id.resp_p orig_bytes resp_bytes < conn.log | \
 A service value of `dtls`, an empty string, or a protocol name inconsistent with the port
 is worth a second look. Zeek's protocol detection is not perfect, but a connection on port
 443 that does not complete a TLS handshake is a reliable anomaly.
+Last updated: 27 May 2026

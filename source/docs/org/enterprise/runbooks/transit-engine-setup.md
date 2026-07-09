@@ -184,3 +184,4 @@ vault write transit/keys/assassins-guild-contracts-confidential/config \
 ```
 
 Setting this value prevents decryption of any ciphertext encrypted under version 1. Perform this step only after running the rewrap procedure documented in the key rotation runbook and confirming no version-1 ciphertext remains in the database. Cheery maintains the sign-off record in the change management system.
+Last updated: 20 March 2026

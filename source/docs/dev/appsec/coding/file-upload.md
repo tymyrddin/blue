@@ -112,3 +112,4 @@ app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024  # 16 MB
 ```
 
 Flask returns a 413 error automatically if this limit is exceeded. Without a limit, an upload endpoint is a simple denial-of-service vector.
+Last updated: 10 July 2026

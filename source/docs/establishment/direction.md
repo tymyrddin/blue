@@ -107,3 +107,4 @@ arrived. The question gave the case its parent, its priority, and the threshold 
 survive. The case names its inputs, its sources, and its determination. The one thing it does not name, the
 question it was produced to answer, is the one thing this page does not name either. The omission is
 consistent, and the consistency is the institution.
+Last updated: 10 July 2026

@@ -49,3 +49,4 @@ db.users.find({"username": user_input})
 Databases accept some characters that have meaning in specific contexts. Null bytes (`\x00`) can terminate strings at the OS level. Unicode normalisation forms can produce characters that look identical but have different byte representations. For text stored in a database and later rendered as HTML or used in a shell command, the rendering context determines what characters are dangerous.
 
 Encoding concerns are best handled at the output layer (HTML encoding, shell quoting) rather than by stripping characters from stored values. Stripping `<` and `>` from a stored value mangles legitimate content; encoding them at render time produces the same safety without altering the stored data.
+Last updated: 17 May 2026

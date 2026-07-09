@@ -174,3 +174,4 @@ Record for each image analysed:
 - Any payload recovered: file type, content summary, hash
 
 If payload is recovered, treat it as potentially hostile: open in an isolated environment.
+Last updated: 10 July 2026

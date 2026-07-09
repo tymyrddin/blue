@@ -55,3 +55,4 @@ from detection to containment.
 
 - [Machines learning](https://indigo.tymyrddin.dev/docs/ml/)
 
+Last updated: 09 June 2026

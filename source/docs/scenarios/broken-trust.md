@@ -106,3 +106,4 @@ a state's closest friend is its largest unmonitored vulnerability.
   [threat picture](../circle-sea/threats.md), on the enemy inside the access.
 - The technical lab execution behind this narrative:
   [Mycosec: Operation Broken Trust](https://red.tymyrddin.dev/docs/earthworks/mycosec/broken-trust.html).
+Last updated: 13 June 2026

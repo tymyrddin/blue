@@ -21,3 +21,4 @@ quickly.
 The honest measure of a backup is not whether it ran but whether someone has restored from it
 recently, against the clock. The organisations that can answer that question are the ones that paid
 the friction the others deferred.
+Last updated: 12 June 2026

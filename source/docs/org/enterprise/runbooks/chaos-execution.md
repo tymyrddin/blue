@@ -153,3 +153,4 @@ Post-execution checklist:
 [ ] Royal Bank liaison notified of completion (if Royal Bank namespace was involved)
 [ ] Experiment results written to chaos/results/YYYY-MM-DD-EXPERIMENT-NAME.md
 ```
+Last updated: 10 July 2026

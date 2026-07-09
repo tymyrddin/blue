@@ -111,3 +111,4 @@ Test the health check logic without triggering a real failover using the dry-run
 This runs the full detection logic and prints the actions that would be taken, but does not execute any DNS changes, database promotions, or Kubernetes scaling. Run this test after any change to the monitor configuration.
 
 The full failover sequence is tested during the quarterly DR exercise (see DR testing procedures).
+Last updated: 20 March 2026

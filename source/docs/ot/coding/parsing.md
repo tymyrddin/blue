@@ -139,3 +139,4 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 ```
 
 Running the fuzzer against the parser before deploying on hardware finds the length-field edge cases that code review misses. Keeping the harness in the test suite means regressions are caught when the parser is modified.
+Last updated: 18 May 2026

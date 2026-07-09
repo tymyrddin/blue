@@ -89,3 +89,4 @@ it produces a picture of the problem and no movement toward addressing it.
 - [Covenant](../applications/covenant.md)
 - [The Great Ledger](../applications/great-ledger.md)
 - [Hunting identity persistence and OAuth consent abuse](../../counter/human/runbooks/identity-persistence-hunt.md)
+Last updated: 09 June 2026

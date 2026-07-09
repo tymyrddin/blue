@@ -21,3 +21,4 @@ most effective recovery option.
 * [CovidLock: Mobile Coronavirus Tracking App Coughs Up Ransomware](https://www.domaintools.com/resources/blog/covidlock-mobile-coronavirus-tracking-app-coughs-up-ransomware/), 2020
 * [Sophisticated Android Ransomware Executes with the Home Button](https://threatpost.com/android-ransomware-home-button/160001/), 2020
 * [WannaLocker - The WannaCry Copycat Targeting Android Users in China](https://www.tripwire.com/state-of-security/wannalocker-wannacry-copycat-targeting-android-users-china), 2017
+Last updated: 16 May 2026

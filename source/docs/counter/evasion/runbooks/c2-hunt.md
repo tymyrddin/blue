@@ -191,3 +191,4 @@ A large binary download from an unfamiliar host, particularly outside business h
 from a host that is not a software deployment server, is the staging signal. The same
 host making a further series of regular short requests after the large download confirms
 a staged beacon deployment.
+Last updated: 10 July 2026

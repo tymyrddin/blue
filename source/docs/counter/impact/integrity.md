@@ -54,3 +54,4 @@ can be shown.
   extortion both ride.
 - [Responding to it](runbooks/integrity-response.md): containment, ground truth, and rollback when a
   feed is lied to.
+Last updated: 10 July 2026

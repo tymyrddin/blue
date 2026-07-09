@@ -128,3 +128,4 @@ output; instead it triggers an out-of-band DNS lookup to a controlled domain. Th
 URL may look innocuous. The indicator is the presence of a known callback domain in any
 parameter value. Detection from access logs requires the callback domain to appear in the
 URL; POST-body injection evades this hunt.
+Last updated: 03 June 2026

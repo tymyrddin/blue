@@ -79,3 +79,4 @@ alongside the governed ones.
 - [The Burrow](../applications/the-burrow.md)
 - [Data protection and GDPR](../data/gdpr.md)
 - [Controlling cloud storage and OAuth exposure](../../counter/human/cloud-controls.md)
+Last updated: 10 July 2026

@@ -241,3 +241,4 @@ Audit existing guest and external accounts against the list of approved vendors 
 - [OAuth scopes as blast radius](oauth-scopes.md)
 - [Cloud detection signals](detection.md)
 - [Serverless and cloud-native evasion](../evasion/serverless.md)
+Last updated: 10 July 2026

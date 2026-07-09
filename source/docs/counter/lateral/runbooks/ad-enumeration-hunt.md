@@ -46,3 +46,4 @@ LDAP queries in a short burst, particularly outside business hours, warrants rev
 SAMR-based session enumeration produces a separate signal: connections from one host to
 many others on port 445 querying NetSessionEnum. Correlating high-LDAP events with
 high-SMB fan-out from the same source raises confidence.
+Last updated: 26 May 2026

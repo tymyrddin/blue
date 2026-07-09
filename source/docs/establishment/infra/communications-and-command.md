@@ -39,3 +39,4 @@ For the city this is the [Long Table](../long-table/index): the place where frag
 consolidated into the view that eventually reaches the Patrician, who sits above the command layer
 in the way the source diagrams never quite capture, and who resolves most disputes by raising an
 eyebrow at the party he wishes to reconsider.
+Last updated: 10 July 2026

@@ -89,3 +89,4 @@ and no invalid route to drop. The shape is indistinguishable, packet by packet, 
   [posture for the long game](../counter/inter-domain/posture.md).
 - The attacker's-side lab exercise behind this narrative:
   [Operation Blight](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/blight.html).
+Last updated: 19 June 2026

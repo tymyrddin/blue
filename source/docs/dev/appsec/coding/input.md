@@ -101,3 +101,4 @@ Denylist patterns that try to reject `<`, `>`, `script`, `'` etc. are routinely 
 through encoding, case variation, and unicode equivalences. They offer a false sense of
 coverage; the [SQL injection attack techniques](https://red.tymyrddin.dev/docs/in/app/techniques/sqli.html) page shows how this plays out
 against SQL injection specifically.
+Last updated: 10 July 2026

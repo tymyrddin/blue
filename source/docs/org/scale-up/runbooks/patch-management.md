@@ -134,3 +134,4 @@ Maintain a patch register in the `ansible-playbooks` repository at `patch/regist
 Routine unattended-upgrades activity is not recorded in the patch register; it is visible in the `unattended-upgrades` logs shipped to Graylog. Only manually applied patches and emergency procedures are recorded here.
 
 Otto Chriek reviews the patch register quarterly and cross-references it against the CVE disclosure dates to verify that response time targets (48 hours for Critical, 7 days for High) were met.
+Last updated: 20 March 2026

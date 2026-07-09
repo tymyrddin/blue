@@ -189,3 +189,4 @@ SELECT proname, prosecdef, proowner::regrole FROM pg_proc WHERE prosecdef = true
 Many of these persistence artefacts, modified configurations, planted files, and altered scheduled
 tasks, are file changes a host can be made to report on. Golem Trust Computing's File Integrity
 Monitoring build is in [Wazuh FIM configuration](../../org/scale-up/runbooks/wazuh-fim-configuration.md).
+Last updated: 09 June 2026

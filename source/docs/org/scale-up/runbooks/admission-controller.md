@@ -213,3 +213,4 @@ Do not switch all policies to `Enforce` simultaneously. If something breaks, it 
 ## The defender's view
 
 An admission policy decides what may run; detection decides whether something already did. The behaviours that slip past policy, recon, unexpected access, and post-deployment abuse, are covered from the hunting side in [cloud attack detection](../../../counter/cloud/detection.md).
+Last updated: 09 June 2026

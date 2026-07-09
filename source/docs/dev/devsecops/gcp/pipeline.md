@@ -340,3 +340,4 @@ output "artifact_registry_url" {
 * Vulnerability scanning (Artifact Registry + Trivy).
 * Zero Trust with IAP (no public access if possible).
 * Monitoring + Alerts (Cloud Monitoring + SCC).
+Last updated: 06 December 2025

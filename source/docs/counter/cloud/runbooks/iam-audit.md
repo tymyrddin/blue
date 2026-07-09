@@ -169,3 +169,4 @@ access keys: they do not rotate automatically and persist until explicitly delet
 user-managed key is a credential that exists outside GCP's normal automatic rotation.
 The presence of keys created more than 90 days ago without a rotation record is the
 finding. Google-managed keys rotate automatically and need no review.
+Last updated: 10 July 2026

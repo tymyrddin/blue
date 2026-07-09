@@ -130,3 +130,4 @@ spec:
 ```
 
 This excludes the pod from the mesh entirely. It will not have mTLS, will not appear in Kiali, and will not emit Istio metrics. Use this sparingly; Adora Belle and Dr. Crucible must approve mesh exclusions for any workload in a customer namespace. The exclusion must be recorded in the security exception register. Ponder has asked that every mesh exclusion include a documented justification and a review date, having found two exclusions in the `merchants-guild` namespace that were added during debugging and never removed.
+Last updated: 20 March 2026

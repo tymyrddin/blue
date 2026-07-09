@@ -72,3 +72,4 @@ sudo portspoof -c /etc/portspoof/config
 * [Active Defence, Offensive Countermeasures, and Cyber Deception](https://www.blackhillsinfosec.com/wp-content/uploads/2020/04/Training_ActiveDefence_CyberDeception_April2020.pdf), John Strand, Bryce Galbraith and Paul Asadoorian, 2020
 * [Github: gchetrick/honeyports](https://github.com/gchetrick/honeyports)
 * [Github pages: portspoof](https://drk1wi.github.io/portspoof/)
+Last updated: 16 May 2026

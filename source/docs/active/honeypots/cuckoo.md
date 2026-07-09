@@ -56,3 +56,4 @@ The web interface at port 8000 is the more common entry point for day-to-day sub
 
 * Slack alerts: use the CAPE web API with webhooks.
 * Splunk: parse `storage/analyses/<id>/report.json`.
+Last updated: 21 May 2026

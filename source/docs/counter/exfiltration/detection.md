@@ -163,3 +163,4 @@ def flag_upload_ratio(log_df, threshold=0.8):
                   f'{data["download_bytes"]/1e6:.0f}MB down, '
                   f'ratio={data["ratio"]:.2f}')
 ```
+Last updated: 27 May 2026

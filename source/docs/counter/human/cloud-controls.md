@@ -79,3 +79,4 @@ persists until someone notices.*
 
 - [How a resource-constrained NGO controls SharePoint sharing](../../ngo/m365/sharepoint.md)
 - [How a resource-constrained NGO governs Teams](../../ngo/m365/teams.md)
+Last updated: 09 June 2026

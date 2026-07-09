@@ -91,3 +91,4 @@ alert.*
 The endpoint telemetry these detections read, process creation, file access, authentication, and the
 behavioural baseline behind the example above, is collected by the Wazuh agent. Its deployment is in
 [Wazuh agent deployment](../../org/scale-up/runbooks/wazuh-agent-deployment.md).
+Last updated: 09 June 2026

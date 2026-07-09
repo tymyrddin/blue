@@ -18,3 +18,4 @@ Each cloud provider has its own implementation of object storage. The basic idea
 - [On-prem: On-Prem @ Hetzner cloud costs "DIY, but actually sane"](../on-prem/estimated-costs.md)
 - [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)
 
+Last updated: 12 March 2026

@@ -68,3 +68,4 @@ The budget is reviewed quarterly. Inputs to the review are: cumulative spend ver
 If spend is tracking to exceed the annual budget, Adora Belle is notified before the budget is reached, not after. The appropriate response may be a budget increase, a temporary reduction in reward tiers, a scope reduction, or a combination. The programme should never reach a state where a researcher submits a valid Critical finding and the budget does not have capacity to pay the appropriate reward.
 
 The programme's return on investment is assessed annually in terms of findings discovered versus the estimated cost of those vulnerabilities being exploited. The first full year's assessment is scheduled for Adora Belle's review in the Q1 planning cycle.
+Last updated: 20 March 2026

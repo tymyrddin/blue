@@ -53,3 +53,4 @@ recent or targeted deployments. Factory reset is the most complete option, as it
 the operating system environment the spyware was running in. Back up only contacts and
 documents, as restoring from a full backup may restore the problem. Update the operating system before restoring, so any patched
 vulnerability the spyware exploited is no longer present.
+Last updated: 09 July 2026

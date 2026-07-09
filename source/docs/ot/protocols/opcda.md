@@ -147,3 +147,4 @@ OT monitoring tools.
   workstation access
 - [OPC Foundation](https://opcfoundation.org): publishes the OPC DA and OPC UA specifications
 - [Impacket](https://github.com/fortra/impacket): rpcdump.py and related DCOM/RPC tools used for DCOM enumeration
+Last updated: 10 July 2026

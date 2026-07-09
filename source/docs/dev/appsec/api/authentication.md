@@ -95,3 +95,4 @@ cryptographic verification step that network position alone does not provide.
 Short-lived tokens (minutes) for machine-to-machine calls reduce the window for replay. A service
 that rotates credentials automatically via a secrets manager (Vault, AWS Secrets Manager) at short intervals is a
 stronger position than one using long-lived static credentials shared across all callers.
+Last updated: 10 July 2026

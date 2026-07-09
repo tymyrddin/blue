@@ -117,3 +117,4 @@ The browser verifies the hash before executing the script. If the CDN serves a m
 For npm dependencies, `npm ci` in CI/CD installs exactly what the lockfile specifies and fails if the lockfile is
 inconsistent with `package.json`. Running `npm install` in CI allows implicit version upgrades and is a supply chain
 risk.
+Last updated: 17 May 2026

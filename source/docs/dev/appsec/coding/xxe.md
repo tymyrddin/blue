@@ -81,3 +81,4 @@ The OWASP XXE Prevention Cheat Sheet maintains current recommendations for each 
 If the application receives data in XML because the client or upstream service sends it, and the format is otherwise arbitrary, JSON is the safer choice. JSON has no concept of external entities or DTDs; switching to JSON removes the XXE surface entirely.
 
 Where XML is required (SOAP, some document formats), restricting the allowed document structure to a known schema (XSD validation after safe parsing) catches unexpectedly structured documents without relying solely on parser configuration.
+Last updated: 17 May 2026

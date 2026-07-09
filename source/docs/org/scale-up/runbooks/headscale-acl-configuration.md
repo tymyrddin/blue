@@ -192,3 +192,4 @@ psql -h bank-db-01 -U test
 ```
 
 The second command should time out or be refused at the network level. A TCP connection that reaches the database but fails authentication indicates the ACL is not blocking the path; investigate and correct the ACL before proceeding.
+Last updated: 10 July 2026

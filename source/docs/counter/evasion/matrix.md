@@ -152,3 +152,4 @@ Minimum deployment: CloudTrail enabled in all regions (including unused ones); A
 Unified Audit Log enabled; GCP Data Access logs enabled for Cloud Storage; retention
 of at least 90 days; alerts on anomalous API call patterns and first-use of high-privilege
 permissions.
+Last updated: 10 July 2026

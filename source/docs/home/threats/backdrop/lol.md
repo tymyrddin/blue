@@ -27,3 +27,4 @@ administrator running a legitimate update or an attacker exfiltrating credential
 have to use context and behaviour patterns to distinguish between them, and attackers adapt to those
 heuristics as they are developed. The arms race is ongoing, and living-off-the-land techniques remain
 effective partly because they are so embedded in normal system operation.
+Last updated: 10 July 2026

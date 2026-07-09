@@ -78,3 +78,4 @@ gates until it starves, slowly, in perfect and fully certified compliance.
   [operational cost of security controls](../counter/friction/index.rst).
 - The clerical estate the paperwork falls on: [counter moves on the human layer](../counter/human/index.rst).
 - The identity systems enforcing the rules to the letter: [Golem Trust Computing](../org/index.rst).
+Last updated: 12 June 2026

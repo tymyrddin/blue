@@ -28,3 +28,4 @@
 - Replace Cloud Functions with Knative on GKE.  
 - Use Terraform instead of Deployment Manager.  
 
+Last updated: 06 December 2025

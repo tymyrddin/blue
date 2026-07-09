@@ -65,3 +65,4 @@ The `default_server` block acts as a catch-all that closes connections for any H
 ## Override headers
 
 Headers like `X-Forwarded-Host`, `X-Host`, and `X-Forwarded-Server` are sometimes used by proxies to preserve the original client-facing hostname through a chain of reverse proxies. When an application reads these headers and uses them to construct URLs, the same injection risk applies. Support for these headers is worth limiting to the specific proxy infrastructure that sends them, and only when the proxy is within the trusted network boundary.
+Last updated: 10 July 2026

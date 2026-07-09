@@ -113,3 +113,4 @@ The NSM instance receives the aggregate of all mirrored traffic. A CX41 instance
 ## Mirroring encrypted traffic
 
 GRE mirrors the raw packets including encrypted TLS traffic. Zeek and Suricata cannot decrypt TLS but can extract useful metadata: the server certificate's subject and issuer, the TLS version and cipher suite negotiated, the SNI (server name indication), and the size and timing of the encrypted session. This is sufficient for most detection purposes. If full content inspection of internal TLS traffic is required, a different approach (such as a TLS-terminating proxy) would be needed, which is out of scope for the current deployment.
+Last updated: 10 July 2026

@@ -46,3 +46,4 @@ it crosses an institutional boundary, the Office's network and the Establishment
 network, and what crosses is governed by sharing-group rules. A
 firmware vulnerability under active exploitation may produce a finding on both sides; they are correlated,
 if at all, by agreement.
+Last updated: 10 July 2026

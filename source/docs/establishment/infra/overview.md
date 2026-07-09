@@ -72,3 +72,4 @@ clacks, the command layer, the logistics, the rented compute, and the fusion tha
 into a picture. A force can lose individual assets and keep functioning. Lose command,
 communications, logistics, and trust in its own records, and most of it becomes dramatically less
 effective regardless of how many weapons remain to hand. The last page returns to this.
+Last updated: 10 July 2026

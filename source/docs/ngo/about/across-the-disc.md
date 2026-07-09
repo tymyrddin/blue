@@ -80,3 +80,4 @@ it, and has never been asked to want it.
   the Home goes to look at.
 - Someone in management finally reads the quarterly figures closely enough to ask why a welfare
   charity's travel patterns map so neatly onto somebody else's interests.
+Last updated: 10 July 2026

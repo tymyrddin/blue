@@ -49,3 +49,4 @@ Taking the baseline immediately after provisioning, before any external exposure
 Ingress is controlled. Egress is open. A compromised service establishes a reverse shell to an external server, exfiltrates data to a cloud storage endpoint, or begins scanning internal network ranges. All of it goes through outbound connections the firewall never examines. Controlling what enters a network while ignoring what leaves it addresses only half the perimeter.
 
 Explicit egress rules that permit only the traffic each service legitimately requires close this. A web server with no legitimate reason to connect to arbitrary external hosts on port 443 cannot do so under a well-scoped egress policy.
+Last updated: 10 July 2026

@@ -109,3 +109,4 @@ Staging URIs are a separate indicator. Before the full beacon is running, CS use
 initial staging request to deliver the full shellcode payload. The staging URI is distinct
 from the beacon communication URIs and is specific to the CS stager configuration.
 Stagerless payloads eliminate this indicator; staged payloads do not.
+Last updated: 10 July 2026

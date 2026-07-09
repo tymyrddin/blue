@@ -116,3 +116,4 @@ Slow and low: an attacker who runs one or two commands per day, spaced to look l
 normal admin activity, may never produce a single alert. Dwell time in these cases
 is measured in months. Detection requires long-term correlation and anomaly analysis
 across extended time windows.
+Last updated: 10 July 2026

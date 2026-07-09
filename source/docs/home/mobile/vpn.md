@@ -17,3 +17,4 @@ connection between the device and the VPN server, preventing local eavesdropping
 
 Free VPN services that do not charge for the service tend to monetise through data collection. The
 product is the traffic.
+Last updated: 16 May 2026

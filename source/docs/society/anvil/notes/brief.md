@@ -126,3 +126,4 @@ Please proceed accordingly.
 Society Coordinating Committee
 
 *(by a memorandum initialled in a handwriting that strongly suggests [the Patrician](https://indigo.tymyrddin.dev/docs/vetinari/) had already decided)*
+Last updated: 01 June 2026

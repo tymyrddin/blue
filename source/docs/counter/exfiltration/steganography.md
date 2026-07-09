@@ -46,3 +46,4 @@ covert.
 Like all security technology, steganography is not perfect. If someone knows it is there and knows the algorithm that
 was used to hide it, and if the message is not encrypted, he or she can read it. Even if the message is encrypted, in
 some cases just knowing that data has been hidden in a file is enough to raise suspicions.
+Last updated: 09 June 2026

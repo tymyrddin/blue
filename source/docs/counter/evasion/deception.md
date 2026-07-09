@@ -133,3 +133,4 @@ Coverage cannot be complete. Deception assets catch attackers who touch the spec
 assets placed; they do not catch attackers who operate entirely within the legitimate
 environment. A credential theft from a live system, replayed against a real service,
 does not touch any decoy.
+Last updated: 27 May 2026

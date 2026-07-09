@@ -89,3 +89,4 @@ The alternative, a managed platform running on autopilot with a stale template l
 produces completion metrics and click rate trend lines that look like a functioning
 programme. Whether the programme is actually preparing staff for the emails they will
 receive is a different question, and one that the metrics do not answer.
+Last updated: 10 July 2026

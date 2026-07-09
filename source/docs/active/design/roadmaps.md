@@ -70,3 +70,4 @@ system calls without detection and maintaining enough performance to stay convin
 
 Forensic capabilities have developed from simple logging to full attack reconstruction. Understanding
 precisely how an intrusion unfolded is nearly as valuable as stopping it.
+Last updated: 16 May 2026

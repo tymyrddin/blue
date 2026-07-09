@@ -58,3 +58,4 @@ added to `~/.ssh/authorized_keys`. Alert fires immediately. Response: 12 minutes
 ## Resources
 
 * [Wazuh user manual](https://documentation.wazuh.com/current/user-manual/index.html)
+Last updated: 02 June 2026

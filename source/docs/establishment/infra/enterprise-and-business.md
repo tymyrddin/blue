@@ -49,3 +49,4 @@ the logistics of who is where. Much of what a larger force would own outright, t
 remove. The ammunition belongs to a Guild. The certification is countersigned by someone who can
 later deny having read it. The records are real even where the ownership is arranged to be deniable,
 which is its own kind of design.
+Last updated: 10 July 2026

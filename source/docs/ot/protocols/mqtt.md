@@ -166,3 +166,4 @@ activity; forwarding those logs covers the visibility gap that most IIoT deploym
 - [Eclipse Mosquitto](https://mosquitto.org): open-source MQTT broker; configuration reference for
   `allow_anonymous`, TLS, and ACL settings
 - [Shodan: port 1883](https://www.shodan.io/search?query=port%3A1883): internet-exposed MQTT brokers
+Last updated: 09 July 2026

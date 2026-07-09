@@ -97,3 +97,4 @@ JavaScript function call wrapping JSON data. The caller's domain can read the re
 
 JSONP is not appropriate for authenticated or sensitive data. Modern applications on supported browsers use CORS
 instead.
+Last updated: 10 July 2026

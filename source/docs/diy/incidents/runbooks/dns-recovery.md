@@ -73,3 +73,4 @@ Screenshot DNS records before and after changes. Preserve registrar access logs 
 
 - [MFA rollout](../../access/runbooks/mfa-rollout.md), the control that prevents most registrar-account takeovers in the first place.
 - [Secret rotation](../../access/runbooks/secret-rotation.md) if the registrar credentials themselves were exposed.
+Last updated: 29 May 2026

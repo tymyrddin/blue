@@ -145,3 +145,4 @@ Before an experiment runs in production for the first time, the hypothesis is re
 3. The failure condition is specific enough that the experiment cannot be run in a way that avoids triggering the condition but still claims to test the hypothesis.
 
 Ponder is thorough about point 3. He once spent twenty minutes asking Dr. Crucible to clarify the definition of "33% of pods" in a hypothesis until Dr. Crucible agreed that "at least one pod" was not the same thing and updated the hypothesis accordingly.
+Last updated: 20 March 2026

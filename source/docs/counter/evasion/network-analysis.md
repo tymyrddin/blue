@@ -145,3 +145,4 @@ nfdump -r /var/netflow/nfcapd.current -n 20 \
   -s dstip/bytes -o "fmt:%da %byt" |
   sort -k2 -rn | head -20
 ```
+Last updated: 10 July 2026

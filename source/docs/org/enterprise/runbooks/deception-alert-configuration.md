@@ -130,3 +130,4 @@ The one documented false positive occurred in November 2025. An Ansible playbook
 Angua investigated, identified the cause within 12 minutes, and called Ponder, who had written the playbook. The false positive was resolved by removing `honeypot-db.internal` from the inventory file and adding a comment explaining why it should never appear in any inventory. The incident was documented. The canary registry now includes a field, `known_false_positive_sources`, which lists any known systems that might legitimately trigger the token (for these eight accounts, the field is empty for all tokens except `honeypot-db.internal`, which now lists `ansible-runner-01` as a known false positive source with a note that it is a misconfiguration, not a legitimate access pattern).
 
 The team discussed whether to add a suppression rule for the Ansible runner. The conclusion was no: the correct fix was ensuring the inventory was correct.
+Last updated: 10 July 2026

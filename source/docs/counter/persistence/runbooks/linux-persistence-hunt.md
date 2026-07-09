@@ -248,3 +248,4 @@ implant if it has been removed. The PAM module hunt and the profile hunt are the
 two that require the most care: a modified `/etc/pam.d/sshd` that adds
 `pam_permit.so` as a sufficient auth module allows login with any password and
 leaves nothing in the process list to see.*
+Last updated: 27 May 2026

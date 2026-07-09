@@ -64,3 +64,4 @@ their network access or use non-connected equivalents.
 
 The general principle: the fewer devices that have unrestricted outbound internet access, the smaller the
 lateral movement surface if any one of them is compromised.
+Last updated: 16 May 2026

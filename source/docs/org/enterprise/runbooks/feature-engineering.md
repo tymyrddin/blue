@@ -149,3 +149,4 @@ def normalise_features(features: np.ndarray, baseline: dict) -> np.ndarray:
 ```
 
 The `feature_means` and `feature_stds` arrays are computed during the baseline calculation and stored in the baseline record alongside the feature vector histograms.
+Last updated: 20 March 2026

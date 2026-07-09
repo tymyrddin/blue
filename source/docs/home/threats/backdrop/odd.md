@@ -41,3 +41,4 @@ navigation.
 The relevance to home users is mostly indirect: infrastructure failures cascade. The more direct relevance
 is that the same expansion of connectivity that creates these exposures in critical systems also applies
 to home networks and devices.
+Last updated: 10 July 2026

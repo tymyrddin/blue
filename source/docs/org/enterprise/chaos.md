@@ -69,3 +69,4 @@ Confidence in resilience increases significantly. "We know we can survive a data
 ## Related
 
 [Organisational risk audits & resilience assessments](https://purple.tymyrddin.dev/docs/audits/resilience/)
+Last updated: 20 March 2026

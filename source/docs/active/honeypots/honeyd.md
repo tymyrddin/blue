@@ -45,3 +45,4 @@ enabled = true
 filter = sshd  
 logpath = /var/log/syslog
 ```
+Last updated: 21 May 2026

@@ -43,3 +43,4 @@ Test the restore at least once a year. A backup that has never been restored is 
 
 Three copies, on two different media types, with one stored off-site. This covers hardware failure, local
 disaster, and theft simultaneously. It is worth more than any particular drive recommendation.
+Last updated: 10 July 2026

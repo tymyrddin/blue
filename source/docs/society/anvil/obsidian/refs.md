@@ -216,3 +216,4 @@ Background material that connects protocols, implementations, and real-world usa
 * [ICS Digest Review of industrial protocols](https://icsdigest.com/en/2025/04/24/review-of-industrial-protocols/)
 * [INCIBE ICS protocol and network security guide (PDF)](https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_protocol_net_security_ics.pdf)
 * [OPC UA security analysis (academic)](https://arxiv.org/abs/2104.06051)
+Last updated: 01 June 2026

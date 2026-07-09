@@ -167,3 +167,4 @@ Any HIGH flag is a concrete escape path. Privileged mode and Docker socket expos
 the most frequently observed. Cgroup release_agent writability and host
 namespace sharing appear more often in older Kubernetes node configurations and
 development environments where isolation was relaxed for convenience.
+Last updated: 26 May 2026

@@ -85,3 +85,4 @@ that is too restrictive for Copilot and not restrictive enough for the consultan
 - [AI in vendor applications](application-governance.md)
 - [SharePoint and external sharing](../m365/sharepoint.md)
 - [Data protection and GDPR](../data/gdpr.md)
+Last updated: 21 March 2026

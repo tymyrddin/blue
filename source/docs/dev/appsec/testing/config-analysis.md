@@ -21,3 +21,4 @@ Container image scanning (Trivy, Grype) checks for known CVEs in image layers. C
 CIS-CAT and OpenSCAP evaluate OS-level configurations (SSH settings, kernel parameters, file permissions, service configurations) against CIS Benchmarks or SCAP content. Useful for establishing a baseline on server images before deployment, and for drift detection over time.
 
 Specific settings worth checking: SSH `PermitRootLogin no`, `PasswordAuthentication no` (key-based only), TLS protocol version minimum (TLS 1.2 or 1.3; disable 1.0 and 1.1), and directory listing disabled on web servers.
+Last updated: 17 May 2026

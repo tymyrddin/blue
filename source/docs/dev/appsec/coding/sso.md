@@ -81,3 +81,4 @@ decoded = jwt.decode(
 ```
 
 A token whose `aud` does not include the expected application identifier is rejected regardless of signature validity.
+Last updated: 10 July 2026

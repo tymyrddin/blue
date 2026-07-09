@@ -41,3 +41,4 @@ testing.
 OWASP maintains a separate Top 10 for APIs (distinct from the web application Top 10). The categories include Broken
 Object Level Authorisation, Broken Authentication, Broken Object Property Level Authorisation, Unrestricted Resource
 Consumption, and others. It is a useful reference for structuring a testing plan.
+Last updated: 17 May 2026

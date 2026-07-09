@@ -87,3 +87,4 @@ confirm it works.
 - [Offboarding](offboarding.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
 - [Hunting identity persistence and OAuth consent abuse](../../counter/human/runbooks/identity-persistence-hunt.md)
+Last updated: 09 June 2026

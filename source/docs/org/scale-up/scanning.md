@@ -50,3 +50,4 @@ and attends mandatory container security training.
 ## Related
 
 * [Secrets in Git commits](../startup/secrets.md)
+Last updated: 28 March 2026

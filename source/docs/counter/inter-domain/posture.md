@@ -58,3 +58,4 @@ freedom, defending the interpretation layer removes the deniability, and raising
 the soft neighbours. What is left is an operation that costs years and yields little, which is the only outcome
 that durably discourages one. The long game is won by ground that was never left soft, not by the alarm that
 finally fired.
+Last updated: 09 July 2026

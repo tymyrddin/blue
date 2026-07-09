@@ -80,3 +80,4 @@ DKIM delegation to SaaS platforms gives those platforms signing authority for th
 ## Related
 
 - [How a resource-constrained NGO configures this in Exchange Online](../../ngo/m365/exchange.md)
+Last updated: 10 July 2026

@@ -185,3 +185,4 @@ If the new controller manager fails to start, Kubernetes will retain the previou
 ```
 helm rollback gatekeeper -n gatekeeper-system
 ```
+Last updated: 20 March 2026

@@ -94,3 +94,4 @@ Common causes of mTLS failures:
 - Source and destination are in different clusters and cross-cluster trust has not been configured. See Ludmilla's multi-cluster trust configuration notes in the team wiki.
 
 Dr. Crucible maintains a Grafana dashboard (Golem Trust / mTLS Health) that shows the percentage of cluster traffic currently encrypted with mTLS. It should be at 100% for `royal-bank` and `patricians-office` at all times.
+Last updated: 20 March 2026

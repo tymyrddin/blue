@@ -76,3 +76,4 @@ Restore `ServerTokens Full` / `ServerSignature On` (Apache) or `server_tokens on
 
 - Confirm the change held with a [security header check](check.md).
 - Pair with [disabling directory listing](directory-listing.md).
+Last updated: 10 July 2026

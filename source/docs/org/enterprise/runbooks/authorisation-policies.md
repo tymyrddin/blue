@@ -145,3 +145,4 @@ kubectl get deployments -n royal-bank -o jsonpath='{range .items[*]}{.metadata.n
 ```
 
 Any deployment without a corresponding AuthorizationPolicy ALLOW rule should be flagged in the weekly security review meeting. Cheery tracks these in a spreadsheet that feeds into Mr. Bent's quarterly compliance report.
+Last updated: 10 July 2026

@@ -165,3 +165,4 @@ groups:
 ```
 
 The `ChaosExperimentFailed` alert fires when an experiment's verdict is "fail", meaning the application's steady-state hypothesis was not met during the experiment. This is a signal that the application needs improvement, not that Litmus has failed; however, Ponder and Dr. Crucible review all failures before the next production experiment of the same type.
+Last updated: 20 March 2026

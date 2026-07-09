@@ -9,3 +9,4 @@ A fingerprint is ready when:
 - [ ] No false positives against other versions
 - [ ] Confidence level matches evidence
 - [ ] YAML syntax is valid
+Last updated: 01 June 2026

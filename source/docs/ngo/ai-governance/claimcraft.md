@@ -108,3 +108,4 @@ without comment.
 - [The attack surface](ml-risks.md)
 - [GDPR notification runbook](../data/runbooks/gdpr-notification.md)
 - [Covenant](../applications/covenant.md)
+Last updated: 27 May 2026

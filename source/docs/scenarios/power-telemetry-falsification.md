@@ -84,3 +84,4 @@ of this attack never has to do anything except keep the screens calm.
   [detection](../counter/ot/detection.md), and the [protocol hunt](../counter/ot/runbooks/ot-protocol-hunt.md).
 - The impact family this belongs to, off the iron, where nothing breaks but the readings lie:
   [integrity](../counter/impact/integrity.md).
+Last updated: 10 July 2026

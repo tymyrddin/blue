@@ -109,3 +109,4 @@ in the application layer. No combination of HTTP headers addresses them.
 
 The stack closes the browser-level attack surface. What happens between the browser and the application, and inside the
 application, is a different perimeter.
+Last updated: 29 May 2026

@@ -119,3 +119,4 @@ Before any scenario runs in a real engagement (as opposed to a purple team exerc
 2. The scenario stays within the approved scope.
 
 Carrot's review is documented in the engagement plan as a checkbox: "Scenario reviewed for unrecoverable damage risk: Yes / No (with explanation)." Adora Belle has made clear that "No" is an acceptable answer only if accompanied by a very good explanation and an additional approval step.
+Last updated: 10 July 2026

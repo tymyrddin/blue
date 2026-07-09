@@ -153,3 +153,4 @@ The alert that fired was:
 ```
 
 The response controller killed the pod within three seconds of alert generation. The pod was replaced by its ReplicaSet controller within eight seconds. The developer was contacted by Cheery and reminded that `kubectl exec` sessions in production containers must be approved in advance and must use a dedicated debug image rather than the production image. The production database image was subsequently rebuilt without a shell binary, and a Dockerfile linting rule was added to the CI pipeline to catch shell installation in database images at build time.
+Last updated: 10 July 2026

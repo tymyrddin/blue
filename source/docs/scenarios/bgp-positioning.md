@@ -79,3 +79,4 @@ The recent record, the one the tooling learned, says routine.
   [posture for the long game](../counter/inter-domain/posture.md).
 - The attacker's-side lab exercise behind this narrative:
   [Operation Mycelium](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/mycelium.html).
+Last updated: 09 July 2026

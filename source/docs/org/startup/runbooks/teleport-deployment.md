@@ -191,3 +191,4 @@ tsh ssh carrot@auth.golemtrust.am
 ```
 
 The login step authenticates and creates a local certificate. The SSH step uses that certificate; no password is requested.
+Last updated: 20 March 2026

@@ -125,3 +125,4 @@ Autovacuum is enabled by default and should handle routine maintenance. Manual i
 ## A note on public access
 
 Port 5432 is not and should not be exposed to the public internet. When Vimes saw the sticky note, his first question after the password question was "what else is sitting there with the door open?" The answer at the time was embarrassing. It is no longer embarrassing. Keep it that way.
+Last updated: 20 March 2026

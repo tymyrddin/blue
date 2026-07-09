@@ -109,3 +109,4 @@ The pod requires `CAP_BPF`, `CAP_PERFMON`, and `CAP_SYS_RESOURCE` at a minimum. 
 ## Running on Hetzner CX42 instances
 
 Hetzner's Ubuntu 22.04 LTS images ship with a 5.15 kernel and full BTF support. No additional configuration is needed on freshly provisioned CX42 instances. Hetzner applies kernel updates through their standard image pipeline; after a node is re-provisioned with a newer kernel, verify BTF availability again as above before re-joining it to the cluster. Dr. Crucible runs this check as part of the node onboarding playbook in Ansible.
+Last updated: 20 March 2026

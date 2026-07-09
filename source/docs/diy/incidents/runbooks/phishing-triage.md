@@ -52,3 +52,4 @@ If the phishing appears targeted (references the organisation, a team member by 
 
 - [Suspicious OAuth application review](../../access/runbooks/oauth-review.md) if the link sought an app authorisation rather than a password (consent phishing).
 - [MFA rollout](../../access/runbooks/mfa-rollout.md) and [secret rotation](../../access/runbooks/secret-rotation.md) for the credential side of the response.
+Last updated: 10 July 2026

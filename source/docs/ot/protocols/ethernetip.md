@@ -126,3 +126,4 @@ capability quickly. Network access is the critical control.
 - [IEC 62351](iec62351.md): CIP Security follows a similar TLS-over-TCP model to IEC 62351 Parts 3 and 4
 - [ODVA](https://www.odva.com): publishes the EtherNet/IP and CIP specifications
 - [Shodan: port 44818](https://www.shodan.io/search?query=port%3A44818): internet-exposed EtherNet/IP devices
+Last updated: 10 July 2026

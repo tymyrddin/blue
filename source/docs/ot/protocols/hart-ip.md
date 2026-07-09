@@ -134,3 +134,4 @@ by 2-3% is exactly what the calibration check will catch and the DCS alarm will 
   including the HART-IP (Part 7) and WirelessHART (Part 8) specifications
 - [Shodan: port 5094](https://www.shodan.io/search?query=port%3A5094): live count of internet-reachable
   HART-IP gateways; useful for scope-setting before an engagement or asset inventory exercise
+Last updated: 19 May 2026

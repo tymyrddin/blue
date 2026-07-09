@@ -135,3 +135,4 @@ Create a dashboard titled "Wazuh Security Overview" with panels for:
 - Open Critical and High vulnerability count by host
 
 Angua reviews this dashboard at the start of each working day. The MITRE ATT&CK heatmap in particular helps identify whether observed alerts cluster around specific attack patterns versus being random noise.
+Last updated: 10 July 2026

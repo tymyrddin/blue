@@ -215,3 +215,4 @@ s3cmd put sbom-2026-02-example-service-sha256-abc123.spdx.json \
 ```
 
 The CronJob manifest and archive script live in `golem-trust/platform/jobs/sbom-archive/`. Cheery monitors the monthly archive job completion via a Grafana alert; a failed archive job creates a PagerDuty incident routed to Dr. Crucible.
+Last updated: 20 March 2026

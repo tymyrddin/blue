@@ -94,3 +94,4 @@ endpoint. Comments describing a credential as removed or replaced may indicate t
 recur.
 
 Static analysis tools and secret scanning (truffleHog, `git-secrets`, GitLab's secret detection) catch the obvious patterns in source. They do not catch credentials that are constructed at runtime from fragments or that arrive via a compiled-in lookup table. Those require binary analysis.
+Last updated: 10 July 2026

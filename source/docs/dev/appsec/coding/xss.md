@@ -113,3 +113,4 @@ Content-Security-Policy: default-src 'self'; script-src 'self'; object-src 'none
 `script-src 'self'` blocks inline scripts and scripts from other origins. `object-src 'none'`
 prevents Flash and plugin-based execution. Adding `'unsafe-inline'` to `script-src`
 largely negates the XSS protection.
+Last updated: 10 July 2026

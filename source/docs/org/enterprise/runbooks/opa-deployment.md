@@ -181,3 +181,4 @@ Static data documents (such as approved registry lists and country code allow-li
 ```
 curl -s http://localhost:8181/v1/data | python3 -m json.tool | head -60
 ```
+Last updated: 10 July 2026

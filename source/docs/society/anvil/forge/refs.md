@@ -49,3 +49,4 @@ TLS artefacts are often the most stable passive identifiers available.
 * [crt.sh certificate transparency search](https://crt.sh/)
 
 Serial numbers, issuer quirks, key reuse, and certificate lifetimes are all fingerprint material.
+Last updated: 01 June 2026

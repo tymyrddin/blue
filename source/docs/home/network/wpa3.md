@@ -32,3 +32,4 @@ Routers released before 2019 often do not support WPA3. If the option is absent,
 and unique WPA2 passphrase (20 or more random characters) is the
 effective mitigation. A router old enough to predate WPA3 is also likely to be past its
 firmware update lifespan, which is a separate reason to consider replacing it.
+Last updated: 10 July 2026

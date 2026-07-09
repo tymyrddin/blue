@@ -71,3 +71,4 @@ enough to name, the bearings have already paid for it.
   [detection](../counter/ot/detection.md).
 - The impact family this belongs to, destruction made physical, and the loss of the record with it:
   [destruction and extortion response](../counter/impact/response.md).
+Last updated: 12 June 2026

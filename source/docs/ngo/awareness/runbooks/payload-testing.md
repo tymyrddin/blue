@@ -55,3 +55,4 @@ the technique is not suitable for this simulation cycle. Select a different tech
 from the [threat intelligence runbook](threat-intel.md) and begin the test process again. The goal is a
 simulation that reflects what a real attacker would send today. A payload that Defender
 catches is not that.
+Last updated: 27 May 2026

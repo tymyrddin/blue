@@ -63,3 +63,4 @@ Each participant's campaign appears as a separate entry. Results from all campai
 are visible simultaneously if multiple campaigns are active, which is the normal state
 during the session: each participant launches independently and results accumulate on
 the display as they arrive.
+Last updated: 21 March 2026

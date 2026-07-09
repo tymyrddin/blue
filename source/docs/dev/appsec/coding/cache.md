@@ -79,3 +79,4 @@ CDNs can be poisoned through headers that the CDN uses for routing or caching de
 - Fat GET requests (GET requests with a body that the CDN ignores but the application processes)
 
 The practical test is to check what the CDN includes in its cache key for each endpoint, compare it with what the application uses to generate the response, and identify any inputs that affect the response but not the key.
+Last updated: 10 July 2026

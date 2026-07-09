@@ -19,3 +19,4 @@ Companies and organisations can use powerful bot management systems that can ide
 * [How secure are one-time passwords from attacks?](https://www.techtarget.com/searchsecurity/feature/How-secure-are-one-time-passwords-from-attacks), 2022
 * [OTP Bot Setup for MFA Bypass Affecting P2P Services](https://www.cloudsek.com/threatintelligence/generaly-otp-bot-setup-for-mfa-bypass-affecting-p2p-services), 2022
 
+Last updated: 05 May 2025

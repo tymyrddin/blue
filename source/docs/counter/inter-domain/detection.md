@@ -69,3 +69,4 @@ raises confidence that a flag is a real shift. These models improve faster on an
 operator's own ground truth than an outsider's do from outside, because the operator knows which announcements
 are theirs. A detection lab such as heimdallr is where the classifier and the baseline get built and replayed
 against recorded streams, so the model is tested on real movement rather than on faith.
+Last updated: 09 July 2026

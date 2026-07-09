@@ -62,3 +62,4 @@ Removing the header stops it being sent to new visitors, but browsers that alrea
 
 - Confirm with a [security header check](check.md).
 - Pair with the `Secure` cookie flag ([Set-Cookie](cookie.md)) so session tokens never travel over HTTP.
+Last updated: 29 May 2026

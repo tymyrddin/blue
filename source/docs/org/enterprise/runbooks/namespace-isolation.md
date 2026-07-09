@@ -164,3 +164,4 @@ kubectl auth can-i get pods -n patricians-office \
 ```
 
 The last command must return `no`. If it returns `yes`, there is an unintended ClusterRole or ClusterRoleBinding that needs to be removed immediately and logged as a security incident.
+Last updated: 20 March 2026

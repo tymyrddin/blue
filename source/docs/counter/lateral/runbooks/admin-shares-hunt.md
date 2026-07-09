@@ -45,3 +45,4 @@ $events | ForEach-Object {
 Build a list of known-legitimate sources (IT admin workstations, SCCM servers,
 vulnerability scanners) and filter them out. Remaining access from user workstations to
 server admin shares warrants individual review.
+Last updated: 26 May 2026

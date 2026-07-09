@@ -202,3 +202,4 @@ The conventions that keep it honest:
 * Deletions go through supervisor sign-off.
 
 The vault is not a scratch directory. It is evidence storage, and it behaves like one.
+Last updated: 01 June 2026

@@ -128,3 +128,4 @@ The procedure:
 6. Confirm that the old password no longer works: attempt `restic snapshots` with the old password (retrieve from the now-stale Vault KV version) and confirm it fails
 
 Rotate all repositories on all servers before declaring the rotation complete. Vault KV v2 keeps version history; use `vault kv get -version=<n>` to retrieve the previous password if a rotation needs to be rolled back.
+Last updated: 20 March 2026

@@ -54,3 +54,4 @@ sudo, this workflow is essentially the same as it was before, with an explicit s
 On systems using `sudo`, periodic review of `/etc/sudoers` or the `sudo` group membership is
 worth doing, as software installation sometimes adds accounts to the sudo group without
 announcement.
+Last updated: 16 May 2026

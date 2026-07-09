@@ -233,3 +233,4 @@ for finding in findings:
 ```
 
 When a DefectDojo finding is tagged with an active MISP campaign reference, Cheery is notified via the existing DefectDojo webhook (see the workflow automation runbook). The presence of active exploitation evidence is a factor in prioritising remediation above other High findings with the same CVSS score.
+Last updated: 20 March 2026

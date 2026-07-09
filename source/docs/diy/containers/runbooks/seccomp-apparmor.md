@@ -79,3 +79,4 @@ as a last-resort diagnostic, since that removes the layer entirely.
   and [dropped capabilities](drop-capabilities.md) are bypassed; the three together are the confinement set.
 - A compromised container that was running unconfined is a candidate
   for [the first hour](../../incidents/first-hour.md).
+Last updated: 09 July 2026

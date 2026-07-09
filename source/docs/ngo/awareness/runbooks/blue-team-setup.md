@@ -62,3 +62,4 @@ who sent that email sees it. This is the feedback loop the session is built on.
 3. Do not reuse the sandbox account credentials for production purposes.
 4. If the sandbox account was created specifically for this cohort, disable it in the
    admin centre after the session. Reactivate it for the next cohort.
+Last updated: 10 July 2026

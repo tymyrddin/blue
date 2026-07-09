@@ -153,3 +153,4 @@ Weekly review of access requests is part of Carrot's security operations routine
 - Repeated requests from the same user for the same access (suggests the access should be made permanent via a role change, or the user is doing something outside their normal remit)
 - Requests approved unusually quickly (less than two minutes; this can indicate a pre-arranged approval that bypasses the intent of the process)
 - Requests that were used for longer than the stated task required
+Last updated: 20 March 2026

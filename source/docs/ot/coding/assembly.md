@@ -69,3 +69,4 @@ writeable region as the firmware it verifies can be replaced alongside it, and t
 
 An implementation that begins execution and checks the signature as a background task, or that checks only a subset of
 the image, provides weaker guarantees than it appears to.
+Last updated: 10 July 2026

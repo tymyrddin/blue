@@ -48,3 +48,4 @@ Supply chain security becomes competitive advantage. "We can prove exactly what'
 - [Watching the tributaries](https://purple.tymyrddin.dev/docs/audits/nis2/tributaries)
 - [Supply-chain Levels for Software artefacts (SLSA)](https://blue.tymyrddin.dev/docs/dev/devsecops/cicd/artefacts.html#supply-chain-levels-for-software-artefacts-slsa)
 - [Dependency hell in software supply chains](https://indigo.tymyrddin.dev/docs/debt/dependency-hell.html)
+Last updated: 20 March 2026

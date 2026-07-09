@@ -110,3 +110,4 @@ programme across seven years of operations.
   authentication, the control the Sandworm sessions had no answer for; brief 15 applies MAC-based
   filtering to GOOSE, the Layer 2 protocol Industroyer used to send spoofed trip commands; brief 16
   filters at the trip payload level; brief 17 moves GOOSE authentication to the asset via IEC 62351-6
+Last updated: 10 July 2026

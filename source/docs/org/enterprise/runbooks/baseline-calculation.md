@@ -161,3 +161,4 @@ def detect_baseline_drift(username: str) -> dict:
 Users with fewer than 30 days of history have no baseline model. For these users, the `ueba-processor` sets `ueba_scored=false` and `ueba_learning_mode=true` on each event. No anomaly score is generated. No UEBA alerts are created.
 
 After 30 days, the nightly baseline job generates an initial model. On the following day, scoring begins. The initial model is typically noisier than a mature 90-day baseline; Angua expects a brief period of elevated false positives for new users and adjusts alert thresholds accordingly during the first two weeks of scoring.
+Last updated: 20 March 2026

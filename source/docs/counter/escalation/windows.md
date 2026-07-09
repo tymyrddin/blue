@@ -100,3 +100,4 @@ All of these require SeImpersonatePrivilege as a precondition. An interactive sh
 injected code running as a service account holding this privilege is the entry condition. The privilege is commonly present
 precisely because the compromised service was running under an account the framework
 chose for convenience.
+Last updated: 10 July 2026

@@ -76,3 +76,4 @@ treat the rollback as temporary.
 - A non-root container still holds a broad set of Linux capabilities. Pair with [dropping capabilities](drop-capabilities.md).
 - For defence against an escape regardless of user, combine with 
   [user namespace remapping at the daemon level](container-review.md) and a [confinement profile](seccomp-apparmor.md).
+Last updated: 10 July 2026

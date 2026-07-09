@@ -114,3 +114,4 @@ if not totp.verify(user_supplied_code):
 FIDO2/passkeys (WebAuthn) are the stronger option and are now supported in all major
 browsers and platforms. They bind the credential to the specific origin and are phishing-resistant
 in a way that TOTP is not.
+Last updated: 10 July 2026

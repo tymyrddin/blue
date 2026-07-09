@@ -87,3 +87,4 @@ controller, confirms the DCSync pattern. Accounts legitimately granted replicati
 (such as Azure AD Connect sync accounts in hybrid environments) appear in the first query;
 their source IPs are the expected sync server addresses and distinguish legitimate
 operations from attacker activity.
+Last updated: 26 May 2026

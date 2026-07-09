@@ -192,3 +192,4 @@ Filter: source:ci-runner AND message:"DefectDojo import successful" AND scanner:
 Similar alerts exist for OpenVAS (7-day window, matching the weekly scan schedule), Wazuh (1-hour window, since Wazuh alerts are continuous), and GitLab SAST (24-hour window).
 
 When a scanner integration fails, the error is logged to `/var/log/defectdojo-integrations/` on the relevant host and the Graylog alert notifies Cheery. She investigates and resolves before the next scan window, to avoid missing findings.
+Last updated: 10 July 2026

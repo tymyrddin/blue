@@ -51,3 +51,4 @@ Mirroring critical repositories (`git clone --mirror`) provides a recovery path 
 deleted or corrupted. Audit logs record access events; reviewing them periodically surfaces unexpected
 access patterns. An incident plan covering the steps for when a secret leaks (rotation, scope assessment,
 notification) is considerably easier to follow when it exists before the event.
+Last updated: 10 July 2026

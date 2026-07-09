@@ -108,3 +108,4 @@ Commonly used open-source tools, for the ones that do not ship on Kali:
 * [Scapy](https://scapy.net/)
 
 The Obsidian Desk is a lab of shadows and whispers. Devices are guests, not colleagues; firmware is sacred, and never touched without gloves and a snapshot. Run it that way and the worst you will smell is solder.
+Last updated: 01 June 2026

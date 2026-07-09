@@ -85,3 +85,4 @@ control that has not reached its intended state.
 Partial enforce mode on high-value targets provides meaningful protection regardless of workstation
 policy. Domain controllers, certificate authorities, and backup infrastructure under enforce mode
 raise the lateral movement cost significantly for most common attacker toolchains.
+Last updated: 10 July 2026

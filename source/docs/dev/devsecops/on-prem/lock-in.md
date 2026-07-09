@@ -22,3 +22,4 @@
 - Use Kubernetes (vanilla, not managed) for portability.  
 - Avoid proprietary storage; use Ceph/MinIO for S3 compatibility.  
 - Keep backups in open formats (SQL dumps, CSV, Parquet).  
+Last updated: 07 June 2025

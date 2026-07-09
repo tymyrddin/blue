@@ -112,3 +112,4 @@ For Hetzner deployment, run `./ctl cohort-keys` before `./ctl up` to generate a 
 distribution. Restricting repo directory permissions prevents the private key from being world-readable.
 
 The SimLab repository can be found at [github.com/tymyrddin/ics-access-simlab](https://github.com/tymyrddin/ics-access-simlab).
+Last updated: 20 May 2026

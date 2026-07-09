@@ -110,3 +110,4 @@ At the start of each month, Angua and Ludmilla review the following:
 Rules with zero matches over three consecutive months should be reviewed. They may be detecting a threat that simply has not manifested in the environment, which is fine. Or they may be mis-configured and silently broken. Test them with a PCAP replay (see the custom script development runbook) to confirm they would fire if the relevant traffic appeared.
 
 The output of the monthly review is a short note in the internal wiki: what changed, why, and what was observed. This record is useful context when an incident eventually occurs, because it shows which detection capability was in place at what time.
+Last updated: 10 July 2026

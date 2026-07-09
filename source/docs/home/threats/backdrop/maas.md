@@ -29,3 +29,4 @@ phishing, remain the appropriate response; the attacker's technical level does n
 ## Resources
 
 * [Threat Spotlight: Illicit Telegram Markets & OTP Bots](https://flare.io/learn/resources/blog/threat-spotlight-illicit-telegram-markets-otp-bots/), 2022
+Last updated: 16 May 2026

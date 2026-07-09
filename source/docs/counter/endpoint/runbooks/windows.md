@@ -118,3 +118,4 @@ wecutil qc /q
 | Ransomware       | Isolate host, kill `mshta.exe`  | `Stop-Process -Name mshta -Force`   |
 | LSASS dumping    | Enable Credential Guard, reboot | `Set-ItemProperty -Path HKLM:\...`  |
 | Lateral movement | Block SMB/RDP at firewall       | `New-NetFirewallRule -Action Block` |
+Last updated: 27 May 2026

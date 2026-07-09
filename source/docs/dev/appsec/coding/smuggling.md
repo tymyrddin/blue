@@ -25,3 +25,4 @@ Request ID propagation: adding a unique identifier to each request at the fronte
 ## Infrastructure auditing
 
 Smuggling vulnerabilities are primarily identified through differential response testing: sending a request that would produce different responses depending on how the servers interpret its boundaries. Tools like Burp Suite's HTTP Request Smuggler extension and `smuggler.py` automate this. Running these against staging environments before deployment identifies the vulnerability at the infrastructure layer where the fix applies.
+Last updated: 10 July 2026

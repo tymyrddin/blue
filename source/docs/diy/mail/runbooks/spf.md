@@ -83,3 +83,4 @@ Soften `-all` to `~all` in the TXT record if legitimate mail is being rejected, 
 
 - SPF alone does not stop From-header spoofing. Pair with [DKIM](dkim.md) and [DMARC](dmarc.md); the [mail stack](../stack.md) explains why all three are needed.
 - SPF breaks on forwarding. DKIM survives it, which is part of why both are published.
+Last updated: 29 May 2026

@@ -108,3 +108,4 @@
 
 * They will sleep better knowing the backups do not reside under the [CLOUD Act](https://www.justice.gov/criminal/cloud-act-resources).
 * And it may be worth avoiding explaining the infrastructure to a [Data Protection Authority](https://en.wikipedia.org/wiki/National_data_protection_authority) with a grudge.
+Last updated: 10 July 2026

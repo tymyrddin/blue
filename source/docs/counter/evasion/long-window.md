@@ -69,3 +69,4 @@ This is not a guaranteed detection. A sufficiently patient attacker can move wit
 - [UEBA pipeline implementation](../../org/enterprise/runbooks/ueba-pipeline.md)
 - [Alert tuning](../../org/enterprise/runbooks/alert-tuning.md)
 - [Identity persistence hunting](../persistence/runbooks/identity-persistence-hunt.md)
+Last updated: 10 July 2026

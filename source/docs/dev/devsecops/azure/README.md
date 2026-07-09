@@ -21,3 +21,4 @@ Microsoft Azure’s security model also follows shared responsibility, requiring
 
 * [Foundation for a secure Azure deployment pipeline](pipeline.md)
 
+Last updated: 05 May 2025

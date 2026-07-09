@@ -126,3 +126,4 @@ Each key's configuration is then inspected individually to verify the above cons
 ## The defender's view
 
 A key hierarchy is a wager about what an attacker gets when they reach a host. The credential-dumping techniques it is meant to contain, from LSASS and the SAM to NTDS extraction, are set out in [credential dumping](../../../counter/creds/dumping.md).
+Last updated: 09 June 2026

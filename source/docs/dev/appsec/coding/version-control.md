@@ -98,3 +98,4 @@ git log --show-signature
 ```
 
 Signed commits are a signal, not a guarantee: if the signing key itself is compromised, signed commits from that key are not trustworthy. Key management and revocation matter as much as the signing mechanism.
+Last updated: 17 May 2026

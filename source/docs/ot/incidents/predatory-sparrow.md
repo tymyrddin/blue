@@ -99,3 +99,4 @@ pressure instruments rather than attempts at strategic denial.
   bring the turbine down through its own protection system; protective limits turned against the process
 - [OT Defence Workbench](../labs/workbench): brief 6 drops FC06 and FC16 Modbus write commands regardless of
   source address; the function code filter that would block the safety parameter write technique
+Last updated: 10 July 2026

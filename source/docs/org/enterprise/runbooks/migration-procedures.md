@@ -104,3 +104,4 @@ Document the failure in the incident log before doing anything else. Angua's sta
 ```
 
 The 72-hour hold on VM decommissioning has saved two rollbacks. Sam Vimes Jr. is credited with insisting on it after the first close call.
+Last updated: 20 March 2026

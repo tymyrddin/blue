@@ -44,3 +44,4 @@ That unsettled space is where most of the useful tension lives: a caveat ignored
 diverges, an observer who observes more than holding requires, an obligation tested at the worst
 possible moment. The arrangement is the easier part. What partners do inside the gaps it leaves is
 the part worth attention.
+Last updated: 09 June 2026

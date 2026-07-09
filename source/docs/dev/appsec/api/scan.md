@@ -40,3 +40,4 @@ full scanner provides.
 
 Automated scanners find known patterns reliably. Business logic vulnerabilities, authorisation failures, and
 workflow-level issues require manual testing with multiple accounts at different privilege levels.
+Last updated: 10 July 2026

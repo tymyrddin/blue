@@ -27,3 +27,4 @@ Access the dashboard at `https://your-ip:64297`
 # In Zeek config  
 redef Notice::emailed_types += { SSHD::Login };
 ```
+Last updated: 16 May 2026

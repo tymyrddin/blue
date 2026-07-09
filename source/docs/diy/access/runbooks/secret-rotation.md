@@ -93,3 +93,4 @@ protection law. Seek legal advice before concluding no notification is required.
 
 - [CI/CD credential handling](cicd-credentials.md) for pipeline secrets, a common place they leak.
 - [SSH key setup and rotation](../../server/runbooks/key-management.md) for the server-key case specifically.
+Last updated: 29 May 2026

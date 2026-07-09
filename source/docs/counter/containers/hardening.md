@@ -148,3 +148,4 @@ configurations restrict ingress but leave egress open. A pod with no egress poli
 reach the cloud metadata service, the Kubernetes API server, and arbitrary external
 infrastructure. Egress policies that explicitly allow only the destinations the
 application needs remove most of that surface.
+Last updated: 10 July 2026

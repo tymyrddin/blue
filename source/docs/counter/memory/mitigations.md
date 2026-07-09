@@ -157,3 +157,4 @@ afl-fuzz -i corpus/ -o findings/ -- ./target @@
 
 Continuous fuzzing on CI pipelines (Google's OSS-Fuzz for open source projects)
 catches regressions as they are introduced rather than months or years later.
+Last updated: 27 May 2026

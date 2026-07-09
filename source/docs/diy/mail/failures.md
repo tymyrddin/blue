@@ -43,3 +43,4 @@ Rotating to 2048-bit or Ed25519 keys on a regular cycle and retiring old selecto
 A TLSA record exists in DNS. The zone is not DNSSEC-signed. Sending servers that implement DANE cannot verify the authenticity of the TLSA record: the chain of trust from the root to the record does not exist. They fall back to opportunistic TLS or fail the validation check entirely. The TLSA record is present and unverifiable; the downgrade protection it was intended to provide is absent.
 
 Signing the zone with DNSSEC before publishing TLSA records closes this. DANE without DNSSEC is the record without the lock.
+Last updated: 10 July 2026

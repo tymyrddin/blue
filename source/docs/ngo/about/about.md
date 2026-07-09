@@ -100,3 +100,4 @@ faintly in her sleep, and the thing in the basement ... purrs.
 
 "We don't fix them. We just give them somewhere to be bewildered in peace." ~ Motto of the Home (unofficial,
 coined by a volunteer after three mugs of tea)
+Last updated: 21 March 2026

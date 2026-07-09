@@ -106,3 +106,4 @@ recently had a very specific and illuminating set of experiences.
 - [The attack surface](ml-risks.md)
 - [GDPR obligations](../data/gdpr.md)
 - [Covenant](../applications/covenant.md)
+Last updated: 10 July 2026

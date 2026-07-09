@@ -94,3 +94,4 @@ Research is finished when two things are ready:
 Both go to the Forge, which crafts detection signatures from the artefact list and, under the approved protocols, scans for vulnerable deployments and runs the disclosure.
 
 The thread that has to stay unbroken: every finding, every piece of evidence, every artefact traces back to the original firmware hash in `artefacts/<vendor>/<device>/<version>/source.yaml`. The chain from acquisition to vulnerability is the thing that makes the rest of it stand up.
+Last updated: 01 June 2026

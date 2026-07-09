@@ -109,3 +109,4 @@ Findings are categorised as:
 - Training gap: the team was uncertain about a step
 
 Each finding is assigned an owner and a resolution target date. Findings are tracked in the `ansible-playbooks` repository under `dr/lessons-learned.md`. All findings from an exercise must be resolved before the next exercise of the same type. Otto Chriek reviews the lessons learned register as part of the quarterly ISO 27001 review.
+Last updated: 20 March 2026

@@ -70,3 +70,4 @@ is concrete and the behaviour change is simple.
 ## Related
 
 - [How a resource-constrained NGO enforces this](../../ngo/foundation/conditional-access.md)
+Last updated: 09 July 2026

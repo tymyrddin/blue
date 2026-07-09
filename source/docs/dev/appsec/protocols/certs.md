@@ -123,3 +123,4 @@ resolver_timeout 5s;
 
 `ssl_stapling_verify on` causes nginx to verify the OCSP response against the CA chain before stapling it. The
 `resolver` directive is required because nginx needs to perform DNS resolution to reach the OCSP responder.
+Last updated: 17 May 2026

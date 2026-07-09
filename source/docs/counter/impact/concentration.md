@@ -44,3 +44,4 @@ morning it is needed.
   who reaches a high-value dependency, and the exclusion creep that erodes it.
 - [Responding to it](runbooks/concentration-response.md): the continuity runbook for when the
   provider goes dark.
+Last updated: 10 July 2026

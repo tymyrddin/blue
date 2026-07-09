@@ -26,3 +26,4 @@ One additional condition: Memory Integrity (the Windows UI name for HVCI) can be
 registry on systems where it is not enforced through hardware or through a policy that prevents
 the registry write. An attacker with local administrator access can disable it. Effective deployment
 requires enforcement through Secure Boot and a mechanism that prevents the registry modification.
+Last updated: 12 June 2026

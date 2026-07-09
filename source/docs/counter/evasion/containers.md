@@ -104,3 +104,4 @@ Admission controller violations: a pod spec requesting capabilities outside the 
 - [Securing containers](../../dev/appsec/lockdown/containers.md)
 - [Container security gaps](../../diy/containers/failures.md)
 - [Supply chain hardening](../app/supply-chain.md)
+Last updated: 10 July 2026

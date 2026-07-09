@@ -128,3 +128,4 @@ before the data leaves the building.
 - [AI in vendor applications](application-governance.md)
 - [SIRT structure](../data/sirt.md)
 - [GDPR obligations](../data/gdpr.md)
+Last updated: 10 July 2026

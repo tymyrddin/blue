@@ -103,3 +103,4 @@ Fake admin account names follow a pattern that makes them look like real legacy 
 - `svc-*-2023` (with an old year): looks like a service account that was created during a migration and not cleaned up
 
 These names are plausible because Golem Trust, like every organisation that has grown, actually does have some old service accounts with similar naming patterns. The difference is that all real service accounts are documented in the service account registry; the canary accounts are not, and any authentication attempt against them indicates either an attacker with access to AD enumeration or an insider exploring accounts they should not be accessing.
+Last updated: 20 March 2026

@@ -85,3 +85,4 @@ Sudoers changes take effect immediately on save. To undo, run `visudo` again and
 
 - Pair with [disabling root](disable-root.md): scoped sudo plus no root login is the combination that limits a single compromised account.
 - Review sudoers periodically as roles change. Stale grants accumulate.
+Last updated: 10 July 2026

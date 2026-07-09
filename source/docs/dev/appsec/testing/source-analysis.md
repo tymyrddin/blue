@@ -28,3 +28,4 @@ IAST:
 SAST tools are suited to CI integration: they run against the source tree on each commit, fail on findings above a configured severity, and produce results in formats that integrate with code review tooling (GitHub, GitLab). DAST tools typically run against a staging or test environment rather than the CI build, since they require a running application.
 
 The practical challenge with both is false positive management. Tools configured with aggressive settings generate enough noise to train developers to ignore results. Starting with a focused, high-confidence rule set and expanding over time tends to produce better outcomes than enabling every check at once.
+Last updated: 17 May 2026

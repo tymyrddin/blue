@@ -154,3 +154,4 @@ def notify_critical(finding: dict):
 ```
 
 Cheery has configured Mattermost to send her a push notification for every message in `#security-findings` regardless of the time of day. Angua is also a member of this channel. Neither of them has complained about the interruptions; they consider it preferable to the alternative.
+Last updated: 10 July 2026

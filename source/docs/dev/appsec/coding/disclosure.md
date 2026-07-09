@@ -72,3 +72,4 @@ Debug endpoints, profiling routes, and admin panels exposed without authenticati
 ## Developer comments in source
 
 HTML comments that reveal server-side logic, database structure, or testing notes are indexed by search engines and visible to anyone who views the page source. Production build pipelines strip comments from rendered HTML and minified JavaScript as a matter of course. For templates that are rendered server-side, a linting step that flags `<!-- TODO` or similar patterns catches these before deployment.
+Last updated: 10 July 2026

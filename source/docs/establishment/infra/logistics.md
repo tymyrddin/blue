@@ -29,3 +29,4 @@ is the thing that fails, or the day the lender decides the city's need is negoti
 real logistics problem is therefore less about owning depots than about whether the arrangements
 that supply it will hold under pressure. That is a question of trust as much as of warehousing, and
 it is the same question the rest of these pages keep finding under everything else.
+Last updated: 09 June 2026

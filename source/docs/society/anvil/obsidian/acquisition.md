@@ -280,3 +280,4 @@ Sanity checks before trusting the dump:
 * Compare the dump size against the expected flash size
 
 Confidence comes from repetition, not hope.
+Last updated: 09 July 2026

@@ -145,3 +145,4 @@ kubectl uncordon <NODE_NAME>
 ```
 
 Never drain more than one node at a time in the same cluster without verifying that PodDisruptionBudgets permit it. Sam Vimes Jr. once drained three nodes simultaneously and lost quorum on a customer's Kafka deployment. The `merchants-guild` namespace still has a Jira ticket open about it.
+Last updated: 20 March 2026

@@ -37,3 +37,4 @@ Environment variables are a step up from files, but not a secrets management sys
 ## Service account credentials
 
 API keys and service tokens accumulate the same way SSH keys do: added for a purpose, retained past the purpose's end. A quarterly review of what API keys exist, which services they grant access to, and whether they are still in active use is worth the time it takes. Most provider consoles show last-used timestamps; keys unused for months are candidates for revocation.
+Last updated: 29 May 2026

@@ -20,3 +20,4 @@ The economy that bites hardest is the quiet one: the source nobody is paying to 
 nothing has ever needed it, right up until the morning it would have been the only record of how the
 intruder got in. Log strategy is mostly the management of that bet, and the bet is placed long before
 the hand is played.
+Last updated: 12 June 2026

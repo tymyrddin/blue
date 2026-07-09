@@ -20,3 +20,4 @@ Sensitive data exposure: unencrypted columns for data classified as sensitive (p
 - MySQL Enterprise Audit, pgAudit: database-native audit logging for monitoring rather than active scanning
 - DbProtect (Trustwave): commercial database vulnerability scanner
 - `sqlmap`, `nmap --script mysql-*` / `--script pgsql-*`: open-source alternatives for specific checks
+Last updated: 17 May 2026

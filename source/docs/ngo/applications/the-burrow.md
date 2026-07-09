@@ -70,3 +70,4 @@ from Priya's personal account, which costs money that was not in the budget. The
 something that nobody has officially proposed but that represents the current state: the
 situation is known, it is being assessed, and the Burrow continues to be used because the
 east wing volunteers still need coordinating and the spreadsheets are not going back.
+Last updated: 10 July 2026

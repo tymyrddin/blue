@@ -80,3 +80,4 @@ The attacker's advantage is that they can study the environment before planting
 persistence and choose names, paths, and patterns that fit the existing noise.
 The defender's advantage is that persistence is durable. It can be found days
 or weeks after the initial compromise if the right hunting capability exists.
+Last updated: 10 July 2026

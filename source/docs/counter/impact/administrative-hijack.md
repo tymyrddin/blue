@@ -66,3 +66,4 @@ revoke is the difference between a bad afternoon and an institution that cannot 
   the policy pipeline.
 - [Responding to it](runbooks/administrative-hijack-response.md): hunting the shape, and containing
   both postures.
+Last updated: 10 July 2026

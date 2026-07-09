@@ -70,3 +70,4 @@ cannot see.
 - [Identity foundations](../foundation/entra-id.md)
 - [MFA rollout](../foundation/mfa.md)
 - [Conditional Access](../foundation/conditional-access.md)
+Last updated: 10 July 2026

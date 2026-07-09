@@ -107,3 +107,4 @@ all and the secret simply surfaces on the far side. Both are losses a copy
 makes permanent, which is why exfiltration detection (in the
 [exfiltration section](../exfiltration/index.rst)) is the control point for
 either.
+Last updated: 10 July 2026

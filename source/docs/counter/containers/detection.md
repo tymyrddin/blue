@@ -136,3 +136,4 @@ fields across the two log sources makes the correlation practical.
 The runtime signals above, shell spawns inside pods, unexpected exec, and drift from the image, are
 produced by Falco. Golem Trust Computing's deployment of it is in
 [Falco deployment](../../org/enterprise/runbooks/falco-deployment.md).
+Last updated: 10 July 2026

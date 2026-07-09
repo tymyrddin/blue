@@ -37,3 +37,4 @@ deprecated. Do not deploy or extend those add-ins.
 The button appears automatically across Outlook on the web, Outlook for Windows (new
 Outlook), Outlook for Mac, and Outlook mobile. No add-in deployment is required. It works
 in shared mailboxes, which the deprecated add-ins did not support reliably.
+Last updated: 21 March 2026

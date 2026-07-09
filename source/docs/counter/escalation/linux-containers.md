@@ -92,3 +92,4 @@ techniques, including `add_key`, `keyctl`, `unshare`, and certain `clone` flag
 combinations. A container run with `--security-opt seccomp=unconfined` removes this
 layer. The default profiles are not infallible, but their absence represents a measurable
 reduction in the barrier to exploitation.
+Last updated: 10 July 2026

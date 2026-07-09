@@ -12,3 +12,4 @@ Fake apps repackage an app and are relatively easy discovered as the identifiers
 
 * Yangyu Hu, [Mobile App Squatting](https://lilicoding.github.io/papers/hu2020mobile.pdf), 2020, IW3C2
 * PiRogue tool suite: [Beginner guide - How to handle a potentially malicious mobile app](https://pts-project.org/guides/g3/)
+Last updated: 05 May 2025

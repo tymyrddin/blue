@@ -72,3 +72,4 @@ Switch back to `Content-Security-Policy-Report-Only` (keeps reporting, stops blo
 
 - Confirm with a [security header check](check.md).
 - CSP limits execution, not injection itself. Server-side input handling and [nosniff](../reading-logs.md) close related gaps; see the [webserver stack](../stack.md).
+Last updated: 10 July 2026

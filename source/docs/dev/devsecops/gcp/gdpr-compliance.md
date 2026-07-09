@@ -40,3 +40,4 @@
  
 - [GDPR Resources](https://cloud.google.com/privacy/gdpr)
 - [Assured Workloads Guide](https://cloud.google.com/assured-workloads/docs/data-residency)
+Last updated: 07 June 2025

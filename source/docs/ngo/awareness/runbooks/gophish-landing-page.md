@@ -46,3 +46,4 @@ Participants will see the cloned page and may notice it is not the real Microsof
 This is intentional: the session is about recognition and the debrief. The redirect page confirming the simulation appears
 immediately after credential submission, closing the loop while the participant is
 still engaged.
+Last updated: 10 July 2026

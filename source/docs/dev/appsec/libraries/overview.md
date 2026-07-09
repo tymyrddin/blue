@@ -48,3 +48,4 @@ runtime exfiltration attempt.
 ## Related
 
 - [Supply chain hardening](../../../counter/app/supply-chain.md)
+Last updated: 26 May 2026

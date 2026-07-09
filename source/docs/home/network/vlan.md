@@ -22,3 +22,4 @@ Works on most home routers: ASUS, TP-Link, Netgear, and similar.
 
 IoT devices on the isolated network can reach the internet (for firmware updates and cloud features)
 but cannot probe computers or phones on the primary network.
+Last updated: 16 May 2026

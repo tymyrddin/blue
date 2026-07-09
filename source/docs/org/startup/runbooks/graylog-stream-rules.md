@@ -90,3 +90,4 @@ The default index set retention (20 indices, approximately 200GB) applies to all
 Navigate to Search and set the time range to the last 15 minutes. Switch to the stream view by selecting a stream from the left panel. Messages routed to that stream should appear. If a stream shows zero messages when it should have traffic, check the rules and confirm that the expected fields exist on arriving messages. Use the `All messages` stream to find a recent relevant message and inspect its fields.
 
 If a field used in a rule is absent from incoming messages, the rule will never match. Check the extractor configuration (see the input setup runbook) and the shipping configuration on the source server.
+Last updated: 20 March 2026

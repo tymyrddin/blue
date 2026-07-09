@@ -87,3 +87,4 @@ docker compose up --build
 ```
 
 The SimLab repository can be found at [github.com/tymyrddin/smart-grid-sim](https://github.com/tymyrddin/smart-grid-sim).
+Last updated: 23 May 2026

@@ -130,3 +130,4 @@ time.
   [concentration and dependency](../counter/impact/concentration.md).
 - The technical lab execution behind this narrative:
   [FungusFiber: Operation Toadstool Takeover](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/toadstool-takeover.html).
+Last updated: 10 July 2026

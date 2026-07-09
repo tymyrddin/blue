@@ -139,3 +139,4 @@ shred -u /opt/pcap/capture_20260301_143000.pcap
 ```
 
 Log all PCAP captures and deletions in the internal security log, including the capture filter used, the duration, the analyst who initiated it, and the reason. Adora Belle reviews this log quarterly.
+Last updated: 20 March 2026

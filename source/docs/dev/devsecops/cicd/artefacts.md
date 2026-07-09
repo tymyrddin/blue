@@ -19,3 +19,4 @@ SLSA consists of four levels, with SLSA 4 representing the ideal end state. The 
 - [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
 - [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
+Last updated: 12 March 2026

@@ -180,3 +180,4 @@ Post-engagement, the Graylog instance is snapshotted and the snapshot is transfe
 Red team VMs are rebuilt from scratch before each major engagement using an Ansible playbook at `ansible/red-team/provision.yml`. This prevents tool and configuration drift between engagements, and ensures no artefacts from a previous engagement inadvertently affect the next.
 
 Security patches are applied weekly via an automated unattended-upgrades configuration, even between engagements.
+Last updated: 10 July 2026

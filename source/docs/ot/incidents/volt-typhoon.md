@@ -113,3 +113,4 @@ a legitimate remote access path, the attacker inherits whatever the remote acces
   PLC; telemetry flowing without further attacker presence on the inner network
 - [OT Defence Workbench](../labs/workbench): brief 7 restricts Modbus write function codes to a single
   authorised source; limits what pre-positioned OT segment access can accomplish
+Last updated: 20 May 2026

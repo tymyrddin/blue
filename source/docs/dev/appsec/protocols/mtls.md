@@ -88,3 +88,4 @@ proxy_set_header X-Client-Verify       $ssl_client_verify;
 The application reads these headers to determine which service is calling. This pattern only works securely
 when the application is not directly accessible without going through nginx: a caller that can bypass nginx
 can set these headers arbitrarily.
+Last updated: 17 May 2026

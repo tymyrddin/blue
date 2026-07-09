@@ -160,3 +160,4 @@ restic check
 ```
 
 A passing check confirms the repository is consistent and all snapshot data is intact. Run `restic check` after the first backup and monthly thereafter (the monitoring setup runbook schedules this automatically).
+Last updated: 20 March 2026

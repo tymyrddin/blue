@@ -87,3 +87,4 @@ After completing triage, update the researcher with the outcome. See the researc
 Every submission, including invalid and out-of-scope ones, is recorded in DefectDojo as a finding with the appropriate status. This provides an auditable record of all submissions and ensures that patterns (multiple researchers reporting the same out-of-scope finding, for example) are visible to Angua and Carrot when reviewing the programme.
 
 Angua reviews the triage log weekly with Carrot, looking for trends in submission types, recurring out-of-scope submissions that may indicate a scope clarification is needed, and quality signals about the researcher pool.
+Last updated: 10 July 2026

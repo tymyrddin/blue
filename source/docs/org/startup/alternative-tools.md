@@ -196,3 +196,4 @@ configurations but not the application layer.
 ## Related
 
 - [Initial threat modeling: physical and remote access](https://purple.tymyrddin.dev/docs/threat-modelling/)
+Last updated: 09 July 2026

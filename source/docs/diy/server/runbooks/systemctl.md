@@ -81,3 +81,4 @@ Because disabling is reversible, the safe path is always stop, test, then disabl
 
 - Pair with a [firewall](ufw.md) that denies inbound by default: service minimisation and inbound restriction cover different gaps.
 - Re-run periodically; new services arrive with package installations.
+Last updated: 29 May 2026

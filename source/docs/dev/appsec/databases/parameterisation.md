@@ -49,3 +49,4 @@ User.objects.raw("SELECT * FROM users WHERE email = %s", [user_email])
 ```
 
 The Django `extra()` and `RawSQL()` methods accept raw SQL strings and carry injection risk if user input reaches the SQL argument rather than the params argument.
+Last updated: 17 May 2026

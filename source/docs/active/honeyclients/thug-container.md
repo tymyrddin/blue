@@ -196,3 +196,4 @@ detected behaviours, and JavaScript activity.
 
 These containers have no outbound network restrictions by default. For analysis work, pair with a
 network firewall or run with `--network=none` and route traffic through a monitored proxy.
+Last updated: 27 May 2026

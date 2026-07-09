@@ -54,3 +54,4 @@ applications to communicate with field devices. Some devices accept pairing requ
 without authentication. Disabling Bluetooth on field devices when not in active
 maintenance use, using only devices that require explicit pairing confirmation, and
 restricting Bluetooth-capable tools to physically secured areas reduce this surface.
+Last updated: 26 May 2026

@@ -19,3 +19,4 @@ The partial deployment case: enforce mode on domain controllers, certificate aut
 infrastructure, and other high-value targets still provides meaningful protection. The deployment
 does not need to be universal to raise lateral movement cost significantly for an attacker
 targeting those specific systems.
+Last updated: 12 June 2026

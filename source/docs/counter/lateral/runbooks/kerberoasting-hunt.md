@@ -44,3 +44,4 @@ A single RC4 TGS request may be a legacy application. A source requesting RC4 ti
 three or more different service account SPNs within a short window is the Kerberoasting
 pattern. Legitimate SPNs queried by management tooling appear consistently across hunts;
 new SPNs in the high-RC4 list are worth prioritising.
+Last updated: 27 May 2026

@@ -22,3 +22,4 @@ their data, configurations, and access controls.
 
 * [Basis for a secure AWS deployment pipeline](pipeline.md)
 
+Last updated: 06 December 2025

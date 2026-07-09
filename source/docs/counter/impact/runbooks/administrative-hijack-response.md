@@ -43,3 +43,4 @@ Join each change against the change-management record. A change with no ticket i
   replication utilities, and the policy pipeline are high-value targets, because a valid token on any
   of them needs no malware.
 - Make a security-tightening change reviewable and reversible like any other change.
+Last updated: 10 July 2026

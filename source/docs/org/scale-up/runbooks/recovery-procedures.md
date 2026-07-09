@@ -156,3 +156,4 @@ Within 24 hours, complete a post-recovery review:
 - Update this runbook if the procedure required improvisation
 
 Post a summary in `#incidents` and close the incident. Notify the Royal Bank of Ankh-Morpork liaison of the recovery and provide the outage summary and root cause.
+Last updated: 20 March 2026

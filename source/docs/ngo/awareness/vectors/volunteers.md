@@ -59,3 +59,4 @@ Volunteers with public-facing roles should be told directly that targeted approa
 possibility, what those approaches might look like, and how to escalate. This is not a
 reason to alarm them. It is a reason to make sure they are not surprised, because surprise
 is what social engineering depends on.
+Last updated: 10 July 2026

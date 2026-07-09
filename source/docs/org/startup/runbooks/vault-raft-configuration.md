@@ -221,3 +221,4 @@ vault operator raft remove-peer vault-3
 Then reprovision the instance, reinstall Vault with the same configuration, and start the service. The new node will rejoin the cluster via the `retry_join` addresses and replicate all data from the current leader.
 
 Do not remove a peer unless the node is definitively gone. Removing a healthy peer disrupts the cluster quorum. The cluster requires two of three nodes to be available to elect a leader and process requests. If two nodes are lost simultaneously, the cluster will stop accepting writes until one is restored.
+Last updated: 20 March 2026

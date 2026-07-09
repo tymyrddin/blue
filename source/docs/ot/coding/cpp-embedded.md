@@ -111,3 +111,4 @@ int main() {
 The handler needs to be registered before any C++ constructors that could themselves trigger termination: as early as possible in the startup sequence. On targets where `main` is not the entry point, register it in the startup code before jumping to `main`.
 
 The watchdog timer is the last resort: if the terminate handler itself faults before completing the safe-state transition, the watchdog expires and forces a reset. An OT system with a working watchdog has a known restart behaviour; one without has an unknown hang behaviour.
+Last updated: 10 July 2026

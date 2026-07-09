@@ -196,3 +196,4 @@ gator verify gatekeeper/tests/
 ```
 
 The `gator` tests run in the GitLab CI pipeline alongside the OPA unit tests. Otto Chriek's requirement is clear: all three test types (OPA unit tests, Conftest plan tests, gator constraint tests) must pass before any policy change is merged.
+Last updated: 20 March 2026

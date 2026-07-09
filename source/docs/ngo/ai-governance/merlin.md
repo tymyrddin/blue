@@ -138,3 +138,4 @@ suggested renaming it something less prophetic. Nobody took the suggestion.
 - [The attack surface](ml-risks.md)
 - [The Burrow](../applications/the-burrow.md)
 - [GDPR obligations](../data/gdpr.md)
+Last updated: 10 July 2026

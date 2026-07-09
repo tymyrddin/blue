@@ -98,3 +98,4 @@ machine before testing reveals the paths that receive less attention: the edge c
 admin feature accessible to users with a half-complete account upgrade. The questions worth asking for each workflow
 are: what is the most valuable outcome, and which steps on the path to it are less carefully guarded than the intended
 path?
+Last updated: 10 July 2026

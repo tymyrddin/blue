@@ -97,3 +97,4 @@ Revert the changed directives in `/etc/ssh/sshd_config` and reload. If locked ou
 
 - Add [fail2ban](fail2ban.md) for services that still accept passwords (web, mail, admin panels). It does not help SSH once keys are enforced, but it covers what cannot drop passwords.
 - For static-IP admin access, TCP wrappers (`/etc/hosts.allow`, `/etc/hosts.deny`) or a firewall rule can restrict SSH to known source addresses.
+Last updated: 29 May 2026

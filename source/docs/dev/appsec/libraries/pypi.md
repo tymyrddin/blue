@@ -75,3 +75,4 @@ pip-licenses --format=table
 ```
 
 Licence compliance is a legal consideration that often surfaces in enterprise environments and open-source projects with explicit licence policies.
+Last updated: 10 July 2026

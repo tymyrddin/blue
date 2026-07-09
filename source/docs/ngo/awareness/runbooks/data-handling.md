@@ -84,3 +84,4 @@ If you forwarded it, say so. The response to a mistake caught quickly is remedia
 The response to a mistake discovered weeks later, because nobody said anything, is
 considerably worse. The culture the exercise is building is one where early disclosure
 is the reflex.
+Last updated: 10 July 2026

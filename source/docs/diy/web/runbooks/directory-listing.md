@@ -73,3 +73,4 @@ Re-add `Indexes` (Apache) or set `autoindex on;` (Nginx) for the specific direct
 
 - Pair with [hiding server information](hide-info.md) to close both information leaks together.
 - Confirm via a [public exposure review](../../incidents/runbooks/exposure-review.md) that no directory still lists.
+Last updated: 10 July 2026

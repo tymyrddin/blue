@@ -113,3 +113,4 @@ Remove `smtpd_milters` / `non_smtpd_milters` from `main.cf` and restart Postfix 
 
 - DKIM proves the message came from an authorised signer, not that the From header is honest. [DMARC](dmarc.md) ties the signature to the visible From address.
 - Rotate the key periodically by generating a new selector, publishing it, switching the signer to it, then retiring the old record.
+Last updated: 10 July 2026

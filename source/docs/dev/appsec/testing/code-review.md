@@ -22,3 +22,4 @@ Cryptographic implementation: custom hash functions or encryption schemes; use o
 - SonarQube: multi-language; integrates with GitHub and GitLab; provides a quality gate mechanism
 
 Checklists based on the OWASP Top 10 provide a consistent structure for review when a more systematic approach is needed than ad-hoc inspection.
+Last updated: 10 July 2026

@@ -26,3 +26,4 @@ directs the fleet: running attacks, relaying traffic, or subdividing access to s
 The Mirai botnet in 2016, which recruited hundreds of thousands of IoT devices using default credentials,
 demonstrated how large this problem could become when devices with poor security controls are connected at
 scale. The fundamental dynamic has not changed.
+Last updated: 16 May 2026

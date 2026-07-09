@@ -20,3 +20,4 @@ The shared responsibility model tries to draw a line between the cloud provider 
 - [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
 - [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
+Last updated: 12 March 2026

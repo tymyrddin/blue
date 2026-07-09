@@ -57,3 +57,4 @@ Register-ScheduledTask -TaskName "Honeyport" -Action $action -RunLevel Highest -
 2. Event log monitoring (Optional)
 
 Use Windows Event Forwarding to monitor `$logFile` and trigger alerts in SIEM tools.
+Last updated: 19 May 2025

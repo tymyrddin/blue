@@ -127,3 +127,4 @@ has either found a valid credential or triggered an account that does not enforc
 The subsequent session activity from that account is worth reviewing: Event 4769 (Kerberos
 TGS requests), net logon events, and any lateral movement indicators in the hours following
 the success.
+Last updated: 27 May 2026

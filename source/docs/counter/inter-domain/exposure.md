@@ -62,3 +62,4 @@ Concentration is the exposure. A service reachable through one upstream or one e
 cleanly as an attacker hopes, and a single chokepoint is the thing dependency mapping looks for first.
 Spreading announcements across diverse upstreams, and avoiding a single exchange on the critical path,
 narrows the window in which a quiet degradation can pass for congestion.
+Last updated: 17 June 2026

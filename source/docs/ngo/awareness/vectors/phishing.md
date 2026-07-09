@@ -119,3 +119,4 @@ response section covers this in full.
 
 The cultural response: say thank you, make the remediation collaborative, and if the phishing
 email was genuinely convincing, say so, because it usually was.
+Last updated: 10 July 2026

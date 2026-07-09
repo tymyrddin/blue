@@ -157,3 +157,4 @@ Log all restore activity in the internal security log:
 - Whether a post-restore verification was performed and the result
 
 Cheery reviews this log quarterly as part of the DR programme.
+Last updated: 10 July 2026

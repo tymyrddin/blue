@@ -75,3 +75,4 @@ The media boots on the target hardware. Network comes up if the recovery plan de
 
 - Keep a note of the partition layout (`lsblk`, `fdisk -l`) with the image, so the restore target is unambiguous.
 - For a compromise, recovery media pairs with [the first hour](../../incidents/first-hour.md) and a rebuild from [verified backups](../../incidents/runbooks/backup-verification.md).
+Last updated: 10 July 2026

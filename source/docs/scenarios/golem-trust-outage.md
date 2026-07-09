@@ -102,3 +102,4 @@ to tell the city about the sky instead, which is not.
 - A few hours of silence on a ledger, and the counterparties who do not wait for facts: [the Royal Bank](../org/scale-up/royal-bank.md).
 - The impact families underneath it: [concentration](../counter/impact/concentration.md), the
   dependency, and [availability](../counter/impact/availability.md), the outage it became.
+Last updated: 10 July 2026

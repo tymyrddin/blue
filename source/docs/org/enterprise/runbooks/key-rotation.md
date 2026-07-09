@@ -178,3 +178,4 @@ The staging key names mirror production with a `-staging` suffix, e.g. `assassin
 6. Confirm that decryption of the original ciphertext tokens (pre-rewrap) now fails
 7. Confirm that decryption of the rewrapped ciphertext tokens succeeds
 8. Record test results; Ponder reviews before approving the production rotation change request
+Last updated: 20 March 2026

@@ -28,3 +28,4 @@ Based on this pipeline (so just a starter pipeline): [Foundation for a secure Az
 * Surprise Licensing (SQL Server, Premium tier): €70
 
 *Azure: where the default setting is frequently "Yes, bill me."*
+Last updated: 17 May 2026

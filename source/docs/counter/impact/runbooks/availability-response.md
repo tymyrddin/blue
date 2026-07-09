@@ -73,3 +73,4 @@ single fallback is a single point of failure.
 - Restore only after provenance is established. Compare running config and firmware against a
   known-good baseline (`sha256sum`, a config-management diff) before trusting the device again.
 - Watch for re-assertion: firmware or config that reloads the attack from local memory after a reboot.
+Last updated: 10 July 2026

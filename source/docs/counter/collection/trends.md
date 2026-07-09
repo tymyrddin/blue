@@ -82,3 +82,4 @@ are uploaded to unexpected destinations.
 Supply chain controls: hash pinning for dependencies, signature verification
 for packages, scanning of third-party code before it executes in privileged
 contexts.
+Last updated: 27 May 2026

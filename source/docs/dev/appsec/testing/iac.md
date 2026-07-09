@@ -25,3 +25,4 @@ KICS (Keeping Infrastructure as Code Secure): open-source from Checkmarx; suppor
 IaC scanning integrates into CI at the point where Terraform plans or Kubernetes manifests are generated. Failing the pipeline on high-severity findings prevents misconfigured infrastructure from reaching production. As with SAST, the practical approach is to start with a focused set of high-confidence rules, to avoid training the team to ignore the scanner output.
 
 Drift detection (comparing live infrastructure against the IaC definition) is a related concern: resources created outside the IaC process bypass the scanning gate. Tools like AWS Config, Terraform Cloud, and Pulumi provide drift detection capabilities.
+Last updated: 10 July 2026

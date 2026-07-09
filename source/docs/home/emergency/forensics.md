@@ -89,3 +89,4 @@ Save output to a file for reporting:
 
 * Windows: `netstat -ano > connections.txt`
 * Mac/Linux: `lsof -i > connections.txt`
+Last updated: 10 July 2026

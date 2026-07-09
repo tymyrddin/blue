@@ -86,3 +86,4 @@ A misissued service certificate is replaced by issuing a new one and pointing th
 
 - For public-facing services, [Let's Encrypt](lets-encrypt.md) avoids the trust-distribution problem entirely.
 - Track certificate expiry. A 730-day service certificate that lapses unnoticed breaks the service as surely as a misconfiguration.
+Last updated: 10 July 2026

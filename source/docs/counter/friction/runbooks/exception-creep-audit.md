@@ -41,3 +41,4 @@ ones that accreted.
 If enforce mode cannot go everywhere, confirm it covers the targets that earn it: domain controllers, certificate 
 authorities, backup infrastructure. Partial coverage there still raises lateral-movement cost for an attacker aiming 
 at those systems.
+Last updated: 10 July 2026

@@ -88,3 +88,4 @@ There is no safe rollback to embedding a secret. If a build breaks because a sec
 
 - A discovered exposed secret feeds [secret rotation](../../access/runbooks/secret-rotation.md).
 - Image hygiene pairs with the [container review](container-review.md), which scans existing images for both CVEs and secrets in history.
+Last updated: 10 July 2026

@@ -177,3 +177,4 @@ kubectl patch k8srequirenonroot require-non-root-containers \
 ```
 
 Dr. Crucible's standing rule: no new policy goes to `deny` mode without at least one full audit cycle (minimum 60 seconds after the policy is applied) showing zero violations in the target namespaces.
+Last updated: 20 March 2026

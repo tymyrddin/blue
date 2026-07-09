@@ -66,3 +66,4 @@ academic papers referencing it remain available.
 
 * [Escape from Monkey Island: Evading High-Interaction Honeyclients](https://sites.cs.ucsb.edu/~chris/research/doc/dimva11_honey.pdf) (pdf)
 * [DroidCollector Framework](http://loci.ujn.edu.cn/htdocs/DroidCollector/index.html)
+Last updated: 21 May 2026

@@ -130,3 +130,4 @@ Long Table questions.
 
 The case is closed at the Quiet Room. The Long Table determines whether further work is
 warranted.
+Last updated: 10 July 2026

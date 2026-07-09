@@ -114,3 +114,4 @@ across a range of Group/Variation combinations it has not previously used is a r
 - [IEC 62351](iec62351.md): the security standard series; SA v5 implements the same challenge-response model
   as IEC 62351 Part 5
 - [Shodan: port 20000](https://www.shodan.io/search?query=port%3A20000): internet-exposed DNP3 outstations
+Last updated: 19 May 2026

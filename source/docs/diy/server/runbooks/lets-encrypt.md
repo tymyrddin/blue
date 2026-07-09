@@ -74,3 +74,4 @@ A failed certificate change can leave the web server unable to start. Certbot ke
 - Port 443 needs to be open in the [firewall](ufw.md) alongside 80.
 - Renewal failures are easy to miss. The email address given to Certbot receives expiry warnings; a monitored address is worth using.
 - A certificate is only half the job. The services that use it are hardened separately: [HSTS](../../web/runbooks/hsts.md) for the web server, [mail TLS](../../mail/runbooks/mail-tls.md) for the mail server.
+Last updated: 10 July 2026

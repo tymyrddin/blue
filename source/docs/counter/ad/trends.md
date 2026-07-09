@@ -136,3 +136,4 @@ the ticket uses RC4 and a seven-character password set when the account was prov
 three years ago. Crack it in under an hour. Use WriteDACL to add a write-member
 permission to the Domain Admins DACL. Add the service account. None of the individual
 configurations were wrong in isolation. The path was only visible as a graph.*
+Last updated: 10 July 2026

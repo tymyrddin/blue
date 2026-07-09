@@ -99,3 +99,4 @@ took.
   [threat picture](../circle-sea/threats.md).
 - The technical lab execution behind this narrative:
   [Operation Spore Cloud](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/spore-cloud.html).
+Last updated: 19 June 2026

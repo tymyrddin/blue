@@ -167,3 +167,4 @@ Get-FileHash $driverPath | Out-File C:\Evidence\driver_hash.txt
 sc.exe stop $serviceName
 sc.exe delete $serviceName
 ```
+Last updated: 10 July 2026

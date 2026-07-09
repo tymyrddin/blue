@@ -168,3 +168,4 @@ workstations used for Triconex programming is high priority regardless of the ti
 day. The TRITON operators spent around a year inside the target network before deploying
 their payload; the TriStation sessions they opened from a compromised OT host would have
 appeared exactly as this query describes.
+Last updated: 27 May 2026

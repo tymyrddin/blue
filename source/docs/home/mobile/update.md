@@ -12,3 +12,4 @@ documented, publicly available exploit information.
 If a phone no longer receives OS updates from the manufacturer, the attack surface expands with each passing
 month. Most banking and financial apps will eventually drop support for unsupported OS versions. Replacement
 is worth planning for before it becomes urgent.
+Last updated: 16 May 2026

@@ -173,3 +173,4 @@ grep "ssh/sign" /opt/vault/logs/audit.log | tail -20
 ```
 
 Each entry includes the Vault token that made the request, the role used, and the timestamp. This provides a complete record of who requested which certificate and when, even if the certificate itself has long since expired.
+Last updated: 10 July 2026

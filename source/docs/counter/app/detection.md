@@ -115,3 +115,4 @@ Application logs fed into the SIEM alongside authentication, network, and infras
 logs enable correlation rules with a four-hour window that look for this sequence pattern.
 Slow, deliberate testing that stays below individual rate limits is still detectable as a
 sequence if the window is long enough.
+Last updated: 03 June 2026

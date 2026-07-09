@@ -678,3 +678,4 @@ For ECS task definition with security best practices, create a `task-definition.
 * Container runtime security (no root, dropped capabilities)
 * Comprehensive monitoring with CloudWatch and GuardDuty
 
+Last updated: 19 May 2025

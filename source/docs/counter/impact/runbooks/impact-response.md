@@ -179,3 +179,4 @@ aws s3api put-object-lock-configuration \
   --object-lock-configuration \
   '{"ObjectLockEnabled":"Enabled","Rule":{"DefaultRetention":{"Mode":"COMPLIANCE","Days":30}}}'
 ```
+Last updated: 12 June 2026

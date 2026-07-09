@@ -96,3 +96,4 @@ delivery, link unfurling). Options:
 
 Disabling instance metadata endpoints entirely is an option if the application does not
 use them.
+Last updated: 17 May 2026

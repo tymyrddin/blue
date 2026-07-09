@@ -158,3 +158,4 @@ referenced in the State of the City Survey under language that does not credit t
 The Society does not ask for credit. The Office does not offer it. Both understand that the operational
 acknowledgment is the relationship: the speed with which Society findings become advisories, the precision
 with which certain Survey sections reflect the Society's recent case record. Formalising it would end it.
+Last updated: 01 June 2026

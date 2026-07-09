@@ -64,3 +64,4 @@ A passing result means SPF or DKIM passed with alignment, not that the sender is
 
 - The `rua` reports are only useful when read. A dedicated mailbox or a report-parsing tool makes the data legible.
 - Revisit the policy when adding a new sending service; a new source not covered by SPF or DKIM will fail under `p=reject`.
+Last updated: 29 May 2026

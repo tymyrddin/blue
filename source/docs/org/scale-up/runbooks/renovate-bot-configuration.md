@@ -140,3 +140,4 @@ The repository has conflicting branch protection rules: Renovate needs to be abl
 A package manager lockfile is out of date: Renovate will refuse to update a dependency if the lockfile does not match `package.json` (or equivalent). Commit an updated lockfile to resolve this.
 
 The Renovate Docker image is outdated: update the image reference in the `renovate-bot` pipeline to use the latest tag, which is updated weekly in Harbor via the base image rescan cycle.
+Last updated: 10 July 2026

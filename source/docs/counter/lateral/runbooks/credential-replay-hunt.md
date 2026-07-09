@@ -67,3 +67,4 @@ Cross-reference new-source events against HR or IT change records. Accounts with
 source events targeting server hosts rather than workstations are higher priority. Events
 that also appear in the Kerberoasting or admin share hunts within the same window raise
 confidence further.
+Last updated: 26 May 2026

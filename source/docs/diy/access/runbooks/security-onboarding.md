@@ -49,3 +49,4 @@ Confirm before the first production access:
 - [MFA rollout](mfa-rollout.md) for the multi-factor step in full.
 - [Secret rotation](secret-rotation.md) for how the team handles credentials the new engineer will encounter.
 - [Offboarding](offboarding.md), the mirror image for when they leave.
+Last updated: 29 May 2026

@@ -120,3 +120,4 @@ sast-scheduled:
 Configure the schedule in GitLab under the project's CI/CD Schedules: run every Monday at 05:00.
 
 The scheduled scan results are emailed to the `#security-alerts` channel in the team chat via a GitLab webhook. Any new Critical findings trigger a Graylog alert.
+Last updated: 10 July 2026

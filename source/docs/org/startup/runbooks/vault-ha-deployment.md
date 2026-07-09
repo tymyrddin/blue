@@ -178,3 +178,4 @@ The Hetzner firewall for each Vault instance should permit:
 - No public access to port 8200 or 8201
 
 The load balancer handles public TLS termination and routes to the active leader. Clients that reach a standby node receive a redirect to the leader automatically.
+Last updated: 20 March 2026

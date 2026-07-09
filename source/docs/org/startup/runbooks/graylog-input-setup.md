@@ -156,3 +156,4 @@ Create a Grok extractor for Nginx access logs with the pattern:
 Title: `Nginx access log parser`. Condition: `message` contains `HTTP/`.
 
 After creating extractors, verify that a sample Nginx log message is parsed correctly by clicking Try against a recent message from the Beats input.
+Last updated: 20 March 2026

@@ -74,3 +74,4 @@ Someone who shapes what passes a crossing shapes what the world on the far side 
 touching anything operational. Every transfer is logged, and the log is kept somewhere the people
 doing the transferring cannot quietly amend, precisely because whoever owns the crossing owns the
 belief on the other side of it.
+Last updated: 09 June 2026

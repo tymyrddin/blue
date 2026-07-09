@@ -86,3 +86,4 @@ message can replay it against the server.
 caution for state-changing operations (payments, account modifications). Servers that accept 0-RTT data
 identify it via the `Early-Data` header and can choose to reject non-idempotent requests received in that
 context.
+Last updated: 17 May 2026

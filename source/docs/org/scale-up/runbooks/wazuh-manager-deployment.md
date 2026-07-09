@@ -135,3 +135,4 @@ tail -100 /var/ossec/logs/ossec.log
 ```
 
 Log into the dashboard and confirm the Overview page loads without errors. The agent count will be zero until agents are deployed.
+Last updated: 20 March 2026

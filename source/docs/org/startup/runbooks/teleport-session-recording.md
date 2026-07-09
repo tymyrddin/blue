@@ -130,3 +130,4 @@ Reviews are logged. Record in the internal security log: the session ID reviewed
 Sessions older than one year are deleted from the active PostgreSQL storage. The archived copies on the Storage Box are retained for three years, consistent with potential legal hold requirements.
 
 If a specific session must be held beyond three years (active litigation or regulatory requirement), Adora Belle flags it explicitly and the automated deletion scripts are configured to exclude it by session ID. The legal basis for extended retention is documented in the data protection register.
+Last updated: 20 March 2026

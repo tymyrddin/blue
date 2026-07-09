@@ -55,3 +55,4 @@ and indirect:
 The defensive use of the same automated tools is an underutilised approach: running
 semgrep crypto rules, formal protocol verification, and RNG quality analysis against
 your own systems before an attacker does.
+Last updated: 09 June 2026

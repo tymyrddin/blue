@@ -73,3 +73,4 @@ Blocking unknown destinations at the firewall does not prevent exfiltration
 via approved cloud platforms. Blocking those platforms would be operationally
 unacceptable. The control surface is in what happens within those approved
 channels, not at the network perimeter.
+Last updated: 10 July 2026

@@ -99,3 +99,4 @@ today.
 All three of these require preparation, a scenario grounded in current real-world
 techniques, and a debrief that connects the exercise to practical behaviour. That is the
 reverse psychology template. The subject changes. The principle does not.
+Last updated: 10 July 2026

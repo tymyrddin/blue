@@ -89,3 +89,4 @@ for u in json.load(sys.stdin)["data"]["updates"]:
 
 A pair of announce and withdraw for an owned prefix, minutes apart and from a path that does
 not include the organisation, is the signature of a timed interception rather than a fat-finger.
+Last updated: 13 June 2026

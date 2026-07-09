@@ -130,3 +130,4 @@ The debrief is a structured conversation, not a post-mortem. Both teams are expe
 Carrot chairs the debrief. He is good at this: he takes both sides seriously, does not assign blame, and makes sure action items are clearly owned and dated.
 
 The debrief notes are recorded in the GitLab wiki at `security/red-team/purple-team/YYYY-MM.md`. They are accessible to both red and blue teams, and to Adora Belle.
+Last updated: 20 March 2026

@@ -118,3 +118,4 @@ who cannot say a word.
   [Fungolia in the roster](../circle-sea/members.md).
 - The technical lab execution behind this narrative:
   [Mycosec: Operation Shadow Protocol](https://red.tymyrddin.dev/docs/earthworks/mycosec/shadow-protocol.html).
+Last updated: 13 June 2026

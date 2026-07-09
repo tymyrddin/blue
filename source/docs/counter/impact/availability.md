@@ -51,3 +51,4 @@ been read.
   dismissed as routine noise, which is the whole game in a slow-burn attack.
 - [Responding to it](runbooks/availability-response.md): the do-this-now runbook for the failure
   modes above.
+Last updated: 10 July 2026

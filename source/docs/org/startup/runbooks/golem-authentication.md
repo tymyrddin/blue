@@ -124,3 +124,4 @@ If a golem cannot authenticate:
 4. If the JAR was recently updated, confirm the new version is in `/opt/keycloak/providers/` and Keycloak was rebuilt after deployment.
 
 A golem presenting the wrong hash is treated as a security event. The third consecutive failure triggers an account lock and an alert to Ponder. Mr. Pump has never triggered this alert. If Mr. Pump triggers this alert, something has changed about Mr. Pump's chem, and Ponder needs to be told in person immediately.
+Last updated: 10 July 2026

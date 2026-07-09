@@ -167,3 +167,4 @@ Investigation timeline:
 02:32 UTC: incident declared. Carrot notified. Forensic collection initiated.
 
 Total time from detection to containment: 15 minutes. Estimated rows exported before containment: 11,200 rows of transaction data (no customer PII fields; the service account's Vault policy only grants access to the transactions table without name or address fields). Formal incident report filed. Vault token rotation process fixed.
+Last updated: 20 March 2026

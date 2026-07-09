@@ -150,3 +150,4 @@ Current: scikit-learn Isolation Forest with Kafka
 
 - [Alternative tools: startup phase](../startup/alternative-tools.md)
 - [Alternative tools: scale-up phase](../scale-up/alternative-tools.md)
+Last updated: 09 July 2026

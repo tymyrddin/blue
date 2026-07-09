@@ -199,3 +199,4 @@ A successful verification prints `The software product passed all verification.`
 ## Rotating the step signing key
 
 The step signing key (used by Tekton Tasks for `in-toto-run`) should be rotated annually. The new key must be registered in the layout file before the old key is removed from the Kubernetes Secret, because link files signed under the old key must remain verifiable until all images built with them are retired from production. Ludmilla coordinates key rotations through the standard change request process.
+Last updated: 20 March 2026

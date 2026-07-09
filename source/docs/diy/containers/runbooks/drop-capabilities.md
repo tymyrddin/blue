@@ -59,3 +59,4 @@ Remove the `--cap-drop`/`--cap-add` flags to return to the default capability se
 
 - Capabilities limit privileged operations; a [seccomp or AppArmor profile](seccomp-apparmor.md) restricts the system calls and file access beneath them.
 - Pair with [non-root](run-as-non-root.md); the two together are considerably tighter than either alone.
+Last updated: 10 July 2026

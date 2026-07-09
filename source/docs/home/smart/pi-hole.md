@@ -41,3 +41,4 @@ DNS blocking intercepts known bad domains. It does not inspect encrypted traffic
 newly-registered domains not yet in any list, or block tracking embedded within first-party
 domains. It is one layer. Combined with network segmentation for IoT
 devices, it substantially reduces the outbound tracking surface.
+Last updated: 10 July 2026

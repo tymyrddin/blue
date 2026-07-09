@@ -105,3 +105,4 @@ because the vulnerability is on the CA policy rather than a specific template. C
 whether the CA carries the `EDITF_ATTRIBUTESUBJECTALTNAME2` flag uses
 `certutil -getreg policy\EditFlags` on the CA server; a value with bit 0x00040000 set
 indicates the flag is active.
+Last updated: 26 May 2026

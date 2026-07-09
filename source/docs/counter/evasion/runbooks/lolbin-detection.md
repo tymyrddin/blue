@@ -176,3 +176,4 @@ Get-WinEvent -FilterHashtable @{
 
 Document every legitimate use. Write suppression rules for those specific patterns.
 Alert on everything else.
+Last updated: 26 May 2026

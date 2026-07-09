@@ -95,3 +95,4 @@ passive decoder on the segment would have seen the writes as they arrived.
   turbine PLC and relay IEDs; the same condition Lvivteploenergo exposed
 - [OT Defence Workbench](../labs/workbench): briefs 1 and 6 built around FrostyGoop; transparent bridge
   baseline through to a function code filter that drops write commands regardless of source address
+Last updated: 20 May 2026

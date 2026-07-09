@@ -20,3 +20,4 @@ rules narrow enough to catch anomalous transfers without flagging routine busine
 is ongoing work. An organisation that deploys DLP and does not maintain it typically ends up with
 a system that generates too many alerts to action, too few alerts to trust, or both at different
 times.
+Last updated: 12 June 2026

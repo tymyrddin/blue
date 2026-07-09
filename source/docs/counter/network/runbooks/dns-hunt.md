@@ -153,3 +153,4 @@ A legitimate host querying the same base domain 100+ times with different subdom
 unusual. CDNs and analytics platforms do generate many subdomains, but they resolve
 successfully; the combination of high unique subdomain count and a high NXDomain rate
 for the same base domain is the stronger indicator.
+Last updated: 27 May 2026

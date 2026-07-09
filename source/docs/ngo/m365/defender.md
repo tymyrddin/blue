@@ -71,3 +71,4 @@ alert that was not sent.
 - [Security awareness programme](../awareness/attack-simulation.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
 - [Inbound email filtering, the attacker's view](../../counter/human/email-filtering.md)
+Last updated: 10 July 2026

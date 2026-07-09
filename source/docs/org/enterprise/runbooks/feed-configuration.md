@@ -168,3 +168,4 @@ for f in feeds:
 ```
 
 Angua reviews feed health weekly as part of her Monday threat intelligence review. Feed failures are investigated within 24 hours; a feed that has been failing for more than 48 hours is escalated to Dr. Crucible for diagnosis.
+Last updated: 10 July 2026

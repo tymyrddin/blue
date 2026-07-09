@@ -86,3 +86,4 @@ exploiting transient network failures to force a protocol downgrade.
 
 Modern OpenSSL includes `TLS_FALLBACK_SCSV` support by default. The relevant check is whether the running
 OpenSSL predates its addition (OpenSSL 1.0.1j, released October 2014); anything later handles it automatically.
+Last updated: 10 July 2026

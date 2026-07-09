@@ -72,3 +72,4 @@ Avoid encrypting shared files (unless recipients have the key).
 * For most users: Cryptomator (easiest + secure).
 * For teams: Boxcryptor (paid, but user-friendly).
 * For techies: Rclone Crypt or Veracrypt.
+Last updated: 06 December 2025

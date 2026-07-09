@@ -39,3 +39,4 @@ Session lifetime limits and continuous access evaluation reduce the window durin
 ## Related
 
 - [MFA hardening](../human/mfa-hardening.md)
+Last updated: 10 July 2026

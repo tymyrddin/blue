@@ -77,3 +77,4 @@ The hybrid approach hedges against two risks simultaneously: a flaw discovered i
 the new post-quantum algorithm, and a CRQC breaking the classical algorithm. It
 costs slightly more in handshake size but is the correct choice for high-value
 connections today.
+Last updated: 10 July 2026

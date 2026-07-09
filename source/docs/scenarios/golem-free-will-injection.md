@@ -96,3 +96,4 @@ right is an hour not spent asking who wrote the words they are reading from.
 - The quiet phase nobody was watching, and how staged data is spotted by its shape rather than its
   tools: [counter moves on collection](../counter/collection/index.rst) and
   [on exfiltration](../counter/exfiltration/index.rst).
+Last updated: 12 June 2026

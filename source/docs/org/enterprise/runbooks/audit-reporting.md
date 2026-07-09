@@ -187,3 +187,4 @@ The report Otto sends to the ISO auditor is a human-readable summary generated f
 - Attestation: "No production deployments occurred outside the policy-controlled pipeline during this period, as evidenced by the OPA decision log retained in Graylog"
 
 Otto notes that producing this report used to take three days. It now takes four minutes, of which three are waiting for the Graylog query to return.
+Last updated: 20 March 2026

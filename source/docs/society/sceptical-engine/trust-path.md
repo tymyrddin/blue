@@ -60,3 +60,4 @@ in the analysed material. Responsible disclosure reports from the Sceptical Engi
 is what the pipeline identified and verified. Other issues may exist.
 
 This honesty is part of the trust path, not a weakness in it.
+Last updated: 01 June 2026

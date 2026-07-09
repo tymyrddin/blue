@@ -132,3 +132,4 @@ interpreter:
 Both approaches have limits. A formula language with access to arbitrary numeric operations
 can still cause denial of service through resource exhaustion; set explicit timeouts and
 memory caps.
+Last updated: 10 July 2026

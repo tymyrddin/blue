@@ -166,3 +166,4 @@ cat /tmp/suricata-test/fast.log
 ```
 
 Do not deploy untested rules to production. A rule that generates thousands of false positives against live traffic creates noise that masks genuine alerts.
+Last updated: 10 July 2026

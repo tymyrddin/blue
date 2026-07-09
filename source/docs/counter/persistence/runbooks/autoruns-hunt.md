@@ -189,3 +189,4 @@ SELECT * FROM Artifact.Windows.Persistence.PermanentWMIEvents()
 Results from multiple endpoints can be correlated: an identical WMI subscription
 name appearing on many endpoints is likely a managed entry; one appearing on a
 single endpoint is suspicious.
+Last updated: 26 May 2026

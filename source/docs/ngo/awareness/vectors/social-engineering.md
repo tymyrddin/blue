@@ -66,3 +66,4 @@ people are too embarrassed to mention it or assume someone else will have dealt 
 The same reporting channel used for phishing, the internal security mailbox, should be the
 destination for social engineering reports. A brief note about a suspicious call or visit,
 even if nothing came of it, creates a record and allows patterns to emerge across departments.
+Last updated: 10 July 2026

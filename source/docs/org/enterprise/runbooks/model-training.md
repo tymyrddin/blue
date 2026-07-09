@@ -170,3 +170,4 @@ CREATE TABLE ueba_feedback (
 The weekly model training job queries the feedback table. If a user has more than 5 false positives of type `fp_behaviour_change` in the past 30 days, the trainer increases the `contamination` parameter to 0.08 for that user's model, reducing its sensitivity. If a user has a high proportion of `fp_known_exception` feedback, the trainer adds feature weights to downgrade the anomaly contribution of the features that drove those false positives.
 
 This feedback loop is what reduced the initial false positive rate from 18% to 3.2% over three months.
+Last updated: 20 March 2026

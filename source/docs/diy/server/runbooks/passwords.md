@@ -58,3 +58,4 @@ Comment the changed lines in `/etc/security/pwquality.conf` to return to default
 ## Follow-up
 
 - Passwords are a fallback. Where possible, prefer [SSH keys](key-management.md) for server access and an authenticator app for accounts that support it.
+Last updated: 29 May 2026

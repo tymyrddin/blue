@@ -50,3 +50,4 @@ The standing tension in OT vulnerability research: a finding has to be credible 
 A simulator attack persuades more than a theoretical description. Video evidence persuades more than a static screenshot. Detailed technical analysis persuades more than assertion. But stepping across into actual manipulation of a production system is not a proof technique. It is negligence with better PR.
 
 The working approach: document everything that can be shown safely, say plainly what cannot be shown and why, and trust that a well-evidenced finding carries. If it does not carry without a live demonstration on production infrastructure, the problem was never the documentation.
+Last updated: 01 June 2026

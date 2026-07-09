@@ -141,3 +141,4 @@ Every automated action writes a JSON entry to the Graylog audit stream `falco-au
 ```
 
 Mr. Bent reviews these entries weekly as part of the change management reconciliation process. Any automated pod kill that affected a customer-facing service must be annotated in the incident register within 24 hours.
+Last updated: 10 July 2026

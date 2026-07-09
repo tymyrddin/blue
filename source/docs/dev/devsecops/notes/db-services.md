@@ -25,3 +25,4 @@ The database engine can be a common database engine such as MySQL, PostgreSQL, M
 - [Azure: Microsoft Azure lock-in assessment](../azure/lock-in.md)
 - [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
 - [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)
+Last updated: 17 May 2026

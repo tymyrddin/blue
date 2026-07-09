@@ -94,3 +94,4 @@ implications in each framework.
 
 Supply chain risk applies regardless of framework: all depend on npm packages. `npm audit` identifies known
 vulnerabilities; `npm ci` in CI/CD installs exactly the lockfile contents.
+Last updated: 10 July 2026

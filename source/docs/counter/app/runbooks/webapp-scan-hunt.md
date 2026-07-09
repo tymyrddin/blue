@@ -107,3 +107,4 @@ similar pattern but with a higher success rate. A source IP that produces repeat
 authentication failures followed by a `200` or `302` on the login endpoint has either
 guessed correct credentials or triggered a lockout bypass. The subsequent session
 activity is worth reviewing.
+Last updated: 10 July 2026

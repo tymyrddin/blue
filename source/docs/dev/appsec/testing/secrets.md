@@ -30,3 +30,4 @@ detect-secrets: open-source from Yelp; maintains a baseline file of known false 
 ## Response
 
 When a secret is found in git history, rotation is the only effective response. Rewriting history with `git filter-repo` removes the secret from the repository going forward but does not help if the repository was ever public or widely shared. The assumption is that the secret has been seen; rotation is what makes it useless.
+Last updated: 17 May 2026

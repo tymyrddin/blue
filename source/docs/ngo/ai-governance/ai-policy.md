@@ -81,3 +81,4 @@ triggered a DPA review. That story is in [AI in vendor applications](application
 - [Microsoft Copilot](copilot.md)
 - [AI in vendor applications](application-governance.md)
 - [The attack surface](ml-risks.md)
+Last updated: 10 July 2026

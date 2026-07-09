@@ -171,3 +171,4 @@ The honeypots must remain believable. Monthly maintenance tasks:
 - Check that the SSH service banner version matches a plausible Ubuntu LTS release
 
 These updates are documented in `security/deception/maintenance-log.md`. An attacker who notices that the "server" is running an operating system version inconsistent with the current Golem Trust standard might become suspicious. The goal is to delay suspicion for as long as possible.
+Last updated: 10 July 2026

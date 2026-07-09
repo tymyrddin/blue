@@ -68,3 +68,4 @@ made the incident possible. A phishing email that worked did so because somethin
 believable. A reused password that was breached was reused for a reason that felt acceptable
 at the time. The incident points at a specific gap. Noting what that was, without assigning
 blame, is what changes the odds next time.
+Last updated: 16 May 2026

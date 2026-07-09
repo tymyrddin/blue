@@ -65,3 +65,4 @@ Building on that, work with operational teams and tools to respond to incidents 
 - [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
 - [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
+Last updated: 12 March 2026

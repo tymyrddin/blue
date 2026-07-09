@@ -92,3 +92,4 @@ Review the metrics annually. A downward trend in time to detection and time to c
 indicates that the detection capability and the response process are improving. A consistent
 failure to meet the 72-hour notification window indicates that the notification runbook or
 the DPO's process needs attention.
+Last updated: 21 March 2026

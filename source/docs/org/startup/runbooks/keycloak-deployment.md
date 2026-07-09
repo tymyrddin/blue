@@ -201,3 +201,4 @@ Mr. Pump does not experience authentication failures. If the golem authenticatio
 ## The defender's view
 
 This layer earns its keep against a specific attack. Password spraying, credential stuffing, and brute force, and how each reads in the authentication logs, are covered in [password spraying, stuffing, and brute force](../../../counter/creds/spraying.md). The multi-factor authentication and lockout policy configured here are what turn a spray that finds a valid password into one that still fails.
+Last updated: 09 June 2026

@@ -97,3 +97,4 @@ def require_json():
     if not request.is_json:
         abort(415)  # Unsupported Media Type
 ```
+Last updated: 10 July 2026

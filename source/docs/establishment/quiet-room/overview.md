@@ -84,3 +84,4 @@ Underneath it sits a simpler arrangement. The Establishment publishes no privacy
 acknowledge that it processes data, and does not answer subject access requests. Whether anyone, foreign
 agencies included, can reach the Suricata logs is a question that cannot be put, because the logs are not
 confirmed to exist. A log that is never acknowledged is a log that never has to be explained.
+Last updated: 01 June 2026

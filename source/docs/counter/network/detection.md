@@ -99,3 +99,4 @@ The RDNSS option inside an RA is worth watching specifically: a rogue RA that le
 ## Producing the data
 
 The detection logic above assumes the events already exist, which is a build problem rather than an analytic one. Golem Trust Computing runs its network visibility on Zeek and Suricata; the taps, span ports, and rule tuning that produce the flow, DNS, and protocol data these alerts feed on are documented as part of the firm's own estate, in [Zeek deployment](../../org/startup/runbooks/zeek-deployment.md) and [Suricata configuration](../../org/startup/runbooks/suricata-configuration.md).
+Last updated: 13 June 2026

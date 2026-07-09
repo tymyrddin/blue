@@ -95,3 +95,4 @@ covers one side of that boundary.
 - [FrostyGoop](../incidents/frostygoop.md): Modbus writes that protocol-aware monitoring could have surfaced
 - [Ukraine grid incidents](../incidents/ukraine-grid.md): the IEC 104 sessions a baselining monitor might have flagged
 - [OT Defence Workbench](../labs/workbench.md): prevention-side complement to this page's detection focus
+Last updated: 20 May 2026

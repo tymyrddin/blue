@@ -36,3 +36,4 @@ by a process with a different UID, particularly root (UID 0), is anomalous. Corr
 access timestamp against sshd logs for outbound SSH connections from the jump host within
 the following 60 seconds: socket access followed by a new outbound connection is the
 hijacking pattern.
+Last updated: 26 May 2026

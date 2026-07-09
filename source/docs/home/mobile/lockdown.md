@@ -38,3 +38,4 @@ The principle behind the exception is also the principle behind the rule: the qu
 not whether sideloading is categorically permitted or forbidden, but whether you have
 enough information about the source to make a considered decision. For most sources and
 most users, the answer is no.
+Last updated: 16 May 2026

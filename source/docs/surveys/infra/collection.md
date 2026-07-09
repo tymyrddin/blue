@@ -77,3 +77,4 @@ against the closed feeds, it turns into something the closed feeds alone cannot 
 The open record has gone from an auxiliary to an industrial process. The skill is no longer
 finding the public fact. It is reading enough of them, fast enough, to notice the one that does
 not fit.
+Last updated: 10 July 2026

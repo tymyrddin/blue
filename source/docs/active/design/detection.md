@@ -39,3 +39,4 @@ Modern honeypot design focuses on plausibility:
 ## Ethical note
 
 Finding a detectable honeypot is worth reporting responsibly. The goal is better defences.
+Last updated: 10 July 2026

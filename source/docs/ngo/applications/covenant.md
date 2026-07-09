@@ -83,3 +83,4 @@ quietly reclassified.
 Golem Trust releases updates to the platform monthly. The release notes are sent by email to the
 account administrator. The Head of Fundraising receives them. They are forwarded to IT
 approximately forty percent of the time.
+Last updated: 21 March 2026

@@ -91,3 +91,4 @@ subprocess.run(f"grep {safe_arg} /var/log/app.log", shell=True)
 
 There is no reliable equivalent in Node.js for arbitrary shell arguments. The answer in
 Node.js is `execFile()`.
+Last updated: 10 July 2026

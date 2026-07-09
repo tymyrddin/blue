@@ -42,3 +42,4 @@ your own people to go quiet.
   effect on reporting.
 - [Responding to it](runbooks/access-denial-response.md): break-glass, provenance, and recovery from
   a lockout.
+Last updated: 12 June 2026

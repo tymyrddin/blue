@@ -14,3 +14,4 @@ File storage is a piece of storage such as the on-premises network-attached stor
 - [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
 - [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)
 
+Last updated: 12 March 2026

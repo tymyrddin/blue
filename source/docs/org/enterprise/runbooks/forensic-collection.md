@@ -188,3 +188,4 @@ Timeline of the session: authenticated with `root:password` at 14:22. Spent the 
 Intelligence extracted: source IP added to MISP as a Network Activity indicator. The Mirai variant binary added as a Malware Sample attribute. ATT&CK techniques T1059.004 (Unix Shell), T1046 (Network Service Scanning), and T1068 (Exploitation for Privilege Escalation) added as galaxy clusters. The MISP event was shared with TLP:AMBER to the financial sector ISAC information sharing group, where two other members confirmed the same IP had accessed their honeypots within the same 24-hour window.
 
 Total cost to Golem Trust: approximately 15 minutes of Angua's time reviewing the forensic data. Total intelligence value: confirmed attribution for a threat actor group that was subsequently observed in a real attack against a different financial institution.
+Last updated: 20 March 2026

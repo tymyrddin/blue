@@ -176,3 +176,4 @@ recently, is worth investigating before assuming it is legitimate.
 - [Cloud defence: restricting OAuth consent and auditing app grants](exposure.md)
 - [Identity persistence hunting](../persistence/runbooks/identity-persistence-hunt.md)
 - [API authentication patterns from the developer side](../../dev/appsec/api/authentication.md)
+Last updated: 10 July 2026

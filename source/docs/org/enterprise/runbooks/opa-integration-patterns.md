@@ -190,3 +190,4 @@ curl -s http://opa.golems.internal:8181/health?bundles=true | python3 -m json.to
 ```
 
 A successful activation shows a recent `last_successful_activation` timestamp. If the timestamp is stale by more than 5 minutes, check the OPA logs for bundle fetch errors and verify that the Hetzner Object Storage bucket is reachable from the OPA host.
+Last updated: 20 March 2026

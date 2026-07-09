@@ -95,3 +95,4 @@ US government (CNSA 2.0 guidance) requires post-quantum for new systems handling
 national security information by 2030. Commercial organisations should treat 2030
 as a planning horizon rather than a hard deadline; migration complexity typically
 exceeds estimates.
+Last updated: 09 June 2026

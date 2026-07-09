@@ -143,3 +143,4 @@ kubectl get componentstatuses
 ```
 
 All control plane nodes should be `Ready`. Ponder's standing instruction: if any node shows `NotReady` for more than three minutes after setup, check `journalctl -u kubelet` on that node before proceeding. Dr. Crucible keeps a dedicated channel in the team's messaging system for cluster bootstrap failures.
+Last updated: 20 March 2026

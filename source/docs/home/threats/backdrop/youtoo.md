@@ -29,3 +29,4 @@ StripedFly infects both Linux and Windows systems, mines cryptocurrency while ex
 via network worm behaviour. Cross-platform malware has become easier to develop and deploy. The operating
 system is increasingly less relevant as a protection; the configuration, the patch state, and the user's
 behaviour matter more.
+Last updated: 16 May 2026

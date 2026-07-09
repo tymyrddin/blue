@@ -35,3 +35,4 @@ There is no magic tool or process for everyone. It is essential to understand ho
 A DevSecOps engineer who understands how a team owns a service can tune scanners or add a triaging process that tackles the questions engineers would ask themselves, and this would, in turn, build trust vs crying wolf and security processes being questioned.
 
 
+Last updated: 17 May 2026

@@ -214,3 +214,4 @@ The session token in AWS CloudTrail (`userIdentity.sessionContext.sessionIssuer.
 links all API calls made with a specific set of assumed-role credentials. Pivoting on
 this value across a time window reconstructs the full sequence of actions taken with
 a compromised credential.
+Last updated: 10 July 2026

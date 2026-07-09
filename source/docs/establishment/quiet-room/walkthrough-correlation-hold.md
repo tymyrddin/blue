@@ -122,3 +122,4 @@ The combination is routed. Either event alone would have been held or dropped.
     `city-payroll-portal.example`. The prose stays generic because the prefix is an artefact of capture,
     not a feature of the finding.
 ```
+Last updated: 01 June 2026

@@ -110,3 +110,4 @@ What holds: output encoding applied at the point of rendering, matched to the sp
 ORM parameterisation for database queries, and auto-escaping template engines for HTML. Redirect
 targets validated against an explicit allowlist of permitted destinations. Input validation as a
 defence-in-depth measure, not as the primary injection control.
+Last updated: 26 May 2026

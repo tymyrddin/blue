@@ -117,3 +117,4 @@ auto-remediate:
 Auto-remediation actions are logged to Graylog and recorded in the drift register automatically via a post-task hook in the relevant roles. Otto Chriek requires that all auto-remediation events are visible in the audit log.
 
 Changes to SSH configuration, firewall rules, user accounts, or installed packages are never auto-remediated. These require human review.
+Last updated: 10 July 2026

@@ -46,3 +46,4 @@ Beyond individual honeypots, purpose-built traps can occupy crawlers and scanner
 * Nova: a cluster of decoy hosts plausible enough to divert reconnaissance effort.
 
 The goal is not just detection. It is delay, misdirection, and observation.
+Last updated: 16 May 2026

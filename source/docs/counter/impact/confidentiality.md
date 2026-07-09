@@ -71,3 +71,4 @@ thing.
 - Responding to it borrows from two existing runbooks: [administrative hijack
   response](runbooks/administrative-hijack-response.md) for evicting the trusted access, and the
   [exfiltration hunts](../exfiltration/runbooks/exfil-hunt.md) for finding the exit it used.
+Last updated: 13 June 2026

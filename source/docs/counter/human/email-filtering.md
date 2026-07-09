@@ -130,3 +130,4 @@ banner. The user opens the archive, enters the password, and enables the macro.*
 ## Related
 
 - [How a resource-constrained NGO runs this filtering layer](../../ngo/m365/defender.md)
+Last updated: 10 July 2026

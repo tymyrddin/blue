@@ -168,3 +168,4 @@ The summary includes:
 - Overall SLA compliance rate as a percentage
 
 Mr. Bent expects the Critical compliance rate to be 100% and the High compliance rate to be at least 95%. Otto delivers the report as a PDF no later than two weeks after the end of each quarter.
+Last updated: 20 March 2026

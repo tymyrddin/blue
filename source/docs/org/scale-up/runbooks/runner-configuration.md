@@ -161,3 +161,4 @@ Runners accumulate Docker image layers and build caches. Schedule a weekly clean
 Monitor runner health via GitLab. Navigate to the `golemtrust` group, then Settings, then CI/CD, then Runners. Runners that have not contacted GitLab within 10 minutes are shown as offline. Add a Prometheus alert for offline runners using the GitLab Prometheus exporter.
 
 GitLab Runner version should be kept within one major version of the GitLab server version. Check `gitlab-runner --version` against the GitLab server version in Admin Area, then Settings, then General.
+Last updated: 10 July 2026

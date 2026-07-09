@@ -52,3 +52,4 @@ content and forwards it without validation extends the injection's reach to all 
 Validating outputs at each stage boundary (schema validation, content length checks, and structural sanity checks)
 limits what any single compromised or poisoned stage can deliver downstream. The assumption that the previous
 stage's output is trustworthy is the assumption that fails first in a multi-hop injection chain.
+Last updated: 10 July 2026

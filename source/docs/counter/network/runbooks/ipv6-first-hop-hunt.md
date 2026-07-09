@@ -69,3 +69,4 @@ tshark -i eth0 -Y 'dhcpv6.msgtype == 2 || dhcpv6.msgtype == 7' -T fields \
 A server source outside the authorised set is a rogue DHCPv6 server. Where DHCPv6 Guard is
 deployed, the same finding appears as an incrementing drop counter on the offending access
 port, which localises it to a physical port without a capture.
+Last updated: 13 June 2026

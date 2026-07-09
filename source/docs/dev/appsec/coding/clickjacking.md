@@ -56,3 +56,4 @@ def set_frame_options(response):
 ## Frame-busting scripts
 
 Frame-busting scripts (JavaScript that detects when the page is inside an iframe and redirects to the top window) are unreliable. Techniques to bypass them include loading the iframe with the `sandbox` attribute (which can disable JavaScript in the iframe) and variations of the double-iframe trick. Frame-busting scripts have been superseded by `X-Frame-Options` and CSP.
+Last updated: 17 May 2026

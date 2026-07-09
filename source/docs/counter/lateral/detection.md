@@ -177,3 +177,4 @@ events against. The SIEM has no baseline for that account-target pair. The event
 logged, unreviewed, as routine NTLM traffic. Forty minutes later, a TGS request with
 RC4 encryption appears on the domain controller for the build service account SPN. The
 two events are not correlated. No alert fires.*
+Last updated: 27 May 2026

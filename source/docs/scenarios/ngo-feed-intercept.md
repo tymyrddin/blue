@@ -101,3 +101,4 @@ not a thing a patch restores.
   [threat picture](../circle-sea/threats.md).
 - The technical lab execution behind this narrative:
   [OpenHands: VPN Tunnel Pivot](https://red.tymyrddin.dev/docs/earthworks/openhands/vpn-tunnel-pivot.html).
+Last updated: 13 June 2026

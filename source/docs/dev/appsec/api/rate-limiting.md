@@ -80,3 +80,4 @@ Error responses on failed authentication do not distinguish between "username no
 both return the same message and, ideally, the same response time. Response time variation on the "username not found"
 path (a short-circuit return) versus the "password incorrect" path (a full hash comparison) is a timing oracle. A
 dummy hash comparison on the not-found path normalises the timing.
+Last updated: 10 July 2026

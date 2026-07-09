@@ -116,3 +116,4 @@ Findings 004 and 005 are Informational because they represent controls that work
 Engagement reports are classified as confidential for 30 days after the remediation deadline of the highest-severity finding. This embargo exists to protect the remediation timeline: if a Critical finding with a 7-day SLA is fixed on day 5, the report remains confidential until day 37. The rationale is that publishing a report that describes a recently-fixed vulnerability, before confirming the fix is fully deployed, creates an unnecessary window.
 
 After the embargo period, reports are stored in the security team's GitLab repository at `security/red-team/reports/YYYY-QN-report.pdf`, accessible to Carrot, Adora Belle, Mr. Teatime, and Angua.
+Last updated: 10 July 2026

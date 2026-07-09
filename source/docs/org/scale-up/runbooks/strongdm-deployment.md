@@ -109,3 +109,4 @@ Add a StrongDM health check to the Prometheus monitoring (see the startup observ
 Create a Graylog alert for StrongDM gateway disconnection: if the gateway goes offline, all database access via StrongDM stops. The alert fires when `source_system: strongdm AND event_type: gateway_offline` appears in any stream.
 
 Send this alert to `#security-alerts` and to Carrot's and Ponder's mobile numbers. A StrongDM outage during Royal Bank business hours is a priority-1 incident.
+Last updated: 20 March 2026

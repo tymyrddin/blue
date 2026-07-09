@@ -60,3 +60,4 @@ against known exploitation data.
 The Society does not route findings to the Watch Tower directly. The Office receives Society disclosures as
 one recipient among many, alongside vendors and CSIRTs. What happens after that is not in the Society's
 documentation.
+Last updated: 29 May 2026

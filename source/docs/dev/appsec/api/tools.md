@@ -23,3 +23,4 @@ Fits naturally into CI/CD: thresholds can be set on request duration, error rate
 An HTTP proxy that captures and replays traffic from any HTTP client on the machine. Most useful when the request source is not a browser: thick clients, mobile apps, or desktop applications that do not expose their network behaviour through devtools. Captured requests can be modified before forwarding, making it practical for quick parameter manipulation without configuring a full intercepting proxy.
 
 Fiddler Classic runs on Windows only. Fiddler Everywhere is cross-platform but requires a paid licence. For browser-based API testing, Burp Suite or OWASP ZAP offer more capability for the same kind of work.
+Last updated: 10 July 2026

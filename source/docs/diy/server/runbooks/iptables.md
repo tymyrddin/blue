@@ -78,3 +78,4 @@ This removes all INPUT filtering. Use it to regain access, then rebuild the rule
 
 - For most servers, [UFW](ufw.md) is easier to manage and harder to get dangerously wrong.
 - On a server running Docker, Docker inserts its own iptables rules; the visible INPUT chain may not reflect what is reachable. See the [firewall overview](../firewall.md).
+Last updated: 29 May 2026

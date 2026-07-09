@@ -21,3 +21,4 @@ usual testing trades the vulnerability for a regression, and a bad patch that ta
 is indistinguishable, on the morning, from the attack it was meant to prevent. The honest position is
 that patch latency is a managed risk, and the management is mostly about which
 exposures are carried deliberately, and for how long.
+Last updated: 10 July 2026

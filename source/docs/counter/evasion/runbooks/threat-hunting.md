@@ -219,3 +219,4 @@ Every hunt produces one of three outcomes:
 
 Hunting findings feed back into detection rules. If a hunt found something
 that would have benefited from automatic alerting, write the rule.
+Last updated: 10 July 2026

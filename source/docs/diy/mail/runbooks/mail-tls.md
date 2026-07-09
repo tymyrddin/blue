@@ -95,3 +95,4 @@ Set `smtpd_tls_auth_only = no` to accept AUTH without encryption again (a fallba
 - Open ports 587 and 465 in the [firewall](../../server/runbooks/ufw.md).
 - TLS protects the channel; it does not authenticate the sender. Pair with [SPF](spf.md), [DKIM](dkim.md), and [DMARC](dmarc.md), and with [SASL](sasl.md) for user authentication.
 - Renew the certificate before expiry; an expired mail certificate breaks TLS negotiation. See [Let's Encrypt](../../server/runbooks/lets-encrypt.md).
+Last updated: 10 July 2026

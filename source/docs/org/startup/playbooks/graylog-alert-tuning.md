@@ -87,3 +87,4 @@ If an attack or anomaly was not detected by existing alerts, conduct a brief pos
 4. Do not write a rule so specific that it only catches the exact technique used in the incident. Write for the class of technique.
 
 The Seamstresses' Guild attacker used curl. The rule Angua wrote looks for scripted user agents broadly. The attacker returned a week later using a different tool. The rule caught them anyway.
+Last updated: 10 July 2026

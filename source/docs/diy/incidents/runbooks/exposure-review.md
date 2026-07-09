@@ -66,3 +66,4 @@ All externally reachable services are intentional and documented. No unexpected 
 
 - [Configure the firewall with UFW](../../server/runbooks/ufw.md) for closing the unexpected open ports this review finds.
 - [Container security review](../../containers/runbooks/container-review.md), since Docker can publish ports past the host firewall.
+Last updated: 10 July 2026

@@ -132,3 +132,4 @@ The alert volume worth tracking: the number of alerts per analyst per week.
 An environment with one analyst and 20 alerts per week has a different capacity constraint than
 one with five analysts and the same volume. Calibrate to maintain a ratio where every alert can
 receive investigation, not to minimise the absolute number of alerts.
+Last updated: 10 July 2026

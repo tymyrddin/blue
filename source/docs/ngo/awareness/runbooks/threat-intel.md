@@ -116,3 +116,4 @@ that passed the payload test is subsequently caught by Defender mid-campaign, no
 date and the approximate time. This tracks how quickly Defender's signatures respond to
 active campaigns and informs how far in advance the payload test needs to run before a
 campaign launches.
+Last updated: 10 July 2026

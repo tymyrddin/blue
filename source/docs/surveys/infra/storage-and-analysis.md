@@ -43,3 +43,4 @@ held into something that means more than its parts.
 The hazard of a fusion engine is the same as its value. A confident assessment built from joined
 fragments can be wrong in a way no single fragment was, because the error lives in the joins. The
 engine that finds the pattern is the engine that can manufacture one.
+Last updated: 10 July 2026

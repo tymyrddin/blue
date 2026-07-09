@@ -75,3 +75,4 @@ pip-audit
 ```
 
 WSGI servers (gunicorn, uWSGI) and ASGI servers (uvicorn) have their own configuration considerations: worker count, timeout settings, and whether the development server is exposed directly to the internet.
+Last updated: 10 July 2026

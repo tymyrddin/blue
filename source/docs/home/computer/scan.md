@@ -35,3 +35,4 @@ Hash check (for files already downloaded):
 
 A clean VirusTotal result on a new file does not guarantee safety: very recent malware may have no detection
 signatures yet. The behaviour tab and the source of the download are both relevant.
+Last updated: 16 May 2026

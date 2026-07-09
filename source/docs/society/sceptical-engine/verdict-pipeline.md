@@ -63,3 +63,4 @@ could not. The manual review decision is recorded in the audit log like any othe
 The pipeline does not assume the analyst will simply accept its output. The audit trail exists so that the
 analyst can interrogate every decision the pipeline made and form their own view of whether the finding is
 sound before it goes anywhere.
+Last updated: 29 May 2026

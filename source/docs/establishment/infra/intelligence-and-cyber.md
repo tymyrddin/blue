@@ -39,3 +39,4 @@ incidents; the [Watch Tower](../../surveys/watch-tower/index) places firmware fi
 honeypots sit where honeypots sit, quietly, and nothing should touch them that has any business
 being elsewhere. No single body owns the whole of it, which is sometimes a weakness and sometimes
 the point.
+Last updated: 10 July 2026

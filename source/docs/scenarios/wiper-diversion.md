@@ -103,3 +103,4 @@ crime sits quiet and finished elsewhere. Looking only at the smoke misses the re
   [threat picture](../circle-sea/threats.md).
 - The technical lab execution behind this narrative:
   [FMDA: The Double Bite](https://red.tymyrddin.dev/docs/earthworks/fmda/double-bite.html).
+Last updated: 10 July 2026

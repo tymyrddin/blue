@@ -64,3 +64,4 @@ the servers."
 
 - [Red wilds](https://red.tymyrddin.dev/)
 - [Colourful teaming](https://purple.tymyrddin.dev/docs/purple/)
+Last updated: 02 June 2026

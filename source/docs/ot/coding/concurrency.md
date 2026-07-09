@@ -155,3 +155,4 @@ circular wait cannot form. Document the order and enforce it in code review.
 A mutex held across a blocking call is a common source of unexpected deadlock. If task A holds mutex M and then blocks
 on a queue receive, and task B needs mutex M to produce the item that task A is waiting for, the system deadlocks. The
 rule is: do not hold a mutex while blocking on any other synchronisation primitive.
+Last updated: 09 July 2026

@@ -57,3 +57,4 @@ Access log records requests with response code, referrer, and user agent. Error 
 - Logs fill disks. Set up `logrotate` to rotate and compress old logs (it is configured by default for the packaged web servers, worth confirming).
 - Logs on the server can be deleted by an attacker with access. Forward them to a [central destination](../../server/runbooks/centralised-logging.md) for anything worth protecting.
 - For what to look for in the access log, see [reading web logs](../reading-logs.md).
+Last updated: 29 May 2026

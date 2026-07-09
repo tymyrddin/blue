@@ -136,3 +136,4 @@ pipelining = True
 `pipelining = True` reduces the number of SSH connections per task and significantly speeds up playbook runs against large inventories.
 
 The Ansible log at `/var/log/ansible/ansible.log` is shipped to Graylog as the authoritative record of what was applied to which host and when. Otto Chriek considers this log part of the ISO 27001 audit trail.
+Last updated: 20 March 2026

@@ -52,3 +52,4 @@ Elasticsearch, Splunk, Grafana Loki) preserves them independently.
 
 Access to the log system itself is worth restricting; an attacker with access to the log system can cover tracks there
 too.
+Last updated: 17 May 2026

@@ -118,3 +118,4 @@ The Receiving Desk does not confirm routing decisions or downstream handling.
 The case remains open until the Long Table records a determination. The vetting flag
 is a note, not an action. No contact is made with J. Marsh beyond the acknowledgement
 unless the escalation status requires it.
+Last updated: 29 May 2026

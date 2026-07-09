@@ -47,3 +47,4 @@ hours to eight minutes. Zero-downtime deployments become standard.
 * [Troubleshooting](runbooks/kubernetes-troubleshooting.md)
 
 
+Last updated: 20 March 2026

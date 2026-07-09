@@ -176,3 +176,4 @@ rm /tmp/vault-pass
 ```
 
 Never leave the vault password on disk after a playbook run.
+Last updated: 10 July 2026

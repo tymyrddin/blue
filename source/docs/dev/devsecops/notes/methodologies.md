@@ -38,3 +38,4 @@ BSIMM is a study of real-world software security initiatives and reflects the cu
 * [BSIMM](https://owaspsamm.org/blog/2020/10/29/comparing-bsimm-and-samm/)
 
 
+Last updated: 17 May 2026

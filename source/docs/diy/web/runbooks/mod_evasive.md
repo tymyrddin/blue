@@ -86,3 +86,4 @@ This removes the rate limiting entirely. Use it if false positives are blocking 
 
 - For high-volume floods, add network-level rate limiting ahead of Apache; ModEvasive is the supplementary layer.
 - A [WAF](mod_security.md) covers a different class of attack (malicious request content).
+Last updated: 10 July 2026

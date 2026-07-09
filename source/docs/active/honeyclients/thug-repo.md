@@ -90,3 +90,4 @@ Remove the installation:
 ```
 rm -rf thug thug-env
 ```
+Last updated: 27 May 2026

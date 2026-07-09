@@ -53,3 +53,4 @@ The lamps will stay lit.
 
 According to [a document not in this directory](https://indigo.tymyrddin.dev/docs/vetinari/), this is the only
 acceptable definition of success.
+Last updated: 01 June 2026

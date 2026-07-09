@@ -78,3 +78,4 @@ being judged on the wrong thing.
 
 A later finding will come the same way: in at a desk, characterised in the room, assembled at the table,
 under a name that still does not appear on any building.
+Last updated: 10 July 2026

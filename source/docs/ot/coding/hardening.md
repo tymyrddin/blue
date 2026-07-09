@@ -111,3 +111,4 @@ LDFLAGS += -Wl,-z,relro,-z,now
 
 The flag set is a floor, not a ceiling. Each mitigation addresses a different failure mode; omitting one because another
 is present does not close the gap.
+Last updated: 09 July 2026

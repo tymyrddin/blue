@@ -90,3 +90,4 @@ Final recorded severity: High.
 Reward: €3,000, within the High reward band of €1,000-€5,000. The specific amount within the band reflected the quality of the report (clear reproduction steps, a working proof of concept, and a proposed fix) and Carrot's approval. Angua noted that the researcher's response time to fix-verification requests was unusually fast; this became a factor in the later discussion about hiring.
 
 The IDOR was fixed in four hours, which was the fastest fix time recorded in the first month. The fix replaced the numeric customer ID parameter with a cryptographically random identifier stored in the session, so there is nothing to enumerate.
+Last updated: 10 July 2026

@@ -48,3 +48,4 @@ Features that are not needed are worth disabling rather than leaving as a latent
 - MySQL `LOAD DATA LOCAL INFILE`: reads files from the client host; disabled with `local_infile=0`
 - MongoDB `$where` evaluation: executes JavaScript; disabled by default since 4.4
 - PostgreSQL `pg_read_file()` and related functions: available only to superusers; application accounts benefit from not being superusers
+Last updated: 17 May 2026

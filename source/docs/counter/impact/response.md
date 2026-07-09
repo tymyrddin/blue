@@ -59,3 +59,4 @@ compliance mode cannot be overridden even by the bucket owner within its retenti
 what makes the copy resistant to deletion by a stolen administrator credential. The arrangement is
 only as good as the restore, so the restores are tested. The command that sets
 the lock sits with the other hardening steps in [the runbooks](runbooks/impact-response.md).
+Last updated: 09 July 2026

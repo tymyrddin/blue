@@ -80,3 +80,4 @@ security lens. The model does not prescribe how to close the gap; it makes the g
 - [IT/OT boundary](boundary.md): the Level 3/Level 4 crossing in detail
 - [Remote access architecture](remote-access.md): controlled paths across zone boundaries for maintenance
 
+Last updated: 10 July 2026

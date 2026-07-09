@@ -51,3 +51,4 @@ A lot of companies still use ADFS, but it is no longer a hard requirement to use
 - [GCP: Google Cloud (GCP) lock-in assessment](../gcp/lock-in.md)
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
 - [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)
+Last updated: 17 May 2026

@@ -44,3 +44,4 @@ Wasted attacker time: 3 hours. Cost to Golem Trust: €8/month for honeypot VMs.
 ## Related
 
 [Honeytech for humans](https://blue.tymyrddin.dev/docs/active/)
+Last updated: 20 March 2026

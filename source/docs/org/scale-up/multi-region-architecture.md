@@ -84,3 +84,4 @@ Resizing a Hetzner instance requires a brief shutdown (typically 2-3 minutes). T
 Prometheus in Helsinki scrapes both regions. A separate Prometheus instance in Nuremberg scrapes Nuremberg hosts independently, so monitoring survives a Helsinki outage.
 
 The failover health check (see the failover automation runbook) runs from a third location: a small Hetzner CX11 instance in Frankfurt (fra1) that is not involved in serving production traffic. The Frankfurt instance is the authoritative judge of whether Helsinki is available. Using a geographically separate vantage point prevents split-brain scenarios where Helsinki's own monitoring cannot see that it is down.
+Last updated: 28 March 2026

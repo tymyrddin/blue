@@ -87,3 +87,4 @@ The cost of separation is operational. The cost of not separating was visible in
 - [Colonial Pipeline](../incidents/colonial-pipeline.md): legacy VPN account as initial access vector
 - [Triton/TRISIS](../incidents/triton.md): vendor account as initial access vector to a safety system
 - [OT Defence Workbench](../labs/workbench.md): brief 3 demonstrates the jump-host DNAT proxy pattern; brief 4 shows why source-allowlist alone fails
+Last updated: 20 May 2026

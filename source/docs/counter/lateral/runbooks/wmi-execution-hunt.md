@@ -42,3 +42,4 @@ $events | ForEach-Object {
 software. Known-legitimate processes appear consistently across multiple hosts and at
 scheduled intervals. Low-frequency command lines appearing once, on one host, are the
 priority.
+Last updated: 26 May 2026

@@ -161,3 +161,4 @@ The single-signal detections these correlations build on are in
 model, and the fixtures that validate them, drawn from the inter-domain routing lab and
 replayed offline, live in the detection simlab (heimdallr). Response actions, once a
 correlation fires, sit with [responding to impact](../impact/response.md).
+Last updated: 09 July 2026

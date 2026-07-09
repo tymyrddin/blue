@@ -83,3 +83,4 @@ def promote_user():
 ```
 
 The role check on the GET handler does not protect the POST handler. Each handler is secured independently.
+Last updated: 10 July 2026

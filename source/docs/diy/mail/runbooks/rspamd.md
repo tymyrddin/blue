@@ -86,3 +86,4 @@ Remove the `smtpd_milters` / `non_smtpd_milters` lines from `main.cf` and reload
 
 - Spam filtering handles content; it is separate from sender authentication. Pair with [SPF](spf.md), [DKIM](dkim.md), and [DMARC](dmarc.md).
 - Review the dashboard periodically; the symbol scores show what is being caught and any false positives.
+Last updated: 10 July 2026

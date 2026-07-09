@@ -152,3 +152,4 @@ be lower if not every image change represents a new command.
 
 Report the polling URL, the endpoint IP, the time range, and any DNS or secondary return
 channel identified. Preserve all captured images and traffic for forensic analysis.
+Last updated: 09 June 2026

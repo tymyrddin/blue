@@ -126,3 +126,4 @@ A finding that appears on a host where it previously passed indicates configurat
 A finding that appears on all hosts simultaneously indicates the Ansible playbooks do not fully cover that control, or that a new version of the SCAP content has added a check that was not previously tested. These are addressed by updating the `cis-debian` role.
 
 Findings that are confirmed as not applicable (false positives for Golem Trust's specific configuration) are added to the tailoring file, so that the tailoring file remains the single authoritative record of accepted exceptions.
+Last updated: 10 July 2026

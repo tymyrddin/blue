@@ -59,3 +59,4 @@ Resilience
 The pages that follow walk the flow. Collection is where it starts. The crossings are where the
 real money goes. The command layer, at the very top, is the one governments actually argue
 about, because it is the one that decides who the whole arrangement answers to.
+Last updated: 09 June 2026

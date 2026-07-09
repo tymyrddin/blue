@@ -55,3 +55,4 @@ Preserve the access log before revoking additional integrations. Some platforms 
 ## Legal notes
 
 OAuth application access to personal data may constitute a personal data breach under applicable data protection law. Seek legal advice if customer or employee data was within scope of the application's permissions.
+Last updated: 29 May 2026

@@ -56,3 +56,4 @@ Browser extensions:
 A monthly calendar event to verify that updates have applied, and to catch anything that requires manual
 approval, is worth adding. Batch-update tools like Patch My PC (Windows) or Homebrew (Mac) make it easier
 to catch third-party applications that do not auto-update.
+Last updated: 16 May 2026

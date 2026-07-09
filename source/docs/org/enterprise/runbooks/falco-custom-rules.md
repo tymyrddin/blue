@@ -174,3 +174,4 @@ falco --dry-run -r /etc/falco/golem_trust_rules.yaml
 ```
 
 Falco will parse and validate all rules without actually starting the sensor. Syntax errors and undefined macro references are reported. For functional testing, use a test container to generate the specific system call pattern the rule targets. The testing procedure is covered in the troubleshooting runbook.
+Last updated: 10 July 2026

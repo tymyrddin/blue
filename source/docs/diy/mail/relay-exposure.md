@@ -52,3 +52,4 @@ Repeated `SASL LOGIN authentication failed` from the same or rotating IPs is a b
 `status=bounced` with `550` codes repeated for outbound messages to a specific domain often indicates that domain's mail servers are rejecting mail from this server, sometimes because of blocklist status. `postqueue -p` shows the current queue; `postcat -vq [queueID]` shows the content of a specific message.
 
 A large queue of outbound messages to diverse external destinations, many to unknown or invalid addresses, is a relay-in-progress indicator. Normal mail queues contain deferred messages to known destinations with consistent bounce codes. A relay in progress looks different: high volume, diverse destinations, addresses failing immediately on delivery.
+Last updated: 29 May 2026

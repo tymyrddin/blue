@@ -114,3 +114,4 @@ notification position.
 5. Reactivate affected systems and accounts only after confirming clean rebuild.
 6. Confirm with the DPO that all notification obligations have been met or are in
    progress before communicating to affected staff that the incident is resolved.
+Last updated: 10 July 2026

@@ -81,3 +81,4 @@ journalist's summary, so the belief shift was produced by how the trouble was ex
   [posture for the long game](../counter/inter-domain/posture.md).
 - The attacker's-side lab exercise behind this narrative:
   [Operation Foxfire](https://red.tymyrddin.dev/docs/earthworks/fungusfiber/foxfire.html).
+Last updated: 10 July 2026

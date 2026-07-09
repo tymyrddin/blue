@@ -80,3 +80,4 @@ Parsing the URL and comparing the `netloc` component against an exact allowlist 
 For applications that redirect to external sites after user action, an interstitial page that shows the destination and
 asks for confirmation reduces phishing risk. The interstitial is not a security control on its own (an attacker can
 bypass it by crafting the redirect to skip the page), but it trains users to notice unexpected destinations.
+Last updated: 10 July 2026

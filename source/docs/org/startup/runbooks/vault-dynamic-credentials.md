@@ -117,3 +117,4 @@ vault kv get -version=2 kv/golemtrust/fastmail-api-key
 ```
 
 Static secrets in KV should be rotated manually on a regular schedule and whenever a team member with access to them leaves. There is no automatic rotation for KV secrets.
+Last updated: 20 March 2026

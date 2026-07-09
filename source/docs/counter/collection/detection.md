@@ -148,3 +148,4 @@ Even with the above controls, these gaps remain:
 - Credentials stolen from memory before RunAsPPL was enabled
 - Collection via platforms entirely outside the monitoring perimeter
   (shadow IT, personal devices)
+Last updated: 27 May 2026

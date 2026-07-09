@@ -168,3 +168,4 @@ Fileless attacks rarely leave a single detectable event. Correlation is required
 A SIEM correlation rule that fires when a host shows script block logging activity
 AND network connections to new domains AND WMI subscription changes within a 10-minute
 window is far more reliable than any single indicator.
+Last updated: 10 July 2026

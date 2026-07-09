@@ -154,3 +154,4 @@ interface GigabitEthernet0/1
 ```
 
 Where the switching layer cannot enforce these, host RA acceptance can be constrained to a known link-local gateway, but dropping the rogue advertisement at the port is the stronger control.
+Last updated: 13 June 2026

@@ -137,3 +137,4 @@ At the start of each month, pull the previous month's approval metrics from Gray
 - Requests that expired without being approved
 
 A median approval time over 15 minutes suggests approvers are not monitoring the channel closely enough. Carrot discusses this with the relevant approvers. A high escalation rate suggests the approval window is too short for the team's working patterns and should be adjusted.
+Last updated: 20 March 2026

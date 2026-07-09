@@ -150,3 +150,4 @@ If the output is empty, either no traffic is reaching `eth1` or Zeek is not read
 ## The defender's view
 
 A sensor is justified by what it lets you catch. The attacker behaviours these Zeek logs are built to surface, name-resolution poisoning, Kerberoasting, DNS tunnelling, host scanning, and lateral movement, are catalogued from the hunting side in [detecting network attacks](../../../counter/network/detection.md). Dr. Crucible wanted the catalogue; that page is what the catalogue gets read against.
+Last updated: 10 July 2026

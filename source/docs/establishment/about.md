@@ -165,3 +165,4 @@ function as it does.
 
 Neither direction is a policy option. Calibration between them is the unacknowledged core competency of
 everyone who writes anything here.
+Last updated: 10 July 2026

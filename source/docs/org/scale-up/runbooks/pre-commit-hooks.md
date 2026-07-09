@@ -126,3 +126,4 @@ keywords = ["ht_"]
 ```
 
 This ensures that internal API keys are caught by pattern matching even before TruffleHog's verification step.
+Last updated: 20 March 2026

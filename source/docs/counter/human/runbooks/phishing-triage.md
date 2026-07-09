@@ -120,3 +120,4 @@ the sign-in.
 The Evilginx and Modlishka proxy frameworks produce exactly this pattern: a successful
 TOTP-based authentication followed by session token replay from infrastructure the
 defender does not recognise.
+Last updated: 10 July 2026

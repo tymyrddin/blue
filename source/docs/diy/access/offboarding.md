@@ -53,3 +53,4 @@ covers what is not on any list.
 Reviewing authentication logs for the 30 days following offboarding occasionally surfaces access attempts from the
 departed person's usual source IPs. This sometimes reveals shadow credentials that were used after other access was
 revoked. Not a common finding. Not a finding to skip.
+Last updated: 10 July 2026

@@ -33,3 +33,4 @@ Explicit egress rules that permit only what each service legitimately requires c
 Docker modifies iptables rules automatically to handle container port publishing and does so before the configured firewall is fully accounted for. Docker-published ports may be reachable from the network even when firewall rules appear to block them, because Docker inserts its rules before the INPUT chain that ufw and standard iptables configurations manage.
 
 On servers running Docker, the firewall state visible in `iptables -L -n` or `ufw status` may not reflect what is actually reachable. Checking `iptables -t nat -L -n` surfaces the Docker NAT rules. The [container stack](../containers/stack.md) covers this in more detail.
+Last updated: 29 May 2026

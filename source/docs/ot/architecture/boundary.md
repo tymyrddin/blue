@@ -90,3 +90,4 @@ and change management discipline that OT environments find expensive.
 - [Remote access architecture](remote-access.md): how controlled paths cross the boundary for maintenance and engineering
 - [Network monitoring and visibility](monitoring.md): DMZ-staged log collection and its role in detection
 
+Last updated: 09 July 2026

@@ -110,3 +110,4 @@ clean-up is convincing people a breach occurred at all, when every dashboard ins
   [threat picture](../circle-sea/threats.md), on the enemy inside the access.
 - The technical lab execution behind this narrative:
   [FMDA: The Silent Siphon](https://red.tymyrddin.dev/docs/earthworks/fmda/silent-siphon.html).
+Last updated: 13 June 2026

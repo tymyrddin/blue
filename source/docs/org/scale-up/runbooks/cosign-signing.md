@@ -154,3 +154,4 @@ The manual signing key in Vault is rotated annually. To rotate:
 7. Delete the old public key file from the repository
 
 Pipeline keyless signatures do not need rotation; they are issued per-build and expire automatically with Fulcio's certificate TTL.
+Last updated: 20 March 2026

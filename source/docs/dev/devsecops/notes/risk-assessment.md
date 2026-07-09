@@ -32,3 +32,4 @@ Supply-chain attacks are one of the most serious risks.
 - [Azure: Azure data protection: Notes on meeting GDPR Requirements](../azure/gdpr-compliance.md)
 - [GCP: Notes on navigating GDPR requirements on Google Cloud](../gcp/gdpr-compliance.md)
 - [On-prem: GDPR compliance Hetzner (On-Prem/Alternative Cloud)](../on-prem/gdpr-compliance.md)
+Last updated: 17 May 2026

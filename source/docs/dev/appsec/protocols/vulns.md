@@ -134,3 +134,4 @@ renegotiation entirely for contexts where it is not needed) addresses both vecto
 ```
 
 For Apache with mod_ssl, `SSLInsecureRenegotiation off` (the default since 2.2.15) disables the insecure variant.
+Last updated: 17 May 2026

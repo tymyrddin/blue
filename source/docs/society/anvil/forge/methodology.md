@@ -128,3 +128,4 @@ confidence: "high"
 | `confidence`     | Likelihood of accurate detection | `"high"`, `"medium"`, `"low"`                           |
 
 What comes out of all this is a blueprint. The implementation follows it, which is the easy part once the thinking is done.
+Last updated: 01 June 2026

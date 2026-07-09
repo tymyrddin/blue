@@ -113,3 +113,4 @@ foreseeable future.
   (TLS) extension
 - [Shodan: port 502](https://www.shodan.io/search?query=port%3A502): current count of internet-exposed Modbus
   devices
+Last updated: 19 May 2026

@@ -77,3 +77,4 @@ This removes all firewall rules and reverts to no filtering. Use it to recover a
 
 - On a server running Docker, UFW rules may not reflect what is actually reachable: Docker inserts its own rules ahead of UFW. See the [firewall overview](../firewall.md) and [container stack](../../containers/stack.md).
 - Most firewall configurations leave outbound open. For servers holding sensitive data, scoped egress rules are worth considering.
+Last updated: 10 July 2026

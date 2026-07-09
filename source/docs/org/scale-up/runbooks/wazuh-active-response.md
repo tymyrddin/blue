@@ -124,3 +124,4 @@ The `custom-isolate` script adds nftables rules that drop all traffic except fro
 All active response actions are logged on the agent at `/var/ossec/logs/active-responses.log`. They are also sent to the manager and indexed. Create a Wazuh dashboard saved search for active response events to give Angua a quick overview of what has been blocked or killed.
 
 Anomalous active response activity (many blocks in a short time, or blocks on production service IPs) triggers a Graylog alert. A wave of SSH brute force attempts triggering hundreds of IP blocks is a signal to investigate; it may indicate a coordinated attack or a misconfigured service.
+Last updated: 10 July 2026

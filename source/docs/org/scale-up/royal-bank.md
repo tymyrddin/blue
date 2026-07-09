@@ -54,3 +54,4 @@ Mr. Bent's return audit three months later: "Acceptable. The minus from my previ
 * [SAML federation](runbooks/keycloak-saml-federation.md)
 * [Approval automation](runbooks/approval-automation.md)
 
+Last updated: 12 June 2026

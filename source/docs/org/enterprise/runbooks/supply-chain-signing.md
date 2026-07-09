@@ -138,3 +138,4 @@ Golem Trust currently uses the public Sigstore Rekor instance. For compliance wi
 - The Rekor public key published so that external parties can verify entries
 
 Dr. Crucible has a draft deployment plan for the self-hosted Rekor instance. The decision to proceed rests with Adora Belle, pending a formal data residency assessment from legal.
+Last updated: 10 July 2026

@@ -214,3 +214,4 @@ When identity persistence is confirmed:
 
 - [OAuth scopes as blast radius](../../cloud/oauth-scopes.md)
 - [Cloud defence: restricting OAuth consent](../../cloud/exposure.md)
+Last updated: 26 May 2026

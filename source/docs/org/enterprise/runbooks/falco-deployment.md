@@ -141,3 +141,4 @@ There will be a brief detection gap on each node as its pod restarts. Cheery fro
 ## The defender's view
 
 Falco is justified by what its rules catch. The container compromise patterns these rules are written against, runtime shell spawns, suspicious exec, and the escalation chains that cross into the Kubernetes API, are catalogued in [detecting container attacks](../../../counter/containers/detection.md).
+Last updated: 10 July 2026

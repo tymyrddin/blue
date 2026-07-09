@@ -81,3 +81,4 @@ Notify the team once offboarding is complete. Do not announce the timing of revo
 
 Suspend accounts rather than immediately deleting them where the legality of immediate termination of access is
 uncertain. Deleted accounts and their data may not be recoverable, and they may be needed for legal or audit purposes.
+Last updated: 29 May 2026

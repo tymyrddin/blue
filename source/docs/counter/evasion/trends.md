@@ -86,3 +86,4 @@ The defences that narrow the asymmetry are not the sophisticated ones: they are 
 management, least privilege, MFA, log retention, and a small team of analysts who
 know what normal looks like. The sophisticated tools extend a disciplined baseline;
 they do not replace it.
+Last updated: 10 July 2026

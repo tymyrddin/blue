@@ -71,3 +71,4 @@ Steps:
 * Network segmentation: IoT on a dedicated VLAN.
 * Firmware updates: enable auto-updates or check monthly.
 * Traffic monitoring: Wireshark or Fing for detecting unusual outbound connections.
+Last updated: 16 May 2026

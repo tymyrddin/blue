@@ -83,3 +83,4 @@ is the only layer that does not share this weakness.
   one or both substations while the monitoring layer reports normal readings
 - [ICS Access and Persistence SimLab](../labs/ics-access-simlab): turbine PLC trip paired with historian
   ingest poisoning; the gap between physical state and displayed state
+Last updated: 21 May 2026

@@ -148,3 +148,4 @@ When an exfiltration hunt produces a hit:
    after persistence is established)
 6. Estimate whether this is an isolated event or part of an ongoing campaign
 7. Preserve all relevant logs before any remediation that might clear them
+Last updated: 10 July 2026

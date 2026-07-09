@@ -449,3 +449,4 @@ az monitor metrics alert create \
 * Regular vulnerability scanning integrated
 * HTTPS enforced for all ingress
 * Audit logging enabled for all components
+Last updated: 17 May 2026

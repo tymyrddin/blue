@@ -111,3 +111,4 @@ response is not always available.
 When the original is not available, reverse image search (TinEye, Google Images) may find
 the source photograph. Social media metadata, EXIF timestamps, and camera model
 information in the suspect image can also point to the original source.
+Last updated: 09 June 2026

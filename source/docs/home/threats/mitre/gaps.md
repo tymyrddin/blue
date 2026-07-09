@@ -156,3 +156,4 @@ Fix:
 * Network segmentation: IoT on a separate network from computers and phones
 * Assume accounts may already be compromised: monitor login history
 * Review the above with other household members
+Last updated: 16 May 2026

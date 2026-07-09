@@ -121,3 +121,4 @@ Secret IDs should be rotated whenever a team member who had access to them leave
 | backup-agent | vault-snapshot | 8760h | Raft snapshot service |
 
 Add new roles to this table as they are created.
+Last updated: 20 March 2026

@@ -38,3 +38,4 @@ effective regardless of how many weapons remain to hand. That is the same thing 
 apparatus keeps saying in every register: the structure is never in what is held or what is
 wielded. It is in what is allowed to pass, and in whether the parts can still trust each other when
 something has gone wrong.
+Last updated: 09 June 2026

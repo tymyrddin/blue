@@ -84,3 +84,4 @@ Microsoft Secure Score recommendation.
 - [Security awareness](../awareness/vectors/phishing.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
 - [Email delivery controls (SPF, DKIM, DMARC)](../../counter/human/email-hardening.md)
+Last updated: 10 July 2026

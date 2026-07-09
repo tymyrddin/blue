@@ -37,3 +37,4 @@ sudo sysdig -c spy_users
 | Osquery | SQL-based endpoint queries | `SELECT * FROM process_events`    |
 | Falco   | Behavioural detection      | `falco -r rules/falco_rules.yaml` |
 | Lynis   | Compliance auditing        | `lynis audit system`              |
+Last updated: 27 May 2026

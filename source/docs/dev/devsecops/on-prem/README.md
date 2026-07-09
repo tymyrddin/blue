@@ -84,3 +84,4 @@ For a DevSecOps pipeline integrating these practices, follow the [On-Prem DevSec
 
 Cloud-native tools work on-prem too. The goal isnot to replicate AWS. It is to build a secure, auditable, and
 maintainable system without surrendering control to Silicon Valley.
+Last updated: 17 May 2026

@@ -145,3 +145,4 @@ If the redirect fails, check:
 - The attribute names in the mappers match what the Bank's IdP sends
 
 Keycloak's admin console shows a log of identity provider events under Events, which is the first place to look when federation fails.
+Last updated: 10 July 2026

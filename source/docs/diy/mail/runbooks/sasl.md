@@ -81,3 +81,4 @@ Set `smtpd_sasl_auth_enable = no` in `main.cf` and restart Postfix to disable SA
 
 - SASL depends on TLS being configured; see [mail TLS](mail-tls.md).
 - `permit_sasl_authenticated` in the relay restrictions ([Postfix hardening](postfix.md)) is what this runbook gives meaning to.
+Last updated: 10 July 2026

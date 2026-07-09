@@ -114,3 +114,4 @@ trusts to think for it is thinking, now, partly for someone across the water.
   [threat picture](../circle-sea/threats.md).
 - The technical lab execution behind this narrative:
   [Mycosec: Operation Neural Ghost](https://red.tymyrddin.dev/docs/earthworks/mycosec/neural-ghost.html).
+Last updated: 13 June 2026

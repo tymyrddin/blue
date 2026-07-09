@@ -85,3 +85,4 @@ To accept a risk:
 Risk acceptances with past expiry dates are surfaced automatically in DefectDojo's "Expired Risk Acceptances" view. Cheery reviews this list as part of her weekly review. Expired risk acceptances are either renewed (with a new justification) or the finding is returned to active status for remediation tracking.
 
 Bulk risk acceptance for all Low findings in a development tool product is permitted quarterly, as a maintenance operation. Cheery runs this via the DefectDojo bulk actions interface, after confirming with Ponder's team that the affected findings are genuinely low-risk in context. The bulk acceptance must be documented in the change management system with the list of findings and the approval reference.
+Last updated: 10 July 2026

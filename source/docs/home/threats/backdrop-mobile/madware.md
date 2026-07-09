@@ -52,3 +52,4 @@ possible; F-Droid catalogues open-source alternatives to many common application
 For Android devices, [exodus-privacy.eu.org](https://exodus-privacy.eu.org) provides an
 analysis of the advertising and tracking SDKs present in applications on the Play Store,
 which makes it possible to check an app before installing it.
+Last updated: 10 July 2026

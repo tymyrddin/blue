@@ -121,3 +121,4 @@ Asia and Africa:
 * Slack: Settings → Authentication → Two-Factor Auth
 * Trello (Atlassian): Account → Security → Two-Factor Authentication
 * Zoom: Security → Enable 2FA
+Last updated: 10 July 2026

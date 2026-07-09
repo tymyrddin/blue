@@ -75,3 +75,4 @@ Checking the request method (accepting only `POST`) does not prevent CSRF; a cro
 request. It makes exploitation marginally harder but is not a control.
 
 HTTPS alone does not prevent CSRF. The browser still attaches cookies to HTTPS requests from other origins.
+Last updated: 17 May 2026

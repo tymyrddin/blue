@@ -91,3 +91,4 @@ exactly the moment when they would be most damaging.
 - [Privileged access](privileged-access.md)
 - [The Coven](../applications/the-coven.md)
 - [Reducing phishing exposure](../../counter/human/phishing-resistant.md)
+Last updated: 09 June 2026

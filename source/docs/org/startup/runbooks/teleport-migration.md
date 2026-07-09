@@ -135,3 +135,4 @@ ssh -o PasswordAuthentication=yes -o PubkeyAuthentication=no \
 This should be refused with `Permission denied`. If it succeeds, the server was not migrated correctly.
 
 Record the migration completion date and the list of servers migrated in the internal security log. This record is useful during security audits and for incident response context.
+Last updated: 20 March 2026

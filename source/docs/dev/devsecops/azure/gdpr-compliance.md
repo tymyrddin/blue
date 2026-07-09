@@ -40,3 +40,4 @@
  
 - [Trust Center](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr)
 - [Data Residency Documentation](https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency).
+Last updated: 07 June 2025

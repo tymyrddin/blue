@@ -46,3 +46,4 @@ A determined intruder who controls a source host can stop it forwarding, though 
 
 - Forwarded logs are only useful when something reads them. Pair with periodic [log review](../reading-logs.md) or alerting on the destination.
 - Confirm log forwarding is part of the [server hardening sequence](../first-steps.md) for new hosts.
+Last updated: 10 July 2026

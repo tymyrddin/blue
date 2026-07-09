@@ -165,3 +165,4 @@ fi
 ```
 
 If the health check fails, Angua is notified. Researcher reports of unreachable endpoints are checked against recent health check results before being triaged as potential findings.
+Last updated: 10 July 2026

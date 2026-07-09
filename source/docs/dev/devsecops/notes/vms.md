@@ -24,3 +24,4 @@ deployment and maintenance of virtual servers.
 - [GCP: GCP: Free-tier until it is not](../gcp/estimated-costs.md)
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
 - [On-prem: On-Prem @ Hetzner cloud costs "DIY, but actually sane"](../on-prem/estimated-costs.md)
+Last updated: 12 March 2026

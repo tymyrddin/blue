@@ -213,3 +213,4 @@ When a new team member joins or a new customer portal is set up, create a role f
 5. Leave session recording at `best_effort`; this records when possible and does not block the session if recording fails
 
 Test the new role in staging before assigning it to a real user. Carrot reviews all new roles before they are deployed.
+Last updated: 10 July 2026

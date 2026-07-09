@@ -54,3 +54,4 @@ File integrity monitoring requires a clean starting point. The baseline is only 
 Every service running on a server is a potential entry point. A server running only what it needs has less to audit and less to patch. Services installed for convenience and left running are a common source of exposure that accumulates silently.
 
 `ss -tulnp` shows what is currently listening. Anything present without a clear operational purpose is worth questioning.
+Last updated: 29 May 2026

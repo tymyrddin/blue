@@ -51,3 +51,4 @@ All caught within seconds.
 ## Related
 
 [Risk management & assessment](https://purple.tymyrddin.dev/docs/risk-management/)
+Last updated: 20 March 2026

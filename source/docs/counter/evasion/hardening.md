@@ -167,3 +167,4 @@ foreach ($rule in $rules) {
 ```
 
 Run in audit mode first to identify false positives before switching to block.
+Last updated: 10 July 2026

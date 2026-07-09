@@ -75,3 +75,4 @@ every purpose the adversary has, a supply line that has been cut.
   [counter moves on the human layer](../counter/human/index.rst).
 - The untraceable advance, and the city that pays it: [Campaign Closed Account](golem-trust-denial.md)
   and the Circle Sea [members](../circle-sea/members.md).
+Last updated: 12 June 2026

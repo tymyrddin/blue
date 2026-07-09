@@ -135,3 +135,4 @@ generate audit events even if the operation is blocked.
 dmesg | grep "SECCOMP\|audit"
 auditctl -w /proc -p rwx -k proc_access
 ```
+Last updated: 27 May 2026

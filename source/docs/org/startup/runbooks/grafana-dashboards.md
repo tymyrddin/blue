@@ -161,3 +161,4 @@ Create an alert for low disk space:
 - Contact point: Slack `#infrastructure-alerts` and email
 
 These alert on infrastructure problems. Security alerts live in Graylog. Keep the two systems focused on their respective domains; mixing them creates noise and confusion about which system to check when something is wrong.
+Last updated: 10 July 2026

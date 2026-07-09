@@ -109,3 +109,4 @@ health the entire time.
   Circle Sea [threat picture](../circle-sea/threats.md), on the enemy inside the access.
 - The technical lab execution behind this narrative:
   [Mycosec: Operation DHCP Deception](https://red.tymyrddin.dev/docs/earthworks/mycosec/dhcp-deception.html).
+Last updated: 13 June 2026

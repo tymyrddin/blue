@@ -33,3 +33,4 @@ When quantum capability becomes practically relevant for cryptographic attacks, 
 to nation-states and large, well-resourced organisations. Democratisation of the capability, as has happened
 with other powerful technologies, is a later-stage concern. The more immediate risk is state-level actors
 targeting high-value encrypted data they are already collecting.
+Last updated: 16 May 2026

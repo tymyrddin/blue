@@ -242,3 +242,4 @@ kubectl logs -n tekton-chains deployment/tekton-chains-controller --tail=100
 ```
 
 Dr. Crucible maintains a Grafana dashboard that shows the rolling 24-hour count of signed versus unsigned TaskRuns. Any unsigned TaskRun in a production pipeline is an alert condition and should be raised with Ludmilla immediately.
+Last updated: 20 March 2026

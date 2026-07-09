@@ -58,3 +58,4 @@ member can authenticate to critical systems with a password alone.
 - Include MFA setup in [security onboarding](security-onboarding.md).
 - Verify MFA status monthly or when a new team member joins.
 - At [offboarding](offboarding.md): confirm backup codes are not stored on devices being returned.
+Last updated: 29 May 2026

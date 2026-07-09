@@ -159,3 +159,4 @@ Returns an empty 200 response if Vaultwarden is healthy. If it returns anything 
 Distribute the Bitwarden desktop, browser, and mobile clients to all team members. Set the server URL to `https://vault.golemtrust.am` in the client settings before logging in. The default `bitwarden.com` server will not work; there is no account there and the data is not there.
 
 Hardware authentication devices from Überwald are configured in account settings under the Two-step Login tab. Each employee enrols their device within 48 hours of receiving it. Adora Belle monitors this. Employees who have not enrolled after 48 hours are sent a reminder. Employees who have not enrolled after 72 hours receive a visit.
+Last updated: 20 March 2026

@@ -50,3 +50,4 @@ Add a newly discovered legitimate origin to the allow-list. If a tightening brok
 ## Follow-up
 
 - CORS is browser-enforced only. Confirm the service also has server-side authentication and authorisation for anything sensitive; see the [webserver stack](../stack.md).
+Last updated: 10 July 2026

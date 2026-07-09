@@ -166,3 +166,4 @@ Graylog receives all posture check results. Create a stream `Device posture` fil
 Alert on consecutive failures: if a device fails posture three times in 24 hours, alert to `#security-alerts`. This may indicate the device is no longer meeting requirements, or that someone is attempting to use a compromised or non-compliant device.
 
 Alert on devices that have not checked in for 48 hours: these may have stale Tailscale registrations. Carrot reviews this list weekly and follows up with device owners.
+Last updated: 20 March 2026

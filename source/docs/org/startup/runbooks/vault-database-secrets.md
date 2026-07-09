@@ -152,3 +152,4 @@ These policies are assigned to AppRole roles in the AppRole runbook. An applicat
 Application code can renew credentials before they expire. The Vault client libraries handle this automatically if configured. The maximum TTL of 24 hours exists as an absolute upper bound; routine use is not recommended. The default one-hour TTL is the normal operating window.
 
 If an application is reporting database authentication failures, check whether its Vault token has expired first, then whether the database credential lease has expired. Both must be valid for the application to connect.
+Last updated: 10 July 2026

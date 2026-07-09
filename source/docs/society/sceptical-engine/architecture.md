@@ -68,3 +68,4 @@ results, and build up a complete picture of a firmware image over multiple sessi
 
 The audit log accumulates across runs within a workspace. The full history of what was proposed, what was
 tested, and what was determined is preserved.
+Last updated: 09 July 2026

@@ -39,3 +39,4 @@
 ## Detailed documentation
  
 - Hetzner: [DPA Template](https://www.hetzner.com/AV/DPA_en.pdf) 
+Last updated: 17 May 2026

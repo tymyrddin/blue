@@ -93,3 +93,4 @@ The pre-edit `main.cf.old` is the fallback: restore it and reload. For a single 
 - Relay hardening is separate from sender authentication. Pair with [SPF](spf.md), [DKIM](dkim.md), and [DMARC](dmarc.md).
 - Add [TLS for mail transport](mail-tls.md) so sessions are encrypted, and [SASL authentication](sasl.md) so `permit_sasl_authenticated` has something to permit.
 - Watch the queue and logs after changes; see [relay and authentication review](../relay-exposure.md).
+Last updated: 10 July 2026

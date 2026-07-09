@@ -49,3 +49,4 @@ worth watching and the keys are the thing worth guarding. The estate, in the end
 It is a set of separated worlds with controlled crossings between them, and the real defensive
 engineering goes into the crossings, not the compute. The structure is never in what is held. It
 is in what is allowed to pass.
+Last updated: 09 June 2026

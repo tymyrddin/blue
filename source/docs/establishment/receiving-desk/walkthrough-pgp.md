@@ -142,3 +142,4 @@ The case remains open until both sub-cases have a determination recorded. The Re
 does not track what the Long Table or the Quiet Room do with the material. It tracks that the
 material was received, classified, and routed, and that the researcher was notified according
 to the stated timeline.
+Last updated: 01 June 2026

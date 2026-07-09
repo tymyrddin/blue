@@ -137,3 +137,4 @@ Prometheus monitors DNS resolution via the `blackbox_exporter` dns probe:
 ```
 
 An alert fires if DNS resolution fails or returns an unexpected IP for more than 5 minutes.
+Last updated: 10 July 2026

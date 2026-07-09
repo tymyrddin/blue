@@ -37,3 +37,4 @@ Modern operations become markedly harder without this layer, because so much bel
 continuous access to position and to signal. Take away the high vantage and the platforms keep
 working, but they stop knowing where they are or what is coming, which amounts in practice to taking
 away most of their value.
+Last updated: 09 June 2026

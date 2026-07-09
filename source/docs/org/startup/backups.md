@@ -57,3 +57,4 @@ They also establish DR procedures for multi-region failover, though that comes l
 * [Testing protocols](runbooks/restic-testing.md)
 * [Disaster recovery planning](runbooks/disaster-recovery.md)
 
+Last updated: 20 March 2026

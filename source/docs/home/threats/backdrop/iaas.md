@@ -32,3 +32,4 @@ never needed to authenticate, only to use an existing authenticated session.
 Browser password managers are a common target. A dedicated password manager with local or audited cloud storage
 is a more defensible position. Keeping browsers updated closes many of the vulnerabilities that infostealers
 use for initial access to credential stores.
+Last updated: 16 May 2026

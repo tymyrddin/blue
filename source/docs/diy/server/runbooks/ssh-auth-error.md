@@ -59,3 +59,4 @@ Setting `StrictHostKeyChecking no` or pointing `UserKnownHostsFile` at `/dev/nul
 
 - If the cause was a deliberate key rotation, see [key management](key-management.md).
 - An unexplained mismatch on an internet-facing server warrants treating as a possible interception: escalate per [the first hour](../../incidents/first-hour.md).
+Last updated: 10 July 2026

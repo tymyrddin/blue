@@ -120,3 +120,4 @@ cloud tenant that grew organically, and an IT function doing its best with the b
 hours available.
 
 This is the landscape the Home inhabits. It is not exceptional. It is representative.
+Last updated: 10 July 2026

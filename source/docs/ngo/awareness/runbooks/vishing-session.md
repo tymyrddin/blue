@@ -116,3 +116,4 @@ dedicated attacker has more time, more preparation, and is not doing this as a s
 The question is whether the person who receives the call knows what to do next.
 
 They now have a better answer.
+Last updated: 10 July 2026

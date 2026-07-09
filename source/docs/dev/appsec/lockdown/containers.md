@@ -65,3 +65,4 @@ analysis.
 
 - [Containers and Kubernetes evasion](../../../counter/evasion/containers.md)
 - [Container security gaps](../../../diy/containers/failures.md)
+Last updated: 27 May 2026

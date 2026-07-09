@@ -145,3 +145,4 @@ Ludmilla reviews the exceptions list quarterly and confirms the compensating con
 ## The defender's view
 
 Hardening narrows the attack surface; it does not tell you when someone tests what remains. The cloud recon, initial-access, and misconfiguration-abuse patterns this baseline is meant to deny are catalogued from the hunting side in [cloud attack detection](../../../counter/cloud/detection.md).
+Last updated: 10 July 2026

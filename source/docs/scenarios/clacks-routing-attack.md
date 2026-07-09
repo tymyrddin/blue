@@ -96,3 +96,4 @@ the city has spent two days assembling the case against itself.
 - The same attack from the other side: [denial and disruption](https://red.tymyrddin.dev/docs/out/impact/notes/availability.html).
 - The guild whose name comes up first, and whose infiltration is the whole question:
   [the Scarlet Semaphore](https://red.tymyrddin.dev/docs/scarlet/).
+Last updated: 10 July 2026

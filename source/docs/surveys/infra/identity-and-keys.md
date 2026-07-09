@@ -44,3 +44,4 @@ This is why the periodic announcements of a sovereign arrangement are rarely abo
 it is there: the keys kept locally, the logs kept locally, the right to speak to the golem narrowed
 to people the city has chosen. The compute barely moves. The custody does, and the custody is the
 part that was ever sovereign.
+Last updated: 09 June 2026

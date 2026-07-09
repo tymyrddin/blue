@@ -88,3 +88,4 @@ This ensures:
 *End of operational note, by memorandum from the Society Coordinating Committee, initialled in a 
 handwriting that strongly suggests the Patrician has already read it.*
 
+Last updated: 01 June 2026

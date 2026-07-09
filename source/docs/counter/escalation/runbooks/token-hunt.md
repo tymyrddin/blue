@@ -171,3 +171,4 @@ process (spoolsv.exe, a SYSTEM-context svchost.exe, or a COM surrogate running a
 is the Potato-family indicator. Random-looking or short hexadecimal pipe names from
 unexpected creator processes narrow the field; legitimate named pipes from known services
 appear consistently from the same image paths.
+Last updated: 26 May 2026

@@ -65,3 +65,4 @@ If the new key fails on a server during rotation, the old key is still in place 
 
 - A changed host key on the next connection produces a verification warning. See [SSH authentication error](ssh-auth-error.md).
 - Record which keys exist and who holds them, so [offboarding](../../access/runbooks/offboarding.md) can revoke them.
+Last updated: 10 July 2026

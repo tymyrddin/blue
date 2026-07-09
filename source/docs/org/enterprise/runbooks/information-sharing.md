@@ -114,3 +114,4 @@ Angua reviews incoming events weekly, correlating them against Golem Trust's own
 TLP:AMBER indicators received from ISAC partners are used internally for Graylog enrichment and investigation context, but are not pushed to Suricata as IDS rules (which would make them visible in packet capture metadata) and are not included in the nftables blocklist (which might be inferred from connection resets). They are used only by analysts with direct access to MISP.
 
 If a TLP:AMBER indicator from a partner is later confirmed as a threat to Golem Trust, Angua may request the originating organisation's permission to downgrade the TLP to GREEN, allowing it to be shared more widely. This request goes through the Circle Sea ISAC coordination team, not directly to the originating organisation.
+Last updated: 20 March 2026

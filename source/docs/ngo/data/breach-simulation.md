@@ -139,3 +139,4 @@ The [arrows and shields reference maps the attack patterns in this scenario to t
 technical taxonomy](https://purple.tymyrddin.dev/docs/audits/supportive/arrows-shields.html) and to the controls that 
 address them. The SIRT external documentation covers building out the team capability, metrics, and the responsible 
 disclosure programme that would surface this class of vulnerability through external reporting.
+Last updated: 10 July 2026

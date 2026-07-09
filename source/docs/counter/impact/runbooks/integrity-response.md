@@ -51,3 +51,4 @@ from a clean, signed source; a patch pushed afterward does not reach a flaw that
 
 Keep the mechanics of how the fake was caught. Burying them to save face denies the team's own analysts
 the one lesson that catches the next, better forgery.
+Last updated: 12 June 2026

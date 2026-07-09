@@ -155,3 +155,4 @@ permitted set, is a recognisable signal even without deep TASE.2 protocol decodi
   relevant to inter-utility ICCP links
 - [Shodan: port 102](https://www.shodan.io/search?query=port%3A102): internet-exposed MMS and ICCP endpoints,
   alongside IEC 61850 and Siemens S7comm traffic on the same port
+Last updated: 09 July 2026

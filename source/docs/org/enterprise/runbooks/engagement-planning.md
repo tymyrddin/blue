@@ -122,3 +122,4 @@ The codeword was chosen by Carrot. Mr. Teatime suggested "NIGHTSHADE" but Carrot
 ## Engagement calendar
 
 Engagements are scheduled in the security team's shared calendar under the "Red Team" category, visible only to Carrot, Adora Belle, and Mr. Teatime. The calendar entry contains only the engagement type and duration; the planning document is stored in the red team's private GitLab repository at `gitlab.golemtrust.am/security/red-team/engagements/`.
+Last updated: 10 July 2026

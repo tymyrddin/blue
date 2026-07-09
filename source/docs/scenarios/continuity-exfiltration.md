@@ -83,3 +83,4 @@ records out the door.
   and [exfiltration](../counter/exfiltration/index.rst).
 - The same drain from the attacker's side: [living off the cloud](https://red.tymyrddin.dev/docs/out/exfiltration/notes/living-off-cloud.html)
   and [cloud-sync exfiltration](https://red.tymyrddin.dev/docs/out/exfiltration/runbooks/cloud-sync-exfil.html).
+Last updated: 13 June 2026

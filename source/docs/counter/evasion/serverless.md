@@ -136,3 +136,4 @@ with no internet gateway is the strongest egress control available.
 - [Cloud defence: IAM hardening and OAuth controls](../cloud/exposure.md)
 - [Cloud detection signals](../cloud/detection.md)
 - [BYOVD detection](runbooks/byovd-detection.md)
+Last updated: 10 July 2026

@@ -27,3 +27,4 @@ protocol: "tcp"
 port: 22
 receive_match: "^SSH-2\\.0.*OpenSSH_8\\.4"
 ```
+Last updated: 01 June 2026

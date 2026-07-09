@@ -94,3 +94,4 @@ per cent of East Coast fuel supply, and a ransom paid before the scope was fully
 - [ICS Access and Persistence SimLab](../labs/ics-access-simlab): SCADA default credentials, historian SQL
   injection and path traversal, and historian ingest poisoning; the access and monitoring chain through which
   operators lose situational awareness
+Last updated: 09 July 2026

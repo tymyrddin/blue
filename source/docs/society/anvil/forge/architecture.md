@@ -106,3 +106,4 @@ No packets are sent. This is passive, internet-facing scanning.
 * Full error handling
 
 This is the backbone for the passive-scanner spike: testable, modular, and ready to grow a piece at a time.
+Last updated: 01 June 2026

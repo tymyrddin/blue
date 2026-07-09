@@ -95,3 +95,4 @@ No daemon exposed over plaintext TCP. Every `--privileged` container and every `
 - Record the review: date, containers checked, findings, what was fixed or accepted. This is the baseline for the next review.
 - A compromised privileged container is a candidate for [the first hour](../../incidents/first-hour.md).
 - The [container stack](../stack.md) and [failures](../failures.md) pages cover why each of these controls is in place.
+Last updated: 09 July 2026

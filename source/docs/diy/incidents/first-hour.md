@@ -41,3 +41,4 @@ A small team without security expertise is at a disadvantage in incident respons
 Indicators that the situation warrants external help: evidence the attacker has reached multiple systems; data that may require breach notification under applicable law; an attack that appears targeted rather than opportunistic; uncertainty about whether the threat has been fully contained.
 
 A rapid containment decision and a clean rebuild from known-good backups is sometimes the better outcome over an extended investigation attempting to determine the full scope of a sophisticated compromise. The judgment of when to give up on forensics and rebuild gets easier when backups are current and the rebuild process is understood before it is needed.
+Last updated: 10 July 2026

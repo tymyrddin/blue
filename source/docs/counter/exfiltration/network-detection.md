@@ -132,3 +132,4 @@ When a suspected steganographic channel is identified:
 3. Preserve DNS query logs covering the period of activity for subdomain analysis.
 4. Extract the browser history and download history from the affected endpoint to understand
    the full scope of retrieved content.
+Last updated: 09 June 2026

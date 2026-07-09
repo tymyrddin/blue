@@ -27,3 +27,4 @@ A Software Bill of Materials is a machine-readable inventory of all components i
 pip install cyclonedx-bom
 cyclonedx-py -r requirements.txt -o sbom.json --format json
 ```
+Last updated: 10 July 2026

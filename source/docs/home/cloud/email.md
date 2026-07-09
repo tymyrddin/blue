@@ -43,3 +43,4 @@ Settings Path: Settings → Mail → Filters → Review forwarding rules.
 * Disable suspicious rules immediately.
 * Change your password & enable 2FA.
 * Check for other compromised accounts.
+Last updated: 06 December 2025

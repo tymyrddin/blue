@@ -95,3 +95,4 @@ follow from it.
 - [GDPR obligations](../data/gdpr.md)
 - [The Fabulist Incident](../data/breach-simulation.md)
 - [Hardening MFA against real-world attacks](../../counter/human/mfa-hardening.md)
+Last updated: 09 June 2026

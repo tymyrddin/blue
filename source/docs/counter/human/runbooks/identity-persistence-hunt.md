@@ -159,3 +159,4 @@ from a recently registered application consented to during an active compromise.
 - [Entra ID audit on a live tenant](../../../ngo/foundation/entra-id.md)
 - [Privileged access management on a live tenant](../../../ngo/foundation/privileged-access.md)
 - [Offboarding and access lifecycle on a live tenant](../../../ngo/foundation/offboarding.md)
+Last updated: 10 July 2026

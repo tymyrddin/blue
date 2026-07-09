@@ -149,3 +149,4 @@ When a hunt produces a hit:
 5. Check whether any scheduled tasks, services, or WMI subscriptions were
    created from that host in the same window
 6. Escalate to incident response if no legitimate explanation is found
+Last updated: 26 May 2026

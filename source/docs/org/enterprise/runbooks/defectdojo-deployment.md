@@ -186,3 +186,4 @@ rm /tmp/defectdojo-backup-${DATE}.sql.gz
 ```
 
 Retention is 30 days of daily backups. The media volume (`defectdojo-media`) is backed up weekly using `s3cmd sync`. Backup success is verified by the Graylog alert that fires if the cron job does not produce a log entry by 03:00 each morning.
+Last updated: 20 March 2026

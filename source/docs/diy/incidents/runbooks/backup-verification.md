@@ -68,3 +68,4 @@ Treat a failed restore as a production risk until it is resolved. The backup is 
 
 Some data protection regulations require demonstrable ability to restore personal data within a defined timeframe.
 Document verification results as evidence of ongoing capability.
+Last updated: 29 May 2026

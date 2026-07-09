@@ -96,3 +96,4 @@ An introspection query in a production environment is either a misconfiguration 
 succeeds) or active reconnaissance (if it is blocked). Both are worth knowing about.
 Field suggestion exploitation is harder to detect in isolation; the combination of many
 `400` responses with field name variations in the request body is the stronger pattern.
+Last updated: 27 May 2026

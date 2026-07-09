@@ -32,3 +32,4 @@ Design review is an opportunity to assess whether the default behaviour of a sys
 ## Architectural Risk Analysis
 
 ARA examines the architecture for known architectural risk patterns: unnecessary attack surface, privilege escalation paths, insecure defaults, reliance on a single security control. It is a more structured alternative to ad-hoc architecture review, with specific patterns to check.
+Last updated: 10 July 2026

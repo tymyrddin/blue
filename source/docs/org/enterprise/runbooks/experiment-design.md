@@ -125,3 +125,4 @@ Royal Bank integration service: must handle its upstream becoming slow (network-
 Harbor registry: must survive a pod deletion without disrupting running pipelines. Harbor's high-availability configuration is tested quarterly with a pod-delete on the Harbor core and registry components simultaneously.
 
 Keycloak: tested with pod-delete monthly. Must not log users out during a pod deletion (session storage must survive). The session storage test (pod-delete while a user is actively authenticated) is run in staging; production tests are limited to off-peak hours.
+Last updated: 10 July 2026

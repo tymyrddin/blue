@@ -49,3 +49,4 @@ works well for log aggregation and structured query across request metadata. Pro
 metrics side: per-endpoint request rates, error rates, and latency distributions. Anomaly detection that requires
 understanding the semantics of the request (workflow sequence, object ownership) typically needs a custom layer
 on top of the metrics infrastructure.
+Last updated: 10 July 2026

@@ -95,3 +95,4 @@ def safe_extract(zip_path: str, dest: str) -> None:
 
 This is the "zip slip" pattern: a maliciously crafted archive overwrites arbitrary files on
 the filesystem if extraction is done without path validation.
+Last updated: 10 July 2026

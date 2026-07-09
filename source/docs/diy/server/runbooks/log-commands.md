@@ -74,3 +74,4 @@ The commands above read the logs on the local disk. A root-level attacker can ed
 
 - For the patterns worth searching for and what they indicate, see [reading server logs](../reading-logs.md).
 - For getting logs off the server so they survive a compromise, see [centralised logging](centralised-logging.md).
+Last updated: 29 May 2026

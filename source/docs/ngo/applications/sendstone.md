@@ -72,3 +72,4 @@ have mentioned it since the communication went out, in contexts that suggested t
 not connected the communication to the tool they were using. The pattern is not defiance.
 It is the natural half-life of a habit that was convenient and is now slightly less
 convenient than the approved alternative.
+Last updated: 21 March 2026

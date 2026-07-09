@@ -58,3 +58,4 @@ For most people: Bitwarden (free, open-source, well-audited) or Proton Pass if a
 For families: 1Password's family plan handles shared access cleanly.
 
 For those who want nothing in the cloud: KeePassXC with a backup copy of the database stored separately.
+Last updated: 16 May 2026

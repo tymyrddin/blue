@@ -304,3 +304,4 @@ output formats or permitted target hostnames) further reduces the surface. An ar
 passes through without validation is an injection vector even when the shell is not invoked
 directly, because some programs (`ffmpeg`, `ImageMagick`) interpret certain argument values
 as URIs or file paths and perform their own fetches.
+Last updated: 10 July 2026

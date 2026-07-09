@@ -221,3 +221,4 @@ curl -s http://127.0.0.1:9090/api/v1/targets | python3 -m json.tool | grep '"hea
 ```
 
 All targets should show `"health": "up"`. Targets showing `"health": "down"` indicate a scrape failure; check that the exporter is running and that the firewall permits TCP 9100 from `metrics.golemtrust.am` to the target server's private IP.
+Last updated: 10 July 2026

@@ -81,3 +81,4 @@ The loop pattern is the direct ORM equivalent of mass assignment: it applies wha
 Sending a request with additional fields (`role`, `is_admin`, `balance`) and then reading the resource confirms
 whether the endpoint enforces field restrictions. A 200 response where the sensitive field value changed is the
 finding; a 400 or a 200 that left the field unchanged are both acceptable outcomes.
+Last updated: 10 July 2026

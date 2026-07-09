@@ -133,3 +133,4 @@ at a different layer and is outside the scope of a single-host container setup.
 The Docker daemon itself, if exposed over TCP without mutual TLS, provides unauthenticated access to everything the
 daemon can do: run containers, mount host filesystems, inspect secrets in environment variables, and obtain a root
 shell. Daemon exposure over an unprotected TCP socket is host compromise by another name.
+Last updated: 10 July 2026

@@ -137,3 +137,4 @@ spec:
 Filtering to only log 4xx and 5xx responses reduces log volume significantly. For full access logging on a specific service, apply a namespace-scoped Telemetry resource that overrides this filter.
 
 The Fluentd daemonset collects container stdout from all nodes and forwards to Graylog. No additional configuration is needed for Istio access logs; they arrive in Graylog alongside application logs. Otto Chriek has configured Graylog stream rules that separate Istio proxy logs (identified by the `x_forwarded_for` field) from application logs.
+Last updated: 20 March 2026

@@ -213,3 +213,4 @@ On the first Monday of each month, Ponder (or whoever is available) performs a t
 The test result is noted in the Golem Trust internal wiki. "Worked" is a sufficient entry. "Did not work" requires an incident entry and must be resolved before the next business day.
 
 Nobody in Ankh-Morpork believes disaster will strike until it does. Vimes believed it would. He was usually right.
+Last updated: 10 July 2026

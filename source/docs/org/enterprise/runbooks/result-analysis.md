@@ -170,3 +170,4 @@ The most important part of result analysis is confirming that fixes actually wor
 The verification step for each finding is scheduled as the next experiment run at the same scope. If a staging experiment found a problem and the fix was applied, the next staging run of that experiment confirms the fix. Only then is the finding marked resolved.
 
 Dr. Crucible's rule: "We don't close a finding until we've run the experiment again and passed."
+Last updated: 20 March 2026

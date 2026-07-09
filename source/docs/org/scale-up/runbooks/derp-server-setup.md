@@ -157,3 +157,4 @@ journalctl -u derper -n 50
 A successful relay shows the connection being accepted and forwarded. The log does not contain any payload content; it shows only connection events and byte counts.
 
 Monitor DERP traffic volume via the Prometheus node exporter on each DERP server. High relay volume is worth investigating; it may indicate that direct connections are failing between a pair of nodes for a reason that can be fixed.
+Last updated: 20 March 2026

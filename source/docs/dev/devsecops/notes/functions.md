@@ -14,3 +14,4 @@ The term serverless or function as a service means that customers of the service
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
 - [On-prem: On-prem/Alternative clouds (Hetzner, OVH, etc.) lock-in assessment](../on-prem/lock-in.md)
 
+Last updated: 27 May 2026

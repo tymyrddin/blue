@@ -50,3 +50,4 @@ specific emails and events in detail.
 4. If the sandbox domain was registered for this cohort, decommission it: remove DNS
    records, cancel the registration or let it expire, and confirm MX records are no
    longer resolving.
+Last updated: 21 March 2026

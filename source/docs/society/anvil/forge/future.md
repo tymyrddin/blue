@@ -124,3 +124,4 @@ The transition from spike to operational tool can be judged by:
 4. Speed: from `fingerprint.yaml` to first results in production in under an hour.
 
 The roadmap leans on the spike architecture as a stable foundation, and the separation of concerns it already has. The path is incremental, de-risked, and pointed squarely at being useful.
+Last updated: 01 June 2026

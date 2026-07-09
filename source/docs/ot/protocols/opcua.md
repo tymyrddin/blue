@@ -125,3 +125,4 @@ deployments in an environment are running in `None` mode is the first step. Movi
 - [OPC Foundation](https://opcfoundation.org): publishes the OPC UA specification and maintains the
   compliance test programme
 - [Shodan: port 4840](https://www.shodan.io/search?query=port%3A4840): internet-exposed OPC UA servers
+Last updated: 10 July 2026

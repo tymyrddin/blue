@@ -68,3 +68,4 @@ that are identity-side: multi-factor authentication, lockout thresholds tuned to
 attacker without locking out the workforce, and federated sign-in that keeps a domain
 authentication endpoint off the open road. Golem Trust Computing's build of that layer is in
 [Keycloak deployment](../../org/startup/runbooks/keycloak-deployment.md).
+Last updated: 09 June 2026

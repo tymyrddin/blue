@@ -54,3 +54,4 @@ Notify Adora Belle, Carrot, Ponder, and Cheery. One person (Cheery, or Carrot if
 Start the timer. The 4-hour RTO begins from this declaration.
 
 For Scenario 2, use the 30-minute assessment window before declaring. For Scenario 3, declare immediately.
+Last updated: 28 March 2026

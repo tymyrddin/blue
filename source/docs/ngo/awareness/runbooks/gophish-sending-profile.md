@@ -37,3 +37,4 @@ keeping profiles distinct by scenario makes reviewing campaign results easier.
 If the session includes a QR code phishing demonstration, the From address matters less
 than the email body design. Create a profile with a generic sender address for that
 campaign type.
+Last updated: 21 March 2026

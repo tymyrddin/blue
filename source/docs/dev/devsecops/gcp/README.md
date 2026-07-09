@@ -30,3 +30,4 @@ deployments while Google handles infrastructure security.
 ## How?
 
 * [Compute Engine (GCE) and VM instances](pipeline.md)
+Last updated: 17 May 2026

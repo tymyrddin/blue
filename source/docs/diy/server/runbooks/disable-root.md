@@ -73,3 +73,4 @@ Root SSH can be restored by setting `PermitRootLogin prohibit-password` and relo
 
 - Confirm [SSH key authentication and password login are hardened](harden-ssh.md).
 - Record which account holds admin access, so offboarding can revoke it later.
+Last updated: 29 May 2026

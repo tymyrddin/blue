@@ -51,3 +51,4 @@ before the actual attack.
 
 - [SIEM and threat intelligence/hunting notes](https://blue.tymyrddin.dev/docs/soc/siem/notes/)
 - [Security operations systems and tools](https://purple.tymyrddin.dev/docs/incident-response/soc/)
+Last updated: 02 June 2026

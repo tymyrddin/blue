@@ -138,3 +138,4 @@ addresses this surface.
   European installations
 - [Shodan: port 34964](https://www.shodan.io/search?query=port%3A34964): internet-exposed Profinet DCP
   endpoints
+Last updated: 19 May 2026

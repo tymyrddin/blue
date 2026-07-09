@@ -145,3 +145,4 @@ Firewall nftables blocklist: receives attributes with type `ip-src` or `ip-dst`,
 DefectDojo CVE matching: receives attributes with type `vulnerability-type` (CVE numbers), used to correlate vulnerability management findings with active exploitation campaigns. No TLP filter applied, as CVE numbers are public.
 
 Configure these filter rules in the MISP event export settings for each integration (see the security tools integration runbook for the integration-side configuration).
+Last updated: 20 March 2026

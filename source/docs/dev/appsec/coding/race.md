@@ -101,3 +101,4 @@ def redeem_token(session, token_value: str, user_id: int) -> None:
 ```
 
 The WHERE clause on `redeemed == False` is what prevents double-redemption: the second concurrent request finds the row already marked `True` and matches nothing. A UNIQUE constraint on `token_value` at the table level prevents the same token being issued twice; that is a separate concern from the redemption logic shown here.
+Last updated: 17 May 2026

@@ -170,3 +170,4 @@ docker push registry.golemtrust.am/golemtrust-staging/debian:bookworm
 ```
 
 In the Harbor web interface, confirm the image appears and that a vulnerability scan has been triggered automatically. Wait for the scan to complete and verify the results are visible.
+Last updated: 10 July 2026

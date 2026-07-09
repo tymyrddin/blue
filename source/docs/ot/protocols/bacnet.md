@@ -138,3 +138,4 @@ traffic for any facility where a thermal, access control, or life safety event w
   interoperability guidelines
 - [Shodan: port 47808](https://www.shodan.io/search?query=port%3A47808): live count of internet-exposed
   BACnet/IP devices
+Last updated: 19 May 2026

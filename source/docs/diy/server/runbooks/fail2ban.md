@@ -104,3 +104,4 @@ Existing bans are firewall entries that clear on service stop.
 
 - For SSH specifically, prefer [key-only authentication](harden-ssh.md) over relying on fail2ban.
 - Review banned-IP patterns during a [log review](log-commands.md); a single source banned repeatedly may warrant a permanent firewall block.
+Last updated: 29 May 2026

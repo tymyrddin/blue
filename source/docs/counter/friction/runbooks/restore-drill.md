@@ -35,3 +35,4 @@ option. Pairs with [backups are cheap, restores are not](../backup-restore-testi
 - Schedule the drill; an untested backup decays back to unknown.
 - Test the isolated, write-once, or offline copy specifically, because that is the one that has to
   survive an attacker who reaches the live backups, and it is the harder one to restore from quickly.
+Last updated: 10 July 2026

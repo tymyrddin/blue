@@ -33,3 +33,4 @@ Modification timestamps on cron files are one signal; comparison against a file 
 Logs on a compromised server can be modified or deleted by a root-level attacker. Logs already forwarded to a remote destination cannot. An investigation that relies on off-server copies has a more trustworthy timeline than one that depends on what was left on the machine.
 
 The pattern worth looking for in centralised logs: authentication success following a period of failures from the same source, then a gap in log entries from the server, then later entries from a different source IP. The gap is the attacker modifying or deleting local logs; the earlier entries survived because they were already forwarded. An attacker who owns the machine does not own what has already left it.
+Last updated: 29 May 2026

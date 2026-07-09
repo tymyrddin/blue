@@ -112,3 +112,4 @@ Table reads them.
 | Analyst review  | Not required (below threshold, not elevated)          |
 
 The event is in the Long Table sharing group as correlated context. The Quiet Room's part is done.
+Last updated: 10 July 2026

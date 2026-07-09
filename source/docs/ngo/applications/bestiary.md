@@ -72,3 +72,4 @@ percent, which was described in the accompanying letter as a reflection of incre
 operational costs. The contract was renewed anyway, because there is no migration path that
 does not involve exporting eleven years of records in a format that Bestiary's export
 function produces unreliably.
+Last updated: 21 March 2026

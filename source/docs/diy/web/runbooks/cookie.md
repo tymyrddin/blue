@@ -76,3 +76,4 @@ Remove or relax the added attributes and reload. If `SameSite=Strict` breaks a n
 
 - `Secure` complements [HSTS](hsts.md): one keeps the cookie off HTTP, the other keeps the connection on HTTPS.
 - `HttpOnly` is a backstop for [CSP](csp.md): if XSS fires despite CSP, the session token is still out of the script's reach.
+Last updated: 10 July 2026

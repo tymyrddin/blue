@@ -143,3 +143,4 @@ Cheery generates a monthly report comparing the SBOM of the current production i
 - Version changes
 
 Packages that appear without a corresponding pull request updating dependencies are flagged for investigation. Unexplained additions to a production image's package list are a supply chain integrity concern.
+Last updated: 10 July 2026

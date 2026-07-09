@@ -26,3 +26,4 @@
 - Use PostgreSQL Flexible Server instead of Cosmos DB where possible.  
 - Replace ARM with Terraform/Bicep (more portable).  
 - Avoid Logic Apps in favor of Kubernetes-based workflows.  
+Last updated: 07 June 2025

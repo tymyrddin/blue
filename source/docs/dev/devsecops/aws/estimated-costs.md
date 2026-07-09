@@ -28,3 +28,4 @@ Based on this pipeline (so just a starter pipeline): [Basis for a secure AWS dep
 * RDS test DB no one uses: €40
 
 *Every NAT Gateway is a slow financial haemorrhage. CloudWatch stores everything. The billing dungeon awaits.*
+Last updated: 17 May 2026

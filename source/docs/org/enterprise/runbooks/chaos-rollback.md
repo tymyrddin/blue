@@ -144,3 +144,4 @@ The production DNS TTL was reduced from 60 to 30 seconds as a preventive measure
 ## Rollback time target
 
 The target for returning any experiment to a fully normal state is 5 minutes from the experiment end time. This includes manual steps for node-drain and DNS changes. The target reflects Golem Trust's commitment to short experiment windows and rapid recovery, which is part of the Royal Bank SLA commitment for planned maintenance activities.
+Last updated: 20 March 2026

@@ -78,3 +78,4 @@ def disable_user(user_id: int):
 Testing for IDOR requires two accounts at each privilege level. Authenticated as one account, accessing resources belonging to the other tests whether the ownership check is enforced. Any successful access is a finding.
 
 Automated scanning tools do not reliably detect IDOR because the vulnerability requires understanding the application's intended access model.
+Last updated: 10 July 2026

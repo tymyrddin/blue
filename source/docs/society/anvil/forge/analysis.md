@@ -28,3 +28,4 @@ What falls out of the binaries themselves:
 - Embedded web resources
 - Compilation timestamps
 - Library versions
+Last updated: 01 June 2026

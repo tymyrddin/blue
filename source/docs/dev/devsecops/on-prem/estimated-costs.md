@@ -28,3 +28,4 @@ Based on this pipeline (so just a starter pipeline): [Secure on-premises CI/CD p
 * Monitoring VM left running: €20
 
 *You’re still saving money, but now you’re also worried about botnet scans and SSH brute force attempts at 3am.*
+Last updated: 17 May 2026

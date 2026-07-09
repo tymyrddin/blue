@@ -84,3 +84,4 @@ Each item above has been checked. The findings establish whether a compromise oc
 
 - For containment, evidence preservation, and escalation, see [the first hour](../../incidents/first-hour.md).
 - Recovery from a confirmed compromise generally means a rebuild from [verified backups](../../incidents/runbooks/backup-verification.md).
+Last updated: 10 July 2026

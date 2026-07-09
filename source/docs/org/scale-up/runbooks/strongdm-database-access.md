@@ -114,3 +114,4 @@ Every quarter, Carrot runs an access review for all human StrongDM accounts. The
 - Session duration: sessions that ran to the maximum allowed duration repeatedly may indicate the default TTL is too short for that user's work pattern, or that a user is not scoping their work appropriately
 
 The review output is a written report shared with Adora Belle. Any accounts suspended or removed are documented with the reason.
+Last updated: 20 March 2026

@@ -23,3 +23,4 @@ With stalkerware installed on another person's device, the adversary can activat
 | TheOneSpy   | Activities including live streaming     | Android                   | 
 | Spyine      | Monitoring smartphone in stealth mode   | Android and iOS           | 
 | TheWiSpy    | Tracking location and monitoring files  | Android                   |
+Last updated: 05 May 2025

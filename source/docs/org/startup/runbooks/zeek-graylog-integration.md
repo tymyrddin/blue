@@ -180,3 +180,4 @@ tail -5 /opt/zeek/logs/current/conn.log | python3 -m json.tool
 ```
 
 If the output shows a parse error, Zeek's JSON logging may not be enabled. Confirm that `local.zeek` contains `redef LogAscii::use_json = T;` and that `zeekctl deploy` was run after adding it.
+Last updated: 10 July 2026

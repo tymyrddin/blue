@@ -136,3 +136,4 @@ resolved.
 The checklist is filed in the DPA register alongside the contract and the DPA. It is
 reviewed when the vendor adds a materially new feature, changes their infrastructure,
 or is acquired.
+Last updated: 10 July 2026

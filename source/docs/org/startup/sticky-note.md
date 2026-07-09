@@ -56,3 +56,4 @@ Adora Belle insists everything be written down. "We're not cowboys. We're profes
 
 - [Initial threat modeling: physical and remote access](https://purple.tymyrddin.dev/docs/threat-modelling/)
 - [Risk assessment: Shades fire scenarios](https://purple.tymyrddin.dev/docs/risk-management/)
+Last updated: 20 March 2026

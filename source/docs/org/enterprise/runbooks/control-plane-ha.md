@@ -154,3 +154,4 @@ mv /tmp/kube-apiserver.yaml /etc/kubernetes/manifests/
 ```
 
 Repeat the restore procedure on all three control plane nodes before restarting any of them, using consistent snapshot data and the correct `--initial-cluster` string for all three members. Mr. Bent has requested that every restore operation is logged in the change management register with timestamps.
+Last updated: 10 July 2026

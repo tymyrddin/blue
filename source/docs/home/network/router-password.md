@@ -16,3 +16,4 @@ Linksys with `admin:admin`. These are indexed in lookup tables and scanned for a
 
 Set a password of 12 or more characters. A random passphrase works well. Write it on paper and store it
 somewhere sensible.
+Last updated: 16 May 2026

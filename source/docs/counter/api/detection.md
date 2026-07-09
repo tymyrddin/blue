@@ -166,3 +166,4 @@ Extend the same correlation approach to business logic: a session that maps work
 then tests them out of order, then sends concurrent requests to a payment endpoint is telling
 a story. The individual events look like exploration and retries. The sequence looks like
 targeted abuse.
+Last updated: 10 July 2026

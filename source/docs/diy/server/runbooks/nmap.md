@@ -62,3 +62,4 @@ Every open port corresponds to an intended, documented service. No unexpected po
 
 - Findings feed the [public exposure review](../../incidents/runbooks/exposure-review.md) and any firewall tightening ([UFW](ufw.md) / [iptables](iptables.md)).
 - An unexpected open service may also warrant a [running-services audit](systemctl.md) on the host itself.
+Last updated: 10 July 2026

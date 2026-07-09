@@ -153,3 +153,4 @@ maxretry = 1
 
 Setting `maxretry = 1` is appropriate here: a single connection to a service with no legitimate users is enough reason
 to block the source.
+Last updated: 21 May 2026

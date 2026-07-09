@@ -109,3 +109,4 @@ A quarterly presentation is prepared for Adora Belle, covering:
 The SANS SOC Survey comparison is included because Adora Belle asks about industry benchmarks. The honest answer is that Golem Trust's detection coverage (71% as of Q4 2025) is above the survey median for organisations of comparable size (58%), but below the 85th percentile (82%). The improvement target for the end of 2026 is to reach 85%, which would place Golem Trust in the top quartile for its size band.
 
 The presentation is delivered by Carrot, with Mr. Teatime and Angua both present to answer questions. Adora Belle's questions tend to focus on what the improvements cost and whether they are proportionate to the risk reduction. She does not ask technical questions; she asks business questions. Both Mr. Teatime and Angua find this appropriate and slightly intimidating.
+Last updated: 20 March 2026

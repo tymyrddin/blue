@@ -53,3 +53,4 @@ one was looking at network-level patterns.
 ## Related
 
 * [Zeek: Transforming raw packets into actionable logs](https://blue.tymyrddin.dev/docs/soc/nta/zeek/)
+Last updated: 28 March 2026

@@ -85,3 +85,4 @@ out what would break is more useful than breaking it without warning.
 The DMARC reports are not going to read themselves. The server of uncertain purpose is not
 going to explain itself. But these can wait one week. The admin role that belongs to
 a former employee cannot.
+Last updated: 21 March 2026

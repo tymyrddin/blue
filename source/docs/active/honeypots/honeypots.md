@@ -93,3 +93,4 @@ A Raspberry Pi, an old laptop, or an unused VM is sufficient.
 * Not a firewall substitute.
 
 Bait. Useful bait, but bait.
+Last updated: 17 May 2026

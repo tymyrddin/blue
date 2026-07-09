@@ -31,3 +31,4 @@ Scanning without logging in tests only the unauthenticated attack surface. Authe
 ## Scope and authorisation
 
 Web application scanning issues a large number of requests in a short time and can affect application stability. Running scans against production systems requires care; a staging environment that mirrors production is typically preferable for automated scanning, with targeted manual testing against production.
+Last updated: 17 May 2026

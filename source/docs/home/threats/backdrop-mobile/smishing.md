@@ -43,3 +43,4 @@ Do not click the link. Do not call the number in the message. If the message cla
 from a service you use, navigate to that service directly through a browser or its official
 app and check your account there. Report the message to the relevant national authority
 before deleting it; in the UK, forward to 7726 (spells SPAM).
+Last updated: 10 July 2026

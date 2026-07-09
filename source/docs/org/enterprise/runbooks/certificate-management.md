@@ -126,3 +126,4 @@ kubectl rollout restart deployment/<DEPLOYMENT_NAME> -n <NAMESPACE>
 Rotating the root CA is a disruptive operation that requires coordination across all clusters. The procedure requires running both the old and new root CAs simultaneously for a period sufficient for all workload certificates (issued under the old CA) to have been rotated to the new CA. This window is at minimum 24 hours.
 
 The full root CA rotation procedure is documented separately in the security operations runbook (rootca-rotation.md). Do not attempt root CA rotation without scheduling a maintenance window, notifying Adora Belle, and having Ponder available for the duration. Dr. Crucible has a printed copy of the procedure on his desk for the occasion when it is needed and the documentation system is unreachable.
+Last updated: 20 March 2026

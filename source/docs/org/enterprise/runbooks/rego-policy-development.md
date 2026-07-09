@@ -210,3 +210,4 @@ opa fmt --write policies/
 ```
 
 The GitLab CI pipeline runs `opa fmt --diff policies/` and fails the pipeline if any files are unformatted. This avoids style debates in code review and keeps diffs clean.
+Last updated: 10 July 2026

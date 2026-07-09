@@ -43,3 +43,4 @@ there. Change passwords on accounts where saved credentials were stored on the p
 If the phone was used for SMS-based two-factor authentication, consider whether accounts
 using that number as a recovery method are now at risk via SIM, especially if the phone
 was stolen by someone who knows you.
+Last updated: 16 May 2026

@@ -138,3 +138,4 @@ Kerberoast the build service account from the build server. Crack the ticket, wh
 dictionary-derivable password set when the service account was provisioned two years ago.
 Pass the ticket to the domain controller. Each step uses authentication mechanisms the
 environment treats as expected behaviour.*
+Last updated: 27 May 2026

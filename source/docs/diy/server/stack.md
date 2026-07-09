@@ -75,3 +75,4 @@ Kernel vulnerabilities and unpatched software expose the server regardless of co
 Physical access bypasses all of it. A server that can be booted from external media or whose storage can be removed has no meaningful access control at the operating system level. Physical security is the layer the entire stack sits on.
 
 Supply chain compromise, a backdoored package, a tampered base image, or a malicious dependency, can introduce an attacker before any of these controls are applied. Verifying package signatures, using known-good base images, and maintaining an inventory of installed software reduce but do not eliminate that surface.
+Last updated: 10 July 2026

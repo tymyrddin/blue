@@ -190,3 +190,4 @@ rm /tmp/misp-backup-${DATE}.json
 ```
 
 Additionally, the MariaDB database is dumped nightly via `mysqldump` from `db.golemtrust.am` and stored in the same bucket. Both the event export and the database dump are required for a full restore; the event export provides a human-readable record even if the database restore fails.
+Last updated: 20 March 2026

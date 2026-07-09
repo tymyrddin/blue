@@ -108,3 +108,4 @@ environments. The capability ceiling it reveals is the thing worth recording.
   as independent controls; brief 12 applies network enforcement to IEC 104, one of the protocols in
   Pipedream's scanner; briefs 18 through 20 cover OPC UA, from port block through credential enforcement
   to security policy negotiation, the three layers Pipedream's anonymous OPC UA component bypassed
+Last updated: 20 May 2026

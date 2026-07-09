@@ -102,3 +102,4 @@ submitter timeline. The reference is the only record of the transaction.
 The case remains open until the Long Table records a determination. The Receiving Desk
 has no further contact with the submitter unless they return via the onion service with
 the case reference. If they do, the response goes through the same channel.
+Last updated: 29 May 2026

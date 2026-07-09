@@ -30,3 +30,4 @@ persistent and quiet.
 
 Ad-blockers reduce exposure by blocking the advertising networks that have historically distributed drive-by
 malware. Browser updates, applied promptly, close the specific vulnerabilities that unauthorised variants exploit.
+Last updated: 10 July 2026

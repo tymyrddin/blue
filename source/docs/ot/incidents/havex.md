@@ -94,3 +94,4 @@ recommendation in ICS security guidance; at the time of the Havex campaign it wa
 - [Defence in depth](../architecture/defence-in-depth.md): outbound access control as a layer independent
   of which delivery vector established the implant
 
+Last updated: 20 May 2026

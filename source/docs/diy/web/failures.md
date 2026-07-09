@@ -49,3 +49,4 @@ The page loads inside an iframe on any domain. An attacker hosts a page that emb
 RSA key exchange is configured alongside ECDHE ciphers. A recording attacker captures encrypted sessions over a period of months. The server's long-term private key is later obtained, through a breach, a certificate reissuance attack, or legal compulsion. Every recorded session can be decrypted retroactively. Forward secrecy is not a property of TLS itself; it depends on which cipher suites are active.
 
 Disabling RSA key exchange and requiring ECDHE or DHE ciphers means each session uses an ephemeral key that is never stored. TLS 1.3 provides this automatically; TLS 1.2 requires explicit cipher suite configuration.
+Last updated: 29 May 2026

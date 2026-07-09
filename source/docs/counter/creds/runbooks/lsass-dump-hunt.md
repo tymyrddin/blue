@@ -149,3 +149,4 @@ Get-WinEvent -LogName Security -FilterXPath $xpath -ErrorAction SilentlyContinue
 The SAM and SYSTEM hives together contain enough material to derive and crack local account
 hashes. `reg save HKLM\SAM` and `reg save HKLM\SYSTEM` are the common extraction commands;
 the resulting files can be parsed offline with tools such as impacket's `secretsdump`.
+Last updated: 27 May 2026

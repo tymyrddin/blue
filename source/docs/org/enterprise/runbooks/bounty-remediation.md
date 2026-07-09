@@ -76,3 +76,4 @@ Team leads were engaged. Angua's practice of reviewing severity with the relevan
 The IDOR finding was fixed in four hours. That single data point pulled the average down significantly. It also set a positive early example within the organisation that researcher reports could be resolved at speed when the team was motivated.
 
 To maintain this average as volume grows, the key variables to protect are: triage quality (do not let findings reach developers with incomplete reproduction steps) and team lead engagement (keep the severity review process timely).
+Last updated: 10 July 2026

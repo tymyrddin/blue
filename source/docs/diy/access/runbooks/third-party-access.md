@@ -56,3 +56,4 @@ most critical integrations.
 - [SaaS access review](saas-access-review.md), where ongoing integrations are revisited.
 - [Secret rotation](secret-rotation.md) for credentials a vendor held when access ends.
 - [Suspicious OAuth application review](oauth-review.md) for vendor integrations connected via OAuth.
+Last updated: 29 May 2026

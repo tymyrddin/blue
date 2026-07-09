@@ -78,3 +78,4 @@ SQLite: world-readable database file in a web-accessible directory.
 
 Redis: unauthenticated instance reachable from the internet, which allows reading all keys and, in some versions,
 writing arbitrary files via `CONFIG SET dir` and `CONFIG SET dbfilename`.
+Last updated: 17 May 2026

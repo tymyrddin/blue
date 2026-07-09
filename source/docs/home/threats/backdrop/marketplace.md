@@ -25,3 +25,4 @@ Ransomware affiliate programmes. Identity documents.
 The existence of markets with quality ratings and repeat sellers indicates that this is an established
 economic ecosystem. The criminal infrastructure is, in most respects,
 more mature than defenders find comfortable to acknowledge.
+Last updated: 10 July 2026

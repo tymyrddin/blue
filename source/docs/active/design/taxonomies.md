@@ -49,3 +49,4 @@ With high-interaction, the attacker may pivot if the environment is not properly
 ## The Cyber Kill Chain and deception stack
 
 The paper [Three Decades of Deception Techniques in Active Cyber Defence](https://arxiv.org/pdf/2104.03594.pdf) maps deception techniques to a kill chain and describes a four-layer deception stack. Worth reading for anyone designing a more comprehensive deployment.
+Last updated: 16 May 2026

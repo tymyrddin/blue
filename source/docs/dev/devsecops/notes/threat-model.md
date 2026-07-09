@@ -88,3 +88,4 @@ Recommended modules for threat modelling and code reviewing:
 - [Azure: Foundation for a secure Azure deployment pipeline](../azure/pipeline.md)
 - [GCP: Foundation for a secure GCP deployment pipeline](../gcp/pipeline.md)
 - [On-prem: Secure on-premises CI/CD pipeline (Hetzner, Finland)](../on-prem/pipeline.md)
+Last updated: 17 May 2026

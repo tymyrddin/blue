@@ -73,3 +73,4 @@ Baseline built on a clean, unexposed system. A test change is detected. The daem
 
 - Samhain detects; it does not recover. A confirmed tampering finding feeds [the first hour](../../incidents/first-hour.md) and the [compromise investigation](intruder-path.md).
 - Forward Samhain's alerts off the host ([centralised logging](centralised-logging.md)), so an intruder with root cannot quietly suppress them.
+Last updated: 10 July 2026

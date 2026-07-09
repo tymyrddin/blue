@@ -161,3 +161,4 @@ This metric requires the Harbor Prometheus exporter to be enabled. Navigate to A
 Schedule a weekly full scan of all images in Harbor to catch vulnerabilities disclosed since the images were first pushed. Navigate to Interrogation Services, then Scheduled Scan, and set a weekly schedule (Sunday at 01:00).
 
 The weekly scan produces a large number of results if base images have not been updated recently. Review the scan results on Monday morning. Images with new Critical findings that were not present when the image was promoted require immediate attention; see the vulnerability management procedures runbook.
+Last updated: 10 July 2026

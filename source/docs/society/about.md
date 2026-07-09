@@ -105,3 +105,4 @@ confidence, the Sceptical Engine is built around institutional distrust of that 
 one subsystem in a larger system that does not defer to it.
 
 This is the Society's research ethos expressed as an engineering principle.
+Last updated: 01 June 2026

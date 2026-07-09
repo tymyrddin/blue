@@ -145,3 +145,4 @@ review of the corresponding ARP cache entries and physical access records for th
 segment. The Pipedream toolkit (INCONTROLLER) included an OT device enumeration
 component that scanned for Modbus, EtherNet/IP, OPC UA, MMS, and IEC 104 devices
 simultaneously; its source IP would have appeared as a new entry in this query.
+Last updated: 27 May 2026

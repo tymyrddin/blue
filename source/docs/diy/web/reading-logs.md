@@ -45,3 +45,4 @@ In Nginx: `server_tokens on` (the default) means the `Server:` response header i
 In Apache: `ServerTokens Full` or `ServerTokens OS` includes version and platform information. `Options Indexes` enables directory listing.
 
 In PHP: `allow_url_fopen = On` and `allow_url_include = On` open paths to remote code inclusion attacks. Both are off by default in recent PHP versions; finding them enabled in a production configuration is worth investigating.
+Last updated: 29 May 2026

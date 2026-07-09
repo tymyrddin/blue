@@ -30,3 +30,4 @@ threshold.
 The practical challenge is signal-to-noise ratio. Tools configured with aggressive settings generate enough false
 positives to train developers to ignore them. Starting with high-confidence rules and expanding over time is more
 effective than enabling everything at once.
+Last updated: 10 July 2026

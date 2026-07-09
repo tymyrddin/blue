@@ -45,3 +45,4 @@ physical layer that does nothing on an ordinary day and is the whole of the defe
   loops that can be turned into stasis.
 - The same lens on the real map, where power sits at the passage rather than the source:
   [The map is mostly bottlenecks](https://broomstick.tymyrddin.dev/posts/chokepoints/).
+Last updated: 10 July 2026

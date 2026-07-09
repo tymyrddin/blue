@@ -142,3 +142,4 @@ TruffleHog and Dependency-Check findings feed into Graylog via GitLab webhooks. 
 Create a Graylog stream for pipeline security findings. Apply an alert condition: if any pipeline event with `status: failed` and `stage: secrets` arrives, send a Graylog alert to the `#security-alerts` channel immediately. A secret detection failure is treated as an incident.
 
 Dependency-Check failures on the `main` branch also trigger an alert. Dependency-Check failures on merge requests do not alert immediately (they appear in the merge request and are the developer's responsibility to resolve).
+Last updated: 10 July 2026

@@ -138,3 +138,4 @@ Provenance for TaskRun in wrong namespace: Chains only processes TaskRuns in nam
 ## Kyverno admission check
 
 Kyverno enforces SLSA compliance at admission time. No image may be deployed to the `production` namespace unless `slsa-verifier` confirms Level 3 provenance. The Kyverno policy lives in `golem-trust/platform/kyverno/slsa-policy.yaml`. If a deployment is rejected with a Kyverno admission error referencing SLSA, the most common cause is an image that was pushed manually outside the Tekton pipeline. Sam Vimes Jr. from the security team should be notified of any such incident.
+Last updated: 20 March 2026

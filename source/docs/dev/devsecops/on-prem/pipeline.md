@@ -342,3 +342,4 @@ AllowedIPs = 10.8.0.2/32
 * WireGuard VPN + Cloudflare Tunnel (Zero Trust)
 * Vault for Secrets + Argo CD for GitOps
 * Falco Runtime Security + Prometheus Monitoring
+Last updated: 06 December 2025

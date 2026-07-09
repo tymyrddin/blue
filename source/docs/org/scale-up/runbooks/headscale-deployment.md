@@ -189,3 +189,4 @@ tailscale status
 ```
 
 The `tailscale ping` result should show a direct connection or a DERP relay path. Once the DERP servers are operational (see the DERP server setup runbook), all nodes should be able to reach each other regardless of their network position.
+Last updated: 10 July 2026

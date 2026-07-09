@@ -37,3 +37,4 @@ Each intended security header is present in the live response with the expected 
 
 - For a header that is configured but not appearing, check the reload happened and that nothing in front of the server is rewriting responses.
 - Re-run after each deployment; header configuration drifts as the stack changes.
+Last updated: 10 July 2026

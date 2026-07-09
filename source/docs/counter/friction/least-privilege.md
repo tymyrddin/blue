@@ -21,3 +21,4 @@ accumulates broad standing access and a helpdesk trained to grant it, which is t
 credential thief or a social engineer wants, and the exact lever a hostile policy change can pull.
 The friction of least privilege is real, and the places it is relieved without being resourced are
 where the privilege quietly stops being least.
+Last updated: 12 June 2026

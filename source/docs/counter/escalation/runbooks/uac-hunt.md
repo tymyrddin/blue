@@ -128,3 +128,4 @@ Legitimate elevation produces a High-integrity process with a consent.exe or dll
 (COM elevation) parent, or with a SYSTEM-level process as the direct creator. A
 High-integrity process descending from a Medium-integrity scripting host, terminal
 emulator, or explorer.exe instance warrants investigation.
+Last updated: 26 May 2026
