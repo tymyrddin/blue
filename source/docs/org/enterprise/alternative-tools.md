@@ -26,7 +26,7 @@ Istio is a CNCF graduated project under the Apache 2.0 licence. It was originall
 
 [Linkerd](https://github.com/linkerd/linkerd2/releases) is a CNCF graduated service mesh under the Apache 2.0 licence. It is significantly simpler than Istio: it uses a Rust-based micro-proxy rather than Envoy, has no control plane as complex as Istiod, and provides mTLS and observability with less configuration overhead. The tradeoff is fewer features: Linkerd does not support the full Istio AuthorizationPolicy model or traffic management capabilities such as header-based routing. For Golem Trust's primary use case (mTLS everywhere, SPIFFE identity, Kiali-based observability), Linkerd covers the requirements with lower operational complexity.
 
-[Cilium](https://github.com/cilium/cilium/releases) is a CNCF graduated project that provides both CNI networking and a service mesh via eBPF rather than sidecar proxies. Isovalent, the company behind Cilium, was acquired by Cisco in 2024; the project remains Apache 2.0 and under CNCF governance. The eBPF approach eliminates sidecar overhead and provides deeper visibility into network traffic than either Istio or Linkerd. If Calico is ever replaced as the CNI layer, Cilium would handle both CNI and service mesh in a single component.
+[Cilium](https://github.com/cilium/cilium/releases) is a CNCF graduated project that provides both CNI networking and a service mesh via eBPF. Isovalent, the company behind Cilium, was acquired by Cisco in 2024; the project remains Apache 2.0 and under CNCF governance. The eBPF approach eliminates sidecar overhead and provides deeper visibility into network traffic than either Istio or Linkerd. If Calico is ever replaced as the CNI layer, Cilium would handle both CNI and service mesh in a single component.
 
 Linkerd is the preferred alternative for a direct Istio replacement. Cilium is the preferred path if the cluster networking layer is also under review.
 
@@ -36,7 +36,7 @@ Current: [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper/releas
 
 OPA and Gatekeeper are CNCF projects under the Apache 2.0 licence. Open Policy Agent was founded by Styra (US). There is no licence concern. The complexity concern is Rego: it is a capable policy language that is difficult to read and debug for teams without dedicated experience.
 
-[Kyverno](https://github.com/kyverno/kyverno/releases) is a CNCF graduated project (Apache 2.0) that uses plain YAML for policies rather than a purpose-built language. The scale-up phase used Kyverno before Gatekeeper was adopted for its flexibility with complex multi-resource policies. For organisations prioritising readability over expressiveness, Kyverno remains the better choice.
+[Kyverno](https://github.com/kyverno/kyverno/releases) is a CNCF graduated project (Apache 2.0) that uses plain YAML for policies. The scale-up phase used Kyverno before Gatekeeper was adopted for its flexibility with complex multi-resource policies. For organisations prioritising readability over expressiveness, Kyverno remains the better choice.
 
 [Kubewarden](https://github.com/kubewarden/kubewarden-controller/releases) is from SUSE (Germany), a CNCF sandbox project. Policies are WebAssembly modules. This is the most European of the three options and provides strong policy isolation, but the toolchain is less mature. It is worth tracking as it matures.
 
@@ -110,13 +110,13 @@ Current: [Falco](https://github.com/falcosecurity/falco/releases)
 
 Falco is a CNCF graduated project under the Apache 2.0 licence, originally created by Sysdig (US). The project has broad community backing including Red Hat, IBM, and numerous European contributors. There is no licence concern. The eBPF probe is maintained separately as a CNCF project.
 
-[Tetragon](https://github.com/cilium/tetragon/releases) is an eBPF-based runtime security tool from Cilium (Isovalent, acquired by Cisco in 2024), Apache 2.0. It provides similar kernel-level visibility to Falco with the advantage of in-kernel filtering and enforcement: Tetragon can block a syscall before it completes rather than only alerting after the fact. For environments already using Cilium as CNI, Tetragon integrates naturally. The tradeoff is a less mature ruleset than Falco's extensive community rules library.
+[Tetragon](https://github.com/cilium/tetragon/releases) is an eBPF-based runtime security tool from Cilium (Isovalent, acquired by Cisco in 2024), Apache 2.0. It provides similar kernel-level visibility to Falco with the advantage of in-kernel filtering and enforcement: Tetragon can block a syscall before it completes. For environments already using Cilium as CNI, Tetragon integrates naturally. The tradeoff is a less mature ruleset than Falco's extensive community rules library.
 
 [Tracee](https://github.com/aquasecurity/tracee/releases) is from Aqua Security (Israeli company), Apache 2.0. It is an eBPF-based runtime security tool with a Rego policy engine for detection rules, making it complementary to the existing OPA investment. Less operationally mature than Falco.
 
-[KubeArmor](https://github.com/kubearmor/KubeArmor/releases) is a CNCF incubating project (Apache 2.0) that enforces security policies at the container and node level using LSM (Linux Security Modules) and eBPF. It focuses on policy enforcement rather than detection, which makes it complementary to Falco rather than a direct replacement. Developed with significant contributions from AccuKnox (US) and Samsung (Korean).
+[KubeArmor](https://github.com/kubearmor/KubeArmor/releases) is a CNCF incubating project (Apache 2.0) that enforces security policies at the container and node level using LSM (Linux Security Modules) and eBPF. It focuses on policy enforcement, which makes it complementary to Falco. Developed with significant contributions from AccuKnox (US) and Samsung (Korean).
 
-Falco remains the strongest choice for detection-focused runtime monitoring. Tetragon is the preferred alternative if enforcement capability (blocking, not just alerting) becomes a requirement.
+Falco remains the strongest choice for detection-focused runtime monitoring. Tetragon is the preferred alternative if enforcement capability becomes a requirement.
 
 ## Chaos engineering
 

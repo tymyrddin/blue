@@ -33,7 +33,7 @@ The fix is developed on a feature branch following the standard development proc
 git checkout -b fix/BB-142-defectdojo-8731-idor-customer-metadata
 ```
 
-The PR requires two engineer reviews. The reviewers must confirm that the fix addresses the root cause, not just the specific exploitation path described in the report. A fix that patches the specific parameter manipulation without addressing the underlying authorisation model would pass a narrow review but not a root cause review.
+The PR requires two engineer reviews. The reviewers must confirm that the fix addresses the root cause. A fix that patches the specific parameter manipulation without addressing the underlying authorisation model would pass a narrow review but not a root cause review.
 
 Merging to main triggers the standard Tekton pipeline. The image is built, signed, attested, and pushed to Harbor. A separate deployment pipeline promotes the image to the bug bounty environment first.
 
@@ -67,9 +67,9 @@ The 90-day coordinated disclosure embargo begins at the moment the finding is co
 
 The first month's 3.7-day average fix time came from several factors that are worth preserving:
 
-Finding volume was manageable. Twelve valid findings over the month meant individual findings received focused attention from owning teams, rather than competing with a large backlog.
+Finding volume was manageable. Twelve valid findings over the month meant individual findings received focused attention from owning teams.
 
-Triage quality reduced rework. By the time a finding reached a development team's Jira backlog, the reproduction steps were confirmed, the environment was ready, and the evidence was complete. Developers could start on the fix immediately rather than spending time understanding the finding.
+Triage quality reduced rework. By the time a finding reached a development team's Jira backlog, the reproduction steps were confirmed, the environment was ready, and the evidence was complete. Developers could start on the fix immediately.
 
 Team leads were engaged. Angua's practice of reviewing severity with the relevant team lead meant that when the Jira ticket arrived, the team lead had already heard about the finding and could prioritise it appropriately.
 

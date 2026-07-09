@@ -22,14 +22,14 @@ current role requires.
 ## Authentication and connections
 
 TLS for all connections, including internal service-to-database links on private networks. Default
-database configurations often leave TLS optional rather than required.
+database configurations often leave TLS optional.
 
 Default credentials removed: MySQL `root` with no password, MongoDB with authentication disabled,
 Redis with no password and bound to `0.0.0.0`. These defaults have been the initial access point in
 numerous real incidents.
 
-Strong authentication mechanisms preferred: SCRAM-SHA-256 (PostgreSQL 14+ default) rather than older
-challenge-response methods; X.509 certificates for service-to-database connections where available.
+Strong authentication mechanisms preferred: SCRAM-SHA-256 (PostgreSQL 14+ default); X.509 certificates
+for service-to-database connections where available.
 
 ## Configuration
 
@@ -47,7 +47,7 @@ production.
 ## Input handling
 
 Parameterised queries throughout: no string concatenation into SQL. ORM raw query escape hatches
-(`.raw()`, `execute()`, `extra()`) use the params argument rather than string interpolation.
+(`.raw()`, `execute()`, `extra()`) use the params argument.
 
 Allowlist validation for fields with constrained formats (identifiers, codes, enums) before the value
 reaches the query layer. This catches structurally invalid input before parameterisation handles it.

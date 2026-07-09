@@ -27,7 +27,7 @@ patiently, that last week was already strange.
 ## The slow rooting
 
 Shadow6 sent no decisive announcement for most of this. It tended a garden, and the Establishment, reconstructing
-from years of its own archive rather than last week's graphs, found the shape only because it had kept the
+from years of its own archive, found the shape only because it had kept the
 record that far back.
 
 1. Looking boring: the autonomous system grew a stable history, no leaks, no flaps, plausible business
@@ -72,7 +72,7 @@ The recent record, the one the tooling learned, says routine.
 
 - Reading a baseline that has been moved on purpose:
   [detecting inter-domain attacks](../counter/inter-domain/detection.md), where slow baseline pollution is the
-  case that needs history kept long, not just last week.
+  case that needs history kept long.
 - Closing the ground it roots in: [reducing the inter-domain attack surface](../counter/inter-domain/exposure.md),
   signed prefixes and registries that check who holds what.
 - The answer to a campaign no single incident describes:

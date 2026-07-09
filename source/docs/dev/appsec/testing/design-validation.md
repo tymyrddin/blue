@@ -23,12 +23,12 @@ Trust boundaries are where security controls are most important and where they a
 
 - An internal API assumed to be callable only by trusted services, exposed on a network segment also reachable by external-facing services
 - A privileged background process that reads from a queue populated by a lower-privilege component, without validating that the queue contents have not been tampered with
-- A multi-tenant application that uses shared infrastructure for tenant data with row-level filtering rather than physical separation
+- A multi-tenant application that uses shared infrastructure for tenant data with row-level filtering
 
 ## Fail-safe defaults
 
-Design review is an opportunity to assess whether the default behaviour of a system is safe. A feature flag system that defaults to enabling features rather than disabling them means a misconfiguration enables too much. An access control list that defaults to `Allow` on no match rather than `Deny` means misconfigured rules grant unintended access.
+Design review is an opportunity to assess whether the default behaviour of a system is safe. A feature flag system that defaults to enabling features means a misconfiguration enables too much. An access control list that defaults to `Allow` on no match means misconfigured rules grant unintended access.
 
 ## Architectural Risk Analysis
 
-ARA examines the architecture for known architectural risk patterns: unnecessary attack surface, privilege escalation paths, insecure defaults, reliance on a single security control. It is a more structured alternative to ad-hoc architecture review, with specific patterns to check rather than open-ended inspection.
+ARA examines the architecture for known architectural risk patterns: unnecessary attack surface, privilege escalation paths, insecure defaults, reliance on a single security control. It is a more structured alternative to ad-hoc architecture review, with specific patterns to check.

@@ -61,8 +61,7 @@ list is clearer than a combination of inclusion and read-only exclusion.
 
 ## SQLAlchemy direct update
 
-If updating model attributes directly rather than via an input model, update only the specific fields rather than
-merging the request body dictionary onto the model:
+If updating model attributes directly, update only the specific fields:
 
 ```python
 # unsafe: any key in the dict is applied to the model

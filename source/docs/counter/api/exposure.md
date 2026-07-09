@@ -3,7 +3,7 @@
 APIs have a larger attack surface than many organisations realise because that surface is not just
 the documented endpoints. It includes deprecated versions, undocumented internal endpoints, exposed
 schemas, and the credentials that grant access to all of it. Reducing the surface means treating
-all of these as things that require active management rather than things that exist by default.
+all of these as things that require active management.
 
 ## Schema and documentation exposure
 
@@ -31,14 +31,13 @@ GRAPHENE = {
 GraphQLView.as_view(graphiql=False, schema=schema)
 ```
 
-Test that introspection is actually disabled after deployment, not just that the documentation
-page is gone. The introspection query and the documentation UI are independent.
+Test that introspection is actually disabled after deployment. The introspection query and the
+documentation UI are independent.
 
 ### Remove OpenAPI specifications from production
 
 OpenAPI and Swagger specifications are best confined to development and staging environments.
-If external API consumers need documentation, publish a curated subset via an API portal, not the
-full internal specification.
+If external API consumers need documentation, publish a curated subset via an API portal.
 
 If the specification needs to be accessible, requiring authentication to retrieve it is worth enforcing. An unauthenticated
 `/swagger.json` describes the complete attack surface to anyone who checks.
@@ -57,8 +56,7 @@ response body. Log the full error server-side.
 ### Enforce authentication by default
 
 Requiring authentication on every endpoint unless explicitly marked as public, enforced at the
-framework middleware level rather than per-endpoint, is safer than opt-in checks that can be
-forgotten.
+framework middleware level, is safer than opt-in checks that can be forgotten.
 
 Periodically audit every endpoint against the authenticated-by-default configuration. Automated
 tests that call every endpoint without credentials and assert a `401` response are the most
@@ -88,19 +86,19 @@ Treat API keys as credentials with a full lifecycle: issuance, rotation, and rev
 - Set expiry dates on all keys; do not issue keys that never expire.
 - Log every key issuance and revocation event.
 - Alert on keys that have not been used for an extended period (likely abandoned and
-  forgotten rather than deliberately inactive).
+  forgotten).
 - Scan source code repositories continuously for committed keys.
 
 ## Authorisation controls
 
 ### Enforce authorisation at the resolver level
 
-Place object-level authorisation checks at the function that returns the object, not only
-at the route or controller level. A check at the route level that confirms the user is
+Place object-level authorisation checks at the function that returns the object. A check at
+the route level that confirms the user is
 authenticated does not confirm that the specific resource being requested belongs to them.
 
 For every data-returning function, the check is: does the authenticated identity have permission
-to access this specific record? That check is explicit, not implied by the route.
+to access this specific record? That check is explicit.
 
 ### Avoid direct object references in URLs
 

@@ -1,8 +1,8 @@
 # Why this works the way it does
 
 Two decisions in this programme are unusual enough to warrant explanation: the choice to
-use attacker-role training rather than passive instruction, and the choice to run in-house
-simulations against live defences rather than using a managed platform with bypass rules.
+use attacker-role training, and the choice to run in-house simulations against live
+defences rather than using a managed platform with bypass rules.
 Both decisions have the same root. The goal is behaviour change, not completion rates, and
 those two goals produce different programmes.
 
@@ -45,8 +45,7 @@ training library.
 Managed simulation platforms such as Microsoft Attack Simulation Training work by
 instructing the email filtering system not to filter the simulation emails. A policy
 exception tells Defender to let the simulation through. The email lands in the inbox
-because the organisation's defences have been stood down for it, not because the email
-would have reached the inbox on its own merits.
+because the organisation's defences have been stood down for it.
 
 This produces a measurement of how people respond to emails that would, in a real
 attack, never reach them. It is not useless: even a bypassed simulation reveals
@@ -57,8 +56,7 @@ A real phishing email that reaches a staff inbox in 2025 or 2026 did not get the
 accident. It got there because it was constructed using a technique that the current
 filters do not catch: a QR code image containing the payload URL, a link to a
 legitimate OneDrive document that redirects to the credential page, an HTML attachment
-that assembles its payload in the browser rather than carrying it as a recognisable
-file. These techniques are in active use. They are reaching real inboxes. They are what
+that assembles its payload in the browser. These techniques are in active use. They are reaching real inboxes. They are what
 staff need to recognise.
 
 A simulation that only arrives because Defender was told not to block it does not train
@@ -86,7 +84,7 @@ This is not a large time commitment. Reviewing a small number of threat intellig
 sources before each monthly campaign, running a payload test against a single account,
 and adjusting the template as needed takes a few hours per cycle. But it requires that
 someone owns it, reads the sources, and treats keeping the simulation current as part
-of their security function rather than as an optional enhancement.
+of their security function.
 
 The alternative, a managed platform running on autopilot with a stale template library,
 produces completion metrics and click rate trend lines that look like a functioning

@@ -38,10 +38,10 @@ every prefix in the announcement is genuine.
 ## Baseline deviation
 
 Hold a rolling baseline per prefix: the usual origin, the path-length distribution, and the recurring upstream
-set. Alert on deviation rather than only on loss of reachability, because thresholds tuned for "down" miss
+set. Alert on deviation, because thresholds tuned for "down" miss
 "different", and "different" is where these changes live. The harder case is slow baseline pollution, where a
 prefix is gradually taught to look multi-origin over months; catching that needs history kept long enough to
-compare today's normal with where the prefix started, not only with last week.
+compare today's normal with where the prefix started.
 
 ## Control-plane and data-plane correlation
 
@@ -65,7 +65,7 @@ bogon         unallocated or reserved space in the announcement
 
 Scored against a known-origin list, a rolling baseline, and a local RPKI cache, these turn raw updates into
 ranked anomalies. Cross-vantage correlation, the same signal seen from many collectors at once, is what
-raises confidence that a flag is a real shift rather than one peer's noise. These models improve faster on an
+raises confidence that a flag is a real shift. These models improve faster on an
 operator's own ground truth than an outsider's do from outside, because the operator knows which announcements
 are theirs. A detection lab such as heimdallr is where the classifier and the baseline get built and replayed
 against recorded streams, so the model is tested on real movement rather than on faith.

@@ -19,7 +19,7 @@ template content, constraining what is dynamic is more reliable than sanitising 
 File and URL inputs fed to outbound HTTP clients (image loaders, webhook handlers,
 document importers) are worth validating against an explicit allowlist of permitted schemes,
 hosts, and ports. Loopback addresses and link-local ranges (169.254.0.0/16, ::1) belong
-in the blocked set at the validation layer, not added as an afterthought.
+in the blocked set at the validation layer.
 
 The safe XML parser configuration disables external entity processing and DTD loading
 explicitly. This is not the default in most libraries:
@@ -64,9 +64,8 @@ Session cookies with `HttpOnly`, `Secure`, and `SameSite=Strict` (or at minimum
 the cookie. `Secure` prevents transmission over HTTP. `SameSite=Strict` prevents the cookie
 from being sent with cross-origin requests, eliminating most CSRF attack scenarios.
 
-JWT implementations restricted to an explicit algorithm allowlist, rather than accepting
-whatever the token header declares, prevent the class of attacks where the token controls
-its own verification method. The `none` algorithm warrants unconditional rejection. Asymmetric
+JWT implementations restricted to an explicit algorithm allowlist prevent the class of
+attacks where the token controls its own verification method. The `none` algorithm warrants unconditional rejection. Asymmetric
 algorithms (RS256, ES256) are preferable to symmetric ones (HS256) for tokens validated
 across multiple services. Key rotation belongs in the production runbook, not the backlog.
 
@@ -76,8 +75,8 @@ relevant controls.
 
 ## Access control
 
-Access control enforced server-side on every request, rather than assumed from the UI flow,
-closes the common pattern of an endpoint that was "internal" during development and
+Access control enforced server-side on every request closes the common pattern of an
+endpoint that was "internal" during development and
 accidentally left open. A deny-by-default approach, where every endpoint requires
 authentication unless explicitly marked public, is the reliable form of this.
 
@@ -96,8 +95,8 @@ operations. A check-and-write that reads a value and then updates it without hol
 exploitable with concurrent requests. Idempotency keys on financial operations prevent
 double-spend from race conditions and duplicate submissions.
 
-Workflow state transitions validated server-side at every step, not only at the start and
-end, close the step-skipping attack surface. If a refund is only valid when an order is in
+Workflow state transitions validated server-side at every step close the step-skipping
+attack surface. If a refund is only valid when an order is in
 "delivered" status, that status check goes at the refund endpoint, not implied by the UI
 flow that precedes it.
 
@@ -184,10 +183,9 @@ auditing.
 
 ## CORS controls
 
-`Access-Control-Allow-Origin` configured from an explicit allowlist, rather than reflecting
-the request `Origin` unconditionally, closes the primary CORS misconfiguration. A reflected
-origin means any site can make credentialed cross-origin requests to the application and read
-the response:
+`Access-Control-Allow-Origin` configured from an explicit allowlist closes the primary CORS
+misconfiguration. A reflected origin means any site can make credentialed cross-origin
+requests to the application and read the response:
 
 ```nginx
 # nginx: allow only known origins
@@ -240,9 +238,8 @@ server {
 }
 ```
 
-Absolute URLs built from a configured constant rather than from the request `Host` header
-prevent header poisoning in password reset links, email confirmation URLs, and redirect
-targets constructed from the Host header. `X-Forwarded-Host` and similar override headers
+Absolute URLs built from a configured constant prevent header poisoning in password reset
+links, email confirmation URLs, and redirect targets constructed from the Host header. `X-Forwarded-Host` and similar override headers
 are best disabled unless a specific trusted reverse proxy requires them; where a proxy sets
 these headers, validation at the application layer against the same allowlist as the Host
 header applies.
@@ -287,7 +284,7 @@ WebSocket protocol not enforcing same-origin policy on its own.
 WebSocket message content warrants the same input validation as HTTP request parameters.
 Messages arriving over an authenticated connection are not implicitly trusted: they may
 contain injection payloads, oversized data, or out-of-sequence commands. Message frequency
-and size limited at the server, not the client, is the reliable control.
+and size limited at the server is the reliable control.
 
 ## OS command injection
 

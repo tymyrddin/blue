@@ -19,7 +19,7 @@ a local variable. It is narrower than `-fstack-protector-all` (which instruments
 
 On RTOS targets the canary abort handler needs to be implemented: the default `__stack_chk_fail` provided by the C
 library either calls `abort()` or is a stub. In safety-critical OT code, a well-configured abort handler logs the fault, transitions the controlled process to a
-safe state, and halts or restarts rather than silently continuing.
+safe state, and halts or restarts.
 
 Stack canaries do not stop a heap overflow or a write-what-where primitive that targets the canary directly, but they
 stop naive stack smashing reliably.
@@ -42,8 +42,8 @@ On Linux-based OT systems (historians, HMIs, soft PLCs), the dynamic linker's Gl
 write-primitive exploits: overwriting a GOT entry redirects the next call to a library function.
 
 Full RELRO (`-Wl,-z,relro,-z,now`) resolves all dynamic symbols at load time and marks the GOT read-only before
-execution begins. The cost is slightly longer startup time as all symbols are resolved eagerly rather than on first
-call. For OT processes that run continuously, the startup cost is paid once.
+execution begins. The cost is slightly longer startup time as all symbols are resolved eagerly. For OT processes
+that run continuously, the startup cost is paid once.
 
 ```
 LDFLAGS += -Wl,-z,relro,-z,now
@@ -71,8 +71,8 @@ This is a warning-as-error at compile time with no runtime cost.
 ## Integer overflow detection
 
 `-fsanitize=signed-integer-overflow` (and `-fsanitize=unsigned-integer-overflow` with Clang's UBSan) instruments integer
-arithmetic to trap on overflow at runtime. This is a debugging and testing tool rather than a production mitigation: the
-instrumentation adds overhead and the trap handler needs to be defined for embedded targets.
+arithmetic to trap on overflow at runtime. This is a debugging and testing tool: the instrumentation adds overhead
+and the trap handler needs to be defined for embedded targets.
 
 Running with sanitisers in a hardware-in-the-loop test environment catches overflow bugs before they reach production
 firmware, where the sanitiser overhead would be unacceptable.
@@ -81,7 +81,7 @@ firmware, where the sanitiser overhead would be unacceptable.
 
 `-Wconversion` warns on implicit type conversions that may silently truncate or change sign. In C code that processes
 protocol frame fields, a `uint16_t` field silently narrowed to `uint8_t` is a class of bug that produces incorrect
-behaviour under specific frame values rather than a crash. The warning is noisy on legacy codebases but worth enabling
+behaviour under specific frame values. The warning is noisy on legacy codebases but worth enabling
 for new code.
 
 ## Practical flag set

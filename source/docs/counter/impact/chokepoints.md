@@ -12,8 +12,7 @@ things that cannot pass each other in a narrow space.
 
 The weaponisation of physical constraint. A supply line optimised for efficiency runs through a small
 number of irreplaceable points: a pass, a river mouth, a single bridge, a customs gate. Each is a
-concentration of throughput rather than of compute, and each fails the same way, by being blocked
-rather than broken. The blockage can be a shattered axle, a grounded barge, or a compliance
+concentration of throughput, and each fails the same way, by being blocked rather than broken. The blockage can be a shattered axle, a grounded barge, or a compliance
 requirement amended three days ago. None of it looks like an attack, and all of it moves the supplies
 from in transit to stationary, which is the only state that does the work.
 

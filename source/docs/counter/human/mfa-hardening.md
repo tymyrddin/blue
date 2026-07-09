@@ -47,8 +47,7 @@ baseline, particularly for accounts where FIDO2 deployment is not yet feasible, 
 raise the cost of account compromise even if they do not eliminate it.
 
 If push notifications are in use, enabling number matching (the user must confirm a number
-displayed on the authenticator rather than simply approving a notification) largely eliminates
-push fatigue attacks. This feature is available in Microsoft Authenticator, Duo, and others
+displayed on the authenticator) largely eliminates push fatigue attacks. This feature is available in Microsoft Authenticator, Duo, and others
 and is worth enabling universally.
 
 SMS OTP is worth treating as a legacy control and avoiding for new deployments. The attack
@@ -76,10 +75,9 @@ Temporary Access Pass (TAP) in Entra ID and equivalent mechanisms in other provi
 are designed for provisioning and recovery when a device is lost. A TAP issued without
 constraints becomes a standing bypass. Worth enforcing:
 
-- Time limit in hours, not days
-- Single-use rather than multi-use
-- Issuance restricted to the Authentication Administrator role, not delegated to general
-  helpdesk staff
+- Time limit in hours
+- Single-use
+- Issuance restricted to the Authentication Administrator role
 - Alert on every TAP issuance event
 
 A multi-use TAP with 24-hour validity issued by a helpdesk agent with broad delegated
@@ -107,10 +105,9 @@ attacker registers their own device.
 
 ## Conditional access and anomaly detection
 
-MFA is most effective as part of a conditional access policy that evaluates context, not just
-credential validity. An authentication from an unfamiliar device, an unusual geography, or
-outside normal hours can trigger step-up verification or review rather than proceeding
-normally. A stolen session token or compromised account will often be used in conditions that
+MFA is most effective as part of a conditional access policy that evaluates context. An
+authentication from an unfamiliar device, an unusual geography, or outside normal hours can
+trigger step-up verification or review. A stolen session token or compromised account will often be used in conditions that
 differ from the legitimate user's patterns, and those anomalies are detectable if the controls
 are in place to detect them.
 

@@ -3,7 +3,7 @@
 RTOS-based OT firmware runs multiple tasks and handles interrupts asynchronously. The bugs that result from incorrect
 shared-state access are among the hardest to reproduce: they depend on timing, task scheduling, and interrupt arrival,
 and they may only appear under specific load conditions or on hardware with particular cache behaviour. Most of them are
-preventable by choosing the right synchronisation primitive for the situation rather than reaching for `volatile`.
+preventable by choosing the right synchronisation primitive for the situation.
 
 ## volatile is not synchronisation
 
@@ -39,8 +39,8 @@ reading `measurement_ready` and reading `measurement_value`.
 
 ## Interrupt-safe access
 
-In a FreeRTOS application, the canonical way to signal a task from an ISR is through a queue or a task notification, not
-through a shared variable:
+In a FreeRTOS application, the canonical way to signal a task from an ISR is through a queue or a task
+notification:
 
 ```c
 static QueueHandle_t adc_queue;
@@ -71,7 +71,7 @@ control loops.
 ## RTOS queues and the alternative approaches
 
 Queues are the safest general-purpose mechanism for passing data between tasks: they are internally synchronised, they
-transfer ownership of the data, and they block or return an error rather than losing data silently when full.
+transfer ownership of the data, and they block or return an error when full.
 
 Direct shared memory protected by a mutex is an alternative for larger structures where copying through a queue is too
 expensive, but it requires the discipline to hold the mutex for every access without exception. A single unprotected

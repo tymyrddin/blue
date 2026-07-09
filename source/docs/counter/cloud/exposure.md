@@ -96,8 +96,8 @@ settings. A conditional access policy that requires MFA for all cloud access app
 of whether the individual user has set up MFA in their profile.
 
 Include service accounts and break-glass accounts in the MFA review. Service accounts that cannot
-use interactive MFA are better protected with certificate-based authentication or managed identity
-rather than username and password.
+use interactive MFA are better protected with certificate-based authentication or managed
+identity.
 
 ### Least privilege on IAM roles
 
@@ -119,8 +119,8 @@ Workload identities (managed identities, service principals, instance profiles, 
 service accounts) are non-interactive by design. They do not go through MFA, and
 conditional access policies that require MFA or a compliant device do not apply to calls
 made under them. They often carry broader permissions than any individual user, because
-they were sized for a service function rather than a person, and narrowing them after
-initial deployment is rarely prioritised.
+they were sized for a service function, and narrowing them after initial deployment is
+rarely prioritised.
 
 ### Instance metadata service
 
@@ -138,8 +138,8 @@ The credential retrieved varies by provider:
 - GCP: an OAuth access token for the attached service account, at
   `/computeMetadata/v1/instance/service-accounts/default/token`
 
-All three credentials are valid from any IP, not just the originating instance. An attacker
-who retrieves one via SSRF can make authenticated API calls from their own infrastructure.
+All three credentials are valid from any IP. An attacker who retrieves one via SSRF can
+make authenticated API calls from their own infrastructure.
 
 *A web application running on an EC2 instance has an SSRF vulnerability. The attacker
 fetches `http://169.254.169.254/latest/meta-data/iam/security-credentials/webapp-role`
@@ -166,8 +166,8 @@ Where client secrets are unavoidable, certificate credentials are worth preferri
 certificate is harder to exfiltrate as a plain string than a 40-character secret and
 supports shorter validity periods.
 
-Set expiry dates on all client secrets and audit them as they approach expiry, rather than
-silently renewing. A secret that has never been rotated since it was created is effectively
+Set expiry dates on all client secrets and audit them as they approach expiry. A secret
+that has never been rotated since it was created is effectively
 a long-term credential regardless of whether it was technically set to expire in two years.
 
 Restricting which network locations a service principal can authenticate from, using named
@@ -205,7 +205,7 @@ cloud identity.
 The common misconfiguration is a subject claim that does not constrain the authenticating
 context precisely enough. A federation policy scoped to a repository without specifying a
 branch or environment allows any pipeline trigger in that repository to authenticate as
-the cloud identity, not only the specific workflow that requires the credential. The
+the cloud identity. The
 difference between `repo:org/specific-repo:ref:refs/heads/main` and
 `repo:org/specific-repo:environment:production` is not cosmetic: one authenticates on a
 specific branch, the other on a specific deployment environment. Auditing federation

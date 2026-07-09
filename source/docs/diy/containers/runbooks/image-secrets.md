@@ -32,7 +32,7 @@ The secret is present during that step only and never lands in the image. A mult
 
 ## Run-time secrets
 
-A running container reads its secret from a mounted file or a secrets manager, not from an environment variable baked into the image. Docker Compose and Swarm mount secrets as files under `/run/secrets/`:
+A running container reads its secret from a mounted file or a secrets manager. Docker Compose and Swarm mount secrets as files under `/run/secrets/`:
 
 ```yaml
 services:
@@ -82,7 +82,7 @@ No secret in `docker history` or the build arguments. No credential in the conta
 
 ## Rollback
 
-There is no safe rollback to embedding a secret. If a build breaks because a secret is no longer where the build expected it, fix the build to use the BuildKit secret mount or a multi-stage copy rather than reverting to a baked-in credential.
+There is no safe rollback to embedding a secret. If a build breaks because a secret is no longer where the build expected it, fix the build to use the BuildKit secret mount or a multi-stage copy.
 
 ## Follow-up
 

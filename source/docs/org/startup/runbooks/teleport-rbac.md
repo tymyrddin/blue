@@ -1,6 +1,6 @@
 # RBAC policy examples
 
-Runbook for Teleport's role-based access control. This document defines the roles in use, explains the design decisions behind them, and provides examples for creating new roles. Carrot drafted the initial role set. Each role reflects a real job function at Golem Trust, not a technical category.
+Runbook for Teleport's role-based access control. This document defines the roles in use, explains the design decisions behind them, and provides examples for creating new roles. Carrot drafted the initial role set. Each role reflects a real job function at Golem Trust.
 
 ## Role design principles
 
@@ -72,7 +72,7 @@ spec:
 EOF
 ```
 
-Sysadmins have production access and database access. MFA is required on every session start. Production database access is direct rather than request-based, reflecting Ponder's operational role, but every session is recorded.
+Sysadmins have production access and database access. MFA is required on every session start. Production database access is direct, reflecting Ponder's operational role, but every session is recorded.
 
 ### security
 
@@ -108,7 +108,7 @@ Security personnel have access to all servers and can review all session recordi
 
 ### golem-operator
 
-Granted to: Mr. Pump and his team (via certificate-based auth, not password)
+Granted to: Mr. Pump and his team (via certificate-based auth)
 
 ```
 tctl create -f - << 'EOF'
@@ -130,7 +130,7 @@ spec:
 EOF
 ```
 
-Golems authenticate via certificate rather than MFA (they cannot operate a hardware authenticator). The role is restricted to infrastructure nodes and a dedicated Linux user. Sessions are recorded. TTL is one hour; the golem re-authenticates for each work period.
+Golems authenticate via certificate (they cannot operate a hardware authenticator). The role is restricted to infrastructure nodes and a dedicated Linux user. Sessions are recorded. TTL is one hour; the golem re-authenticates for each work period.
 
 ### auditor
 
@@ -206,7 +206,7 @@ Roles are cumulative: a user with both `developer` and `sysadmin` gets the union
 
 When a new team member joins or a new customer portal is set up, create a role following the existing pattern:
 
-1. Name the role after its function, not its permissions
+1. Name the role after its function
 2. Use node label selectors to restrict to the relevant servers; label new servers at provisioning time
 3. Set `max_session_ttl` to the longest reasonable session duration for the role
 4. Set `require_session_mfa: true` for any role with production access

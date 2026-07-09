@@ -1,6 +1,6 @@
 # Container security review
 
-Assurance runbook. Reviews running containers for the misconfigurations that extend the attack surface onto the host, and acts on what it finds. Container risk is mostly visible in configuration rather than logs, so this is a look-and-act review rather than an incident response.
+Assurance runbook. Reviews running containers for the misconfigurations that extend the attack surface onto the host, and acts on what it finds. Container risk is mostly visible in configuration, so this is a look-and-act review rather than an incident response.
 
 ## Cadence
 
@@ -41,7 +41,7 @@ docker inspect <container> | grep Mounts -A 20
 
 `/var/run/docker.sock` mounted into a container gives it control of the daemon, equivalent to root on the host. Management and CI tools mount it deliberately, so the action is to confirm each container that has it needs it, and remove it from those that do not.
 
-Mounts of `/etc`, `/root`, `/home`, or backup directories give read and often write access to host configuration and credentials. These are usually quick fixes left in place. Remove the ones no longer needed; scope the rest to a specific subdirectory rather than the whole path.
+Mounts of `/etc`, `/root`, `/home`, or backup directories give read and often write access to host configuration and credentials. These are usually quick fixes left in place. Remove the ones no longer needed; scope the rest to a specific subdirectory.
 
 ## Image provenance
 

@@ -8,7 +8,7 @@ On an Apache server seeing repeated rapid requests from single sources (login br
 
 ## What it catches and what it does not
 
-ModEvasive counts requests per Apache worker process, not across all of them. An attacker spreading requests across many connections may stay under any single worker's threshold. It handles lower-rate probing well; high-volume floods are caught more reliably by network-level rate limiting (nftables or a reverse proxy) that acts before Apache sees the connection.
+ModEvasive counts requests per Apache worker process. An attacker spreading requests across many connections may stay under any single worker's threshold. It handles lower-rate probing well; high-volume floods are caught more reliably by network-level rate limiting (nftables or a reverse proxy) that acts before Apache sees the connection.
 
 ## Steps
 
@@ -84,5 +84,5 @@ This removes the rate limiting entirely. Use it if false positives are blocking 
 
 ## Follow-up
 
-- For high-volume floods, add network-level rate limiting ahead of Apache; ModEvasive is the supplementary layer, not the primary one.
-- A [WAF](mod_security.md) covers a different class of attack (malicious request content rather than request rate).
+- For high-volume floods, add network-level rate limiting ahead of Apache; ModEvasive is the supplementary layer.
+- A [WAF](mod_security.md) covers a different class of attack (malicious request content).

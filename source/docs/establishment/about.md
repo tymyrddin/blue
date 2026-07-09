@@ -111,10 +111,10 @@ presentation.
 
 ## Watching, not intervening
 
-The Establishment's instinct is to watch rather than to act. Where it finds something already underway, the
-default is observation, measurement and analysis, and intervention waits on a confirmed threat to continuity
-rather than on curiosity. The posture carries a few unwritten rules, the kind that circulate by being
-understood rather than issued: nothing is done that cannot be undone, nothing is done that cannot be
+The Establishment's instinct is to watch. Where it finds something already underway, the
+default is observation, measurement and analysis, and intervention waits on a confirmed threat to continuity.
+The posture carries a few unwritten rules, the kind that circulate by being
+understood: nothing is done that cannot be undone, nothing is done that cannot be
 explained, and if the city notices, the work was done badly. The point of watching is to learn how trust
 moves through the city, not to demonstrate cleverness, and a finding that ends up somewhere awkward is
 corrected quietly.

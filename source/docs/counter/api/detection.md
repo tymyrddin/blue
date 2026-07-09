@@ -4,7 +4,7 @@ API logs are often the least-monitored logs in an organisation's stack. Applicat
 business events. Infrastructure logs capture network activity. API-level logs, which capture the
 specific operations individual identities performed against specific resources, are frequently
 collected but rarely analysed. Detection requires defining what anomalous API usage looks like and
-alerting on it rather than waiting for an incident to prompt a log review.
+alerting on it.
 
 ## Instrumentation
 
@@ -119,7 +119,7 @@ Workflow sequence monitoring: define the expected order of calls for high-value 
 (checkout, refund, password reset, privilege grant). Alert on sessions that reach a terminal
 state by an unexpected path, such as a refund endpoint called without a prior order confirmation.
 
-Outcome monitoring: monitor the outputs of high-value operations rather than just the requests.
+Outcome monitoring: monitor the outputs of high-value operations.
 If a user's credit balance increases or an account receives a refund, record it. Alert on
 accounts that receive more refunds than purchases, or whose balance exceeds the expected
 ceiling without a corresponding top-up event.
@@ -145,8 +145,7 @@ twenty simultaneous requests, the race is exploitable many times over before any
 
 During testing, document the detection gap: the amount of abuse achievable before any alert
 or control triggers. Express this as a business outcome (twenty fraudulent refunds,
-forty units of over-spent balance, ten coupon redemptions from one code) rather than a
-request count.
+forty units of over-spent balance, ten coupon redemptions from one code).
 
 If detection gaps are large, the finding is not just the exploitable vulnerability but the
 absence of detection that would bound the damage.
@@ -160,7 +159,7 @@ high-volume object access, followed by bulk record download, is an attack chain.
 isolation may be below an alerting threshold. Together they tell a clear story.
 
 Feed API logs into the SIEM alongside authentication and network events. Define correlation rules
-that look for this sequence, not just the individual events. Set a time window of six hours to
+that look for this sequence. Set a time window of six hours to
 catch slow, deliberate enumeration that stays below rate limits.
 
 Extend the same correlation approach to business logic: a session that maps workflow steps,

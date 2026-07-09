@@ -129,7 +129,7 @@ Get-MgServicePrincipal -All | ForEach-Object {
 } | Sort-Object Scope | Format-Table -AutoSize
 ```
 
-Sorting by scope rather than by application produces a list grouped by permission type. All
+Sorting by scope produces a list grouped by permission type. All
 `Application.ReadWrite.All` grants appear together, all `Directory.ReadWrite.All` grants appear
 together. The most dangerous grants become visible at the top of the output rather than scattered
 across a long list of application names.

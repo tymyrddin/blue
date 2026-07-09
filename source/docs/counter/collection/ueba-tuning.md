@@ -33,7 +33,7 @@ in working hours (incidents do not respect business hours). Access to identity m
 and domain infrastructure is routine. The challenge for this archetype is that many individual
 events that would be anomalous for other users are normal for IT admin accounts. Peer group
 normalisation works better than absolute thresholds: flag IT admin behaviour that diverges from
-other IT admins, not from the general population. Anomalous signals: bulk account modification
+other IT admins. Anomalous signals: bulk account modification
 outside change management windows, service account key creation not tied to a tracked change,
 access from geographic locations inconsistent with the person's role, authentication method
 downgrade.
@@ -59,7 +59,7 @@ irregular activity, since a thirty-day window may not capture the full range of 
 behaviour.
 
 The learning window creates a gap: new accounts and dormant accounts that have been inactive
-long enough to exhaust the lookback period restart learning rather than scoring. Two approaches
+long enough to exhaust the lookback period restart learning. Two approaches
 reduce the impact.
 
 Peer group normalisation during the learning window: while the model is learning the individual
@@ -68,7 +68,7 @@ first-week activity looks nothing like other developers is worth noting even bef
 baseline exists.
 
 The dormant account return: if an account has been inactive for longer than the lookback period,
-treat it as a new account rather than resuming the old baseline. A three-month gap likely means
+treat it as a new account. A three-month gap likely means
 the person's role, access, and work pattern have changed enough that the old baseline is not
 meaningful. Flag post-return activity that diverges significantly from the learning-window pattern
 and from peer group.
@@ -108,7 +108,7 @@ maintenance windows, and scheduled deployments can all generate events that look
 legitimate. These are worth suppressing from the alert queue during the relevant window, but the
 events are still worth collecting and scoring. The suppression prevents alert fatigue; it does not
 discard the signal. A suppression rule that is too broad (suppress all activity for user X during
-travel) is itself a risk. Suppress the specific expected behaviour, not the entire account.
+travel) is itself a risk. Suppress the specific expected behaviour.
 
 The reset cycle: revisit feature weights and suppression rules every four to six weeks based on
 disposition data; conduct a full model review every quarter. Without a reset cycle, exclusion lists
@@ -120,15 +120,15 @@ A UEBA pipeline in operational use typically targets below 5% false positives. R
 requires several rounds of feedback-driven calibration.
 
 Measurement: track analyst disposition on all alerts. False positive rate is FP divided by the sum
-of FP, TP, and indeterminate. Many deployments measure false positive rate by gut feeling rather
-than by tracking disposition systematically, which makes calibration impossible.
+of FP, TP, and indeterminate. Many deployments measure false positive rate by gut feeling, which
+makes calibration impossible.
 
 When a feature persistently drives false positives: reduce its weight, add a context modifier
 (suppress during business hours if it is an after-hours feature), or raise the threshold for that
 specific feature independently of others. A single feature with a 40% false positive rate does not
 require raising the overall alert threshold; it requires adjusting that feature.
 
-The alert volume worth tracking: the number of alerts per analyst per week, not the absolute count.
+The alert volume worth tracking: the number of alerts per analyst per week.
 An environment with one analyst and 20 alerts per week has a different capacity constraint than
 one with five analysts and the same volume. Calibrate to maintain a ratio where every alert can
 receive investigation, not to minimise the absolute number of alerts.

@@ -36,8 +36,7 @@ and a spread of vantage points, and found it brief by design.
    leaning on a particular FungusFiber upstream.
 2. The bend: a brief more-specific and a selective prepend on those prefixes only, toward certain regions only,
    steering the chosen flows onto a congested path so they degraded rather than dropped, valid throughout.
-3. The window: the worst of it on the summit's opening session, the calendar choosing the moment, not the
-   routing table.
+3. The window: the worst of it on the summit's opening session, the calendar choosing the moment.
 4. The chorus: Agatean-aligned outlets reporting Fungolian technical failures, social platforms amplifying the
    complaints, the routing instability becoming proof of a story that predated it, with Deep Vector saying
    nothing.
@@ -47,8 +46,7 @@ and a spread of vantage points, and found it brief by design.
 What the Establishment sees is a frontier that performed badly for three days on valid routes, and a narrative
 that treated the performance as a verdict. The coupling is looser than the story implies: a routing event is
 not legible to the public directly, it reaches people through status pages, official statements and a
-journalist's summary, so the belief shift was produced by how the trouble was explained, not by the trouble
-itself.
+journalist's summary, so the belief shift was produced by how the trouble was explained.
 
 ## Decision points
 

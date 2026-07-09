@@ -1,6 +1,6 @@
 # Configure CORS safely
 
-Hardening runbook. Sets the cross-origin resource sharing policy so that only trusted origins can read responses from the server, without falling into the common misconfigurations that make CORS worse than useless. The aim is a restrictive, explicit allow-list, not a permissive reflection.
+Hardening runbook. Sets the cross-origin resource sharing policy so that only trusted origins can read responses from the server, without falling into the common misconfigurations that make CORS worse than useless. The aim is a restrictive, explicit allow-list.
 
 ## When to run
 
@@ -26,7 +26,7 @@ Wildcards on internal services. `*` on an internal network trusts that no browse
 
 ## Risk
 
-Tightening CORS can break legitimate cross-origin clients (a separate frontend domain, a partner integration) that were relying on the loose policy. Identify the real cross-origin consumers and add them to the allow-list before removing a wildcard, rather than discovering them through breakage.
+Tightening CORS can break legitimate cross-origin clients (a separate frontend domain, a partner integration) that were relying on the loose policy. Identify the real cross-origin consumers and add them to the allow-list before removing a wildcard.
 
 ## Verify
 
@@ -45,7 +45,7 @@ The allowed origin should be reflected back; the disallowed one should not appea
 
 ## Rollback
 
-Add a newly discovered legitimate origin to the allow-list rather than reverting to a wildcard. If a tightening broke a client, the fix is the specific origin, not reopening the policy.
+Add a newly discovered legitimate origin to the allow-list. If a tightening broke a client, the fix is the specific origin, not reopening the policy.
 
 ## Follow-up
 

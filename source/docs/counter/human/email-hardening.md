@@ -8,7 +8,7 @@ The gap between having records and having effective controls is considerable. Ma
 
 An SPF record lists the IP addresses and sending services authorised to send email on behalf of a domain. Receivers that check SPF reject or flag messages from sources not in the list. The control is only meaningful when paired with DMARC enforcement: SPF alone does not prevent spoofing of the header From address, which is what recipients see.
 
-The `-all` qualifier rejects everything not listed. The `~all` qualifier, a softfail, flags it but allows delivery. Using `~all` rather than `-all` is common during initial deployment and worth tightening once the authorised sender list is stable.
+The `-all` qualifier rejects everything not listed. The `~all` qualifier, a softfail, flags it but allows delivery. Using `~all` is common during initial deployment and worth tightening once the authorised sender list is stable.
 
 SPF has a limit of 10 DNS lookups per evaluation. Include chains from third-party senders are the common cause of exceeding this limit: each include directive typically resolves to further lookups. Exceeding 10 returns permerror, and receivers that check SPF strictly treat permerror as a failure. Adding a fourth or fifth marketing platform to an existing SPF record may silently break authentication for all senders if the lookup chain is already long.
 
@@ -67,7 +67,7 @@ Marketing platforms, ticketing systems, and helpdesk tools often send as the org
 
 A subdomain strategy isolates third-party senders from the primary domain. Sending marketing email from a dedicated subdomain keeps the primary domain's SPF record clean and limits the blast radius if a third-party platform is compromised or sends spoofed messages. Separate DMARC and SPF records for the subdomain cover it explicitly.
 
-DKIM delegation to SaaS platforms gives those platforms signing authority for the domain. The key length used is set by the platform, not by the domain owner. Platforms that still default to 1024-bit signing keys are worth flagging during vendor reviews.
+DKIM delegation to SaaS platforms gives those platforms signing authority for the domain. The key length used is set by the platform. Platforms that still default to 1024-bit signing keys are worth flagging during vendor reviews.
 
 ## Resources
 

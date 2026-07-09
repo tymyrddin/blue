@@ -14,8 +14,7 @@ this runbook is about tightening beyond them.
 
 Docker applies a default seccomp profile that blocks around 44 dangerous system calls, and a default AppArmor profile (
 `docker-default`) covering basic restrictions. These hold unless switched off, which is part of why `--privileged` (
-which disables both) is such a step backwards. Tightening means a profile scoped to the specific application, not the
-generic default.
+which disables both) is such a step backwards. Tightening means a profile scoped to the specific application.
 
 ## Seccomp
 
@@ -45,7 +44,7 @@ which applies.
 ## Risk
 
 A profile tighter than the application's real behaviour blocks a syscall or a file access it needs, and the container
-crashes or misbehaves, often intermittently rather than cleanly at startup. Develop the profile in a non-enforcing mode
+crashes or misbehaves, often intermittently. Develop the profile in a non-enforcing mode
 first: AppArmor's complain mode logs violations without blocking (`aa-complain`), and a seccomp profile can be trialled
 with the action set to log rather than kill. Run the application through its real workload in that mode, collect the
 violations, widen the profile to cover legitimate behaviour, and only then switch to enforce. Switching straight to a
@@ -63,7 +62,7 @@ through its normal workload without tripping a denial.
 
 ## Done
 
-The container runs under a named, application-specific seccomp or MAC profile rather than only the default. The profile
+The container runs under a named, application-specific seccomp or MAC profile. The profile
 was developed in complain/log mode and shows no violations from legitimate behaviour. The application functions under
 enforce mode. `--privileged` is not in use anywhere that would disable these.
 
@@ -71,7 +70,7 @@ enforce mode. `--privileged` is not in use anywhere that would disable these.
 
 Switch back to the default profile (`--security-opt apparmor=docker-default`, or remove the custom seccomp flag) to
 restore the baseline confinement while a too-tight profile is widened. The default is still meaningful protection, so
-rollback returns to the baseline rather than to nothing. Do not roll back to `--security-opt seccomp=unconfined` except
+rollback returns to the baseline. Do not roll back to `--security-opt seccomp=unconfined` except
 as a last-resort diagnostic, since that removes the layer entirely.
 
 ## Follow-up

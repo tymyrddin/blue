@@ -1,8 +1,7 @@
 # Colonial Pipeline
 
 Colonial Pipeline's May 2021 shutdown was not a cyberattack on a pipeline. It was an IT ransomware infection that
-prompted a voluntary OT shutdown, the company halting physical operations as a precaution rather than because
-attackers had reached the control systems. The physical infrastructure was intact. The pipeline stopped because
+prompted a voluntary OT shutdown, the company halting physical operations as a precaution. The physical infrastructure was intact. The pipeline stopped because
 Colonial could not confirm the spread had been contained and billing systems were offline. DarkSide, the
 ransomware-as-a-service operation behind the attack, encrypted roughly 100 gigabytes of corporate data and
 threatened to publish it. The six-day shutdown of a system supplying around 45 per cent of fuel to the US East

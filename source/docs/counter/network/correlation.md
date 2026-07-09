@@ -12,7 +12,7 @@ simlab (heimdallr). The single-signal hunts they build on are in
 [detecting network attacks](detection.md) and
 [route-origin hijack hunting](runbooks/bgp-hijack-hunt.md).
 
-## Why correlation, not more alerts
+## Correlation, not more alerts
 
 BGP's trust model predates the threat model it now faces: it assumes operators do not lie,
 networks cooperate, and mistakes are accidental. None of that holds reliably, and perfect
@@ -30,8 +30,7 @@ A single signal is ambiguous; correlation is what turns it into confidence.
 Two more observations frame the discipline. False positives erode a detection programme
 faster than missed signals: once most alerts read as "probably nothing", the one that
 mattered travels out with the rest, so tuned thresholds, allow-lists for known anycast and
-CDN behaviour, and correlation rather than single-signal alerting usually keep the rate
-survivable. And detection and attribution are different questions. Detection asks whether
+CDN behaviour, and correlation usually keep the rate survivable. And detection and attribution are different questions. Detection asks whether
 something suspicious happened and can land in minutes; attribution asks who and why and may
 take weeks, or never resolve. Conflating them stalls the part that is fast.
 
@@ -54,8 +53,8 @@ later logic honest.
 
 ## Three patterns worth correlating
 
-These describe attacker behaviour over time, not single events. Each reads as human-readable
-logic first; the platform encoding follows from it.
+These describe attacker behaviour over time. Each reads as human-readable logic first; the
+platform encoding follows from it.
 
 ### Trust-signal manipulation, the arming phase
 
@@ -70,8 +69,7 @@ is invisible to BGP-only monitoring and cannot be reconstructed after the fact i
 logs were never kept. The signal is a validation-state transition (valid, invalid,
 not-found) with no corresponding announcement, withdrawal, or operational change, and with
 validator consensus incomplete or transient. The honest output is a low-to-medium confidence
-flag, an early warning rather than an accusation, since legitimate maintenance can look
-identical.
+flag, since legitimate maintenance can look identical.
 
 ### RPKI-cover hijack
 

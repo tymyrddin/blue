@@ -19,7 +19,7 @@ The baseline procedure is unglamorous:
 3. Extract the contents
 4. Record provenance immediately, before it evaporates
 
-Vendor packages are the cleanest starting point when they are available. They are also the least representative of what actually runs on a deployed device, which has usually been patched, half-patched, or never touched since it left the warehouse. They are best treated as baseline artefacts rather than ground truth. A few worked examples follow.
+Vendor packages are the cleanest starting point when they are available. They are also the least representative of what actually runs on a deployed device, which has usually been patched, half-patched, or never touched since it left the warehouse. They are best treated as baseline artefacts. A few worked examples follow.
 
 ### Siemens SIMATIC S7-1212C (non-fail-safe), DC/DC/DC
 
@@ -45,7 +45,7 @@ The catch, and why it is still worth the bother:
 * Access wants registration and tooling approval first.
 * Firmware artefacts arrive indirectly through TIA Portal: cached, fragmented, and wrapped in internal package formats.
 
-A note on expectations. Siemens firmware acquisition is toolchain archaeology, not a download, and there is no neat `.bin` waiting at the end of it. Reproducibility depends on:
+A note on expectations. Siemens firmware acquisition is toolchain archaeology. There is no neat `.bin` waiting at the end of it. Reproducibility depends on:
 
 * TIA Portal version
 * Installed device support packages

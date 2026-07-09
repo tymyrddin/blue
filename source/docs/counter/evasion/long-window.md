@@ -12,7 +12,7 @@ The two are not in competition. A rules engine running alongside a UEBA (User an
 
 ## Long-window attack patterns
 
-A patient attacker working inside compromised credentials moves through several phases, each spanning days or weeks rather than minutes.
+A patient attacker working inside compromised credentials moves through several phases, each spanning days or weeks.
 
 Initial access and reconnaissance: logging in to confirm the account works, browsing accessible systems without downloading anything, establishing a usage pattern that will look like a normal user to future baseline analysis. This phase is nearly undetectable at the event level. The signal, if any, is in the access pattern relative to what the genuine user normally does.
 
@@ -38,7 +38,7 @@ New resource access rate: how fast is the account expanding the set of resources
 
 A model cannot score events until it has seen enough of them to establish what normal looks like for the entity. Thirty days is a common minimum; sixty is more reliable for accounts with irregular activity. During the learning window, events are collected but not scored.
 
-The learning window creates a gap that is sometimes exploitable: a new account, or one dormant long enough to exceed the lookback period, restarts learning rather than scoring against its historical baseline. A detection pipeline worth considering flags accounts whose early post-baseline behaviour deviates unusually from their learning-window pattern, rather than treating the learning period as a blind spot.
+The learning window creates a gap that is sometimes exploitable: a new account, or one dormant long enough to exceed the lookback period, restarts learning. A detection pipeline worth considering flags accounts whose early post-baseline behaviour deviates unusually from their learning-window pattern.
 
 ## Tiered alerting
 

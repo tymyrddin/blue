@@ -22,8 +22,8 @@ destination, and a timestamp. No context. No source. No researcher.
 - Alert time: day of intake
 
 The address is familiar, but the sensor does not know that. The automated path does not read the case
-store before emitting an event. Whether this address means anything is a question that comes after intake,
-not before it.
+store before emitting an event. Whether this address means anything is a question that comes after
+intake.
 
 ## Case record: QR-2026-0032
 
@@ -58,10 +58,10 @@ automated alert does not route to the Long Table.
 
 It is not on its own. The source address 94.23.117.8 already appears in the pipeline, in QR-2026-0031,
 which is routed and at the Long Table. A below-threshold event whose infrastructure matches material
-already in the pipeline is held for correlation rather than dropped: the standing of the event changes
+already in the pipeline is held for correlation: the standing of the event changes
 because of what it touches, not because of what it is. The correlation link to QR-2026-0031 is recorded,
 and the event is shared into the Long Table sharing group as correlated context at its own reliability of
-2, not elevated.
+2.
 
 No analyst characterises this event. The analyst gate applies to material being routed above the
 threshold on its own standing; this event is not. It travels as a sensor observation that happens to

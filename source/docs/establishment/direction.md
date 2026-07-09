@@ -45,7 +45,7 @@ The hand is inferred from the fingerprints.
 ## The downward shadow
 
 A concern, once held, travels downward without being seen to travel. Thresholds in the Quiet Room are
-adjusted so that material touching the concern is held rather than dropped. What the Long Table looks for,
+adjusted so that material touching the concern is held. What the Long Table looks for,
 and how hard, follows the same contour. Surveys is pointed. The Receiving Desk changes what it advertises it
 would welcome, and the open door opens a little wider in one direction. By the time a case is opened, the priority it
 serves is already part of it.

@@ -1,7 +1,6 @@
 # Measuring a detection's false-positive rate
 
-Turns "our detection is probably too noisy" into a number, so a rule can be tuned against evidence
-rather than feeling. Pairs with [detection false positives](../detection-false-positives.md).
+Turns "our detection is probably too noisy" into a number, so a rule can be tuned against evidence. Pairs with [detection false positives](../detection-false-positives.md).
 
 ## Capture analyst disposition
 
@@ -33,7 +32,7 @@ most time at the lowest tp_ratio, not the loudest by volume alone.
   a known-benign source is calibration, not compromise. Record each exclusion with a reason and a
   review date.
 - A rule that cannot be made to fire with reason to investigate is a candidate for retirement, or for
-  demotion to a correlation input rather than a standalone alert.
+  demotion to a correlation input.
 
 ## Make it standing
 

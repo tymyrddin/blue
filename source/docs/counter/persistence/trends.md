@@ -13,8 +13,8 @@ Where attackers have moved:
 Identity persistence is now the highest-priority concern for many
 organisations. Stealing a refresh token or planting an OAuth application gives
 access that survives host reimaging, password resets, and endpoint agent
-reinstallation. The persistence lives in the identity control plane, not on any
-individual host, so endpoint-based detection misses it entirely. Cloud identity
+reinstallation. The persistence lives in the identity control plane, so
+endpoint-based detection misses it entirely. Cloud identity
 persistence (cross-account roles, service principals added to privileged groups)
 compounds this: a single planted role can outlast every other remediation action.
 
@@ -29,7 +29,7 @@ application-level permission grants, the entry persists indefinitely.*
 ### Living off the land
 
 Living off the land at the OS level means using scheduled tasks, WMI
-subscriptions, and services rather than custom implants. These are legitimate
+subscriptions, and services. These are legitimate
 operating system features; the malicious entry looks structurally identical to
 the legitimate ones surrounding it. Detection requires knowing the expected state.
 
@@ -38,8 +38,7 @@ the legitimate ones surrounding it. Detection requires knowing the expected stat
 Application-layer persistence (web shells, database triggers, backdoored
 configuration) survives host-level incident response. If the application is
 redeployed from an unchanged repository, the backdoor comes back. This layer is
-often missed because IR teams focus on the operating system and cloud, not on
-application code and data stores.
+often missed because IR teams focus on the operating system and cloud.
 
 ### CI/CD and supply chain
 

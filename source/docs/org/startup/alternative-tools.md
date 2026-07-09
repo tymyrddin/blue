@@ -44,17 +44,16 @@ self-hosted deployments it uses PostgreSQL natively, which aligns with the exist
 
 Either would require re-implementing the golem authentication SPI. Authentik's flow system makes custom authentication 
 steps easier to implement than Keycloak's SPI model; the golem chem verification logic would be a Python-based flow 
-stage rather than a Java provider.
+stage.
 
 ## Password management
 
 Current: [Vaultwarden](https://github.com/dani-garcia/vaultwarden/releases) (Bitwarden-compatible)
 
 [Passbolt](https://github.com/passbolt/passbolt_api/releases) is a Luxembourg-based company with a fully open source 
-community edition (AGPL). Unlike Vaultwarden, Passbolt is the upstream product rather than a compatible 
-reimplementation, which means it is not subject to Bitwarden changing its client API. Passbolt uses PGP for end-to-end 
-encryption rather than Bitwarden's proprietary encryption model. The team integration features are stronger than 
-Vaultwarden's. The main limitation is that Passbolt has no personal vault; it is designed for teams, not individual use.
+community edition (AGPL). Unlike Vaultwarden, Passbolt is the upstream product, which means it is not subject to 
+Bitwarden changing its client API. Passbolt uses PGP for end-to-end encryption. The team integration features are 
+stronger than Vaultwarden's. The main limitation is that Passbolt has no personal vault; it is designed for teams.
 
 If Vaultwarden is replaced, Passbolt is the first choice. The migration path is not automatic; password collections 
 would need to be exported and re-imported.
@@ -128,7 +127,7 @@ Information Security Foundation (OISF), a US non-profit with broad international
 European alternative at the same capability level.
 
 [Arkime](https://github.com/arkime/arkime/releases) (formerly Moloch) is a full packet capture and search system, 
-open source under Apache 2.0. It complements rather than replaces Zeek and Suricata, providing queryable PCAP storage 
+open source under Apache 2.0. It complements Zeek and Suricata, providing queryable PCAP storage 
 for the cases where Zeek logs are insufficient. It would replace the manual PCAP capture procedures in the current 
 runbook with a searchable archive.
 

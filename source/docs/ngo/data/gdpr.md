@@ -51,10 +51,9 @@ simulation is designed precisely to test whether that process works before it ne
 An organisation of this size processing this volume of personal data is required under the
 GDPR to appoint a Data Protection Officer. The DPO is not a member of the IT function and
 does not report to the Head of IT. Their independence is a legal requirement. The security
-architect coordinates with the DPO rather than receiving instructions from them: the DPO
+architect coordinates with the DPO: the DPO
 advises on obligations, the architect implements the technical measures that support
-compliance. When those two perspectives conflict, the conflict is worth surfacing explicitly
-rather than resolving informally.
+compliance. When those two perspectives conflict, the conflict is worth surfacing explicitly.
 
 The DPO's involvement in incident response is immediate and non-optional from the moment
 personal data is at risk. The SIRT structure reflects this.
@@ -93,8 +92,7 @@ situations require the same conversation.
 The GDPR requires the Home to maintain a register of processing activities documenting
 what personal data is processed, for what purpose, on what lawful basis, in what systems,
 with what retention period, and with what security measures. If a register exists, its
-accuracy should be tested against the application landscape as it is now rather than as
-it was when the register was created. If it does not exist, creating it is a project
+accuracy is worth testing against the application landscape as it is now. If it does not exist, creating it is a project
 involving legal, HR, fundraising, and IT, with the security architect contributing the
 technical picture: where does the data live, how is it protected, who has access.
 

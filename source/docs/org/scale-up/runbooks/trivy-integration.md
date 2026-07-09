@@ -8,7 +8,7 @@ Harbor's built-in Trivy scanner runs automatically when an image is pushed, when
 
 Ensure the Trivy adapter is listed and active. Click Edit to configure:
 
-- Skip update on failure: disabled (if the vulnerability database cannot be updated, scans fail rather than proceeding with stale data)
+- Skip update on failure: disabled (if the vulnerability database cannot be updated, scans fail)
 - Ignore unfixed vulnerabilities: disabled (vulnerabilities without a fix are still reported; whether they block promotion is a policy decision, not a Trivy decision)
 - Insecure registry: disabled
 - GitHub token: add a GitHub personal access token to avoid rate limiting when Trivy downloads the vulnerability database
@@ -104,7 +104,7 @@ jobs:
           sarif_file: trivy-fs-results.sarif
 ```
 
-`exit-code: 0` for filesystem scans means they do not block the pipeline but still report findings. Dependency vulnerabilities require remediation but are handled via the vulnerability management procedures (separate runbook) rather than hard pipeline blocks.
+`exit-code: 0` for filesystem scans means they do not block the pipeline but still report findings. Dependency vulnerabilities require remediation but are handled via the vulnerability management procedures (separate runbook).
 
 ## Trivy configuration file
 

@@ -28,9 +28,8 @@ means all traffic is blocked unless a rule explicitly permits it; implicit-deny 
 same thing and is the more common reality.
 
 Each permit rule warrants a documented business justification, the specific source address or range, the specific
-destination, and the specific protocol and port. Rules scoped to an address range rather than a specific host, or rules
-permitting an entire protocol family rather than a specific port, often reflect the convenience of the person who wrote
-the rule rather than the minimum required flow.
+destination, and the specific protocol and port. Rules scoped to an address range, or rules permitting an entire
+protocol family, often reflect the convenience of the person who wrote the rule rather than the minimum required flow.
 
 Time-bounded rules for maintenance windows are worth implementing where the firewall supports them. A rule that permits 
 engineering software access to a PLC during a Saturday maintenance window has no business existing on Sunday morning. 
@@ -42,8 +41,8 @@ process that creates friction.
 A DMZ at Level 3.5, sitting between Level 3 and Level 4, is the stronger boundary design. Neither the OT side nor the IT side
 has a direct route to the other; both have routes to the DMZ, and data is staged there for transfer.
 
-The historian pushes process data to a data transfer server in the DMZ. IT systems query the data transfer server, not
-the historian. The historian has no route to Level 4; the ERP has no route to Level 3. The DMZ is the only point of
+The historian pushes process data to a data transfer server in the DMZ. IT systems query the data transfer server.
+The historian has no route to Level 4; the ERP has no route to Level 3. The DMZ is the only point of
 contact.
 
 Patch and update staging follows the same pattern. An update server in Level 4 downloads patches and antivirus
@@ -53,7 +52,7 @@ to the OT network.
 
 Security monitoring systems, whether a SIEM collecting logs from both networks or an OT-specific monitoring platform,
 also benefit from the DMZ staging pattern. Log collectors in the DMZ receive forwarded events from OT; the SIEM consumes from
-the DMZ collectors rather than polling OT systems directly. The [monitoring](monitoring.md) page covers how log collection fits the broader visibility architecture.
+the DMZ collectors. The [monitoring](monitoring.md) page covers how log collection fits the broader visibility architecture.
 
 ## Data diodes
 

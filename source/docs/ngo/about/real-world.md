@@ -74,7 +74,7 @@ precisely what the funding model does not reward.
 
 UK and Irish charities have turned donor engagement into a professional discipline. The
 marketing function, the events calendar, and the social media strategy are central
-operations, not peripheral ones. Cash flow depends on them directly. The result is
+operations. Cash flow depends on them directly. The result is
 sophisticated outward-facing infrastructure and, often, internal systems that have been
 deferred in favour of the next campaign.
 

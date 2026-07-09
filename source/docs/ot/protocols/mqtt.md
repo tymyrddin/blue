@@ -11,7 +11,7 @@ everyone.
 A few mechanisms sit underneath that and do not show up in an architecture sketch. Quality of service is per message: 0
 is fire-and-forget, 1 guarantees delivery but can duplicate, 2 guarantees exactly once at the cost of a four-step
 handshake. A retained message is the broker holding the last value on a topic, so a subscriber that connects late gets
-current state immediately rather than waiting for the next publish. Last Will and Testament is a message the client
+current state immediately. Last Will and Testament is a message the client
 registers at connect time and the broker publishes on its behalf if the connection drops unexpectedly, which is how
 subscribers learn a sensor has gone quiet. Keep-alive pings keep that liveness detection honest.
 
@@ -37,8 +37,8 @@ where a client that simply vanishes does not, which is the difference that decid
 
 MQTT (Message Queuing Telemetry Transport) was designed in 1999 by Andy Stanford-Clark at IBM and Arlen Nipper at Arcom
 for satellite-linked SCADA monitoring of oil pipelines. The design constraints were extreme: low bandwidth, high
-latency, unreliable links, and battery-powered field devices. The protocol is small, binary, and publish-subscribe 
-rather than request-response. OASIS standardised it in 2013 as v3.1.1; v5 followed in 2019.
+latency, unreliable links, and battery-powered field devices. The protocol is small, binary, and
+publish-subscribe. OASIS standardised it in 2013 as v3.1.1; v5 followed in 2019.
 
 Those same properties that made it suitable for satellite SCADA have made it the dominant messaging protocol for IIoT
 edge-to-cloud connectivity. Condition monitoring sensors, energy meters, building environmental sensors, and edge
@@ -95,7 +95,7 @@ On an IIoT deployment where sensor telemetry, alarm states, and process measurem
 broker, the `#` subscription is a complete read of the operational picture.
 
 Publishing to command topics is the write side of the same problem. IIoT deployments frequently separate
-telemetry topics from command topics, but the separation is by convention rather than enforcement unless the
+telemetry topics from command topics, but the separation is by convention unless the
 broker's access control list explicitly restricts which clients can publish to which topics.
 
 Retained messages extend the exposure window. Sensitive state, authentication tokens passed as payloads, or

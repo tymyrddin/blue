@@ -1,6 +1,6 @@
 # Run a container as non-root
 
-Hardening runbook. Makes a container run as an unprivileged user rather than root, so that a process escaping the
+Hardening runbook. Makes a container run as an unprivileged user, so that a process escaping the
 container arrives on the host as a nobody rather than as root. It is the first confinement barrier;
 the [container stack](../stack.md) covers how it layers with the rest.
 
@@ -11,8 +11,8 @@ that runs a long-lived service. After a [container review](container-review.md) 
 
 ## What it does and does not do
 
-A non-root container limits what an escape can do on the host: a process that breaks out lands as the unprivileged user,
-not root. It does not close the escape path itself, and it does not help if the container is also `--privileged` or has
+A non-root container limits what an escape can do on the host: a process that breaks out lands as the unprivileged
+user. It does not close the escape path itself, and it does not help if the container is also `--privileged` or has
 the Docker socket mounted. It is one layer, applied alongside dropped capabilities and a confinement profile.
 
 ## In the image
@@ -24,7 +24,7 @@ RUN useradd --system --uid 10001 --no-create-home appuser
 USER appuser
 ```
 
-A numeric UID (rather than only a name) lets the runtime enforce non-root even where the username is not resolvable. The
+A numeric UID lets the runtime enforce non-root even where the username is not resolvable. The
 `USER` instruction applies to everything after it, including the container's default command.
 
 ## At runtime
@@ -47,7 +47,7 @@ services:
 
 A process that binds a port below 1024, writes to a root-owned path, or installs packages at startup breaks when it
 stops being root. The fixes are bounded: bind a high port inside the container and map it (`-p 80:8080`), `chown` the
-writable paths to the new UID at build time, and move package installation into the build rather than the entrypoint.
+writable paths to the new UID at build time, and move package installation into the build.
 Test the container starts and serves before rolling it out, since the failure shows up at startup.
 
 ## Verify

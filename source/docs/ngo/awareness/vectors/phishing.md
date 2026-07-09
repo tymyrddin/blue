@@ -1,7 +1,7 @@
 # Phishing
 
 Phishing is the most common initial access vector against non-profit organisations, and it
-is effective precisely because it targets people rather than systems. A technically sound
+is effective precisely because it targets people. A technically sound
 M365 configuration with MFA enforced and Defender for Office 365 running still depends on
 people making good decisions when a convincing email arrives. The goal of this module is
 to build those instincts through the one approach that reliably works: making participants
@@ -36,7 +36,7 @@ The sender domain will be slightly wrong. The logo will be right.
 
 ## The afternoon session
 
-The phishing module is delivered as a purple team exercise rather than a presentation. The
+The phishing module is delivered as a purple team exercise. The
 programme overview covers the format; the specifics relevant to phishing are here.
 
 The session has a red team and a blue team, with participants rotating through both roles.
@@ -73,7 +73,7 @@ examination.
 The most important behaviour to reinforce is not to click nothing but to verify through a
 different channel. If an email from the director asks for an urgent transfer, call the
 director. If an email from Microsoft asks for re-authentication, navigate to the Microsoft
-website directly rather than via the link. The habit of independent verification disrupts
+website directly. The habit of independent verification disrupts
 almost all phishing scenarios and most of the social engineering variants that follow the
 same pattern.
 
@@ -81,7 +81,7 @@ Modern phishing increasingly avoids the signals that awareness training covers. 
 in an email body contains no URL for the recipient to examine and nothing for Defender to
 scan. An email with a link to a legitimate OneDrive or SharePoint document looks clean until
 the document is opened and the real payload link appears inside it. Awareness training needs
-to include these variants, not just the classic mis-spelled sender and urgent wire transfer.
+to include these variants.
 The afternoon session produces them naturally: left to their own devices, participants
 discover the techniques that actually work.
 

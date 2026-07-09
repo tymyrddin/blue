@@ -90,8 +90,8 @@ Private registries behind a firewall with RBAC on push and pull access reduce th
 Content Trust (cryptographic signing of images with a private key) verifies that an image and its tags have not been
 modified since signing.
 
-Pinning image tags to a specific version and digest (rather than `latest`) prevents unexpected behaviour when the
-underlying image changes. Using digests (`image@sha256:...`) rather than tags provides a stronger guarantee, since tags
+Pinning image tags to a specific version and digest prevents unexpected behaviour when the
+underlying image changes. Using digests (`image@sha256:...`) provides a stronger guarantee, since tags
 can be overwritten.
 
 ## Monitoring and observability
@@ -106,7 +106,7 @@ detecting active attacks; the practical limitation is that most attacks are only
 monitoring is not in place before the incident.
 
 SSH access into containers for maintenance operations is a security risk: it requires maintaining SSH keys, managing
-access, and means the container is effectively a persistent VM rather than an ephemeral compute unit. Externalising logs
+access, and means the container is effectively a persistent VM. Externalising logs
 and metrics removes most of the need for direct container access.
 
 Container labels provide metadata about images, deployments, and containers. Labels can record licensing information,

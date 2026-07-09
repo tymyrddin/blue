@@ -44,7 +44,7 @@ is enumerating rather than browsing. BOLA is often silent: every request succeed
 ## Bulk data access
 
 Hypothesis: a session is downloading large quantities of records through repeated paginated
-requests, consistent with data exfiltration via the API rather than legitimate browsing.
+requests, consistent with data exfiltration via the API.
 
 ```bash
 # high record access volume per identity per hour

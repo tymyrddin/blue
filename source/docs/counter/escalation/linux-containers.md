@@ -1,7 +1,7 @@
 # Linux and container privilege escalation
 
 Linux privilege escalation at the OS level centres on three surfaces: SUID binaries that
-execute with the file owner's identity rather than the caller's, capabilities granted to
+execute with the file owner's identity, capabilities granted to
 binaries or processes beyond what their function requires, and sudo rules that allow
 lower-privileged users to run specific commands as root. Container escalation adds a
 fourth: misconfigurations in container runtimes that allow a process inside a container
@@ -24,7 +24,7 @@ these binaries with SUID, but misconfigured deployments, post-installation scrip
 application installers sometimes set it.
 
 Linux capabilities are a finer-grained alternative to the all-or-nothing SUID model.
-Rather than granting full root access, capabilities assign individual kernel privileges
+Capabilities assign individual kernel privileges
 to binaries or running processes. cap_setuid allows a process to change its user identity.
 cap_sys_ptrace allows attaching to arbitrary processes. cap_dac_override bypasses
 filesystem permission checks. A binary with cap_setuid set, regardless of whether it also

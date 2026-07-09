@@ -1,7 +1,7 @@
 # Who is in, and how firmly
 
 The arrangement has no membership list on any wall, which is convenient, because the honest answer
-to who belongs is layered rather than binary. Some powers are in to the hilt. Some are in for
+to who belongs is layered. Some powers are in to the hilt. Some are in for
 commerce and would deny the defence part in daylight. One is so large and so close that nobody can
 quite say whether it is inside the tent or the reason the tent was pitched. The tiers below are the
 city's working picture, not a charter.
@@ -43,8 +43,8 @@ gracefully, and tends to honour the arrangement on its own reading of it.
 
 ## The partners
 
-Past the core sit the powers that are in for trade, are modernising into the arrangement rather than
-having founded it, and would describe the relationship in commercial terms if asked.
+Past the core sit the powers that are in for trade, are modernising into the arrangement, and would
+describe the relationship in commercial terms if asked.
 
 Uberwald is the awkward case. The modernising factions around the Low King and the newer vampire
 leadership are firmly in, and the fat reserves the arrangement would rather not discuss make the
@@ -54,7 +54,7 @@ partner whose internal disputes the arrangement inherits whether it wants to or 
 dwarf-troll fault line runs straight through it.
 
 Genua is in at arm's length, reached by trade route more than by treaty, distant enough that the
-relationship runs on shipping and remittance rather than shared assessments. Ephebe is the partner
+relationship runs on shipping and remittance. Ephebe is the partner
 with ideas: coastal, philosophical, possessed of a long memory and a longer list of old quarrels
 with its own neighbours, useful for exactly the reasons it is occasionally exasperating.
 

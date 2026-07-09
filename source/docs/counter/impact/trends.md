@@ -5,8 +5,8 @@
 Security monitoring is built around detecting compromise, not detecting
 impact. By the time a ransomware deployment or data extortion event occurs,
 the attacker has typically been present for days or weeks. The impact event
-is the last step, not the first, and an organisation's best opportunity
-to detect and contain the intrusion has usually already passed.
+is the last step, and an organisation's best opportunity to detect and
+contain the intrusion has usually already passed.
 
 That said, the impact phase does create detectable signals, and defenders
 who catch them early can limit damage significantly.
@@ -78,8 +78,7 @@ to detect malware, not process abuse.
 
 ## Proactive containment
 
-The key shift is from reactive to proactive: rather than detecting the
-ransomware deployment and responding, detect the precursor activities
+The key shift is from reactive to proactive: detect the precursor activities
 (credential harvesting, lateral movement to backup infrastructure, shadow
 copy manipulation) and contain before the impact event.
 
@@ -94,7 +93,7 @@ exposure and are not accessible from general-purpose domain admin accounts.
 
 These are the loud end's controls. The quiet families answer to different
 ones: segregation of duties, provenance of access, and business-logic
-monitoring rather than backup hardening.
+monitoring.
 
 ## The disclosure gap: extortion and espionage
 
@@ -108,4 +107,4 @@ Extortion is the loud half of that. The quiet half is espionage, the
 all and the secret simply surfaces on the far side. Both are losses a copy
 makes permanent, which is why exfiltration detection (in the
 [exfiltration section](../exfiltration/index.rst)) is the control point for
-either, not anything in the impact phase itself.
+either.

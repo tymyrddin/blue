@@ -47,7 +47,7 @@ Set is sent: periodically, on change, or on request.
 Data object types include Indication Points for status values (breaker state, protection element), Real Points for
 analogue measurements (MW, MVAR, voltage), Discrete Points for integer values, and Protection Events for time-stamped
 protection operation records. A Block type allows a group of values to be transferred atomically, so the receiving
-centre sees a consistent snapshot rather than a partially updated picture.
+centre sees a consistent snapshot.
 
 The Bilateral Table structure means that a correctly configured TASE.2 connection carries only the data both parties
 agreed to share. What the table contains, and which direction each object flows, is visible to anyone who can observe
@@ -56,16 +56,15 @@ or participate in the connection.
 ## The security baseline
 
 The base TASE.2 specification includes an authentication option at the ACSE layer: a password carried in the Associate
-Request. It is rarely used. Most deployed ICCP connections rely on network-level controls rather than
-application-layer authentication, on the assumption that the underlying WAN link is a private, provisioned circuit
-between known parties.
+Request. It is rarely used. Most deployed ICCP connections rely on network-level controls, on the assumption
+that the underlying WAN link is a private, provisioned circuit between known parties.
 
 IEC 60870-6-802 defines security extensions for TASE.2, including TLS wrapping and stronger authentication. Deployment
 is limited by the same constraints as other OT protocol security extensions: both parties' ICCP gateway software needs
 to support it, and many implementations in service predate the extension.
 
 The private WAN assumption has historically been more defensible for ICCP than for substation protocols, because
-inter-utility links are explicitly provisioned rather than incidentally exposed. A Modbus device on a flat network is
+inter-utility links are explicitly provisioned. A Modbus device on a flat network is
 one VLAN hop from anything on the corporate LAN; an ICCP connection between two TSOs typically runs over a dedicated
 MPLS circuit. The circuit is a compensating control by accident of architecture. Where that circuit is replaced by
 a VPN over the internet, or where ICCP traffic crosses a segment with broader access, the assumption dissolves.
@@ -130,8 +129,8 @@ iptables -I INPUT -p tcp --dport 102 -s 192.0.2.11/32 -j ACCEPT
 iptables -A INPUT -p tcp --dport 102 -j DROP
 ```
 
-Deploying ICCP on a dedicated gateway host, rather than on the control centre SCADA server directly, creates a
-network separation between the inter-utility connection and the internal OT environment. The gateway handles
+Deploying ICCP on a dedicated gateway host creates a network separation between the inter-utility connection
+and the internal OT environment. The gateway handles
 association management and forwards only the negotiated data objects to the internal historian or SCADA display. An
 attacker who reaches the gateway does not automatically reach the broader control centre network.
 
@@ -149,7 +148,7 @@ permitted set, is a recognisable signal even without deep TASE.2 protocol decodi
 - [IEC 61850](iec61850.md): shares TCP port 102 via MMS; the same ISO upper-layer stack, the same monitoring
   challenge, a different application layer
 - [IEC 60870-5-104](iec60870-5-104.md): the RTU-level counterpart; ICCP operates at the control-centre layer above
-  it, exchanging aggregated measurements between organisations rather than raw device data
+  it, exchanging aggregated measurements between organisations
 - [DNP3](dnp3.md): comparison protocol for inter-substation data in North American utilities; different architecture
   and a different trust model, but the same no-auth baseline in base deployments
 - [IEC 62351](iec62351.md): Parts 3 and 4 provide TLS for TASE.2 over TCP and MMS; the security extension most

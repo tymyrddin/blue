@@ -19,7 +19,7 @@ maximum length equals the announced length, Route Origin Validation that drops `
 logging it, per-customer filters pruned to what is actually announced, ASPA to refuse a path that climbs
 through an AS that is not an authorised provider, and announcements spread across diverse upstreams so no
 single chokepoint degrades cleanly. None of it is novel against a state. Its value is that it removes the soft
-ground a patient operation depends on, so the preparation is wasted rather than rewarded.
+ground a patient operation depends on, so the preparation is wasted.
 
 ## Defend the layer it attacks
 
@@ -29,12 +29,12 @@ reads a slow service as incompetence, at the institution that cannot say cleanly
 needs an institutional defence, not a protocol one.
 
 Three things hold it. Memory kept long enough to compare a prefix's normal today against where it started,
-not only against last week, which is the hard case [detection](detection.md) names: slow baseline pollution is
-only visible against a long baseline. Correlation across independent signals, RPKI state, IRR consistency, the
+which is the hard case [detection](detection.md) names: slow baseline pollution is only visible against a
+long baseline. Correlation across independent signals, RPKI state, IRR consistency, the
 relationship graph, cross-vantage agreement, rather than a single learned threshold that can be quietly
 retrained. And the ability to account for an incident clearly and quickly, because a routing event reaches the
 public through status pages and official statements, and the belief shift is produced by how the disruption is
-explained, not by the disruption itself. A transient degradation that is explained promptly stays a transient
+explained. A transient degradation that is explained promptly stays a transient
 degradation; one that is met with silence hardens into a story about competence.
 
 ## The floor is collective
@@ -42,7 +42,7 @@ degradation; one that is met with silence hardens into a story about competence.
 The asymmetry is the uncomfortable part and worth stating plainly. The attacker needs one unsigned prefix or
 one path with no enforcement on it; the defender needs coverage everywhere the traffic might go. A single
 upstream that enforces validation breaks a given hijack, but the class of attack only closes when signing and
-enforcement are the default across the ecosystem rather than the exception.
+enforcement are the default across the ecosystem.
 
 This is why the long game is not a problem any one network firewalls its way out of. The durable defences are
 shared: RPKI with tight ROAs and enforced ROV, ASPA as it deploys, IRR hygiene, and the coordination efforts

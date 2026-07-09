@@ -22,7 +22,7 @@ has already been deleted. Logs are preserved before any remediation, exported so
 containment actions cannot reach, because the record of how the intrusion began is the first thing
 remediation overwrites.
 
-The pattern underneath is that the encryption event is the last step, not the first. By the time it
+The pattern underneath is that the encryption event is the last step. By the time it
 fires the attacker has usually been present for days, so the response is as much about preserving the
 record of the dwell time as about stopping the encryption.
 
@@ -35,7 +35,7 @@ that might alter it, and the entry point is traced: which identity made the chan
 authenticated, and from where. Whether the identity was compromised through token theft or a session
 hijack, or whether an authorised user was socially engineered directly, changes what the rest of the
 response looks like. Wire transfer fraud runs on its own clock: recovery windows are short, often a
-day or two, so the receiving bank is contacted at once rather than after the investigation.
+day or two, so the receiving bank is contacted at once.
 
 ## After containment
 
@@ -57,5 +57,5 @@ write-once or object-locked cloud storage, and a backup server held outside the 
 privilege scope so a single compromised administrator account cannot reach it. Object lock in
 compliance mode cannot be overridden even by the bucket owner within its retention period, which is
 what makes the copy resistant to deletion by a stolen administrator credential. The arrangement is
-only as good as the restore, so the restores are tested rather than assumed. The command that sets
+only as good as the restore, so the restores are tested. The command that sets
 the lock sits with the other hardening steps in [the runbooks](runbooks/impact-response.md).

@@ -1,6 +1,6 @@
 # Architecture
 
-vulnforge treats the AI model as one component in a multi-stage system rather than as the authority. The
+vulnforge treats the AI model as one component in a multi-stage system. The
 architecture reflects a specific distrust: AI models can hallucinate, can be wrong in confident-sounding ways,
 and produce output that is plausible but unverified. Building a security tool around unverified AI output
 produces a scanner that tells you what it thinks rather than what it observed.

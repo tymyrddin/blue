@@ -10,7 +10,7 @@ The financial motivation is the most common driver; the extracted data feeds fra
 takeover, or direct sale in credential markets.
 
 This distinguishes it from stalkerware, which typically requires physical access to the
-device and is deployed for personal surveillance rather than financial gain. Both are
+device and is deployed for personal surveillance. Both are
 present on mobile platforms; the vectors and indicators differ.
 
 ## What spyware can access
@@ -34,7 +34,7 @@ unknowingly or acquired by exploiting a vulnerability:
   marketplaces, which face less scrutiny
 * Phishing, smishing, or vishing that persuades the target to install something
 * Zero-click exploits that deliver payloads via a message or notification without requiring
-  any user interaction, typically used in targeted rather than mass campaigns
+  any user interaction, typically used in targeted campaigns
 
 ## Signs worth investigating
 
@@ -51,6 +51,5 @@ None of these are definitive on their own. They are reasons to look more careful
 Mobile antivirus tools detect some known spyware variants but are not reliable against
 recent or targeted deployments. Factory reset is the most complete option, as it removes
 the operating system environment the spyware was running in. Back up only contacts and
-documents rather than a full application backup, as restoring from a full backup may
-restore the problem. Update the operating system before restoring, so any patched
+documents, as restoring from a full backup may restore the problem. Update the operating system before restoring, so any patched
 vulnerability the spyware exploited is no longer present.

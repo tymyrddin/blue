@@ -28,7 +28,7 @@ Current: [Headscale](https://github.com/juanfont/headscale/releases) (self-hoste
 Headscale is an open source reimplementation of the Tailscale control plane under the BSD 3-Clause licence. The 
 project is maintained by a Spanish developer (Juan Font) and community contributors. The underlying data plane uses 
 WireGuard, which is part of the Linux kernel. There is no commercial entity behind Headscale itself; the risk is 
-abandonment rather than licence change.
+abandonment.
 
 [Netbird](https://github.com/netbirdio/netbird/releases) is a German company (NetBird GmbH, Berlin) building an open 
 source WireGuard-based mesh VPN under the BSD 3-Clause licence. It provides a self-hosted control plane with a 
@@ -66,7 +66,7 @@ Harbor is a CNCF graduated project under the Apache 2.0 licence, originally crea
 
 [Gitea Container Registry](https://github.com/go-gitea/gitea/releases) ships as part of Gitea, the self-hosted git platform. If the CI/CD platform were migrated to Gitea or Forgejo (see below), the container registry comes with it at no additional operational cost.
 
-Harbor's integrated Trivy scanning is genuinely useful; any replacement would require Trivy to move entirely into the pipeline rather than running at the registry layer.
+Harbor's integrated Trivy scanning is genuinely useful; any replacement would require Trivy to move entirely into the pipeline.
 
 ## Image signing
 
@@ -103,7 +103,7 @@ the Syft dependency; the output formats are equivalent. Grype and Trivy use diff
 running both provides cross-validation but adds pipeline complexity.
 
 [cdxgen](https://github.com/CycloneDX/cdxgen/releases) is an OWASP project (Apache 2.0) for generating CycloneDX SBOMs 
-from source code rather than container images. It supports more language ecosystems than Syft for source-level 
+from source code. It supports more language ecosystems than Syft for source-level 
 analysis. Useful if SBOM requirements extend to the application dependency graph rather than only the container image 
 layer.
 
@@ -161,7 +161,7 @@ Current: [OpenSCAP](https://github.com/OpenSCAP/openscap/releases)
 
 OpenSCAP is maintained by Red Hat under the LGPL licence and is the reference implementation of the SCAP standard. There is no realistic alternative for SCAP-based CIS benchmark assessment.
 
-[Lynis](https://github.com/CISOfy/lynis/releases) is a Dutch security auditing tool (GPL 3.0) from CISOfy, based in the Netherlands. It does not use SCAP profiles but performs similar hardening checks and produces human-readable reports. It is lighter-weight than OpenSCAP and does not require the full `scap-security-guide` package. Lynis is better suited to ad-hoc manual hardening checks; OpenSCAP is better suited to automated compliance assessment against a defined profile for audit purposes. The two are complementary rather than alternatives.
+[Lynis](https://github.com/CISOfy/lynis/releases) is a Dutch security auditing tool (GPL 3.0) from CISOfy, based in the Netherlands. It does not use SCAP profiles but performs similar hardening checks and produces human-readable reports. It is lighter-weight than OpenSCAP and does not require the full `scap-security-guide` package. Lynis is better suited to ad-hoc manual hardening checks; OpenSCAP is better suited to automated compliance assessment against a defined profile for audit purposes. The two are complementary.
 
 [SecureCodeBox](https://github.com/secureCodeBox/secureCodeBox/releases) is a German open source security scanning orchestration platform (Apache 2.0) from iteratec GmbH in Munich. It orchestrates multiple scanners (including Trivy, Nikto, and nmap) as Kubernetes jobs and feeds results into DefectDojo. It is more relevant as an alternative to the overall scanning pipeline than to OpenSCAP specifically.
 

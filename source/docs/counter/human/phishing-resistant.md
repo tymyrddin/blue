@@ -11,7 +11,7 @@ SPF, DKIM, and DMARC are the three email authentication protocols that, [when co
 and enforced](../../diy/mail/index), prevent attackers from sending email that appears to originate from a domain an
 organisation controls. All three are well understood and widely deployed. Their collective limitation
 is that they only prevent spoofing of domains that implement them, and most phishing uses look-alike
-domains rather than direct spoofing. They remain worth deploying correctly, because direct spoofing
+domains. They remain worth deploying correctly, because direct spoofing
 of your domain is both technically trivial without them and completely preventable with them.
 
 DMARC at enforcement policy (p=reject or p=quarantine) is the meaningful configuration. A DMARC
@@ -26,19 +26,19 @@ QR codes, PDFs containing links, HTML attachments, and content hosted on trusted
 the gaps is useful both for understanding what the controls will and will not catch, and for setting
 realistic expectations with stakeholders about what "email security" covers.
 
-Rewriting URLs to proxy through inspection and rechecking them at time of click rather than at
-delivery is more effective than delivery-time scanning alone, because many phishing pages go live
-after the email is sent to avoid exactly that scan.
+Rewriting URLs to proxy through inspection and rechecking them at time of click is more effective
+than delivery-time scanning alone, because many phishing pages go live after the email is sent to
+avoid exactly that scan.
 
 ## Awareness training
 
 Awareness training that consists of periodic phishing simulations followed by remedial content for
 those who click has limited evidence of effectiveness and reasonable evidence of frustration among
-recipients. It is not worthless, but its contribution is at the margin rather than at the core.
+recipients. It is not worthless, but its contribution is at the margin.
 
 What works better is making the secure behaviour the easy behaviour: visible indicators when email
 arrives from outside an organisation, clear and simple reporting mechanisms for suspicious messages,
-and a response process that is fast enough that reporting feels useful rather than futile. If
+and a response process that is fast enough that reporting feels useful. If
 employees who report phishing hear nothing for three weeks, they stop reporting.
 
 Training that focuses on the specific pretexts relevant to an organisation's context is more
